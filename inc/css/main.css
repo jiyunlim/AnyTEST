@@ -1,51 +1,155 @@
-<!DOCTYPE html>
-<html lang="ko">
+@charset "UTF-8";
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="title" content="Cordial ">
-  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <meta name="robots" content="none">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="format-detection" content="telephone=no">
-  <!-- script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-  <script src="https://rawgithub.com/peachananr/onepage-scroll/master/jquery.onepage-scroll.min.js"></script>
+body,
+html {
+  overflow: hidden;
+}
 
-  <!-- style link -->
-  <link rel="stylesheet" href="./inc/css/common.css">
-  <link rel="stylesheet" href="./inc/css/main.css">
-  <link rel="stylesheet" href="https://rawgithub.com/peachananr/onepage-scroll/master/onepage-scroll.css">
+.wrap {
+  width: 100%;
+  height: 100vh;
+}
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-  <title>wall paper</title>
-</head>
+.wrap .section-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-<body>
+.wrap .section-wrap:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: url(../img/slider_0.1.jpg), linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgb(255, 255, 255) 100%);
+  ;
+  background-size: cover;
+  opacity: .2;
+}
 
-  <div id="wrap" class="wrap">
-    <div class="section-wrap">
-      <section class="sec-01">
-        <div class="sec-01__txt">
-          <!-- YOR'RE HIRING A WEB PUBLISHER -->
-          ABC'DE FGHIJK L MNO PQRSTUVWXY
-        </div>
-        <div class="sec-01__bg--img">
-          <div class="badge_box slide-track">
-            <i class="fab fa-react"></i>
-            <i class="fab fa-vuejs"></i>
-            <i class="fab fa-js"></i>
-            <i class="fab fa-css3-alt"></i>
-            <i class="fab fa-html5"></i>
-            <i class="fab fa-chrome"></i>
-            <i class="fab fa-edge"></i>
-            <i class="fab fa-safari"></i>
-            <i class="fab fa-light fa-code-commit"></i>
-            <i class="fab fa-light fa-code"></i>
-          </div>
-        </div>
-        <div class="btn-box">
-          <button type="button" class="btn-box_txt">view detail</button>
-        </div>
-        <div class="sec-01__bg--txt">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae aperiam, atque est error explicabo quia quisquam voluptas, impedit officiis tenetur eligendi rerum nulla ad laborum commodi. Reiciendis deserunt, modi expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae corrupti voluptate repellat illo architecto, esse id iure numquam doloribus? Accusamus quaerat, similique. Quaerat aperiam ducimus aspernatur in repellat cupiditate quis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum dolorem sit ex, cupiditate dolores dolor voluptatum iusto, nam facere! Eos sunt consequatur corporis minima possimus ratione deleniti enim quaerat aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium impedit, temporibus. Architecto reprehenderit incidunt, itaque sequi id inventore culpa laudantium ad unde magni, quae tenetur cupiditate omnis facilis voluptates ducimus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat fugit consequatur, esse quidem delectus temporibus, rerum ducimus ex non, ratione accusamus ab, cum molestiae aliquam illo facilis officiis! Minima, obcaecati. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ipsam dolor quo, necessitatibus, voluptatibus eius sunt sit architecto laborum ut inventore excepturi molestias officiis, possimus veritatis enim tempora. Nostrum, reprehenderit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas fuga odio quo, sint et molestias incidunt tempore eos, quam explicabo ullam officia a! Inventore, quae corporis deleniti neque itaque porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates perspiciatis odio a cum, doloribus ipsum, sapiente mollitia aliquid magni, necessitatibus soluta optio. Deserunt voluptatem eaque possimus asperiores nostrum soluta dolores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem tenetur nam consequatur itaque quod adipisci, deleniti laborum repellendus sint vel, q
+.section-wrap section {
+  width: 100%;
+  min-height: 150px;
+  max-width: 1180px;
+  margin: 0 auto;
+  right: 45px !important;
+  scroll-behavior: smooth;
+}
+
+.section-wrap .sec-01 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  right: inherit;
+  /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgb(255, 255, 255) 100%); */
+}
+
+.section-wrap .sec-01 .sec-01__txt {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.section-wrap .sec-01 .sec-01__bg--img {
+  align-self: end;
+  position: relative;
+  width: 100%
+}
+
+.section-wrap .sec-01 .sec-01__bg--img .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  width: calc(250px*8)
+}
+
+.section-wrap .sec-01 .sec-01__bg--img .slide-track i {
+  position: relative;
+  font-size: 55px;
+  opacity: .3;
+}
+
+.section-wrap .sec-01 .sec-01__bg--img .slide-track i:nth-of-type(2n) {
+  top: -80px;
+}
+
+.sec-01__btn-box .btn-box_txt {
+  border: 0;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #fff;
+  animation: y-shakeing 1s infinite;
+}
+
+@keyframes y-shakeing {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(5px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  75% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.section-wrap .sec-01 .sec-01__bg--txt {
+  opacity: .2;
+  line-height: 2.7;
+  font-size: 15px;
+  position: fixed;
+  top: 44px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.section-wrap .sec-02 {
+  background-color: pink;
+  opacity: .4;
+  scroll-behavior: smooth;
+}
+
+.section-wrap .sec-03 {
+  background-color: pink;
+  opacity: .6
+}
+
+.section-wrap .sec-04 {
+  background-color: pink;
+  opacity: .8
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 4));
+  }
+}
+
+/*  */
+.swiper {
+  width: 600px;
+  height: 300px;
+}
