@@ -1,0 +1,224 @@
+.wrap-device-list {
+  position: relative;
+  font-family: "Apple SD Gothic Neo", "SF UI Display", "애플 SD 산돌고딕 Neo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #000;
+  word-break: keep-all;
+  line-height: 1.25em;
+  letter-spacing: -0.48px;
+  background-color: #fff;
+  -webkit-text-size-adjust: none;
+  padding-bottom:0;
+}
+
+.wrap-device-list ol,
+.wrap-device-list ul,
+.wrap-device-list li {
+  list-style: none;
+}
+
+.wrap-device-list hr {
+  display: block;
+  height: 2px;
+  margin: 20px 0;
+  border-radius: 1px;
+  border: none;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(186, 186, 189, 0.5);
+          box-shadow: inset 1px 1px 1px rgba(186, 186, 189, 0.5);
+}
+
+.wrap-device-list button {
+  padding: 0;
+  letter-spacing: -0.4px;
+  font-family: inherit;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  outline: 0;
+}
+
+.wrap-device-list .blind {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  color: transparent;
+}
+
+.wrap-device-list .section-tit {
+  position: relative;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-size: 13px;
+  z-index: 2;
+  padding-left: 20px;
+}
+
+.wrap-device-list hr {
+  width: calc(100% - 40px);
+  height: 2px;
+  margin: 0px auto 30px auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 1px;
+  -webkit-box-shadow: inset 1px 1px 1px 0 rgba(186, 186, 189, 0.5);
+          box-shadow: inset 1px 1px 1px 0 rgba(186, 186, 189, 0.5);
+  background-color: #efeff1;
+}
+
+.wrap-device-list .device-list-header .top-header {
+  width: calc(100% - 40px);
+  height: 52px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrap-device-list .device-list-header .top-header .top-header-left {
+  width: auto;
+  height: 25px;
+}
+
+.wrap-device-list .device-list-header .top-header .top-header-left img {
+  width: 18px;
+  height: 18px;
+}
+
+.wrap-device-list .device-list-header .top-header .top-header-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrap-device-list .device-list-header .top-header .top-header-right .ico-cart {
+  width: 19px;
+  height: 20px;
+  margin-right: 17px;
+  padding-top: 1px;
+}
+
+.wrap-device-list .device-list-header .top-header .top-header-right .ico-cart img {
+  width: 19px;
+  height: 20px;
+}
+
+.wrap-device-list .device-list-header .top-header .top-header-right .ico-mypage {
+  width: 20px;
+  height: 20px;
+}
+
+.wrap-device-list .device-list-header .top-header .top-header-right .ico-mypage img {
+  width: 20px;
+  height: 20px;
+}
+
+.wrap-device-list .system-maintenance {
+  background-color: #fff;
+  height: calc(100vh - 52px);
+}
+
+.wrap-device-list .system-maintenance .contents-inner {
+  margin: 0 auto;
+  padding: 148px 0 0 0;
+}
+
+.wrap-device-list .system-maintenance .contents-inner .icon-area {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto;
+}
+
+.wrap-device-list .system-maintenance .contents-inner .icon-area img {
+  width: 44px;
+  height: 44px;
+}
+
+.wrap-device-list .system-maintenance .contents-inner .system-tit {
+  margin: 24px 0 0 0;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.47px;
+  text-align: center;
+  color: #444;
+}
+
+.wrap-device-list .system-maintenance .contents-inner .system-stit {
+  margin: 12px 0 0 0;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 17px;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #808080;
+}
+
+.wrap-device-list .system-maintenance .contents-inner .system-period {
+  margin: 12px auto 0;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: -0.44px;
+  text-align: center;
+  color: #808080;
+}
+
+/* 서버 오류 안내 */
+.wrap-device-list .system-maintenance.server-error {
+  height:100vh;
+}
+
+.wrap-device-list .system-maintenance.server-error .contents-inner {
+  height:100%;
+  position:relative;
+}
+
+.wrap-device-list .system-maintenance.server-error .contents-inner .system-tit {
+}
+
+.wrap-device-list .system-maintenance.server-error .contents-inner .icon-area img {
+  width: 44px;
+  height: 44px;
+}
+
+.wrap-device-list .link-box {
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right:0;
+  width: 100%;
+  margin:0 auto;
+  height: 55px;
+  font-size: 17px;
+  background-color: #4130df;
+}
+
+.wrap-device-list .link-box .tds-btn {
+  display: block;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: -0.68px;
+  line-height: 55px;
+  color: #fff;
+}
+
+@media all and (max-width: 320px) {
+  /* 280 사이즈 수정 - 220906 */
+  .wrap-device-list .system-maintenance .contents-inner .system-tit {
+    font-size:16px;
+  }
+
+  .wrap-device-list .system-maintenance .contents-inner .system-stit {
+    font-size:12px;
+  }
+}

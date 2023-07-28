@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="title" content="Cordial ">
+  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <meta name="robots" content="none">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <!-- script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="https://rawgithub.com/peachananr/onepage-scroll/master/jquery.onepage-scroll.min.js"></script>
+
+  <!-- style link -->
+  <link rel="stylesheet" href="./inc/css/common.css">
+  <link rel="stylesheet" href="./inc/css/main.css">
+  <link rel="stylesheet" href="https://rawgithub.com/peachananr/onepage-scroll/master/onepage-scroll.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <title>wall paper</title>
+</head>
+
+<body>
+
+  <div id="wrap" class="wrap">
+    <div class="section-wrap">
+      <section class="sec-01">
+        <div class="sec-01__txt">
+          <!-- YOR'RE HIRING A WEB PUBLISHER -->
+          ABC'DE FGHIJK L MNO PQRSTUVWXY
+        </div>
+        <div class="sec-01__bg--img">
+          <div class="badge_box slide-track">
+            <i class="fab fa-react"></i>
+            <i class="fab fa-vuejs"></i>
+            <i class="fab fa-js"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-chrome"></i>
+            <i class="fab fa-edge"></i>
+            <i class="fab fa-safari"></i>
+            <i class="fab fa-git"></i>
+            <i class="fab fa-github"></i>
+            <i class="fab fa-bitbucket"></i>
+            <i class="fab fa-code"></i>
+          </div>
+        </div>
+        <div class="sec-01__btn-box">
+          <button href="#2" class="btn-box_txt">view<i class="fas fa-mouse"></i>detail</button>
+        </div>
+        <div class="sec-01__bg--txt">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae aperiam, atque est error explicabo quia quisquam voluptas, impedit officiis tenetur eligendi rerum nulla ad laborum commodi. Reiciendis deserunt, modi expedita. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae corrupti voluptate repellat illo architecto, esse id iure numquam doloribus? Accusamus quaerat, similique. Quaerat aperiam ducimus aspernatur in repellat cupiditate quis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum dolorem sit ex, cupiditate dolores dolor voluptatum iusto, nam facere! Eos sunt consequatur corporis minima possimus ratione deleniti enim quaerat aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium impedit, temporibus. Architecto reprehenderit incidunt, itaque sequi id inventore culpa laudantium ad unde magni, quae tenetur cupiditate omnis facilis voluptates ducimus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat fugit consequatur, esse quidem delectus temporibus, rerum ducimus ex non, ratione accusamus ab, cum molestiae aliquam illo facilis officiis! Minima, obcaecati. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ipsam dolor quo, necessitatibus, voluptatibus eius sunt sit architecto laborum ut inventore excepturi molestias officiis, possimus veritatis enim tempora. Nostrum, reprehenderit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas fuga odio quo, sint et molestias incidunt tempore eos, quam explicabo ullam officia a! Inventore, quae corporis deleniti neque itaque porro. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates perspiciatis odio a cum, doloribus ipsum, sapiente mollitia aliquid magni, necessitatibus soluta optio. Deserunt voluptatem eaque possimus asperiores nostrum soluta dolores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem tenetur nam consequatur itaque quod adipisci, deleniti laborum repellendus sint vel, quo, molestiae consectetur. Iste labore culpa impedit, minus, voluptates in. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat aliquid dignissimos facilis ea ipsum reprehenderit consequuntur dolorum molestias, dicta delectus animi porro saepe, ipsam officia officiis, sed ducimus sit. Quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis mollitia possimus quibusdam nobis laudantium culpa, id, harum eligendi reprehenderit modi iure sunt perspiciatis dignissimos accusantium voluptas ea incidunt dolor corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, voluptate odit nostrum reprehenderit impedit fuga illo commodi eius sapiente. Accusamus odit iusto iste, ad! Repellat esse similique laudantium consequuntur modi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, enim unde odit earum minus sunt vitae sed ducimus reprehenderit beatae voluptas, mollitia neque! Dolor reiciendis in consectetur, aspernatur magni cumque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quaerat, aperiam et nobis porro accusamus. Voluptas officiis sit labore recusandae fugiat? Voluptatum nisi temporibus non tempore quasi delectus a, qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </div>
+      </section>
+      <section id="2" class="sec-02">
+        <div class="sec-01__txt">
+          <!-- YOR'RE HIRING A WEB PUBLISHER -->
+          ABC'DE FGHIJK L MNO PQRSTUVWXY
+        </div>
+      </section>
+      <section class="sec-03"></section>
+      <section class="sec-04"></section>
+    </div>
+  </div>
+</body>
+
+<script>
+  //onepage.js
+  var onepageScorll = $(".section-wrap").onepage_scroll({
+    sectionContainer: "section",
+    easing: "ease",
+    animationTime: 500,
+    pagination: true,
+    updateURL: false,
+    loop: false,
+    keyboard: true,
+    direction: "vertical",
+    beforeMove: function(idx) {
+      // if (idx == 3) {
+      //   setTimeout(initCounter, 100);
+      // }
+    }
+  });
+  
+  
+  $(".btn-box_txt").click(function(e) {
+    var ts = $(this);
+    // e.preventDefault();
+    // $('html,body').animate({
+    //   scrollTop: $(".sec-02").offset().top
+    // },500);
+      $('.onepage-pagination li > a').removeClass('active').parents().siblings('li:nth-child(2)').find('a').addClass('active');
+  });
+  
+</script>
+
+</html>

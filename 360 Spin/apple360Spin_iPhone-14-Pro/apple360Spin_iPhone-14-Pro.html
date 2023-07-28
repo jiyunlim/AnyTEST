@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Javascript 3D Model Viewer</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: white;
+            font-family: Geneva, sans-serif;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #3CB371;
+        }
+
+        #viewer {
+            width: 100%;
+            height: 400px;
+            margin: auto;
+            background: #000000;
+            margin-top: 2em;
+        }
+
+        .button {
+            border-radius: 0.2em;
+            background-color: white;
+            color: #3CB371;
+            border: 3px solid #3CB371;
+            font-weight: bold;
+            padding: 1em;
+            cursor: pointer;
+        }
+
+        .center {
+            text-align: center;
+            margin-top: 2em;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        pre {
+            padding: 1em;
+            max-width: 900px;
+            margin: auto;
+            margin-top: 4em;
+            font-size: 1.2em;
+        }
+
+        .footer {
+            padding-bottom: 2em;
+        }
+
+        .mr2 {
+            margin-right: 2em;
+        }
+
+        .apple360spin-container {
+            height: calc(100vh - 80px);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <header class="center">
+            <h1>Javascript 3D Model Viewer</h1>
+        </header>
+        <div class="apple360spin-container" data-3d-config='{
+            "axDeviceName":"iPhone-14-Pro",
+            "pathTextures":"assets/textures/",
+            "pathModels":"assets/models/",
+            "containerClass":"apple360spin-container",
+            "svgPath": "assets/rotate.svg",
+            "modalData":{
+                "isModal":true,
+                "customModalEntryID":"apple360Spin",
+                "defaultModalEntryText":""
+                },
+                "modelFileData":[
+                    {
+                        "label":"Gold",
+                        "labelName":"Gold",
+                        "color":"#F5EBD3",
+                        "filename":"iPhone14_Pro_Gold.gltf",
+                        
+                        "index":0
+                    },{
+                        "label":"Silver",
+                        "labelName":"Silver",
+                        "color":"#EFF6F3",
+                        "filename":"iPhone14_Pro_Silver.gltf",
+                        
+                        "index":1
+                    },{
+                        "label":"SpaceBlack",
+                        "labelName":"SpaceBlack",
+                        "color":"#44453B",
+                        "filename":"iPhone14_Pro_SpaceBlack.gltf",
+                        "index":2
+                    },{
+                        "label":"DeepPurple",
+                        "labelName":"DeepPurple",
+                        "color":"#585367",
+                        "filename":"iPhone14_Pro_DeepPurple.gltf",
+                        "index":3
+                    }
+                ],
+            "iblFilename":"",
+            "actionPromptDesktop":"Drag to rotate",
+            "actionPromptMobile":"Swipe to rotate"
+        }'>
+        </div>
+        <script src="scripts/apple360spin.js"></script>
+        <script>
+            // Create an instance
+            const init3D = new CustomEvent('channel-html:3djs:init');
+
+            window.addEventListener('DOMContentLoaded', () => {
+                window.dispatchEvent(init3D);
+            });
+        </script>
+</body>
+
+</html>

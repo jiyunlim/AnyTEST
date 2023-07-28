@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>test <model-viewer> </title>
+		<style>
+			body{
+				touch-action: none; 
+				overflow: hidden;
+			}
+			model-viewer {
+				display: block;
+				width: 100%;
+				height: 400px;
+				background-color: aliceblue;
+				padding-bottom: 50px;
+				pointer-events: initial;
+			}
+			.options-area {
+				position: fixed;
+				bottom: 3px;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: 9999999;
+			}
+			.options-area .item-color {
+				width: 21px;
+				height: 21px;
+				border: 0;
+				border-radius: 50%;
+				padding: 0;
+				margin: 0 10px;
+				border: 2px solid #fff;
+			}
+			.options-area .item-color.selected {
+				border-color: #0071e3;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="3D-model-viewer-wrap">
+			<!-- 3D 렌더 영역 -->
+			<model-viewer 
+				src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
+				loading="eager"
+				camera-controls
+				touch-action="pan-y" 
+				ar-placement="wall"  
+				alt="iPhone 14" 
+				disable-zoom 
+				disable-tap	
+			> 
+				<div class="options-area">
+					<div class="options-item">
+						<button class="item-color selected" onclick="switchSrc(this, 'Astronaut')" style="background-color: #8c9495;"></button>
+						<button class="item-color" onclick="switchSrc(this, 'RobotExpressive')" style="background-color: #d9b25a;"></button>
+						<button class="item-color" onclick="switchSrc(this, 'RocketShip')" style="background-color: #c71b19;"></button>
+					</div>
+				</div>
+			</model-viewer>
+
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/jquery-ui.min.js"></script>
+		<!-- 3D 렌더 js ↓ -->
+		<!-- <script type="module" src="../js/model-viewer.min.js"></script> -->
+		<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+				
+		<script type="module">
+			const modelViewer = document.querySelector("model-viewer");
+		
+			window.switchSrc = (element, name) => {
+				const base = "https://modelviewer.dev/shared-assets/models/" + name;
+				modelViewer.src = base + '.glb';
+				// modelViewer.poster = base + '.webp';
+				const items = document.querySelectorAll(".item-color");
+				items.forEach((element) => {element.classList.remove("selected");});
+				element.classList.add("selected");
+			};
+			document.querySelector(".options-area").addEventListener('beforexrselect', (ev) => {
+				// Keep slider interactions from affecting the XR scene.
+				ev.preventDefault();
+			});
+		</script>
+	</body>
+</html>

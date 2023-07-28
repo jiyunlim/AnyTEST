@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>test 3D</title>
+		
+		<style>
+			#viewer {
+				width: calc(100% - 40px);
+				margin:20px auto; 
+				height: 400px; 
+				background: url(../img/compare/bg_selfopening_default.png) 0 0 no-repeat;
+			}
+			canvas{
+			background-color: #fff !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="3D-model-viewer-wrap">
+			
+			<!-- 3D 렌더 영역 -->
+			<div id="viewer" style=""></div>
+
+			<div class="center">
+				<span id="name">iPhone 14</span>
+				<span id="loading"></span>
+				<span class="spin-here">360</span>
+			</div>
+
+			<div class="other-view-area">
+				<button class="button" id="sample-1-button">
+					Sample 1
+				</button>
+				<button class="button" id="sample-2-button">
+					Sample 2
+				</button>
+				<button class="button" id="sample-3-button">
+					Sample 3
+				</button>
+				<button class="button" id="sample-4-button">
+					Sample 4 (.glb)
+				</button>
+			</div>
+		</div>
+		
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/jquery-ui.min.js"></script>
+		<!-- 3D 렌더 js ↓ -->
+		<script src="../js/js-3d-model-viewer.js"></script>
+		
+		<script>
+			// 캔버스 배경색 이랑.. 스크롤링 했을때 확대,축소 막는 옵션이 있나요..
+			var modelPlayer = this.Js3dModelViewer
+			var nameElement = document.getElementById('name')
+			var loadingElement = document.getElementById('loading')
+			var viewerElement = document.getElementById('viewer')
+			var scene = modelPlayer.prepareScene(viewerElement, {
+				grid: false,
+			})
+
+			modelPlayer.loadObject(scene, '../img/sample/sample_03.obj')
+			// or
+			// modelPlayer.loadGlb(scene, '../img/sample/duck.glb')
+
+			viewerElement.addEventListener('loading', function (event) {
+				if (event.detail.loaded === 0) {
+					nameElement.innerHTML = 'Loading...'
+				} 
+				var progress = Math.floor(100 * event.detail.loaded / event.detail.total)
+				loadingElement.innerHTML = progress + '%'
+			})
+
+		</script>
+	</body>
+</html>

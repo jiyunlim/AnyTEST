@@ -1,0 +1,985 @@
+<!-- 유선 리스트 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>My Shop &lt; Wireline List</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../css/seller.css">
+
+  <script>
+      document.documentElement.dataset.userAgent = navigator.userAgent;
+  </script>
+</head>
+
+<body>
+  <!-- #skip_navigation -->
+  <div id="skipNav" class="skip_navi">
+    <a href="#contents-area" class="skip-link">본문 바로가기</a>
+  </div>
+  <!-- [D] "바닥 네비게이션" 유/무 Class 
+        'nav-logo-in' : 로그인  로그인 바 없는 상태
+        'nav-logo-out': 비로그인 로그인 바 있는 상태
+        '  ' : 네비게이션 바 자체가 없는 경우  
+    -->
+  <!-- [D] 유선 : wireline-list 추가  -->
+  <div class="wrap-device-list wireline-list nav-logo-out">
+    <!-- 헤더영역 -->
+    <div class="device-list-header">
+      <div class="top-header">
+        <div class="top-header-left">
+          <a href="#" class="ico-goback">
+            <img src="../img/icon-header-back@2x.png" alt="이전 페이지">
+          </a>
+        </div>
+        <div class="top-header-right">
+          <button type="button" class="ico-cart"><img src="../img/icon-header-cart@2x.png" alt="장바구니"></button>
+          <button type="button" class="ico-mypage" title="T 다이렉트샵 모바일웹(새창)"><img src="../img/icon-header-my@2x.png" alt="마이페이지"></button>
+        </div>
+      </div>
+    </div>
+    <!-- 상단네비 -->
+    <div class="top-navi-area-area">
+      <nav class="top-navi-area">
+        <div class="swiper-wrap">
+          <div class="swiper-container-menu">
+            <ul class="swiper-wrapper" role="tablist">
+              <li class="item swiper-slide item-active" role="presentation">
+                <button type="button" class="btn current" id="wireline_tab_menu_1" role="tab" aria-selected="true" aria-controls="wireline_tab_content1">인터넷</button>
+              </li>
+              <li class="item swiper-slide" role="presentation">
+                <button type="button" class="btn" id="wireline_tab_menu_2" role="tab" aria-selected="false" aria-controls="wireline_tab_content2"> B tv</button>
+              </li>
+              <li class="item swiper-slide" role="presentation">
+                <button type="button" class="btn" id="wireline_tab_menu_3" role="tab" aria-selected="false" aria-controls="wireline_tab_content3">결합할인</button>
+              </li>
+              <li class="item swiper-slide" role="presentation">
+                <button type="button" class="btn" id="wireline_tab_menu_4" role="tab" aria-selected="false" aria-controls="wireline_tab_content4">사은품</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- [웹접근성] aria-labelledby , id 값 유동적으로 변경 -->
+    <div class="tab-contents-area" role="tabpanel" aria-labelledby="wireline_tab_menu_1" id="wireline_tab_content1">
+      <h2 id="contents-area" tabindex="-1">
+        <span class="blind">본문시작</span>
+      </h2>
+      <h2 class="g-invisible">인터넷</h2>
+      <div class="wireline-prod-wrap">
+        <div class="cnts-box-top new-notice">
+          <a href="#" class="notice-text">나의 인터넷/B tv 가입 정보 보러가기
+            <span class="goto-notice">가입 정보 보러가기</span>
+          </a>
+        </div>
+        <div class="cnts-box-01">
+          <div class="swiper-container prod-list">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="prod-info">
+                  <!-- '자세히 보기' 링크영역 - 220616 수정 -->
+                  <div class="virtual-box" onclick="">자세히 보기 링크영역</div>
+                  <div class="prod-speed">1Gbps</div>
+                  <div class="prod-desc-tit">온라인 전용 가격</div>
+                  <div class="prod-tag">
+                    <p>#4K스트리밍 #실시간 게임</p>
+                    <p>#PC/스마트폰 원격점검</p>
+                  </div>
+                  <h3>원격케어 기가인터넷</h3>
+                  <div class="prod-desc">
+                    <button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+                    <div class="prod-cost">
+                      <div class="origin-cost">68,200원</div>
+                      <div class="disc-cost">월 <span>21,450</span>원 </div>
+                    </div>
+                  </div>
+                  <div class="prod-btns">
+                    <button type="button" class="btn-cart disabled">장바구니</button>
+                    <a href="#none" class="btn-counsel">상담하기</a>
+                    <a href="#none" class="btn-join">바로 가입</a>
+                  </div>
+                </div>
+                <div class="prod-recom-wrap">
+                  <div class="prod-recom">
+                    <p>이런 고객님께 추천드려요!</p>
+                    <ul class="recom-type">
+                      <li>원격점검을 통해 신속하게 문제를 해결하고 싶다</li>
+                      <li>PC/스마트폰 사용 시 문제가 생겼을 때 전문가를 통해 해결하고 싶다</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="prod-info">
+                  <!-- '자세히 보기' 링크영역 - 220616 수정 -->
+                  <div class="virtual-box" onclick="">자세히 보기 링크영역</div>
+                  <div class="prod-speed">500Mbps</div>
+                  <div class="prod-desc-tit">온라인 전용 가격</div>
+                  <div class="prod-tag">
+                    <p>#고화질 #동영상시청</p>
+                    <p>#PC/스마트폰 원격점검</p>
+                  </div>
+                  <h3>원격케어 기가라이트인터넷</h3>
+                  <div class="prod-desc">
+                    <button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+                    <div class="prod-cost">
+                      <div class="origin-cost">62,700원</div>
+                      <div class="disc-cost">월 <span>18,150</span>원 </div>
+                    </div>
+                  </div>
+                  <div class="prod-btns">
+                    <button type="button" class="btn-cart">장바구니</button>
+                    <a href="#none" class="btn-counsel">상담하기</a>
+                    <a href="#none" class="btn-join">바로 가입</a>
+                  </div>
+                </div>
+                <div class="prod-recom-wrap">
+                  <div class="prod-recom">
+                    <p>이런 고객님께 추천드려요!</p>
+                    <ul class="recom-type">
+                      <li>원격점검을 통해 신속하게 문제를 해결하고 싶다</li>
+                      <li>PC/스마트폰 사용 시 문제가 생겼을 때 전문가를 통해 해결하고 싶다</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="prod-info">
+                  <!-- '자세히 보기' 링크영역 - 220616 수정 -->
+                  <div class="virtual-box" onclick="">자세히 보기 링크영역</div>
+                  <div class="prod-speed">100Mbps</div>
+                  <div class="prod-desc-tit">온라인 전용 가격</div>
+                  <div class="prod-tag">
+                    <p>#웹서핑 #사무용도</p>
+                    <p>#PC/스마트폰 원격점검</p>
+                  </div>
+                  <h3>원격케어 광랜인터넷</h3>
+                  <div class="prod-desc">
+                    <button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+                    <div class="prod-cost">
+                      <div class="origin-cost">49,500원</div>
+                      <div class="disc-cost">월 <span>16,500</span>원 </div>
+                    </div>
+                  </div>
+                  <div class="prod-btns">
+                    <button type="button" class="btn-cart">장바구니</button>
+                    <a href="#none" class="btn-counsel">상담하기</a>
+                    <a href="#none" class="btn-join">바로 가입</a>
+                  </div>
+                </div>
+                <div class="prod-recom-wrap">
+                  <div class="prod-recom">
+                    <p>이런 고객님께 추천드려요!</p>
+                    <ul class="recom-type">
+                      <li>원격점검을 통해 신속하게 문제를 해결하고 싶다</li>
+                      <li>PC/스마트폰 사용 시 문제가 생겼을 때 전문가를 통해 해결하고 싶다</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="prod-info">
+                  <!-- '자세히 보기' 링크영역 - 220616 수정 -->
+                  <div class="virtual-box" onclick="">자세히 보기 링크영역</div>
+                  <div class="prod-speed">1Gbps</div>
+                  <div class="prod-desc-tit">온라인 전용 가격</div>
+                  <div class="prod-tag">
+                    <p>#4K스트리밍 #실시간 게임</p>
+                    <p>#악성코드/바이러스예방</p>
+                  </div>
+                  <h3>파워백신 기가인터넷</h3>
+                  <div class="prod-desc">
+                    <button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+                    <div class="prod-cost">
+                      <div class="origin-cost">68,200원</div>
+                      <div class="disc-cost">월 <span>21,450</span>원 </div>
+                    </div>
+                  </div>
+                  <div class="prod-btns">
+                    <button type="button" class="btn-cart">장바구니</button>
+                    <a href="#none" class="btn-counsel">상담하기</a>
+                    <a href="#none" class="btn-join">바로 가입</a>
+                  </div>
+                </div>
+                <div class="prod-recom-wrap">
+                  <div class="prod-recom">
+                    <p>이런 고객님께 추천드려요!</p>
+                    <ul class="recom-type">
+                      <li>악성코드/바이러스를 미리 예방하고 싶다</li>
+                      <li>자동으로 PC를 간편하게 최적화 한다</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="prod-info">
+                  <!-- '자세히 보기' 링크영역 - 220616 수정 -->
+                  <div class="virtual-box" onclick="">자세히 보기 링크영역</div>
+                  <div class="prod-speed">500Mbps</div>
+                  <div class="prod-desc-tit">온라인 전용 가격</div>
+                  <div class="prod-tag">
+                    <p>#고화질 #동영상시청</p>
+                    <p>#스트리밍 #악성코드/바이러스예방</p>
+                  </div>
+                  <h3>파워백신 기가라이트인터넷</h3>
+                  <div class="prod-desc">
+                    <button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+                    <div class="prod-cost">
+                      <div class="origin-cost">62,700원</div>
+                      <div class="disc-cost">월 <span>18,150</span>원 </div>
+                    </div>
+                  </div>
+                  <div class="prod-btns">
+                    <button type="button" class="btn-cart">장바구니</button>
+                    <a href="#none" class="btn-counsel">상담하기</a>
+                    <a href="#none" class="btn-join">바로 가입</a>
+                  </div>
+                </div>
+                <div class="prod-recom-wrap">
+                  <div class="prod-recom">
+                    <p>이런 고객님께 추천드려요!</p>
+                    <ul class="recom-type">
+                      <li>악성코드/바이러스를 미리 예방하고 싶다</li>
+                      <li>자동으로 PC를 간편하게 최적화 한다</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="prod-info">
+                  <!-- '자세히 보기' 링크영역 - 220616 수정 -->
+                  <div class="virtual-box" onclick="">자세히 보기 링크영역</div>
+                  <div class="prod-speed">100Mbps</div>
+                  <div class="prod-desc-tit">온라인 전용 가격</div>
+                  <div class="prod-tag">
+                    <p>#웹서핑 #사무용도 #1인가구</p>
+                    <p>#악성코드/바이러스예방</p>
+                  </div>
+                  <h3>파워백신 광랜인터넷</h3>
+                  <div class="prod-desc">
+                    <button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+                    <div class="prod-cost">
+                      <div class="origin-cost">49,500원</div>
+                      <div class="disc-cost">월 <span>16,500</span>원 </div>
+                    </div>
+                  </div>
+                  <div class="prod-btns">
+                    <button type="button" class="btn-cart">장바구니</button>
+                    <a href="#none" class="btn-counsel">상담하기</a>
+                    <a href="#none" class="btn-join">바로 가입</a>
+                  </div>
+                </div>
+                <div class="prod-recom-wrap">
+                  <div class="prod-recom">
+                    <p>이런 고객님께 추천드려요!</p>
+                    <ul class="recom-type">
+                      <li>악성코드/바이러스를 미리 예방하고 싶다</li>
+                      <li>자동으로 PC를 간편하게 최적화 한다</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="prod-info">
+                  <!-- '자세히 보기' 링크영역 - 220616 수정 -->
+                  <div class="virtual-box" onclick="">자세히 보기 링크영역</div>
+                  <div class="prod-speed">1Gbps</div>
+                  <div class="prod-desc-tit">온라인 전용 가격</div>
+                  <div class="prod-tag">
+                    <p>#4K스트리밍 #실시간 게임</p>
+                    <p>#대용량전송 #유해사이트차단</p>
+                  </div>
+                  <h3>모두안심 기가인터넷</h3>
+                  <div class="prod-desc">
+                    <button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+                    <div class="prod-cost">
+                      <div class="origin-cost">68,200원</div>
+                      <div class="disc-cost">월 <span>21,450</span>원 </div>
+                    </div>
+                  </div>
+                  <div class="prod-btns">
+                    <button type="button" class="btn-cart">장바구니</button>
+                    <a href="#none" class="btn-counsel">상담하기</a>
+                    <a href="#none" class="btn-join">바로 가입</a>
+                  </div>
+                </div>
+                <div class="prod-recom-wrap">
+                  <div class="prod-recom">
+                    <p>이런 고객님께 추천드려요!</p>
+                    <ul class="recom-type">
+                      <li>악성코드/바이러스로부터 가족의 개인정보를 지키고 싶다</li>
+                      <li>PC/스마트폰 유해사이트로부터 자녀를 지켜주고 싶다</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="prod-info">
+                  <!-- '자세히 보기' 링크영역 - 220616 수정 -->
+                  <div class="virtual-box" onclick="">자세히 보기 링크영역</div>
+                  <div class="prod-speed">500Mbps</div>
+                  <div class="prod-desc-tit">온라인 전용 가격</div>
+                  <div class="prod-tag">
+                    <p>#고화질 #동영상시청</p>
+                    <p>#스트리밍/웹서핑 #유해사이트차단</p>
+                  </div>
+                  <h3>모두안심 기가라이트인터넷</h3>
+                  <div class="prod-desc">
+                    <button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+                    <div class="prod-cost">
+                      <div class="origin-cost">62,700원</div>
+                      <div class="disc-cost">월 <span>18,150</span>원 </div>
+                    </div>
+                  </div>
+                  <div class="prod-btns">
+                    <button type="button" class="btn-cart">장바구니</button>
+                    <a href="#none" class="btn-counsel">상담하기</a>
+                    <a href="#none" class="btn-join">바로 가입</a>
+                  </div>
+                </div>
+                <div class="prod-recom-wrap">
+                  <div class="prod-recom">
+                    <p>이런 고객님께 추천드려요!</p>
+                    <ul class="recom-type">
+                      <li>악성코드/바이러스로부터 가족의 개인정보를 지키고 싶다</li>
+                      <li>PC/스마트폰 유해사이트로부터 자녀를 지켜주고 싶다</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="prod-info">
+                  <!-- '자세히 보기' 링크영역 - 220616 수정 -->
+                  <div class="virtual-box" onclick="">자세히 보기 링크영역</div>
+                  <div class="prod-speed">100Mbps</div>
+                  <div class="prod-desc-tit">온라인 전용 가격</div>
+                  <div class="prod-tag">
+                    <p>#경제적인 #실속형</p>
+                    <p>#1인가구 #유해사이트 차단</p>
+                  </div>
+                  <h3>모두안심 광랜인터넷</h3>
+                  <div class="prod-desc">
+                    <button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+                    <div class="prod-cost">
+                      <div class="origin-cost">49,500원</div>
+                      <div class="disc-cost">월 <span>16,500</span>원 </div>
+                    </div>
+                  </div>
+                  <div class="prod-btns">
+                    <button type="button" class="btn-cart">장바구니</button>
+                    <a href="#none" class="btn-counsel">상담하기</a>
+                    <a href="#none" class="btn-join">바로 가입</a>
+                  </div>
+                </div>
+                <div class="prod-recom-wrap">
+                  <div class="prod-recom">
+                    <p>이런 고객님께 추천드려요!</p>
+                    <ul class="recom-type">
+                      <li>악성코드/바이러스로부터 가족의 개인정보를 지키고 싶다</li>
+                      <li>PC/스마트폰 유해사이트로부터 자녀를 지켜주고 싶다</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="prod-info">
+                  <!-- '자세히 보기' 링크영역 - 220616 수정 -->
+                  <div class="virtual-box" onclick="">자세히 보기 링크영역</div>
+                  <div class="prod-speed">1Gbps</div>
+                  <div class="prod-desc-tit">온라인 전용 가격</div>
+                  <div class="prod-tag">
+                    <p>#4K스트리밍 #게임 #WiFi포함</p>
+                    <p>#대용량컨텐츠 #다운로드</p>
+                  </div>
+                  <h3>기가인터넷 와이파이</h3>
+                  <div class="prod-desc">
+                    <button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+                    <div class="prod-cost">
+                      <div class="origin-cost">64,900원</div>
+                      <div class="disc-cost">월 <span>19,800</span>원 </div>
+                    </div>
+                  </div>
+                  <div class="prod-btns">
+                    <button type="button" class="btn-cart">장바구니</button>
+                    <a href="#none" class="btn-counsel">상담하기</a>
+                    <a href="#none" class="btn-join">바로 가입</a>
+                  </div>
+                </div>
+                <div class="prod-recom-wrap">
+                  <div class="prod-recom">
+                    <p>이런 고객님께 추천드려요!</p>
+                    <ul class="recom-type">
+                      <li>게임, 초고화질 비디오 감상을 즐긴다</li>
+                      <li>대용량 파일 업&amp;다운로드를 끊김없이 쓰고싶다</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="prod-info">
+                  <!-- '자세히 보기' 링크영역 - 220616 수정 -->
+                  <div class="virtual-box" onclick="">자세히 보기 링크영역</div>
+                  <div class="prod-speed">500Mbps</div>
+                  <div class="prod-desc-tit">온라인 전용 가격</div>
+                  <div class="prod-tag">
+                    <p>#고화질영상 #WiFi포함</p>
+                    <p>#인터넷사용량多 #2인가구이상</p>
+                  </div>
+                  <h3>기가라이트인터넷 와이파이</h3>
+                  <div class="prod-desc">
+                    <button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+                    <div class="prod-cost">
+                      <div class="origin-cost">59,400원</div>
+                      <div class="disc-cost">월 <span>16,500</span>원 </div>
+                    </div>
+                  </div>
+                  <div class="prod-btns">
+                    <button type="button" class="btn-cart">장바구니</button>
+                    <a href="#none" class="btn-counsel">상담하기</a>
+                    <a href="#none" class="btn-join">바로 가입</a>
+                  </div>
+                </div>
+                <div class="prod-recom-wrap">
+                  <div class="prod-recom">
+                    <p>이런 고객님께 추천드려요!</p>
+                    <ul class="recom-type">
+                      <li>빠른 Giga 인터넷을 이용하고 싶다</li>
+                      <li>인터넷 사용량이 많고 여러명이서 사용한다</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="prod-info">
+                  <!-- '자세히 보기' 링크영역 - 220616 수정 -->
+                  <div class="virtual-box" onclick="">자세히 보기 링크영역</div>
+                  <div class="prod-speed">100Mbps</div>
+                  <div class="prod-desc-tit">온라인 전용 가격</div>
+                  <div class="prod-tag">
+                    <p>#경제적 #실속형 #WiFi포함</p>
+                    <p>#웹서핑 #문서작업 #1인가구</p>
+                  </div>
+                  <h3>광랜인터넷 와이파이</h3>
+                  <div class="prod-desc">
+                    <button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+                    <div class="prod-cost">
+                      <div class="origin-cost">46,200원</div>
+                      <div class="disc-cost">월 <span>14,850</span>원 </div>
+                    </div>
+                  </div>
+                  <div class="prod-btns">
+                    <button type="button" class="btn-cart">장바구니</button>
+                    <a href="#none" class="btn-counsel">상담하기</a>
+                    <a href="#none" class="btn-join">바로 가입</a>
+                  </div>
+                </div>
+                <div class="prod-recom-wrap">
+                  <div class="prod-recom">
+                    <p>이런 고객님께 추천드려요!</p>
+                    <ul class="recom-type">
+                      <li>적게 쓴다면 요금도 적게 내고 싶다</li>
+                      <li>최소한의 용도로 인터넷을 사용 한다</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="prod-info">
+                  <!-- '자세히 보기' 링크영역 - 220616 수정 -->
+                  <div class="virtual-box" onclick="">자세히 보기 링크영역</div>
+                  <div class="prod-speed">1Gbps</div>
+                  <div class="prod-desc-tit">온라인 전용 가격</div>
+                  <div class="prod-tag">
+                    <p>#4K스트리밍 #실시간 게임</p>
+                    <p>#대용량컨텐츠 #다운로드</p>
+                  </div>
+                  <h3>기가인터넷</h3>
+                  <div class="prod-desc">
+                    <button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+                    <div class="prod-cost">
+                      <div class="origin-cost">55,000원</div>
+                      <div class="disc-cost">월 <span>18,700</span>원 </div>
+                    </div>
+                  </div>
+                  <div class="prod-btns">
+                    <button type="button" class="btn-cart">장바구니</button>
+                    <a href="#none" class="btn-counsel">상담하기</a>
+                    <a href="#none" class="btn-join">바로 가입</a>
+                  </div>
+                </div>
+                <div class="prod-recom-wrap">
+                  <div class="prod-recom">
+                    <p>이런 고객님께 추천드려요!</p>
+                    <ul class="recom-type">
+                      <li>게임, 초고화질 비디오 감상을 즐긴다</li>
+                      <li>대용량 파일 업&amp;다운로드를 끊김없이 쓰고싶다</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="prod-info">
+                  <!-- '자세히 보기' 링크영역 - 220616 수정 -->
+                  <div class="virtual-box" onclick="">자세히 보기 링크영역</div>
+                  <div class="prod-speed">500Mbps</div>
+                  <div class="prod-desc-tit">온라인 전용 가격</div>
+                  <div class="prod-tag">
+                    <p>#고화질 #동영상시청 </p>
+                    <p>#인터넷사용량多 #2인가구이상</p>
+                  </div>
+                  <h3>기가라이트인터넷</h3>
+                  <div class="prod-desc">
+                    <button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+                    <div class="prod-cost">
+                      <div class="origin-cost">49,500원</div>
+                      <div class="disc-cost">월 <span>15,400</span>원 </div>
+                    </div>
+                  </div>
+                  <div class="prod-btns">
+                    <button type="button" class="btn-cart">장바구니</button>
+                    <a href="#none" class="btn-counsel">상담하기</a>
+                    <a href="#none" class="btn-join">바로 가입</a>
+                  </div>
+                </div>
+                <div class="prod-recom-wrap">
+                  <div class="prod-recom">
+                    <p>이런 고객님께 추천드려요!</p>
+                    <ul class="recom-type">
+                      <li>빠른 Giga 인터넷을 이용하고 싶다</li>
+                      <li>인터넷 사용량이 많고 여러명이서 사용한다</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="prod-info">
+                  <!-- '자세히 보기' 링크영역 - 220616 수정 -->
+                  <div class="virtual-box" onclick="">자세히 보기 링크영역</div>
+                  <div class="prod-speed">100Mbps</div>
+                  <div class="prod-desc-tit">온라인 전용 가격</div>
+                  <div class="prod-tag">
+                    <p>#웹서핑 #사무용도 </p>
+                    <p>#1인가구 #최소한의용도</p>
+                  </div>
+                  <h3>광랜인터넷</h3>
+                  <div class="prod-desc">
+                    <button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+                    <div class="prod-cost">
+                      <div class="origin-cost">36,300원</div>
+                      <div class="disc-cost">월 <span>13,750</span>원 </div>
+                    </div>
+                  </div>
+                  <div class="prod-btns">
+                    <button type="button" class="btn-cart">장바구니</button>
+                    <a href="#none" class="btn-counsel">상담하기</a>
+                    <a href="#none" class="btn-join">바로 가입</a>
+                  </div>
+                </div>
+                <div class="prod-recom-wrap">
+                  <div class="prod-recom">
+                    <p>이런 고객님께 추천드려요!</p>
+                    <ul class="recom-type">
+                      <li>사은품 보다는 경제적인 요금을 선호 하시는 분</li>
+                      <li>인터넷을 간편하게 이용 하시는 분</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prod-noti-wrap">
+            <p>※ SK텔레콤 휴대폰 1대 결합, 요금할인 혜택(더슬림 요금제), 온라인 할인, 3년 약정 기준(부가세 포함)</p>
+            <p>※ 신규 가입으로 요금할인 혜택(더슬림 요금제) 선택 시 별도의 사은품은 지급되지 않습니다. </p>
+            <p>※ 실제 인터넷 제공 속도는 인터넷 설치환경이나 PC 등 기기 성능에 따라 최대 속도와 다를 수 있습니다.</p>
+          </div>
+        </div>
+        <!-- 메인 시뮬레이션 이동 배너 -->
+        <!-- [D] 내부 테스트(stg )결함 67 수정 2023.07.12 -->
+        <div class="cnts-box-03-1">
+          <button type="button" class="cnt-card">
+            <div class="ad-banner-img">
+              <img src="../img/wireline/banner_internet_btv@2x.png" alt="내가 원하는 상품으로! 인터넷/B tv 요금 계산하기">
+            </div>
+          </button>
+        </div>
+        <!-- S: why-tds -->
+        <section class="why-tds-area area">
+          <div class="l-grid">
+            <h3>인터넷 가입, <br>왜 T 다이렉트샵인가요? </h3>
+            <ul class="why-tds-list">
+              <li>
+                <strong class="tit">T 다이렉트샵은 <br>믿을 수 있습니다. </strong>
+                <p> SK텔레콤의 공식 <br> 온라인몰 T 다이렉트샵에서 <br> 인터넷과 B tv를 <br> 만나보세요! </p>
+              </li>
+              <li>
+                <strong class="tit">온라인 전용 <br>할인 혜택을 받아보세요. </strong>
+                <p> 단품/결합 상관없이 <br> T 다이렉트샵에서는 <br> 온라인 전용할인가로 <br> 만나보세요! </p>
+              </li>
+              <li>
+                <strong class="tit">24시간 언제든지 <br>편하게 가입! </strong>
+                <p> 간편하게 온라인 가입하고, <br> 설치일 변경, <br> 사은품 배송까지 <br> 손쉽게 확인하세요! </p>
+              </li>
+              <li>
+                <strong class="tit">인터넷 구매하면 <br>휴대폰을 더 싸게! </strong>
+                <p> T 다이렉트샵에서 <br> 인터넷 구매하시면 <br> 최대 45만 원 휴대폰 <br> 할인 혜택을 드립니다. </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- 연령대별 상품 가입 현황 -->
+        <div class="age-chart-area">
+          <h3>
+            <span class="marker">연령대별</span> 상품 가입 현황
+          </h3>
+          <div class="donut-tabarea">
+            <!-- Swiper -->
+            <div class="lnb">
+              <ul>
+                <!-- [D] 선택된 메뉴 a태그에 aria-current="page" 적용 -->
+                <li class="swiper-slide lnb-item">
+                  <a href="#none" class="link-block" aria-current="page">20대</a>
+                </li>
+                <li class="swiper-slide lnb-item">
+                  <a href="#none" class="link-block">30대</a>
+                </li>
+                <li class="swiper-slide lnb-item">
+                  <a href="#none" class="link-block">40대</a>
+                </li>
+                <li class="swiper-slide lnb-item">
+                  <a href="#none" class="link-block">50대</a>
+                </li>
+                <li class="swiper-slide lnb-item">
+                  <a href="#none" class="link-block">60대 이상</a>
+                </li>
+              </ul>
+            </div>
+            <!-- //Swiper -->
+          </div>
+          <div class="donut-chart">
+            <div class='donut-guide donut-chart__legend'></div>
+            <svg>
+              <pattern id="jstest" patternUnits="userSpaceOnUse" width="20px" height="20px">
+                <image href="https://naver.github.io/billboard.js/img/logo/billboard.js.svg" width="20px" height="20px" />
+              </pattern>
+              <pattern id="jstest1" patternUnits="userSpaceOnUse" width="20px" height="20px">
+                <image href="https://naver.github.io/billboard.js/img/logo/billboard.js1.svg" width="20px" height="20px" />
+              </pattern>
+              <pattern id="jstest2" patternUnits="userSpaceOnUse" width="20px" height="20px">
+                <image href="https://naver.github.io/billboard.js/img/logo/billboard.js2.svg" width="20px" height="20px" />
+              </pattern>
+              <pattern id="jstest3" patternUnits="userSpaceOnUse" width="20px" height="20px">
+                <image href="https://naver.github.io/billboard.js/img/logo/billboard.js3.svg" width="20px" height="20px" />
+              </pattern>
+            </svg>
+            <div id="agechart"></div>
+          </div>
+        </div>
+        <!-- [D] case : 데이터 오류! -->
+				<div class="data-none">
+					<p>조금 뒤 다시 시도해주시기 바랍니다.</p>
+				</div>
+        <!-- 우리 동네 인터넷 가입 현황 -->
+        <div class="town-chart-area">
+          <h3>
+            <span class="marker">우리 동네</span> 인터넷 가입 현황
+          </h3>
+          <p class="stitle">인터넷을 설치할 동네를 찾아보세요.</p>
+          <!-- < 유선 웹접근성 수정 07/04> -->
+          <div class="select-box-wrap">
+            <div class="area-select-box area-select-1">
+              <select name="selectCity" id="" title="시/도 선택" required="required">
+                <option value="">시/도</option>
+                <option value="">강원도</option>
+                <option value="">경기도</option>
+                <option value="">경상남도</option>
+                <option value="">경상남도</option>
+                <option value="">전라남도</option>
+                <option value="">전라북도</option>
+                <option value="">제주도</option>
+                <option value="">충청북도</option>
+                <option value="">충청남도</option>
+              </select>
+            </div>
+            <div class="area-select-box area-select-2">
+              <select name="selectCity" id="" title="시/군/구 선택" required="required">
+                <option value="">시/군/구</option>
+                <option value="">중구</option>
+                <option value="">분당구</option>
+                <option value="">중구</option>
+                <option value="">분당구</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="map-area">
+            <div class="img-box">
+              <img src="../img/wireline/map.png" alt="">
+            </div>
+          </div>
+          <!-- [D] 통계데이터 있는 경우 -->
+          <div class="donut-chart">
+            <div class='donut-guide donut-chart__legend_town1'></div>
+            <div id="townchart_1"></div>
+          </div>
+          <!-- [D] 통계데이터 없는 경우 -->
+          <div class="donut-chart no-data">
+            <div class='donut-guide donut-chart__legend_town2'></div>
+            <div id="townchart_2"></div>
+            <div class="no-data-wrap">
+              <div class="con-box">
+                <p class="text">이 지역에 설치할 수 있는 상품이 없습니다.</p>
+                <p class="text-s">SK텔레콤 유선 가입센터(1670-2001)로 전화 주시면 <br>자세히 안내해 드리겠습니다. </p>
+              </div>
+            </div>
+          </div>
+          <!-- [D] case : 데이터 오류! -->
+					<div class="data-none">
+						<p>조금 뒤 다시 시도해주시기 바랍니다.</p>
+					</div>
+        </div>
+        <!-- 비로그인 -->
+        <!-- [D] 내부 테스트(stg )결함 67 수정 2023.07.12 -->
+        <div class="cnts-box-03">
+          <button type="button">
+            <h3>주소 입력해서 상품 찾기</h3>
+            <p>우리 집에 이 상품,<br>설치할 수 있을까?</p>
+          </button>
+        </div>
+        <!-- //비로그인 -->
+        <!-- 로그인 -->
+        <!-- [D] 내부 테스트(stg )결함 67 수정 2023.07.12 -->
+        <div class="cnts-box-03 login">
+          <button type="button">
+            <h3> 홍*동 고객님! </h3>
+            <p> 원하는 주소에 설치 가능한 <br />상품을 알려드릴게요</p>
+          </button>
+        </div>
+        <!-- //로그인 -->
+        <!-- S: 자주하는 질문 -->
+        <section class="faq-area area">
+          <div class="l-grid">
+            <div class="faq-wrap">
+              <h3>이것이 궁금해요! <br>자주 하는 질문 </h3>
+              <button type="button" class="btn-view-all">전체 보기</button>
+              <ul class="faq-list">
+                <li>
+                  <a href="javascript:void(0);" class="btn-faq layer-open-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="dialog">
+                    <div class="txt">
+                      <p>가입신청 후 개통 과정</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="btn-faq">
+                    <div class="txt">
+                      <p>사은품 배송 시점</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="btn-faq">
+                    <div class="txt">
+                      <p>바로가입 상품 및 사은품 변경</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="btn-faq">
+                    <div class="txt">
+                      <p>개통 일정 변경</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="btn-faq">
+                    <div class="txt">
+                      <p>설치비 안내</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="btn-faq">
+                    <div class="txt">
+                      <p>개통 후 철회</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- E: 자주하는 질문 -->
+      </div>
+    </div>
+  </div>
+
+  <!--[D] 2023.06.16 플로팅버튼 seller_list 와 동일 -->
+  <div class="sticky-shortcut">
+    <div class="btn-counsel-toggle">
+      <button type="button" class="ico-counsel-text" id="btn_pop_menu" aria-controls="pop_menu" aria-haspopup="menu" aria-pressed="false">상담하기 열기</button>
+        <ul class="toggle-list" role="menu" id="pop_menu" aria-labelledby="btn_pop_menu" >
+          <li class="ico-counsel-phone"><a href="https://m.shop.tworld.co.kr/common-campaign?cmpId=000029" target="_blank" title="T 다이렉트샵 모바일웹(새창)" tabindex="-1">전화상담</a></li>
+          <li class="ico-counsel-chat"><a href="https://chat.tworld.co.kr:17443/sharedfront/jsp/view/liveChatCheck.jsp?domainId=MOBILE" target="_blank" title="T 다이렉트샵 모바일웹(새창)" tabindex="-1">1:1 채팅</a></li>
+          <li class="ico-counsel-kakaotalk"><a href="https://chat.tworld.co.kr:17443/sharedfront/jsp/view/liveChatKakaoCheck.jsp?domainId=MOBILE" target="_blank" title="카카오톡 모바일앱(새창)" tabindex="-1">카카오톡</a></li>
+        </ul>
+    </div>
+  </div>
+
+  <!-- 레어이팝업샘플 -->
+  <!-- layer -->
+    <!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+    <div class="modal modal-wire layer-popup-area" role="dialog" aria-modal="true" aria-labelledby="dialog_title" aria-describedby="dialog_content" id="dialog" tabindex="0" style="display:none;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-body" tabindex="0">
+          <div class="modal-header">
+            <h1 class="modal-title">알림</h1>
+          </div>
+
+          <div class="modal-content">
+            <p class="paragraph">이 페이지는 데이터 무료 혜택이 적용되지 않습니다. ​</p>
+          </div>
+
+          <div class="modal-footer">
+            <span class="group-l">
+              <button type="button" class="btn-default-text js-modal-close layer-close-btn">취소</button>
+            </span>
+            <span class="group-r">
+              <button type="button" class="btn-secondary-text layer-close-btn">확인</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="dimmed"></div>
+    </div>
+  <!-- //layer -->
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/swiper.min.js"></script>
+  <script src="../js/tdirect-ui.js"></script>
+  <script src="../js/d3.min.js"></script>
+  <script src="../js/billboard.pkgd.min.js"></script>
+  <script src="../js/wireline-chart.js"></script>
+  <!-- -->
+  <script>
+    // 메뉴
+    var swiper_menu = new Swiper('.swiper-container-menu', {
+      slidesPerView: 'auto',
+      spaceBetween: 24,
+      loop: false,
+    });
+    // 상단네비활성화
+    $('.swiper-container-menu ul li button').on('click', function() {
+      var tabId = $(this).attr('id');
+      var tabControl = $(this).attr('aria-controls');
+      $('.tab-contents-area').attr({
+        "aria-labelledby": tabId,
+        "id": tabControl
+      });
+      $('.swiper-container-menu ul li button').removeClass('current').attr("aria-selected", "false");
+      $(this).addClass('current').attr("aria-selected", "true");
+    })
+    // ----유선 콘텐츠 js----
+    // 인터넷/iptv 상품 리스트
+    //swiper.js 웹 접근성 <7/20>
+    var swiperProdList = new Swiper('.prod-list.swiper-container', {
+      a11y: {
+        enabled: false
+      },
+      centeredSlides: true,
+      slidesPerView: 1.2,
+      loop: true,
+      spaceBetween: 16,
+      speed: 1000,
+      loopedSlides: 2,
+      // 웹 접근성 <7/20> 자동 슬라이드 옵션값 삭제 변경
+      on: {
+        slideChange : function(){
+          //[D] 슬라이드 작동 시 el 값
+          $(".swiper-slide", $(this.el)).find('div.prod-info').attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $(".swiper-slide", $(this.el)).find('span.btn-desc,a,button').attr({"tabindex":"-1"}); // 초점이 가 있는 요소 tabindex = -1
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('div.prod-info').attr({tabindex:"0" , "aria-hidden" : "false"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('span.btn-desc,a,button').attr({"tabindex":"0"});// 초점이 가 있는 요소 tabindex = 0
+        },
+        init : function() {
+          //[D] 슬라이드 el 값
+          $(".swiper-slide", $(this.el)).find('div.prod-info').attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $(".swiper-slide", $(this.el)).find('span.btn-desc,a,button').attr({"tabindex":"-1"}); // 초점이 가 있는 요소 tabindex = -1 
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('div.prod-info').attr({tabindex:"0" , "aria-hidden" : "false"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('span.btn-desc,a,button').attr({"tabindex":"0"});// 초점이 가 있는 요소 tabindex = 0
+          // $(".item.swiper-slide.swiper-slide-active", $(this.el)).attr({"tabindex":"0", "aria-hidden" : "false"});
+        }
+      }
+      // < //유선 웹접근성 >
+    });
+    // .area-select-box 활성화
+    $('.area-select-box .head').on('click', function() {
+      $(this).parent('.area-select-box').toggleClass('active');
+    });
+    var selectTarget = $('.area-select-box .select-list .option-item');
+    selectTarget.on('click', function() {
+      $(this).addClass('selected').siblings('.option-item').removeClass('selected');
+      var selectName = $(this).text();
+      $(this).parents('.area-select-box').find('.head').text(selectName);
+      $(this).parents('.area-select-box').removeClass('active');
+    });
+
+    //[D] 2023.06.16 플로팅 버튼(seller_list.html 와 동일)
+    $(".ico-counsel-text").on('click', function () {
+      var parentEl = $(this).parent();
+      var dimmedEl = '<div class="sticky-counsel-dimmed"></div>'
+      // [D] 추가 2022.08.29 상담버튼 클릭시 상단 버튼 숨김
+      if(parentEl.hasClass("active")){
+        parentEl.removeClass('active').parents('body').removeClass('js-noscroll');
+        $('.sticky-counsel-dimmed').remove();
+        $(this).attr("aria-pressed" , false).text('상담하기 열기');
+        $(this).parent('.btn-counsel-toggle').find('.toggle-list').find('a').attr({"tabindex" : "-1"});     
+      }else{
+        parentEl.addClass('active').parents('body').addClass('js-noscroll'); // js-noscroll < 바닥페이지 스크롤링 막아줌
+        parentEl.parents('body').prepend(dimmedEl);
+        $(this).attr("aria-pressed" , true).text('상담하기 닫기');
+        $(this).parent('.btn-counsel-toggle').find('.toggle-list').find('a').attr({"tabindex" : "0"});     
+      }           
+    });
+
+
+    // 2023 웹접근성 - 레이어, 모달 공통 
+    //레이어팝업열기
+    $('.layer-open-btn').bind('click', function(){
+          $(this).attr("aria-expanded", "true");     
+          var layerPopEl = '#' + $(this).attr('aria-controls');
+          $(layerPopEl).show().focus();   
+          $('.current').removeClass('current');
+		      $(this).addClass('current');
+          $('body').css('overflow-y','hidden');
+          var lpObjTabbable = $(layerPopEl).find("button, input:not([type='hidden']), select, iframe, textarea, [href], [tabindex]:not([tabindex='-1'])");
+          var lpObjTabbableFirst = lpObjTabbable && lpObjTabbable.first();
+          var lpObjTabbableLast = lpObjTabbable && lpObjTabbable.last();
+
+          lpObjTabbableLast.on("keydown", function(event) {
+            if (!event.shiftKey && (event.keyCode || event.which) === 9) {
+              event.preventDefault();
+              lpObjTabbableFirst.focus();
+            }
+          });
+        });
+
+    //레이어팝업열기
+    $('.layer-close-btn').bind('click', function(){  
+      var btnParentEl = $(this).parents('.layer-popup-area').attr('id');
+      
+      $('.layer-open-btn').each(function(){       
+        var btnControls = $(this).attr('aria-controls');    
+        if(btnControls === btnParentEl) {
+          $(this).attr("aria-expanded", "false").focus(); 
+        }
+      });
+
+      $(this).parents('.layer-popup-area').hide();
+      $('.current').focus();    
+    });
+  </script>
+</body>
+</html>
