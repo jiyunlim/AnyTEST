@@ -8,6 +8,7 @@ html {
 .wrap {
   width: 100%;
   height: 100vh;
+  overflow: auto;
 }
 
 .wrap .section-wrap {
@@ -15,7 +16,6 @@ html {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .wrap .section-wrap:before {
@@ -152,9 +152,8 @@ html {
 .swiper {
   position: relative;
   max-width: 390px;
-  height: 830px;
-  border: 6px solid #0a0065;
-  border-radius: 56px;
+  height: 100vh;
+  min-height: 715px;
   cursor: grab;
 }
 .swiper::before{
@@ -263,7 +262,6 @@ html {
   width: auto;
   height: 100%;
   background-color: #222;
-  border-radius: 1rem;
   -webkit-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.25);
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.25);
 }
@@ -317,7 +315,7 @@ html {
   -ms-flex-item-align: start;
   align-self: flex-start;
   padding-left: 1rem;
-  font-size: 1rem;
+  font-size: .8rem;
 }
 .coding_style ul li.code_rt span .c_purp {
   color: #BA68C8;
