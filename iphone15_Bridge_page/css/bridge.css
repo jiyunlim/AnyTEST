@@ -1,0 +1,713 @@
+@charset "UTF-8";
+
+html {
+	height: 100%;
+	font-size: 10px;
+	font-family: Noto Sans, Noto Sans CJK KR, AppleSDGothicNeo-Medium, sans-serif;
+	line-height: 1.5;
+	-ms-text-size-adjust: 100%
+}
+
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul {
+	margin: 0;
+	padding: 0
+}
+
+body,
+button,
+input,
+select,
+table,
+textarea {
+	font-family: Noto Sans, Noto Sans CJK KR, AppleSDGothicNeo-Medium, sans-serif;
+	font-size: 1.4rem;
+	line-height: 1.5;
+}
+
+body {
+	height: 100%;
+	background-color: #000;
+	-webkit-text-size-adjust: none;
+	overflow-wrap: break-word;
+	letter-spacing: -0.08em;
+	background:linear-gradient(135deg,  rgb(4 5 7) 0%,rgb(5 6 8) 100%) ; 
+}
+
+a {
+	display: block;
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects
+}
+
+a,
+a:hover {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+	border-style: none;
+	border: 0
+}
+
+em {
+	font-style: normal;
+}
+
+li,
+ol,
+ol li,
+ul,
+ul li {
+	list-style: none;
+}
+
+.blind {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.bridge-wrap {
+	display: table;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: #000101 url('../img/mobile/bg@3x.png') 0 0 no-repeat;
+	background-size: contain;
+}
+
+.bridge-wrap .inner {
+	display: table-cell;
+	padding: 40px 16px;
+	vertical-align: middle;
+}
+
+.bridge-wrap .notice .notice-title {
+		margin: 0 0 12px;
+		font-size: 14px;
+		letter-spacing: -0.5px;
+		text-align: center;
+		color: #888;
+	}
+
+.bridge-wrap .title {
+	margin-bottom: 4px;
+	color: #545454;
+	font-size: 1.4rem;
+}
+
+.bridge-wrap .device-name strong {
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+	max-width: 328px;
+	height: 50px;
+	border-radius: 25px;
+	font-size: 1px;
+	line-height: 1px;
+	text-indent: -9999px;
+	color: transparent;
+	vertical-align: top;
+	/* 2022.09.20 */
+	position: relative;
+	border: 1px solid transparent;
+	background-image: 
+		linear-gradient(#0c0c0f, #0c0c0f), 
+		linear-gradient(to bottom , #817b6e 0% , #c3c1b4 100%) !important;
+	background-size: 100% !important;
+	background-origin: border-box;
+	background-clip: content-box , border-box;
+}
+
+.bridge-wrap .device-name strong::after{
+	content:'';
+	display: block;
+	background: url(../img/Mobile/bg_device_name.png) 50% 50% no-repeat; 
+	height:100%;
+	margin: -1px 30px 0;
+	background-size: contain;
+}
+
+.bridge-wrap .detail {
+	display: table;
+	overflow: hidden;
+	width: 100%;
+	margin: 32px auto 16px;
+	font-size: 1.4rem;
+	color: #fff;
+	line-height: 19px;
+}
+
+.bridge-wrap .detail > span {
+	display: table-cell;
+	vertical-align: middle;
+}
+.bridge-wrap .detail > span > strong{
+	font-weight: bold;
+}
+
+.bridge-wrap .txt-br {
+	/* display: block; */
+}
+
+.bridge-wrap .img {
+	display: inline-block;
+	width: 232px;
+	height: 161px;
+	background: url(../img/Mobile/bg_iphone15.png) no-repeat 50% 50%;
+	background-size: auto 161px;
+	vertical-align: top;
+}
+
+.bridge-wrap .sub-notice span {
+	font-size: 11px;
+	letter-spacing: -0.29px;
+	text-align: center;
+	color: #888;
+	margin-top: 14px;
+	display: block;
+	word-break: keep-all;
+}
+
+.bridge-wrap .btn-area [class*=btn-] {
+	display: block;
+	position: relative;
+	width: 178px;
+	height: 36px;
+	margin: 16px auto 0;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: #09090b;
+	border-radius: 30px;
+}
+
+.bridge-wrap.early-end .btn-area [class*=btn-] {
+	width: 178px;
+}
+
+.bridge-wrap .btn-area [class*=btn-]~[class*=btn-] {
+	margin-top:10px;
+}
+
+.bridge-wrap .btn-area [class*=btn-]>a {
+	display: block;
+	/* position: absolute; */
+	top: 17px;
+	left: 14px;
+	width: 180px;
+	height: 34px;
+}
+
+.bridge-wrap .btn-area .disabled >a {
+	cursor: default;
+	pointer-events: none;
+	outline: 0;
+}
+
+.bridge-wrap .btn-area .btn-reservation {
+	background-image: url(../img/Mobile/bg_btn01_M@2x.png);
+}
+
+.bridge-wrap .btn-area .btn-reservation.disabled {
+	background-image: url(../img/Mobile/bg_btn01_disabled_M@2x.png);
+}
+
+.bridge-wrap .btn-area .btn-application {
+	background-image: url(../img/Mobile/bg_btn02_M@2x.png);
+}
+
+.bridge-wrap .btn-area .btn-application.disabled {
+	background-image: url(../img/Mobile/bg_btn02_disabled_M@2x.png);
+}
+
+.bridge-wrap .btn-area .btn-exhibition {
+	background-image: url(../img/Mobile/bg_btn03_M@2x.png);
+}
+
+.bridge-wrap .btn-area .btn-exhibition.disabled {
+	background-image: url(../img/Mobile/bg_btn03_disabled_M@2x.png);
+}
+
+.bridge-wrap .btn-area .btn-home {
+	background-image: url(../img/Mobile/bg_btn04_M@2x.png);
+	background-size: 100% 36px;
+}
+
+.bridge-wrap .btn-area .btn-home.disabled {
+	background-image: url(../img/Mobile/bg_btn04_disabled_M@2x.png);
+	background-size: 100% 36px;
+}
+
+.bridge-wrap .btn-area .info {
+	margin-top: 4px;
+	font-size: 10px;
+	color: #a6a6a6;
+}
+
+.bridge-wrap.end .btn-area .btn-reservation,
+.bridge-wrap.end .btn-area .btn-application {
+	display: none;
+}
+
+.bridge-wrap.end .btn-area .btn-exhibition,
+.bridge-wrap.early-end .btn-area .btn-exhibition {
+	background-image: url(../img/Mobile/bg_btn03_end_M@2x.png);
+}
+
+.bridge-wrap.end .btn-area .btn-home,
+.bridge-wrap.early-end .btn-area .btn-home {
+	height: 51px;
+	background-image: url(../img/Mobile/bg_btn04_end_M@2x.png);
+	background-size: 100% 51px;
+}
+
+.bridge-wrap.end .btn-area .btn-home > a,
+.bridge-wrap.early-end .btn-area .btn-home > a {
+	height: 46px;
+}
+
+.bridge-wrap.early-end .btn-area {
+	/* margin-top: 24px; */
+}
+
+.bridge-wrap.early-end .btn-area .btn-reservation {
+	display: none;
+}
+
+.bridge-wrap.early-end .btn-area .btn-application {
+	background-image: url(../img/Mobile/bg_btn02_early_M@2x.png);
+}
+
+
+
+@media (min-width: 768px) {
+	.bridge-wrap {
+		min-height: 500px;
+		background: transparent url(../img/Tablet/bg@3x.png) 0 50% no-repeat;
+    background-size: auto 500px;
+	}
+
+	.bridge-wrap:before {
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+		content: '';
+	}
+
+	.bridge-wrap .inner {
+		display: inline-block;
+		position: relative;
+		padding: 0;
+		vertical-align: middle;
+	}
+
+	.bridge-wrap .notice {
+		display: inline-block;
+		width: 390px;
+		vertical-align: top;
+		margin-right: 40px;
+	}
+
+	.bridge-wrap .notice .notice-title {
+		margin: 0 0 12px;
+		font-size: 16px;
+		letter-spacing: -0.5px;
+		text-align: center;
+		color: #888;
+	}
+
+	.bridge-wrap .device {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.bridge-wrap .device .img {
+		width: 287px;
+		height: 199px;
+		margin-top: 50px;
+		background-image: url(../img/Tablet/bg_iphone15.png);
+		background-size: auto 199px;
+	}
+
+	.bridge-wrap .title {
+		margin-bottom: 6px;
+		font-size: 1.6rem;
+		color: #000;
+	}
+
+	.bridge-wrap .device-name strong {
+		width: 100%;
+		height: 60px;
+		max-width: none;
+		border-radius: 33px;
+		/* background-image: url(../img/Tablet/bg_device_name_T@2x.png);
+		background-size: 363px 58px; */
+	}
+
+	.bridge-wrap .device-name strong::after{
+		content:'';
+		display: block;
+		background: url(../img/Tablet/bg_device_name.png) 50% 50% no-repeat; 
+		background-size: 310px 48px;
+		height:100%;
+	}
+
+	.bridge-wrap .detail {
+		height: auto;
+    font-size: 1.6rem;
+    line-height: 21px;
+    margin-top: 36px;
+	}
+
+	.bridge-wrap .txt-br {
+		display: inline;
+	}
+
+	.bridge-wrap .btn-area {
+		width: 340px;
+    margin-top: -50px;
+		margin-left: 20px;
+		
+	}
+	.bridge-wrap.early-end .btn-area{
+		margin-left:0;
+		width:388px;
+	}
+
+	.bridge-wrap.end .btn-area{
+		margin-left:0;
+		width:390px;
+	}
+
+	.bridge-wrap .btn-area [class*=btn-] {
+		display: inline-block;
+		width: 164px;
+    height: 38px;
+		margin: 0;
+		/* vertical-align: top; */
+	}
+	.bridge-wrap.early-end .btn-area [class*=btn-] {
+		width: 188px;
+	}
+	
+	.bridge-wrap .btn-area [class*=btn-]:nth-of-type(2n) {
+    margin-left: 8px;
+	}
+
+	.bridge-wrap .btn-area [class*=btn-]~[class*=btn-] {
+		margin-top: 7px;
+	}
+
+	.bridge-wrap .btn-area [class*=btn-]>a {
+		width: 178px;
+		height: 40px;
+	}
+
+	.bridge-wrap .btn-area .btn-reservation {
+		background-image: url(../img/Tablet/bg_btn01_T@2x.png);
+	}
+
+	.bridge-wrap .btn-area .btn-application {
+		background-image: url(../img/Tablet/bg_btn02_T@2x.png);
+	}
+
+	.bridge-wrap .btn-area .btn-exhibition {
+		background-image: url(../img/Tablet/bg_btn03_T@2x.png);
+	}
+
+	.bridge-wrap .btn-area .btn-home {
+		background-image: url(../img/Tablet/bg_btn04_T@2x.png);
+		background-size: 100% 38px;
+	}
+
+	.bridge-wrap .btn-area .btn-reservation.disabled {
+		background-image: url(../img/Tablet/bg_btn01_disabled_T@2x.png);
+	}
+
+	.bridge-wrap .btn-area .btn-application.disabled {
+		background-image: url(../img/Tablet/bg_btn02_disabled_T@2x.png);
+	}
+
+	.bridge-wrap .btn-area .btn-exhibition.disabled {
+		background-image: url(../img/Tablet/bg_btn03_disabled_T@2x.png);
+	}
+
+	.bridge-wrap .btn-area .btn-home.disabled {
+		background-image: url(../img/Tablet/bg_btn04_disabled_T@2x.png);
+		background-size: 100% 38px;
+	}
+
+	.bridge-wrap .btn-area .info {
+		position: absolute;
+		right: 0;
+		bottom: -25px;
+		left: 0;
+		font-size: 11px;
+		text-align: center;
+	}
+
+	.bridge-wrap .sub-notice{
+		margin-top: 8px;
+    margin-bottom: -40px;
+	}
+	.bridge-wrap .sub-notice span {
+		font-size: 12px;
+		letter-spacing: -0.29px;
+		text-align: center;
+		color: #888;
+	}
+	
+	.bridge-wrap.end .btn-area [class*=btn-] {
+		width: 100%;
+		height: 38px;
+		margin-left: 0;
+	}
+	
+	.bridge-wrap.end .btn-area [class*=btn-] > a {
+		width: 366px;
+		height: 40px;
+	}
+
+	.bridge-wrap.end .btn-area .btn-exhibition {
+		background-image: url(../img/Tablet/bg_btn03_end_T@2x.png);
+	}
+
+	.bridge-wrap.end .btn-area .btn-home {
+		background-image: url(../img/Tablet/bg_btn04_end_T@2x.png);
+		background-size: 100% 38px;
+	}
+
+
+	.bridge-wrap.early-end .btn-area .btn-application {
+		background-image: url(../img/Tablet/bg_btn02_early_T@2x.png);
+	}
+
+	.bridge-wrap.early-end .btn-area .btn-exhibition {
+		background-image: url(../img/Tablet/bg_btn03_early_T@2x.png);
+	}
+
+	.bridge-wrap.early-end .btn-area .btn-home {
+		width: 100%;
+    height: 38px;
+		background-image: url(../img/Tablet/bg_btn04_end_T@2x.png);
+		background-size: 100% 38px;
+	}
+	
+	.bridge-wrap.early-end .btn-area .btn-home > a {
+		width: 100%;
+		height: 40px;
+	}
+}
+
+@media (min-width: 1442px) {
+	.bridge-wrap {
+		transition: all .3s ease-in-out;
+		min-height: 900px;
+		background: url(../img/PC/bg@3x.png) 50% 50% no-repeat;
+    background-size: contain;
+	}
+
+	.bridge-wrap .notice {
+		width: 594px;
+		margin-top: 0px;
+		margin-right: 180px;
+	}
+	.bridge-wrap .notice .notice-title {
+		margin: 0 0 12px;
+		font-size: 20px;
+		letter-spacing: -0.5px;
+		text-align: center;
+		color: #888;
+	}
+
+	.bridge-wrap .device .img {
+		width: 647.3px;
+		height: 449px;
+		margin-top: 0;
+		background-image: url(../img/PC/bg_iphone15.png);
+		background-size: auto 449px;
+	}
+
+	.bridge-wrap .title {
+		margin-bottom: 8px;
+		font-size: 2.1rem;
+	}
+
+	.bridge-wrap .device-name strong {
+		width: 594px;
+		height: 92px;
+		border-radius: 47px;
+	}
+	.bridge-wrap .device-name strong::after{
+		content:'';
+		display: block;
+		background: url(../img/pc/bg_device_name.png) 50% 50% no-repeat; 
+		height:100%;
+		background-size: auto 76px;
+	}
+
+	.bridge-wrap .detail {
+		height: auto;
+    font-size: 2rem;
+    line-height: 29px;
+    margin: 50px auto 50px;
+	}
+
+	.bridge-wrap .btn-area {
+		width: 480px;
+    margin-left: 59px;
+		margin-top: -178px;
+	}
+
+	.bridge-wrap.early-end .btn-area {
+		width: 480px;
+		margin-left: 59px;
+	}
+
+	.bridge-wrap.end .btn-area{
+		width: 480px;
+		margin-left: 59px;
+	}
+
+	.bridge-wrap .btn-area [class*=btn-] {
+		display: inline-block;
+		width: 230px;
+    height: 48px;
+		margin: 0;
+	}
+	.bridge-wrap.early-end .btn-area [class*=btn-] {
+		width:230px;
+	}
+
+	.bridge-wrap .btn-area [class*=btn-]:nth-of-type(2n) {
+    margin-left: 16px;
+	}
+
+	.bridge-wrap .btn-area [class*=btn-]~[class*=btn-] {
+		margin-top: 16px;
+	}
+
+	.bridge-wrap .btn-area [class*=btn-]>a {
+		width: 230px;
+		height: 46px;
+	}
+
+	.bridge-wrap .btn-area .btn-reservation {
+		background-image: url(../img/PC/bg_btn01.png);
+	}
+
+	.bridge-wrap .btn-area .btn-application {
+		background-image: url(../img/PC/bg_btn02.png);
+	}
+
+	.bridge-wrap .btn-area .btn-exhibition {
+		background-image: url(../img/PC/bg_btn03.png);
+	}
+
+	.bridge-wrap .btn-area .btn-home {
+		background-image: url(../img/PC/bg_btn04.png);
+		background-size: 100% 48px;
+	}
+
+	.bridge-wrap .btn-area .btn-reservation.disabled {
+		background-image: url(../img/PC/bg_btn01_disabled.png);
+	}
+
+	.bridge-wrap .btn-area .btn-application.disabled {
+		background-image: url(../img/PC/bg_btn02_disabled.png);
+	}
+
+	.bridge-wrap .btn-area .btn-exhibition.disabled {
+		background-image: url(../img/PC/bg_btn03_disabled.png);
+	}
+
+	.bridge-wrap .btn-area .btn-home.disabled {
+		background-image: url(../img/PC/bg_btn04_disabled.png);
+		background-size: 100% 48px;
+	}
+
+	.bridge-wrap .sub-notice{
+		margin-top: 8px;
+    margin-bottom: -40px;
+	}
+	.bridge-wrap .sub-notice span {
+		font-size: 14px;
+		letter-spacing: -0.29px;
+		text-align: center;
+		color: #888;
+	}
+
+	.bridge-wrap .btn-area .info {
+		bottom: -33px;
+		font-size: 14px;
+	}
+
+	.bridge-wrap.end .btn-area [class*=btn-] {
+		width: 100%;
+		height: 48px;
+		margin-left: 0;
+	}
+	
+	.bridge-wrap.end .btn-area [class*=btn-] > a {
+		width: 492px;
+		height: 46px;
+	}
+
+	.bridge-wrap.end .btn-area .btn-exhibition {
+		background-image: url(../img/PC/bg_btn03_end.png);
+	}
+
+	.bridge-wrap.end .btn-area .btn-home {
+		background-image: url(../img/PC/bg_btn04_end.png);
+		background-size: 100% 46px;
+	}
+
+
+	.bridge-wrap.early-end .btn-area .btn-application {
+		background-image: url(../img/PC/bg_btn02_early.png);
+	}
+
+	.bridge-wrap.early-end .btn-area .btn-exhibition {
+		background-image: url(../img/PC/bg_btn03_early.png);
+	}
+
+	.bridge-wrap.early-end .btn-area .btn-home {
+		width: 100%;
+    height: 48px;
+		background-image: url(../img/PC/bg_btn04_end.png);
+		background-size: 100% 46px;
+	}
+	
+	.bridge-wrap.early-end .btn-area .btn-home > a {
+		width: 492px;
+		height: 46px;
+	}
+}
