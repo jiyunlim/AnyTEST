@@ -409,13 +409,34 @@
   <div id="recent-project-wrap">
     <div class="recent-project-content">
       <div class="project-title">
-        <h2>SKTelecom > T DirectShop 운영</h2>
+        <h2>SKTelecom > T DirectShop</h2>
         <p>: 개발기획 파트</p>
       </div>
       <ul>
         <li>
-          <p>고도화_2022 T DirectShop 판매기능 고도화 <br> 모바일 진행</p>
+          <p>T DirectShop 상시 운영 업무 <br>: PC / MO / InApp</p>
+          <div class="projects-img-box">
+            <div class="projects-img">
+              <img src="/inc/img/tds-img-02.png" alt="tdirectshop img">
+            </div>
+          </div>
         </li>
+        <li>
+          <p>2022 T DirectShop 판매기능 고도화 <br>: 모바일 진행</p>
+          <div class="projects-img-box">
+            <div class="projects-img">
+              <img src="/inc/img/tds-img-03.png" alt="tdirectshop img">
+            </div>
+          </div>
+        </li>
+          <li>
+          <p>고도화_2022 T DirectShop > InApp <br>: 모바일 진행</p>
+          <div class="projects-img-box">
+            <div class="projects-img">
+              <img src="/inc/img/tds-img-04.png" alt="tdirectshop img">
+            </div>
+          </div>
+        </li> 
       </ul>
     </div>
   </div>
@@ -436,9 +457,13 @@
     },
     on: {
       slideChange : function(){
-        $( "#dialog" ).dialog();
+        $( "#dialog" ).dialog({
+          classes: {
+            "ui-dialog": "notice-wrap"
+          },
+        });
         $(".dimm").show();
-        $('.ui-button[title="Close"]').on('click',function(){
+        $('.notice-wrap .ui-button[title="Close"]').on('click',function(){
           $(".dimm").hide();
         })
       }

@@ -408,26 +408,49 @@ html {
 }
 .recent-project {
   height: 100% !important;
+  border: 0 !important;
 }
 #recent-project-wrap * {
   font-family: 'Noto Sans KR';
 }
 #recent-project-wrap .project-title {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 20px;
-  background-color: rgb(65 48 223 / 10%);
   border-radius: 18px 18px 2px 2px;
-  box-shadow: 3px 6px 6px 0 rgba(0, 0, 0, 0.2);
 }
 #recent-project-wrap .project-title h2 {
   font-size: 18px;
-  color: rgb(65 48 223 / 80%);
+  color: rgb(65 48 223);
   font-weight: bold;
 }
 #recent-project-wrap .project-title p {
   color: #555;
   font-weight: 500;
   font-size: 15px;
+}
+#recent-project-wrap ul {
+  margin-bottom: 20px;
+}
+#recent-project-wrap ul li {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgb(245 245 245 / 50%);
+  margin-bottom: 20px;
+  min-height: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.projects-img-box {}
+.projects-img {
+  height: 175px;
+}
+.projects-img img {
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  display: block;
 }
 @media all and (max-width: 375px) {
   .swiper{
