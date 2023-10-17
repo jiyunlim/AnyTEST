@@ -429,7 +429,8 @@ html {
   font-size: 15px;
 }
 #recent-project-wrap ul {
-  margin-bottom: 20px;
+  height: calc(100vh - 150px);
+  overflow: auto;
 }
 #recent-project-wrap ul li {
   padding: 20px;
