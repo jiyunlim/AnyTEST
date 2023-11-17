@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TDS SELLER ADMIN</title>
+
+  <link rel="stylesheet" href="../css/tdirect_nimda.css">
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery.placeholder.js"></script>
+  <script src="../js/common.js"></script>
+
+  <script text="script">
+    $(function () {
+      var includes = $('[data-include]')
+      $.each(includes, function () {
+        var file = 'include/' + $(this).data('include') + '.html'
+        $(this).load(file)
+      })
+    })
+  </script>
+</head>
+<body>
+  <div id="skipnav">
+    <a href="#content">본문 바로가기</a>
+  </div>
+  <div id="wrap">
+    <!-- header -->
+    <div id="header" data-include="header"></div>
+    <!-- //header -->
+    <div id="container">
+      <!-- lnb -->
+      <div id="lnb" data-include="lnb"></div>
+      <!-- //lnb -->
+      <!-- content -->
+      <div id="content">
+        <div id="title">
+          <!-- page title -->
+          <div class="h-area1">
+            <h1 class="h-type1">차단관리</h1>
+            <span class="h-menu">
+              <!-- <a href="#none" class="ico-favorite">메뉴즐겨찾기</a> -->
+              <a href="javascript:location.reload()" class="ico-refresh">새로고침</a>
+            </span>
+            <div class="side-menu">
+              <ul class="location-area">
+              <li class="home">홈</li>
+              <li>뎁스1</li><li>뎁스1-1</li><li><strong>뎁스1-1-1</strong></li></ul>
+            </div>
+          </div>
+          <!-- //page title -->
+        </div>
+        <!-- tab -->
+        <ul class="tab-area">
+          <li><a href="#none" class="on">myshop 차단 설정 관리</a></li>
+          <li><a href="#none">차단 예외계정 관리</a></li>
+        </ul>
+        <!-- //tab -->
+        <div class="h-area2">
+          <h2 class="h-type2">차단 설정관리 등록​</h2>
+        </div>
+
+        <table class="table-row">
+          <caption>차단 설정관리 등록</caption>
+          <colgroup>
+            <col style="width:14%">
+            <col>
+            <col style="width:14%">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">차단명(사유)*</th>
+              <td colspan="3">
+                <input type="text" class="c-input" title="차단명(사유)를 입력하세요" placeholder="차단명(사유)를 입력하세요">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">차단 구분*</th>
+              <td colspan="3">
+                <div class="form-group">
+                  <span class="c-rdo">
+                    <input type="radio" id="for_all" name="blocking_chk" checked="checked">
+                    <label for="for_all">전체</label>
+                  </span>
+                  <span class="c-rdo">
+                    <input type="radio" id="for_each" name="blocking_chk" >
+                    <label for="for_each">개별</label>
+                  </span>
+                </div>
+                <p class="txt-unit txt-red">※ ‘전체’ 선택 시 myshop 전체 영역이 차단됩니다. </p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">차단 영역</th>
+              <td colspan="3">
+                <!-- [D] TWD운영_Seller admin 차단 관련 기능 개발_v0.42 으로 추가 수정 -->
+                <div id="morecon1" class="hidden-con blocking-area-box">
+                  <div class="form-group">
+                    <!-- [D] 전체 차단시 체크박스 disabled 처리  -->
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p1" name="blocking_page" disabled>
+                      <label for="bl_p1">메인</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p2" name="blocking_page">
+                      <label for="bl_p2">무선 전체</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p3" name="blocking_page">
+                      <label for="bl_p3">유선 전체</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p4" name="blocking_page">
+                      <label for="bl_p4">리스트_무선</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p5" name="blocking_page">
+                      <label for="bl_p5">리스트_유선</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p6" name="blocking_page">
+                      <label for="bl_p6">주문1_무선</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p7" name="blocking_page">
+                      <label for="bl_p7">주문2_무선</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p8" name="blocking_page">
+                      <label for="bl_p8">주문3_무선</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p9" name="blocking_page">
+                      <label for="bl_p9">주문전체_유선</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p10" name="blocking_page">
+                      <label for="bl_p10">자급제/중고폰</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p11" name="blocking_page">
+                      <label for="bl_p11">장바구니_무선</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p12" name="blocking_page">
+                      <label for="bl_p12">주문3_무선</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p13" name="blocking_page">
+                      <label for="bl_p13">주문4_무선</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p14" name="blocking_page">
+                      <label for="bl_p14">주문전체_무선</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p15" name="blocking_page">
+                      <label for="bl_p15">장바구니_유선</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p16" name="blocking_page">
+                      <label for="bl_p16">차단영역$</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p17" name="blocking_page">
+                      <label for="bl_p17">차단영역$</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p18" name="blocking_page">
+                      <label for="bl_p18">차단영역$</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p19" name="blocking_page">
+                      <label for="bl_p19">차단영역$</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p20" name="blocking_page">
+                      <label for="bl_p20">차단영역$</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p20" name="blocking_page">
+                      <label for="bl_p20">차단영역$</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p20" name="blocking_page">
+                      <label for="bl_p20">차단영역$</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p20" name="blocking_page">
+                      <label for="bl_p20">차단영역$</label>
+                    </span>
+                    <span class="c-chk">
+                      <input type="checkbox" id="bl_p20" name="blocking_page">
+                      <label for="bl_p20">차단영역$</label>
+                    </span>
+                  </div>
+                </div>
+                <div class="btn-area">
+									<a href="#morecon1" class="btn-more js-more">더보기</a>
+								</div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">파라미터 개별​ 차단 여부*</th>
+              <td colspan="3">
+                <div class="form-group">
+                  <span class="c-rdo">
+                    <input type="radio" id="pm_use" name="pm_blocking_chk">
+                    <label for="pm_use">사용</label>
+                  </span>
+                  <span class="c-rdo">
+                    <input type="radio" id="pm_nouse" name="pm_blocking_chk" checked="checked" >
+                    <label for="pm_nouse">미사용</label>
+                  </span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">파라미터값</th>
+              <td colspan="3">
+                <!-- [D] CASE :  미사용(체크박스) 선택 시 : 입력 값 딤드(disabled)-->
+                파라미터값 : <input type="text" class="c-input" title="파라미터값 입력" placeholder="linkChnlSvcId 값을 입력하세요" style="width:400px;" disabled="disabled"> <a href="#none" class="btn-base disabled">추가</a> <br>
+                
+                파라미터값 : <input type="text" class="c-input" title="파라미터값 입력" placeholder="linkChnlSvcId 값을 입력하세요" style="width:400px;"> <a href="#none" class="btn-base">추가</a>
+                
+                <!-- [D] CASE :  사용(체크박스) 선택 시 : 노출 / 사용 -->
+                <table class="table-col mt-10" style="width: 512px;">
+                  <caption>파라미터값 리스트</caption>
+                  <colgroup>
+                    <col style="width:5%">
+                    <col style="width:6%">
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        <span class="c-chk txt-no">
+                          <input type="checkbox" id="chk0" name="chk">
+                          <label for="chk0">전체 선택</label>
+                        </span>
+                      </th>
+                      <th scope="col">No</th>
+                      <th scope="col">파라미터 값</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span class="c-chk txt-no">
+                          <input type="checkbox" id="chk1" name="chk">
+                          <label for="chk1">선택</label>
+                        </span>
+                      </td>
+                      <td>1</td>
+                      <td class="l-data"></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="c-chk txt-no">
+                          <input type="checkbox" id="chk2" name="chk">
+                          <label for="chk2">선택</label>
+                        </span>
+                      </td>
+                      <td>2</td>
+                      <td class="l-data"></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="c-chk txt-no">
+                          <input type="checkbox" id="chk3" name="chk">
+                          <label for="chk3">선택</label>
+                        </span>
+                      </td>
+                      <td>3</td>
+                      <td class="l-data">TWD-MOB</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a href="#none" class="btn-base btn-gray mt-6">삭제</a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">안내화면URL</th>
+              <td colspan="3">
+                <input type="text" class="c-input" title="차단URL 입력" placeholder="차단 안내 페이지 URL 또는 차단시 이동시킬 URL이 있는 경우 입력하세요.">
+                <p class="txt-unit txt-red mt-6">※ 미입력 시 기본 차단 안내페이지로 이동됩니다.</p>
+              </td>
+            </tr>            
+            <tr>
+              <th scope="row">차단기간*</th>
+              <td colspan="3">
+                <div class="form-group calendar">
+                  <input type="text" class="c-input" title="시작일자">
+                  <a href="#none" class="btn-calendar">달력</a>
+                  <span class="txt-unit">━</span>
+                  <input type="text" class="c-input" title="종료일자">
+                  <a href="#none" class="btn-calendar">달력</a>
+                </div>
+                <p class="txt-unit txt-red">※ YYYYMMDD HH:MM 형태로 입력해주세요.</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">등록자</th>
+              <td>
+              </td>
+              <th scope="row">등록일시</th>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">수정자</th>
+              <td>
+              </td>
+              <th scope="row">수정일시</th>
+              <td>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="btn-area center">
+          <a href="#none" class="btn-base btn-blue">저장</a>
+          <a href="#none" class="btn-base btn-line-blue">목록</a>
+        </div>
+      </div>
+      <!-- //content -->
+    </div>
+  </div>
+  <!-- footer -->
+  <div id="footer" data-include="footer"></div>
+  <!-- //fooer -->
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TDS SELLER ADMIN</title>
+
+  <link rel="stylesheet" href="../css/tdirect_nimda.css">
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery.placeholder.js"></script>
+  <script src="../js/common.js"></script>
+
+  <script text="script">
+    $(function () {
+      var includes = $('[data-include]')
+      $.each(includes, function () {
+        var file = 'include/' + $(this).data('include') + '.html'
+        $(this).load(file)
+      })
+    })
+  </script>
+</head>
+<body>
+  <div id="skipnav">
+    <a href="#content">본문 바로가기</a>
+  </div>
+  <div id="wrap">
+    <!-- header -->
+    <div id="header" data-include="header"></div>
+    <!-- //header -->
+    <div id="container">
+      <!-- lnb -->
+      <div id="lnb" data-include="lnb"></div>
+      <!-- //lnb -->
+      <!-- content -->
+      <div id="content">
+        <div id="title">
+          <!-- page title -->
+          <div class="h-area1">
+            <h1 class="h-type1">차단관리</h1>
+            <span class="h-menu">
+              <!-- <a href="#none" class="ico-favorite">메뉴즐겨찾기</a> -->
+              <a href="javascript:location.reload()" class="ico-refresh">새로고침</a>
+            </span>
+            <div class="side-menu">
+              <ul class="location-area">
+              <li class="home">홈</li>
+              <li>뎁스1</li><li>뎁스1-1</li><li><strong>뎁스1-1-1</strong></li></ul>
+            </div>
+          </div>
+          <!-- //page title -->
+        </div>
+        <!-- tab -->
+        <ul class="tab-area">
+          <li><a href="#none">myshop 차단 설정 관리</a></li>
+          <li><a href="#none" class="on">차단 예외계정 관리</a></li>
+        </ul>
+        <!-- //tab -->
+        <div class="h-area2">
+          <h2 class="h-type2">차단 예외계정 상세</h2>
+        </div>
+
+        <p class="txt-black3 mb-20">※ 시작/종료일시를 YYYYMMDD HH:MM 형태로 입력해주세요.</p>
+        <table class="table-col">
+          <caption>차단 예외계정 상세</caption>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">이름*</th>
+              <th scope="col">서비스관리번호*</th>
+              <th scope="col">시작 일시*</th>
+              <th scope="col">종료 일시*</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="text" class="c-input" title="이름 입력" value="홍길동"></td>
+              <td><input type="text" class="c-input" title="서비스관리번호 입력" value="7267911300" onkeypress="return /[0-9]/i.test(event.key)"></td>
+              <td><input type="text" class="c-input" title="시작일시" value="20231031 00:00" ></td>
+              <td><input type="text" class="c-input" title="종료일시" value="99991231 23:59" ></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="btn-area center">
+          <a href="#none" class="btn-base btn-blue">저장</a>
+          <a href="#none" class="btn-base btn-line-blue">삭제</a>
+          <a href="#none" class="btn-base btn-line-blue">취소</a>
+        </div>
+      </div>
+      <!-- //content -->
+    </div>
+  </div>
+  <!-- footer -->
+  <div id="footer" data-include="footer"></div>
+  <!-- //fooer -->
+</body>
+</html>

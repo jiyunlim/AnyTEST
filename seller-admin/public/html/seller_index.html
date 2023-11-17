@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller-index.html</title>
+
+  <link rel="stylesheet" href="../css/tdirect_nimda.css">
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/jquery.placeholder.js"></script>
+  <script src="../js/common.js"></script>
+
+  <style>
+    section.guide-content {clear: both; padding-top: 40px;}
+    .tit-guide {position:relative;margin-bottom:10px;padding-left:15px;color:#fff;font-size:14px;line-height:30px;box-sizing:border-box;}
+    .tit-guide:before {content:'';display:block;position:absolute;left:0;top:0;width:200px;height:30px;background:#3b3a40;z-index:-1;}
+    .tit-guide:after {content:'';display:block;position:absolute;right:0;top:14px;width:90%;height:1px;border-top:1px dashed #d4d4d4;z-index:-2;}
+    .txt-guide {margin-bottom:30px;padding-left:10px;}
+    .txt-guide li {position:relative;margin:5px 0;padding-left:10px;font-size:12px;color:#222;}
+    .txt-guide li:before{content:'ㆍ';position:absolute;top:0;left:0;}
+    .finish {color:#ff0000 !important;}
+    .modify {color:blue !important;}
+    .txt-guide-alert {margin-bottom:40px;padding:10px;border:1px solid #cacaca;border-radius:5px;background:#fff;}
+    .txt-guide-alert p {padding-bottom:5px;color:#000;font-weight:bold;}
+    .txt-guide-alert li {position:relative;padding:4px 0 4px 10px;color:#444;font-size:12px;font-weight:bold;line-height:1.4;}
+    .txt-guide-alert li:before {content:'-';position:absolute;left:0;top:2px;display:block;margin-right:4px;}
+
+    .tbl-list-guide {margin-bottom:40px;width:100%;border-top:2px solid #c2c2c2;}
+    .tbl-list-guide thead th {height:30px;background:#f8f8f8;font-weight:bold;color:#333;text-align:center;vertical-align:middle;}
+    .tbl-list-guide td,
+    .tbl-list-guide th {border:1px solid #e4e4e4;font-size:12px;}
+    .tbl-list-guide td {padding:8px 5px;background:#fff;color:#555;}
+    .tbl-list-guide tr:nth-child(2n) td {background:#fafafa;}
+    .tbl-list-guide a {text-decoration:underline;color:blue;}
+    .tbl-list-guide td.date, .tbl-list-guide td.day-mo {text-align:center;}
+    .tbl-list-guide td.detail {line-height:1.4;}
+
+  </style>
+
+  <script text="script">
+    $(function () {
+      var includes = $('[data-include]')
+      $.each(includes, function () {
+        var file = 'include/' + $(this).data('include') + '.html'
+        $(this).load(file)
+      })
+    })
+  </script>
+</head>
+<body>
+  <div id="skipnav">
+    <a href="#content">본문 바로가기</a>
+  </div>
+  <div id="wrap">
+    <!-- header -->
+    <div id="header" data-include="header"></div>
+    <!-- //header -->
+    <div id="container">
+      <!-- lnb -->
+      <div id="lnb" data-include="lnb"></div>
+      <!-- //lnb -->
+      <!-- content -->
+      <div id="content">
+        <div id="title">
+          <div class="h-area1">
+            <h1 class="h-type1">대메뉴</h1>
+            <span class="h-menu">
+              <!-- <a href="#none" class="ico-favorite">메뉴즐겨찾기</a> -->
+              <a href="javascript:location.reload()" class="ico-refresh">새로고침</a>
+            </span>
+
+            <div class="side-menu">
+              <ul class="location-area">
+              <li class="home">홈</li>
+              <li>뎁스1</li><li>뎁스1-1</li><li><strong>뎁스1-1-1</strong></li></ul>
+            </div>
+          </div>
+        </div>
+        <!-- tab -->
+        <ul class="tab-area">
+          <li><a href="#none" class="on">텝메뉴 1 </a></li>
+          <li><a href="#none">텝메뉴 2 </a></li>
+        </ul>
+        <!-- //tab -->
+        <section class="guide-content">
+          <h2 class="tit-guide">차단관리</h2>
+          <table class="tbl-list-guide">
+            <caption>Global</caption>
+            <colgroup>
+              <col style="width:14%">
+              <col style="width:14%">
+              <col style="width:17%">
+              <col style="width:14%">
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th>1Depth</th>
+                <th>2Depth</th>
+                <th>3Depth</th>
+                <th>4Depth</th>
+                <th>파일명</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="5" class="detail">
+                  <strong>[화면설계서]</strong>
+                  <p class="finish">TWD운영_Seller admin 차단 관련 기능 개발_v0.3_231109</p>
+                </td>
+              </tr>
+              <tr>
+                <td>시스템 설정</td>
+                <td>차단관리</td>
+                <td>myshop 차단 설정 관리(탭1)</td>
+                <td>조회</td>
+                <td><a href="../html/blocking_management_view.html" target="_blank">blocking_management_view.html</a></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>등록</td>
+                <td><a href="../html/blocking_management_regist.html" target="_blank">blocking_management_regist.html</a></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>상세</td>
+                <td><a href="../html/blocking_management_detail.html" target="_blank">blocking_management_detail.html</a></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>차단 예외계정 관리(탭2)</td>
+                <td>조회</td>
+                <td><a href="../html/none_blocking_management_view.html" target="_blank">blocking_management_view.html</a></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>등록</td>
+                <td><a href="../html/none_blocking_management_regist.html" target="_blank">blocking_management_regist.html</a></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>상세</td>
+                <td><a href="../html/none_blocking_management_detail.html" target="_blank">blocking_management_detail.html</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+      <!-- //content -->
+    </div>
+  </div>
+  <!-- footer -->
+  <div id="footer" data-include="footer"></div>
+  <!-- //fooer -->
+</body>
+</html>
