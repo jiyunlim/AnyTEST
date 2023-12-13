@@ -455,7 +455,7 @@
     scrollbar: {
       el: '.swiper-scrollbar',
     },
-    on: {
+    on: {/*
       slideChange : function(){
         $( "#dialog" ).dialog({
           classes: {
@@ -466,7 +466,7 @@
         $('.notice-wrap .ui-button[title="Close"]').on('click',function(){
           $(".dimm").hide();
         })
-      }
+      }*/
     }
   });
 
@@ -508,7 +508,12 @@
         $(".dimm").show();
         $('.notice-wrap .ui-button[title="Close"]').on('click',function(){
           $(".dimm").hide();
-        })
+        });
+        
+        $(".dimm").on( "click", function() {
+          $( "#dialog" ).dialog( "close" );
+          $(".dimm").hide();
+        });
       });
       
       $( "#recentProj" ).on( "click", function() {
