@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<title>[팝업] 가입 현황 보기 | SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/seller.css">
+	
+	<script>document.documentElement.dataset.userAgent = navigator.userAgent;</script>
+</head>
+
+<body>
+<!-- 유선 popup -->
+<div class="popup pop-seller wireline-join-current-view">
+	<div class="popup-body">
+		<div class="popup-header">
+			<h1 class="popup-title">가입 현황 보기</h1>
+		</div>
+    
+		<div role="main" class="popup-content">
+			<div class="wireline-cont-area">
+				<!-- 연령대별 상품 가입 현황 -->
+        <div class="age-chart-area">
+          <h3>
+            <span class="marker">연령대별</span> 상품 가입 현황
+          </h3>
+          <div class="donut-tabarea">
+            <!-- Swiper -->
+            <div class="lnb">
+              <ul>
+                <!-- [D] 선택된 메뉴 a태그에 aria-current="page" 적용 -->
+                <li class="swiper-slide lnb-item">
+                  <a href="#none" class="link-block" aria-current="page">20대</a>
+                </li>
+                <li class="swiper-slide lnb-item">
+                  <a href="#none" class="link-block">30대</a>
+                </li>
+                <li class="swiper-slide lnb-item">
+                  <a href="#none" class="link-block">40대</a>
+                </li>
+                <li class="swiper-slide lnb-item">
+                  <a href="#none" class="link-block">50대</a>
+                </li>
+                <li class="swiper-slide lnb-item">
+                  <a href="#none" class="link-block">60대 이상</a>
+                </li>
+              </ul>
+            </div>
+            <!-- //Swiper -->
+          </div>
+          <div class="donut-chart">
+            <div class='donut-guide donut-chart__legend'></div>
+            <div id="agechart"></div>
+          </div>
+
+					<!-- [D] case : 데이터 오류! -->
+					<div class="data-none">
+						<p>조금 뒤 다시 시도해주시기 바랍니다.</p>
+					</div>
+        </div>
+
+        <!-- 우리 동네 인터넷 가입 현황 -->
+        <div class="town-chart-area">
+          <h3>
+            <span class="marker">우리 동네</span> 인터넷 가입 현황
+          </h3>
+          <p class="stitle">인터넷을 설치할 동네를 찾아보세요.</p>
+          <!-- < 유선 웹접근성 수정 07/10> -->
+          <div class="select-box-wrap">
+            <div class="area-select-box area-select-1">
+              <select name="selectCity" id="" title="시/도 선택" required="required">
+                <option value="">시/도</option>
+                <option value="">강원도</option>
+                <option value="">경기도</option>
+                <option value="">경상남도</option>
+                <option value="">경상남도</option>
+                <option value="">전라남도</option>
+                <option value="">전라북도</option>
+                <option value="">제주도</option>
+                <option value="">충청북도</option>
+                <option value="">충청남도</option>
+              </select>
+            </div>
+            <div class="area-select-box area-select-2">
+              <select name="selectCity" id="" title="시/군/구 선택" required="required">
+                <option value="">시/군/구</option>
+                <option value="">중구</option>
+                <option value="">분당구</option>
+                <option value="">중구</option>
+                <option value="">분당구</option>
+              </select>
+            </div>
+          </div>
+          <div class="map-area">
+            <div class="img-box">
+              <img src="../img/wireline/map.png" alt="">
+            </div>
+          </div>
+          <!-- [D] 통계데이터 있는 경우 -->
+          <div class="donut-chart">
+            <div class='donut-guide donut-chart__legend_town1'></div>
+            <div id="townchart_1"></div>
+          </div>
+          <!-- [D] 통계데이터 없는 경우 -->
+          <div class="donut-chart no-data">
+            <div class='donut-guide donut-chart__legend_town2'></div>
+            <div id="townchart_2"></div>
+            <div class="no-data-wrap">
+              <div class="con-box">
+                <p class="text">이 지역에 설치할 수 있는 상품이 없습니다.</p>
+                <p class="text-s">SK텔레콤 유선 가입센터(1670-2001)로 전화 주시면 <br>자세히 안내해 드리겠습니다. </p>
+              </div>
+            </div>
+          </div>
+					<!-- [D] case : 데이터 오류! -->
+					<div class="data-none">
+						<p>조금 뒤 다시 시도해주시기 바랍니다.</p>
+					</div>
+        </div>
+			</div>
+		</div>
+
+    <button type="button" class="btn-close">
+			<span class="ico-close">팝업 닫기</span>
+		</button>
+	</div>
+</div>
+
+<!-- //popup -->
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/tdirect-ui.js"></script>
+	<!-- wireline_list_ineternet.html 와 동일하게 사용 ↓ -->
+	<script src="../js/d3.min.js"></script>
+  <script src="../js/billboard.pkgd.min.js"></script>
+  <script src="../js/wireline-chart.js"></script>
+
+	<script>
+		// .area-select-box JS > html 변경으로 삭제
+	</script>
+	
+</body>
+</html>

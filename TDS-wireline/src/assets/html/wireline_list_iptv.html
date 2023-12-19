@@ -1,0 +1,638 @@
+<!-- 유선 리스트 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>My Shop &lt; Wireline List</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/seller.css">
+
+	<script>
+			document.documentElement.dataset.userAgent = navigator.userAgent;
+	</script>
+</head>
+
+<body>
+  <!-- #skip_navigation -->
+  <div id="skipNav" class="skip_navi">
+    <a href="#contents-area" class="skip-link">본문 바로가기</a>
+  </div>
+  <!-- [D] "바닥 네비게이션" 유/무 Class 
+        'nav-logo-in' : 로그인  로그인 바 없는 상태
+        'nav-logo-out': 비로그인 로그인 바 있는 상태
+        '  ' : 네비게이션 바 자체가 없는 경우  
+    -->
+  <!-- [D] 유선 : wireline-list 추가  -->
+  <div class="wrap-device-list wireline-list nav-logo-out">
+    <!-- 헤더영역 -->
+    <div class="device-list-header">
+      <div class="top-header">
+        <div class="top-header-left">
+          <a href="#" class="ico-goback">
+            <img src="../img/icon-header-back@2x.png" alt="이전 페이지">
+          </a>
+        </div>
+        <div class="top-header-right">
+					<button type="button" class="ico-cart"><img src="../img/icon-header-cart@2x.png" alt="장바구니"></button>
+          <button type="button" class="ico-mypage" title="T 다이렉트샵 모바일웹(새창)"><img src="../img/icon-header-my@2x.png" alt="마이페이지"></button>
+				</div>
+      </div>
+    </div>
+    <!-- 상단네비 -->
+    <div class="top-navi-area-area">
+      <nav class="top-navi-area">
+        <div class="swiper-wrap">
+          <div class="swiper-container-menu">
+            <ul class="swiper-wrapper" role="tablist">
+              <li class="item swiper-slide" role="presentation">
+                <button type="button" class="btn" id="wireline_tab_menu_1" role="tab" aria-selected="true" aria-controls="wireline_tab_content1">인터넷</button>
+              </li>
+              <li class="item swiper-slide item-active" role="presentation">
+                <button type="button" class="btn current" id="wireline_tab_menu_2" role="tab" aria-selected="false" aria-controls="wireline_tab_content2"> B tv</button>
+              </li>
+              <li class="item swiper-slide" role="presentation">
+                <button type="button" class="btn" id="wireline_tab_menu_3" role="tab" aria-selected="false" aria-controls="wireline_tab_content3">결합할인</button>
+              </li>
+              <li class="item swiper-slide" role="presentation">
+                <button type="button" class="btn" id="wireline_tab_menu_4" role="tab" aria-selected="false" aria-controls="wireline_tab_content4">사은품</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- [웹접근성] aria-labelledby , id 값 유동적으로 변경 -->
+    <div class="tab-contents-area" role="tabpanel" aria-labelledby="wireline_tab_menu_2" id="wireline_tab_content2">
+			<h2 id="contents-area" tabindex="-1">
+        <span class="blind">본문시작</span>
+      </h2>
+      <h2 class="g-invisible">B tv</h2>
+			<div class="wireline-prod-wrap iptv-wrap">
+				<div class="cnts-box-01">
+					<div class="swiper-container prod-list iptv-list">
+            <!-- 웹접근성 슬라이드 디자인 개선 08.03  -->
+            <div class="swiper-control-box">
+              <div class="swiper-button-prev" role="button" tabindex="0"><span class="blind">이전</span></div>
+              <div class="swipe-fraction"></div>
+              <div class="swiper-button-next" role="button" tabindex="0"><span class="blind">다음</span></div>
+              <div class="swipe-play-control">
+                <button type="button" class="btn-stop" aria-pressed="false"><span class="blind">정지</span></button>
+              </div>          
+            </div>
+						<div class="swiper-wrapper">
+              <div class="swiper-slide">
+								<div class="prod-info" role="button">
+									<!-- '자세히 보기' 링크영역 - 220616 수정 -->
+									<div class="virtual-box" onclick="" aria-hidden="true">자세히 보기 링크영역</div>
+									<div class="prod-speed">184채널</div>
+									<div class="prod-tag">
+										<p>#실속형 #필수시청</p>
+										<p>#드라마 #예능 #볼건다봐요</p>
+									</div>
+									<h3>B tv 이코노미</h3>
+									<div class="prod-desc">
+										<button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+										<div class="prod-cost">
+											<div class="origin-cost">18,700원</div>
+											<div class="disc-cost">월 <span>8,800</span>원 </div>
+										</div>
+									</div>
+									<div class="prod-btns">
+										<a href="#none" class="btn-counsel" title="새창">상담하기</a>
+										<a href="#none" class="btn-join">바로 가입</a>
+									</div>
+								</div>
+								<div class="prod-recom-wrap">
+									<div class="prod-recom">
+										<p>지금 B tv 이코노미에서는?</p>
+										<ul class="recom-type">
+											<li>미니멀한 필수 채널 중심!</li>
+											<li>22개 예능, 14개 드라마 채널로 본방사수 못해도 괜찮아요!</li>
+											<li>모든 홈쇼핑, 교육채널 시청 가능!</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+              <div class="swiper-slide">
+								<div class="prod-info" role="button">
+									<!-- '자세히 보기' 링크영역 - 220616 수정 -->
+									<div class="virtual-box" onclick="" aria-hidden="true">자세히 보기 링크영역</div>
+									<div class="prod-speed">235채널</div>
+									<div class="prod-tag">
+										<p>#인기채널 #다양한장르</p>
+										<p>#키즈 #영화 #스포츠</p>
+									</div>
+									<h3>B tv 스탠다드</h3>
+									<div class="prod-desc">
+										<button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+										<div class="prod-cost">
+											<div class="origin-cost">22,000원</div>
+											<div class="disc-cost">월 <span>12,100</span>원 </div>
+										</div>
+									</div>
+									<div class="prod-btns">
+										<a href="#none" class="btn-counsel" title="새창">상담하기</a>
+										<a href="#none" class="btn-join">바로 가입</a>
+									</div>
+								</div>
+								<div class="prod-recom-wrap">
+									<div class="prod-recom">
+										<p>지금 B tv 스탠다드 에서는?</p>
+										<ul class="recom-type">
+											<li>뽀로로, 타요, 공룡메카드 등 아이들 인기 만점 프로그램 편성!</li>
+											<li>OCN, Screen에서 인기 영화를 365일 즐겨요!</li>
+											<li>투니버스, 애니플러스 등 8개 애니도 놓치지 않아요!</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="prod-info" role="button">
+									<!-- '자세히 보기' 링크영역 - 220616 수정 -->
+									<div class="virtual-box" onclick="" aria-hidden="true">자세히 보기 링크영역</div>
+									<div class="prod-speed">261채널</div>
+									<div class="prod-tag">
+										<p>#온가족 #모든채널</p>
+										<p>#키즈 #해외스포츠 #UHD</p>
+									</div>
+									<h3>B tv All</h3>
+									<div class="prod-desc">
+										<button type="button" class="btn-desc" title="상품 페이지로 이동">자세히 보기</button>
+										<div class="prod-cost">
+											<div class="origin-cost">25,300원</div>
+											<div class="disc-cost">월 <span>15,400</span>원 </div>
+										</div>
+									</div>
+									<div class="prod-btns">
+										<a href="#none" class="btn-counsel" title="새창">상담하기</a>
+										<a href="#none" class="btn-join">바로 가입</a>
+									</div>
+								</div>
+								<div class="prod-recom-wrap">
+									<div class="prod-recom">
+										<p>지금 B tv All 에서는?</p>
+										<ul class="recom-type">
+                      <li>축구, 야구, 골프, 해외 스포츠까지 전부 다!</li>
+                      <li>바둑, 낚시 등 다양한 취미 채널까지!</li>
+                      <li>Afreeca TV, DIA TV 등 다양한 크리에이터 영상 시청 가능!</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="prod-noti-wrap">
+						<p>※ SK텔레콤 휴대폰 1대 결합, 인터넷 결합 할인(광랜인터넷 이상), 3년 약정 기준(부가세 포함, 셋톱박스 임대료 별도)</p>
+						<p>※ T 다이렉트샵에서 인터넷과 함께 신청 가능하며, 결합 할인 혜택이 제공됩니다.</p>
+					</div>
+				</div>
+				<!-- 메인 시뮬레이션 이동 배너 -->
+				<div class="cnts-box-03-1">
+          <button type="button" class="cnt-card">
+            <div class="ad-banner-img">
+              <img src="../img/wireline/banner-simulation@2x.png" alt="내가 원하는 조합으로! 인터넷/B tv 예상 요금 보러가기">
+            </div>
+          </button>
+        </div>
+				<!-- //메인 시뮬레이션 이동 배너 -->
+				<div class="cnts-box-02">
+					<h3> B tv와 환상의 짝꿍, <br /> 셋톱박스 </h3>
+					<div class="swiper-container settop-list">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" aria-labelledby="item-swiper-settop-1" id="item-swiper-settop-pager-1">
+								<ul class="settop">
+									<li>
+										<div class="settop-img">
+											<img src="../img/wireline/settop-01.png" alt="Apple TV 4K 이미지">
+										</div>
+										<div class="settop-txt">
+											<h4>
+												<span>Apple TV 4K</span>
+											</h4>
+											<p>최고의 시리즈, 영화 콘텐츠와 함께 <br /> iOS 연동으로 시너지 업! </p>
+										</div>
+									</li>
+									<li>
+										<div class="settop-img">
+											<img src="../img/wireline/settop-02.png" alt="AI 2 이미지">
+										</div>
+										<div class="settop-txt">
+											<h4>
+												<span>AI 2</span>
+											</h4>
+											<p>말하기만 하면 원하는 콘텐츠를 <br /> 찾아주는 똑똑한 우리 집 비서 </p>
+										</div>
+									</li>
+									<li>
+										<div class="settop-img">
+											<img src="../img/wireline/settop-03.png" alt="Smart 3 이미지">
+										</div>
+										<div class="settop-txt">
+											<h4>
+												<span>Smart 3</span>
+											</h4>
+											<p>작은 크기로 콤팩트하게! <br /> NUGU, YouTube도 문제없이 </p>
+										</div>
+									</li>
+									<li>
+										<div class="settop-img">
+											<img src="../img/wireline/settop-04.png" alt="B tv air 이미지">
+										</div>
+										<div class="settop-txt">
+											<h4>
+												<span>B tv air</span>
+											</h4>
+											<p>태블릿 하나로 <br /> B tv를 집 어디서나 자유롭게 시청! </p>
+										</div>
+									</li>
+								</ul>
+								<div class="btn-settop-wrap">
+									<a href="#none" class="btn-view">자세히 보기</a>
+								</div>
+							</div>
+							<div class="swiper-slide" aria-labelledby="item-swiper-settop-2" id="item-swiper-settop-pager-2">
+								<ul class="settop">
+									<li>
+										<div class="settop-img">
+											<img src="../img/wireline/settop-01.png" alt="Apple TV 4K 이미지">
+										</div>
+										<div class="settop-txt">
+											<h4>
+												<span>Apple TV 4K</span>
+											</h4>
+											<p>최고의 시리즈, 영화 콘텐츠와 함께 <br /> iOS 연동으로 시너지 업! </p>
+										</div>
+									</li>
+									<li>
+										<div class="settop-img">
+											<img src="../img/wireline/settop-02.png" alt="AI 2 이미지">
+										</div>
+										<div class="settop-txt">
+											<h4>
+												<span>AI 2</span>
+											</h4>
+											<p>말하기만 하면 원하는 콘텐츠를 <br /> 찾아주는 똑똑한 우리집 비서 </p>
+										</div>
+									</li>
+								</ul>
+								<div class="btn-settop-wrap">
+									<a href="#none" class="btn-view">자세히 보기</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination swiper-pagination-bullets" role="tablist"></div>
+					</div>
+				</div>
+				<div class="iptv-pro-wrap">
+					<h3> 이번 주 <span>가장 HOT한</span>
+						<br /> 인기 프로그램
+					</h3>
+					<div class="swiper-container hot-pro-list">
+            <!-- 웹접근성 슬라이드 디자인 개선 08.03  -->
+            <div class="swiper-control-box">
+              <div class="swiper-button-prev" role="button" tabindex="0"><span class="blind">이전</span></div>
+              <div class="swipe-fraction"></div>
+              <div class="swiper-button-next" role="button" tabindex="0"><span class="blind">다음</span></div>
+              <div class="swipe-play-control">
+                <button type="button" class="btn-stop" aria-pressed="false"><span class="blind">정지</span></button>
+              </div>          
+            </div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="../img/wireline/hot-pro01.png" alt="닥터 로이어 포스터 이미지">
+								<div class="list-name">
+									<span class="age">15</span>
+									<span class="text">닥터 로이어</span>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="../img/wireline/hot-pro02.png" alt="브로커 포스터 이미지">
+								<div class="list-name">
+									<span class="age">12</span>
+									<span class="text">브로커</span>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="../img/wireline/hot-pro03.png" alt="나 혼자 산다 포스터 이미지">
+								<div class="list-name">
+									<span class="age">15</span>
+									<span class="text">나 혼자 산다</span>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="../img/wireline/hot-pro04.png" alt="클리닝 업 포스터 이미지">
+								<div class="list-name">
+									<span class="age">15</span>
+									<span class="text">클리닝 업</span>
+								</div>
+							</div>
+						</div>			
+					</div>
+				</div>
+				<div class="iptv-pro-wrap movie">
+					<h3> 볼거리가 가득! <br />
+						<span>새로 들어온</span> 영화
+					</h3>
+					<div class="swiper-container new-movie-list">
+            <!-- 웹접근성 슬라이드 디자인 개선 08.03  -->
+            <div class="swiper-control-box">
+              <div class="swiper-button-prev" role="button" tabindex="0"><span class="blind">이전</span></div>
+              <div class="swipe-fraction"></div>
+              <div class="swiper-button-next" role="button" tabindex="0"><span class="blind">다음</span></div>
+              <div class="swipe-play-control">
+                <button type="button" class="btn-stop" aria-pressed="false"><span class="blind">정지</span></button>
+              </div>          
+            </div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="../img/wireline/new-movie01.png" alt="닥터 스트레인지 대혼돈의 멀티버스 포스터 이미지">
+								<div class="list-name">
+									<span class="age">12</span>
+									<span class="text">닥터 스트레인지 : 대혼돈의 멀티버스</span>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="../img/wireline/new-movie02.png" alt="실종 포스터 이미지">
+								<div class="list-name">
+									<span class="age">12</span>
+									<span class="text">실종</span>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="../img/wireline/new-movie03.png" alt="쥬라기월드 도미니언 포스터 이미지">
+								<div class="list-name">
+									<span class="age">12</span>
+									<span class="text">쥬라기월드 : 도미니언</span>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="../img/wireline/new-movie04.png" alt="신데렐라 포스터 이미지">
+								<div class="list-name">
+									<span class="age">전체</span>
+									<span class="text">신데렐라</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cnts-box-05">
+					<h3> B tv의 특별한 가입혜택 </h3>
+					<div class="join-benefit-wrap">
+						<div class="join-benefit join-benefit-01">
+							<p> B tv 인기 월정액 10종 <br />
+								<strong>1개월 무료</strong>
+								<br />
+								<span class="small-txt">(총 103,290원)</span>
+							</p>
+						</div>
+						<div class="join-benefit join-benefit-02">
+							<p>
+								<strong>B포인트 10,000P</strong>
+								<br />
+								<span class="small-txt">신규 고객님 전원 증정</span>
+							</p>
+						</div>
+						<div class="join-benefit join-benefit-03">
+							<p>
+								<span class="small-txt">B tv 추가 가입 시</span>
+								<br />
+								<strong>두 번째 <br /> B tv 이용요금은 반값! </strong>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+    </div>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/swiper.min.js"></script>
+  <!-- <script src="../js/tdirect-ui.js"></script> -->
+
+	<script>
+    // 메뉴
+    var swiper_menu = new Swiper('.swiper-container-menu', {
+      slidesPerView: 'auto',
+      spaceBetween: 24,
+      loop: false,
+    });
+    // 상단네비활성화
+    $('.swiper-container-menu ul li button').on('click', function() {
+      var tabId = $(this).attr('id');
+      var tabControl = $(this).attr('aria-controls');
+      $('.tab-contents-area').attr({
+        "aria-labelledby": tabId,
+        "id": tabControl
+      });
+      $('.swiper-container-menu ul li button').removeClass('current').attr("aria-selected", "false");
+      $(this).addClass('current').attr("aria-selected", "true");
+    })
+    // ----유선 콘텐츠 js----
+		
+		// 인터넷/iptv 상품 리스트
+		var swiperProdList = new Swiper('.prod-list.swiper-container', {
+			a11y: {
+        enabled: false
+			},
+			centeredSlides: true,
+			slidesPerView:1.2,
+			loop: true,
+			spaceBetween: 16,
+			speed:1000,
+			loopedSlides: 2,
+			autoplay: {
+				delay:2500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+        el: ".swipe-fraction",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      }, 
+      on: {
+        slideChange : function(){
+          //[D] 슬라이드 작동 시 el 값
+          $(".swiper-slide", $(this.el)).find('div.prod-info').attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $(".swiper-slide", $(this.el)).find('span.btn-desc,a,button').attr({"tabindex":"-1"}); // 초점이 가 있는 요소 tabindex = -1
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('div.prod-info').attr({tabindex:"0" , "aria-hidden" : "false"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('span.btn-desc,a,button').attr({"tabindex":"0"}); // 초점이 가 있는 요소 tabindex = 0
+        },
+        init : function() {
+          //[D] 슬라이드 el 값
+          $(".swiper-slide", $(this.el)).find('div.prod-info').attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $(".swiper-slide", $(this.el)).find('span.btn-desc,a,button').attr({"tabindex":"-1"}); // 초점이 가 있는 요소 tabindex = -1 
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('div.prod-info').attr({tabindex:"0" , "aria-hidden" : "false"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('span.btn-desc,a,button').attr({"tabindex":"0"}); // 초점이 가 있는 요소 tabindex = 0
+        
+					//재생 / 정지 
+          var thisSlide = this;
+					var autoPlayBtn = $('.swipe-play-control > button', $(this.$el));
+          autoPlayBtn.on("click", function(){
+						autoPlayState = $(this).attr('aria-pressed');
+            if (autoPlayState == 'false') {
+              $(this).attr('aria-pressed', 'true');
+              $(this).removeClass("btn-stop").addClass("btn-start").find('span').html('시작');
+              thisSlide.autoplay.stop();
+            } else if (autoPlayState === 'true') {
+              $(this).attr('aria-pressed', 'false');
+              $(this).removeClass("btn-start").addClass("btn-stop").find('span').html('정지');
+              thisSlide.autoplay.start();
+            };
+					});
+          //-- end : 재생/정지 btn
+				}
+      }
+      // < //유선 웹접근성 >
+		});
+
+		// settop 리스트 
+		var SettopCnt = $('.swiper-slide','.settop-list.swiper-container').length; // 슬라이드 갯수
+		var swiperSettopList = new Swiper('.settop-list.swiper-container', {
+			a11y: {
+        enabled: false
+			},
+			centeredSlides: true,
+			slidesPerView:1.2,
+			spaceBetween: 16,
+			speed:1000,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+        clickable: true,
+				renderBullet: function (index, className) {
+          var _selected = (index == 0 ? 'aria-selected="true"' : 'aria-selected="false"'); //[D] 2023.01.04 첫번째 인디케이터만  aria-selected="true"
+          return '<div class="' + className + '" role="presentation"><button id="item-swiper-settop-' + (index + 1) + '" role="tab" aria-controls="item-swiper-settop-pager-' + (index + 1) + '" aria-lable="'+ (index + 1) +' of '+ SettopCnt + '" '+ _selected +'>' + (index + 1) + '</button></div>';
+        },
+			},
+      
+			//<유선 웹접근성 07/03>
+      on: {
+        slideChange : function(){
+          //[D] 인디케이터 aria-selected="true"
+          $('.swiper-container.settop-list .swiper-pagination-bullet').find('button').attr('aria-selected', false);
+          $('.swiper-container.settop-list .swiper-pagination-bullet-active').find('button').attr('aria-selected', true);
+
+					//[D] 슬라이드 작동 시 el 값
+          $(".swiper-slide", $(this.el)).attr({"tabindex":"-1", "aria-hidden" : "true"});
+					$(".swiper-slide", $(this.el)).eq(this.realIndex).attr({"tabindex":"0", "aria-hidden" : "false"}); 
+          
+        },
+        init : function() {
+					$(".swiper-slide", $(this.el)).attr({"role" : "tabpanel", "tabindex":"-1", "aria-hidden" : "true"});
+          $(".swiper-slide.swiper-slide-active", $(this.el)).attr({"tabindex":"0", "aria-hidden" : "false"});
+        }
+      }
+      // < //유선 웹접근성 >
+		});
+
+		// hot 프로그램 리스트 
+		var swiperSettopList = new Swiper('.hot-pro-list.swiper-container', {
+			a11y: {
+        enabled: false
+			},
+			centeredSlides: true,
+			slidesPerView:'auto',
+			loop: true,
+			speed:1000,
+			autoplay: {
+				delay:2500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+        el: ".swipe-fraction",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      on: {
+        slideChange : function(){
+          //[D] 슬라이드 작동 시 el 값
+          $(".swiper-slide", $(this.el)).attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").attr({tabindex:"0" , "aria-hidden" : "false"});
+        },
+        init : function() {
+          //[D] 슬라이드 el 값
+          $(".swiper-slide", $(this.el)).attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").attr({tabindex:"0" , "aria-hidden" : "false"});
+        
+					//재생 / 정지 
+          var thisSlide = this;
+					var autoPlayBtn = $('.swipe-play-control > button', $(this.$el));
+          autoPlayBtn.on("click", function(){
+						autoPlayState = $(this).attr('aria-pressed');
+            if (autoPlayState == 'false') {
+              $(this).attr('aria-pressed', 'true');
+              $(this).removeClass("btn-stop").addClass("btn-start").find('span').html('시작');
+              thisSlide.autoplay.stop();
+            } else if (autoPlayState === 'true') {
+              $(this).attr('aria-pressed', 'false');
+              $(this).removeClass("btn-start").addClass("btn-stop").find('span').html('정지');
+              thisSlide.autoplay.start();
+            };
+					});
+          //-- end : 재생/정지 btn
+				}
+      }
+      // < //유선 웹접근성 >
+		});
+
+		// new 영화 리스트 
+		var swiperSettopList = new Swiper('.new-movie-list.swiper-container', {
+			a11y: {
+        enabled: false
+			},
+			centeredSlides: true,
+			slidesPerView:'auto',
+			loop: true,
+			speed:1000,
+			autoplay: {
+				delay:2500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+        el: ".swipe-fraction",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      on: {
+        slideChange : function(){
+          //[D] 슬라이드 작동 시 el 값
+          $(".swiper-slide", $(this.el)).attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").attr({tabindex:"0" , "aria-hidden" : "false"});
+        },
+        init : function() {
+          //[D] 슬라이드 el 값
+          $(".swiper-slide", $(this.el)).attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").attr({tabindex:"0" , "aria-hidden" : "false"});
+					
+					//재생 / 정지 
+          var thisSlide = this;
+					var autoPlayBtn = $('.swipe-play-control > button', $(this.$el));
+          autoPlayBtn.on("click", function(){
+						autoPlayState = $(this).attr('aria-pressed');
+            if (autoPlayState == 'false') {
+              $(this).attr('aria-pressed', 'true');
+              $(this).removeClass("btn-stop").addClass("btn-start").find('span').html('시작');
+              thisSlide.autoplay.stop();
+            } else if (autoPlayState === 'true') {
+              $(this).attr('aria-pressed', 'false');
+              $(this).removeClass("btn-start").addClass("btn-stop").find('span').html('정지');
+              thisSlide.autoplay.start();
+            };
+					});
+          //-- end : 재생/정지 btn
+				}
+      }
+      // < //유선 웹접근성 >
+		});
+  </script>
+</body>
+</html>

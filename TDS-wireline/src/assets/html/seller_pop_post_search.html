@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<title>[공통] 팝업 | SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/seller.css">
+	<script>document.documentElement.dataset.userAgent = navigator.userAgent;</script>
+</head>
+
+<body>
+
+<!-- 우편번호 검색 레이어 팝업 -->
+<div class="popup pop-seller pop-search-zip" style="display: block;">
+    <div class="popup-body">
+        <div class="popup-header">
+            <h1 class="popup-title">우편번호 검색</h1>
+        </div>
+    
+        <div role="main" class="popup-content">
+            <p class="txt-form-info">찾으시는 도로명 주소나 지번 주소를 입력 후 검색 버튼을 눌러주세요.</p>
+            <div class="form-group">
+                <span class="c-input">
+                    <!-- [D] 검색어 입력시 btn-delete 호출 -->
+                    <input type="text" placeholder="도로명 또는 지번 주소를 입력해주세요" title="주소 입력" class="input">
+                    <button type="button" class="btn-delete"><span class="ico-delete">입력 내용 삭제</span></button>
+                </span>
+                <button type="button" class="btn-extra">검색</button>
+            </div>
+            <!-- [D] 우편번호 검색 결과 있음 -->
+            <div class="area-result">
+                <span class="g-invisible">검색된 우편번호 목록</span>
+                <ul class="list-address">
+                    <li>
+                        <!-- [D] 2022.09.02 선택 시 class="on" 추가-->
+                        <a href="#none" class="item-address on" title="선택됨">
+                            <span class="zipcode"><em>06120</em></span>
+                            <span class="street-address"><span>도로명</span><span class="addr">서울특별시 중구 을지로 177(을지로4가, 일신빌딩)</span></span>
+                            <span class="lot-num-address"><span>지번</span><span class="addr">서울특별시 중구 을지로4가 71-2</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none" class="item-address">
+                            <span class="zipcode"><em>06120</em></span>
+                            <span class="street-address"><span>도로명</span><span class="addr">서울특별시 중구 을지로 177(을지로4가, 일신빌딩)</span></span>
+                            <span class="lot-num-address"><span>지번</span><span class="addr">서울특별시 중구 을지로4가 71-2</span></span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- [D] 검색 결과 10개 이상 시 '더보기' 버튼 노출 -->
+                <div class="btn-area">
+                    <button type="button" class="btn-default btn-fix">더보기</button>
+                </div>
+            </div>
+            <!-- [D] 우편번호 검색 결과 없음 -->
+            <div class="area-result">
+                <p class="txt-info"><em>일치하는 주소가 없습니다.</em>주소를 정확히 확인 후 다시 입력해주세요.</p>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <div class="btn-area">
+                <button type="button" class="btn-primary">확인</button>
+            </div>
+        </div>
+        
+        <button type="button" class="btn-close" onclick="UI.modalClose(this);return false;">
+          <span class="ico-close">팝업 닫기</span>
+        </button>
+    </div>
+</div>
+<!-- 우편번호 검색 레이어 팝업 -->
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/tdirect-ui.js"></script>
+
+  <script>
+    $('.list-address li a').on('click', function(){
+      $('.list-address li a').removeClass('on').removeAttr('title');
+      $(this).addClass('on').attr('title','선택됨');
+    });
+  </script>
+</body>
+</html>

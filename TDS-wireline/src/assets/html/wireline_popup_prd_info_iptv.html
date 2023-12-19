@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<title>[팝업] IPTV 상품 가입 안내 | SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/seller.css">
+	
+	<script>document.documentElement.dataset.userAgent = navigator.userAgent;</script>
+</head>
+
+<body>
+	<!-- 유선 popup -->
+	<div class="popup pop-seller wireline-prd-info-iptv">
+		<div class="popup-body">
+			<div class="popup-header">
+				<h1 class="popup-title">IPTV 상품 가입 안내</h1>
+			</div>
+			
+			<div role="main" class="popup-content">
+				<div class="iptv-join-guide">
+					<p class="guide-txt">IPTV와 인터넷 상품에 함께 가입하실 수 있습니다. <br /> 추천 결합상품을 확인해 보세요. </p>
+					<p class="selected-txt">[ <span>IPTV 상품명</span> ] 상품과 결합하면 좋은 상품! </p>
+				</div>
+				<div class="swiper-container iptv-prod-list">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="inner">
+								<span class="speed">500Mbps</span>
+								<h2>기가 라이트 인터넷</h2>
+								<div class="prod-tag">
+									<p>#고화질 #동영상시청</p>
+									<p>#인터넷사용량多 #2인가구</p>
+								</div>
+								<div class="combined-month-cost">
+									<dl>
+										<dt>B tv 결합 시</dt>
+										<dd>월 <strong>19,800</strong>원 </dd>
+									</dl>
+									<span class="text-refer">(3년 약정 기준, 온라인 전용 할인)</span>
+								</div>
+								<a href="#none" class="btn-join">바로 가입</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="inner">
+								<span class="speed">1Gbps</span>
+								<h2>기가 인터넷</h2>
+								<div class="prod-tag">
+									<p>#4K스트리밍 #주식거래</p>
+									<p>#고용량다운로드 #3D게임</p>
+								</div>
+								<div class="combined-month-cost">
+									<dl>
+										<dt>B tv 결합 시</dt>
+										<dd>월 <strong>23,100</strong>원 </dd>
+									</dl>
+									<span class="text-refer">(3년 약정 기준, 온라인 전용 할인)</span>
+								</div>
+								<a href="#none" class="btn-join">바로 가입</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="inner">
+								<span class="speed">100Mbps</span>
+								<h2>광랜 인터넷</h2>
+								<div class="prod-tag">
+									<p>#웹서핑 #사무용도</p>
+									<p>#1인가구 #최소한의용도</p>
+								</div>
+								<div class="combined-month-cost">
+									<dl>
+										<dt>B tv 결합 시</dt>
+										<dd>월 <strong>16,500</strong>원 </dd>
+									</dl>
+									<span class="text-refer">(3년 약정 기준, 온라인 전용 할인)</span>
+								</div>
+								<a href="#none" class="btn-join">바로 가입</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+				<p class="only-btv-noti">B tv만 가입하실 고객님께서는 <br /> 전화 상담을 이용해 주세요. </p>
+			</div>
+
+			<div class="popup-footer">
+				<div class="btn-area">
+					<!-- [D] 활성/비활성 여부는 disabled 클래스 및 속성으로 추가/삭제로 컨트롤 -->
+					<button type="button" class="btn-primary btn-lg" title="새창">상담 신청하기</button>
+				</div>
+			</div>
+
+			<button type="button" class="btn-close">
+				<span class="ico-close">팝업 닫기</span>
+			</button>
+		</div>
+	</div>
+
+	<!-- //popup -->
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/tdirect-ui.js"></script>
+
+	<script>
+		// iptv 상품가입안내 swiper
+    var swiperIptvProdList = new Swiper('.iptv-prod-list.swiper-container', {
+			observer: true,
+			observeParents: true,
+			centeredSlides: true,
+			slidesPerView:1,
+			loop: true,
+			spaceBetween: 16,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			//<유선 웹접근성 07/04>
+      on: {
+        slideChange : function(){
+          //[D] 슬라이드 작동 시 el 값
+          $(".swiper-slide", $(this.el)).find('div.inner , a').attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('div.inner , a').attr({tabindex:"0" , "aria-hidden" : "false"});
+        },
+        init : function() {
+          //[D] 슬라이드 el 값
+          $(".swiper-slide", $(this.el)).find('div.inner , a').attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('div.inner , a').attr({tabindex:"0" , "aria-hidden" : "false"});
+        }
+      }
+      // < //유선 웹접근성 >
+		});
+	</script>
+	
+</body>
+</html>

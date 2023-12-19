@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<title>[팝업] 우리 동네 인터넷 가입 현황 | T 월드 다이렉트</title>
+	<link rel="stylesheet" href="../css/import_style.css" />
+
+	<script src="../js/jquery-1.12.4.js"></script>
+	<script>
+			document.documentElement.dataset.userAgent = navigator.userAgent;
+	</script>
+</head>
+
+<body>
+	<!-- 유선 popup -->
+	<!-- [D] 공통 팝업 영역
+		팝업 레이어 일 경우 class = " tds-popup-wrap " 추가
+		팝업 새창 일 경우 class = " tds-popup-wrap pop_page" 추가
+	-->
+	<div class="container-wrap tds-popup-wrap pop_page" >
+		<!-- 헤더 영역 -->
+		<div class="tds-header">
+			<div class="top-header">
+				<div class="top-header-left">
+					<h1 class="title">우리 동네 인터넷 가입 현황​</h1>
+				</div>
+				<div class="top-header-right"></div>
+			</div>
+		</div>
+
+		<!-- 본분 영역 -->
+		<div class="tds-main">
+			<div class="l-grid">
+        <div class="wireline-cont-area">
+          <!-- 우리 동네 인터넷 가입 현황 -->
+          <div class="town-chart-area">
+            <p class="stitle">인터넷을 설치할 동네를 찾아보세요.</p>
+            <!-- < 유선 웹접근성 수정 07/04> -->
+            <div class="select-box-wrap">
+              <div class="area-select-box area-select-1">
+                <select name="selectCity" id="" title="시/도 선택" required="required">
+                  <option value="">시/도</option>
+                  <option value="">강원도</option>
+                  <option value="">경기도</option>
+                  <option value="">경상남도</option>
+                  <option value="">경상남도</option>
+                  <option value="">전라남도</option>
+                  <option value="">전라북도</option>
+                  <option value="">제주도</option>
+                  <option value="">충청북도</option>
+                  <option value="">충청남도</option>
+                </select>
+              </div>
+              <div class="area-select-box area-select-2">
+                <select name="selectCity" id="" title="시/군/구 선택" required="required">
+                  <option value="">시/군/구</option>
+                  <option value="">중구</option>
+                  <option value="">분당구</option>
+                  <option value="">중구</option>
+                  <option value="">분당구</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="map-area">
+              <div class="img-box">
+                <img src="../img/wireline/map.png" alt="">
+              </div>
+            </div>
+            <!-- [D] 통계데이터 있는 경우 -->
+            <div class="donut-chart">
+              <div class='donut-guide donut-chart__legend_town1' tabindex="0"></div>
+              <div id="townchart_1" aria-hidden="true"></div>
+            </div>
+            <!-- [D] 통계데이터 없는 경우 -->
+            <div class="donut-chart no-data">
+              <div class='donut-guide donut-chart__legend_town2'></div>
+              <div id="townchart_2"></div>
+              <div class="no-data-wrap">
+                <div class="con-box">
+                  <p class="text">이 지역에 설치할 수 있는 상품이 없습니다.</p>
+                  <p class="text-s">SK텔레콤 유선 가입센터(1670-2001)로 전화 주시면 <br>자세히 안내해 드리겠습니다. </p>
+                </div>
+              </div>
+            </div>
+            <!-- [D] case : 데이터 오류! -->
+            <div class="data-none">
+              <p>조금 뒤 다시 시도해주시기 바랍니다.</p>
+            </div>
+            <!--  -->
+            <div class="donut-chart">
+              <div class='donut-guide donut-chart__legend_fullshot' tabindex="0"></div>
+              <div id="chartFullshot"  aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- close btn -->
+		<button type="button" class="btn-close"><span class="ico-close">팝업 닫기</span></button>
+  </div>
+
+  <!-- script -->
+  <!-- 가입현황 도넛chart -->
+  <script src="../js/d3.min.js"></script>
+  <script src="../js/billboard.pkgd.min.js"></script>
+  <script src="../js/wireline-chart.js"></script>
+
+  <script>
+		// .area-select-box 활성화 
+    $('.area-select-box .head').on('click', function() {
+      $(this).parent('.area-select-box').toggleClass('active');
+    });
+    var selectTarget = $('.area-select-box .select-list .option-item');
+    selectTarget.on('click', function() {
+      $(this).addClass('selected').siblings('.option-item').removeClass('selected');
+      var selectName = $(this).text();
+      $(this).parents('.area-select-box').find('.head').text(selectName);
+      $(this).parents('.area-select-box').removeClass('active');
+    });
+
+
+    $('#townchart_1').blur();
+	</script>
+</body>
+</html>

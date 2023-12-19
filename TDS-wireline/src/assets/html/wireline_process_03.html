@@ -1,0 +1,507 @@
+<!-- 2023 _유선 주문 프로세스 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/seller.css">
+    <script>
+        document.documentElement.dataset.userAgent = navigator.userAgent;
+    </script>
+</head>
+
+<body>
+  <div class="wrap seller-wrap bar-sticky wireline-purchase-content">
+		<!-- header--><!-- //header -->
+		<div class="sticky-top">
+			<div class="spot-step">
+				<ol class="step-list">
+					<!-- [D] 작성 완료시 end 클래스 추가, 현재페이지는 링크에 aria-current="step" 추가 -->
+					<li class="step-item end"><a href="#none" class="link-block"><span>01</span><span>본인인증</span></a></li>
+					<li class="step-item end"><a href="#none" class="link-block"><span>02</span><span>설치 정보</span></a></li>
+					<li class="step-item"><a href="#none" class="link-block" aria-current="step"><span>03</span><span>상품 선택</span></a></li>
+					<li class="step-item"><a href="#none" class="link-block"><span>04</span><span>할인/혜택</span></a></li>
+				</ol>
+			</div>
+		</div>
+		<!-- content -->
+		<main role="main" class="content">
+			<h1 class="g-invisible">주문서 상품 선택</h1>
+			<div class="l-grid l-seller"> 
+				<strong class="purchase-guide-text">
+					상품 선택
+					<!-- [D] case* -->
+					<ul class="dsc-list">
+						<li class="dsc-item">IPTV/셋톱박스는 단독 가입하실 수 없습니다.</li>
+					</ul>
+				</strong>
+				<!-- CASE 별 : 인터넷, IPTV, 셋톱박스 모두 선택 -->
+				<!-- [D] Default: 인터넷, IPTV, 셋톱박스 Y -->
+				<div class="purchase-cont">
+					<ul class="purchase-form-list prd-select">
+						<!-- 인터넷 -->
+						<li>
+							<div class="tit-grid"> <strong class="tit">인터넷 <em class="ico-require">(필수)</em></strong> </div>
+							<div class="cont-prd-select">
+								<div class="prd-box">
+									<div class="prd-info">
+										<div class="prd-option">
+											<div class="prd-name"> <span class="name">기가 인터넷 와이파이</span> <i class="sub-text">1Gbps</i> </div>
+											<div class="prd-price"> <span class="num">39,600</span><span class="unit">원/월</span> </div>
+										</div>
+									</div>
+									<button type="button" class="btn-prd-change">변경하기</button>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="tit-grid"> <strong class="tit">인터넷 <em class="ico-require">(필수)</em></strong> </div>
+							<div class="cont-prd-select">
+								<!-- [D] 상품 미선택일 경우 prd-box 에 클래스 inquire-select 추가
+								항목에 따라 클래스 추가: internet, iptv, setTopBox -->
+								<div class="prd-box inquire-select internet">
+									<div class="prd-info">
+										<p class="text">인터넷을 선택해 주세요.</p>
+										<button type="button" class="btn-prd-select" aria-haspopup="dialog" aria-expanded="false" aria-controls="pop-wire-product-select">추가하기</button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- // 인터넷 -->
+						<!-- IPTV, 셋톱박스 -->
+						<!-- [D] Default: '함께 신청하고 할인받기' 체크 -->
+						<li>
+							<div class="inner-item">
+								<div class="tit-grid widthType2">
+									<!-- [D] .ico-require 비활성화 시 클래스 hidden 추가 -->
+									<strong class="tit fL">IPTV <em class="ico-require hidden">(필수)</em></strong>
+									<div class="form-group fR"> 
+										<span class="c-ick" tabindex="0">
+											<!-- [D] label for값과 연결 input id 값 동일하게 적용 -->
+											<input type="checkbox" name="_optionIptv" id="_optionIptv_1" checked>
+											<label for="_optionIptv_1">함께 신청하고 할인받기</label>
+										</span>
+									</div>
+								</div>
+								<div class="cont-prd-select">
+									<!-- [D] 상품 미선택일 경우 prd-box 에 클래스 inquire-select 추가
+									항목에 따라 클래스 추가: internet, iptv, setTopBox -->
+									<div class="prd-box inquire-select iptv">
+										<div class="prd-info">
+											<p class="text">IPTV를 선택해 주세요.</p>
+											<button type="button" class="btn-prd-select" aria-haspopup="dialog" aria-expanded="false" aria-controls="pop-wire-product-select">추가하기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="inner-item">
+								<!-- [D] .ico-require 비활성화 시 클래스 hidden 추가 -->
+								<strong class="tit">셋톱박스 <em class="ico-require hidden">(필수)</em></strong>
+								<div class="cont-prd-select">
+									<!-- [D] 상품 미선택일 경우 prd-box 에 클래스 inquire-select 추가
+									항목에 따라 클래스 추가: internet, iptv, setTopBox -->
+									<div class="prd-box inquire-select setTopBox">
+										<div class="prd-info">
+											<p class="text">셋톱박스를 선택해 주세요.</p>
+											<button type="button" class="btn-prd-select" aria-haspopup="dialog" aria-expanded="false" aria-controls="pop-wire-product-select">추가하기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- IPTV, 셋톱박스 -->
+						<!-- [D] Default: '함께 신청하고 할인받기' 체크 -->
+						<!-- '함께 신청하고 할인받기' 체크 시 -->
+						<li>
+							<div class="inner-item">
+								<div class="tit-grid widthType2">
+									<!-- [D] .ico-require 비활성화 시 클래스 hidden 추가 --><strong class="tit fL">IPTV <em class="ico-require hidden">(필수)</em></strong>
+									<div class="form-group fR"> 
+										<span class="c-ick" tabindex="0">
+											<!-- [D] label for값과 연결 input id 값 동일하게 적용 -->
+											<input type="checkbox" name="_optionIptv" id="_optionIptv_1" checked>
+											<label for="_optionIptv_1">함께 신청하고 할인받기</label>
+										</span> 
+									</div>
+								</div>
+								<div class="cont-prd-select">
+									<div class="prd-box">
+										<div class="prd-info">
+											<div class="prd-option">
+												<div class="prd-name"> <span class="name">B tv All</span> <i class="sub-text">251채널</i> </div>
+												<div class="prd-price"> <span class="num">18,700</span><span class="unit">원/월</span> </div>
+											</div>
+										</div>
+										<button type="button" class="btn-prd-change">변경하기</button>
+									</div>
+								</div>
+							</div>
+							<div class="inner-item">
+								<!-- [D] .ico-require 비활성화 시 클래스 hidden 추가 --><strong class="tit">셋톱박스 <em class="ico-require hidden">(필수)</em></strong>
+								<div class="cont-prd-select">
+									<div class="prd-box">
+										<div class="prd-info">
+											<div class="prd-option">
+												<div class="prd-name"> <span class="name">AI 2</span> </div>
+												<div class="prd-price"> <span class="num">6,600</span><span class="unit">원/월</span> </div>
+											</div>
+										</div>
+										<button type="button" class="btn-prd-change">변경하기</button>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- '함께 신청하고 할인받기' 체크 해제 시 -->
+						<!-- [D] 통계 정보 호출 실패 시_Static -->
+						<li>
+							<div class="tit-grid widthType2">
+								<!-- [D] .ico-require 비활성화 시 클래스 hidden 추가 --><strong class="tit fL">IPTV <em class="ico-require hidden">(필수)</em></strong>
+								<div class="form-group fR"> 
+									<span class="c-ick" tabindex="0">
+										<!-- [D] label for값과 연결 input id 값 동일하게 적용 -->
+										<input type="checkbox" name="_optionIptv" id="_optionIptv_2">
+										<label for="_optionIptv_2">함께 신청하고 할인받기</label>
+										
+									</span>
+								</div>
+							</div>
+							<div class="cont-prd-select">
+								<div class="recommend-box">
+									<div class="recommend-info">
+										<p class="text"> 인터넷과 IPTV 함께 가입 시 다양한 콘텐츠 혜택과 월 최대 <span class="num">7,700</span>원의 요금 할인을 받으실 수 있습니다. </p>
+									</div>
+									<button type="button" class="btn-prd-change">변경하기</button>
+								</div>
+							</div>
+						</li>
+						<!-- [D] 통계 정보 호출 성공 시 -->
+						<li>
+							<div class="tit-grid widthType2">
+								<!-- [D] .ico-require 비활성화 시 클래스 hidden 추가 --><strong class="tit fL">IPTV <em class="ico-require hidden">(필수)</em></strong>
+								<div class="form-group fR"> 
+									<span class="c-ick" tabindex="0">
+										<!-- [D] label for값과 연결 input id 값 동일하게 적용 -->
+										<input type="checkbox" name="_optionIptv" id="_optionIptv_3">
+										<label for="_optionIptv_3">함께 신청하고 할인받기</label>
+									</span> 
+								</div>
+							</div>
+							<div class="cont-prd-select">
+								<div class="recommend-box">
+									<div class="recommend-info statistics">
+										<p class="text"> <span class="user-percent">NN</span>%의 고객이 인터넷과 IPTV를 함께 신청하고, 월 최대 <span class="num">7,700</span>원 할인받고 있습니다. </p>
+									</div>
+									<button type="button" class="btn-prd-change">변경하기</button>
+								</div>
+							</div>
+						</li>
+						<!-- // IPTV, 셋톱박스 -->
+						<!-- IPTV 추가 신청 -->
+						<!-- [D] Default: 'IPTV 추가 신청하기' 체크 해제 -->
+						<!-- 'IPTV 추가 신청하기' 체크 해제 시 -->
+						<li>
+							<div class="tit-grid widthFullType"> <strong class="tit">같은 장소에 IPTV 한 대 더 설치하면 <br>두번째 IPTV 이용요금 반값!</strong>
+								<div class="form-group"> 
+									<span class="c-ick" tabindex="0">
+										<!-- [D] label for값과 연결 input id 값 동일하게 적용 -->
+										<input type="checkbox" name="_optionAddIptv" id="_optionAddIptv_1">
+										<label for="_optionAddIptv_1">IPTV 추가 신청하기</label>
+									</span> 
+								</div>
+							</div>
+							<!-- [D] 해당 컨텐츠 영역 비노출 시킬 경우 클래스 display-none 추가 -->
+							<div class="cont-prd-select expand-area display-none">
+								<div class="inner-item">
+									<ul class="dsc-list">
+										<li class="dsc-item">선택하신 순서와 상관없이 고객님께 가장 유리한 할인이 자동 적용됩니다.</li>
+									</ul>
+								</div>
+								<div class="inner-item">
+									<!-- [D] .ico-require 비활성화 시 클래스 hidden 추가 --><strong class="tit">추가 IPTV <em class="ico-require hidden">(필수)</em></strong>
+									<div class="cont-prd-select">
+										<div class="prd-box">
+											<div class="prd-info">
+												<div class="prd-option">
+													<div class="prd-name"> <span class="name">B tv 스탠다드</span> <i class="sub-text">221채널</i> </div>
+													<div class="prd-price"> <span class="num">15,400</span><span class="unit">원/월</span> </div>
+												</div>
+											</div>
+											<button type="button" class="btn-prd-change">변경하기</button>
+										</div>
+									</div>
+								</div>
+								<div class="inner-item">
+									<!-- [D] .ico-require 비활성화 시 클래스 hidden 추가 --><strong class="tit">추가 셋톱박스 <em class="ico-require hidden">(필수)</em></strong>
+									<div class="cont-prd-select">
+										<div class="prd-box">
+											<div class="prd-info">
+												<div class="prd-option">
+													<div class="prd-name"> <span class="name">AI 2</span> </div>
+													<div class="prd-price"> <span class="num">6,600</span><span class="unit">원/월</span> </div>
+												</div>
+											</div>
+											<button type="button" class="btn-prd-change">변경하기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- 'IPTV 추가 신청하기' 체크 시 -->
+						<li>
+							<div class="tit-grid widthFullType"> <strong class="tit">같은 장소에 IPTV 한 대 더 설치하면 <br>두번째 IPTV 이용요금 반값!</strong>
+								<div class="form-group"> 
+										<span class="c-ick" tabindex="0">
+										<!-- [D] label for값과 연결 input id 값 동일하게 적용 -->
+										<input type="checkbox" name="_optionAddIptv" id="_optionAddIptv_2" checked>
+										<label for="_optionAddIptv_2">IPTV 추가 신청하기</label>
+									</span> 
+								</div>
+							</div>
+							<!-- [D] 해당 컨텐츠 영역 비노출 시킬 경우 클래스 display-none 추가 -->
+							<div class="cont-prd-select expand-area">
+								<div class="inner-item">
+									<ul class="dsc-list">
+										<li class="dsc-item">선택하신 순서와 상관없이 고객님께 가장 유리한 할인이 자동 적용됩니다.</li>
+									</ul>
+								</div>
+								<div class="inner-item">
+									<!-- [D] .ico-require 비활성화 시 클래스 hidden 추가 --><strong class="tit">추가 IPTV <em class="ico-require hidden">(필수)</em></strong>
+									<div class="cont-prd-select">
+										<div class="prd-box">
+											<div class="prd-info">
+												<div class="prd-option">
+													<div class="prd-name"> <span class="name">B tv 스탠다드</span> <i class="sub-text">221채널</i> </div>
+													<div class="prd-price"> <span class="num">15,400</span><span class="unit">원/월</span> </div>
+												</div>
+											</div>
+											<button type="button" class="btn-prd-change">변경하기</button>
+										</div>
+									</div>
+								</div>
+								<div class="inner-item">
+									<!-- [D] .ico-require 비활성화 시 클래스 hidden 추가 --><strong class="tit">추가 셋톱박스 <em class="ico-require hidden">(필수)</em></strong>
+									<div class="cont-prd-select">
+										<div class="prd-box">
+											<div class="prd-info">
+												<div class="prd-option">
+													<div class="prd-name"> <span class="name">AI 2</span> </div>
+													<div class="prd-price"> <span class="num">6,600</span><span class="unit">원/월</span> </div>
+												</div>
+											</div>
+											<button type="button" class="btn-prd-change">변경하기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- // IPTV 추가 신청 -->
+						<!-- 약정 기간 -->
+						<li> <strong class="tit">약정 기간을 선택해 주세요. <em class="ico-require">(필수)</em></strong>
+							<div class="cont-prd-select">
+								<div class="form-group term-period-list">
+									<!-- [D] 비활성시 클래스 disabled 적용 -->
+									<span class="c-ick-var">
+										<input type="radio" name="_optionTypes1" id="_termPeriod_3" checked>
+										<label for="_termPeriod_3"><span class="text">3년 약정</span></label>
+									</span> 
+									<span class="c-ick-var disabled">
+										<input type="radio" name="_optionTypes1" id="_termPeriod_2">
+										<label for="_termPeriod_2"><span class="text">2년 약정</span></label>
+									</span> 
+									<span class="c-ick-var disabled">
+										<input type="radio" name="_optionTypes1" id="_termPeriod_1">
+											<label for="_termPeriod_1">
+													<span class="text">1년 약정</span>
+											</label>
+									</span> 
+									<span class="c-ick-var">
+										<input type="radio" name="_optionTypes1" id="_termPeriod_none">
+										<label for="_termPeriod_none"><span class="text">무약정</span></label>
+									</span>
+								</div>
+								<ul class="dsc-list">
+									<li class="dsc-item">약정 기간에 따라 할인 금액이 달라집니다.</li>
+								</ul>
+							</div>
+						</li>
+						<!-- // 약정 기간 -->
+					</ul>
+				</div>
+			</div>
+		<!-- //content -->
+		</main>
+
+		<!-- s: 하단 스티키 바 -->
+		<!-- [D] sticky-bar 숨김시 .active 추가 -->
+		<div class="sticky-bar">
+			<div class="layer-pay">
+				<h2 class="g-invisible">출고가 가격정보</h2>
+				<div class="l-grid">
+					<!-- [D] : layer-body 영역 노출시 class .show 추가 -->
+					<!-- [D] : layer-body 안 price-area 노출시 class .on 추가 -->
+					<div class="layer-body">
+						<button type="button" class="btn-toggle" aria-expanded="true" aria-controls="detail-terms"><span class="g-invisible">적용 가입조건 상세보기</span></button>
+						<div id="detail-terms">
+							<div class="body pay-detail">
+								<div class="l-rows">
+									<p class="l-row depth1">
+										<span class="l-row-stit weight">상품 이용금액</span> 
+										<span class="l-row-price">
+											<span class="num point">84,700</span> 
+											<span class="unit">원</span> 
+										</span>
+									</p>
+									<ul class="depth-list">
+										<li class="l-row"> 
+											<span class="l-row-stit">기가 라이트 인터넷 와이파이</span> 
+											<span class="l-row-price">
+												<span class="num">34,100</span> 
+												<span class="unit">원</span> 
+											</span>
+										</li>
+										<li class="l-row"> 
+											<span class="l-row-stit">B tv All</span> 
+											<span class="l-row-price">
+												<span class="num">18,700</span> 
+												<span class="unit">원</span> 
+											</span>
+										</li>
+										<li class="l-row"> 
+											<span class="l-row-stit">AI 2</span> 
+											<span class="l-row-price">
+												<span class="num">6,600</span> 
+												<span class="unit">원</span> 
+												</span>
+										</li>
+										<li class="l-row depth2"> 
+												<span class="l-row-stit">추가 IPTV</span> 
+											</li>
+										<li class="l-row"> 
+											<span class="l-row-stit">B tv All</span> 
+											<span class="l-row-price">
+												<span class="num">18,700</span> 
+												<span class="unit">원</span>
+											</span>
+										</li>
+										<li class="l-row"> 
+											<span class="l-row-stit">AI 2</span> 
+											<span class="l-row-price">
+												<span class="num">6,600</span> 
+												<span class="unit">원</span> 
+											</span>
+										</li>
+										<li class="l-row"> 
+											<span class="l-row-stit">약정 기간</span>
+											<span class="l-row-price">
+												<span class="num">3</span> 
+												<span class="unit weight">년 약정</span> 
+											</span>
+										</li>
+									</ul>
+								</div>
+								<div class="l-rows border">
+									<p class="l-row depth1"> 
+										<span class="l-row-stit weight">할인 금액</span>
+										<span class="l-row-price">
+											<span class="num point">-39,050</span>
+											<span class="unit">원</span> 
+										</span>
+									</p>
+									<ul class="depth-list">
+										<li class="l-row"> 
+											<span class="l-row-stit">휴대폰 결합할인</span>
+											<span class="l-row-price">
+												<span class="num">-14,300</span> 
+												<span class="unit">원</span> 
+											</span>
+										</li>
+										<li class="l-row"> 
+											<span class="l-row-stit">두번째 IPTV 이용료 할인</span> 
+											<span class="l-row-price">
+												<span class="num">-9,350</span> 
+												<span class="unit">원</span> 
+											</span>
+										</li>
+										<li class="l-row"> 
+											<span class="l-row-stit">온라인 전용 할인</span> 
+												<span class="l-row-price">
+												<span class="num">-2,200</span> 
+												<span class="unit">원</span> 
+											</span>
+										</li>
+										<li class="l-row">
+											<span class="l-row-stit">요금 할인 혜택(더슬림요금제)</span>
+											<span class="l-row-price">
+												<span class="num">-11,000</span>
+												<span class="unit">원</span> 
+												</span>
+										</li>
+										<li class="l-row"> 
+											<span class="l-row-stit">셋톱박스 요금 할인</span> 
+											<span class="l-row-price">
+												<span class="num">-2,200</span>
+												<span class="unit">원</span>
+											</span>
+										</li>
+									</ul>
+								</div>
+								<div class="l-rows border">
+									<p class="l-row depth1"> 
+										<span class="l-row-stit weight">출동비</span>
+										<span class="l-row-price">
+											<span class="num point">25,300</span> 
+											<span class="unit">원</span> 
+										</span>
+									</p>
+									<ul class="dsc-list">
+										<li class="dsc-item">인터넷, IPTV 신규가입 시 설치 기사 출동 및 배선 작업에 따른 <br>출동비(설치비)가 개통 다음달에 1회 청구됩니다.</li>
+										<li class="dsc-item">평일 오후 7시 이후, 주말/공휴일 출동 시 인터넷 출동비가 일반 출동비보다 25% 할증됩니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="layer-foot">
+						<!--예상 월 납부금액 -->
+						<div class="price-area">
+							<div class="stit"> 
+								<span class="text">
+									<span class="sunit">예상 월 납부금액</span> </span>
+							</div>
+							<div class="price"> 
+								<span class="num"><strong>69,000</strong></span> 
+								<span class="unit">원</span> <em class="desc">(부가세 포함)</em> 
+							</div>
+						</div>
+					</div>
+					<div class="btn-area">
+						<!-- [D] 활성/비활성 여부는 클래스 disabled 추가/삭제로 컨트롤 -->
+						<button type="button" class="btn-primary">다음</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //e: 하단 스티키 바 -->
+	</div>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/swiper.min.js"></script>
+  <script src="../js/tdirect-ui.js"></script>
+
+	<script>
+		// <웹 접근성 7/13 > 체크박스
+		$(".wireline-purchase-content .c-ick").keydown(function() {
+			if (window.event.keyCode==13 && $(this).find('input').is(':checked')) {
+				$(this).find('input').prop("checked", false);
+			} else if (window.event.keyCode==13 && !$(this).find('input').is(':checked')){
+				$(this).find('input').prop("checked", true);
+			}    
+		});
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<title>[팝업] 가입 가능한 상품 조회​ | T 월드 다이렉트</title>
+	<link rel="stylesheet" href="../css/import_style.css" />
+
+	<script src="../js/jquery-1.12.4.js"></script>
+	<script>
+			document.documentElement.dataset.userAgent = navigator.userAgent;
+	</script>
+</head>
+
+<body>
+	<!-- 유선 popup -->
+	<!-- [D] 공통 팝업 영역
+		팝업 레이어 일 경우 class = " tds-popup-wrap " 추가
+		팝업 새창 일 경우 class = " tds-popup-wrap pop_page" 추가
+	-->
+	<div id="popup-zip-code-module" class="container-wrap tds-popup-wrap pop_page" >
+		<!-- 헤더 영역 -->
+		<div class="tds-header">
+			<div class="top-header">
+				<div class="top-header-left">
+					<h1 class="title">가입 가능한 상품 조회</h1>
+				</div>
+				<div class="top-header-right"></div>
+			</div>
+		</div>
+
+		<!-- 본분 영역 -->
+		<div class="tds-main">
+			<div class="l-grid">
+				<div class="wireline-available-prd-view">
+					<div class="inner">
+						<p class="txt-addr">서울 중구 을지로 65 (을지로2가) <br> SK텔레콤(상세주소) </p>
+						<p class="txt-confirm">위 주소에서 이용 가능한 추천 상품을 확인해 보세요.</p>
+						<button type="button" class="btn-view-other">다른 사람들은 어떤 상품을 선택했을까요?</button>
+						<button type="button" class="btn-confirm btn-type-full">다른 주소로 검색하기</button>
+						<!-- swiper 기능 사용 안함-->
+						<div class="box-swiper">
+							<div class="item-box">
+								<div class="info">
+									<a href="#" tabindex="-1">
+										<span class="txt-speed">1Gbps</span>
+										<div class="item-mid">
+											<h2 class="tit">기가 라이트 인터넷<span class="tit-s">#고화질 #동영상시청<br>#인터넷사용량多 #2인가구</span>
+											</h2>
+											<div class="fee-box">
+												<div class="topic">월 납부요금</div>
+												<div class="value">월 <b>13,750</b>원 </div>
+											</div>
+										</div>
+									</a>
+									<div class="box-btn-pop clearfix">
+										<button type="button" class="btn-shop btn-type-line">장바구니</button>
+										<button type="button" class="btn-confirm btn-type-full">바로 가입</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box-swiper">
+							<div class="item-box">
+								<div class="info">
+									<a href="#" tabindex="-1">
+										<span class="txt-speed">500Mbps</span>
+										<div class="item-mid">
+											<h2 class="tit">기가 인터넷<span class="tit-s">#4K스트리밍 #주식거래<br>#고용량다운로드 #3D게임</span>
+											</h2>
+											<div class="fee-box">
+												<div class="topic">월 납부요금</div>
+												<div class="value">월 <b>13,750</b>원 </div>
+											</div>
+										</div>
+									</a>
+									<div class="box-btn-pop clearfix">
+										<button type="button" class="btn-shop btn-type-line">장바구니</button>
+										<button type="button" class="btn-confirm btn-type-full">바로 가입</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box-swiper">
+							<div class="item-box">
+								<div class="info">
+									<a href="#" tabindex="-1">
+										<span class="txt-speed">100Mbps</span>
+										<span class="tit-s">#웹서핑 #사무용도<br>#1인가구 #최소한의용도</span>
+										<div class="item-mid">
+											<h2 class="tit">광랜인터넷</h2>
+											<div class="fee-box">
+												<div class="topic">월 납부요금</div>
+												<div class="value">월 <b>13,750</b>원 </div>
+											</div>
+										</div>
+									</a>
+									<div class="box-btn-pop clearfix">
+										<button type="button" class="btn-shop btn-type-line">장바구니</button>
+										<button type="button" class="btn-confirm btn-type-full">바로 가입</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button type="button" class="btn-more">더 보기</button>
+						<div class="txt-refer">
+							<p>월 납부 요금은 SK텔레콤 휴대폰 1대 결합, 요금 할인 혜택(더슬림 요금제), 온라인 할인, 3년 약정 할인이 적용된 금액입니다.(부가세 포함)</p>
+							<p>B tv는 SK 인터넷이 설치된 모든 지역에서 가입 가능합니다.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- close btn -->
+		<button type="button" class="btn-close"><span class="ico-close">팝업 닫기</span></button>
+	</div>
+
+	<!-- [D] 바텀 시트 -->
+	<div class="pop-bottom-sheet wireline-myplace" id="bottomOtherProduct" role="menu" aria-labelledby="other-prd-btn" aria-hidden="true" aria-modal="true">
+		<div class="sheet-body">
+			<!-- 우리 동네 인터넷 가입 현황 -->
+				<div class="town-chart-area">
+					<h3>
+						<span class="marker">우리 동네</span> 인터넷 가입 현황
+					</h3>
+					<p class="stitle">인터넷을 설치할 동네를 찾아보세요.</p>
+					<!-- < 유선 웹접근성 수정 07/04> -->
+					<div class="select-box-wrap">
+						<div class="area-select-box area-select-1">
+							<select name="selectCity" id="" title="시/도 선택" required="required">
+								<option value="">시/도</option>
+								<option value="">강원도</option>
+								<option value="">경기도</option>
+								<option value="">경상남도</option>
+								<option value="">경상남도</option>
+								<option value="">전라남도</option>
+								<option value="">전라북도</option>
+								<option value="">제주도</option>
+								<option value="">충청북도</option>
+								<option value="">충청남도</option>
+							</select>
+						</div>
+						<div class="area-select-box area-select-2">
+							<select name="selectCity" id="" title="시/군/구 선택" required="required">
+								<option value="">시/군/구</option>
+								<option value="">중구</option>
+								<option value="">분당구</option>
+								<option value="">중구</option>
+								<option value="">분당구</option>
+							</select>
+						</div>
+					</div>
+					<div class="map-area">
+						<div class="img-box">
+							<img src="../img/wireline/map.png" alt="">
+						</div>
+					</div>
+					<!-- [D] 통계데이터 있는 경우 -->
+					<div class="donut-chart">
+						<div class='donut-guide donut-chart__legend_town1'></div>
+						<div id="townchart_1"></div>
+					</div>
+				</div>
+		</div>
+		<button type="button" class="btn-close">
+			<span class="ico-close">바텀 팝업 닫기</span>
+		</button>
+	</div>
+	<!-- //바텀 시트 -->
+
+	<!-- script -->
+  <!-- 가입현황 도넛chart -->
+  <script src="../js/d3.min.js"></script>
+  <script src="../js/billboard.pkgd.min.js"></script>
+  <script src="../js/wireline-chart.js"></script>
+
+	<script>
+		// 바텀 시트 활성화(active-on)
+		$(".btn-view-other").on('click', function() {
+
+			$('.pop-bottom-sheet').parents().find('.tds-header, .tds-main' ).addClass('on'); //딤처리
+
+			$(".pop-bottom-sheet").addClass('active-on').attr('aria-hidden', false).focus();
+			$(".pop-bottom-sheet > .sheet-body").attr('tabindex', 0).focus();
+
+			$(".pop-bottom-sheet.active-on .btn-close").on('click', function() {
+				$(".pop-bottom-sheet").removeClass('active-on').attr('aria-hidden', true);
+				$(".btn-view-other").focus();
+
+				// 07/14 딤처리 삭제 클래스명 추가
+				$('.tds-header, .tds-main' ).removeClass('on');
+
+			});
+		});
+	</script>
+</body>
+
+</html>

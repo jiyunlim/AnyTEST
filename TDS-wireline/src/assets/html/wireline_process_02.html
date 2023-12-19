@@ -1,0 +1,205 @@
+<!-- 2023 _유선 주문 프로세스 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/seller.css">
+    <script>
+        document.documentElement.dataset.userAgent = navigator.userAgent;
+    </script>
+</head>
+
+<body>
+  <div class="wrap seller-wrap bar-sticky wireline-purchase-content">
+		<!-- header--><!-- //header -->
+		<div class="sticky-top">
+			<div class="spot-step">
+				<ol class="step-list">
+					<!-- [D] 작성 완료시 end 클래스 추가, 현재페이지는 링크에 aria-current="step" 추가 -->
+					<li class="step-item end"><a href="#none" class="link-block"><span>01</span><span>본인인증</span></a></li>
+					<li class="step-item"><a href="#none" class="link-block" aria-current="step"><span>02</span><span>설치 정보</span></a></li>
+					<li class="step-item"><a href="#none" class="link-block"><span>03</span><span>상품 선택</span></a></li>
+					<li class="step-item"><a href="#none" class="link-block"><span>04</span><span>할인/혜택</span></a></li>
+				</ol>
+			</div>
+		</div>
+		<!-- content -->
+		<main role="main" class="content">
+			<h1 class="g-invisible">설치 정보</h1>
+			<div class="l-grid l-seller"> 
+				<strong class="purchase-guide-text">
+				상품을 설치하실 주소를 확인해 주세요.
+				</strong>
+				<div class="purchase-cont">
+					<h4 class="g-invisible">주문서 설치 정보</h4>
+					<ul class="purchase-form-list">
+						<!-- [D] 주소 입력 -->
+						<!-- [D] Case 01 -->
+						<li>
+							<label for="_installAdress">
+								<strong class="tit">설치 주소 <em class="ico-require">(필수)</em></strong>
+							</label>
+							<div class="cont-address">
+								<div class="form-group">
+									<!-- [D] 비활성시 클래스 disabled 적용 -->
+									<span class="c-input disabled">
+										<input type="number" id="_installAdress" title="우편번호" class="input" value="04539" readonly="readonly" required="" pattern="[0-9]*" inputmode="numeric">
+									</span>
+									<button type="button" class="btn-extra">주소 찾기</button>
+								</div>
+								<div class="form-group"> 
+									<span class="c-input disabled">
+										<input type="text" title="기본 주소" class="input" value="서울 중구 을지로 65 (을지로2가)" readonly="readonly" required="">
+									</span> 
+								</div>
+								<div class="form-group"> 
+									<span class="c-input">
+										<input type="text" title="나머지 주소" maxlength="50" class="input" value="SK텔레콤 빌딩" oninput="javascript: if ( this.maxLength > -1 &amp;&amp;this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+									</span> 
+								</div>
+								<!-- [D] 비활성시 클래스 disabled 적용 -->
+								<button type="button" class="btn-secondary btn-fix btn-rd">설치 가능 여부 확인</button>
+							</div>
+						</li>
+						<!-- [D] Case 02 -->
+						<li> 
+							<label for="_installAdress">
+								<strong class="tit">설치 주소 <em class="ico-require">(필수)</em></strong>
+							</label>
+							<div class="cont-address">
+								<div class="form-group">
+									<!-- [D] 비활성시 클래스 disabled 적용 -->
+									<span class="c-input disabled">
+										<input type="number" id="_installAdress" title="우편번호" class="input" value="04539" readonly="readonly" required="" pattern="[0-9]*" inputmode="numeric">
+									</span>
+									<button type="button" class="btn-extra">주소 찾기</button>
+								</div>
+								<div class="form-group"> 
+									<span class="c-input disabled">
+										<input type="text" title="기본 주소" value="서울특별시 강남구 강남대로120길 58 (논현동, 우성아파트)" class="input" readonly="readonly" required="">
+									</span> 
+								</div>
+								<div class="form-group detail-address"> 
+									<span class="c-input">
+										<input type="text" title="상세 주소 동" class="input" value="101" required="" data-mode="number">
+									</span> 
+									<span class="unit-txt">동</span> <span class="c-input">
+										<input type="text" title="상세 주소 호" class="input" value="1014" required="" data-mode="number">
+									</span> 
+									<span class="unit-txt">호</span> 
+								</div>
+								<!-- [D] 비활성시 클래스 disabled 적용 -->
+								<button type="button" class="btn-secondary btn-fix btn-rd">설치 가능 여부 확인</button>
+							</div>
+						</li>
+						<!-- [D] Case 03 -->
+						<li> 
+							<label for="_installAdress">
+								<strong class="tit">설치 주소 <em class="ico-require">(필수)</em></strong>
+							</label>
+							<div class="cont-address">
+								<div class="form-group">
+									<!-- [D] 비활성시 클래스 disabled 적용 -->
+									<span class="c-input disabled">
+										<input type="number" id="_installAdress" title="우편번호" class="input" readonly="readonly" required="" pattern="[0-9]*" inputmode="numeric">
+									</span>
+									<button type="button" class="btn-extra disabled">주소 찾기</button>
+								</div>
+								<div class="form-group"> 
+									<span class="c-input disabled">
+										<input type="text" title="기본 주소" class="input" readonly="readonly" required="">
+									</span> 
+								</div>
+								<div class="form-group"> 
+									<span class="c-input">
+										<input type="text" title="나머지 주소" maxlength="50" class="input" oninput="javascript: if ( this.maxLength > -1 &amp;&amp;this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+									</span>
+								</div>
+								<!-- [D] 비활성시 클래스 disabled 적용 -->
+								<button type="button" class="btn-secondary btn-fix btn-rd disabled" disabled>설치 가능 여부 확인</button>
+							</div>
+						</li>
+						<!-- [D] Case 04 -->
+						<li> 
+							<label for="_installAdress">
+								<strong class="tit">설치 주소 <em class="ico-require">(필수)</em></strong>
+							</label>
+							<div class="cont-address">
+								<div class="form-group">
+									<!-- [D] 비활성시 클래스 disabled 적용 -->
+									<span class="c-input disabled">
+										<input type="number" id="_installAdress" title="우편번호" class="input" value="04539" readonly="readonly" required="" pattern="[0-9]*" inputmode="numeric">
+									</span>
+									<button type="button" class="btn-extra disabled">주소 찾기</button>
+								</div>
+								<div class="form-group"> 
+									<span class="c-input disabled">
+										<input type="text" title="기본 주소" class="input" value="서울 중구 을지로 65 (을지로2가)" readonly="readonly" required="">
+									</span> 
+								</div>
+								<div class="form-group"> 
+									<span class="c-input disabled">
+										<input type="text" title="나머지 주소" maxlength="50" class="input" value="SK텔레콤 빌딩" readonly="readonly" oninput="javascript: if ( this.maxLength > -1 &amp;&amp;this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+									</span> 
+								</div>
+								<!-- [D] 비활성시 클래스 disabled 적용 -->
+								<button type="button" class="btn-secondary btn-fix btn-rd disabled" disabled>설치 가능 여부 확인</button>
+							</div>
+						</li>
+						<!-- [D] Case 05 -->
+						<li> 
+							<label for="_installAdress">
+								<strong class="tit">설치 주소 <em class="ico-require">(필수)</em></strong>
+							</label>
+							<div class="cont-address">
+								<div class="form-group">
+									<!-- [D] 비활성시 클래스 disabled 적용 -->
+									<span class="c-input disabled">
+										<input type="number" id="_installAdress" title="우편번호" class="input" value="04539" readonly="readonly" required="" pattern="[0-9]*" inputmode="numeric">
+									</span>
+									<button type="button" class="btn-extra disabled">주소 찾기</button>
+								</div>
+								<div class="form-group"> 
+									<span class="c-input disabled">
+										<input type="text" title="기본 주소" value="서울특별시 강남구 강남대로120길 58 (논현동, 우성아파트)" class="input" readonly="readonly" required="">
+									</span> 
+								</div>
+								<div class="form-group detail-address"> 
+									<span class="c-input disabled">
+										<input type="text" title="상세 주소 동" class="input" value="101" required="" data-mode="number" readonly="readonly">
+									</span> 
+									<span class="unit-txt">동</span> 
+									<span class="c-input disabled">
+										<input type="text" title="상세 주소 호" class="input" value="1014" required="" data-mode="number" readonly="readonly">
+									</span> 
+									<span class="unit-txt">호</span>
+								</div>
+									<!-- [D] 비활성시 클래스 disabled 적용 -->
+								<button type="button" class="btn-secondary btn-fix btn-rd disabled" disabled>설치 가능 여부 확인</button>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //content -->
+			<!-- s [D] 하단 버튼 바 -->
+			<div class="page-footer">
+				<div class="btn-area">
+					<button type="button" class="btn-primary">다음</button>
+				</div>
+			</div>
+			<!-- e 하단 버튼 바  -->
+		</main>
+	</div>
+	
+	<script src="../js/jquery.min.js"></script>
+  <script src="../js/swiper.min.js"></script>
+  <script src="../js/tdirect-ui.js"></script>
+
+</body>
+
+</html>

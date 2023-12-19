@@ -1,0 +1,4758 @@
+/* 모듈(각 컴포넌트) 스타일 2022.03.25 */
+.main-section {
+  position: relative;
+}
+
+.main-section .section-tit {
+  position: relative;
+  line-height: 1.2;
+  padding: 0 20px 10px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  z-index: 2;
+}
+
+.main-section button {
+  padding: 0;
+  font-family: inherit;
+  letter-spacing: -0.48px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+.main-section .section-line {
+  padding-top: 30px;
+  margin-bottom: 40px;
+}
+
+.main-section .section-line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  right: -20px;
+  width: auto;
+  height: 1px;
+  background-color: #d8d8d8;
+  border-bottom: 1px solid #fff;
+}
+
+/* 컴포넌트 베너 */
+.main-section.main-banner {
+  width: 100%;
+  /* height: 165px; */
+  position: relative;
+}
+
+.main-section.main-banner .swiper-banner {
+  padding-top: 0;
+  margin-bottom: 0px;
+}
+
+.main-section .thumb {
+  line-height: 0;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 3px;
+  overflow:hidden;
+}
+
+.main-section .thumb img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.main-section .cnt-card {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  text-decoration: none;
+  font-family: inherit;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main-section .cnt-card.banner-event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 80px;
+  padding: 15px 0px 0px;
+}
+
+.main-section .cnt-card.banner-event .txt-area .txt-notice {
+  font-size: 13px;
+  color: #222;
+}
+
+.main-section .cnt-card.banner-event .txt-area .txt-notice strong {
+  font-weight: 400;
+}
+
+.main-section .cnt-card.banner-event .txt-area .info-message {
+  line-height: 1.25;
+  margin: 8px 0 61px;
+  font-size: 20px;
+  color: #222;
+}
+
+.main-section .cnt-card.banner-event .txt-area .btn-underline {
+  display: inline-block;
+  line-height: 1.67;
+  text-decoration: underline;
+  font-size: 12px;
+  color: #767778;
+  text-align: left;
+}
+
+.main-section .cnt-card.banner-event .thumb {
+  width: 170px;
+  height: 170px;
+  line-height: 0;
+  text-align: center;
+  margin: 0;
+}
+
+.main-section .swiper-wrap .swiper-banner .item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main-section .swiper-wrap .swiper-banner .item .item-inner {
+  position: relative;
+}
+
+.main-section .swiper-wrap .swipe-nav .bullet+.bullet {
+  margin-left: 3px;
+}
+
+.main-section .swiper-wrap .swipe-nav .bullet button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+}
+
+.main-section .swiper-wrap .swipe-nav .bullet.active::before {
+  content: "";
+  display: block;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  color: transparent;
+}
+
+.main-section .swiper-wrap .swipe-nav .bullet.active,
+.main-section .swiper-wrap .swipe-nav .bullet:focus {
+  outline: none;
+  border: 0;
+}
+
+/* 컴포넌트 : 베너 .banner-type-v2 */
+.main-section.banner-type-v2 {
+  margin-bottom: 40px;
+  position: relative;
+  color: #222;
+}
+
+.main-section.banner-type-v2 button {
+  letter-spacing: -0.4px;
+  font-family: inherit;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main-section.banner-type-v2 .cnt-card.banner-event .thumb {
+  width: 66px;
+  height: 66px;
+  line-height: 0;
+  text-align: center;
+}
+
+.main-section.banner-type-v2 .cnt-card.banner-event .thumb img {
+  max-width: 100%;
+}
+
+.main-section.banner-type-v2 .cnt-card.banner-event {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  text-decoration: none;
+  font-family: inherit;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 80px;
+  padding: 7px 22px 7px 24px;
+
+  -webkit-box-shadow: -4px -6px 10px #fff, 4px 7px 10px #dde0e2, -2px -2px 2px #fff;
+  box-shadow: -4px -6px 10px #fff, 4px 7px 10px #dde0e2, -2px -2px 2px #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main-section.banner-type-v2 .cnt-card.banner-event .txt-area {
+  display: block;
+  width: calc(100% - 76px);
+}
+
+.main-section.banner-type-v2 .cnt-card.banner-event .txt-area .txt-notice {
+  display: block;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+}
+
+.main-section.banner-type-v2 .cnt-card.banner-event .txt-area .txt-notice strong {
+  font-weight: 500;
+  color: #9941a7;
+}
+
+.main-section.banner-type-v2 .cnt-card.banner-event .txt-area .info-message {
+  display: block;
+  line-height: 1.5;
+  font-size: 12px;
+  color: #767778;
+  margin: 0;
+}
+
+.main-section.banner-type-v2 .swiper-wrap {
+  position: relative;
+  margin: 0 -10px -20px;
+  padding-top: 16px;
+}
+
+.main-section.banner-type-v2 .swiper-wrap .swiper-banner {
+  margin-top: -20px;
+}
+
+.main-section.banner-type-v2 .swiper-wrap .swiper-banner .item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main-section.banner-type-v2 .swiper-wrap .swiper-banner .item .item-inner {
+  position: relative;
+  padding: 20px 10px;
+}
+
+.main-section.banner-type-v2 .swiper-wrap .swipe-nav {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: auto;
+  left: auto;
+  width: auto;
+  line-height: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.main-section.banner-type-v2 .swiper-wrap .swipe-nav .bullet {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  background: #d8d9d9;
+  vertical-align: top;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.main-section.banner-type-v2 .swiper-wrap .swipe-nav .bullet+.bullet {
+  margin-left: 4px;
+}
+
+.main-section.banner-type-v2 .swiper-wrap .swipe-nav .bullet button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+}
+
+.main-section.banner-type-v2 .swiper-wrap .swipe-nav .bullet.active {
+  width: 14px;
+  background: #f76252;
+}
+
+.main-section.banner-type-v2 .swiper-wrap .swipe-nav .bullet.active::before {
+  content: '현재페이지 번호';
+  display: block;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  color: transparent;
+}
+
+.main-section.banner-type-v2 .swiper-wrap .swipe-nav .bullet.active,
+.main-section.banner-type-v2 .swiper-wrap .swipe-nav .bullet:focus {
+  outline: none;
+  border: 0;
+}
+
+/* 컴포넌트 메인 메뉴 */
+.main-section .quick-menu-list {
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0px 15px 14px;
+  margin: 0 15px 7px;
+  border-radius: 3px;
+  background-color: #fff;
+  top: -15px;
+  box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.05);
+}
+
+.main-section .quick-menu-list:after {
+  content: '';
+  position: absolute;
+  bottom: -22px;
+  left: -15px;
+  right: -15px;
+  width: auto;
+  height: 7px;
+  background-color: #f0f0f5;
+}
+
+.main-section .quick-menu-list li {
+  display: inline-block;
+  width: 25%;
+  color: #767778;
+  vertical-align: top;
+}
+
+.main-section .quick-menu-list li .btn {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 12px;
+  color: inherit;
+}
+
+.main-section .quick-menu-list li .btn i,
+.main-section .quick-menu-list li .btn img {
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin: 25px auto 13px;
+  background-repeat: no-repeat;
+  background-size: 28px auto;
+}
+
+.main-section .quick-menu-list li .btn span {
+  display: -webkit-box;
+  display: flex;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  line-height: 1.25;
+  word-break: keep-all;
+  white-space: nowrap;
+  width: 45px;
+  margin: 0 auto;
+  color: #000;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+/* 컴포넌트: 인기 휴대폰 */
+.main-section.device-type-list {
+  padding-top: 36px;
+  padding-bottom: 26px;
+  border-top: 7px solid #f0f0f5;
+}
+
+/* 메뉴 */
+.main-section .nav-detail-page {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.main-section .nav-detail-page ul {
+  padding: 10px 20px 16px;
+}
+
+.main-section .nav-detail-page ul li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-section .nav-detail-page ul li.item {
+  width: auto !important;
+  margin-right: 20px;
+}
+
+.main-section .nav-detail-page ul li.item:last-child {
+  margin-right: 30px !important;
+}
+
+.main-section .nav-detail-page ul li.item span,
+.main-section .nav-detail-page ul li.item button {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  vertical-align: text-top;
+}
+
+.main-section .nav-detail-page ul li.item span.current,
+.main-section .nav-detail-page ul li.item button.current {
+  position: relative;
+  font-weight: 600;
+}
+
+.main-section .nav-detail-page ul li.item span.current:after,
+.main-section .nav-detail-page ul li.item button.current:after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #000;
+}
+
+/* 상품 리스트 */
+.main-section .device-list>ul{
+  margin-top: 20px;
+}
+
+.main-section .device-list>ul>li:first-child{
+  padding-top:0;
+}
+
+.main-section .device-list>ul>li {
+  position: relative;
+  padding: 8px 20px 10px;
+}
+
+.main-section .device-list>ul>li:last-child::after {
+  display: none;
+}
+
+.main-section .device-list>ul>li .device-area {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  text-align: left;
+}
+
+.main-section .device-list>ul>li .device-area .service-cnt {
+  width: calc(100% - 143px);
+  width: -webkit-calc(100% - 143px);
+  margin-left: 15px;
+  padding-top: 10px;
+}
+
+.main-section .device-list>ul>li .device-area .service-cnt .service-name {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0;
+  color: #000;
+}
+
+.main-section .device-list>ul>li .device-area .service-cnt .service-name .device-size {
+  font-family: 'SF UI Display';
+  font-weight: 300;
+  font-size: 12px;
+  color: #808080;
+  display: block;
+  padding-bottom: 20px;
+  padding-top: 5px;
+  letter-spacing: 0;
+}
+
+.main-section .device-list>ul>li .device-area .service-cnt .service-desc {
+  display: block;
+  margin-top: 16px;
+  font-size: 12px;
+}
+
+.main-section .device-list>ul>li .device-area .service-cnt .service-desc .tit {
+  display: block;
+  line-height: 1.25;
+  color: #767778;
+  font-size: 12px;
+  font-weight: 400;
+  padding-top: 10px;
+}
+
+.main-section .device-list>ul>li .device-area .service-cnt .service-desc .cnt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+
+.main-section .device-list>ul>li .device-area .service-cnt .service-desc .cnt span {
+  margin-right: 3px;
+}
+
+.main-section .device-list>ul>li .device-area .service-cnt .service-desc .cnt strong {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.main-section .device-list>ul>li .device-area .thumb {
+  width: 128px;
+  height: 128px;
+  line-height: 0;
+  text-align: center;
+  background-color: #eeeef4;
+}
+
+.main-section .device-list>ul>li .device-area .thumb img {
+  max-width: 100%;
+}
+
+/* 컴포넌트: 특가 휴대폰 */
+
+/* 컴포넌트 : 배송조회 .tracking-view  */
+.main-section.tracking-view {
+  padding-top: 36px;
+  border-top: 7px solid #f0f0f5;
+}
+
+.main-section.tracking-view .cnt-card {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0px 20px 36px;
+  text-align: left;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.main-section.tracking-view .cnt-card .device-area {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #222;
+}
+
+.main-section.tracking-view .cnt-card .device-area .thumb {
+  width: 70px;
+  height: 70px;
+  line-height: 0;
+  margin-right: 12px;
+  text-align: center;
+}
+
+.main-section.tracking-view .cnt-card .device-area .thumb img {
+  max-width: 100%;
+}
+
+.main-section.tracking-view .cnt-card .device-area .service-cnt {
+  width: calc(100% - 82px);
+  width: -webkit-calc(100% - 82px);
+}
+
+.main-section.tracking-view .cnt-card .device-area .service-cnt .service-date {
+  padding-top: 9px;
+}
+
+.main-section.tracking-view .cnt-card .device-area .service-cnt .service-date dl {
+  font-family: 'SF UI Display';
+  font-weight: 200;
+  font-size: 12px;
+  color: #808080;
+}
+
+.main-section.tracking-view .cnt-card .device-area .service-cnt .service-date dl dt {
+  display: inline-block;
+  color: #808080;
+  letter-spacing: 0;
+  padding-right: 3px;
+  font-weight: 300;
+}
+
+.main-section.tracking-view .cnt-card .device-area .service-cnt .service-date dl dd {
+  display: inline-block;
+  color: #808080;
+  letter-spacing: 0;
+  font-weight: 300;
+}
+
+.main-section.tracking-view .cnt-card .device-area .service-cnt .service-name {
+  line-height: 1.57;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.main-section.tracking-view .cnt-card .device-area .service-cnt .service-name.btn-txt-arrow {
+  display: inline-block;
+  position: relative;
+  padding-right: 14px;
+}
+
+.main-section.tracking-view .cnt-card .device-area .service-cnt .service-name.btn-txt-arrow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background: url(../img/svg/icon-arrow-right-12px.svg) no-repeat;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.main-section.tracking-view .cnt-card .device-area .service-cnt .service-desc {
+  line-height: 1.46;
+  font-size: 12px;
+  margin-top:2px;
+}
+
+.main-section.tracking-view .cnt-card .device-area .service-cnt .service-desc dl {
+  display: -webkit-box;
+  display: flex;
+  color: #808080;
+}
+
+.main-section.tracking-view .cnt-card .device-area .service-cnt .service-desc dl dt {
+  margin-right: 5px;
+  color: #808080;
+  letter-spacing: -0.48px;
+  line-height:16px;
+  font-weight: 300;
+}
+
+.main-section.tracking-view .cnt-card .device-area .service-cnt .service-desc dl dd {
+  font-weight: 300;
+  color: #808080;
+  letter-spacing: 0;
+  margin-left: 5px;
+  line-height:15px;
+}
+
+.main-section.tracking-view .cnt-card .step-area {
+  position: relative;
+  margin-top: 48px;
+}
+
+.main-section.tracking-view .cnt-card .step-area::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background-color: #f0f0f5;
+}
+
+.main-section.tracking-view .cnt-card .step-area ul {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  height: 7px;
+}
+
+.main-section.tracking-view .cnt-card .step-area ul li {
+  position: relative;
+  top: 1px;
+  padding-bottom: 24px;
+  font-size: 10px;
+  letter-spacing: -0.5px;
+  color: #4130df;
+}
+
+.main-section.tracking-view .cnt-card .step-area ul li:after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 6px;
+  position: relative;
+  top: -8px;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.main-section.tracking-view .cnt-card .step-area ul li.current~li {
+  color: #808080;
+}
+
+.main-section.tracking-view .cnt-card .step-area ul li span {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  width: -webkit-max-content;
+  width: max-content;
+  letter-spacing: -0.3px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.main-section.tracking-view .cnt-card .step-area ul li:first-child::before {
+  left: 2px;
+}
+
+.main-section.tracking-view .cnt-card .step-area ul li:first-child span {
+  left: 0;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.main-section.tracking-view .cnt-card .step-area ul li:last-child::before {
+  right: 15px;
+}
+
+.main-section.tracking-view .cnt-card .step-area ul li:last-child span {
+  left: auto;
+  right: 0;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.main-section.tracking-view .cnt-card .step-area ul li.current {
+  font-weight: 500;
+  color: #4130df;
+}
+
+.main-section.tracking-view .cnt-card .step-area ul li.current span {
+  top: -27px;
+  height: 21px;
+  line-height: 22px;
+  font-weight: 300;
+  padding: 0px 8px;
+  color: #fff;
+  border-radius: 10px;
+  background-color: #4130df;
+}
+
+.main-section.tracking-view .cnt-card .step-area ul li.current span:after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background-color: #4130df;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  margin-left: -2px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* 배송조회 상태 말풍선 스타일 */
+.main-section.tracking-view .cnt-card .step-area ul li:first-child span {
+  border-radius: 10px 10px 10px 0;
+}
+
+.main-section.tracking-view .cnt-card .step-area ul li:first-child span::after {
+  left: 2.2px;
+  width: auto;
+  height: auto;
+  transform: none;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #4130df;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  background-color: transparent;
+}
+
+.main-section.tracking-view .cnt-card .step-area ul li:last-child span {
+  border-radius: 10px 10px 0px 10px;
+}
+
+.main-section.tracking-view .cnt-card .step-area ul li:last-child span::after {
+  right: 0.2px;
+  left: auto;
+  width: auto;
+  height: auto;
+  transform: none;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #4130df;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  background-color: transparent;
+}
+
+/*  */
+.main-section.tracking-view .cnt-card .step-area ul li.current::before {
+  background-color: #fff;
+  z-index: 1;
+}
+
+.main-section.tracking-view .cnt-card .step-area .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+}
+
+.main-section.tracking-view .cnt-card .step-area .bar.order-status0 {
+  width: 0;
+}
+
+.main-section.tracking-view .cnt-card .step-area .bar.order-status1 {
+  width: 10px;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(-0%, #4130df), to(#bdb5ff));
+  background-image: linear-gradient(to left, #4130df -0%, #bdb5ff);
+}
+
+.main-section.tracking-view .cnt-card .step-area .bar.order-status2 {
+  width: calc(33.333% + 0px);
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(-0%, #4130df), to(#bdb5ff));
+  background-image:
+    linear-gradient(to left, #4130df -0%, #bdb5ff);
+}
+
+.main-section.tracking-view .cnt-card .step-area .bar.order-status3 {
+  width: calc(66.666% + 0px);
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(0%, #4130df), to(#bdb5ff));
+  background-image: linear-gradient(to left, #4130df 0%, #bdb5ff);
+}
+
+.main-section.tracking-view .cnt-card .step-area .bar.order-status4 {
+  width: 100%;
+  background-image: -webkit-gradient(linear, right top, left top, from(#4130df), to(#bdb5ff));
+  background-image: linear-gradient(to left, #4130df, #bdb5ff);
+}
+
+.main-section.tracking-view .cnt-card .step-area .bar[class*="order-status"] {
+  background-color: #4130df !important;
+  background-image: none;
+}
+
+.main-section.tracking-view .cnt-card .txt-notice {
+  padding: 24px 40px;
+  margin: 20px auto 0;
+  line-height: 19px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 300;
+  color: #666666;
+  background-color: #f5f5f7;
+  letter-spacing: -1px;
+  border-radius: 3px;
+}
+
+.main-section.tracking-view .cnt-card .txt-notice.noti-case1 .txt-tt {
+  background: url('../img/tw_g/icon-noti-case1@2x.png') 50% 0% no-repeat;
+}
+.main-section.tracking-view .cnt-card .txt-notice.noti-case2 .txt-tt {
+  background: url('../img/tw_g/icon-noti-case2@2x.png') 50% 0% no-repeat;
+}
+.main-section.tracking-view .cnt-card .txt-notice.noti-case3 .txt-tt {
+  background: url('../img/tw_g/icon-noti-case3@2x.png') 50% 0% no-repeat;
+}
+.main-section.tracking-view .cnt-card .txt-notice.noti-case4 .txt-tt {
+  background: url('../img/tw_g/icon-noti-case4@2x.png') 50% 0% no-repeat;
+}
+.main-section.tracking-view .cnt-card .txt-notice.noti-case5 .txt-tt {
+  background: url('../img/tw_g/icon-noti-case5@2x.png') 50% 0% no-repeat;
+}
+.main-section.tracking-view .cnt-card .txt-notice.noti-case6 .txt-tt {
+  background: url('../img/tw_g/icon-noti-case6@2x.png') 50% 0% no-repeat;
+}
+.main-section.tracking-view .cnt-card .txt-notice.noti-case7 .txt-tt {
+  background: url('../img/tw_g/icon-noti-case7@2x.png') 50% 0% no-repeat;
+}
+.main-section.tracking-view .cnt-card .txt-notice.noti-case8 .txt-tt {
+  background: url('../img/tw_g/icon-noti-case8@2x.png') 50% 0% no-repeat;
+}
+
+.main-section.tracking-view .cnt-card .txt-notice .txt-tt {
+  font-size: 16px;
+  font-weight: 600;
+  padding-top: 40px;
+  padding-bottom: 5px;
+  background: url('../img/tw_g/icon-noti-case1@2x.png') 50% 0% no-repeat;
+  background-size: 28px auto !important;
+  color: #444444;
+  letter-spacing: -0.46px;
+}
+.main-section.tracking-view .cnt-card .txt-notice .txt-s {
+  font-size: 12px;
+  font-weight: 400;
+  color: #4130df;
+  padding-top: 5px;
+  letter-spacing: -0.5px;
+}
+.main-section.tracking-view .cnt-card .txt-notice .txt-s:last-child{
+  padding-top: 0;
+}
+/* */
+
+.main-section.tracking-view .cnt-card .txt-notice strong {
+  font-weight: 400;
+  color: #4130df;
+  display: inline-block;
+}
+
+.main-section.tracking-view .cnt-card .btn-area {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.main-section.tracking-view .cnt-card .btn-area .btn.arrow-right-normal::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: auto;
+  margin-left: 2px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.main-section.tracking-view .cnt-card .btn-area .btn.arrow-right-normal.btn-s::after {
+  width: 12px;
+  height: 12px;
+  background-image: url(../img/svg/icon-arrow-right-10px.svg);
+}
+
+/* 컴포넌트 : 배송 조회 안내 .tracking-view-notice */
+.main-section.tracking-view-notice {
+  border-bottom: 7px solid #f0f0f5;
+}
+
+.main-section.tracking-view-notice .section-cnt .cnt-card {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 36px 20px;
+}
+
+.main-section.tracking-view-notice .section-cnt .cnt-card .cnt-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-section.tracking-view-notice .section-cnt .cnt-card .cnt-area .thumb {
+  width: 60px;
+  height: 60px;
+  margin-right: 1px;
+}
+
+.main-section.tracking-view-notice .section-cnt .cnt-card .cnt-area .txt-notice {
+  width: calc(100% - 105px);
+  width: -webkit-calc(100% - 105px);
+  margin: 0 auto;
+  line-height: inherit;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: #808080;
+  letter-spacing: -1px;
+}
+
+.main-section.tracking-view-notice .section-cnt .cnt-card .cnt-area .txt-notice strong {
+  font-weight: 400;
+}
+
+.main-section.tracking-view-notice .cnt-card .btn-area {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.main-section.tracking-view-notice .cnt-card .btn-area .btn.btn-s {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 12px;
+  border-radius: 16px;
+  width: auto;
+  flex: none;
+  margin: 0 auto;
+}
+
+.main-section.tracking-view-notice .section-cnt .btn-area .btn.arrow-right-normal {
+  padding: 0 26px 0 16px;
+  width: auto;
+  flex: none;
+  margin: 0 auto;
+}
+
+.main-section.tracking-view-notice .section-cnt .btn-area .btn.arrow-right-normal::after {
+  content: "";
+  position: absolute;
+  top: calc(50%);
+  left: auto;
+  margin-left: 2px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.main-section.tracking-view-notice .section-cnt .btn-area .btn.arrow-right-normal.btn-s::after {
+  width: 10px;
+  height: 10px;
+  background-image: url(../img/svg/icon-arrow-right-10px.svg);
+}
+
+/* 추천-함께 구매하기 .recommended-mobile-devices */
+.main-section.recommended-mobile-devices {
+  padding-top: 36px;
+  padding-bottom: 42px;
+  border-top: 7px solid #f0f0f5;
+}
+
+.main-section.recommended-mobile-devices .swiper-recommended-devices {
+  position: static;
+}
+
+.main-section.recommended-mobile-devices .swiper-wrap {}
+
+.main-section.recommended-mobile-devices .swiper-wrap .swipe-nav {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+  width: auto;
+  line-height: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.main-section.recommended-mobile-devices .cnt-card {
+  padding: 10px 20px 0;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .section-tit {
+  position: relative;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 13px;
+  font-weight: 400;
+  z-index: 2;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .thumb {
+  width: 128px;
+  height: 128px;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .service-cnt {
+  width: calc(100% - 145px);
+  width: -webkit-calc(100% - 145px);
+  margin-left: 15px;
+  padding-top: 10px;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .service-cnt .service-name {
+  line-height: 1.375;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #000;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .device-area .service-cnt .service-name.btn-txt-arrow::after {
+  content: none;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .service-cnt .service-name.btn-txt-arrow button {
+  position: relative;
+  line-height: 1.45;
+  padding-right: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+  width: auto;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .service-cnt .service-desc {
+  line-height: 1.39;
+  margin-bottom: 2px;
+  font-size: 13px;
+  color: #767778;
+}
+
+/* 상품가격 오류 안내문  */
+.main-section .device-list>ul>li .device-area .service-cnt .service-more-vw,
+.main-section.device-type-card .cnt-card .device-area .service-more-vw,
+.main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .service-cnt .service-more-vw {
+  color: #808080;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 15px;
+  letter-spacing: -0.48px;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .device-area .device-sub-info {
+  padding-top: 8px;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .device-area .device-color-area {
+  line-height: 0.9;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .device-area .device-color-area .device-color {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 2px;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .device-area .device-color-area .device-color .device-name {
+  position: relative;
+  top: -1.5px;
+  width: 100%;
+  padding-left: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #808080;
+  white-space: nowrap;
+}
+.main-section.recommended-mobile-devices .cnt-card .device-area .device-color-area .device-color .device-name.blind,
+.main-section.recommended-mobile-devices .cnt-card .device-area .device-color-area .device-color .blind{
+  line-height: 0;
+  display: inline;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .device-area .device-sub-info .device-size {
+  font-family: 'SF UI Display';
+  font-weight: 300;
+  font-size: 12px;
+  text-align: left;
+  line-height: normal;
+  word-break: break-all;
+  letter-spacing: 0;
+  color: #808080;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .service-cnt .price-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .service-cnt .price-area>* {
+  line-height: 23px;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .service-cnt .price-area span {
+  margin-right: 4px;
+  font-size: 13px;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .service-cnt .price-area strong {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.main-section.recommended-mobile-devices .swiper-wrap .swiper-recommended-mobile-devices .item-inner {
+  position: relative;
+}
+
+.main-section.recommended-mobile-devices .swiper-wrap .swipe-nav .bullet {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  background: #d8d9d9;
+  vertical-align: top;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.main-section.recommended-mobile-devices .swiper-wrap .swipe-nav .bullet+.bullet {
+  margin-left: 4px;
+}
+
+.main-section.recommended-mobile-devices .swiper-wrap .swipe-nav .bullet button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+}
+
+.main-section.recommended-mobile-devices .swiper-wrap .swipe-nav .bullet.active {
+  width: 14px;
+  background: #f76252;
+}
+
+.main-section.recommended-mobile-devices .swiper-wrap .swipe-nav .bullet.active::before {
+  content: '현재페이지 번호';
+  display: block;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  color: transparent;
+}
+
+.main-section.recommended-mobile-devices .btn-area {
+  margin-top: 20px;
+}
+
+.main-section.recommended-mobile-devices .btn-area .btn.btn-s {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 12px;
+  border-radius: 16px;
+}
+
+.main-section.recommended-mobile-devices .btn-area .btn.arrow-right-normal {
+  padding: 0 26px 0 16px;
+  width: auto;
+  flex: none;
+  margin: 0 auto;
+}
+
+.main-section.recommended-mobile-devices .btn-area .btn.arrow-right-normal::after {
+  content: "";
+  position: absolute;
+  top: calc(50%);
+  left: auto;
+  margin-left: 2px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.main-section.recommended-mobile-devices .btn-area .btn.arrow-right-normal.btn-s::after {
+  width: 10px;
+  height: 10px;
+  background-image: url(../img/svg/icon-arrow-right-10px.svg);
+}
+
+/* 컴포넌트 : 바로가기 링크 .direct-link*/
+.main-section.direct-link {
+  margin: 0px 0;
+}
+
+.main-section.direct-link.direct-link-bot {
+  border-top: 7px solid #f0f0f5;
+}
+.main-section.direct-link.direct-link-bot:last-child {
+  border-bottom: 7px solid #f0f0f5;
+}
+
+.main-section.direct-link .cnt-card {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 14px 20px;
+  text-align: left;
+  text-decoration: none;
+  font-family: inherit;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.main-section.direct-link .cnt-card.type-arrow {
+  padding-right: 40px;
+  background: url(../img/svg/icon-arrow-right-12px.svg) no-repeat right 20px center;
+}
+
+.main-section.direct-link .cnt-card .txt-notice {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: #4130df;
+  letter-spacing: -0.38px;
+  position: relative;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+
+.main-section.direct-link-bot .cnt-card .txt-notice::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: url('../img/icon-check.png') center/cover no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top:-10px;
+}
+
+.main-section.direct-link-bot:last-child .cnt-card .txt-notice::before {
+  background: url('../img/icon-review.png') center/cover no-repeat;
+}
+
+.main-section.direct-link .cnt-card .info-message {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: #767778;
+}
+
+.main-section.direct-link .cnt-card .info-message .info {
+  display: -webkit-box;
+  display: flex;
+  font-size: 14px;
+  color: #808080;
+  line-height: 1.39;
+}
+/* 유의사항 */
+.seller-notice-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 19px 20px 19px 50px;
+  border-top: 7px solid #f0f0f5;
+  border-bottom: 7px solid #f0f0f5;
+  margin-bottom: 3rem;
+  margin-top: 36px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #4130df;
+  background: url('../img/seller/icon-notice-link@2x.png') 20px 18px no-repeat;
+  background-size: 20px;
+}
+
+.seller-notice-link:after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-left: 5px;
+  margin-bottom: 1px;
+  margin-top: -3px;
+  vertical-align: middle;
+  transform: rotate(45deg);
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+}
+
+/* 상단 안내문 */
+.main-section.direct-link.top-notice {
+  position: relative;
+  margin: 0;
+  height: 45px;
+  overflow: hidden;
+  background-color: #f2e0e0;
+}
+.main-section.direct-link.top-notice .top-new-notice {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  background: #f2e0e0 url(../img/tw_g/icon-alram-on@2x.png) 20px 10px no-repeat;
+  background-size: 19px auto;
+  font-size: 1px;
+  color: transparent;
+  width: 48px;
+  height: 41px;
+  z-index: 10;
+}
+.main-section.direct-link.top-notice .swiper-wrap {
+  position: relative;
+  height: 45px;
+  margin: 0;
+}
+.main-section.direct-link.top-notice .swiper-wrap .swiper-wrapper {
+  height: 45px;
+}
+.main-section.direct-link.top-notice .swiper-wrap .item.swiper-slide {
+  position: relative;
+}
+
+.main-section.direct-link.top-notice .cnt-card {
+  width: 100%;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-section.direct-link.top-notice .cnt-card .txt-notice {
+  display: block;
+  padding: 0px 50px 0px 50px;
+  color: #000;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.35px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.main-section.device-type-card.device-recommend {
+  padding-bottom: 36px;
+  padding-top: 36px;
+}
+
+
+/* 컴포넌트 : [공통] 통합 휴대폰 type카드 유형*/
+.main-section.device-type-card {
+  padding-top: 36px;
+  padding-bottom: 42px;
+  border-top: 7px solid #f0f0f5;
+}
+
+.main-section.device-type-card table {
+  margin: -3px 0;
+  font-size: 11px;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 0;
+  border-spacing: 0;
+}
+
+.main-section.device-type-card table th,
+.main-section.device-type-card table td {
+  line-height: 1.43;
+  padding: 3px 0;
+  vertical-align: top;
+}
+
+.main-section.device-type-card table th {
+  text-align: left;
+  color: #767778;
+  border: 0;
+}
+
+.main-section.device-type-card table td {
+  text-align: right;
+  color: #767778;
+  border: 0;
+}
+
+.main-section.device-type-card table caption,
+.main-section.device-type-card table legend,
+.main-section.device-type-card table figcaption {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  color: transparent;
+}
+
+.main-section.device-type-card table col.th-width {
+  width: 120px;
+}
+
+.main-section.device-type-card .section-tit {}
+
+.main-section.device-type-card .cnt-card {
+  display: block;
+  position: relative;
+  width: auto;
+  height: 100%;
+  margin: 10px 20px 15px;
+  padding: 24px 24px;
+  text-align: left;
+}
+
+.main-section.device-type-card .swiper-cart .cnt-card {
+  background: url(../img/tw_g/bg-rectangle@2x.png) 0 bottom repeat-x;
+  background-size: 320px auto;
+  border-radius: 3px 3px 0 0;
+  position: relative;
+}
+.main-section.device-type-card .swiper-cart .cnt-card::before {
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 60%;
+  background: #f0f0f5;
+  border-radius: 3px 3px 0 0;
+  z-index: -1;
+  }
+
+.main-section.device-type-card .cnt-card .device-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+
+.main-section.device-type-card .cnt-card .device-area .device-name {
+  width: 100%;
+  padding-bottom: 3px;
+  font-size: 15px;
+  color: #000;
+}
+
+.main-section.device-type-card .cnt-card .device-area .device-info {
+  font-size: 12px;
+  letter-spacing: -0.48px;
+  color: #808080;
+}
+
+.main-section.device-type-card .cnt-card .device-area .product-cnt {
+  width: 120px;
+}
+
+.main-section.device-type-card .cnt-card .device-area .thumb {
+  width: 120px;
+  height: 120px;
+  line-height: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.main-section.device-type-card .cnt-card .device-area .add-options {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding-top: 44px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #4130df;
+  line-height: 1.7;
+  word-break: keep-all;
+  letter-spacing: -0.48px;
+}
+
+.main-section.device-type-card .cnt-card .device-area .add-options:before {
+  content: '';
+  background: url('../img/tw_g/icon-tgift@2x.png') 50% 50% no-repeat;
+  background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -12px;
+}
+
+.main-section.device-type-card .cnt-card .device-area .thumb img {
+  max-width: 100%;
+  background-color: #fff;
+}
+
+.main-section.device-type-card .cnt-card .device-area .device-color-area {
+  line-height: 0.9;
+}
+
+.main-section.device-type-card .cnt-card .device-area .device-color-area .device-color {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.main-section.device-type-card .cnt-card .device-area .device-color-area .device-color .device-name {
+  position: relative;
+  top: -1.5px;
+  width: 100%;
+  padding-left: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #808080;
+  white-space: nowrap;
+}
+
+.main-section.device-type-card .cnt-card .device-area .device-color-area .device-color+.device-color {
+  margin-left: 6px;
+}
+
+.main-section.device-type-card .cnt-card .device-area .device-sub-info {
+  padding-top: 3px;
+}
+
+.main-section.device-type-card .cnt-card .device-area .device-sub-info .device-size {
+  font-family: 'Apple SD Gothic Neo';
+  font-weight: 400;
+  font-size: 12px;
+  color: #808080;
+  word-break: break-all;
+  line-height: normal;
+  text-align: left;
+  letter-spacing: 0;
+}
+
+.main-section.device-type-card .cnt-card .device-area .service-cnt {
+  width: calc(100% - 140px);
+  width: -webkit-calc(100% - 140px);
+  margin-left: 20px;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+
+.main-section.device-type-card .cnt-card .device-area .service-cnt .service-name {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.main-section.device-type-card .cnt-card .device-area .service-cnt .service-desc {}
+
+.main-section.device-type-card .cnt-card .device-area .service-cnt .service-desc ul {}
+
+.main-section.device-type-card .cnt-card .device-area .service-cnt .service-desc ul li {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  color: #000;
+}
+
+.main-section.device-type-card .cnt-card .device-area .service-cnt .service-desc ul li.fare-discount {
+  display: inline-block;
+  font-weight: 600;
+  margin: 14px 0px 0;
+}
+
+.main-section.device-type-card .cnt-card .device-area .service-cnt .discount-type {
+  padding: 8px 0;
+}
+
+.main-section.device-type-card .cnt-card .device-area .service-cnt .discount-type.f1-bage {
+  color: #4130df;
+  background: url('../img/tw_g/icon-fare-discount@2x.png') 0 0.65rem no-repeat;
+  background-size: 14px 14px;
+  padding-left: 20px;
+}
+
+.main-section.device-type-card .cnt-card .device-area .service-cnt .discount-type.f2-bage {
+  color: #4130df;
+  background: url('../img/tw_g/icon-phone-discount@2x.png') 0 0.65rem no-repeat;
+  background-size: 14px 14px;
+  padding-left: 20px;
+}
+
+.main-section.device-type-card .cnt-card .device-area .service-cnt .service-desc dt {
+  font-size: 12px;
+  padding: 10px 0 4px;
+  line-height: 1.5;
+  letter-spacing: -0.37px;
+  color: #767778;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.main-section.device-type-card .cnt-card .device-area .service-cnt .service-desc dd strong {
+  display: inline-block;
+  font-size: 16px;
+  color: #f76252;
+  vertical-align: bottom;
+}
+
+.main-section.device-type-card .cnt-card .device-area .service-cnt .service-desc dd span {
+  display: inline-block;
+  font-size: 13px;
+  vertical-align: top;
+  padding-right: 4px;
+}
+
+.main-section.device-type-card .cnt-card .service-fare-wrap {
+  padding-top: 15px;
+}
+
+.main-section.device-type-card .swiper-compare-devices .cnt-card .service-fare-wrap {
+  padding-top: 30px;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .service-fare-wrap {
+  margin-top: 13px;
+}
+
+.main-section.device-type-card .cnt-card .final-notice {
+  display: block;
+}
+
+.main-section.device-type-card .cnt-card .final-notice i.icon-round-rectangle {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  margin-right: 6px;
+  padding: 0 6px;
+  font-size: 11px;
+  font-weight: 700;
+  font-style: normal;
+  color: #fff;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.main-section.device-type-card .cnt-card .final-notice i.icon-round-rectangle.bgcolor1-re {
+  color: #f76252;
+  border: 1px solid #f76252;
+  background-color: transparent;
+  font-weight: normal;
+}
+
+.main-section.device-type-card .cnt-card .final-notice span {
+  display: block;
+  padding-top: 2px;
+  line-height: 1.462;
+  font-size: 13px;
+}
+
+.main-section.device-type-card .cnt-card .btn-area {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.main-section.device-type-card .cnt-card .btn-area .btn {
+  display: inline-block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main-section.device-type-card .cnt-card .btn-area .btn.bg-normal {
+  -webkit-box-shadow: 0 0 5px #d1d4d6;
+  box-shadow: 0 0 5px #d1d4d6;
+}
+
+.main-section.device-type-card .cnt-card .btn-area .btn.btn-s {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 12px;
+  border-radius: 16px;
+  width: auto;
+  flex: none;
+  margin: 0 auto;
+}
+
+.main-section.device-type-card .cnt-card .btn-area .btn.arrow-right-normal {
+  padding: 0 26px 0 16px;
+}
+
+.main-section.device-type-card .cnt-card .btn-area .btn.arrow-right-normal::after {
+  content: "";
+  position: absolute;
+  top: calc(50%);
+  left: auto;
+  margin-left: 2px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.main-section.device-type-card .cnt-card .btn-area .btn.arrow-right-normal.btn-s::after {
+  width: 10px;
+  height: 10px;
+  background-image: url(../img/svg/icon-arrow-right-10px.svg);
+}
+
+.main-section.device-type-card .swiper-wrap {
+  /* position: relative; */
+}
+
+.main-section.device-type-card .swiper-wrap .item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main-section.device-type-card .swiper-wrap .item .item-inner {
+  position: relative;
+}
+
+.main-section.device-type-card .swiper-wrap .swipe-nav {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+  width: auto;
+  line-height: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.main-section.device-recommend .swiper-wrap .swipe-nav {
+  bottom: 162px;
+}
+
+.main-section.device-type-card .swiper-wrap .swipe-nav .bullet {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  background: #d8d9d9;
+  vertical-align: top;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.main-section.device-type-card .swiper-wrap .swipe-nav .bullet+.bullet {
+  margin-left: 4px;
+}
+
+.main-section.device-type-card .swiper-wrap .swipe-nav .bullet button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+}
+
+.main-section.device-type-card .swiper-wrap .swipe-nav .bullet.active {
+  width: 14px;
+  background: #f76252;
+}
+
+.main-section.device-type-card .swiper-wrap .swipe-nav .bullet.active::before {
+  content: '현재페이지 번호';
+  display: block;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  color: transparent;
+}
+
+.main-section.device-type-card .swiper-wrap .swipe-nav .bullet.active,
+.main-section.device-type-card .swiper-wrap .swipe-nav .bullet:focus {
+  outline: none;
+  border: 0;
+}
+
+.main-section.device-type-card .device-process-area {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.main-section.device-type-card .device-process-area .badge {
+  overflow: hidden;
+  font-size: 9px;
+  font-weight: 200;
+  display: inline-flex;
+  border-radius: 8px;
+  height: 15px;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.main-section.device-type-card .device-process-area .badge em {
+  font-style: normal;
+  padding: 1px 9px;
+  display: inline-block;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+
+.main-section.device-type-card .device-process-area .badge em.writing {
+  background-color: #f6695c;
+}
+
+.main-section.device-type-card .device-process-area .badge em.to-cart {
+  background-color: #5172f5;
+}
+
+.main-section.device-type-card .btn.btn-option {
+  width: 100%;
+  height: auto;
+  line-height: 1.75;
+  margin-top: 30px;
+  padding-left: 30px;
+  text-align: left;
+  font-size: 14px;
+  display: inline-flex;
+}
+
+.main-section.device-type-card .btn.btn-option::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url(../img/svg/icon-option.svg) no-repeat center center;
+}
+
+.main-section.device-type-card .btn.btn-option::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-box-shadow: -4px -6px 10px #fff, 4px 7px 10px #dde0e2, -2px -2px 2px #fff;
+  box-shadow: -4px -6px 10px #fff, 4px 7px 10px #dde0e2, -2px -2px 2px #fff;
+  background: url(../img/svg/icon-arrow-right-10px.svg) no-repeat center center;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* 컴포넌트 : 최근 본 상품 .swiper-compare-devices */
+.main-section .btn.btn-icon-underline {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  font-size: 14px;
+  text-decoration: underline;
+  padding-left: 30px;
+}
+
+.main-section .btn.btn-icon-underline::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../img/svg/icon-compare.svg) no-repeat center center;
+  position: absolute;
+  top: -2px;
+  left: 0;
+}
+
+.main-section.device-type-card .swiper-compare-devices .cnt-card {
+  padding: 0;
+}
+
+.main-section.device-type-card .swiper-compare-devices .cnt-card .device-area .product-cnt {
+  width: 128px;
+}
+
+.main-section.device-type-card .swiper-compare-devices .cnt-card .device-area .thumb {
+  width: 128px;
+  height: 128px;
+}
+
+.main-section.device-type-card .swiper-compare-devices .cnt-card .device-area .thumb img {
+  width: 128px;
+  height: 128px;
+  background-color: #eeeef4;
+}
+
+.main-section.device-type-card .swiper-compare-devices .cnt-card .device-area .service-cnt {
+  width: calc(100% - 145px);
+  width: -webkit-calc(100% - 145px);
+  margin-left: 15px;
+  padding-top: 10px;
+}
+
+.main-section.device-type-card .swiper-compare-devices .cnt-card .device-area .service-cnt .service-desc dt {
+  font-size: 13px;
+}
+
+.main-section.device-type-card .swiper-compare-devices .cnt-card .device-area .service-cnt .service-desc dd strong {
+  color: #222;
+}
+
+.main-section.device-type-card .swiper-compare-devices .cnt-card .btn-area {
+  margin-top: 10px;
+}
+
+.main-section.device-type-card .swiper-compare-devices {
+  position: static;
+}
+
+.main-section.device-type-card .swiper-compare-devices .cnt-card .device-area .service-cnt .service-fare-wrap .title,
+.main-section .swiper-recommended-devices .cnt-card .device-area .service-cnt .service-fare-wrap .title,
+.main-section .device-list>ul>li .device-area .service-cnt .service-fare-wrap .title {
+  color: #808080;
+  font-weight: 300;
+}
+
+
+/* --------------------------------------- */
+.compare-devices-view-area {
+  position: relative;
+}
+
+.compare-devices-view-area ul {
+  white-space: nowrap;
+  clear: both;
+  overflow: auto;
+  width: 100%;
+  padding: 0px 0 0 20px;
+  margin-top: 61px;
+}
+
+.compare-devices-view-area ul:before,
+.compare-devices-view-area ul:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.compare-devices-view-area ul li {
+  position: relative;
+  display: inline-block;
+  width: 190px;
+  height: 86px;
+  padding: 18px 16px 18px;
+  margin-left: 8px;
+  background-color: #f5f5f7;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.compare-devices-view-area ul li:first-child {
+  margin-left: 0;
+}
+
+.compare-devices-view-area ul li:last-child {
+  margin-right: 30px;
+}
+
+.compare-devices-view-area ul li button {
+  height: 100%;
+  text-align: left;
+}
+
+.compare-devices-view-area .section-cnt {
+  position: relative;
+  height: 100%;
+  padding-left: 36px;
+  box-sizing: border-box;
+}
+
+.compare-devices-view-area .section-cnt .sub-info {
+  display: block;
+  font-size: 12px;
+  letter-spacing: -0.86px;
+  color: #808080;
+  margin-top: 8px;
+  line-height: 1.22;
+  font-weight: 300;
+}
+
+.compare-devices-view-area .section-cnt .btn-txt {
+  text-align: left;
+  font-size: 13px;
+  display: block;
+  letter-spacing: -0.5px;
+  color: #000;
+  line-height: 12px;
+}
+
+.compare-devices-view-area .section-cnt:before {
+  content: '';
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 9px;
+  left: 0;
+}
+
+.compare-devices-view-area li:nth-child(1) .section-cnt:before {
+  background: url('../img/tw_g/icon-btn-vw-01@2x.png') 100% 100% no-repeat;
+  background-size: 22px auto;
+}
+
+.compare-devices-view-area li:nth-child(2) .section-cnt:before {
+  background: url('../img/tw_g/icon-btn-vw-02@2x.png') 100% 100% no-repeat;
+  background-size: 22px auto;
+}
+
+.compare-devices-view-area li:nth-child(3) .section-cnt:before {
+  background: url('../img/tw_g/icon-btn-vw-03@2x.png') 100% 100% no-repeat;
+  background-size: 22px auto;
+}
+
+/* 컴포넌트 : 이주의 특가 device-type-list-horizontal (2022.07)*/
+.main-section.device-type-list-horizontal {
+  padding-top: 36px;
+  padding-bottom: 26px;
+  border-top: 7px solid #f0f0f5;
+}
+
+.main-section.device-type-list-horizontal .section-tit {}
+
+.main-section.device-type-list-horizontal .swiper-wrap .swiper-container {
+  overflow: hidden;
+  padding: 10px 20px 10px 20px;
+}
+
+.main-section.device-type-list-horizontal .swiper-wrap .item {
+  /* width: 34.5%; */
+  width: 104px;
+  text-align: center;
+}
+
+.main-section.device-type-list-horizontal .swiper-special-devices .device-area {
+  display: block;
+  text-align: center;
+}
+
+.main-section.device-type-list-horizontal .swiper-special-devices .device-area .thumb {
+  display: block;
+  width: 104px;
+  height: 104px;
+  margin: 0;
+  background-color: #eeeef4;
+}
+
+.main-section.device-type-list-horizontal .swiper-special-devices .device-area .service-cnt {
+  display: block;
+  text-align: center;
+  width: 104px;
+  margin: 0;
+}
+
+.main-section.device-type-list-horizontal .swiper-special-devices .device-area .service-cnt span {
+  display: block;
+}
+
+.main-section.device-type-list-horizontal .swiper-special-devices .device-area .service-cnt .service-name {
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  padding-bottom: 2px;
+  padding-top: 10px;
+  min-height: 40px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.main-section.device-type-list-horizontal .swiper-special-devices .device-area .service-cnt .service-name .size {
+  font-family: 'SF UI Display';
+  font-size: 12px;
+  font-weight: 300;
+  display: block;
+  padding-top: 3px;
+  color: #808080;
+  letter-spacing: 0;
+}
+
+.main-section.device-type-list-horizontal .swiper-special-devices .device-area .service-cnt .service-fee {
+  color: #808080;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.main-section.device-type-list-horizontal .swiper-special-devices .device-area .service-cnt .service-desc .tit {
+  display: inline-block;
+}
+
+.main-section.device-type-list-horizontal .swiper-special-devices .device-area .service-cnt .service-desc .tit em {
+  display: block;
+}
+
+.main-section.device-type-list-horizontal .swiper-special-devices .device-area .service-cnt .service-desc em.txt-line-through {
+  font-family: 'SF UI Display';
+  font-weight: 300;
+  font-size: 12px;
+  font-style: normal;
+  color: #808080;
+  text-decoration: line-through;
+  display: inline-block;
+  padding-top: 3px;
+}
+
+.main-section.device-type-list-horizontal .swiper-special-devices .device-area .service-cnt .service-desc em.srvc-label {
+  font-size: 10px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: -0.4px;
+  padding: 0px 5px;
+  height: 17px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.main-section.device-type-list-horizontal .swiper-special-devices .device-area .service-cnt .service-desc .cnt strong {
+  font-size: 13px;
+  font-weight: 500;
+  color: #ff0000;
+}
+
+.main-section.device-type-list-horizontal .swiper-special-devices .device-area .service-cnt .service-desc .cnt strong em {
+  font-style: normal;
+  font-weight: 500;
+  font-family: 'SF UI Display';
+  letter-spacing: 0;
+}
+
+em.bdc-org {
+  border: 1px solid #fa8856;
+  color: #fa8856;
+}
+
+em.bdc-grn {
+  border: 1px solid #5bc09f;
+  color: #5bc09f;
+}
+
+em.bdc-red {
+  border: 1px solid #ff0000;
+  color: #ff0000;
+}
+
+em.bdc-blu {
+  border: 1px solid #4130df;
+  color: #4130df;
+}
+
+/* 컴포넌트 : 최근 조회한 휴대폰 .recently-viewed-device*/
+.main-section.recently-viewed-device {
+  position: relative;
+  letter-spacing: -0.4px;
+  color: #222;
+  margin-top: 40px;
+}
+
+.main-section.recently-viewed-device+hr {
+  display: block;
+  height: 2px;
+  margin: 40px 0;
+  border-radius: 1px;
+  margin: 40px -20px;
+  border-bottom: 1px solid #fff;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(186, 186, 189, 0.5);
+  box-shadow: inset 1px 1px 1px rgba(186, 186, 189, 0.5);
+}
+
+.main-section.recently-viewed-device button {
+  padding: 0;
+  letter-spacing: -0.4px;
+  font-family: inherit;
+  color: inherit;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main-section.recently-viewed-device .btn {
+  display: inline-block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main-section.recently-viewed-device .btn.bg-normal {
+  -webkit-box-shadow: 0 0 5px #d1d4d6;
+  box-shadow: 0 0 5px #d1d4d6;
+}
+
+.main-section.recently-viewed-device .btn.btn-s {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 12px;
+  border-radius: 16px;
+}
+
+.main-section.recently-viewed-device .btn.arrow-right-normal {
+  padding: 0 26px 0 16px;
+  flex: none;
+  width: auto;
+}
+
+.main-section.recently-viewed-device .btn.arrow-right-normal::after {
+  content: "";
+  position: absolute;
+  top: calc(50%);
+  left: auto;
+  margin-left: 2px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.main-section.recently-viewed-device .btn.arrow-right-normal::after {
+  width: 12px;
+  height: 12px;
+  background-image: url(../img/svg/icon-arrow-right-12px.svg);
+}
+
+.main-section.recently-viewed-device .btn.btn-option {
+  width: 100%;
+  height: auto;
+  line-height: 1.75;
+  margin-top: 30px;
+  padding-left: 30px;
+  text-align: left;
+  font-size: 14px;
+  display: inline-flex;
+}
+
+.main-section.recently-viewed-device .btn.btn-option::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url(../img/svg/icon-option.svg) no-repeat center center;
+}
+
+.main-section.recently-viewed-device .btn.btn-option::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-box-shadow: -4px -6px 10px #fff, 4px 7px 10px #dde0e2, -2px -2px 2px #fff;
+  box-shadow: -4px -6px 10px #fff, 4px 7px 10px #dde0e2, -2px -2px 2px #fff;
+  background: url(../img/svg/icon-arrow-right-10px.svg) no-repeat center center;
+}
+
+.main-section.recently-viewed-device .thumb {
+  display: block;
+  line-height: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-section.recently-viewed-device .thumb img {
+  max-width: 100%;
+}
+
+.main-section.recently-viewed-device .section-tit {
+  position: relative;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-size: 13px;
+  z-index: 2;
+}
+
+.main-section.recently-viewed-device .swiper-wrap {
+  position: relative;
+  margin: -22px -10px -20px;
+}
+
+.main-section.recently-viewed-device .swiper-wrap .item .item-inner {
+  position: relative;
+  padding: 20px 10px;
+}
+
+.main-section.recently-viewed-device .cnt-card {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: left;
+  text-decoration: none;
+  font-family: inherit;
+  border: 0;
+  border-radius: 12px;
+  background-color: #f6f8fa;
+  -webkit-box-shadow: -4px -6px 10px #fff, 4px 7px 10px #dde0e2, -2px -2px 2px #fff;
+  box-shadow: -4px -6px 10px #fff, 4px 7px 10px #dde0e2, -2px -2px 2px #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.main-section.recently-viewed-device .device-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
+}
+
+.main-section.recently-viewed-device .device-area .thumb {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.main-section.recently-viewed-device .device-area .service-cnt {
+  display: block;
+  width: calc(100% - 110px);
+}
+
+.main-section.recently-viewed-device .device-area .service-cnt .service-name {
+  display: block;
+  line-height: 1.47;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.main-section.recently-viewed-device .device-area .service-cnt .service-desc {
+  margin-top: 4px;
+  line-height: 1.43;
+  font-size: 14px;
+  color: #767778;
+}
+
+.main-section.recently-viewed-device .device-area .service-cnt .btn-area {
+  margin-top: 18px;
+}
+
+/* 컴포넌트 : 다른 구매자이 함께 본 .recently-viewed-other*/
+.main-section.recently-viewed-other {
+  padding-top: 20px;
+  margin-top: 36px;
+  border-top: 7px solid #f0f0f5;
+}
+
+.main-section.mobile-analytics .main-section.recently-viewed-other .section-tit {
+  padding-bottom: 19px;
+  margin-bottom: 0;
+  padding-top: 16px;
+}
+
+.main-section.recently-viewed-other .section-cnt {
+  padding-top: 0;
+}
+
+.main-section.recently-viewed-other .section-cnt .device-list ul {
+  overflow: auto;
+  width: 100%;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  white-space: nowrap;
+}
+
+.main-section.recently-viewed-other .section-cnt .device-list ul li {
+  display: inline-block;
+  padding: 0;
+  width: 33%;
+  vertical-align: top;
+}
+.main-section.recently-viewed-other .section-cnt .device-list ul li:last-child{
+  margin-right: 20px;
+}
+
+.main-section.recently-viewed-other .device-list li::after {
+  content: none;
+}
+
+.main-section.recently-viewed-other .section-cnt .device-list ul .device-area {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.main-section.recently-viewed-other .section-cnt .device-list ul .device-area .thumb {
+  width: 104px;
+  height: 104px;
+  margin: 0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.main-section.recently-viewed-other .section-cnt .device-list ul .service-cnt {
+  width: 104px;
+  padding-top: 12px;
+  margin-left: 0;
+  text-align: center;
+}
+
+.main-section.recently-viewed-other .section-cnt .device-list ul .service-cnt .service-name {
+  line-height: 1.29;
+  font-size: 14px;
+  font-weight: 400;
+  word-break: keep-all;
+  white-space: normal;
+  color: #000;
+}
+
+.main-section.recently-viewed-other .swiper-wrap {
+  position: relative;
+  margin: -22px -10px -20px;
+}
+
+.main-section.recently-viewed-other .swiper-wrap .swiper-recently-viewed-device .item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main-section.recently-viewed-other .swiper-wrap .swiper-recently-viewed-device .item .item-inner {
+  position: relative;
+  padding: 22px 10px 20px;
+}
+
+.main-section.recently-viewed-other .swiper-wrap .swipe-nav {
+  position: absolute;
+  top: -2px;
+  right: 10px;
+  bottom: auto;
+  left: auto;
+  width: auto;
+  line-height: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.main-section.recently-viewed-other .swiper-wrap .swipe-nav .bullet {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  background: #d8d9d9;
+  vertical-align: top;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.main-section.recently-viewed-other .swiper-wrap .swipe-nav .bullet+.bullet {
+  margin-left: 4px;
+}
+
+.main-section.recently-viewed-other .swiper-wrap .swipe-nav .bullet button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+}
+
+.main-section.recently-viewed-other .swiper-wrap .swipe-nav .bullet.active {
+  width: 14px;
+  background: #f76252;
+}
+
+.main-section.recently-viewed-other .swiper-wrap .swipe-nav .bullet.active::before {
+  content: '현재페이지 번호';
+  display: block;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  color: transparent;
+}
+
+.main-section.recently-viewed-other .swiper-wrap .swipe-nav .bullet.active,
+.main-section.recently-viewed-other .swiper-wrap .swipe-nav .bullet:focus {
+  outline: none;
+  border: 0;
+}
+
+/* 컴포넌트 : 딱 맞는 휴대폰 추천 .pick-recommended-devices*/
+.main-section.pick-recommended-devices {
+  position: relative;
+  letter-spacing: -0.4px;
+  color: #222;
+  margin-top: 40px;
+}
+
+.main-section.pick-recommended-devices hr {
+  display: block;
+  height: 2px;
+  margin: 20px 0;
+  border-radius: 1px;
+  border: none;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(186, 186, 189, 0.5);
+  box-shadow: inset 1px 1px 1px rgba(186, 186, 189, 0.5);
+}
+
+.main-section.pick-recommended-devices button {
+  padding: 0;
+  letter-spacing: -0.4px;
+  font-family: inherit;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main-section.pick-recommended-devices .btn {
+  display: inline-block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main-section.pick-recommended-devices .btn.bg-normal {
+  -webkit-box-shadow: 0 0 5px #d1d4d6;
+  box-shadow: 0 0 5px #d1d4d6;
+}
+
+.main-section.pick-recommended-devices .btn.btn-s {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 12px;
+  border-radius: 16px;
+  flex: none;
+  width: auto;
+  margin: 0 auto;
+}
+
+.main-section.pick-recommended-devices .btn.arrow-right-normal {
+  padding: 0 26px 0 16px;
+}
+
+.main-section.pick-recommended-devices .btn.arrow-right-normal::after {
+  content: "";
+  position: absolute;
+  top: calc(50%);
+  left: auto;
+  margin-left: 2px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.main-section.pick-recommended-devices .btn.arrow-right-normal.btn-s::after {
+  width: 10px;
+  height: 10px;
+  background-image: url(../img/svg/icon-arrow-right-10px.svg);
+}
+
+.main-section.pick-recommended-devices .section-tit {
+  position: relative;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-size: 13px;
+  z-index: 2;
+}
+
+.main-section.pick-recommended-devices .cnt-card {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  text-align: left;
+  text-decoration: none;
+  font-family: inherit;
+  border: 0;
+  border-radius: 12px;
+  -webkit-box-shadow: -4px -6px 10px #fff, 4px 7px 10px #dde0e2, -2px -2px 2px #fff;
+  box-shadow: -4px -6px 10px #fff, 4px 7px 10px #dde0e2, -2px -2px 2px #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main-section.pick-recommended-devices .cnt-card .txt-notice {
+  line-height: 1.25;
+  margin-bottom: 14px;
+  font-size: 16px;
+}
+
+.main-section.pick-recommended-devices .cnt-card .device-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main-section.pick-recommended-devices .cnt-card .device-area .thumb {
+  width: 100px;
+  height: 100px;
+  line-height: 0;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.main-section.pick-recommended-devices .cnt-card .device-area .thumb img {
+  max-width: 100%;
+}
+
+.main-section.pick-recommended-devices .cnt-card .device-area .service-cnt {
+  width: calc(100% - 110px);
+}
+
+.main-section.pick-recommended-devices .cnt-card .device-area .service-cnt .service-name {
+  line-height: 1.43;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.main-section.pick-recommended-devices .cnt-card .device-area .service-cnt .service-desc {
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+.main-section.pick-recommended-devices .cnt-card .device-area .service-cnt .service-desc dl dt {
+  line-height: 1.39;
+  margin-bottom: 2px;
+  color: #767778;
+}
+
+.main-section.pick-recommended-devices .cnt-card .device-area .service-cnt .service-desc dl dd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1.438;
+}
+
+.main-section.pick-recommended-devices .cnt-card .device-area .service-cnt .service-desc dl dd>* {
+  display: inline-block;
+  line-height: 23px;
+}
+
+.main-section.pick-recommended-devices .cnt-card .device-area .service-cnt .service-desc dl dd span {
+  margin-right: 4px;
+}
+
+.main-section.pick-recommended-devices .cnt-card .device-area .service-cnt .service-desc dl dd strong {
+  font-size: 16px;
+}
+.main-section.pick-recommended-devices .cnt-card .final-notice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.main-section.pick-recommended-devices .cnt-card .final-notice>* {
+  vertical-align: middle;
+}
+
+.main-section.pick-recommended-devices .cnt-card .final-notice i.icon-round-rectangle {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  margin-right: 6px;
+  padding: 0 6px;
+  font-size: 11px;
+  font-weight: 700;
+  font-style: normal;
+  color: #fff;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.main-section.pick-recommended-devices .cnt-card .final-notice i.icon-round-rectangle.bgcolor1-re {
+  color: #f76252;
+  border: 1px solid #f76252;
+  background-color: transparent;
+}
+
+.main-section.pick-recommended-devices .cnt-card .final-notice span {
+  font-size: 13px;
+}
+
+.main-section.pick-recommended-devices .cnt-card .btn-area {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.main-section.pick-recommended-devices .btn-compare {
+  width: 100%;
+  line-height: 1.75;
+  margin-top: 30px;
+  padding-left: 30px;
+  text-align: left;
+  font-size: 14px;
+  height: auto;
+}
+
+.main-section.pick-recommended-devices .btn-compare::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url(../img/svg/icon-compare.svg) no-repeat center center;
+}
+
+.main-section.pick-recommended-devices .btn-compare::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-box-shadow: -4px -6px 10px #fff, 4px 7px 10px #dde0e2, -2px -2px 2px #fff;
+  box-shadow: -4px -6px 10px #fff, 4px 7px 10px #dde0e2, -2px -2px 2px #fff;
+  background: url(../img/svg/icon-arrow-right-10px.svg) no-repeat center center;
+}
+
+.main-section.pick-recommended-devices .swiper-wrap {
+  position: relative;
+  margin: -22px -10px -20px;
+}
+
+.main-section.pick-recommended-devices .swiper-wrap .swiper-recommended-mobile-devices .item-inner {
+  position: relative;
+  padding: 20px 10px;
+}
+
+.main-section.pick-recommended-devices .swiper-wrap .swipe-nav {
+  position: absolute;
+  top: -2px;
+  right: 10px;
+  bottom: auto;
+  left: auto;
+  width: auto;
+  line-height: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.main-section.pick-recommended-devices .swiper-wrap .swipe-nav .bullet {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  background: #d8d9d9;
+  vertical-align: top;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.main-section.pick-recommended-devices .swiper-wrap .swipe-nav .bullet+.bullet {
+  margin-left: 4px;
+}
+
+.main-section.pick-recommended-devices .swiper-wrap .swipe-nav .bullet button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+}
+
+.main-section.pick-recommended-devices .swiper-wrap .swipe-nav .bullet.active {
+  width: 14px;
+  background: #f76252;
+}
+
+.main-section.pick-recommended-devices .swiper-wrap .swipe-nav .bullet.active::before {
+  content: '현재페이지 번호';
+  display: block;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  color: transparent;
+}
+
+.main-section.pick-recommended-devices .swiper-wrap .swipe-nav .bullet.active,
+.main-section.pick-recommended-devices .swiper-wrap .swipe-nav .bullet:focus {
+  outline: none;
+  border: 0;
+}
+
+/* 컴포넌트 : 사용가능 쿠폰 */
+.main-section.coupons-able {
+  position: relative;
+  letter-spacing: -0.4px;
+  color: #222;
+}
+
+.main-section.coupons-able button {
+  letter-spacing: -0.4px;
+  font-family: inherit;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main-section.coupons-able .section-tit {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 13px;
+  z-index: 2;
+}
+
+.main-section.coupons-able .cnt-card {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: left;
+  text-decoration: none;
+  font-family: inherit;
+  border: 0;
+  border-radius: 12px;
+  -webkit-box-shadow: -4px -6px 10px #fff, 4px 7px 10px #dde0e2, -2px -2px 2px #fff;
+  box-shadow: -4px -6px 10px #fff, 4px 7px 10px #dde0e2, -2px -2px 2px #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.main-section.coupons-able .cnt-card.type-arrow {
+  padding-right: 40px;
+  background: url(../img/svg/icon-arrow-right-12px.svg) no-repeat right 20px center;
+}
+
+.main-section.coupons-able .cnt-card .txt-notice {
+  display: block;
+  line-height: 1.43;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+}
+
+.main-section.coupons-able .cnt-card .info-message {
+  display: block;
+  margin-top: 11px;
+  font-size: 13px;
+  color: #767778;
+}
+
+.main-section.coupons-able .cnt-card .info-message .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1.43;
+  font-size: 14px;
+}
+
+.main-section.coupons-able .cnt-card .info-message .info+.info {
+  margin-top: 1px;
+}
+
+.main-section.coupons-able .cnt-card .info-message .info em {
+  margin-right: 8px;
+  font-style: normal;
+  color: #767778;
+}
+
+.main-section.coupons-able .cnt-card .info-message .info strong {
+  font-weight: 400;
+  color: #222;
+}
+
+/* 팝업 : 휴대폰 비교하기 .mobile-devices-comparison */
+.main-section hr {
+  display: block;
+  height: 2px;
+  margin: 30px 0;
+  border-radius: 1px;
+  border: none;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(186, 186, 189, 0.5);
+  box-shadow: inset 1px 1px 1px rgba(186, 186, 189, 0.5);
+}
+
+.main-section.mobile-devices-comparison .section-tit {
+  padding: 18px 20px 36px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.main-section.mobile-devices-comparison .section-tit .nofind-msg {
+  color: #666666;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 12px;
+  letter-spacing: -0.7px;
+}
+
+.main-section.mobile-devices-comparison .section-cnt {
+  position: relative;
+  padding: 0 20px;
+}
+
+.main-section.mobile-devices-comparison .section-cnt .device-container .g-invisible {
+  width: 0;
+  height: 0;
+}
+
+.main-section.mobile-devices-comparison .section-cnt .device-container .device-area .thumb {
+  width: 100px;
+  height: 100px;
+  border-radius: 3px;
+  background-color: #eeeef4;
+}
+
+.main-section.mobile-devices-comparison .section-cnt .device-container .device-area .service-cnt {
+  position: relative;
+  width: 100%;
+  margin: 10px 0 30px;
+  text-align: center;
+}
+/* 2023.12.05 추가 */
+.device-container caption {
+  display: block;
+  width: 100%;
+  height: 1px;
+  font-size: 1px;
+  opacity: 0;
+}
+.mobile-devices-comparison .device-container table {
+  table-layout: fixed;
+  width: 100%;
+  font-size: 12px;
+}
+.mobile-devices-comparison .device-container table .service-state {
+  color: #808080;
+}
+.mobile-devices-comparison .device-container table .service-name {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 12px 0;
+  line-height: 1.2;
+}
+.mobile-devices-comparison .device-container table thead {
+  position: relative;
+}
+.mobile-devices-comparison .device-container table thead th {
+  vertical-align: top;
+}
+.mobile-devices-comparison .device-container table thead th:only-child .service-state,
+.mobile-devices-comparison .device-container table thead th:only-child .service-name{
+  color: #4130df;
+}
+.mobile-devices-comparison .device-container table thead th:last-child:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 119px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translateX(-50%);
+  border-radius: 0.5px;
+  background-color: #d8d8d8;
+  background: url('../img/tw_g/icon-vs-@2x.png') 0 0 no-repeat;
+  background-size: 24px auto;
+}
+.mobile-devices-comparison .device-container table thead th:only-child:before {
+  content: none;
+}
+.mobile-devices-comparison .device-container table tbody th {
+  height: 36px;
+  line-height: 36px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #000;
+  background-color: #f5f5f7;
+  text-align: center;
+}
+.mobile-devices-comparison .device-container table tbody td {
+  position: relative;
+  padding: 17px 0;
+  font-weight: 300;
+  letter-spacing: normal;
+  text-align: center;
+}
+.mobile-devices-comparison .device-container table tbody td:last-child:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: calc(100% - 26px);
+  background-color: #e5e5e5;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.mobile-devices-comparison .device-container table tbody td:only-child:before{
+  content:none;
+}
+
+/* 팝업 : 바로보상 */
+.main-section .btn {
+  display: inline-block;
+  position: relative;
+  letter-spacing: -0.4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 40px;
+  font-size: 13px;
+  border-radius: 20px;
+}
+
+.main-section.mobile-quick-compensation .section-tit {
+  position: relative;
+  margin-bottom: 19px;
+  font-size: 15px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.main-section .dot-list-type li {
+  position: relative;
+  line-height: 1.38;
+  padding-left: 8px;
+  font-size: 13px;
+}
+
+.main-section .dot-list-type li::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #f76252;
+}
+
+.main-section .dot-list-type li+li {
+  margin-top: 4px;
+}
+
+.main-section .input-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  padding: 0 16px 0 20px;
+  border: 1px solid #e1e3e4;
+  border-radius: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.main-section .input-area input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 38px;
+  line-height: 1.15;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #222;
+  border: none;
+  background-color: transparent;
+}
+
+.main-section .input-area input::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #949596;
+}
+
+.main-section .input-area input:-ms-input-placeholder {
+  font-weight: 400;
+  color: #949596;
+}
+
+.main-section .input-area input::-ms-input-placeholder {
+  font-weight: 400;
+  color: #949596;
+}
+
+.main-section .input-area input::placeholder {
+  font-weight: 400;
+  color: #949596;
+}
+
+.main-section .input-area .btn-search {
+  width: 26px;
+  height: 26px;
+  margin-left: 8px;
+  background: url(../img/svg/icon-search-detail.svg) no-repeat;
+}
+
+.main-section .input-area .btn-close {
+  width: 20px;
+  height: 20px;
+  background: url(../img/svg/icon-close-detail.svg) no-repeat;
+}
+
+.main-section .search-result-list {
+  margin-top: 6px;
+  padding: 20px;
+  border: 1px solid #e1e3e4;
+  border-radius: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.main-section .search-result-list li button {
+  line-height: 1.54;
+  font-size: 13px;
+  color: #767778;
+  text-align: left;
+}
+
+.main-section .search-result-list li+li {
+  margin-top: 14px;
+}
+
+.main-section .search-result-detail .device-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 37px;
+}
+
+.main-section .search-result-detail .device-area .thumb {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.main-section .search-result-detail .device-area .service-name {
+  line-height: 1.47;
+  font-size: 15px;
+}
+
+.main-section .search-result-detail .device-area+hr {
+  margin: 20px 0;
+}
+
+.main-section .search-result-detail .info-message {
+  font-size: 14px;
+  color: #767778;
+}
+
+.main-section .search-result-detail .info-message dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.main-section .search-result-detail .info-message dl dd {
+  color: #222;
+}
+
+
+
+.main-section .btn-area .btn+.btn {
+  margin-left: 14px;
+}
+
+.main-section+hr {
+  display: block;
+  height: 2px;
+  margin: 30px 0;
+  border-radius: 1px;
+  border: none;
+  -webkit-box-shadow: inset 1px 1px 1px rgba(186, 186, 189, 0.5);
+  box-shadow: inset 1px 1px 1px rgba(186, 186, 189, 0.5);
+}
+
+.main-section.mobile-analytics {
+  position: relative;
+  letter-spacing: -0.4px;
+  color: #000;
+}
+
+.main-section.mobile-analytics hr {
+  display: block;
+  height: 1px;
+  margin: 30px 20px;
+  box-shadow: none;
+  background-color: #e5e5e5;
+}
+
+.main-section.mobile-analytics button {
+  font-family: inherit;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main-section.mobile-analytics .thumb {
+  line-height: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-section.mobile-analytics .thumb img {
+  max-width: 100%;
+}
+
+.main-section.mobile-analytics .section-tit {
+  position: relative;
+  padding-top: 18px;
+  padding-bottom: 36px;
+  font-size: 20px;
+  font-weight: 500;
+  z-index: 2;
+  letter-spacing: -1px;
+  color: #000;
+}
+
+.main-section.mobile-analytics .section-cnt {
+  position: relative;
+}
+
+.main-section.mobile-analytics .section-cnt article {
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.main-section.mobile-analytics .section-cnt article:first-child {
+  padding-bottom: 36px;
+  border-bottom: 7px solid #f0f0f5
+}
+
+.main-section.mobile-analytics .section-cnt article:first-child+hr {
+  margin-top: 20px;
+}
+
+/* 연령, 성별 설렉트 박스 */
+.main-section.mobile-analytics .section-cnt article .select-trend-wrap {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 36px;
+}
+
+.main-section.mobile-analytics .section-cnt article .select-trend-wrap li {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  flex: 1;
+  border: 1px solid #d9d9d9;
+  height: 40px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.main-section.mobile-analytics .section-cnt article .select-trend-wrap li label{
+  display: flex;
+  align-items: center;
+  height: 38px;
+}
+.main-section.mobile-analytics .section-cnt article .select-trend-wrap li:first-child{
+  margin-right: 3px;
+}
+.main-section.mobile-analytics .section-cnt article .select-trend-wrap li + li {
+  margin-left: 3px;
+}
+
+.main-section.mobile-analytics .section-cnt article .select-trend-wrap li .title {
+  display: inline-block;
+  height: 38px;
+  line-height: 40px;
+  font-size: 14px;
+  letter-spacing: -0.56px;
+  color: #909090;
+  padding-left: 14px;
+  padding-right: 10px;
+  border-right: 1px solid #e5e5e5;
+}
+
+.main-section.mobile-analytics .section-cnt article .select-trend-wrap li .input-select {
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  width: calc(100% - 30px);
+  width: -webkit-calc(100% - 30px);
+  margin: 0 7px;
+  display: inline-flex;
+  align-items: center;
+}
+
+
+.main-section.mobile-analytics .section-cnt article .select-trend-wrap li .input-select::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  width: 8px;
+  height: 8px;
+  margin-top: -7.5px;
+  border: 1px solid #666666;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.main-section.mobile-analytics .section-cnt article .select-trend-wrap li .input-select select {
+  width: 100%;
+  height: 38px;
+  line-height: 40px;
+  font-size: 14px;
+  letter-spacing: -0.56px;
+  border: 0;
+  -webkit-highlight: none;
+  appearance: none;
+  text-overflow: ellipsis;
+  padding-right: 13px;
+  background: transparent;
+}
+
+.main-section.mobile-analytics .section-cnt article .device-area {
+  display: -webkit-box;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.main-section.mobile-analytics .section-cnt article .device-area .thumb {
+  width: 100px;
+  height: 100px;
+  margin:0;
+  background-color: #eeeef4;
+}
+
+.main-section.mobile-analytics .section-cnt article .device-area .service-cnt {
+  display: block;
+  width: calc(100% - 115px);
+  width: -webkit-calc(100% - 115px);;
+  padding-left: 15px;
+}
+
+.main-section.mobile-analytics .section-cnt article .device-area .service-cnt .service-name {
+  display: block;
+  line-height: 15px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.main-section.mobile-analytics .section-cnt article .device-area .service-cnt .service-desc {
+  margin-top: 5px;
+  line-height: 1.385;
+  font-size: 13px;
+  color: #767778;
+}
+
+.main-section.mobile-analytics .section-cnt article .device-area .service-cnt .device-color-area {
+  margin-top: 17px;
+  overflow: hidden;
+}
+
+.main-section.mobile-analytics .section-cnt article .device-area .service-cnt .device-color-area .device-color {
+  width: 50%;
+  float: left;
+  margin: 0;
+  height: 12px;
+  line-height: 12px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.main-section.mobile-analytics .section-cnt article .device-area .service-cnt .device-color-area .device-color button,
+.main-section.mobile-analytics .section-cnt article .device-area .service-cnt .device-color-area .device-color div {
+  display:inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #e5e5e5;
+  pointer-events: none;
+}
+
+.main-section.mobile-analytics .section-cnt article .device-area .service-cnt .device-color-area .device-color > span {
+  font-size: 12px;
+  font-weight : 400;
+  display: inline-block;
+  padding-left: 4px;
+  padding-top: 2px;
+  flex:1;
+}
+
+.main-section.mobile-analytics .section-cnt article .device-area .service-cnt .device-color-area .device-color .device-size {
+  font-size: 12px;
+  padding-top: 7px;
+  line-height: 1;
+  letter-spacing: -0.4px;
+  color: #767778;
+  display: block;
+  text-align: left;
+}
+
+.main-section.mobile-analytics .section-cnt article .device-area .service-cnt .device-size-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.main-section.mobile-analytics .section-cnt article .device-area .service-cnt .device-size-area li.device-size {
+  display: block;
+  padding-right: 10px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 10px;
+  letter-spacing: -0px;
+  color: #808080;
+}
+
+.main-section.mobile-analytics .section-cnt article .device-area .service-cnt .device-size-area li.device-size::before {
+  content: '|';
+  margin-left: -7px;
+  margin-right: 3px;
+  font-size: 10px;
+  color: #808080;
+}
+
+.main-section.mobile-analytics .section-cnt article .device-area .service-cnt .device-size-area li.device-size:first-child::before {
+  content: none;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-tit {
+  letter-spacing: -1px;
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 7px;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-subtit {
+  padding: 5px 0 19px;
+  font-size: 14px;
+  color: #666;
+  letter-spacing: -0.7px;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single {
+  position: relative;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .bar-area {
+  position: relative;
+  height: 40px;
+  width: auto;
+  margin-left: 134px;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .bar-area .bar {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -0px;
+  width: 0;
+  height: 100%;
+  /* min-width: 134px; */
+  font-size: 1px;
+  color: transparent;
+  border-radius: 0 3px 3px 0;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .bar-area .bar::before {
+  content: '';
+  width: 137px;
+  position: absolute;
+  top: 0;
+  left: -134px;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+  background-color: inherit;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .bar-area.bar-total-view {
+  height: 13px;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .bar-area.bar-total-view .bar {
+  background-image: none;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .bar-area.bar-total-view .bar:nth-of-type(1) {
+  z-index: 5;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .bar-area.bar-total-view .bar:nth-of-type(2) {
+  z-index: 4;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .bar-area.bar-total-view .bar:nth-of-type(3) {
+  z-index: 3;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .bar-area.bar-total-view .bar:nth-of-type(4) {
+  z-index: 2;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .bar-area.bar-total-view .bar:nth-of-type(5) {
+  z-index: 1;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .bar-area.bar-total-view .bar:nth-of-type(6) {
+  z-index: 0;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .info-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1.5;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #767778;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .info-message dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .info-message dl dt {
+  color: #808080;
+  font-weight: 300;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .info-message dl dd {
+  font-family: 'SF UI Display';
+  font-weight: 300;
+  margin-left: 8px;
+  letter-spacing: 0;
+  color: #000;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .donut-chart-wrap {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 17px;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .info-message.bar-ranking {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-top: 0;
+  padding-left: 24px;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .info-message.bar-ranking dl {
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #000;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .info-message.bar-ranking dt {
+  padding-left: 16px;
+  white-space: nowrap;
+  color: #000;
+  font-weight: 400;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .info-message.bar-ranking dt span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: 1px solid #979797;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .info-message.bar-ranking dd {
+  font-family: 'SF UI Display';
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  padding-right:6px;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .select-area {
+  line-height: 1.462;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  top: 10px;
+  left: -116px;
+  right: 18px;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .select-area dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .select-area dl dt {
+  font-family: 'SF UI Display';
+  font-weight: 300;
+  letter-spacing: 0;
+  color: #fff;
+}
+
+.main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .select-area dl dd {
+  font-family: 'SF UI Display';
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #fff;
+}
+
+/* 컴포넌트 : 광고 베너 + 통이미지 베너 (2022.05.24 추가)*/
+.main-section.ad-banner .cnt-card .txt-notice {
+  font-size: 16px;
+}
+
+.main-section.main-banner,
+.main-section.direct-link.ad-banner {
+  margin: 0px;
+}    
+.main-section.direct-link.ad-banner .cnt-card {
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.main-section.ad-banner .ad-banner-img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.main-section.main-banner .swiper-wrap .swiper-banner .item .item-inner img,
+.main-section.ad-banner .ad-banner-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+/* --- etc */
+.service-fare-wrap .title {
+  font-size: 12px;
+  font-weight: 400;
+  color: #000;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+
+.service-fare-wrap .cost {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+  color: #ff0000;
+  padding: 0 0 4px;
+}
+
+.service-fare-wrap .cost * {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  padding-right: 2px;
+}
+
+.service-fare-wrap .discount-type {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.48px;
+  color: #4130df;
+}
+
+.service-fare-wrap .device-info-list {}
+
+.service-fare-wrap .device-info-list>li {
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: -0.48px;
+  color: #808080;
+  line-height: 17px;
+}
+
+.main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .thumb img,
+.main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .thumb {
+  background-color: #eeeef4;
+}
+
+
+/* 공통 : 시스템 에러 케이스 2022.04 */
+.error-card-type320 {
+  min-height: 320px;
+}
+
+.error-card-type170 {
+  min-height: 170px;
+}
+
+.error-card-type80 {
+  min-height: 80px;
+}
+
+[class *="error-card-type"] {
+  position: relative;
+  font-family: inherit;
+  border: 0;
+  border-radius: 12px;
+  -webkit-box-shadow:
+    -4px -6px 10px #fff,
+    4px 7px 10px #dde0e2,
+    -2px -2px 2px #fff;
+  box-shadow:
+    -4px -6px 10px #fff,
+    4px 7px 10px #dde0e2,
+    -2px -2px 2px #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+[class *="error-card-type"] .content-body {
+  padding: 20px;
+}
+
+[class *="error-card-type"] .content-body .paragraph {
+  text-align: center;
+}
+
+[class *="error-card-type"] .content-body .paragraph img {
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin: 0 auto;
+}
+
+[class *="error-card-type"] .content-body .paragraph strong.title,
+[class *="error-card-type"] .content-body .paragraph span.sub-title,
+[class *="error-card-type"] .content-body .paragraph span.date-txt {
+  display: block;
+  line-height: normal;
+}
+
+[class *="error-card-type"] .content-body .paragraph strong.title {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+  margin-top: 11px;
+}
+
+[class *="error-card-type"] .content-body .paragraph span.sub-title {
+  letter-spacing: -0.4px;
+  font-size: 13px;
+  color: #767778;
+  margin-bottom: 20px;
+}
+
+[class *="error-card-type"] .content-body .paragraph span.date-txt {
+  font-size: 14px;
+  color: #767778;
+}
+
+[class *="error-card-type"] .content-body .btn.btn-refresh {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 0 5px 0 #d1d4d6;
+  background-color: #f6f8fa;
+  text-indent: -999em;
+}
+
+[class *="error-card-type"] .content-body .btn.btn-refresh span {
+  display: block;
+  background: url(../img/svg/icon-tds-refresh.svg) 50% 50% no-repeat;
+}
+
+.error-card-type80 .content-body .paragraph strong.title,
+.error-card-type80 .content-body .paragraph span.sub-title {
+  font-size: 13px;
+  margin: 0;
+}
+
+/* 시스템 점검 */
+.system-maintenance .contents-inner {
+  margin: 0 auto;
+  padding: 148px 0 0 0;
+  box-sizing:border-box;
+}
+
+.system-maintenance .contents-inner .icon-area {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto;
+}
+
+.system-maintenance .contents-inner .icon-area img {
+  width: 44px;
+  height: 44px;
+}
+
+.system-maintenance .contents-inner .system-tit {
+  height: 21px;
+  margin: 24px 0 0 0;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  text-align: center;
+  color: #444444;
+}
+
+.system-maintenance .contents-inner .system-stit {
+  margin: 12px 0 0 0;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #808080;
+}
+
+.system-maintenance .contents-inner .system-period {
+  height: 13px;
+  margin: 12px auto 0;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 17px;
+  letter-spacing: -0.44px;
+  text-align: center;
+  color: #808080;
+}
+
+.system-maintenance.server-error .contents-inner {
+  height: 100%;
+  position: relative;
+}  
+
+.system-maintenance.server-error .contents-inner .system-tit {
+  line-height: 1.22em;
+  height: auto;
+}
+
+.system-maintenance.server-error .contents-inner .icon-area img {
+  width: 44px;
+  height: 44px;
+}
+
+.system-maintenance.server-error .link-box {
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right:0;
+  width: 100%;
+  margin:0 auto;
+  height: 55px;
+  font-size: 17px;
+  background-color: #4130df;
+}
+
+.system-maintenance.server-error .link-box .tds-btn {
+  display: block;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: -0.68px;
+  line-height: 55px;
+  color: #fff;
+}
+/* 티- 기프트 자세히보기 */
+.tds-popup-wrap .tgift-title {
+  padding: 18px 20px 16px;
+  border-bottom: 0;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+}
+.tds-popup-wrap .tgift-detail-wrap {
+  padding: 20px 20px 4rem;
+}
+.tds-popup-wrap .tgift-detail-wrap img {
+  max-width: 100%;
+}
+
+/* 매장정보 팝업 */
+.main-section.pop-shop-detail {
+  height: 100%;
+  padding: 5px 20px 0;
+  overflow: auto;
+}
+.pop-shop-detail h2.shop-title {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.pop-shop-detail .seller-tab-wrap {
+  display: -webkit-box;
+  display: flex;
+  position: relative;
+  height: 45px;
+  margin-top: 18px;
+}
+.pop-shop-detail .seller-tab-wrap:after {
+  position: absolute;
+  right: -20px;
+  bottom: -1px;
+  left: -20px;
+  height: 1px;
+  background-color: #e5e5e5;
+  content: '';
+}
+.pop-shop-detail .seller-tab-wrap .tab-item {
+  flex: 1;
+  color: #000;
+  font-size: 14px;
+}
+.pop-shop-detail .seller-tab-wrap .tab-item:last-child {
+  margin-right: 0px;
+}
+.pop-shop-detail .seller-tab-wrap .tab-item.on {
+  border-bottom: 2px solid #000;
+  font-weight: 600;
+}
+/* list */
+.pop-shop-detail .shop-detail-list {}
+.pop-shop-detail .shop-detail-list ul li {
+  position: relative;
+  width: 100%;
+  margin: 19px 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  display: -webkit-flex;
+  align-items: flex-start;
+}
+.pop-shop-detail .shop-detail-list ul li:last-child {
+  border-bottom: 0px;
+}
+.pop-shop-detail .shop-detail-list ul li p.detail-stl {
+  display: block;
+  color: #808080;
+  width: 80px;
+  margin-right: 8px;
+  font-weight: 300;
+  padding-top: 2px;
+}
+.pop-shop-detail .shop-detail-list ul li div {
+  position: relative;
+  display: block;
+  width: calc(100% - 88px);
+  width: -webkit-calc(100% - 88px);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.58px;
+}
+.pop-shop-detail .shop-detail-list ul li.tel-area div {}
+
+.pop-shop-detail .shop-detail-list ul li div.ico-tel {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-image: url(../img/seller/btn-call@2x.png);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+}
+.pop-shop-detail .shop-detail-list ul li div p.detail-con-stl {
+  margin-top: 10px;
+}
+.pop-shop-detail .shop-detail-list ul li div p.detail-con-stl:first-child {
+  margin-top: 0;
+}
+.pop-shop-detail .shop-detail-list ul li div p.detail-con-stl+p {
+  margin-top: 5px;
+  color: #808080;
+  font-weight: 300;
+  letter-spacing: -0.35px;
+}
+.pop-shop-detail .shop-detail-map {
+  position: relative;
+  right: -20px;
+  left: -20px;
+  width: 100vw;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+.pop-shop-detail .shop-detail-map img {
+  width: 100%;
+  height: 100%;
+}
+.popup.pop-seller.pop-shop-detail .popup-content {
+  padding: 56px 20px 0rem;
+  overflow: auto;
+}
+.popup.pop-seller.pop-shop-detail .popup-content.active {
+  padding: 0 20px 0rem;
+}
+/* 별점 공통 */
+.shop-score {
+  width: 100%;
+  height: 13px;
+  display: flex;
+  line-height: 13px;
+  align-items: center;
+}
+.shop-score .star-area {
+  width: 73px;
+  height: 13px;
+  background: url(../img/seller/star-y-bg.png) no-repeat 0 0;
+  background-size: 73px 13px;
+
+}
+.shop-score .star-area .star_sub {
+  width: 73px;
+  height: 13px;
+  background: url(../img/seller/star-y.png) no-repeat 0 0;
+  background-size: 73px 13px;
+}
+.shop-score .star-area .star_sub.star0 {
+  width: 0px;
+}
+.shop-score .star-area .star_sub.star1 {
+  width: 14px;
+}
+.shop-score .star-area .star_sub.star2 {
+  width: 28px;
+}
+.shop-score .star-area .star_sub.star3 {
+  width: 44px;
+}
+.shop-score .star-area .star_sub.star4 {
+  width: 58px;
+}
+.shop-score .star-area .star_sub.star5 {
+  width: 73px;
+}
+.shop-score .reply-count {
+  margin-left: 4px;
+  font-size: 12px;
+  letter-spacing: -0.38px;
+  color: #000;
+}
+
+/* -----320 ~ 280 디바이스 ui-style----- */
+@media all and (max-width: 320px) {
+  /* 메인 메뉴 */
+  .main-section .quick-menu-list li .btn span {
+    padding: 0;
+  }
+
+  /* 280 사이즈 수정 220906 */
+  .main-section [class*="swipe-nav"].swiper-pagination-fraction {
+    font-size:12px;
+  }
+
+  .main-section .swiper-wrap .swipe-play-control button {
+    width:6px;
+    height:6px;
+  }
+
+  .main-section .swiper-wrap .swipe-play-control button.btn-stop, .main-section .swiper-wrap .swipe-play-control button.current.btn-stop {
+    background-size: 6px auto;
+  }
+
+  .main-section .section-tit {
+    padding: 0 15px 10px;
+    font-size:18px;
+  }
+
+  .main-section.tracking-view .cnt-card {
+    padding: 0px 15px 36px;
+  }
+
+  .main-section.tracking-view .cnt-card .btn.bg-normal {
+    width:100%;
+  }
+
+  .main-section.recommended-mobile-devices .cnt-card {
+    padding: 10px 15px 0;
+  }
+  
+  .main-section .quick-menu-list{
+    padding:0 10px 25px;
+    margin: 0 10px 7px
+  }
+
+  .main-section.direct-link.top-notice .cnt-card .txt-notice {
+    font-size:12px;
+    padding: 0px 40px 0px 38px;
+  }
+
+  .main-section.direct-link.top-notice .top-new-notice{
+    width:38px;
+    background-position: center center;
+  }
+
+  .compare-devices-view-area ul {
+    padding: 0px 0 0 15px;
+  }
+
+  .main-section .nav-detail-page ul {
+    padding: 10px 15px 16px;
+  }
+
+  .main-section .device-list>ul>li {
+    padding: 8px 15px 10px;
+  }
+
+  .main-section.device-type-list-horizontal .swiper-wrap .swiper-container {
+    padding: 10px 15px;
+  }
+
+  .main-section.direct-link .cnt-card {
+    padding: 14px 15px;
+  }
+
+  .main-section.direct-link .cnt-card.type-arrow {
+    background-position:right 15px center;
+  }
+  
+  .main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .service-cnt .service-name,
+  .main-section.device-type-card .cnt-card .device-area .device-name,
+  .main-section .device-list>ul>li .device-area .service-cnt .service-name {
+    font-size:14px;
+  }
+
+  .main-section .nav-detail-page ul li.item span,
+  .main-section.device-type-list-horizontal .swiper-special-devices .device-area .service-cnt .service-name,
+  .main-section .btn.bg-normal,
+  .main-section.tracking-view .cnt-card .device-area .service-cnt .service-name  {
+    font-size:13px;
+  }
+
+  .service-fare-wrap .cost,
+  .main-section.tracking-view .cnt-card .txt-notice .txt-tt {
+    font-size:15px;
+  }
+
+  .service-fare-wrap .cost em {
+    font-size:16px;
+  }
+
+
+  /* 주문 프로세스 조회 */
+  .main-section.tracking-view .cnt-card .txt-notice {
+    padding: 24px 10px;
+    font-size:12px;
+  }
+  /* 장바구니 상품 카드형 스타일 */
+  .main-section.addedCart-view .cnt-card,
+  .main-section.device-type-card .cnt-card {
+    padding: 24px 10px;
+    margin: 10px 15px 15px;
+  }
+
+  .main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .thumb,
+  .main-section .device-list>ul>li .device-area .thumb,
+  .main-section.device-type-card .swiper-compare-devices .cnt-card .device-area .product-cnt {
+    width:105px;
+  }
+  
+  .main-section.device-type-list-horizontal .swiper-special-devices .device-area .thumb{
+    width:90px;
+    height:90px;
+    margin:0;
+  }
+  .main-section.addedCart-view .cnt-card .device-area .thumb,
+  .main-section.device-type-card .swiper-compare-devices .cnt-card .device-area .thumb,
+  .main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .thumb img {
+    width: 100%;
+    height: 105px;
+    margin-bottom: 0;
+  }
+
+  .main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .thumb,
+  .main-section .device-list>ul>li .device-area .thumb,
+  .main-section .device-list>ul>li .device-area .thumb img   {
+    height:105px;
+  }
+
+  .main-section.device-type-card .cnt-card .device-area .product-cnt,
+  .main-section.device-type-list-horizontal .swiper-wrap .item {
+    width:90px;
+  }
+
+  .main-section.device-type-card .cnt-card .device-area .thumb {
+    width: 100%;
+    height: 90px;
+    margin-bottom: 0;
+  }
+
+  .main-section.addedCart-view .cnt-card .device-area .device-sub-info .device-size,
+  .main-section.device-type-card .cnt-card .device-area .device-sub-info .device-size {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+  }
+  .main-section.addedCart-view .cnt-card .device-area .service-cnt,
+  .main-section.device-type-card .swiper-compare-devices .cnt-card .device-area .service-cnt,
+  .main-section.recommended-mobile-devices .cnt-card .section-cnt .device-area .service-cnt,
+  .main-section .device-list>ul>li .device-area .service-cnt {
+    width: calc(100% - 117px);
+    width: -webkit-calc(100% - 117px);
+    margin-left: 12px;
+    padding-top:0;
+  }
+
+  .main-section.device-type-card .swiper-compare-devices .cnt-card .device-area .service-cnt {
+    padding-top:5px;
+  }
+
+  .main-section .device-list>ul>li .device-area .service-cnt {
+    padding-top:5px;
+  }
+
+  .main-section.device-type-card .cnt-card .device-area .service-cnt {
+    width: calc(100% - 102px);
+    width: -webkit-calc(100% - 102px);
+    margin-left: 12px;
+    padding-top:0;
+  }
+
+  .main-section.device-type-list-horizontal .swiper-special-devices .device-area .service-cnt {
+    width:90px;
+  }
+  .main-section.device-type-card .cnt-card .device-area .device-sub-info {
+    padding-top: 0;
+  } 
+  .main-section.addedCart-view .cnt-card .final-notice,
+  .main-section.device-type-card .cnt-card .final-notice {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: start;
+    align-items: flex-start;
+  }
+  .main-section.addedCart-view .cnt-card .final-notice span,
+  .main-section.device-type-card .cnt-card .final-notice span {
+    text-align: right;
+    flex: 1;
+  }
+  .main-section.addedCart-view .cnt-card .device-area .service-cnt .service-desc dl,
+  .main-section.device-type-card .cnt-card .device-area .service-cnt .service-desc dl,
+  .main-section.addedCart-view .cnt-card .device-area .service-cnt .service-desc dd,
+  .main-section.device-type-card .cnt-card .device-area .service-cnt .service-desc dd {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .main-section.device-type-card .swiper-compare-devices .cnt-card .device-area .service-cnt .service-desc dl {
+    display: -webkit-box;
+    display: flex;
+    flex-direction: column;
+  }
+  .main-section.addedCart-view .cnt-card .device-area .service-cnt .service-desc dt,
+  .main-section.device-type-card .cnt-card .device-area .service-cnt .service-desc dt {
+    padding-top: 0;
+  }
+  .main-section.device-type-card .cnt-card .service-fare-wrap,
+  .main-section.addedCart-view .cnt-card .service-fare-wrap,
+  .main-section.device-type-card .swiper-compare-devices .cnt-card .service-fare-wrap{
+    padding-top:15px;
+  }
+  .main-section.recommended-mobile-devices .cnt-card .service-fare-wrap .service-fare-wrap{
+    margin-top:10px;
+  }
+  .main-section.device-type-card .cnt-card .service-fare-wrap .cost,
+  .main-section.recommended-mobile-devices .cnt-card .service-fare-wrap .cost,
+  .main-section .device-list>ul>li .device-area .service-fare-wrap .cost{
+    padding-bottom:0;
+  }
+  .main-section .device-list>ul>li .device-area .service-cnt .service-name .device-size {
+    padding-top: 2px;
+    padding-bottom: 8px;
+  }
+  .main-section.addedCart-view .service-fare-wrap table,
+  .main-section.device-type-card .service-fare-wrap table {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .main-section.device-type-card .cnt-card .device-area .service-cnt .service-name {
+    font-size:14px;
+  }
+
+  .compare-devices-view-area .section-cnt .btn-txt {
+    font-size:12px;
+  }
+
+
+  /* 최근조회 */
+  .main-section.recently-viewed-device .device-area {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-section.recently-viewed-device .device-area .thumb {
+    margin: 0 auto
+  }
+  .main-section.recently-viewed-device .device-area .service-cnt {
+    width: 100%;
+    padding-top: 10px;
+  }
+  .main-section.recently-viewed-device .device-area .service-cnt .btn-area {
+    justify-content: center;
+  }
+  /* 최근 조회 휴대폰 */
+  .main-section.recently-viewed-other .section-cnt .device-list ul li {
+    margin-left: 16px;
+    width:90px;
+  }
+  .main-section.recently-viewed-other .section-cnt .device-list ul li:first-child{
+    margin-left:0;    
+  }
+  .main-section.recently-viewed-other .section-cnt .device-list ul .device-area .thumb {
+    width: 90px;
+    height: 90px;
+  }
+  .main-section.recently-viewed-other .section-cnt .device-list ul .service-cnt{
+    width: 90px;
+  }
+  
+  /* 티 기프트 자세히 보기 */
+  .tds-popup-wrap .tgift-title {
+    font-size: 13px;
+  }
+}
+/* 유의사항 팝업 */
+.pop-checkpoint .checkpoint-area .checkpoint-field .checkpoint-item {
+  overflow: hidden;
+  height: 52px;
+  margin: 0 20px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.pop-checkpoint .checkpoint-area .checkpoint-field .checkpoint-item .title-field {
+  position: relative;
+  padding-top: 0;
+  height: 52px;
+  font-size: 14px;
+  color: #000;
+  font-weight: 400;
+  letter-spacing: -0.56px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.checkpoint-area .checkpoint-field .checkpoint-item .title-field:after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 7px;
+  background-position: -300px -168px;
+  background-size: 460px 428px;
+  background-image: url(../img/spr_img@2x_v2.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.checkpoint-area .checkpoint-field .checkpoint-item.active .title-field:after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 7px;
+  background-position: -300px -179px;
+  background-size: 460px 428px;
+  background-image: url(../img/spr_img@2x_v2.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+}
+
+/* 약관내용 열림 */
+.pop-checkpoint .checkpoint-area .checkpoint-field {
+  border-top: 0;
+}
+
+.pop-checkpoint .checkpoint-area .checkpoint-field .checkpoint-item.active {
+  height: auto;
+}
+
+.pop-checkpoint .checkpoint-area .checkpoint-field .checkpoint-item .twdeditor-component-wrap * {
+  font-family: 'Noto Sans', 'Noto Sans CJK KR', 'AppleSD Gothic Neo-Medium', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #757575;
+  letter-spacing: -0.2px;
+  word-break: break-all;
+}
+
+.pop-checkpoint .checkpoint-area .checkpoint-field .checkpoint-item .twdeditor-component-wrap {
+  padding: 18px;
+  background-color: #f0f0f5;
+}
+
+.pop-checkpoint .twdeditor-component-wrap ol li,
+.pop-checkpoint .twdeditor-component-wrap ul li {
+  position: relative;
+  margin: 0;
+  padding: 0 0 12px 12px;
+  background: 0 0;
+  list-style: none;
+}
+
+.pop-checkpoint .twdeditor-component-wrap ol li:before,
+.pop-checkpoint .twdeditor-component-wrap ul li:before {
+  position: absolute;
+  top: 6px;
+  left: 1px;
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background-color: #666666;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* ----------------------------------------------------- */
+@media all and (max-width: 320px) {
+  .main-section.main-banner .swipe-play-control{
+    left:15px;
+    bottom:28px;
+    width:6px;
+    height:6px;
+  }
+  .main-section.main-banner [class*="swipe-nav"].swiper-pagination-bullets{
+    left:28px;
+    bottom:30px;
+  }
+  .main-section.pick-recommended-devices .cnt-card .device-area {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .main-section.pick-recommended-devices .cnt-card .device-area .thumb {
+    width: 80px;
+    height: 80px;
+  }
+  .main-section.pick-recommended-devices .cnt-card .device-area .service-cnt {
+    width: calc(100% - 90px);
+  }
+
+  /* 팝업 구매 현황보기 */
+  .top-header {
+    width: calc(100% - 30px);
+    width: -webkit-calc(100% - 30px);
+  }
+
+  .main-section.mobile-analytics hr {
+    margin: 30px 15px;
+  }
+
+  .main-section.mobile-analytics .section-cnt article {
+    padding: 0 15px;
+  }
+
+  .main-section.mobile-analytics .section-tit {
+    font-size:18px;
+  }
+
+  .main-section.recently-viewed-other .section-cnt .device-list ul {
+    padding-left:15px;
+    font-size:0;
+  }
+
+  .main-section.mobile-analytics .section-cnt article .device-area{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-section.mobile-analytics .section-cnt article .device-area .thumb{
+    margin:0 auto 14px;
+  }
+  .main-section.mobile-analytics .section-cnt article .device-area .service-cnt .service-name {
+    margin-bottom:10px;
+    font-size:14px;
+  }
+  .main-section.mobile-analytics .section-cnt article .device-area .service-cnt,
+  .main-section.mobile-analytics .section-cnt article .device-area .service-cnt .device-color-area,
+  .main-section.mobile-analytics .section-cnt article .device-area .service-cnt .device-size-area{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding-left: 0;
+  }
+  .main-section.mobile-analytics .section-cnt article .device-area .service-cnt .device-color-area {
+    width: calc(100% - 46px);
+    width: -webkit-calc(100% - 46px);
+    margin: 17px auto 0;
+  }
+  .main-section.mobile-analytics .section-cnt article .device-area .service-cnt .device-size-area > li:last-child{
+    padding-right: 0px;
+  }
+  .main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .donut-chart-wrap{
+    flex-direction: column;
+  }
+  .main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .info-message.bar-ranking {
+    width: calc(100% - 94px);
+    width: -webkit-calc(100% - 94px);
+    padding-left: 0;
+    margin-top: 19px;
+  }
+
+  .main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .info-message.bar-ranking dl {
+    font-size:13px;
+    margin-bottom:3px;
+  }
+
+  .main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .info-message.bar-ranking dl dt {
+    padding-top:3px;
+  }
+
+  .main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .select-area {
+    font-size:14px;
+    top:9px;
+    right:12px;
+    left:-122px;
+  }
+
+  .main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .info-message dl dt {
+    padding-top:2px;
+  }
+
+  .main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .info-message dl dd {
+    margin-left:6px;
+  }
+
+  .main-section.mobile-analytics .section-cnt article .article-cnt .chart-bar-horizontal-single .info-message.bar-ranking dd,
+  .main-section.mobile-analytics .section-cnt article .article-subtit {
+    font-size:13px;
+  }
+
+  .main-section.mobile-devices-comparison .section-tit {
+    padding: 18px 15px 36px; 
+    font-size:18px;
+  }
+
+  .main-section.mobile-devices-comparison .section-cnt {
+    padding: 0 15px;
+  }
+
+  .main-section.mobile-devices-comparison .section-cnt .device-container .device-area .service-cnt .service-name {
+    font-size:12px;
+  }
+
+  .main-section.mobile-analytics .section-cnt article .article-tit {
+    font-size:18px;
+  }
+
+  .main-section.mobile-analytics .section-cnt article .select-trend-wrap li .title {
+    font-size:13px;
+  }
+
+  .main-section.mobile-analytics .section-cnt article .select-trend-wrap li .input-select select,
+  .main-section.recently-viewed-other .section-cnt .device-list ul .service-cnt .service-name {
+    font-size:13px;
+  }
+
+  /* 스펙 비교하기 */
+  .main-section.mobile-devices-comparison .section-cnt .device-container {
+    /* position: relative; */
+    width: 100%;
+    justify-content: space-between;
+    -webkit-justify-content: space-between; 
+  }
+
+  .main-section.mobile-devices-comparison .section-cnt .device-container .device-area {
+    flex: inherit;
+    -webkit-flex: inherit;
+    width: 100px;
+    margin:0 auto;
+  }
+
+  .main-section.mobile-devices-comparison .section-tit .nofind-msg {
+    font-size:13px;
+  }
+
+  /* 시스템 점검 안내 팝업 */
+  .system-maintenance .contents-inner .system-tit {
+    font-size:16px;
+  }
+
+  .system-maintenance .contents-inner .system-stit {
+    font-size:12px;
+  }
+  
+}

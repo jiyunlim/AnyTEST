@@ -1,0 +1,224 @@
+<!-- 2023 _유선 주문 프로세스 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/seller.css">
+    <script>
+        document.documentElement.dataset.userAgent = navigator.userAgent;
+    </script>
+</head>
+
+<body>
+  <!--2023 [D] 프로그래스바 X none-bar-sticky  -->
+  <div class="wrap seller-wrap header-sticky none-bar-sticky wireline-purchase-content">
+		<!-- header -->
+		<div class="product-detail-header">
+			<div class="top-header">
+				<div class="top-header-left">
+					<a href="#none" class="ico-goback"> <img src="../img/icon-header-back@2x.png" alt="이전 페이지 이동 아이콘" /> </a>
+					<h1 class="title">본인인증</h1>
+				</div>
+				<div class="top-header-right">
+					<button type="button" class="ico-cart"><img src="../img/icon-header-cart@2x.png" alt="장바구니"></button>
+					<button type="button" class="ico-mypage" title="T 다이렉트샵 모바일웹(새창)"><img src="../img/icon-header-my@2x.png" alt="마이페이지"></button>
+				</div>
+			</div>
+		</div>
+		<!-- //header -->
+		
+		<!-- content -->
+		<main role="main" class="content">
+			<h1 class="g-invisible">본인인증</h1>
+			<div class="l-grid l-seller"> 
+				<strong class="purchase-guide-text">서비스 가입을 위해 <br>본인인증이 필요합니다. <em class="ico-require">(필수)</em></strong>
+				<div class="purchase-cont">
+					<h4 class="g-invisible">주문서 본인인증 정보</h4>
+					<ul class="purchase-form-list">
+						<!-- [D] 인증완료 -->
+						<li> 
+							<label for="joinName">
+								<strong class="tit">가입자 이름 <em class="ico-require">(필수)</em></strong>
+							</label>
+							<div class="cont">
+								<div class="form-group">
+									<!-- [D] 비활성시 클래스 disabled 적용 -->
+									<span class="c-input name disabled">
+										<input type="text" id="joinName" placeholder="이름을 입력해 주세요." title="가입자 이름" value="홍길동" maxlength="10" class="input" required disabled>
+									</span> 
+								</div>
+							</div>
+						</li>
+						<li> 
+							<label for="joinIdNum">
+								<strong class="tit">가입자 주민등록번호 <em class="ico-require">(필수)</em></strong>
+							</label>
+							<div class="cont">
+								<div class="form-group">
+									<!-- [D] 비활성시 클래스 disabled 적용 -->
+									<span class="c-input disabled">
+										<input type="text" id="joinIdNum" placeholder="‘-’ 없이 숫자만 입력해 주세요." value="811201-2******" maxlength="13" class="input" id="_custSecret" data-mode="resident" required="" disabled oninput="javascript: if ( this.maxLength > -1 &amp;&amp;this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" pattern="[0-9]*" inputmode="numeric">
+										<input type="hidden" id="_custSecretNum">
+									</span> 
+								</div>
+							</div>
+						</li>
+
+						<li> 
+							<label for="confirmYourSf">
+								<strong class="tit">본인인증 방법 <em class="ico-require">(필수)</em></strong>
+							</label>
+							<div class="cont">
+								<div role="tablist" class="rdo-list">
+									<button type="button" role="tab" class="rdo-item disabled" id="_authMethodTab1" aria-controls="_authPanel1" aria-selected="true" disabled> <span class="label">PASS 인증</span> </button>
+									<button type="button" role="tab" class="rdo-item disabled" id="_authMethodTab2" aria-controls="_authPanel2" aria-selected="false" disabled> <span class="label">신용카드 인증</span> </button>
+								</div>
+								<!-- PASS 본인인증 panel -->
+								<div role="tabpanel" class="expand-panel expand-panel-pass" aria-labelledby="_authMethodTab1" id="_authPanel1" aria-hidden="false">
+									<div class="expand-item">
+										<div class="tit-grid"> 
+											<label for="joinPhoneNum">
+												<strong class="tit fL">가입자 휴대폰 번호 <em class="ico-require">(필수)</em></strong> 
+											</label>
+										</div>
+										<div class="form-group"> 
+											<span class="c-input disabled">
+													<input type="tel" id="joinPhoneNum" value="01012345678" title="가입자 휴대폰 번호" maxlength="11" class="input" required disabled>
+											</span> 
+										</div>
+									</div>
+									<div class="expand-item">
+										<div class="inner-box">
+											<p class="auth-completed-text">본인인증이 완료되었습니다.</p>
+										</div>
+									</div>
+								</div>
+								<!-- 신용카드 인증 panel -->
+								<div role="tabpanel" class="expand-panel expand-panel-credit" aria-labelledby="_authMethodTab2" id="_authPanel2" aria-hidden="true">
+									<div class="expand-item"> 
+										<label for="_card">
+											<strong class="tit">가입자 신용카드 정보 <em class="ico-require">(필수)</em></strong>
+										</label>
+										<div class="form-group"> 
+											<span class="c-input disabled">
+												<input type="text" value="5346-****-****-8913" title="카드번호" class="input" required disabled id="_card" data-mode="card" maxlength="16">
+												<input type="hidden" id="_cardNum" >
+											</span> 
+										</div>
+									</div>
+									<div class="expand-item">
+										<div class="tit-grid"> 
+											<label for="cardPhoneNum">
+												<strong class="tit fL">카드사에 등록된 휴대폰 번호 <em class="ico-require">(필수)</em></strong>
+											</label>
+										</div>
+										<div class="form-group"> 
+											<span class="c-input disabled">
+												<input type="tel" id="cardPhoneNum" value="01012345678" title="가입자 휴대폰 번호" maxlength="11" class="input" required disabled>
+											</span> 
+										</div>
+									</div>
+									<div class="expand-item">
+										<div class="inner-box">
+											<p class="auth-completed-text">본인인증이 완료되었습니다.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<!-- 신용카드 본인인증 완료 -->
+						<li> 
+							<label for="confirmYourSf">
+								<strong class="tit">본인인증 방법 <em class="ico-require">(필수)</em></strong>
+							</label>
+							<div class="cont">
+								<div role="tablist" class="rdo-list">
+									<button type="button" role="tab" class="rdo-item disabled" id="_authMethodTab1" aria-controls="_authPanel1" aria-selected="false" disabled> <span class="label">PASS 인증</span> </button>
+									<button type="button" role="tab" class="rdo-item disabled" id="_authMethodTab2" aria-controls="_authPanel2" aria-selected="true" disabled> <span class="label">신용카드 인증</span> </button>
+								</div>
+								<!-- PASS 본인인증 panel -->
+								<div role="tabpanel" class="expand-panel expand-panel-pass" aria-labelledby="_authMethodTab1" id="_authPanel1" aria-hidden="true">
+									<div class="expand-item">
+										<div class="tit-grid"> 
+											<label for="joinPhoneNum">
+												<strong class="tit fL">가입자 휴대폰 번호 <em class="ico-require">(필수)</em></strong> 
+											</label>
+										</div>
+										<div class="form-group"> 
+											<span class="c-input disabled">
+												<input type="tel" id="joinPhoneNum" value="01012345678" title="가입자 휴대폰 번호" maxlength="11" class="input" required disabled>
+											</span> 
+										</div>
+									</div>
+									<div class="expand-item">
+										<div class="inner-box">
+											<p class="auth-completed-text">본인인증이 완료되었습니다.</p>
+										</div>
+									</div>
+								</div>
+
+								<!-- 신용카드 본인인증 panel -->
+								<div role="tabpanel" class="expand-panel expand-panel-credit" aria-labelledby="_authMethodTab2" id="_authPanel2" aria-hidden="false">
+									<div class="expand-item">
+										<label for="_card">
+											<strong class="tit">가입자 신용카드 정보 <em class="ico-require">(필수)</em></strong>
+										</label>
+										<div class="form-group"> 
+											<span class="c-input disabled">
+												<input type="text" value="5346-****-****-8913" title="카드번호" class="input" required id="_card" data-mode="card" maxlength="16" disabled>
+												<input type="hidden" id="_cardNum" >
+											</span> 
+										</div>
+									</div>
+									<div class="expand-item">
+										<div class="tit-grid"> 
+											<label for="cardPhoneNum">
+												<strong class="tit fL">카드사에 등록된 휴대폰 번호 <em class="ico-require">(필수)</em></strong>
+											</label>
+										</div>
+										<div class="form-group"> 
+											<span class="c-input disabled">
+												<input type="tel" id="cardPhoneNum" value="01012345678" title="가입자 휴대폰 번호" maxlength="11" class="input" required disabled>
+											</span> 
+										</div>
+									</div>
+									<div class="expand-item">
+										<div class="inner-box">
+											<p class="auth-completed-text">본인인증이 완료되었습니다.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<ul class="dsc-list">
+						<li class="dsc-item">본인에 한해 서비스에 가입할 수 있습니다. </li>
+						<li class="dsc-item">미성년자/외국인/법인 고객님은 SKT 유선 가입센터
+							<br>(1670-2001)를 통해 가입해 주세요.</li>
+					</ul>
+				</div>			
+			</div>
+			<!-- //content -->
+			<!-- s [D] 하단 버튼 바 -->
+			<div class="page-footer">
+				<div class="btn-area">
+					<button type="button" class="btn-primary">다음</button>
+				</div>
+			</div>
+			<!-- e 하단 버튼 바  -->
+		</main>
+	</div>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/swiper.min.js"></script>
+  <script src="../js/tdirect-ui.js"></script>
+
+</body>
+
+</html>

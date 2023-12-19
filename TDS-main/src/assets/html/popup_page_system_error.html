@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+    <title>[TDS Layer] T 월드 다이렉트</title>
+    <link rel="stylesheet" href="../css/import_style.css" />
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/swiper/swiper.min.js"></script>
+  </head>
+  <body>
+    <!-- [D] 공통 팝업 영역 2022.03.28 
+      팝업 레이어 일 경우 class = " tds-popup-wrap " 추가
+      팝업 새창 일 경우 class = " tds-popup-wrap pop_page" 추가
+    -->
+    <div class="container-wrap tds-popup-wrap pop_page">
+      <!-- 헤더 영역 -->
+      <div class="tds-header">
+        <div class="top-header">
+          <div class="top-header-left">
+          </div>
+          <div class="top-header-right">
+          </div>
+        </div>
+      </div>
+
+      <!-- 본분 영역 -->
+      <div class="tds-main">
+        <div class="l-grid">
+          
+          <!-- [D] 에러 케이스 높이 별 type
+            높이가 320 , 170, 80 (px) 로 나뉩니다.
+            각 클래스에 높이 별로 명칭 추가 
+              320px > error-card-type320 
+              170px > error-card-type170
+              80px  > error-card-type80 
+          -->
+
+          <!-- case : 시스템 점검 -->
+          <div class="main-section">
+            <div class="error-card-type320">
+              <div class="content-body">
+                <p class="paragraph">
+                  <img src="../img/svg/icon-tds-system-error.svg" alt="system-error">
+                  <strong class="title">서비스 점검 중입니다.</strong>
+                  <span class="sub-title">잠시 후 다시 이용해 주세요.</span>
+                  <span class="date-txt">2021. 6. 7. 00:00 ~ 2021. 6. 7. 06:00</span>
+                </p>
+              </div>    
+            </div>
+          </div>
+
+          <!-- case : error-card-type320 -->
+          <div class="main-section">
+            <div class="error-card-type320">
+              <div class="content-body">
+                <p class="paragraph">
+                  <img src="../img/svg/icon-tds-system-error.svg" alt="system-error">
+                  <strong class="title">이용에 불편을 드려 죄송합니다.</strong>
+                  <span class="sub-title">일시적으로 서비스 제공이 원활하지 않습니다. <br>새로고침 또는 잠시 후 이용해 주세요.</span>
+                </p>
+                <button class="btn btn-refresh" type="button"><span>새로고침</span></button>
+              </div>    
+            </div>
+          </div>
+          <!-- case : error-card-type170 -->
+          <div class="main-section">
+            <div class="error-card-type170">
+              <div class="content-body">
+                <p class="paragraph">
+                  <strong class="title">이용에 불편을 드려 죄송합니다.</strong>
+                  <span class="sub-title">일시적으로 서비스 제공이 원활하지 않습니다. <br>새로고침 또는 잠시 후 이용해 주세요.</span>
+                </p>
+                <button class="btn btn-refresh" type="button"><span>새로고침</span></button>
+              </div> 
+            </div>
+          </div>
+          <!-- case : error-card-type80 -->
+          <div class="main-section">
+            <div class="error-card-type80">
+              <div class="content-body">
+                <p class="paragraph">
+                  <strong class="title">이용에 불편을 드려 죄송합니다.</strong>
+                  <span class="sub-title">새로고침 또는 잠시 후 이용해 주세요.</span>
+                </p>
+                <button class="btn btn-refresh" type="button"><span>새로고침</span></button>
+              </div> 
+            </div>
+          </div>
+
+          <br><br>
+
+          <!-- case : 모듈 타이틀 + 에러 케이스 -->
+          <div class="main-section">
+            <h3 class="section-tit">구매 하신 상품 배송 조회해 보세요.</h3>
+            <div class="error-card-type320">
+              <div class="content-body">
+                <p class="paragraph">
+                  <strong class="title">이용에 불편을 드려 죄송합니다.</strong>
+                  <span class="sub-title">일시적으로 서비스 제공이 원활하지 않습니다. <br>새로고침 또는 잠시 후 이용해 주세요.</span>
+                </p>
+                <button class="btn btn-refresh" type="button"><span>새로고침</span></button>
+              </div> 
+            </div>
+          </div>
+
+          <br><br>
+          
+          <div class="main-section">
+            <h3 class="section-tit">최근 조회한 휴대폰이에요</h3>
+            <div class="error-card-type170">
+              <div class="content-body">
+                <p class="paragraph">
+                  <strong class="title">이용에 불편을 드려 죄송합니다.</strong>
+                  <span class="sub-title">일시적으로 서비스 제공이 원활하지 않습니다. <br>새로고침 또는 잠시 후 이용해 주세요.</span>
+                </p>
+                <button class="btn btn-refresh" type="button"><span>새로고침</span></button>
+              </div> 
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- close btn -->
+      <button type="button" class="btn-close"><span class="ico-close">팝업 닫기</span></button>
+    </div>
+
+  </body>
+</html>

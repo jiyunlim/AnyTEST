@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<title>[팝업] 주소찾기 form | SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/seller.css">
+	
+	<script>document.documentElement.dataset.userAgent = navigator.userAgent;</script>
+</head>
+
+<body>
+<!-- 유선 popup -->
+<div class="popup pop-seller wireline-address-search">
+	<div class="popup-body">
+		<div class="popup-header">
+			<h1 class="popup-title">주소찾기</h1>
+		</div>
+    
+		<div role="main" class="popup-content">
+			<div class="wireline-cont-area pad-none">
+				<div class="inner">
+					<div class="area-form">
+						<h3 class="tit">상품을 설치할 주소를 입력하고 <br> 검색을 눌러주세요. </h3>
+						<div class="form-group">
+							<div class="input-inner box-flex">
+								<span class="input-box input-box-round">
+									<input type="text" placeholder="예) 퇴계로 24, SK남산그린빌딩" title="주소 입력" class="input">
+								</span>
+								<button type="button" class="btn-extra">검색</button>
+							</div>
+						</div>
+					</div>
+					<!-- [D] case 1 : 초기 화면 -->
+					<div class="area-search-tip">
+						<strong class="tit">빠른 검색</strong>
+						<ul class="search-tip-list">
+							<li> 도로명 + 건물번호 <span>(예시 : 퇴계로 24)</span>
+							</li>
+							<li> 읍/면/동 + 번지 <span>(예시 : 남대문로5가 267)</span>
+							</li>
+							<li> 읍/면/동 + 건물명 <span>(예시 : 남대문로5가 SK남산그린)</span>
+							</li>
+						</ul>
+					</div>
+					<!-- [D] case 2 : 검색 결과 -->
+					<div class="area-result">
+						<strong class="tit"> 주소 검색 결과 (<span class="num">3</span>) </strong>
+						<!-- [D] 우편번호 검색 결과 있음 -->
+						<!-- 웹접근성 수정 7/20 -->
+						<div class="list-address">
+							<button type="button">
+								<dl>
+									<dt class="street-address">도로명</dt>
+									<dd>서울 중구 을지로 65 (을지로2가)</dd>
+								</dl>
+								<dl>
+									<dt class="lot-num-address">지번</dt>
+									<dd>서울 중구 을지로2가 11 SK텔레콤빌딩</dd>
+								</dl>
+							</button>
+							<button type="button">
+								<dl>
+									<dt class="street-address">도로명</dt>
+									<dd>서울 중구 을지로 65 (을지로2가)</dd>
+								</dl>
+								<dl>
+									<dt class="lot-num-address">지번</dt>
+									<dd>서울 중구 을지로2가 11 SK텔레콤빌딩</dd>
+								</dl>
+							</button>
+							<button type="button">
+								<dl>
+									<dt class="street-address">도로명</dt>
+									<dd>서울 중구 을지로 65 (을지로2가)</dd>
+								</dl>
+								<dl>
+									<dt class="lot-num-address">지번</dt>
+									<dd>서울 중구 을지로2가 11 SK텔레콤빌딩</dd>
+								</dl>
+							</button>
+							<button type="button">
+								<dl>
+									<dt class="street-address">도로명</dt>
+									<dd>서울 중구 을지로 65 (을지로2가)</dd>
+								</dl>
+								<dl>
+									<dt class="lot-num-address">지번</dt>
+									<dd>서울 중구 을지로2가 11 SK텔레콤빌딩</dd>
+								</dl>
+							</button>
+							<button type="button">
+								<dl>
+									<dt class="street-address">도로명</dt>
+									<dd>서울 중구 을지로 65 (을지로2가)</dd>
+								</dl>
+								<dl>
+									<dt class="lot-num-address">지번</dt>
+									<dd>서울 중구 을지로2가 11 SK텔레콤빌딩</dd>
+								</dl>
+							</button>
+							<button type="button">
+								<dl>
+									<dt class="street-address">도로명</dt>
+									<dd>서울 중구 을지로 65 (을지로2가)</dd>
+								</dl>
+								<dl>
+									<dt class="lot-num-address">지번</dt>
+									<dd>서울 중구 을지로2가 11 SK텔레콤빌딩</dd>
+								</dl>
+							</button>
+						</div>
+						
+            <div class="btn-area">
+              <button type="button" class="btn-default btn-fix">더보기</button>
+            </div>
+					</div>
+					<!-- [D] case 3 : 검색 결과 없음 -->
+					<div class="area-result no-result">
+						<p>검색결과가 없습니다.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    <div class="popup-footer">
+      <div class="btn-area">
+        <!-- [D] 활성/비활성 여부는 disabled 클래스 및 속성으로 추가/삭제로 컨트롤 -->
+        <button type="button" class="btn-primary btn-lg">확인</button>
+      </div>
+    </div>
+
+    <button type="button" class="btn-close">
+			<span class="ico-close">팝업 닫기</span>
+		</button>
+	</div>
+</div>
+
+<!-- //popup -->
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/tdirect-ui.js"></script>
+	
+</body>
+</html>

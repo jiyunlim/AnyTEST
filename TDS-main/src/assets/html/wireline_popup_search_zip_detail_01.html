@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<title>[팝업] 상세 주소 입력 | T 월드 다이렉트</title>
+	<link rel="stylesheet" href="../css/import_style.css" />
+
+	<script src="../js/jquery-1.12.4.js"></script>
+	<script>
+			document.documentElement.dataset.userAgent = navigator.userAgent;
+	</script>
+</head>
+
+<body>
+	<!-- 유선 popup -->
+	<!-- [D] 공통 팝업 영역
+		팝업 레이어 일 경우 class = " tds-popup-wrap " 추가
+		팝업 새창 일 경우 class = " tds-popup-wrap pop_page" 추가
+	-->
+	<div class="container-wrap tds-popup-wrap pop_page" >
+		<!-- 헤더 영역 -->
+		<div class="tds-header">
+			<div class="top-header">
+				<div class="top-header-left">
+					<h1 class="title">가입 가능한 상품 조회​</h1>
+				</div>
+				<div class="top-header-right"></div>
+			</div>
+		</div>
+
+		<!-- 본분 영역 -->
+		<div class="tds-main">
+			<div class="l-grid">
+        <div class="wireline-address-search">
+          <div class="wireline-cont-area">
+            <div class="inner">
+              <div class="area-select">
+                <h3 class="tit">선택한 주소</h3>
+                <div class="item-address">
+                  <dl>
+                    <dt class="zipcode">우편번호</dt>
+                    <dd>04539</dd>
+                  </dl>
+                  <dl>
+                    <dt class="street-address">도로명</dt>
+                    <dd>서울 중구 을지로 65 (을지로2가)</dd>
+                  </dl>
+                  <dl>
+                    <dt class="lot-num-address">지번</dt>
+                    <dd>서울 중구 을지로2가 11 SK텔레콤빌딩</dd>
+                  </dl>
+                </div>
+                <div class="area-form">
+                  <!-- [D] case 1: 주택 주소일 경우 -->
+                  <div class="form-group">
+                    <div class="input-inner">
+                      <span class="input-box">
+                        <input type="text" placeholder="자세한 주소를 입력해주세요." title="상세주소" class="input">
+                      </span>
+                    </div>
+                  </div>
+                  <div class="form-group input-type2">
+                    <!-- [D] case 2: 동/호 정보 입력일 경우 .form-group에 클래스 input-type2 추가 -->
+                    <div class="input-inner box-flex typing-box">
+                      <span class="input-box clearfix">
+                        <input type="text" title="동 주소 입력" class="input">
+                        <span>동</span>
+                      </span>
+                      <span class="input-box clearfix">
+                        <input type="text" title=" 호 주소 입력" class="input">
+                        <span>호</span>
+                      </span>
+                    </div>
+
+                    <!-- [D] case 3: 동/호 정보 없는경우 -->
+                    <div class="input-inner box-flex">
+                      <div class="c-select clearfix">
+                        <select required title="동 선택" class="select">
+                          <option value="" selected="selected">동 선택</option>
+                          <option value="option1">101동</option>
+                          <option value="option2">102동</option>
+                        </select>
+                      </div>
+                      <div class="c-select clearfix">
+                        <select required title="호 선택" class="select">
+                          <option value="" selected="selected">호 선택</option>
+                          <option value="option1">101호</option>
+                          <option value="option2">101호</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-footer">
+      <div class="btn-area">
+        <!-- [D] 활성/비활성 여부는 disabled 클래스 및 속성으로 추가/삭제로 컨트롤 -->
+        <button type="button" class="btn-primary btn-lg">확인</button>
+      </div>
+    </div>
+
+    <!-- close btn -->
+		<button type="button" class="btn-close"><span class="ico-close">팝업 닫기</span></button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>My Shop &lt; List</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/seller.css">
+    <script>
+        document.documentElement.dataset.userAgent = navigator.userAgent;
+    </script>
+</head>
+<!-- 
+    2022.08.08
+    T 월드 디자인 가이드를 참고하여 재수정
+-->
+<body>
+<!-- #skip_navigation -->
+<div id="skipNav" class="skip_navi">
+    <a href="#contents-area" class="skip-link">본문 바로가기</a>
+</div>
+<!-- [D] "바닥 네비게이션" 유/무 Class 추가 02/16
+    'nav-logo-in' : 로그인  로그인 바 없는 상태
+    'nav-logo-out': 비로그인 로그인 바 있는 상태
+    '  ' : 네비게이션 바 자체가 없는 경우  -->
+<div class="wrap-device-list nav-logo-out">
+    <!-- 헤더영역 -->
+    <div class="device-list-header">
+        <div class="top-header">
+            <div class="top-header-left">
+                <a href="#" class="ico-goback">
+                    <img src="../img/icon-header-back@2x.png" alt="이전 페이지">
+                </a>
+                <h1 class="title">휴대폰</h1>
+            </div>
+            <div class="top-header-right">
+                <button type="button" class="ico-cart"><img src="../img/icon-header-cart@2x.png" alt="장바구니"></button>
+                <button type="button" class="ico-mypage" title="T다이렉트샵 모바일웹(새창)"><img src="../img/icon-header-my@2x.png" alt="마이페이지"></button>
+            </div>
+        </div>
+    </div>
+    <!-- 상단네비 -->
+    <div class="top-navi-area-area">
+        <nav class="top-navi-area">
+            <div class="swiper-wrap">
+                <div class="swiper-container-menu">
+                    <ul class="swiper-wrapper" role="tablist">
+                        <li class="item swiper-slide item-active" role="presentation">
+                            <button type="button" class="btn current" id="tab_menu_1" role="tab" aria-selected="true" aria-controls="tab_content1">
+                                5G휴대폰
+                            </button>
+                        </li>
+                        <li class="item swiper-slide" role="presentation">
+                            <button type="button" class="btn" id="tab_menu_2" role="tab" aria-selected="false" aria-controls="tab_content2">
+                                휴대폰
+                            </button>
+                        </li>
+                        <li class="item swiper-slide" role="presentation">
+                            <button type="button" class="btn" id="tab_menu_3" role="tab" aria-selected="false" aria-controls="tab_content3" >
+                                키즈폰
+                            </button>
+                        </li>
+                        <li class="item swiper-slide" role="presentation">
+                            <button type="button" class="btn" id="tab_menu_4" role="tab" aria-selected="false" aria-controls="tab_content4" >
+                                5G태블릿
+                            </button>
+                        </li>
+                        <li class="item swiper-slide" role="presentation">
+                            <button type="button" class="btn" id="tab_menu_5" role="tab" aria-selected="false" aria-controls="tab_content5" >
+                                태블릿
+                            </button>
+                        </li>
+                        <li class="item swiper-slide" role="presentation">
+                            <button type="button" class="btn" id="tab_menu_6"  role="tab" aria-selected="false" aria-controls="tab_content6" >
+                                스마트워치
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- [웹접근성] aria-labelledby , id 값 유동적으로 변경 -->
+    <div class="tab-contents-area" role="tabpanel" aria-labelledby="tab_menu_1" id="tab_content1">
+        <div class="filter-wrap">
+            <!-- 필터버튼 -->
+            <div class="top-filter-btn-area">
+                <div class="filter-area">
+                    <div class="filter-btn">
+                        <div class="filter-btn-left"></div>
+                        <button type="button" class="filter-btn-center" aria-expanded="false" aria-controls="top-filter" id="btn_filter">필터</button>
+                        <div class="filter-btn-right"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 필터영역 -->
+            <div class="top-filter" id="top-filter">
+                <div class="top-round-tab-area">
+                    <nav class="round-tab">
+                        <div class="swiper-wrap">
+                            <div class="swiper-container-round-tab">
+                                <ul class="swiper-wrapper">
+                                    <li class="item swiper-slide">
+                                      <button type="button" class="current" id="filter_tab_menu_1" title="선택됨">제조사</button>
+                                    </li>
+                                    <li class="item swiper-slide">
+                                      <button type="button" id="filter_tab_menu_2">출시년도</button>
+                                    </li>
+                                    <li class="item swiper-slide">
+                                      <button type="button" id="filter_tab_menu_3">화면크기</button>
+                                    </li>
+                                    <li class="item swiper-slide">
+                                      <button type="button" id="filter_tab_menu_4">저장용량</button>
+                                    </li>
+                                    <li class="item swiper-slide">
+                                      <button type="button" id="filter_tab_menu_5">제조사</button>
+                                    </li>
+                                    <li class="item swiper-slide">
+                                      <button type="button" id="filter_tab_menu_6">출시년도</button>
+                                    </li>
+                                    <li class="item swiper-slide">
+                                      <button type="button" id="filter_tab_menu_7">화면크기</button>
+                                    </li>
+                                    <li class="item swiper-slide">
+                                      <button type="button" id="filter_tab_menu_8">저장용량</button>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="top-rect-tab-area" id="filter_tab_content1">
+                    <nav class="rect-tab">
+                        <div class="swiper-wrap">
+                            <div class="swiper-container-rect-tab">
+                                <ul class="swiper-wrapper">
+                                    <li class="item swiper-slide"><button type="button" class="current" title="선택됨">삼성전자</button></li>
+                                    <li class="item swiper-slide"><button type="button">LG전자</button></li>
+                                    <li class="item swiper-slide"><button type="button">애플</button></li>
+                                    <li class="item swiper-slide"><button type="button">기타</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="top-filter-result-area">
+                    <nav class="filter-result">
+                        <div class="filter-reset">
+                            <button type="button">초기화</button>
+                        </div>
+                        <div class="swiper-wrap">
+                            <div class="swiper-container-filter-result">
+                                <ul class="swiper-wrapper">
+                                    <li class="item swiper-slide"><button type="button" title="삭제">삼성전자</button></li>
+                                    <li class="item swiper-slide"><button type="button" title="삭제">64GB</button></li>
+                                    <li class="item swiper-slide"><button type="button" title="삭제">128GB</button></li>
+                                    <li class="item swiper-slide"><button type="button" title="삭제">256GB</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            
+            <!-- 링크이동영역 -->
+            <div class="link-divide-area">
+                <div class="link-divide">
+                    <div class="link-divide-sub">
+                        <button type="button">
+                            <div class="tl-txt"> 요금제</div>
+                            <div class="link-txt"><span>뉴 T 끼리 맞춤형(100분+250MB)</span></div> 
+                            <!-- <div class="link-txt"><span>T 플랜 에센스</span></div> -->
+                        </button>
+                        <button type="button" class="layer-open-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="dialog">
+                            <div class="tl-txt"> 할인방법</div>
+                            <div>
+                                <!-- [D] 할인방법 버튼 비활성화 시 class="disabled-text" 추가 -->
+                                <!-- <div class="link-txt"> <<< 비활성화시 클래스명 없어짐-->
+                                <span class="disabled-text">더 좋은 방법</span>
+                            </div>
+                          </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="noti-area">
+          <h2 id="contents-area" tabindex="-1">
+            <span class="blind">본문시작</span>
+          </h2>
+          <p>※ 다이렉트 플랜을 가입할 수 없는 번호일 경우,<br> 
+            주문 단계에서 다이렉트 플랜 요금제가 보이지 않습니다.</p>
+        </div> 
+          
+        <!-- [D] CASE 1 : 최근 본 상품 -->
+        <div class="recently-viewed-device-area">          
+            <h3 class="section-tit">최근 본 상품</h3>
+            <div class="recently-viewed-device">
+                <ul>
+                    <li class="item">
+                        <div class="item-inner">
+                            <div class="cnt-card">
+                                <div class="cnt-tit">
+                                    <div class="tit-txt">
+                                        옵션/혜택 선택이 완료 된 상품입니다.
+                                    </div>
+                                </div>
+                                <a href="#" class="device-area">
+                                    <div class="device-left">
+                                        <div class="purchase-type">
+                                            <ul>
+                                                <li class="type-box coming-soon">출시<br>예정</li>
+                                                <li class="type-box pre-order">사전<br>예약</li>
+                                                <li class="type-box immediately-arrive">바로<br>도착</li>
+                                                <!-- 뱃지 type :
+                                                <li class="type-box public-announcement-max">공시금 확대</li>
+                                                <li class="type-box release-price-cut">출고가 인하</li>
+                                                <li class="type-box immediately-reward">바로 보상</li>
+                                                <li class="type-box gift-presentation">사은품 증정</li> 
+                                                <li class="type-box coming-soon">출시 예정</li> 
+                                                -->
+                                            </ul>
+                                        </div>
+                                        <div class="thumb">
+                                            <img src="../img/seller_list/img-product-110px-galaxy-note20@2x.png" alt="Redmi note10 PRO">
+                                        </div>
+                                    </div>
+                                    <div class="service-cnt">
+                                        <div class="service-name">
+                                            <span class="device-tl">Redmi note 10 Pro</span>
+                                            <span class="device-ts"><em>블루</em>/ <em>128GB</em></span>
+                                        </div>
+                                        <div class="service-desc">
+                                            <dl>
+                                                <dt></dt>
+                                                <dd>
+                                                    <strong>가격미정</strong>
+                                                    <!-- <span>원/월</span> -->
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <div class="final-notice">
+                                            <span class="discount-type f2-bage">24개월 휴대폰할인</span>
+                                        </div>
+                                        <ul class="device-info-list">
+                                            <!-- [D] 휴대폰 상세정보 -->
+                                            <li class="fare-discount">휴대폰 15,488원(128GB)</li>
+                                            <li class="device-fare">요금 51,730원</li>
+                                            <li class="device-fare-ct">T 플랜 에센스 기준</li>
+                                        </ul>
+                                        <!-- [D] case -->
+                                        <div class="service-desc">
+                                            <div class="fee-no-support">※ 본 상품은 선택하신 요금제를 지원하지 않습니다.</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- [D] CASE 2 : 최근 본 상품2 08.10
+            class="recently-viewed-device-area-2nd" <- 삭제
+        -->
+        <hr />
+        <!-- 추천상품 -->
+        <div class="recommended-viewed-device-area">
+            <h3 class="section-tit">추천 상품</h3>
+            <div class="recommended-mobile-device">
+                <ul>
+                    <li class="item">
+                        <div class="item-inner">
+                            <div class="cnt-card">
+                                <a href="#" class="device-area">
+                                    <div class="device-left">
+                                        <div class="purchase-type">
+                                            <ul>
+                                                <li class="type-box pre-order">사전 예약</li>
+                                                <li class="type-box immediately-reward">바로 보상</li>
+                                                <li class="type-box skt-private">SKT 전용</li>
+                                            </ul>
+                                        </div>
+                                        <div class="thumb">
+                                            <img src="../img/seller_list/img-product-110px-galaxy-note20@2x.png" alt="Redmi note10 PRO">
+                                        </div>
+                                    </div>
+                                    <div class="service-cnt">
+                                        <div class="service-name">
+                                            <span class="device-tl">Redmi note 10 Pro</span>
+                                            <div class="phone-info">
+                                                <ul class="device-color-area">
+                                                    <li class="device-color" style="background-color: #d8d8d8;">
+                                                        <span class="blind">옥스포드 그레이</span>
+                                                    </li>
+                                                    <li class="device-color" style="background-color: #7d9daa;">
+                                                        <span class="blind">앙고라블루</span>
+                                                    </li>
+                                                </ul>
+                                                <div class="volumn-size">
+                                                    <ul>
+                                                        <li>128GB</li>
+                                                        <li>256GB</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="service-desc">
+                                            <dl>
+                                                <dt></dt>
+                                                <dd>
+                                                    <strong>67,218</strong>
+                                                    <span>원/월</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <div class="final-notice">
+                                            <span class="discount-type f1-bage">24개월 요금 할인 기준</span>
+                                        </div>
+                                        <ul class="device-info-list">
+                                            <!-- [D] 휴대폰 상세정보 -->
+                                            <li class="fare-discount">기기 15,488원(128GB)</li>
+                                            <li class="device-fare">요금 51,730원</li>
+                                            <li class="device-fare-ct">LTE Watch(공유II) 기준</li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr />
+        <!-- 리스트상단 -->
+        <div class="mobile-devices-list-type-title-area">
+            <div class="mobile-devices-list-type-title">
+                <div class="list-total-num">전체<em>3</em></div>
+                <div class="list-sorting">
+                    <div class="list-sorting-btn">
+                        <label class="blind" for="sorting-selectbox">정렬기준</label>
+                        <select id="sorting-selectbox" >
+                            <!-- <option value="N"><span class="txt">최신순</span></option> -->
+                            <option value="N">최신순</option>
+                            <option value="L">낮은 가격순</option>
+                            <option value="H">높은 가격순</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 리스트영역1 -->
+        <div class="mobile-devices-list-area list-type" id="list-type1">
+            <div class="mobile-devices-list">
+                <ul>
+                    <!-- [D] 상품리스트 CASE 1. -->
+                    <li>
+                        <div class="item-inner">
+                            <div class="cnt-card">
+                                <a href="#" class="device-area">
+                                    <div class="device-left">
+                                        <div class="purchase-type">
+                                            <ul>
+                                                <li class="type-box pre-order">사전 예약</li>
+                                                <li class="type-box immediately-reward">바로 보상</li>
+                                                <li class="type-box skt-private">SKT 전용</li>
+                                            </ul>
+                                        </div>
+                                        <div class="thumb">
+                                            <img src="../img/seller_list/img-phone-product@2x.png" alt="Redmi note10 PRO">
+                                        </div>
+                                    </div>
+                                    <div class="service-cnt">
+                                        <div class="service-name">
+                                            <span class="device-tl">Redmi note 10 Pro</span>
+                                            <div class="phone-info">
+                                                <ul class="device-color-area">
+                                                    <li class="device-color" style="background-color: #d8d8d8;">
+                                                        <span class="blind">옥스포드 그레이</span>
+                                                    </li>
+                                                    <li class="device-color" style="background-color: #7d9daa;">
+                                                        <span class="blind">앙고라블루</span>
+                                                    </li>
+                                                </ul>
+                                                <div class="volumn-size">
+                                                    <ul>
+                                                        <li>128GB</li>
+                                                        <li>256GB</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="service-desc">
+                                            <dl>
+                                                <dt></dt>
+                                                <dd>
+                                                    <strong>67,218</strong>
+                                                    <span>원/월</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <div class="final-notice">
+                                            <span class="discount-type f1-bage">24개월 요금 할인 기준</span>
+                                        </div>
+                                        <ul class="device-info-list">
+                                            <!-- [D] 휴대폰 상세정보 -->
+                                            <li class="fare-discount">기기 15,488원(128GB)</li>
+                                            <li class="device-fare">요금 51,730원</li>
+                                            <li class="device-fare-ct">LTE Watch(공유II) 기준</li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="item-inner">
+                            <div class="cnt-card">
+                                <a href="#" class="device-area">
+                                    <div class="device-left">
+                                        <div class="purchase-type">
+                                            <ul>
+                                                <li class="type-box gift-presentation">사은품 증정</li>
+                                            </ul>
+                                        </div>
+                                        <div class="thumb">
+                                            <img src="../img/seller_list/img-phone-product@2x.png" alt="Redmi note10 PRO">
+                                        </div>
+                                    </div>
+                                    <div class="service-cnt">
+                                        <div class="service-name">
+                                            <span class="device-tl">Redmi note 10 Pro</span>
+                                            <div class="phone-info">
+                                                <ul class="device-color-area">
+                                                    <li class="device-color" style="background-color: #d8d8d8;">
+                                                        <span class="blind">옥스포드 그레이</span>
+                                                    </li>
+                                                    <li class="device-color" style="background-color: #7d9daa;">
+                                                        <span class="blind">앙고라블루</span>
+                                                    </li>
+                                                </ul>
+                                                <div class="volumn-size">
+                                                    <ul>
+                                                        <li>128GB</li>
+                                                        <li>256GB</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="service-desc">
+                                            <dl>
+                                                <dt></dt>
+                                                <dd>
+                                                    <strong>67,218</strong>
+                                                    <span>원/월</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <div class="final-notice">
+                                            <span class="discount-type f1-bage">24개월 요금 할인 기준</span>
+                                        </div>
+                                        <ul class="device-info-list">
+                                            <!-- [D] 휴대폰 상세정보 -->
+                                            <li class="fare-discount">휴대폰 15,488원(128GB)</li>
+                                            <li class="device-fare">요금 51,730원</li>
+                                            <li class="device-fare-ct">T 플랜 에센스 기준</li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- [D] 상품리스트 CASE 2. -->
+                    <li>
+                        <div class="item-inner">
+                            <div class="cnt-card">
+                                <div class="device-area">
+                                    <div class="device-left">
+                                        <div class="purchase-type">
+                                            <ul>
+                                                <li class="type-box pre-order">사전<br>예약</li>
+                                                <li class="type-box immediately-arrive">바로<br>도착</li>
+                                                <li class="type-box skt-private">SKT 전용</li>
+                                            </ul>
+                                        </div>
+                                        <div class="thumb">
+                                            <img src="../img/seller_list/img-product-110px-galaxy-note20@2x.png" alt="Redmi note10 PRO">
+                                        </div>
+                                    </div>
+                                    <div class="service-cnt">
+                                        <div class="service-name btn-txt-arrow">
+                                            <span class="device-tl">Redmi note 10 Pro</span>
+                                            <div class="phone-info">
+                                                <ul class="device-color-area">
+                                                    <li class="device-color" style="background-color: #d8d8d8;">
+                                                        <span class="blind">옥스포드 그레이</span>
+                                                    </li>
+                                                    <li class="device-color" style="background-color: #7d9daa;">
+                                                        <span class="blind">앙고라블루</span>
+                                                    </li>
+                                                    <li class="device-color" style="background-color: #fff;">
+                                                        <span class="blind">화이트</span>
+                                                    </li>
+                                                </ul>
+                                                <div class="volumn-size">
+                                                    <ul>
+                                                        <li>128GB</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="service-desc">
+                                            <div class="product-fee-view"><a href="#">상품가격 확인 하기</a></div>
+                                        </div>
+                                        <div class="service-desc">
+                                            <div class="fee-no-support">※ 본 상품은 선택하신 요금제를 <br>지원하지 않습니다.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 리스트영역2 
+            class= mobile-devices-list-2nd-area list-type <- 영역 /기능 삭제
+        -->
+
+        <!--[D] CASE 결과없음 -->
+        <div class="mobile-devices-list-no-result-area">
+            <div class="mobile-devices-list-no-result">
+                <div class="no-result-text">
+                    <div><strong>검색결과가 없습니다.</strong></div>
+                    <div>다른 카테고리 또는 요금제를<br>
+                    선택해 보세요.</div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+
+<!--[D] 2023.02.06 상담하기 버튼 디자인 변경 02/06 -->
+<div class="sticky-shortcut">
+    <div class="btn-counsel-toggle">
+        <button type="button" class="ico-counsel-text" id="btn_pop_menu" aria-controls="pop_menu" aria-haspopup="menu" aria-pressed="false">상담하기 열기</button>
+        <ul class="toggle-list" role="menu" id="pop_menu" aria-labelledby="btn_pop_menu" >
+            <li class="ico-counsel-phone"><a href="https://m.shop.tworld.co.kr/common-campaign?cmpId=000029" target="_blank" title="T다이렉트샵 모바일웹(새창)" tabindex="-1">전화상담</a></li>
+            <li class="ico-counsel-chat"><a href="https://chat.tworld.co.kr:17443/sharedfront/jsp/view/liveChatCheck.jsp?domainId=MOBILE" target="_blank" title="T다이렉트샵 모바일웹(새창)" tabindex="-1">1:1 채팅</a></li>
+            <li class="ico-counsel-kakaotalk"><a href="https://chat.tworld.co.kr:17443/sharedfront/jsp/view/liveChatKakaoCheck.jsp?domainId=MOBILE" target="_blank" title="카카오톡 모바일앱(새창)" tabindex="-1">카카오톡</a></li>
+        </ul>
+    </div>
+</div>
+
+
+    <!-- [D]  팝업 구조 위치 변경 -->
+    <!-- 레이어팝업샘플 -->
+    <div class="layer-popup-area" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="dialog_title" aria-describedby="dialog_content" id="dialog" tabindex="0">
+        <div class="layer-popup"  tabindex="0">
+            <div class="layer-popup-inner">
+                <div class="popup-cont">
+                    <h1 class="pop_tl" id="dialog_title">할인방법</h1>
+                    <div class="popup-body" id="dialog_content">
+                        <ul>
+                            <li>
+                                <span class="custom-form active" tabindex="0">
+                                    <input type="radio" id="chk1-1" name="chk1" value="" />
+                                </span>
+                                <label for="chk1-1">
+                                    <div class="custom-label-txt active">
+                                        더 좋은 방법
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="custom-form" tabindex="0">
+                                    <input type="radio" id="chk1-2" name="chk1" value=""/>
+                                </span>
+                                <label for="chk1-2">
+                                    <div class="custom-label-txt">
+                                        24개월 휴대폰 할인
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <!-- 비활성화시 disabled 클래스 추가 -->
+                                <span class="custom-form disabled" tabindex="0">
+                                    <input type="radio" id="chk1-3" name="chk1" value="" disabled/>
+                                </span>
+                                <label for="chk1-3">
+                                    <div class="custom-label-txt">
+                                        24개월 요금 할인
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="popup-footer">
+                        <button type="button" class="bottom-btn layer-close-btn">
+                            <span class="btn-inner">적용</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dimmed"></div>
+    </div>
+    <!--[D] 2022.08.18 요금제선택 사용 X 삭제 예정 -> 09.14 삭제 -->
+    
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+
+    <script>
+        // 메뉴
+        var swiper_menu = new Swiper('.swiper-container-menu', {
+            slidesPerView: 'auto',
+            spaceBetween: 24, //20210714수정
+            loop: false,
+        });
+        // 라운드탭
+        var swiper_round_tab = new Swiper('.swiper-container-round-tab', {
+            slidesPerView: 'auto',
+            spaceBetween: 8,
+            loop: false,
+        });
+        // 사각형탭
+        var swiper_rect_tab = new Swiper('.swiper-container-rect-tab', {
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            loop: false,
+        });
+        // 검색결과
+        var swiper_filter_result = new Swiper('.swiper-container-filter-result', {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            loop: false,
+        });
+        // [D] 수정 2022.08.11 : 요금제선택 
+        var swiper_fee_choice = new Swiper('.swiper-container-fee-choice', {
+            slidesPerView: 'auto',
+            spaceBetween: 21,
+            loop: false,
+            observer: true,	// 추가
+            observeParents: true,// 추가
+        });
+
+
+        // 레이어팝업열기
+        // function openLayer(param){  
+        //   $(this).attr("aria-expanded", "true");     
+        //   $('.'+param).show().focus();  
+        //   $('body, html').css('overflow','hidden').not('.layer-popup-area').attr({"tabindex" : "-1"}); 
+        // }
+        // 레이어팝업닫기
+        // function closeLayer(param){          
+        //   $(this).attr("aria-expanded", "false").focus(); 
+        //   $('.'+param).hide();    
+        //   $('body, html').css('overflow','visible').not('.layer-popup-area').removeAttr("tabindex");   
+        // }
+
+        //레이어팝업열기
+        $('.layer-open-btn').bind('click', function(){
+          $(this).attr("aria-expanded", "true");     
+          var layerPopEl = '#' + $(this).attr('aria-controls');
+          $(layerPopEl).show().focus();   
+          $('.current').removeClass('current');
+		      $(this).addClass('current');
+          $('body, html').css('overflow','auto');
+          var lpObjTabbable = $(layerPopEl).find("button, input:not([type='hidden']), select, iframe, textarea, [href], [tabindex]:not([tabindex='-1'])");
+          var lpObjTabbableFirst = lpObjTabbable && lpObjTabbable.first();
+          var lpObjTabbableLast = lpObjTabbable && lpObjTabbable.last();
+
+          lpObjTabbableLast.on("keydown", function(event) {
+            if (!event.shiftKey && (event.keyCode || event.which) === 9) {
+              event.preventDefault();
+              lpObjTabbableFirst.focus();
+            }
+          });
+        });
+
+        //레이어팝업닫기  
+        $('.layer-close-btn').bind('click', function(){  
+          var btnParentEl = $(this).parents('.layer-popup-area').attr('id');
+          
+          $('.layer-open-btn').each(function(){       
+            var btnControls = $(this).attr('aria-controls');    
+            if(btnControls === btnParentEl) {
+              $(this).attr("aria-expanded", "false").focus(); 
+            }
+          });
+
+          $(this).parents('.layer-popup-area').hide();
+          $('.current').focus();    
+        });
+
+        // 상단네비활성화
+        $('.swiper-container-menu ul li button').on('click',function(){
+            var tabId = $(this).attr('id');
+            var tabControl = $(this).attr('aria-controls');
+            $('.tab-contents-area').attr({"aria-labelledby" : tabId , "id" : tabControl});
+            $('.swiper-container-menu ul li button').removeClass('current').attr("aria-selected", "false");
+            $(this).addClass('current').attr("aria-selected", "true");
+        })
+        // 라운드탭활성화
+        $('.swiper-container-round-tab ul li button').on('click',function(){
+            //var tabId = $(this).attr('id');
+            //var tabControl = $(this).attr('aria-controls');
+            //$('.top-rect-tab-area').attr({"aria-labelledby" : tabId });
+            $('.swiper-container-round-tab ul li button').removeClass('current').removeAttr("title");
+            $(this).addClass('current').attr("title", "선택됨");
+        })
+        // 라운드탭활성화
+        $('.swiper-container-rect-tab ul li button').on('click',function(){
+            $('.swiper-container-rect-tab ul li button').removeClass('current').removeAttr("title");
+            $(this).addClass('current').attr("title", "선택됨");
+        })
+        // 필터활성화
+        $('.filter-wrap .top-filter').find('button').attr({"tabindex" : "-1"});  
+        $('.filter-btn-center').on('click',function(){
+            var selectEl = $(this).parents('.filter-wrap').find('#top-filter');
+            var selectElParent = selectEl.parent('.filter-wrap').find('.top-filter-btn-area');
+            if (selectEl.hasClass('active')) {
+              selectEl.removeClass('active');
+              selectElParent.removeClass('active')
+              $(this).attr('aria-expanded', false);
+              selectEl.find('button').attr({"tabindex" : "-1"});  
+              $(this).parents('.filter-wrap').find('.top-filter').attr({"tabindex" : "-1", "aria-hidden" : "true"});
+            } else {
+              selectEl.addClass('active');
+              selectElParent.addClass('active')
+              $(this).attr('aria-expanded', true);
+              selectEl.find('button').removeAttr("tabindex");  
+              $(this).parents('.filter-wrap').find('.top-filter').attr({"tabindex" : "0", "aria-hidden" : "false"})
+            }
+        })
+        // [D] 추가 2022.08.11 : 요금제 선택 팝업 네비 활성화
+        $('.swiper-container-fee-choice ul li button').on('click',function(){
+            $('.swiper-container-fee-choice ul li button').removeClass('current');
+            $(this).addClass('current');
+        })
+        // [D] 추가 2022.08.11 : 요금제 선택 팝업 요금제 선택활성화
+        $('.fee-choice ul li', '.fee-choice-layer-pop-area').on('click',function(){
+            $('.fee-choice ul li', '.fee-choice-layer-pop-area').removeClass('current');
+            $(this).addClass('current');
+        })
+
+        //[D] 2023.02.06 상담하기 버튼 수정
+        //상단 상담하기 클릭 이벤트 (기획전 페이지도 추가)
+        $(".ico-counsel-text").on('click', function () {
+            var parentEl = $(this).parent();
+            var dimmedEl = '<div class="sticky-counsel-dimmed"></div>'
+            // [D] 추가 2022.08.29 상담버튼 클릭시 상단 버튼 숨김
+            if(parentEl.hasClass("active")){
+                parentEl.removeClass('active').parents('body').removeClass('js-noscroll');
+                $('.sticky-counsel-dimmed').remove();
+                $(this).attr("aria-pressed" , false).text('상담하기 열기');
+                $(this).parent('.btn-counsel-toggle').find('.toggle-list').find('a').attr({"tabindex" : "-1"});     
+            }else{
+                parentEl.addClass('active').parents('body').addClass('js-noscroll'); // js-noscroll < 바닥페이지 스크롤링 막아줌
+                parentEl.parents('body').prepend(dimmedEl);
+                $(this).attr("aria-pressed" , true).text('상담하기 닫기');
+                $(this).parent('.btn-counsel-toggle').find('.toggle-list').find('a').attr({"tabindex" : "0"});     
+            }           
+        });
+
+    </script>
+    <script>
+        //[D]
+        var select = $('.list-sorting-btn select');
+        select.change(function(){
+            var select_name=$(this).children('option:selected').text();
+            var select_name_lengh = select_name.length;
+            //console.log(select_name_lengh);
+            //$(this).siblings("label").text(select_name);
+            if (select_name_lengh > 3 ){
+              $(this).parents('.list-sorting-btn').addClass('active');
+            } else {
+              $(this).parents('.list-sorting-btn').removeClass('active');
+            }
+        });
+
+        select.keydown(function(e){
+          if (window.event.keyCode == 38 ||window.event.keyCode == 40 || window.event.keyCode == 37 || window.event.keyCode == 39) {
+            e.preventDefault();
+          } else if (window.event.keyCode==13)  {
+            $(this).parents('.list-sorting-btn').addClass('active');
+          }
+        });
+
+        select.blur(function(){
+          var select_name=$(this).children('option:selected').text();
+          var select_name_lengh = select_name.length;
+          if (select_name_lengh > 3 ){
+            $(this).parents('.list-sorting-btn').addClass('active');
+          } else {
+            $(this).parents('.list-sorting-btn').removeClass('active');
+          }
+        });
+
+       $('.layer-popup-area .custom-form').click(function(){
+        if ($(this).find('input').attr('disabled')) {
+          $(this).removeClass('active');
+        } else {
+          $('.layer-popup-area .custom-form').removeClass('active');
+          $(this).addClass('active');
+        }
+       }); 
+
+       $('.layer-popup-area .custom-form').keydown(function(){
+        if (window.event.keyCode==13) {
+          $('.layer-popup-area .custom-form').removeClass('active');
+          $(this).addClass('active');
+        }
+        
+       }); 
+    </script>
+</body>
+</html>

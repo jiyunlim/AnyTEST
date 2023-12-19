@@ -1,0 +1,572 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<title>[공통] Modal, Popup 모음 | SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/seller.css">
+	<script>document.documentElement.dataset.userAgent = navigator.userAgent;</script>
+</head>
+
+<body>
+<div class="wrap ui-page">
+	<header class="ui-header">
+		<h1 class="ui-h1">Modal 모음</h1>
+	</header>
+
+	<main role="main" class="content" style="padding-top: 2rem;">
+
+		<h2 class="ui-h2">Layer Dimmed Popup(Modal)</h2>
+		<div class="ui-box">
+			<h3 class="ui-h3">Seller Front</h3>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-seller-detail-a1">바로도착(행복배송) 가능 안내</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-seller-detail-a2">바로도착(행복배송) 불가 안내</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-seller-detail-a3">행복배송 불가 안내</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-seller-detail-a4">장바구니 삭제</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-seller-detail-a5">장바구니 > 이전 장바구니 주문삭제</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-seller-detail-a7">장바구니 > 일시적인 오류</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-seller-detail-a8">장바구니 > 완료한 신청서</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-seller-detail-a9">장바구니 > 상품 품절</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-seller-detail-a10">장바구니 > 담기</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-seller-detail-a6">모회선 인증불가</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-delivery-info">주문확인 > 배송정보 확인</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-notice-untact">다이렉트 플랜 가입 유의사항</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-failed-authct">휴대폰 인증 실패</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-enter-serialnum">휴대폰 일련번호 알림</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-enter-moveto">신청서 작성</button>
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-seller-detail-a1" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">바로도착(행복배송) 가능 안내</h1>
+						</div>
+
+						<div class="modal-content">
+							<p class="paragraph">해당 지역은 서비스 대상 지역이며, 바로도착, 행복배송 모두 가능합니다.</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">확인</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-seller-detail-a2" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">바로도착(행복배송) 불가 안내</h1>
+						</div>
+
+						<div class="modal-content">
+							<!-- case 1 -->
+							<p class="paragraph">다른 주소를 입력하시거나 배송방법을 택배로 변경해주세요.</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-l">
+								<button type="button" class="btn-default-text js-modal-close">주소지 변경</button>
+							</span>
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">택배로 변경</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->				
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-seller-detail-a3" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">행복배송 불가 안내</h1>
+						</div>
+
+						<div class="modal-content">
+							<p class="paragraph">해당 지역은 서비스 대상 지역이나, 지금은 행복배송이 불가능합니다. 배송방법을 바로도착으로 변경해주세요.
+							</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">바로도착으로 변경</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->			
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-seller-detail-a4" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">알림</h1>
+						</div>
+
+						<div class="modal-content">
+							<p class="paragraph">해당 주문을 삭제 하시겠습니까?
+							</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">삭제</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->			
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-seller-detail-a5" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">이전 장바구니 주문 삭제</h1>
+						</div>
+
+						<div class="modal-content">
+							<p class="paragraph">장바구니가 가득찼습니다. <br>가장 오래된 상품 1개를 삭제하고 담을까요?</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-l">
+								<button type="button" class="btn-default-text js-modal-close">취소</button>
+							</span>
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">확인</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-seller-detail-a7" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">알림</h1>
+						</div>
+
+						<div class="modal-content">
+							<p class="paragraph">일시적인 오류로 장바구니 담기에 실패했습니다. <br>다시 시도해 주세요.</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">확인</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-seller-detail-a8" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">알림</h1>
+						</div>
+
+						<div class="modal-content">
+							<p class="paragraph">작성 완료한 신청서가 있습니다. <br> 취소 후 다른 상품 가입이 가능합니다.</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-l">
+								<button type="button" class="btn-default-text js-modal-close">주문 확인하기</button>
+							</span>
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">닫기</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->		
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-seller-detail-a9" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">알림</h1>
+						</div>
+
+						<div class="modal-content">
+							<p class="paragraph">상품이 품절 되었습니다.</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">확인</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->	
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-seller-detail-a10" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">알림</h1>
+						</div>
+
+						<div class="modal-content">
+							<p class="paragraph">장바구니에 상품을 담았습니다.</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-l">
+								<button type="button" class="btn-default-text js-modal-close">계속 주문</button>
+							</span>
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">장바구니 가기</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-delivery-info" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">바로도착</h1>
+						</div>
+
+						<div class="modal-content">
+							<!-- case 1. -->
+							<p class="title-desc"><em>00시 00분 00초</em> 이내 주문하면 오늘 도착</p>
+							<!-- case 2.  -->
+							<p class="title-desc">꼼꼼하게 포장하여 우체국 익일 특급 배송</p>
+							<!-- case 3. -->
+							<p class="title-desc">주문하고 가까운 대리점에서 바로 찾기</p>
+							<!-- case 4. -->
+							<p class="title-desc">15시 이후 주문 시 내일(주말:월요일) 도착</p>
+							
+							<table class="table-row-list">
+								<caption>배송 정보</caption>
+								<colgroup>
+									<col style="width:30%;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">휴대폰번호</th>
+										<td>010-1234-5678</td>
+									</tr>
+									<tr>
+										<th scope="row">매장정보</th>
+										<td>
+											<span class="txt-row">인천중구대리점 부천시청역</span>
+											<span class="txt-row">직영점</span>
+											<span class="txt-row">032-000-0000</span>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">방문일시</th>
+										<td>
+											<span class="txt-row">2020년 12월 02일</span>
+											<span class="txt-row">18:00 - 18:30</span>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">주소</th>
+										<td>
+											<span class="txt-row">12345</span>
+											<span class="txt-row">서울시 중구 을지로(을지로1가)</span>
+											<span class="txt-row">페럼타워 14층</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<button type="button" class="btn-close">
+							<span class="ico-close">팝업 닫기</span>
+						</button>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-seller-detail-a6" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">알림</h1>
+						</div>
+
+						<div class="modal-content">
+							<p class="paragraph">인증하신 회선에서는 선택하신 <br>요금제를 사용할 수 없습니다.</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-c">
+								<button type="button" class="btn-secondary-text">확인</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-notice-untact" role="dialog" aria-modal="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">다이렉트 플랜 가입 유의사항</h1>
+						</div>
+
+						<div class="modal-content">
+							<p class="paragraph">다이렉트 플랜 가입 시, 아래 유의사항을 반드시 확인 바랍니다.</p>
+							<div class="inbox">
+								<ul class="list-order">
+									<li class="item-order">
+										<p>다이렉트 플랜 이용 시 약정 할인(T 지원금약정, 선택약정, 무약정플랜)을 받을 수 없습니다. 
+                      <span>- 기기변경 시 기존 약정을 종료하지 않고 재약정할 수 있는 조건을 충족하는 경우, 다이렉트 플랜에 가입할 때 기존 약정을 승계하실 수 있습니다.</span> 
+                      <span>- 다이렉트 플랜 가입 시 기존 약정을 승계하신 경우, 다른 요금제로 변경해도 약정 할인이 제공되지 않으며, 승계한 약정의 남은 기간 동안 다른 약정으로 재승계하실 수 없습니다.</span>
+                      <span>- T 지원금약정을 승계하여 다이렉트 플랜에 가입하실 경우, 요금제에 따라 차액정산금이 발생할 수 있습니다.(차액정산금: 약정 기간 중 요금제 변경 시 반환해야 하는 지원금)</span>
+                    </p>
+									</li>
+									<li class="item-order">
+										<p>아래 결합상품을 이용하면서 다이렉트 플랜에 가입하실 수 있습니다. (이외 결합상품은 다이렉트 플랜과 함께 이용 불가)
+                    <span>- 가입할 수 있는 결합상품: 요즘가족결합, New TV플러스, T+인터넷/T+집전화, 온가족케이블플랜, TB끼리 온가족무료, TB끼리 TV플러스, 온가족플랜, New 온가족플랜, TB끼리 온가족프리</span>
+                    </p>
+									</li>
+									<li class="item-order">
+										<p>다이렉트 플랜 이용 시 	&#60;프리미엄패스&#62;에 가입하실 수 없습니다.
+                    </p>
+									</li>
+									<li class="item-order">
+										<p>T 다이렉트샵에서 제공하는 휴대폰 관련 각종 할인 쿠폰을 적용하여 신규가입/기기변경하신 경우, 다이렉트 플랜에 가입하실 수 없습니다.</p>
+									</li>
+									<li class="item-order">
+										<p>다이렉트 플랜 가입 후 다른 요금제로 변경하신 경우, 다이렉트 플랜에 다시 가입하실 수 없습니다. (단, 신규가입/기기변경한 날을 포함하여 15일 안에는 T 다이렉트샵 고객센터를 통해 다시 가입 가능)</p>
+									</li>
+								</ul>
+							</div>
+							<span class="c-ick sm">
+								<input type="checkbox" name="checkNotice" id="checkNotice">
+								<label for="checkNotice">상기 내용을 확인하였습니다.</label>
+							</span>
+						</div>
+						<div class="modal-footer">
+							<span class="group-l">
+								<button type="button" class="btn-default-text js-modal-close">취소</button>
+							</span>
+							<span class="group-r">
+								<!-- [D] 상기 내용 확인시 'disabled' 삭제 -->
+								<button type="button" class="btn-secondary-text" disabled>계속 주문하기</button>
+							</span>
+						</div>
+
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-failed-authct" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">휴대폰 인증 실패</h1>
+						</div>
+
+						<div class="modal-content">
+							<!-- case 1 -->
+							<p class="paragraph">입력하신 휴대폰 일련번호와 일치하는 SKT 단말 개통 이력이 존재하지 않습니다.</p>
+							<!-- case 2 -->
+							<p class="paragraph">휴대폰 정보 재검색 또는 자급제폰 등록으로 이동해 주세요.</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-l">
+								<button type="button" class="btn-default-text js-modal-close">재검색</button>
+							</span>
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">자급제폰 등록</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->	
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-enter-serialnum" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">알림</h1>
+						</div>
+
+						<div class="modal-content">
+							<p class="paragraph">휴대폰 일련번호를 입력해 주세요.</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">확인</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-enter-moveto" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">알림</h1>
+						</div>
+
+						<div class="modal-content">
+							<p class="paragraph">신청서 작성 페이지로 이동합니다.
+								<span class="point">* 3G/LTE/5G망 사용 시데이터 사용량에 반영됩니다.</span>
+							</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">확인</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->	
+		</div>
+
+		<!--2023 유선 모달 -->
+		<div class="ui-box wireline">
+			<h3 class="ui-h3">Wireline - Modal Form</h3>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-wireline-a1">유선 주문서 step > 상단 버튼 1</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-wireline-a2">유선 주문서 step > 상단 버튼 2</button>
+			
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-wireline-a1" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">알림</h1>
+						</div>
+
+						<div class="modal-content">
+							<p class="paragraph">입력한 내용이 초기화됩니다. 이동하시겠습니까?</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-l">
+								<button type="button" class="btn-default-text js-modal-close">취소</button>
+							</span>
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">확인</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->	
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-wireline-a2" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">알림</h1>
+						</div>
+
+						<div class="modal-content">
+							<p class="paragraph">선택한 할인/혜택이 초기화됩니다. 이동하시겠습니까?</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-l">
+								<button type="button" class="btn-default-text js-modal-close">취소</button>
+							</span>
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">확인</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->	
+		</div>
+	</main>
+</div>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/tdirect-ui.js"></script>
+
+	<script>
+		
+			$(function(){
+				//열기버튼 선택시
+				$('button[class^=btn-]').bind('click', function(){
+					var _thisBtn = $(this);
+					$(this).attr("aria-expanded", "true");        
+					var _dialogclass= _thisBtn.attr("data-modal");
+					$('div'+_dialogclass+'[role="dialog"]').siblings().attr({"tabindex" : "-1", "aria-hidden" : "true"});
+					$('div'+_dialogclass+'[role="dialog"]').show().find(".modal-body").focus();
+					
+					//닫기버튼 선택시
+					$('.modal-footer button[type="button"]').bind('click', function(){
+						$('div[role="dialog"]').hide().siblings().removeAttr("tabindex aria-hidden");       
+						_thisBtn.attr("aria-expanded", "false").focus();   
+					});
+				});
+
+			}); 
+
+	</script>
+</body>
+</html>

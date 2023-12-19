@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<title>[공통] Modal, Popup 모음 | SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/import_style.css">
+	<script>document.documentElement.dataset.userAgent = navigator.userAgent;</script>
+</head>
+
+<body>
+<div class="wrap ui-page">
+	<header class="ui-header">
+		<h1 class="ui-h1">Modal 모음</h1>
+	</header>
+
+	<main role="main" class="content" style="padding-top: 20px;">
+
+		<h2 class="ui-h2">Layer Dimmed Popup(Modal)</h2>
+		<div class="ui-box">
+			<h3 class="ui-h3">Seller Front</h3>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-wait1">잠시만요!</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-wait2">잠시만요!</button>
+			<button type="button" class="btn-extra btn-sm" data-modal=".modal-enter-moveto">신청서 작성</button>
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-wait1" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">잠시만요!</h1>
+						</div>
+
+						<div class="modal-content">
+							<p class="paragraph">약관에 동의하시면 <br/>보다 다양한 혜택을 받으실 수 있어요.</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">확인</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-wait2" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">잠시만요!</h1>
+						</div>
+
+						<div class="modal-content">
+							<!-- case 1 -->
+							<p class="paragraph">약관에 동의하시면 <br/>보다 다양한 혜택을 받으실 수 있어요.</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-l">
+								<button type="button" class="btn-default-text js-modal-close">다음에하기</button>
+							</span>
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">확인</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->
+			<!-- layer -->
+			<!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+			<div class="modal modal-enter-moveto" role="dialog" aria-modal="true" style="display:none;">
+				<div class="modal-dialog" role="document">
+					<div class="modal-body" tabindex="0">
+						<div class="modal-header">
+							<h1 class="modal-title">알림</h1>
+						</div>
+
+						<div class="modal-content">
+							<p class="paragraph">신청서 작성 페이지로 이동합니다.
+								<span class="point">* 3G/LTE/5G망 사용 시데이터 사용량에 반영됩니다.</span>
+							</p>
+						</div>
+
+						<div class="modal-footer">
+							<span class="group-r">
+								<button type="button" class="btn-secondary-text">확인</button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="dimmed"></div>
+			</div>
+			<!-- //layer -->				
+		</div>
+	</main>
+</div>
+
+
+<script src="../js/jquery-1.12.4.js"></script>
+<script src="../js/swiper/swiper.min.js"></script>
+<!-- <script src="../js/tdirect-ui.js"></script> -->
+
+<script>
+	$(function(){
+		//열기버튼 선택시
+		$('button[class^=btn-]').bind('click', function(){
+			var _thisBtn = $(this);
+			$(this).attr("aria-expanded", "true");        
+			var _dialogclass= _thisBtn.attr("data-modal");
+			$('div'+_dialogclass+'[role="dialog"]').siblings().attr({"tabindex" : "-1", "aria-hidden" : "true"});
+			$('div'+_dialogclass+'[role="dialog"]').show().find(".modal-body").focus();
+			
+			//닫기버튼 선택시
+			$('.modal-footer button[type="button"]').bind('click', function(){
+				$('div[role="dialog"]').hide().siblings().removeAttr("tabindex aria-hidden");       
+				_thisBtn.attr("aria-expanded", "false").focus();   
+			});
+		});
+
+	});     
+</script>
+
+</body>
+</html>

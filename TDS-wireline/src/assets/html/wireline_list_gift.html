@@ -1,0 +1,380 @@
+<!-- 유선 리스트 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>My Shop &lt; Wireline List</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/seller.css">
+
+	<script>
+			document.documentElement.dataset.userAgent = navigator.userAgent;
+	</script>
+</head>
+
+<body>
+  <!-- #skip_navigation -->
+  <div id="skipNav" class="skip_navi">
+    <a href="#contents-area" class="skip-link">본문 바로가기</a>
+  </div>
+  <!-- [D] "바닥 네비게이션" 유/무 Class 
+        'nav-logo-in' : 로그인  로그인 바 없는 상태
+        'nav-logo-out': 비로그인 로그인 바 있는 상태
+        '  ' : 네비게이션 바 자체가 없는 경우  
+    -->
+  <!-- [D] 유선 : wireline-list 추가  -->
+  <div class="wrap-device-list wireline-list nav-logo-out">
+    <!-- 헤더영역 -->
+    <div class="device-list-header">
+      <div class="top-header">
+        <div class="top-header-left">
+          <a href="#" class="ico-goback">
+            <img src="../img/icon-header-back@2x.png" alt="이전 페이지">
+          </a>
+        </div>
+        <div class="top-header-right">
+					<button type="button" class="ico-cart"><img src="../img/icon-header-cart@2x.png" alt="장바구니"></button>
+          <button type="button" class="ico-mypage" title="T 다이렉트샵 모바일웹(새창)"><img src="../img/icon-header-my@2x.png" alt="마이페이지"></button>
+				</div>
+      </div>
+    </div>
+    <!-- 상단네비 -->
+    <div class="top-navi-area-area">
+      <nav class="top-navi-area">
+        <div class="swiper-wrap">
+          <div class="swiper-container-menu">
+            <ul class="swiper-wrapper" role="tablist">
+              <li class="item swiper-slide" role="presentation">
+                <button type="button" class="btn" id="wireline_tab_menu_1" role="tab" aria-selected="true" aria-controls="wireline_tab_content1">인터넷</button>
+              </li>
+              <li class="item swiper-slide" role="presentation">
+                <button type="button" class="btn" id="wireline_tab_menu_2" role="tab" aria-selected="false" aria-controls="wireline_tab_content2"> B tv</button>
+              </li>
+              <li class="item swiper-slide" role="presentation">
+                <button type="button" class="btn" id="wireline_tab_menu_3" role="tab" aria-selected="false" aria-controls="wireline_tab_content3">결합할인</button>
+              </li>
+              <li class="item swiper-slide item-active" role="presentation">
+                <button type="button" class="btn current" id="wireline_tab_menu_4" role="tab" aria-selected="false" aria-controls="wireline_tab_content4">사은품</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- [웹접근성] aria-labelledby , id 값 유동적으로 변경 -->
+    <div class="tab-contents-area" role="tabpanel" aria-labelledby="wireline_tab_menu_3" id="wireline_tab_content3">
+			<h2 id="contents-area" tabindex="-1">
+        <span class="blind">본문시작</span>
+      </h2>
+      <h2 class="g-invisible">사은품</h2>
+			<div class="wireline-product-gift-list">
+				<!-- filter area -->
+				<section class="filter-area">
+					<h3 class="g-invisible">필터 설정</h3>
+					<div class="filter-group interYear" id="_interYearDiv">
+						<div class="filter-head">
+							<!-- [D] 옵션 선택한 값 매핑 시 button.label 에 클래스 selected 추가 -->
+							<button type="button" class="label selected" id="filter-year-menu" aria-haspopup="menu" aria-expanded="false" title="약정선택">
+								<span class="text" id="_interYearTxt">3년 약정</span>
+							</button>
+						</div>
+						<div class="filter-body" role="menu" aria-labelledby="filter-year-menu" >
+							<ul class="filter-list">
+								<li class="filter-list-item">
+									<button type="button" class="item" id="_year3" value="3년 약정">3년 약정</button>
+								</li>
+								<li class="filter-list-item">
+									<button type="button" class="item" id="_year2" value="2년 약정">2년 약정</button>
+								</li>
+								<li class="filter-list-item">
+									<button type="button" class="item" id="_year1" value="1년 약정">1년 약정</button>
+								</li>
+								<li class="filter-list-item">
+									<button type="button" class="item" id="_year0" value="무약정">무약정</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="filter-group product intern-product">
+						<div class="filter-head">
+							<!-- [D] 옵션 선택한 값 매핑 시 button.label 에 클래스 selected 추가 -->
+							<button type="button" class="label" id="filter-internet-menu" aria-haspopup="menu" aria-expanded="false" title="인터넷상품선택">
+								<span class="text" id="_interProdTxt">기가 라이트 인터넷</span>
+							</button>
+						</div>
+						<div class="filter-body" role="menu" aria-labelledby="filter-internet-menu">
+							<div class="cont">
+								<h5 class="title">인터넷 상품</h5>
+								<p class="discount-option">
+									<span class="c-ick">
+										<input type="radio" name="internetProduct" id="internetRadio0">
+										<label for="internetRadio0">기가 인터넷</label>
+									</span>
+									<span class="c-ick">
+										<input type="radio" name="internetProduct" id="internetRadio1" checked>
+										<label for="internetRadio1">기가 라이트 인터넷</label>
+									</span>
+									<span class="c-ick">
+										<input type="radio" name="internetProduct" id="internetRadio2">
+										<label for="internetRadio2">광랜 인터넷</label>
+									</span>
+									<span class="c-ick">
+										<input type="radio" name="internetProduct" id="internetRadio3">
+										<label for="internetRadio3">기가 인터넷 와이파이</label>
+									</span>
+									<span class="c-ick">
+										<input type="radio" name="internetProduct" id="internetRadio4">
+										<label for="internetRadio4">기가 라이트 인터넷 와이파이</label>
+									</span>
+									<span class="c-ick">
+										<input type="radio" name="internetProduct" id="internetRadio5">
+										<label for="internetRadio5">광랜 인터넷 와이파이</label>
+									</span>
+								</p>
+								<button type="button" class="btn-secondary btn-fix btn-rd">적용</button>
+							</div>
+						</div>
+					</div>
+					<div class="filter-group iptvProd" id="_iptvProdDiv">
+						<div class="filter-head">
+							<!-- [D] 옵션 선택한 값 매핑 시 button.label 에 클래스 selected 추가 -->
+							<button type="button" class="label" id="filter-btv-menu" aria-haspopup="menu" aria-expanded="false" title="btv상품">
+								<span class="text" id="_iptvProdTxt">B tv All</span>
+							</button>
+						</div>
+						<div class="filter-body" role="menu" aria-labelledby="filter-btv-menu">
+							<div class="cont">
+								<h5 class="title">IPTV 상품</h5>
+								<p class="discount-option">
+									<span class="c-ick">
+										<input type="radio" name="iptvProduct" id="iptvRadio0" checked="checked">
+										<label for="iptvRadio0">B tv All</label>
+									</span>
+									<span class="c-ick">
+										<input type="radio" name="iptvProduct" id="iptvRadio1">
+										<label for="iptvRadio1">B tv 스탠다드</label>
+									</span>
+									<span class="c-ick">
+										<input type="radio" name="iptvProduct" id="iptvRadio2">
+										<label for="iptvRadio2">B tv 이코노미</label>
+									</span>
+									<span class="c-ick">
+										<input type="radio" name="iptvProduct" id="iptvRadio3">
+										<label for="iptvRadio3">B tv 선택 안함</label>
+									</span>
+								</p>
+								<button type="button" class="btn-secondary btn-fix btn-rd">적용</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //filter area -->
+				<section class="selected-area">
+					<div class="selected-prod">
+						<span class="selected-tit">인터넷 상품</span>
+						<div class="selected-cnt">
+							<span class="selected-internetProd">기가 라이트 인터넷</span>
+							<a href="#" class="btn-more">보러 가기</a>
+						</div>
+					</div>
+					<div class="selected-prod">
+						<span class="selected-tit">IPTV 상품</span>
+						<div class="selected-cnt">
+							<span class="selected-iptvProd">B tv All</span>
+							<a href="#" class="btn-more">보러 가기</a>
+						</div>
+					</div>
+				</section>
+				<div class="gift-list-wrap">
+					<!-- 사은품 없을 때 -->
+					<div class="no-gift-area">
+						<p>선택하신 조건으로 등록된 사은품이 없습니다.</p>
+					</div>
+					<!-- //사은품 없을 때 -->
+					<ul class="gift-list">
+						<li class="gift-item">
+							<div class="inner">
+								<span class="thumb">
+									<em class="badge-tag best">BEST</em>
+									<img src="../img/wireline/gift_list_01.png" alt="삼성 BESPOKE Air">
+								</span>
+								<div class="block">
+									<strong class="title">
+										<span class="multiline-ellipsis">삼성 BESPOKE Air</span>
+									</strong>
+								</div>
+								<a href="#none" class="view-detail">자세히 보기</a>
+							</div>
+						</li>
+						<li class="gift-item">
+							<div class="inner">
+								<span class="thumb">
+									<em class="badge-tag">NEW</em>
+									<img src="../img/wireline/gift_list_01.png" alt="신세계 모바일 상품권 46만 원 ">
+								</span>
+								<div class="block">
+									<strong class="title">
+										<span class="multiline-ellipsis">신세계 모바일 상품권 <br>46만 원 </span>
+									</strong>
+								</div>
+								<a href="#none" class="view-detail">자세히 보기</a>
+							</div>
+						</li>
+						<li class="gift-item">
+							<div class="inner">
+								<span class="thumb">
+									<img src="../img/wireline/gift_list_01.png" alt="더슬림요금제 33% 추가 할인">
+								</span>
+								<div class="block">
+									<strong class="title">
+										<span class="multiline-ellipsis">더슬림요금제 <br>33% 추가 할인 </span>
+									</strong>
+								</div>
+								<a href="#none" class="view-detail">자세히 보기</a>
+							</div>
+						</li>
+						<li class="gift-item">
+							<div class="inner">
+								<span class="thumb">
+									<em class="badge-tag">인기</em>
+									<img src="../img/wireline/gift_list_01.png" alt="T 다이렉트샵 이용권 46만 원 ">
+								</span>
+								<div class="block">
+									<strong class="title">
+										<span class="multiline-ellipsis">T 다이렉트샵 이용권 <br>46만 원 </span>
+									</strong>
+								</div>
+								<a href="#none" class="view-detail">자세히 보기</a>
+							</div>
+						</li>
+						<li class="gift-item">
+							<div class="inner">
+								<span class="thumb">
+									<img src="../img/wireline/gift_list_01.png" alt="네이버페이 포인트 46만 원">
+								</span>
+								<div class="block">
+									<strong class="title">
+										<span class="multiline-ellipsis">네이버페이 포인트 <br>46만 원 </span>
+									</strong>
+								</div>
+								<a href="#none" class="view-detail">자세히 보기</a>
+							</div>
+						</li>
+						<li class="gift-item">
+							<div class="inner">
+								<span class="thumb">
+									<img src="../img/wireline/gift_list_01.png" alt="홈플러스 모바일 상품권 46만 원">
+								</span>
+								<div class="block">
+									<strong class="title">
+										<span class="multiline-ellipsis">홈플러스 모바일 상품권 <br>46만 원 </span>
+									</strong>
+								</div>
+								<a href="#none" class="view-detail">자세히 보기</a>
+							</div>
+						</li>
+						<li class="gift-item">
+							<div class="inner">
+								<span class="thumb">
+									<img src="../img/wireline/gift_list_01.png" alt="블루스카이 공기청정기">
+								</span>
+								<div class="block">
+									<strong class="title">
+										<span class="multiline-ellipsis">블루스카이 공기청정기</span>
+									</strong>
+								</div>
+								<a href="#none" class="view-detail">자세히 보기</a>
+							</div>
+						</li>
+						<li class="gift-item">
+							<div class="inner">
+								<span class="thumb">
+									<img src="../img/wireline/gift_list_01.png" alt="삼성전자 드럼세탁기 ">
+								</span>
+								<div class="block">
+									<strong class="title">
+										<span class="multiline-ellipsis">삼성전자 드럼세탁기 <br>9KG </span>
+									</strong>
+								</div>
+								<a href="#none" class="view-detail">자세히 보기</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+    </div>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/swiper.min.js"></script>
+  <script src="../js/tdirect-ui.js"></script>
+
+	<script>
+    // 메뉴
+    var swiper_menu = new Swiper('.swiper-container-menu', {
+      slidesPerView: 'auto',
+      spaceBetween: 24,
+      loop: false,
+    });
+    // 상단네비활성화
+    $('.swiper-container-menu ul li button').on('click', function() {
+      var tabId = $(this).attr('id');
+      var tabControl = $(this).attr('aria-controls');
+      $('.tab-contents-area').attr({
+        "aria-labelledby": tabId,
+        "id": tabControl
+      });
+      $('.swiper-container-menu ul li button').removeClass('current').attr("aria-selected", "false");
+      $(this).addClass('current').attr("aria-selected", "true");
+    })
+    // ----유선 콘텐츠 js----
+		//<유선 웹접근성 포커싱 08/01>
+		function giftFilter () {
+			$('.filter-group .label').on('click', function () {
+
+				var _tsLabel = $(this); //선택 값
+
+				_tsLabel.attr("aria-expanded", true );
+
+				if( $(".filter-area .filter-group").hasClass('active') ){
+					//## 옵션 값 선택 'n 약정 '
+					$('.filter-body').find('button.item').on('click',function(){
+						var selecTxt = $(this).text()
+						$('#_interYearTxt').html(selecTxt);
+						$(".filter-area .filter-group").removeClass('active');
+
+						//해당 옵션 선택 후 포커싱 돌아가기
+						if($(".filter-area .filter-group").removeClass('active')){
+							_tsLabel.focus();
+						}
+					});
+
+					// ## 옵션 값 선택 인터넷상품/btv상품 ' [type="radio"] '
+					$('.filter-body').find('input[type="radio"]').on('change',function(){
+						var selecVal = $(this).siblings('label').text(); //선택 텍스트 값
+						var idVal = $(this).parents('.filter-group').find('button.label span').attr('id'); //선택 된 텍스트 붙이기
+						$("#"+idVal).html(selecVal)
+
+						if($(this)){
+							$('.discount-option').siblings('button.btn-secondary').on('click', function () {
+								$(".filter-area .filter-group").removeClass('active');
+
+								//해당 옵션 선택 후 포커싱 돌아가기
+								if($(".filter-area .filter-group").removeClass('active')){
+									_tsLabel.focus();
+								}
+							});
+						}
+					});
+					
+				}else{
+					_tsLabel.attr("aria-expanded", false );
+				}
+			});
+
+		}giftFilter ();
+
+		
+  </script>
+</body>
+</html>

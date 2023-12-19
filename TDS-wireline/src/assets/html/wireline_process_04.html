@@ -1,0 +1,1150 @@
+<!-- 2023 _유선 주문 프로세스 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/seller.css">
+    <script>
+        document.documentElement.dataset.userAgent = navigator.userAgent;
+    </script>
+</head>
+
+<body>
+  <div class="wrap seller-wrap bar-sticky wireline-purchase-content">
+		<!-- header--><!-- //header -->
+		<div class="sticky-top">
+			<div class="spot-step">
+				<ol class="step-list">
+					<!-- [D] 작성 완료시 end 클래스 추가, 현재페이지는 링크에 aria-current="step" 추가 -->
+					<li class="step-item end"><a href="#none" class="link-block"><span>01</span><span>본인인증</span></a></li>
+					<li class="step-item end"><a href="#none" class="link-block"><span>02</span><span>설치 정보</span></a></li>
+					<li class="step-item end"><a href="#none" class="link-block"><span>03</span><span>상품 선택</span></a></li>
+					<li class="step-item"><a href="#none" class="link-block" aria-current="step"><span>04</span><span>할인/혜택</span></a></li>
+				</ol>
+			</div>
+		</div>
+		<!-- content -->
+		<main role="main" class="content">
+			<h1 class="g-invisible">주문서 할인/혜택 정보</h1>
+			<div class="l-grid l-seller"> 
+				<strong class="purchase-guide-text"> 원하시는 가입 혜택을 선택해 주세요. <span class="txt-sub">(택 1)</span></strong>
+				<div class="purchase-cont wireline-benefit-fee-dc">
+					<div role="tabpanel" class="tab-panel">
+						<div class="title big_tl">혜택 선택 <em class="ico-require">(필수)</em>
+						</div>
+						<div role="tablist" class="rdo-list">
+							<button type="button" role="tab" class="rdo-item" id="_payMethodTab1" aria-controls="_payPanel1" aria-selected="false">
+								<span class="label">사은품</span>
+							</button>
+							<button type="button" role="tab" class="rdo-item" id="_payMethodTab2" aria-controls="_payPanel2" aria-selected="true">
+								<span class="label">매달 요금 할인</span>
+							</button>
+						</div>
+						<!-- 사은품 선택 선택 시 노출 -->
+						<div role="tabpanel" class="folded-panel" aria-labelledby="_payMethodTab1" id="_payPanel1" aria-hidden="true">
+							<!-- 사은품 선택 전 -->
+							<div class="expand-item">
+								<div class="expand-benefit-item">
+									<span class="benefit-thumb">
+										<img src="../img/wireline/img_benefit_gifts.png" alt="사은품">
+									</span>
+									<span class="benefit-info">
+										<span class="benefit-info-cont">
+											<span class="txt-tit">사은품 선택하기</span>
+										</span>
+									</span>
+									<span class="benefit-btn">
+										<button type="button" class="btn-more">
+											<span class="hidden">사은품 선택</span>
+										</button>
+									</span>
+								</div>
+							</div>
+							<!-- 사은품 상품권 선택시 -->
+							<div class="expand-item">
+								<div class="expand-benefit-item">
+									<span class="benefit-thumb">
+										<img src="../img/wireline/img_benefit_gifts_card.png" alt="T 다이렉트샵 상품권 46만 원권">
+									</span>
+									<span class="benefit-info">
+										<span class="benefit-info-cont">
+											<span class="txt-tit">T 다이렉트샵 상품권 <br>46만 원권 </span>
+										</span>
+									</span>
+									<span class="benefit-btn">
+										<button type="button" class="btn-change">변경</button>
+									</span>
+								</div>
+								<ul class="dsc-list-lg">
+									<li class="dsc-item">사은품은 개통 완료 후 입력하신 주소 또는 연락처로 발송됩니다.</li>
+								</ul>
+							</div>
+							<ul class="buyer-list">
+								<!-- [D]인증 전 -->
+								<li class="buyer-item">
+									<label for="_tgiftMmsPhone" class="title">사은품 수령 정보 <em class="ico-require">(필수)</em>
+									</label>
+									<ul class="dsc-list-lg guide-text">
+										<li class="dsc-item">신청하시는 고객님 명의의 휴대폰 번호로 발송해드립니다.</li>
+									</ul>
+									<div class="form-group">
+										<span class="c-input disabled">
+											<input type="tel" maxlength="11" class="input" value="010-000-0000" id="_tgiftMmsPhone">
+										</span>
+									</div>
+								</li>
+							</ul>
+							<!-- 사은품 제품 선택시 -->
+							<div class="expand-item">
+								<div class="expand-benefit-item">
+									<span class="benefit-thumb">
+										<img src="../img/wireline/img_benefit_gifts_prd.png" alt="삼성 BESPOKE 큐브TM Air">
+									</span>
+									<span class="benefit-info">
+										<span class="benefit-info-cont">
+											<span class="txt-tit txt-prd-tit">삼성블루스카이 7000 <br> 공기청 </span>
+										</span>
+									</span>
+									<span class="benefit-btn">
+										<button type="button" class="btn-change">변경</button>
+									</span>
+								</div>
+								<ul class="dsc-list-lg">
+									<li class="dsc-item">사은품은 개통 완료 후 입력하신 주소 또는 연락처로 별도 발송됩니다.</li>
+								</ul>
+							</div>
+							<ul class="buyer-list">
+								<li class="buyer-item">
+									<strong class="title">사은품 수령 정보 <em class="ico-require">(필수)</em>
+									</strong>
+									<div class="c-ick same_addr_chk">
+										<div class="ui-inner">
+											<span class="c-ick">
+												<input type="checkbox" name="_checkBlank" id="_checkBlank1_1" checked="checked">
+												<label for="_checkBlank1_1">설치 주소와 동일</label>
+											</span>
+										</div>
+									</div>
+									<div class="detail-address">
+										<div class="form-group">
+											<span class="c-input disabled">
+												<input type="number" title="우편번호" class="input" value="04539" readonly="readonly" required>
+											</span>
+											<button type="button" class="btn-extra">주소 찾기</button>
+										</div>
+										<div class="form-group">
+											<span class="c-input disabled">
+												<input type="text" title="기본 주소" class="input" value="서울 중구 을지로 65 (을지로2가)" readonly="readonly" required>
+											</span>
+										</div>
+										<div class="form-group">
+											<span class="c-input disabled">
+												<input type="text" title="나머지 주소" maxlength="50" class="input" value="SK텔레콤 빌딩">
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="buyer-item">
+									<strong class="title">사은품 수령 정보 <em class="ico-require">(필수)</em>
+									</strong>
+									<div class="c-ick same_addr_chk">
+										<div class="ui-inner">
+											<span class="c-ick">
+												<input type="checkbox" name="_checkBlank" id="_checkBlank1_2" checked="checked">
+												<label for="_checkBlank1_2">설치 주소와 동일</label>
+											</span>
+										</div>
+									</div>
+									<div class="detail-address">
+										<div class="form-group">
+											<span class="c-input disabled">
+												<input type="number" title="우편번호" class="input" value="04539" readonly="readonly" required>
+											</span>
+											<button type="button" class="btn-extra">주소 찾기</button>
+										</div>
+										<div class="form-group detail-address-textarea">
+											<div class="c-textarea">
+												<textarea cols="20" rows="2" title="기본 주소" maxlength="20" readonly="readonly" required>서울특별시 강남구 강남대로120길 58 (논현동, 우성아파트)</textarea>
+											</div>
+										</div>
+										<div class="form-group detail-address-half">
+											<span class="c-input disabled">
+												<input type="text" title="상세 주소 동" class="input" value="101" required data-mode="number">
+											</span>
+											<span class="unit-txt">동</span>
+											<span class="c-input disabled">
+												<input type="text" title="상세 주소 호" class="input" value="1014" required data-mode="number">
+											</span>
+											<span class="unit-txt">호</span>
+										</div>
+									</div>
+								</li>
+								<li class="buyer-item">
+									<strong class="title">사은품 수령 정보 <em class="ico-require">(필수)</em>
+									</strong>
+									<div class="c-ick same_addr_chk">
+										<div class="ui-inner">
+											<span class="c-ick">
+												<input type="checkbox" name="_checkBlank" id="_checkBlank2_1">
+												<label for="_checkBlank2_1">설치 주소와 동일</label>
+											</span>
+										</div>
+									</div>
+									<div class="detail-address">
+										<div class="form-group">
+											<span class="c-input">
+												<input type="number" title="우편번호" class="input" readonly="readonly" required>
+											</span>
+											<!--부가서비스-->
+											<button type="button" class="btn-extra">주소 찾기</button>
+											<!--부가서비스-->
+										</div>
+										<div class="form-group">
+											<span class="c-input">
+												<input type="text" title="기본 주소" class="input" readonly="readonly" required>
+											</span>
+										</div>
+										<div class="form-group">
+											<span class="c-input">
+												<input type="text" title="나머지 주소" maxlength="50" class="input">
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="buyer-item">
+									<strong class="title">사은품 수령 정보 <em class="ico-require">(필수)</em>
+									</strong>
+									<div class="c-ick same_addr_chk">
+										<div class="ui-inner">
+											<span class="c-ick">
+												<input type="checkbox" name="_checkBlank" id="_checkBlank2_2">
+												<label for="_checkBlank2_2">설치 주소와 동일</label>
+											</span>
+										</div>
+									</div>
+									<div class="detail-address">
+										<div class="form-group">
+											<span class="c-input">
+												<input type="number" title="우편번호" class="input" value="" readonly="readonly" required>
+											</span>
+											<button type="button" class="btn-extra">주소 찾기</button>
+										</div>
+										<div class="form-group detail-address-textarea">
+											<div class="c-textarea">
+												<textarea cols="20" rows="2" title="기본 주소" maxlength="20" readonly="readonly" required></textarea>
+											</div>
+										</div>
+										<div class="form-group detail-address-half">
+											<span class="c-input">
+												<input type="text" title="상세 주소 동" class="input" value="" required data-mode="number">
+											</span>
+											<span class="unit-txt">동</span>
+											<span class="c-input">
+												<input type="text" title="상세 주소 호" class="input" value="" required data-mode="number">
+											</span>
+											<span class="unit-txt">호</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- 사은품 대신 매달 요금 할인받기 선택 시 노출 -->
+						<div role="tabpanel" class="folded-panel" aria-labelledby="_payMethodTab2" id="_payPanel2" aria-hidden="false">
+							<ul class="buyer-list">
+								<li class="buyer-item expand-panel v2" style="display: block;">
+									<div class="expand-item">
+										<div class="expand-benefit-item">
+											<span class="benefit-thumb">
+												<img src="../img/wireline/img_benefit_price.png" alt="요금 할인 혜택">
+											</span>
+											<span class="benefit-info">
+												<span class="benefit-info-cont">
+													<span class="txt-tit">요금 할인 혜택</span>
+													<span class="txt-dsc">(더슬림 요금제)</span>
+													<span class="txt-discount">
+														<span class="num">-2,750</span>원/월 </span>
+												</span>
+											</span>
+											<span class="benefit-btn">
+												<button type="button" class="btn-view-detail">
+													<span class="hidden">자세히보기</span>
+												</button>
+											</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- 최대할인금액 -->
+				<strong class="purchase-guide-text">고객님, <br> 최대 할인 금액을 확인해 보세요. </strong>
+				<div class="purchase-cont wireline-benefit-fee-dc">
+					<div role="tabpanel" class="tab-panel">
+						<div class="title big_tl line-type">복지할인 <em class="ico-require">(필수)</em>
+						</div>
+						<div class="rdo-list abs combination-tab-list">
+							<span class="c-ick">
+								<!-- [D] label for값과 연결된 form요소 id 값 동일하게 적용 -->
+								<input type="radio" name="_combinationTab" id="_combinationTab1" data-tab="combination-tab1" checked>
+								<label for="_combinationTab1" class="label">적용 안함</label>
+							</span>
+							<span class="c-ick">
+								<!-- [D] label for값과 연결된 form요소 id 값 동일하게 적용 -->
+								<input type="radio" name="_combinationTab" id="_combinationTab2" data-tab="combination-tab2">
+								<label for="_combinationTab2" class="label">적용</label>
+							</span>
+						</div>
+						<!-- [D] 복지할인 적용 안함 시: hide / 적용 시: show -->
+						<div class="folded-panel welfare-dc-apply-panel" id="combination-tab2">
+							<div class="form-group pad1020">
+								<span class="c-select">
+									<select title="복지할인 선택" class="select">
+										<option>선택</option>
+										<option>심신장애인</option>
+										<option>유공자</option>
+										<option>기초생활수급자(생계/의료)</option>
+										<option>독립유공자유족</option>
+										<option>국가유공자 중 생활조정지급대상자</option>
+										<option>복지시설 운영자</option>
+										<option>차상위계층</option>
+										<option>다자녀가구</option>
+										<option>실버가구</option>
+									</select>
+								</span>
+								<button type="button" class="btn-extra">확인</button>
+							</div>
+						</div>
+						<div class="purchase-form-wrap">
+							<!-- [D] 무선결합정보 있는 경우 -->
+							<div class="combined-purchase-form-box">
+                <div class="purchase-form-list">
+                  <span>SKT 휴대폰 결합 <em class="ico-require">(필수)</em></span>
+                  <ul class="dsc-list">
+                    <li class="dsc-item">최대 5대 결합 가능</li>
+                    <li class="dsc-item"> 이미 결합 상품을 이용중입니다. <br> 지금은 휴대폰 결합을 신청하실 수 없습니다. <br> 자세한 설명은 SKT 유선 가입센터(1670-2001)로 <br> 상담 신청 해주세요. </li>
+                  </ul>
+								</div>
+								<!-- [D] 비활성 상태 클래스 disabled 적용 -->
+								<div class="opt-quantity-select disabled">
+									<!-- [D] 비활성 상태 속성 disabled 적용 -->
+									<button type="button" class="btn-minus" disabled>
+										<span class="hidden">감소</span>
+									</button>
+									<span class="inp-wrap">
+										<input type="text" title="수량" value="1대" id="_opt-quantity" class="input" readonly>
+										<label for="_opt-quantity" class="label hidden">수량</label>
+									</span>
+									<span class="txt-wrap txt-wrap-first">
+										<em class="txt">결합 안 함</em>
+									</span>
+									<span class="txt-wrap txt-wrap-last">
+										<em class="txt">2대 이상</em>
+									</span>
+									<!-- [D] 비활성 상태 속성 disabled 적용 -->
+									<button type="button" class="btn-plus" disabled>
+										<span class="hidden">증가</span>
+									</button>
+								</div>
+							</div>
+							<!-- [D] 무선결합정보 없는 경우 -->
+							<div class="combined-purchase-form-box">
+                <div class="purchase-form-list">
+                  <span>SKT 휴대폰 결합 <em class="ico-require">(필수)</em></span>
+                    <!-- [D] 휴대폰 결합 2대 이상일 경우 
+                      .text-toggle 문구 노출 
+                    - 결합없음, 1대일 경우 문구 비노출
+                    - 기존 결합정보 있는 고객에게도 비노출 -->
+                    <ul class="dsc-list">
+                      <li class="dsc-item">최대 5대 결합 가능</li>
+                      <li class="dsc-item text-toggle">2대 이상 결합 시, 필요한 서류와 제출 방법에 대해 <br>문자로 안내드립니다. </li>
+                    </ul>
+								</div>
+								<!-- [D] 비활성 상태 클래스 disabled 적용 -->
+								<div class="opt-quantity-select">
+									<!-- [D] 비활성 상태 속성 disabled 적용 -->
+									<button type="button" class="btn-minus" title="수량선택">
+										<span class="hidden">감소</span>
+									</button>
+									<span class="inp-wrap">
+										<input type="text" title="수량" value="1대" id="_opt-quantity" class="input" readonly>
+										<label for="_opt-quantity" class="label hidden">수량</label>
+									</span>
+									<span class="txt-wrap txt-wrap-first">
+										<em class="txt">결합 안 함</em>
+									</span>
+									<span class="txt-wrap txt-wrap-last">
+										<em class="txt">2대 이상</em>
+									</span>
+									<!-- [D] 비활성 상태 속성 disabled 적용 -->
+									<button type="button" class="btn-plus" title="수량선택">
+										<span class="hidden">증가</span>
+									</button>
+								</div>
+							</div>
+							<!-- [D] 휴대폰 결합: '결합 안 함'일 경우 hide -->
+							<div class="discount-detail-skt-phone">
+								<div class="title">결합 신청을 위해 본인 명의의 휴대폰 번호를 인증해 주세요.</div>
+								<div class="stitle"><label for="skt-confirm">SKT 휴대폰 인증 <em class="ico-require">(필수)</em></label>
+								</div>
+								<div class="form-group">
+									<!-- [D] 비활성시 클래스 disabled 적용 -->
+									<span class="c-input">
+										<input id="skt-confirm" type="number" title="휴대폰번호" class="input" value="" required="" pattern="[0-9]*" inputmode="numeric">
+									</span>
+									<button type="button" class="btn-extra">인증하기</button>
+								</div>
+							</div>
+						</div>
+						<div class="purchase-form-wrap">
+							<div class="discount-detail-list-wrap">
+								<div class="discount-detail-summary">
+									<div class="detail-cont">
+										<strong class="item-tit">
+											<span class="txt">총 할인 금액</span>
+										</strong>
+										<span class="item-txt">
+											<em class="num">-39,050</em>원 </span>
+									</div>
+								</div>
+								<ul class="discount-detail-list">
+									<li class="discount-detail-item">
+										<div class="detail-cont">
+											<div class="item-tit">
+												<span class="txt">복지할인</span>
+												<span class="badge-round">최대</span>
+											</div>
+											<div class="item-txt">
+												<em class="num">-20,000</em>원
+											</div>
+										</div>
+									</li>
+									<li class="discount-detail-item combined-discount1">
+										<div class="detail-cont">
+											<div class="item-tit">
+												<span class="txt">휴대폰 결합할인</span>
+												<!-- <button class="tool-tip-1 tool-tip mark-info">
+													<span class="txt-box"> SKT휴대폰과 인터넷, IPTV <br> 상품 결합 시 적용되는 <br> 할인 금액입니다. <div class="btn-close"></div>
+													</span>
+												</button> -->
+                        <div class="tool-tip-wrap">
+                          <button class="tool-tip mark-info" aria-describedby="skt-discount-tip" aria-expanded="false"><span class="hidden">도움말 보기</span></button> 
+                          <div class="txt-box" role="tooltip" id="skt-discount-tip" aria-hidden="true"> SKT휴대폰과 인터넷, IPTV <br> 상품 결합 시 적용되는 <br> 할인 금액입니다.
+                            <button type="button" class="ico-close">툴팁닫기</button>
+                          </div>
+                        </div>
+											</div>
+											<div class="item-txt">
+												<em class="num">-6,600</em>원
+											</div>
+										</div>
+									</li>
+									<li class="discount-detail-item combined-discount2">
+										<div class="detail-cont">
+											<div class="item-tit">
+												<span class="txt">인터넷+IPTV 결합할인</span>
+												<!-- <button class="tool-tip-1 tool-tip mark-info">
+													<span class="txt-box">  <div class="btn-close"></div>
+													</span>
+												</button> -->
+                        <div class="tool-tip-wrap">
+                          <button class="tool-tip mark-info" aria-describedby="skt-discount-tip2" aria-expanded="false"><span class="hidden">도움말 보기</span></button> 
+                          <div class="txt-box" role="tooltip" id="skt-discount-tip2" aria-hidden="true"> 인터넷과 IPTV 함께 가입 시 <br> 받을 수 있는 할인 혜택으로 <br> 선택한 상품에 따라 할인 금액이 <br> 자동 적용됩니다.
+                            <button type="button" class="ico-close">툴팁닫기</button>
+                          </div>
+                        </div>
+											</div>
+											<div class="item-txt">
+												<em class="num">-7,700</em>원
+											</div>
+										</div>
+									</li>
+									<li class="discount-detail-item">
+										<div class="detail-cont">
+											<div class="item-tit">
+												<span class="txt">두번째 IPTV 이용료 할인</span>
+											</div>
+											<div class="item-txt">
+												<em class="num">-9,350</em>원
+											</div>
+										</div>
+									</li>
+									<li class="discount-detail-item">
+										<div class="detail-cont">
+											<div class="item-tit">
+												<span class="txt">온라인 전용 할인</span>
+											</div>
+											<div class="item-txt">
+												<em class="num">-2,200</em>원
+											</div>
+										</div>
+									</li>
+									<li class="discount-detail-item">
+										<div class="detail-cont">
+											<div class="item-tit">
+												<span class="txt">요금 할인 혜택(더슬림 요금제)</span>
+											</div>
+											<div class="item-txt">
+												<em class="num">-11,000</em>원
+											</div>
+										</div>
+									</li>
+									<li class="discount-detail-item">
+										<div class="detail-cont">
+											<div class="item-tit">
+												<span class="txt">셋톱박스 요금 할인</span>
+											</div>
+											<div class="item-txt">
+												<em class="num">-2,200</em>원
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="discount-addition-list-wrap">
+								<ul class="discount-addition-list">
+									<li class="discount-addition-item">
+										<div class="detail-thumb">
+											<img src="../img/wireline/ico_add_dc_fee.png" alt="SKT 휴대폰 요금 추가 할인">
+										</div>
+										<div class="detail-cont">
+											<div class="item-tit">
+												<span class="txt">SKT 휴대폰 요금 추가 할인</span>
+												<!-- <button class="tool-tip-1 tool-tip mark-info">
+													<span class="txt-box txt-box-type2"> 1대 - “휴대폰 요금 3,500원 할인” <br> 2대 - “휴대폰 요금 총 7,000원 할인” <br> 3대 - “휴대폰 요금 총 18,000원 할인” <br> 4 ~ 5대(광랜) <br>- “휴대폰 요금 총 18,000원 할인” <br> 4 ~ 5대(기가라이트,기가) <br>- "휴대폰 요금 총 24,000원 할인" <br> ※ 3년 약정 기준 금액. 2년 약정 시 50%, 1년 약정 시 25% 적용 <div class="btn-close"></div>
+													</span>
+												</button> -->
+                        <div class="tool-tip-wrap">
+                          <button class="tool-tip mark-info" aria-describedby="skt-discount-tip3" aria-expanded="false"><span class="hidden">도움말 보기</span></button> 
+                          <div class="txt-box" role="tooltip" id="skt-discount-tip3" aria-hidden="true"> 1대 - “휴대폰 요금 3,500원 할인” <br> 2대 - “휴대폰 요금 총 7,000원 할인” <br> 3대 - “휴대폰 요금 총 18,000원 할인” <br> 4 ~ 5대(광랜) <br>- “휴대폰 요금 총 18,000원 할인” <br> 4 ~ 5대(기가라이트,기가) <br>- "휴대폰 요금 총 24,000원 할인" <br> ※ 3년 약정 기준 금액. 2년 약정 시 50%, 1년 약정 시 25% 적용
+                            <button type="button" class="ico-close">툴팁닫기</button>
+                          </div>
+                        </div>
+											</div>
+											<div class="item-txt">
+												<em class="num">-24,000</em>원
+											</div>
+										</div>
+									</li>
+									<li class="discount-addition-item">
+										<div class="detail-thumb">
+											<img src="../img/wireline/ico_add_dc_vod.png" alt="B tv VOD 쿠폰">
+										</div>
+										<div class="detail-cont">
+											<div class="item-tit">
+												<span class="txt">B tv VOD 쿠폰</span>
+											</div>
+											<div class="item-txt">
+												<em class="num">3,300</em>P
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 제휴카드 할인 -->
+				<div class="purchase-cont wireline-benefit-fee-dc">
+					<div class="dc-benefit-item dc-benefit-item-card-dc">
+						<div class="msg-exclaim">
+							<div class="msg-txt">제휴카드 있으신가요? <br> 요금 자동이체 후 매월 추가 할인 받아보세요. </div>
+						</div>
+						<div class="title big_tl">제휴카드 할인</div>
+						<div class="purchase-form-wrap no-line">
+							<!-- <table class="purchase-form-list">
+								<caption>제휴카드 할인</caption>
+								<colgroup>
+									<col class="col-th">
+									<col class="col-td">
+								</colgroup>
+								<tbody>
+									<tr>
+										<td class="td-usim">
+											<div role="tablist" class="rdo-list abs">
+												<button type="button" role="tab" class="rdo-item" id="_benefitCardTab1" aria-controls="_benefitCardPanel1" aria-selected="false">
+													<span class="label">발급 신청</span>
+												</button>
+												<button type="button" role="tab" class="rdo-item" id="_benefitCardTab2" aria-controls="_benefitCardPanel2" aria-selected="true">
+													<span class="label">신청 안함</span>
+												</button>
+											</div>
+											<!-- [D] 발급신청 선택 시 노출 
+											<div role="tabpanel" class="folded-panel" aria-labelledby="_benefitCardTab1" id="_benefitCardPanel1" aria-hidden="true">
+												<div class="expand-benefit-item no-border">
+													<div class="c-select-benefit-card">
+														<button type="button" class="head benefit-card">
+															<span class="select-item">
+																<span class="benefit-thumb">
+																	<img src="../img/wireline/img_benefit_card.png" alt="B 롯데카드">
+																</span>
+																<span class="benefit-info">
+																	<span class="benefit-info-cont">
+																		<span class="txt-tit">B 롯데카드1</span>
+																		<span class="txt-dsc"> 최대 <span class="price">
+																				<em class="num">-10,000</em>원 </span> 할인/월 </span>
+																	</span>
+																</span>
+															</span>
+														</button>
+														<div class="body">
+															<ul class="select-list">
+																<li>
+																	<button type="button" class="item">
+																		<span class="select-item">
+																			<span class="benefit-thumb">
+																				<img src="../img/wireline/img_benefit_card.png" alt="B 롯데카드">
+																			</span>
+																			<span class="benefit-info">
+																				<span class="benefit-info-cont">
+																					<span class="txt-tit">B 롯데카드1</span>
+																					<span class="txt-dsc"> 최대 <span class="price">
+																							<em class="num">-10,000</em>원 </span> 할인/월 </span>
+																				</span>
+																			</span>
+																		</span>
+																	</button>
+																</li>
+																<li>
+																	<button type="button" class="item">
+																		<span class="select-item">
+																			<span class="benefit-thumb">
+																				<img src="../img/wireline/img_benefit_card.png" alt="B 롯데카드">
+																			</span>
+																			<span class="benefit-info">
+																				<span class="benefit-info-cont">
+																					<span class="txt-tit">B 롯데카드2</span>
+																					<span class="txt-dsc"> 최대 <span class="price">
+																							<em class="num">-20,000</em>원 </span> 할인/월 </span>
+																				</span>
+																			</span>
+																		</span>
+																	</button>
+																</li>
+																<li>
+																	<button type="button" class="item">
+																		<span class="select-item">
+																			<span class="benefit-thumb">
+																				<img src="../img/wireline/img_benefit_card.png" alt="B 롯데카드">
+																			</span>
+																			<span class="benefit-info">
+																				<span class="benefit-info-cont">
+																					<span class="txt-tit">B 롯데카드3</span>
+																					<span class="txt-dsc"> 최대 <span class="price">
+																							<em class="num">-30,000</em>원 </span> 할인/월 </span>
+																				</span>
+																			</span>
+																		</span>
+																	</button>
+																</li>
+																<li>
+																	<button type="button" class="item">
+																		<span class="select-item">
+																			<span class="benefit-thumb">
+																				<img src="../img/wireline/img_benefit_card.png" alt="B 롯데카드">
+																			</span>
+																			<span class="benefit-info">
+																				<span class="benefit-info-cont">
+																					<span class="txt-tit">B 롯데카드4</span>
+																					<span class="txt-dsc"> 최대 <span class="price">
+																							<em class="num">-20,000</em>원 </span> 할인/월 </span>
+																				</span>
+																			</span>
+																		</span>
+																	</button>
+																</li>
+																<li>
+																	<button type="button" class="item">
+																		<span class="select-item">
+																			<span class="benefit-thumb">
+																				<img src="../img/wireline/img_benefit_card.png" alt="B 롯데카드">
+																			</span>
+																			<span class="benefit-info">
+																				<span class="benefit-info-cont">
+																					<span class="txt-tit">B 롯데카드5</span>
+																					<span class="txt-dsc"> 최대 <span class="price">
+																							<em class="num">-30,000</em>원 </span> 할인/월 </span>
+																				</span>
+																			</span>
+																		</span>
+																	</button>
+																</li>
+															</ul>
+															<!-- <button type="button" class="item"><span class="select-item"><span class="benefit-thumb"><img src="../img/wireline/img_benefit_card.png" alt="B 롯데카드"></span><span class="benefit-info"><span class="benefit-info-cont"><span class="txt-tit">B 롯데카드1</span><span class="txt-dsc">
+																																															최대 <span class="price"><em class="num">-20,000</em>원</span> 할인/월
+																																													</span></span></span></span></button> 
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- [D] 신청안함 선택 시 노출 
+											<div role="tabpanel" class="folded-panel" aria-labelledby="_benefitCardTab2" id="_benefitCardPanel2" aria-hidden="false">
+												<div class="expand-benefit-item no-border">
+													<div class="c-select-benefit-card no-active">
+														<button type="button" class="head benefit-card">
+															<span class="select-item">
+																<span class="benefit-thumb">
+																	<img src="../img/wireline/img_benefit_card.png" alt="B 롯데카드">
+																</span>
+																<span class="benefit-info">
+																	<span class="benefit-info-cont">
+																		<span class="txt-tit">B 롯데카드1</span>
+																		<span class="txt-dsc"> 최대 <span class="price">
+																				<em class="num">-10,000</em>원 </span> 할인/월 </span>
+																	</span>
+																</span>
+															</span>
+														</button>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table> -->
+              <div class="purchase-form-list">
+                <div class="td-usim">
+                  <div role="tablist" class="rdo-list abs">
+                    <button type="button" role="tab" class="rdo-item" id="_benefitCardTab1" aria-controls="_benefitCardPanel1" aria-selected="false">
+                      <span class="label">발급 신청</span>
+                    </button>
+                    <button type="button" role="tab" class="rdo-item" id="_benefitCardTab2" aria-controls="_benefitCardPanel2" aria-selected="true">
+                      <span class="label">신청 안함</span>
+                    </button>
+                  </div>
+                  <!-- [D] 발급신청 선택 시 노출 -->
+                  <div role="tabpanel" class="folded-panel" aria-labelledby="_benefitCardTab1" id="_benefitCardPanel1" aria-hidden="true">
+                    <div class="expand-benefit-item no-border">
+                      <div class="c-select-benefit-card">
+                        <button type="button" class="head benefit-card" id="affiliateCard" aria-haspopup="menu" aria-expanded="false" title="제휴카드 선택">
+                          <span class="select-item">
+                            <span class="benefit-thumb">
+                              <img src="../img/wireline/img_benefit_card.png" alt="B 롯데카드">
+                            </span>
+                            <span class="benefit-info">
+                              <span class="benefit-info-cont">
+                                <span class="txt-tit">B 롯데카드1</span>
+                                <span class="txt-dsc"> 최대 <span class="price">
+                                    <em class="num">-10,000</em>원 </span> 할인/월 </span>
+                              </span>
+                            </span>
+                          </span>
+                        </button>
+                        <div class="body" role="menu" aria-labelledby="affiliateCard">
+                          <ul class="select-list">
+                            <li>
+                              <button type="button" class="item">
+                                <span class="select-item">
+                                  <span class="benefit-thumb">
+                                    <img src="../img/wireline/img_benefit_card.png" alt="B 롯데카드">
+                                  </span>
+                                  <span class="benefit-info">
+                                    <span class="benefit-info-cont">
+                                      <span class="txt-tit">B 롯데카드1</span>
+                                      <span class="txt-dsc"> 최대 <span class="price">
+                                          <em class="num">-10,000</em>원 </span> 할인/월 </span>
+                                    </span>
+                                  </span>
+                                </span>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="item">
+                                <span class="select-item">
+                                  <span class="benefit-thumb">
+                                    <img src="../img/wireline/img_benefit_card.png" alt="B 롯데카드">
+                                  </span>
+                                  <span class="benefit-info">
+                                    <span class="benefit-info-cont">
+                                      <span class="txt-tit">B 롯데카드2</span>
+                                      <span class="txt-dsc"> 최대 <span class="price">
+                                          <em class="num">-20,000</em>원 </span> 할인/월 </span>
+                                    </span>
+                                  </span>
+                                </span>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="item">
+                                <span class="select-item">
+                                  <span class="benefit-thumb">
+                                    <img src="../img/wireline/img_benefit_card.png" alt="B 롯데카드">
+                                  </span>
+                                  <span class="benefit-info">
+                                    <span class="benefit-info-cont">
+                                      <span class="txt-tit">B 롯데카드3</span>
+                                      <span class="txt-dsc"> 최대 <span class="price">
+                                          <em class="num">-30,000</em>원 </span> 할인/월 </span>
+                                    </span>
+                                  </span>
+                                </span>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="item">
+                                <span class="select-item">
+                                  <span class="benefit-thumb">
+                                    <img src="../img/wireline/img_benefit_card.png" alt="B 롯데카드">
+                                  </span>
+                                  <span class="benefit-info">
+                                    <span class="benefit-info-cont">
+                                      <span class="txt-tit">B 롯데카드4</span>
+                                      <span class="txt-dsc"> 최대 <span class="price">
+                                          <em class="num">-20,000</em>원 </span> 할인/월 </span>
+                                    </span>
+                                  </span>
+                                </span>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="item">
+                                <span class="select-item">
+                                  <span class="benefit-thumb">
+                                    <img src="../img/wireline/img_benefit_card.png" alt="B 롯데카드">
+                                  </span>
+                                  <span class="benefit-info">
+                                    <span class="benefit-info-cont">
+                                      <span class="txt-tit">B 롯데카드5</span>
+                                      <span class="txt-dsc"> 최대 <span class="price">
+                                          <em class="num">-30,000</em>원 </span> 할인/월 </span>
+                                    </span>
+                                  </span>
+                                </span>
+                              </button>
+                            </li>
+                          </ul>
+                          <!-- <button type="button" class="item"><span class="select-item"><span class="benefit-thumb"><img src="../img/wireline/img_benefit_card.png" alt="B 롯데카드"></span><span class="benefit-info"><span class="benefit-info-cont"><span class="txt-tit">B 롯데카드1</span><span class="txt-dsc">
+                                                                                          최대 <span class="price"><em class="num">-20,000</em>원</span> 할인/월
+                                                                                      </span></span></span></span></button> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- [D] 신청안함 선택 시 노출 -->
+                  <div role="tabpanel" class="folded-panel" aria-labelledby="_benefitCardTab2" id="_benefitCardPanel2" aria-hidden="false">
+                    <div class="expand-benefit-item no-border">
+                      <div class="c-select-benefit-card no-active">
+                        <button type="button" class="head benefit-card">
+                          <span class="select-item">
+                            <span class="benefit-thumb">
+                              <img src="../img/wireline/img_benefit_card.png" alt="B 롯데카드">
+                            </span>
+                            <span class="benefit-info">
+                              <span class="benefit-info-cont">
+                                <span class="txt-tit">B 롯데카드1</span>
+                                <span class="txt-dsc"> 최대 <span class="price">
+                                    <em class="num">-10,000</em>원 </span> 할인/월 </span>
+                              </span>
+                            </span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+							</div>
+							<ul class="dsc-list guide-text">
+								<li class="dsc-item">발급 신청 시 제휴카드 발급 안내 페이지를 MMS로 보내 드립니다.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //content -->
+		</main>
+
+		<!-- s: 하단 스티키 바 -->
+		<!-- [D] sticky-bar 숨김시 .active 추가 -->
+		<div class="sticky-bar">
+			<div class="layer-pay">
+				<h2 class="g-invisible">출고가 가격정보</h2>
+				<div class="l-grid">
+					<!-- [D] : layer-body 영역 노출시 class .show 추가 -->
+					<!-- [D] : layer-body 안 price-area 노출시 class .on 추가 -->
+					<div class="layer-body">
+						<button type="button" class="btn-toggle" aria-expanded="true" aria-controls="detail-terms"><span class="g-invisible">적용 가입조건 상세보기</span></button>
+						<div id="detail-terms">
+							<div class="body pay-detail">
+								<div class="l-rows">
+									<p class="l-row depth1">
+										<span class="l-row-stit weight">상품 이용금액</span> 
+										<span class="l-row-price">
+											<span class="num point">84,700</span> 
+											<span class="unit">원</span> 
+										</span>
+									</p>
+									<ul class="depth-list">
+										<li class="l-row"> 
+											<span class="l-row-stit">기가 라이트 인터넷 와이파이</span> 
+											<span class="l-row-price">
+												<span class="num">34,100</span> 
+												<span class="unit">원</span> 
+											</span>
+										</li>
+										<li class="l-row"> 
+											<span class="l-row-stit">B tv All</span> 
+											<span class="l-row-price">
+												<span class="num">18,700</span> 
+												<span class="unit">원</span> 
+											</span>
+										</li>
+										<li class="l-row"> 
+											<span class="l-row-stit">AI 2</span> 
+											<span class="l-row-price">
+												<span class="num">6,600</span> 
+												<span class="unit">원</span> 
+												</span>
+										</li>
+										<li class="l-row depth2"> 
+												<span class="l-row-stit">추가 IPTV</span> 
+											</li>
+										<li class="l-row"> 
+											<span class="l-row-stit">B tv All</span> 
+											<span class="l-row-price">
+												<span class="num">18,700</span> 
+												<span class="unit">원</span>
+											</span>
+										</li>
+										<li class="l-row"> 
+											<span class="l-row-stit">AI 2</span> 
+											<span class="l-row-price">
+												<span class="num">6,600</span> 
+												<span class="unit">원</span> 
+											</span>
+										</li>
+										<li class="l-row"> 
+											<span class="l-row-stit">약정 기간</span>
+											<span class="l-row-price">
+												<span class="num">3</span> 
+												<span class="unit weight">년 약정</span> 
+											</span>
+										</li>
+									</ul>
+								</div>
+								<div class="l-rows border">
+									<p class="l-row depth1"> 
+										<span class="l-row-stit weight">할인 금액</span>
+										<span class="l-row-price">
+											<span class="num point">-39,050</span>
+											<span class="unit">원</span> 
+										</span>
+									</p>
+									<ul class="depth-list">
+										<li class="l-row"> 
+											<span class="l-row-stit">휴대폰 결합할인</span>
+											<span class="l-row-price">
+												<span class="num">-14,300</span> 
+												<span class="unit">원</span> 
+											</span>
+										</li>
+										<li class="l-row"> 
+											<span class="l-row-stit">두번째 IPTV 이용료 할인</span> 
+											<span class="l-row-price">
+												<span class="num">-9,350</span> 
+												<span class="unit">원</span> 
+											</span>
+										</li>
+										<li class="l-row"> 
+											<span class="l-row-stit">온라인 전용 할인</span> 
+												<span class="l-row-price">
+												<span class="num">-2,200</span> 
+												<span class="unit">원</span> 
+											</span>
+										</li>
+										<li class="l-row">
+											<span class="l-row-stit">요금 할인 혜택(더슬림요금제)</span>
+											<span class="l-row-price">
+												<span class="num">-11,000</span>
+												<span class="unit">원</span> 
+												</span>
+										</li>
+										<li class="l-row"> 
+											<span class="l-row-stit">셋톱박스 요금 할인</span> 
+											<span class="l-row-price">
+												<span class="num">-2,200</span>
+												<span class="unit">원</span>
+											</span>
+										</li>
+									</ul>
+								</div>
+								<div class="l-rows border">
+									<p class="l-row depth1"> 
+										<span class="l-row-stit weight">출동비</span>
+										<span class="l-row-price">
+											<span class="num point">25,300</span> 
+											<span class="unit">원</span> 
+										</span>
+									</p>
+									<ul class="dsc-list">
+										<li class="dsc-item">인터넷, IPTV 신규가입 시 설치 기사 출동 및 배선 작업에 따른 <br>출동비(설치비)가 개통 다음달에 1회 청구됩니다.</li>
+										<li class="dsc-item">평일 오후 7시 이후, 주말/공휴일 출동 시 인터넷 출동비가 일반 출동비보다 25% 할증됩니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="layer-foot">
+						<!--예상 월 납부금액 -->
+						<div class="price-area">
+							<div class="stit"> 
+								<span class="text">
+									<span class="sunit">예상 월 납부금액</span> </span>
+							</div>
+							<div class="price"> 
+								<span class="num"><strong>69,000</strong></span> 
+								<span class="unit">원</span> <em class="desc">(부가세 포함)</em> 
+							</div>
+						</div>
+					</div>
+					<div class="btn-area">
+						<!-- [D] 활성/비활성 여부는 클래스 disabled 추가/삭제로 컨트롤 -->
+						<button type="button" class="btn-primary">다음</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //e: 하단 스티키 바 -->
+	</div>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/swiper.min.js"></script>
+  <script src="../js/tdirect-ui.js"></script>
+
+	<script>
+		// 요금안내서 수신방법 가입자정보동일 체크해제 input초기화
+		$(document).on('click', ".td-address .c-chk :checkbox", function() {
+			if (!$(this).prop('checked')) {
+				$(this).closest(".td-address").find(".form-group input").val("");
+			}
+		});
+		// 복지할인 [적용] 안함 비활성화
+		$(document).on('change', ".combination-tab-list .c-ick :radio", function() {
+			var selectRdoTab = $(this).attr('data-tab');
+			$('.welfare-dc-apply-panel').hide();
+			$("#" + selectRdoTab).show();
+		});
+		// 휴대폰결합대수 수량 버튼 - 220526 수정
+		$(document).on('click', ".opt-quantity-select [class^=btn-]", function() {
+			var $thisInp = $(this).siblings(".inp-wrap").find(".input");
+			var nowVal = Number($thisInp.val().substring(0, 1));
+			if ($(this).is(".btn-minus")) {
+				nowVal = nowVal - 1;
+				if (nowVal <= 0) {
+					nowVal = 0;
+					$thisInp.closest(".inp-wrap").siblings(".txt-wrap.txt-wrap-first").addClass("on");
+					$('.discount-detail-skt-phone').hide();
+				}
+				$thisInp.closest(".inp-wrap").siblings(".txt-wrap.txt-wrap-last").removeClass("on");
+				$thisInp.parents('.combined-purchase-form-box').find('.text-toggle').removeClass('on');
+			} else {
+				nowVal = nowVal + 1;
+				if (nowVal >= 2) {
+					nowVal = 2;
+					$thisInp.closest(".inp-wrap").siblings(".txt-wrap.txt-wrap-last").addClass("on");
+					$thisInp.parents('.combined-purchase-form-box').find('.text-toggle').addClass("on");
+				}
+				$thisInp.closest(".inp-wrap").siblings(".txt-wrap.txt-wrap-first").removeClass("on");
+				$('.discount-detail-skt-phone').show();
+			};
+			$thisInp.val(nowVal + '대');
+		});
+		// 사은품선택 사은품 제품명 byte체크
+		function pdChkByte() {
+		$(".expand-benefit-item .benefit-info .txt-prd-tit").each(function() {
+			var maxByte = 23;
+			var thisTxt = $(this).text();
+			var thisByte = thisTxt.length;
+			var totalByte = 0;
+			for (i = 0; i < thisByte; i++) {
+				var eachTxt = thisTxt.charAt(i);
+				var uniCode = escape(eachTxt);
+				if (uniCode.length > 4) {
+					// 한글 2Byte
+					totalByte += 2;
+				} else {
+					// 영문 숫자 특문 1Byte
+					totalByte += 1;
+				}
+			}
+			if (totalByte > maxByte) {
+				var str = thisTxt.substr(0, maxByte);
+				$(this).text(str + "...");
+			}
+		})
+		}
+		// 실행시 사은품선택 사은품 제품명 byte체크
+		pdChkByte();
+		/* tool-tip 클릭 시 클래스 on 토글 */
+		// $('.tool-tip').on('click', function() {
+		// 	$(this).toggleClass('on');
+		// }); 
+
+    $('.tool-tip.mark-info').off().on('click',function(){
+      var _tsEl = $(this);
+      $('.current').removeClass('current');
+      _tsEl.addClass('on current').attr({'aria-expanded':true});
+      _tsEl.parent('.tool-tip-wrap').find('.txt-box').addClass('show').attr({'aria-hidden':false});
+      
+
+      var thisTooltip = _tsEl.attr('aria-describedby');
+
+      var lpObjTabbable = $('#' + thisTooltip).find("button, input:not([type='hidden']), select, iframe, textarea, [href], [tabindex]:not([tabindex='-1'])");
+      var lpObjTabbableFirst = lpObjTabbable && lpObjTabbable.first();
+      var lpObjTabbableLast = lpObjTabbable && lpObjTabbable.last();
+      lpObjTabbableLast.on("keydown", function(event) {
+        if (!event.shiftKey && (event.keyCode || event.which) === 9) {
+          event.preventDefault();
+          lpObjTabbableFirst.focus();
+        }
+      });
+
+    });
+
+    $('.txt-box .ico-close').off().on('click',function(){
+      var _tsElClose = $(this);
+      _tsElClose.parent('.txt-box').prev('.tool-tip.mark-info').removeClass('on').attr({'aria-expanded':false});
+      _tsElClose.parent('.txt-box').removeClass('show').attr({'aria-hidden':true});
+      $('.current').focus(); 
+
+    });
+
+
+
+		//카드 선택시 셀렉트 제어
+		// $('.c-select-benefit-card').click(function() {
+		// 	if ($(this).hasClass("no-active") === false) {
+		// 		$(this).toggleClass('active')
+		// 		$('.c-select-benefit-card .body').toggleClass('active');
+		// 	}
+		// });
+    $('.c-select-benefit-card').click(function() {
+      if($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $(this).children('.body').removeClass("active");
+        $(this).children('.benefit-card').attr('aria-expanded','false');
+      } else {
+        $(this).addClass("active");
+        $(this).children('.body').addClass("active");
+        $(this).children('.benefit-card').attr('aria-expanded','true');
+      }
+    });
+
+		$('.expand-benefit-item .body .select-item').click(function() {
+			var this_html = $(this).html();
+			$('.expand-benefit-item .c-select-benefit-card .head').empty();
+			$('.expand-benefit-item .c-select-benefit-card .head').html(this_html);
+		});
+		// 사은품 수령 정보 체크해제 input초기화
+		$(document).on('click', ".same_addr_chk .c-ick :checkbox", function() {
+    if (!$(this).prop('checked')) {
+      $(this).closest(".same_addr_chk").next('.detail-address').find(".form-group input, .form-group textarea").val("");
+    }
+  });
+</script>
+</body>
+
+</html>

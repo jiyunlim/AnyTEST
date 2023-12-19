@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<title>[팝업] 매장검색 | SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/seller.css">
+	
+	<script>document.documentElement.dataset.userAgent = navigator.userAgent;</script>
+</head>
+
+<body>
+<!-- popup -->
+<div class="popup pop-seller pop-shop-sch pop_page">
+	<div class="popup-body">
+		<div class="popup-header">
+			<h1 class="popup-title">매장 검색</h1>
+		</div>
+		<div class="popup-content">
+			<div class="seller-tab-wrap" role="tablist">
+				<button type="button" class="tab-item on" data-tab="planList" id="store_tab_menu_1" role="tab" aria-selected="true" aria-controls="store_tab_content1"><span>키워드로 찾기</span></button>
+				<button type="button" class="tab-item" data-tab="planList" id="store_tab_menu_2" role="tab" aria-selected="false" aria-controls="store_tab_content2"><span>지하철 노선별</span></button>
+				<button type="button" class="tab-item" data-tab="planList" id="store_tab_menu_3" role="tab" aria-selected="false" aria-controls="store_tab_content3"><span>지역별</span></button>
+			</div>
+			<h2 class="g-invisible">키워드로 찾기</h2>
+			<!-- 키워드로 찾기 -->
+			<div class="seller-cont-area keyword" data-tab-content="planList" role="tabpanel" aria-labelledby="store_tab_menu_1" id="store_tab_content1">
+				<div class="sch-con">
+					<div class="form-group">
+						<span class="c-input">
+							<!-- [D] 검색어 입력시 btn-delete 호출 -->
+							<input type="text" placeholder="주소 또는 지하철 명으로 입력하세요" title="주소 입력" class="input_shop_sch" id="shop_keyword">
+							<button type="button" class="btn-delete"><span class="ico-delete">입력 내용 삭제</span></button>
+						</span>
+						<button type="button" class="btn-extra">검색</button>
+						<!-- 자동완성레이어 -->
+						<div class="auto_complete_layer" style="display: none;">
+							<div>
+								<p>지하철역</p>
+								<ul>
+									<li>중구청역 대전 1호선</li>
+								</ul>
+								<p>주소</p>
+								<ul>
+									<li>대구 중구(남일동)</li>
+									<li>서울 중구 을지로6가</li>
+									<li>부산 중구(광복동1가)</li>
+								</ul>
+							</div>
+						</div>
+						<!-- // ---- 자동완성레이어 -->
+					</div>
+					<ul class="dsc-guide">
+						<li class="dsc-item">입력한 검색어가 지하철역과 주소로 <br> 자동 완성되어 찾기에 편리합니다.</li>
+						<li class="dsc-item">선택하신 상품의 재고를 보유한 매장만 검색됩니다.</li>
+					</ul>
+				</div>
+				
+				<!-- [D] 매장 검색 결과 있음 -->
+				<div class="area-result">
+					<div class="result-field active">
+						<ul class="list-address">
+							<li class="address-item">
+								<a href="seller_pop_shop_detail.html" class="item-address">
+									<span class="address-con">
+										<span class="shop-name">대구교동대리점 본점</span>
+										<span class="shop-grade">T Premium Store</span>
+										<span class="shop-score">
+											<span class="star-area">
+												<div class="star_sub star5"></div>
+											</span>
+											
+										</span>
+										<span class="shop-address">대구 중구 곡채보상로123길 22(문화동) 1층 남쪽 2번째</span>
+										<span class="shop-tel">053-421-6900</span>
+									</span>
+								</a>
+							</li>
+							<li class="address-item">
+								<a href="seller_pop_shop_detail.html" class="item-address">
+									<span class="address-con">
+										<span class="shop-name">대구교동대리점 본점</span>
+										<span class="shop-score">
+											<span class="star-area">
+												<div class="star_sub star4"></div>
+											</span>
+											
+										</span>
+										<span class="shop-address">대구 중구 곡채보상로123길 22(문화동) 1층 남쪽 2번째</span>
+										<span class="shop-tel">053-421-6900</span>
+									</span>
+								</a>
+								</a>
+							</li>
+							<li class="address-item">
+								<a href="seller_pop_shop_detail.html" class="item-address">
+									<span class="address-con">
+										<span class="shop-name">대구교동대리점 본점</span>
+										<span class="shop-score">
+											<span class="star-area">
+												<div class="star_sub star3"></div>
+											</span>
+											
+										</span>
+										<span class="shop-address">대구 중구 곡채보상로123길 22(문화동) 1층 남쪽 2번째</span>
+										<span class="shop-tel">053-421-6900</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- [D] 검색 결과 10개 이상 시 '더보기' 버튼 노출 -->
+					<div class="btn-area">
+						<button type="button" class="btn-default btn-fix">더보기</button>
+					</div>
+				</div>
+				<!-- [D] 매장 검색 결과 없음 -->
+				<div class="area-result no-result">
+					<p class="txt-info"><em>검색 결과가 없습니다.</em></p>
+				</div>
+			</div>
+
+			<!-- 지하철 노선별 -->
+			<div class="seller-cont-area subway" data-tab-content="planList" role="tabpanel" aria-labelledby="store_tab_menu_2" id="store_tab_content2">
+				<div class="sch-con">
+					<div class="form-group">
+						<span class="c-select">
+							<select title="지역 선택" class="select" required>
+								<option value="" selected="selected">지역 선택</option>
+								<option value="">대구</option>
+								<option value="">대구</option>
+								<option value="">대구</option>
+								<option value="">대구</option>
+								<option value="">대구</option>
+							</select>
+						</span>
+						<span class="c-select">
+							<select title="노선 선택" class="select" required>
+								<option value="" selected="selected">노선 선택</option>
+								<option value="">1호선</option>
+								<option value="">1호선</option>
+								<option value="">1호선</option>
+								<option value="">1호선</option>
+								<option value="">1호선</option>
+								<option value="">1호선</option>
+							</select>
+						</span>
+					</div>
+					<ul class="dsc-guide">
+						<li class="dsc-item">전국 지하철 호선과 역명으로 검색할 수 있어 위치파악과 찾아가기에 편리합니다.</li>
+						<li class="dsc-item">선택하신 상품의 재고를 보유한 매장만 검색됩니다.</li>
+					</ul>
+				</div>
+				<!-- [D] 매장 검색 결과 있음 -->
+				<div class="area-result">
+					<div class="result-field active">
+						<div class="subway-field">중구청역</div>
+						<ul class="list-address">
+							<li class="address-item">
+								<a href="seller_pop_shop_detail.html" class="item-address">
+									<span class="address-con">
+										<span class="shop-name">대구교동대리점 본점</span>
+										<span class="shop-grade">T Premium Store</span>
+										<span class="shop-score">
+											<span class="star-area">
+												<div class="star_sub star2"></div>
+											</span>
+											
+										</span>
+										<span class="shop-address">대구 중구 곡채보상로123길 22(문화동) 1층 남쪽 2번째</span>
+										<span class="shop-tel">053-421-6900</span>
+									</span>
+								</a>
+							</li>
+							<li class="address-item">
+								<a href="seller_pop_shop_detail.html" class="item-address">
+									<span class="address-con">
+										<span class="shop-name">대구교동대리점 본점</span>
+										<span class="shop-score">
+											<span class="star-area">
+												<div class="star_sub star1"></div>
+											</span>
+											
+										</span>
+										<span class="shop-address">대구 중구 곡채보상로123길 22(문화동) 1층 남쪽 2번째</span>
+										<span class="shop-tel">053-421-6900</span>
+									</span>
+								</a>
+								</a>
+							</li>
+							<li class="address-item">
+								<a href="seller_pop_shop_detail.html" class="item-address">
+									<span class="address-con">
+										<span class="shop-name">대구교동대리점 본점</span>
+										<span class="shop-score">
+											<span class="star-area">
+												<div class="star_sub star4"></div>
+											</span>
+											
+										</span>
+										<span class="shop-address">대구 중구 곡채보상로123길 22(문화동) 1층 남쪽 2번째</span>
+										<span class="shop-tel">053-421-6900</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="result-field">
+						<div class="subway-field">중구청역</div>
+						<ul class="list-address ">
+							<li class="address-item">
+								<a href="seller_pop_shop_detail.html" class="item-address">
+									<span class="address-con">
+										<span class="shop-name">대구교동대리점 본점</span>
+										<span class="shop-score">
+											<span class="star-area">
+												<div class="star_sub star5"></div>
+											</span>
+											
+										</span>
+										<span class="shop-address">대구 중구 곡채보상로123길 22(문화동) 1층 남쪽 2번째</span>
+										<span class="shop-tel">053-421-6900</span>
+									</span>
+								</a>
+							</li>
+							<li class="address-item">
+								<a href="seller_pop_shop_detail.html" class="item-address">
+									<span class="address-con">
+										<span class="shop-name">대구교동대리점 본점</span>
+										<span class="shop-score">
+											<span class="star-area">
+												<div class="star_sub star5"></div>
+											</span>
+											
+										</span>
+										<span class="shop-address">대구 중구 곡채보상로123길 22(문화동) 1층 남쪽 2번째</span>
+										<span class="shop-tel">053-421-6900</span>
+									</span>
+								</a>
+								</a>
+							</li>
+							<li class="address-item">
+								<a href="seller_pop_shop_detail.html" class="item-address">
+									<span class="address-con">
+										<span class="shop-name">대구교동대리점 본점</span>
+										<span class="shop-score">
+											<span class="star-area">
+												<div class="star_sub star5"></div>
+											</span>
+											
+										</span>
+										<span class="shop-address">대구 중구 곡채보상로123길 22(문화동) 1층 남쪽 2번째</span>
+										<span class="shop-tel">053-421-6900</span>
+									</span>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+					<div class="result-field">
+						<div class="subway-field">중구청역</div>
+						<ul class="list-address ">
+							<li class="address-item">
+								<a href="seller_pop_shop_detail.html" class="item-address">
+									<span class="address-con">
+										<span class="shop-name">대구교동대리점 본점</span>
+										<span class="shop-score">
+											<span class="star-area">
+												<div class="star_sub star5"></div>
+											</span>
+											
+										</span>
+										<span class="shop-address">대구 중구 곡채보상로123길 22(문화동) 1층 남쪽 2번째</span>
+										<span class="shop-tel">053-421-6900</span>
+									</span>
+								</a>
+							</li>
+							<li class="address-item">
+								<a href="seller_pop_shop_detail.html" class="item-address">
+									<span class="address-con">
+										<span class="shop-name">대구교동대리점 본점</span>
+										<span class="shop-score">
+											<span class="star-area">
+												<div class="star_sub star5"></div>
+											</span>
+											
+										</span>
+										<span class="shop-address">대구 중구 곡채보상로123길 22(문화동) 1층 남쪽 2번째</span>
+										<span class="shop-tel">053-421-6900</span>
+									</span>
+								</a>
+								</a>
+							</li>
+							<li class="address-item">
+								<a href="seller_pop_shop_detail.html" class="item-address">
+									<span class="address-con">
+										<span class="shop-name">대구교동대리점 본점</span>
+										<span class="shop-score">
+											<span class="star-area">
+												<div class="star_sub star5"></div>
+											</span>
+											
+										</span>
+										<span class="shop-address">대구 중구 곡채보상로123길 22(문화동) 1층 남쪽 2번째</span>
+										<span class="shop-tel">053-421-6900</span>
+									</span>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+					<!-- [D] 검색 결과 10개 이상 시 '더보기' 버튼 노출 -->
+					<!-- <div class="btn-area">
+						<button type="button" class="btn-default btn-fix">더보기</button>
+					</div> -->
+				</div>
+				<!-- [D] 매장 검색 결과 없음 -->
+				<div class="area-result no-result">
+					<p class="txt-info"><em>검색 결과가 없습니다.</em></p>
+				</div>
+			</div>
+			<!-- 지역별 -->
+			<div class="seller-cont-area region" data-tab-content="planList" role="tabpanel" aria-labelledby="store_tab_menu_3" id="store_tab_content3">
+				<div class="sch-con">
+					<div class="form-group">
+						<span class="c-select">
+							<select title="" class="select" required>
+								<option value="" selected="selected">광역시/도</option>
+								<option value="">대구광역시</option>
+								<option value="">대구광역시</option>
+								<option value="">대구광역시</option>
+								<option value="">대구광역시</option>
+								<option value="">대구광역시</option>
+							</select>
+						</span>
+						<span class="c-select">
+							<select title="" class="select" required>
+								<option value="" selected="selected">시/군/구</option>
+								<option value="">중구</option>
+								<option value="">중구</option>
+								<option value="">중구</option>
+								<option value="">중구</option>
+								<option value="">중구</option>
+								<option value="">중구</option>
+							</select>
+						</span>
+					</div>
+					<ul class="dsc-guide">
+						<li class="dsc-item">전국의 행정구역 단위로 조회가 가능하여 우리지역의 다양한 매장을 찾아볼 수 있습니다.</li>
+						<li class="dsc-item">선택하신 상품의 재고를 보유한 매장만 검색됩니다.</li>
+					</ul>
+				</div>
+				<!-- [D] 매장 검색 결과 있음 -->
+				<div class="area-result">
+					<div class="result-field active">
+						<ul class="list-address">
+							<li class="address-item">
+								<a href="seller_pop_shop_detail.html" class="item-address">
+									<span class="address-con">
+										<span class="shop-name">대구교동대리점 본점</span>
+										<span class="shop-grade">T Premium Store</span>
+										<span class="shop-score">
+											<span class="star-area">
+												<div class="star_sub star5"></div>
+											</span>
+											
+										</span>
+										<span class="shop-address">대구 중구 곡채보상로123길 22(문화동) 1층 남쪽 2번째</span>
+										<span class="shop-tel">053-421-6900</span>
+									</span>
+								</a>
+							</li>
+							<li class="address-item">
+								<a href="seller_pop_shop_detail.html" class="item-address">
+									<span class="address-con">
+										<span class="shop-name">대구교동대리점 본점</span>
+										<span class="shop-score">
+											<span class="star-area">
+												<div class="star_sub star5"></div>
+											</span>
+											
+										</span>
+										<span class="shop-address">대구 중구 곡채보상로123길 22(문화동) 1층 남쪽 2번째</span>
+										<span class="shop-tel">053-421-6900</span>
+									</span>
+								</a>
+								</a>
+							</li>
+							<li class="address-item">
+								<a href="seller_pop_shop_detail.html" class="item-address">
+									<span class="address-con">
+										<span class="shop-name">대구교동대리점 본점</span>
+										<span class="shop-score">
+											<span class="star-area">
+												<div class="star_sub star5"></div>
+											</span>
+											
+										</span>
+										<span class="shop-address">대구 중구 곡채보상로123길 22(문화동) 1층 남쪽 2번째</span>
+										<span class="shop-tel">053-421-6900</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- [D] 검색 결과 10개 이상 시 '더보기' 버튼 노출 -->
+					<div class="btn-area">
+						<button type="button" class="btn-default btn-fix">더보기</button>
+					</div>
+				</div>
+				<!-- [D] 매장 검색 결과 없음 -->
+				<div class="area-result no-result">
+					<p class="txt-info"><em>검색 결과가 없습니다.</em></p>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="popup-footer">
+			<div class="btn-area">
+				<button type="button" class="btn-primary btn-lg disabled" disabled>요금제 선택</button>
+			</div>
+		</div> -->
+		<button type="button" class="btn-close">
+			<span class="ico-close">팝업 닫기</span>
+		</button>
+	</div>
+</div>
+
+<!-- //popup -->
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script	ipt src="../js/tdirect-ui.js"></script>
+	<!--  20211118추가 -->
+	<script>
+		$('.input_shop_sch').focus(function() {
+			if (document.getElementById("shop_keyword").value === ""){
+				$('.auto_complete_layer').hide();
+			} else{
+				$('.auto_complete_layer').show();
+			}
+		});
+		$('.input_shop_sch').focusout(function() {
+			if (document.getElementById("shop_keyword").value === ""){
+				$(this).removeClass('highlight');
+				$('.auto_complete_layer').hide();
+			} else{
+				$(this).addClass('highlight');
+				$('.auto_complete_layer').show();
+			}
+		});
+		$('.input_shop_sch').keyup(function() {
+			$(this).addClass('highlight');
+			if (document.getElementById("shop_keyword").value === ""){
+				$('.auto_complete_layer').hide();
+			} else{
+				$('.auto_complete_layer').show();
+			}
+		});
+		$('.select').on('change', function() {
+			if ($(this).val === ""){
+				$(this).removeClass('highlight');
+			} else{
+				$(this).addClass('highlight');
+			}
+		})
+
+    $('.seller-tab-wrap .tab-item').click(function(){
+      $('.seller-tab-wrap .tab-item').attr('aria-selected', false);
+      $(this).attr('aria-selected', true);
+
+      let tabTitle = $(this).children('span').text();
+      $(this).parent('.seller-tab-wrap').next('.g-invisible').text(tabTitle);
+    });
+
+	</script>
+</body>
+</html>

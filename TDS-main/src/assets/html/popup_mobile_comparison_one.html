@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+    <title>[TDS Layer] T 월드 다이렉트</title>
+    <link rel="stylesheet" href="../css/import_style.css" />
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/swiper/swiper.min.js"></script>
+  </head>
+  <body>
+    <!-- [D] 공통 팝업 영역 2022.03.28 
+      팝업 레이어 일 경우 class = " tds-popup-wrap " 추가
+    -->
+    <div class="container-wrap tds-popup-wrap">
+      <!-- 헤더 영역 -->
+      <div class="tds-header">
+        <div class="top-header">
+          <div class="top-header-left">
+            <h1 class="title">스펙 비교하기</h1>
+          </div>
+          <div class="top-header-right">
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- 본분 영역 -->
+      <div class="tds-main">
+        <div class="l-grid">
+          <!-- {/* 휴대폰 스펙 비교하기 팝업 */} -->
+          <div class="main-section mobile-devices-comparison">
+            <h3 class="section-tit">지금 사용 중인 휴대폰과 <br>비교해 보세요.
+              <span class="nofind-msg">현재 사용 중인 휴대폰의 스펙 정보를 찾지 못했습니다.</span>
+            </h3>
+            
+            <div class="section-cnt">
+              <!-- [D]2023.12.05 : 웹접근성 테이블 구조로 재구성 / 기존 구조 삭제 -->
+              <!-- [D] ※ 스펙 데이터가 하나 일 경우 !! ※
+                  <colgroup> 의 <col> -> 삭제
+                  <th colspan="2"> 의 colspan="2" 삭제
+                  <td> 삭제 (삭제하지 않을 경우 ui 깨짐현상 있음)
+              -->
+              <div class="device-container">
+                <table>
+                  <caption>스펙 비교하기 - 현재 사용 중인 휴대폰으로 구성 되어 있습니다</caption>
+                  <colgroup>
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>
+                        <div class="device-area">
+                          <div class="thumb"><img src="../img/img-product-110px-iphone11pro@2x.png" alt="iPhone11 PRO" title="iPhone11 PRO"/></div>
+                          <div class="service-cnt">
+                            <div class="service-state">추천 휴대폰</div>
+                            <div class="service-name">iPhone11 PRO VIVA 트롯전국체전 edition</div>
+                          </div>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>제조사</th>
+                    </tr>
+                    <tr>
+                      <td>APPLE</td>
+                    </tr>
+                    <tr>
+                      <th>출시일자</th>
+                    </tr>
+                    <tr>
+                      <td>2020. 11. 30</td>
+                    </tr>
+                    <tr>
+                      <th>디스플레이</th>
+                    </tr>
+                    <tr>
+                      <td>6.1” Super Retina XDR <br> 디스플레이</td>
+                    </tr>
+                    <tr>
+                      <th>휴대폰 크기(mm)</th>
+                    </tr>
+                    <tr>
+                      <td>71.5 x 146.7 x 7.4</td>
+                    </tr>
+                    <tr>
+                      <th>무게</th>
+                    </tr>
+                    <tr>
+                      <td>187g</td>
+                    </tr>
+                    <tr>
+                      <th>CPU</th>
+                    </tr>
+                    <tr>
+                      <td>A14 Bionic 칩 <br>차세대 Neural Engine</td>
+                    </tr>
+                    <tr>
+                      <th>RAM</th>
+                    </tr>
+                    <tr>
+                      <td>RAM 8GB</td>
+                    </tr>
+                    <tr>
+                      <th>배터리</th>
+                    </tr>
+                    <tr>
+                      <td>5,000mAh</td>
+                    </tr>
+                    <tr>
+                      <th>유심</th>
+                    </tr>
+                    <tr>
+                      <td>나노유심</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- close btn -->
+      <button type="button" class="btn-close"><span class="ico-close">팝업 닫기</span></button>
+    </div>
+
+  </body>
+</html>

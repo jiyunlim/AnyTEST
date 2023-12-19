@@ -1,0 +1,259 @@
+<!--design: 자급제폰 등록 및 개통 
+process : 자급제폰 정보
+-->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>[상품 Mobile] 자급제 / 쓰던폰 | SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/seller.css">
+    <script>
+        document.documentElement.dataset.userAgent = navigator.userAgent;
+    </script>
+</head>
+
+<body>
+    <!-- 헤더 고정시 header-sticky & bar-sticky추가 -->
+    <div class="wrap seller-wrap header-sticky bar-sticky seller-phone-registration">
+        <!-- [D] 추가 수정 작업 2022.10.13 -->
+        <!-- header -->
+        <div class="product-detail-header">
+            <div class="top-header">
+                <div class="top-header-left">
+                    <a href="#none" class="ico-goback">
+                        <img src="../img/icon-header-back@2x.png" alt="이전 페이지 이동 아이콘"/>
+                    </a>
+                </div>
+                <div class="top-header-right">
+                    <button type="button" class="ico-cart"><img src="../img/icon-header-cart@2x.png" alt="장바구니"></button>
+                    <button type="button" class="ico-mypage" title="T다이렉트샵 모바일웹(새창)"><img src="../img/icon-header-my@2x.png" alt="마이페이지"></button>
+                </div>
+            </div>
+        </div>
+        <!-- //header -->
+        <div class="sticky-top">
+            <div class="spot-step">
+                <ol class="step-list">
+                    <!-- [D] 작성 완료시 end 클래스 추가, 현재페이지는 링크에 aria-current="step" 추가 -->
+                    <li class="step-item end"><a href="#none" class="link-block" aria-current="step"><span>01</span><span>자급제폰 정보</span></a></li>
+                    <li class="step-item"><a href="#none" class="link-block"><span>02</span><span>옵션/혜택</span></a></li>
+                    <li class="step-item"><a href="#none" class="link-block"><span>03</span><span>신청서 작성</span></a></li>
+                </ol>
+            </div>
+        </div>
+        <!-- content -->
+        <div role="main" class="content">
+            <h1 class="g-invisible">자급제폰 정보</h1>
+            <div class="l-grid l-seller">
+                <!-- s: 제조사 -->
+                <div class="opt-group">
+                    <div class="opt-group-tit-area">
+                        <div class="opt-group-tit"><label for="phoneMaker_00">제조사</label></div>
+                    </div>
+                    <div class="opt-group-con">
+                        <div class="form-group">
+                            <span class="c-select">
+                                <select required id="phoneMaker_00" class="select" title="제조사 선택">
+                                    <option value="" selected>제조사 선택</option>
+                                    <option value="opt2">삼성</option>
+                                    <option value="opt3">LG</option>
+                                    <option value="opt4">Apple</option>
+                                    <option value="opt5">기타</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //e: 제조사 -->
+
+                <!-- s: 통신유형 -->
+                <div class="opt-group">
+                    <div class="opt-group-tit-area">
+                        <div class="opt-group-tit"><label for="telType_00">통신유형</label></div>
+                    </div>
+                    <div class="opt-group-con">
+                        <div class="form-group">
+                            <span class="c-select">
+                                <select required id="telType_00" class="select" title="통신유형 선택">
+                                    <option value="" selected="selected">통신유형 선택</option>
+                                    <option value="opt2">3G-스마트폰</option>
+                                    <option value="opt3">LTE-스마트폰</option>
+                                    <option value="opt4">5G-스마트폰</option>
+                                    <option value="opt5">기타-태블릿</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //e: 통신유형 -->
+
+                <!-- s: 휴대폰 식별번호 imei-->
+                <div class="opt-group">
+                    <div class="opt-group-tit-area">
+                        <div class="opt-group-tit"><label for="phoneIMEINum_00">휴대폰 식별번호(IMEI)</label></div>
+                        <button type="button" class="btn-popup seller-txt-style">IMEI 확인 방법</button>
+                    </div>
+                    <div class="opt-group-con">
+                        <div class="form-group">
+                            <span class="c-input">
+                                <!-- [D] 검색어 입력시 btn-delete 호출 -->
+                                <input id="phoneIMEINum_00" type="text" title="휴대폰 식별번호(IMEI) 입력" placeholder="휴대폰 식별번호(IMEI) 15자리를 입력해 주세요" numberOnly maxlength="15" class="input">
+                            </span>
+                        </div>
+                        <div class="asked-eism-info">
+                            <span class="c-ick" tabindex="0">
+							<input type="checkbox" id="esim-chk-a">
+							<label for="esim-chk-a"><strong>휴대폰에 2개의 IMEI가 있어요 (Dual SIM 휴대폰인 경우)</strong></label>
+						</span>
+                        </div>
+                        <div class="dsc-list-wrap">
+                            <ul class="dsc-list">
+                                <li class="dsc-item chk-txt-1">잘 모르시겠다면 체크하지 않으셔도 됩니다.<br> 필요 시 상담사가 연락드리겠습니다.</li>
+                                <!-- [D] 체크박스 체크시 노출 2023.02.27 ↓-->
+                                <li class="dsc-item chk-txt-2" style="display:none ;">2개의 IMEI가 있으면 아래 항목까지 모두 입력해야 휴대폰 개통이 가능합니다.</li>
+                        </div>
+                    </div>
+                </div>
+                <!-- //e: 휴대폰 식별번호 imei-->
+
+                <!-- s: [D] Esim 2023.02.27 'esim-chk-a' 체크 시 영역 노출 -->
+                <div class="check-esim-area" style="display: none;">
+                    <div class="opt-group">
+                        <div class="opt-group-tit-area">
+                            <div class="opt-group-tit"><label for="phoneESIMIMEINum_00">eSIM IMEI (IMEI2)</label></div>
+                            <button type="button" class="btn-popup seller-txt-style">eSIM IMEI (IMEI2) 및 EID 확인방법</button>
+                        </div>
+                        <div class="opt-group-con">
+                            <div class="form-group">
+                                <span class="c-input">
+                                    <!-- [D] 검색어 입력시 btn-delete 호출 -->
+                                    <input id="phoneESIMIMEINum_00" type="text" title="휴대폰 식별번호(IMEI2 eSIM) 입력" placeholder="휴대폰 식별번호 (IMEI2 eSIM) 15자리를 입력해 주세요" numberOnly maxlength="15" class="input">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="opt-group">
+                        <div class="opt-group-tit-area">
+                            <div class="opt-group-tit"><label for="EIDNum_00">EID</label></div>
+                        </div>
+                        <div class="opt-group-con">
+                            <div class="form-group">
+                                <span class="c-input">
+                                    <!-- [D] 검색어 입력시 btn-delete 호출 -->
+                                    <input id="EIDNum_00" type="text" title="휴대폰 EID 입력" placeholder="휴대폰 EID 32자리를 입력해 주세요" numberOnly maxlength="15" class="input">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //e: Esim -->
+
+                <!-- s: WI-FI MAC -->
+                <div class="opt-group">
+                    <div class="opt-group-tit-area">
+                        <div class="opt-group-tit"><label for="phoneWiFiNum_00"></label> Wi-Fi MAC 주소</div>
+                        <button type="button" class="btn-popup seller-txt-style">Wi-Fi MAC 주소 확인 방법</button>
+                    </div>
+                    <div class="opt-group-con">
+                        <div class="form-group">
+                            <span class="c-input">
+                                <!-- [D] 검색어 입력시 btn-delete 호출 -->
+                                <input id="phoneWiFiNum_00" type="text" title="Wi-Fi MAC 주소 입력" placeholder="Wi-Fi MAC 주소 12자리를 입력해 주세요" maxlength="12" class="input">
+                            </span>
+                        </div>
+                        <div class="dsc-list-wrap">
+                            <ul class="dsc-list">
+                                <li class="dsc-item">Wi-Fi MAC 주소를 입력하시면 T-WiFi를 사용할 수 있습니다.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- //e: WI-FI MAC -->
+            </div>
+        </div>
+        <!-- //content -->
+        <!-- s [D] 하단 버튼 바  
+            notice : 공통을 쓰신다면 기존에 쓰시던 걸 쓰셔도 됩니다
+        -->
+        <div class="page-footer">
+            <div class="btn-area">
+                <button type="button" class="btn-primary">자급제폰 등록 및 개통 신청</button>
+            </div>
+        </div>
+        <!-- e 하단 버튼 바  -->
+    </div>
+
+    <!--[D] 2023.02.06 상담하기 버튼 디자인 변경 02/06 -->
+    <div class="sticky-shortcut" style="bottom: 75px ;">
+        <div class="btn-counsel-toggle">
+            <button type="button" class="ico-counsel-text" id="btn_pop_menu" aria-controls="pop_menu" aria-haspopup="menu" aria-pressed="false">상담하기 열기</button>
+            <ul class="toggle-list" role="menu" id="pop_menu" aria-labelledby="btn_pop_menu" >
+                <li class="ico-counsel-phone"><a href="https://m.shop.tworld.co.kr/common-campaign?cmpId=000029" target="_blank" title="T다이렉트샵 모바일웹(새창)" tabindex="-1">전화상담</a></li>
+                <li class="ico-counsel-chat"><a href="https://chat.tworld.co.kr:17443/sharedfront/jsp/view/liveChatCheck.jsp?domainId=MOBILE" target="_blank" title="T다이렉트샵 모바일웹(새창)" tabindex="-1">1:1 채팅</a></li>
+                <li class="ico-counsel-kakaotalk"><a href="https://chat.tworld.co.kr:17443/sharedfront/jsp/view/liveChatKakaoCheck.jsp?domainId=MOBILE" target="_blank" title="카카오톡 모바일앱(새창)" tabindex="-1">카카오톡</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/tdirect-ui.js"></script>
+    <script>        
+		// 웹접근성 상태값 변경
+		$(".serial-number-way > .title " ,".pop-seller ").on("click", function(){
+			if($(this).parent().hasClass("active")){
+				$(this).attr("aria-expanded", true );
+			}else{
+				$(this).attr("aria-expanded", false );
+			}
+		});
+        //웹접근성 2차 수정 tab title 클릭시 hidden 제목 유동적으로 제공
+		$('.serial-number-chk .seller-tab-wrap > .tab-item').on('click', function(){
+			var txtItem =  $(this).find('span').text();
+
+			if($(this).hasClass('on')){
+				$(this).parents().siblings('h2').html( txtItem + ' 일련번호, IMEI, Wi-Fi MAC 주소 확인방법');
+			}
+		});
+
+        //[D] 2023.02.06 상담하기 버튼 수정
+        //상단 상담하기 클릭 이벤트
+        $(".ico-counsel-text").on('click', function () {
+            var parentEl = $(this).parent();
+            var dimmedEl = '<div class="sticky-counsel-dimmed"></div>'
+            // [D] 추가 2022.08.29 상담버튼 클릭시 상단 버튼 숨김
+            if(parentEl.hasClass("active")){
+                parentEl.removeClass('active').parents('body').removeClass('js-noscroll');
+                $('.sticky-counsel-dimmed').remove();
+                $(this).attr("aria-pressed" , false).text('상담하기 열기');
+                $(this).parent('.btn-counsel-toggle').find('.toggle-list').find('a').attr({"tabindex" : "-1"});     
+            }else{
+                parentEl.addClass('active').parents('body').addClass('js-noscroll'); // js-noscroll < 바닥페이지 스크롤링 막아줌
+                parentEl.parents('body').prepend(dimmedEl);
+                $(this).attr("aria-pressed" , true).text('상담하기 닫기');
+                $(this).parent('.btn-counsel-toggle').find('.toggle-list').find('a').attr({"tabindex" : "0"});     
+            }    
+        });
+
+        //[D] esim 체크 시 노출 2023.02.27
+        $(document).on('change', '.asked-eism-info .c-ick input[type="checkbox"]',function(){
+            if ($('.asked-eism-info input').is(':checked')) {
+                $('.check-esim-area').show();
+                $('.chk-txt-2').show();
+                $('.chk-txt-1').hide();
+            }else{
+                $('.check-esim-area').hide();
+                $('.chk-txt-1').show();
+                $('.chk-txt-2').hide();
+            }
+        });
+        
+	</script>
+</body>
+
+</html>

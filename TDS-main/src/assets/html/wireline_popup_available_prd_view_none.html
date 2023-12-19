@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<title>[팝업] 가입 가능한 상품 조회​ | T 월드 다이렉트</title>
+	<link rel="stylesheet" href="../css/import_style.css" />
+
+	<script src="../js/jquery-1.12.4.js"></script>
+	<script>
+			document.documentElement.dataset.userAgent = navigator.userAgent;
+	</script>
+</head>
+
+<body>
+	<!-- 유선 popup -->
+	<!-- [D] 공통 팝업 영역
+		팝업 레이어 일 경우 class = " tds-popup-wrap " 추가
+		팝업 새창 일 경우 class = " tds-popup-wrap pop_page" 추가
+	-->
+	<div class="container-wrap tds-popup-wrap pop_page" >
+		<!-- 헤더 영역 -->
+		<div class="tds-header">
+			<div class="top-header">
+				<div class="top-header-left">
+					<h1 class="title">가입 가능한 상품 조회</h1>
+				</div>
+				<div class="top-header-right"></div>
+			</div>
+		</div>
+
+		<!-- 본분 영역 -->
+		<div class="tds-main">
+			<div class="l-grid">
+				<div class="wireline-available-prd-view">
+					<div class="inner">
+						<p class="txt-addr">서울 중구 을지로 65 (을지로2가) <br> SK텔레콤(상세주소) </p>
+						<p class="txt-confirm">위 주소에서 바로 이용 가능한 상품이 없습니다. <br> SKT 유선 가입센터(1670-2001)로 전화 주시면 <br> 자세히 안내해 드리겠습니다. </p>
+						<button type="button" class="btn-confirm btn-type-full">다른 주소로 검색하기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- close btn -->
+		<button type="button" class="btn-close"><span class="ico-close">팝업 닫기</span></button>
+	</div>
+
+</body>
+
+</html>

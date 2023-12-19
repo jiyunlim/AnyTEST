@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<title>[팝업] T 기프트 상세 | SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/seller.css">
+	<script>document.documentElement.dataset.userAgent = navigator.userAgent;</script>
+</head>
+
+<body>
+<!-- popup -->
+<div class="popup pop-seller popup-tgift-detail">
+	<div class="popup-body">
+		<div class="popup-header">
+			<a href="seller_pop_tgift.html" class="btn-back">
+				<!-- 이전페이지 -->
+				<span class="ico-goback">
+					<img src="../img/icon-header-back@2x.png">
+				</span>
+			</a>
+			<h1 class="popup-title">T 기프트 자세히 보기</h1>
+		</div>
+
+		<!-- popup-content -->
+		<div role="main" class="popup-content">
+			<h2 class="tgift-title">
+				고속퀄컴2.0 급속충전 보조배터리 10,000mAh
+			</h2>
+
+			<!--[D] 영역 삭제 <h3 class="tgift-sub-title">상품 정보</h3> -->
+
+			<div class="tgift-detail-wrap">
+				<!-- custom 영역 -->
+				<div class="p_description">
+					<img src="../img/@/@tmp_img_02@3x.png" alt="상품정보 임시 이미지">
+					<img src="../img/@/@tmp_img_02@3x.png" alt="상품정보 임시 이미지">
+				</div>
+				<!-- //custom 영역 -->
+			</div>
+
+      <!-- s: 유의사항 -->
+      <button type="button" class="seller-notice-link tgift-detail-notice">유의사항 확인하기</button>
+      <!-- //e: 유의사항 -->
+			
+		</div>
+		<!-- //popup-content -->
+		<!-- s: 01-15 수정 -->
+		<div class="popup-footer active">
+			<button type="button" class="btn-toggle" aria-expanded="true" aria-controls="gift-option"><span class="g-invisible">옵션 선택 상세보기 닫기</span></button>
+			<div class="form-group" id="gift-option">
+				<span class="c-select">
+					<select required class="select">
+						<option value="" selected="selected">옵션 선택</option>
+						<option value="option1">화이트</option>
+						<option value="option2">블랙</option>
+						<option value="option2">핑크</option>
+					</select>
+				</span>
+			</div>
+			<div class="btn-area">
+				<button type="button" class="btn-primary">T 기프트 선택하기</button>
+			</div>
+		</div>
+		<!-- e: 01-15 수정 -->
+	</div>
+</div>
+<!-- //popup -->
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/tdirect-ui.js"></script>
+	<script>
+		(function () {
+			$('.popup-tgift-detail .btn-toggle').on('click', function () {
+        var $layerBody = $(this).parent('.popup-footer')
+        var $btnToggleText = $(this).find('.g-invisible');
+        if ($layerBody.hasClass('active')) {
+          $layerBody.removeClass('active');
+          $layerBody.children('.btn-toggle').attr('aria-expanded', false);
+          $btnToggleText.text('옵션 선택 상세보기 열기');
+        } else {
+          $layerBody.addClass('active');
+          $layerBody.children('.btn-toggle').attr('aria-expanded', true);
+          $btnToggleText.text('옵션 선택 상세보기 닫기');
+        }
+			});
+		}());
+
+	</script>
+</body>
+</html>

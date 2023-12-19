@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <title>[상품 Mobile] detail | SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/seller.css">
+    <script>
+        document.documentElement.dataset.userAgent = navigator.userAgent;
+    </script>
+</head>
+
+<body>
+    <div class="wrap seller-wrap seller-join-conditions">
+        <div class="sticky-top">
+            <div class="spot-step">
+                <ol class="step-list">
+                    <!-- [D] 작성 완료시 end 클래스 추가, 현재페이지는 링크에 aria-current="step" 추가 -->
+                    <li class="step-item end"><a href="#none" class="link-block"><span>01</span><span>옵션/배송방법</span></a></li>
+                    <li class="step-item"><a href="#none" class="link-block" aria-current="step"><span>02</span><span>가입조건</span></a></li>
+                    <li class="step-item"><a href="#none" class="link-block"><span>03</span><span>주문확인</span></a></li>
+                </ol>
+            </div>
+        </div>
+        <main role="main" class="content">
+            <h1 class="g-invisible">가입조건</h1>
+            <div class="l-grid l-seller">
+                <!-- s: 가입유형 -->
+                <div class="opt-group" id="inputAnchor1">
+                    <h2 class="opt-group-tit">가입유형</h2>
+                    <div class="opt-group-con">
+                        <div class="product-option-col join-types">
+                            <span class="c-ick-var">
+                                <input type="radio" name="_joinType" id="_joinType1" checked="checked">
+                                <label for="_joinType1">기기변경</label>
+                            </span>
+                            <span class="c-ick-var">
+                                <!-- [D] 비활성 상태 애트리뷰트 disabled 추가/삭제 -->
+                                <input type="radio" name="_joinType" id="_joinType2" disabled>
+                                <label for="_joinType2">번호이동</label>
+                            </span>
+                            <span class="c-ick-var">
+                                <input type="radio" name="_joinType" id="_joinType3">
+                                <label for="_joinType3">신규가입</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //e: 가입유형 -->
+
+                <!-- s: 요금제 선택 -->
+                <div class="opt-group" id="inputAnchor2">
+                    <div class="opt-group-tit-area">
+                      <h2 class="opt-group-tit">요금제 선택</h2>
+                      <button type="button" class="notice">혜택 자세히보기</button>
+                    </div>
+                    <div class="opt-group-con type-plan">
+                        <div class="seller-plan-item open">
+                            <!-- [D] badge type 텍스트/bg 매칭
+                                .type1 : 대표
+                                .type2 : 내가고른
+                                .type3 : 사용중 or .use-color : 사용중
+                                .type4 : AI Pick
+                                .type5 : 추가1
+                                .type6 : 추가2
+                                .type7 : 추가3
+                                <em class="badge-round type1">대표</em>
+                            -->
+                            <button type="button" class="inner" aria-expanded="true" aria-controls="plan_detail_1">
+                                <div class="fee-name">
+                                    <span>T 플랜 에센스+다이렉트플랜</span>
+                                    <span class="status-box use-color">사용중</span>                                  
+                                </div>
+                                <div class="fee-info">
+                                    <div class="status-size">데이터 100GB</div>
+                                    <div class="status-fee">
+                                        <span>999,999</span>
+                                        <span class="status-unit">원/월</span>
+                                    </div>
+                                </div>
+                                <div class="fee-guide">데이터 모두 소진시 5Mps 속도로 무제한 제공</div>
+                            </button>
+                            <div class="area-toggle-cont" id="plan_detail_1">
+                                <h3 class="g-invisible">혜택 자세히보기</h3>
+                                <strong class="txt-info"><em>(필수)</em>추가 혜택 <em>N개</em>를 선택해주세요.</strong>
+                                <span class="c-select">
+                                    <select title="추가 혜택 선택1" class="select" required>
+                                        <option value="">추가 혜택</option>
+                                        <option value="opt1" >V컬러링 월100원(2개월간)</option>
+                                        <option value="opt2" disabled="disabled">스마트기기 1회선 50% 할인</option>
+                                    </select>
+                                </span>
+                                <span class="c-select">
+                                    <select title="추가 혜택 선택2" class="select" required>
+                                        <option value="">추가 혜택</option>
+                                        <option value="opt1" >V컬러링 월100원(2개월간)</option>
+                                        <option value="opt2" selected>스마트기기 1회선 50% 할인</option>
+                                    </select>
+                                </span>
+                                <div class="area-info">
+                                    <span class="title-info">안내사항</span>
+                                    <ul class="dsc-list">
+                                        <li class="dsc-item">FLO팩 : 모바일 무제한 듣기 + FLO 이용 데이터 무료(월 7,920원 상당)</li>
+                                        <li class="dsc-item">POOQ팩 : 모바일과 PC 실시간 지상파&amp;VOD 이용 + VOD 10회 다운로드(월 7,900원 상당)</li>
+                                        <li class="dsc-item">5GX 95 요금제를 사용하시는 고객님께 FLO팩과 POOQ팩 중 선택하신 1개 옵션이 무료로 제공됩니다.</li>
+                                        <li class="dsc-item">5GX 95 요금제를 사용하시는 고객님께 FLO팩과 POOQ팩 중 선택하신 1개 옵션이 무료로 제공됩니다.</li>
+                                        <li class="dsc-item">5GX 95 요금제를 사용하시는 고객님께 FLO팩과 POOQ팩 중 선택하신 1개 옵션이 무료로 제공됩니다.</li>
+                                        <li class="dsc-item">5GX 95 요금제를 사용하시는 고객님께 FLO팩과 POOQ팩 중 선택하신 1개 옵션이 무료로 제공됩니다.</li>
+                                        <li class="dsc-item">5GX 95 요금제를 사용하시는 고객님께 FLO팩과 POOQ팩 중 선택하신 1개 옵션이 무료로 제공됩니다.</li>
+                                        <li class="dsc-item">5GX 95 요금제를 사용하시는 고객님께 FLO팩과 POOQ팩 중 선택하신 1개 옵션이 무료로 제공됩니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="seller-plan-item">
+                            <button type="button" class="inner" aria-expanded="false" aria-controls="plan_detail_2">
+                                <div class="fee-name">
+                                    <span>T 플랜 에센스+다이렉트플랜</span>
+                                    <span class="status-box type1">대표</span>
+                                    <span class="status-box type4">AI Pick</span>
+                                    <span class="status-box type2">내가 고른</span>
+                                </div>
+                                <div class="fee-info">
+                                    <div class="status-size">데이터 100GB</div>
+                                    <div class="status-fee">
+                                        <span>999,999</span>
+                                        <span class="status-unit">원/월</span>
+                                    </div>
+                                </div>
+                                <div class="fee-guide">데이터 모두 소진시 5Mps 속도로 무제한 제공</div>
+                            </button>
+                            <div class="area-toggle-cont" id="plan_detail_2">
+                                <div class="area-info">
+                                    <span class="title-info">안내사항</span>
+                                    <ul class="dsc-list">
+                                        <li class="dsc-item">FLO팩 : 모바일 무제한 듣기 + FLO 이용 데이터 무료(월 7,920원 상당)</li>
+                                        <li class="dsc-item">POOQ팩 : 모바일과 PC 실시간 지상파&VOD 이용 + VOD 10회 다운로드(월 7,900원 상당)</li>
+                                        <li class="dsc-item">5GX 95 요금제를 사용하시는 고객님께 FLO팩과 POOQ팩 중 선택하신 1개 옵션이 무료로 제공됩니다.</li>
+                                        <li class="dsc-item">5GX 95 요금제를 사용하시는 고객님께 FLO팩과 POOQ팩 중 선택하신 1개 옵션이 무료로 제공됩니다.</li>
+                                        <li class="dsc-item">5GX 95 요금제를 사용하시는 고객님께 FLO팩과 POOQ팩 중 선택하신 1개 옵션이 무료로 제공됩니다.</li>
+                                        <li class="dsc-item">5GX 95 요금제를 사용하시는 고객님께 FLO팩과 POOQ팩 중 선택하신 1개 옵션이 무료로 제공됩니다.</li>
+                                        <li class="dsc-item">5GX 95 요금제를 사용하시는 고객님께 FLO팩과 POOQ팩 중 선택하신 1개 옵션이 무료로 제공됩니다.</li>
+                                        <li class="dsc-item">5GX 95 요금제를 사용하시는 고객님께 FLO팩과 POOQ팩 중 선택하신 1개 옵션이 무료로 제공됩니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="seller-plan-item">
+                            <button type="button" class="inner" aria-expanded="false">
+                                <div class="fee-name">
+                                    <span>T 플랜 에센스+다이렉트플랜</span>
+                                    <span class="status-box type5">추가 1</span>
+                                    <span class="status-box type6">추가 2</span>
+                                    <span class="status-box type7">추가 3</span>
+                                </div>
+                                <div class="fee-info">
+                                    <div class="status-size">데이터 100GB</div>
+                                    <div class="status-fee">
+                                        <span>999,999</span>
+                                        <span class="status-unit">원/월</span>
+                                    </div>
+                                </div>
+                                <div class="fee-guide">데이터 모두 소진시 5Mps 속도로 무제한 제공</div>
+                            </button>
+                        </div>
+                        <div class="seller-plan-item">
+                            <button type="button" class="inner" aria-expanded="false" aria-controls="plan_detail_4">
+                                <div class="fee-name">
+                                    <span>T 플랜 에센스+다이렉트플랜</span>
+                                    <span class="status-box type5">추가 1</span>
+                                    <span class="status-box type6">추가 2</span>
+                                    <span class="status-box type7">추가 3</span>
+                                </div>
+                                <div class="fee-info">
+                                    <div class="status-size">데이터 100GB</div>
+                                    <div class="status-fee">
+                                        <span>999,999</span>
+                                        <span class="status-unit">원/월</span>
+                                    </div>
+                                </div>
+                                <div class="fee-guide">데이터 모두 소진시 5Mps 속도로 무제한 제공</div>
+                            </button>
+                            <div class="area-toggle-cont" id="plan_detail_4">
+                                <!-- [D] 모회선 인증이 필요한 요금제를 선택 시 노출 -->
+                                <div class="auth-group">
+                                    <h3 class="auth-title">함께쓰기 스마트폰 인증</h3>
+                                    <div class="auth-content">
+                                        <!-- [D] 인증 전 -->
+                                        <!--영역삭제 <span class="txt-info">선택하신 요금제는 함께쓰기 스마트폰 회선 인증이 필요합니다.</span> -->
+                                        <div class="form-group">
+                                        <span class="c-input">
+                                            <!-- [D] 검색어 입력시 btn-delete 노출 / 비 활성화시 disabled 속성으로 제어 -->
+                                            <input type="tel" placeholder="'-'없이 숫자만 입력해주세요" maxlength="11" class="input" oninput="javascript: if ( this.maxLength > -1 && this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                        
+                                            <button type="button" class="btn-delete"><span class="ico-delete">입력 내용 삭제</span></button>
+                                        </span>
+                                        <!--[D] input 비활성화시 disabled 속성으로 제어 -->
+                                        <button type="button" class="btn-extra">인증</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- [D]case 인증 완료 -->
+                                <div class="auth-group">
+                                    <h3 class="auth-title">함께쓰기 스마트폰 인증</h3>
+                                    <div class="auth-content">
+                                        <!-- [D] 인증 완료 -->
+                                        <p class="auth-status">
+                                        <span>010-0000-0000</span>
+                                        <em class="txt-auth-status">인증 완료</em>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn-plan-list">
+                            <span>다른 요금제 더보기</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- //e: 요금제 선택 -->
+                
+                <!-- s: 할인 방법 -->
+                <div class="opt-group" id="inputAnchor3">
+                    <h2 class="opt-group-tit">할인 방법</h2>
+                    <div class="opt-group-con type-discount">
+                        <div class="product-option-row discount-types">
+                            <span class="c-ick-var">
+                                <input type="radio" name="_discountType" id="_discountType1" checked="checked">
+                                <label for="_discountType1">
+                                    <div class="row">
+                                        <span class="txt">24개월 휴대폰 할인</span> <span class="desc">총 - 120,000 원</span>
+                                    </div>
+                                    <div class="row">
+                                        <span class="txt">공시지원금 + 지원금</span></span>
+                                    </div>
+                                </label>
+                            </span>
+                            <span class="c-ick-var">
+                                <input type="radio" name="_discountType" id="_discountType2">
+                                <label for="_discountType2">
+                                    <div class="row">
+                                        <span class="txt">12개월 요금 할인</span> <span class="desc">총 - 120,000 원</span>
+                                    </div>
+                                    <div class="row">
+                                        <span class="txt">통신요금의 25%(선택약정)</span> <span class="desc">월 - 230,000 원</span>
+                                    </div>
+                                </label>
+                            </span>
+                            <span class="c-ick-var">
+                                <input type="radio" name="_discountType" id="_discountType3">
+                                <label for="_discountType3">
+                                    <div class="row">
+                                        <span class="txt">24개월 요금 할인</span> <span class="desc">총 - 120,000 원</span>
+                                    </div>
+                                    <div class="row">
+                                        <span class="txt">통신요금의 25% 할인(선택약정)</span> <span class="desc">월 -10,000 원</span>
+                                    </div>
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //e: 할인 방법 -->
+
+                <!-- s: 할인 방법 : 다이렉트 요금제 시 노출 -->
+                <div class="opt-group">
+                    <h2 class="opt-group-tit">할인 방법</h2>
+                    <div class="opt-group-con">
+						<p class="txt-info"><strong class="text-secondary">다이렉트 요금제명</strong> 요금제는 휴대폰/요금 할인을 추가할 수 없습니다.</p>
+                    </div>
+                </div>
+                <!-- //e: 할인 방법 : 다이렉트 요금제 시 노출 -->
+
+                <!-- s: 온가족 할인 -->
+                <div class="opt-group" id="inputAnchor4">
+                    <h2 class="opt-group-tit">온가족 할인</h2>
+                    <div class="opt-group-con type-family">
+                        <div class="product-option-col">
+                            <span class="c-ick-var">
+                                <input type="radio" name="f" id="f1" checked="checked">
+                                <label for="f1"><em>적용</em>-30,000<span class="unit">원/월</span></label>
+                            </span>
+                            <!-- [D] 비활성 상태 애트리뷰트 disabled 추가/삭제 -->
+                            <span class="c-ick-var">
+                                <input type="radio" name="f" id="f2">
+                                <label for="f2">미적용</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //e: 온가족 할인 -->
+
+                <!-- s: 복지 할인 -->
+                <div class="opt-group" id="inputAnchor5">
+                    <h2 class="opt-group-tit">복지 할인</h2>
+                    <div class="opt-group-con type-welfare">
+                        <div class="product-option-col">
+                            <span class="c-ick-var">
+                                <input type="radio" name="w" id="w1" checked="checked">
+                                <label for="w1"><em>적용</em>-30,000<span class="unit">원/월</span></label>
+                            </span>
+                            <!-- [D] 비활성 상태 애트리뷰트 disabled 추가/삭제 -->
+                            <span class="c-ick-var">
+                                <input type="radio" name="w" id="w2">
+                                <label for="w2">미적용</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //e: 복지 할인 -->
+
+                <!-- s: 이용 방법 -->
+                <div class="opt-group" id="inputAnchor6">
+                    <h2 class="opt-group-tit">이용 방법</h2>
+                    <div class="opt-group-con type-pay-way">
+                        <div class="product-option-col">
+                            <span class="c-ick-var">
+                                <input type="radio" name="_payType" id="_payType12">
+                                <label for="_payType12">12개월</label>
+                            </span>
+                            <span class="c-ick-var">
+                                <input type="radio" name="_payType" id="_payType24" >
+                                <label for="_payType24">24개월</label>
+                            </span>
+                            <span class="c-ick-var">
+                                <input type="radio" name="_payType" id="_payType30">
+                                <label for="_payType30">30개월</label>
+                            </span>
+                            <span class="c-ick-var">
+                                <input type="radio" name="_payType" id="_payTypeSingle">
+                                <label for="_payTypeSingle">일시불</label>
+                            </span>
+                        </div>
+                        <div class="product-option-col">
+                            <span class="c-ick-var">
+                                <input type="radio" name="_payType" id="_payType6" checked="checked">
+                                <label for="_payType6">6개월</label>
+                            </span>
+                            <span class="c-ick-var">
+                                <input type="radio" name="_payType" id="_payType9" >
+                                <label for="_payType9">9개월</label>
+                            </span>
+                            <span class="c-ick-var">
+                                <input type="radio" name="_payType" id="_payType18">
+                                <label for="_payType18">18개월</label>
+                            </span>
+                            <span class="c-ick-var">
+                                <input type="radio" name="_payType" id="_payType36" disabled="disabled">
+                                <label for="_payTypeSingle">36개월</label>
+                            </span>
+                        </div>
+                        <p class="txt">일시불 선택 시 결제 단계에서 카드 할부를 이용할 수 있습니다.</p>
+                    </div>
+                </div>
+                <!-- //e: 이용 방법-->
+            </div>
+        </main>
+        <!-- s: 하단 스티키 바 -->
+        <!-- [D] sticky-bar 숨김시 .active 추가 -->
+        <!-- s: 01-15 수정 -->
+        <div class="sticky-bar">
+            <div class="layer-pay">
+                <h2 class="g-invisible">출고가 가격정보</h2>
+                <div class="l-grid">
+                    <!-- [D] : layer-body 영역 노출시 class .show 추가 -->
+                    <!-- [D] : layer-body 안 price-area 노출시 class .on 추가 -->
+                    <div class="layer-body on">
+                        <button type="button" class="btn-toggle" aria-expanded="true" aria-controls="detail-terms" ><span class="g-invisible">적용 가입조건 상세보기 닫기</span></button>
+                        <div id="detail-terms">
+                            <div class="price-area">
+                                <div class="stit">
+                                    <span class="text">
+                                        <span class="sunit">휴대폰 월 할부금(24개월)</span>
+                                    </span>
+                                </div>
+                                <div class="price">
+                                    <span class="num">59,000</span> <span class="unit">원</span>
+                                </div>
+                            </div>
+                            <div class="price-area">
+                                <div class="stit">
+                                    <span class="text">
+                                        <span class="sunit">월 통신요금</span>
+                                    </span>
+                                </div>
+                                <div class="price">
+                                    <span class="num">29,000</span> <span class="unit">원</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="layer-foot">
+                        <!--[D] 22.11.08 case1 기본 
+                        <div class="price-area">
+                            <div class="stit">
+                                <span class="text">
+                                    <span class="sunit">예상 월 납부금액</span>
+                                </span>
+                            </div>
+                            <div class="price">
+                                <span class="num"><strong>69,000</strong></span>
+                                <span class="unit">원</span>
+                                <em class="desc">*부가세, 할부 수수료 5.9% 포함</em>
+                            </div>
+                        </div>
+                        <div class="price-area">
+                            <div class="stit">
+                                <span class="text">
+                                    <span class="sunit">출시 가격</span>
+                                </span>
+                            </div>
+                            <div class="price">
+                                <span class="num"><strong>2,000,000</strong></span>
+                                <span class="unit">원</span>
+                            </div>
+                        </div>
+                        -->
+                        <!--[D] 22.11.08 case2 일시불 (single-pay 클라스명 추가) -->
+                        <div class="price-area single-pay">
+                            <div class="stit">
+                                <span class="text">
+                                    <span class="sunit">휴대폰 일시불</span>
+                                </span>
+                            </div>
+                            <div class="price">
+                                <span class="num"><strong>1,498,000</strong></span>
+                                <span class="unit">원</span>
+                                <em class="desc">*부가세 포함</em>
+                            </div>
+                        </div>
+                        <div class="price-area single-pay">
+                            <div class="stit">
+                                <span class="text">
+                                    <span class="sunit">월 통신요금</span>
+                                </span>
+                            </div>
+                            <div class="price">
+                                <span class="num"><strong>59,000</strong></span>
+                                <span class="unit">원</span>
+                                <em class="desc">*부가세 포함</em>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-area">
+                        <!-- [D] 활성/비활성 여부는 클래스 disabled 추가/삭제로 컨트롤 -->
+                        <button type="button" class="btn-light">장바구니 담기</button>
+                        <button type="button" class="btn-primary">주문하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //e: 하단 스티키 바 -->
+        <!-- s: 01-15 수정 -->
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/tdirect-ui.js"></script>
+    <script>
+        (function () {
+            // 요금제카드 혜택자세히보기 토글 및 앵커링 애니메이션
+			$('.seller-plan-item .inner').on('click', function () {
+                var $this = $(this);
+                const $parent = $this.parent('.seller-plan-item');
+
+                $parent.siblings('.seller-plan-item').removeClass('open');
+                $parent.toggleClass('open');
+
+                if ($parent.hasClass('open')) {
+                    $('.seller-plan-item .inner').attr('aria-expanded', false);
+                    $this.attr('aria-expanded', true);
+                } else {
+                    $this.attr('aria-expanded', false);
+                }
+
+                if (!$this.next('.area-toggle-cont').length && $this.parents('.wrap').length) {
+                    animateToNextAnchor($(hasNextAnchor($this)));
+                }
+            });
+            
+            function animateToNextAnchor(targetElem){
+                var $target = $(targetElem);
+                var $stickyHeight = $('.sticky-top').height();
+                var SPEED = 300;
+                $('html, body').animate({scrollTop : $target.offset().top - $stickyHeight}, SPEED);
+                
+            }
+            function hasNextAnchor ($element) {
+                var currentIDNumber = parseInt($element.parents('.opt-group').attr('id').match(/\d+/g).join());
+                var nextAnchor = '#inputAnchor' + (currentIDNumber + 1);
+
+                if ($(nextAnchor).length) {
+                    return nextAnchor;
+                }
+
+                return false;
+            }
+            $('.c-ick-var input').on('change', function() {
+                var hasNext = hasNextAnchor($(this));
+
+                if (hasNext) {
+                    animateToNextAnchor($(hasNext));
+                }
+            });
+            
+            $('.wrap .seller-plan-item .select').on('change', function () {
+                var $this = $(this);
+                var hasNext = hasNextAnchor($this);
+                var isAllSelectChanged = false;
+                
+                $this.parents('.area-toggle-cont').find('.c-select').each(function (i, item) {
+                    if (!$(item).children('.select').val()) {
+                        isAllSelectChanged = false;
+                        return false;
+                    }
+                    isAllSelectChanged = true;
+                });
+
+                if (isAllSelectChanged && hasNext) {
+                    animateToNextAnchor($(hasNext));
+                }
+            });
+		})();
+    
+    //input 라디오 버튼 수정 - 221219 
+    //input 라디오 버튼 키보드 제어
+    $('.product-option-row span, .type-family .product-option-col span, .type-welfare .product-option-col span').keydown(function(){
+      var disabledEl = $(this).children('input').attr("disabled");
+      if (!disabledEl && window.event.keyCode==13) {      
+        $(this).parent('div').find('input').attr('checked', false);
+        $(this).find('input').attr('checked', true);
+      } else if (disabledEl && window.event.keyCode==13) {
+        $(this).find('input').attr("checked", false);
+      }
+    });
+
+    //input 라디오 버튼 글릭시 
+    $('.product-option-row span, .type-family .product-option-col span, .type-welfare .product-option-col span').click(function(){
+      var disabledEl = $(this).children('input').attr("disabled");
+      if (!disabledEl){
+        $(this).parent('div').find('input').attr('checked', false);
+        $(this).find('input').attr('checked', true);   
+      }
+    });
+
+    // 가입유형 선택 - 클릭
+    $('.join-types .c-ick-var').on('click', function(){
+      var disabledEl = $(this).children('input').attr("disabled");
+      if (!disabledEl){
+        $('.join-types .c-ick-var input').attr('checked', false);
+        $(this).find('input').attr('checked', true);   
+      }
+    });
+
+    // 가입유형 선택 - 키보드 제어
+    $('.join-types .c-ick-var').on('keydown', function(){   
+      var disabledEl = $(this).children('input').attr("disabled");
+      if (!disabledEl && window.event.keyCode==13) {      
+        $('.join-types .c-ick-var input').attr('checked', false);
+        $(this).find('input').attr('checked', true);
+      } else if (disabledEl && window.event.keyCode==13) {
+        $(this).find('input').attr("checked", false);
+      }
+    }); 
+
+    // 이용방법 선택 - 클릭
+    $('.type-pay-way .c-ick-var').on('click', function(){
+      var disabledEl = $(this).children('input').attr("disabled");
+      if (!disabledEl){
+        $('.type-pay-way .c-ick-var input').attr('checked', false);
+        $(this).find('input').attr('checked', true);   
+      }
+    });
+
+    // 이용방법 선택 - 키보드 제어
+    $('.type-pay-way .c-ick-var').on('keydown', function(){   
+      var disabledEl = $(this).children('input').attr("disabled");
+      if (!disabledEl && window.event.keyCode==13) {      
+        $('.type-pay-way .c-ick-var input').attr('checked', false);
+        $(this).find('input').attr('checked', true);
+      } else if (disabledEl && window.event.keyCode==13) {
+        $(this).find('input').attr("checked", false);
+      }
+    }); 
+
+    </script>
+</body>
+
+</html>

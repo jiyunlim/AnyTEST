@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<title>[팝업] 설치 희망일/시간 선택 | SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/seller.css">
+	
+	<script>document.documentElement.dataset.userAgent = navigator.userAgent;</script>
+</head>
+
+<body>
+<!-- 유선 popup (설치 희망일/시간) -->
+<div class="popup pop-seller wireline-select-wishday">
+	<div class="popup-body">
+		<div class="popup-header">
+			<h1 class="popup-title">설치 희망일/시간</h1>
+		</div>
+    
+		<div role="main" class="popup-content">
+			<h2 class="g-invisible">설치 희망일/시간 선택</h2>
+
+			<!-- [D] 2023.08.04 MOZ000325-27 : '바로설치' 서비스 신청 기능추가 -->
+			<div class="direct-msg-box">
+				<div class="c-ick">
+					<input type="checkbox" id="_directSetting">
+					<label for="_directSetting" class="label">24시간 이내 “바로설치”를 원하실 경우 체크해 주세요.</label>
+				</div>
+				<p class="wishday-tit">원하시는 날짜를 선택해 주세요.</p>
+			</div>
+			<!-- [D] ↓ 체크박스 선택 시 노출 -->
+			<div class="direct-setting-msg" style="display: none;">
+				<ul>
+					<li>빠른 일정 확인을 위해 <span>상담사가 연락</span>을 드립니다.</li>
+					<li><span>오후 3시 이후 신청 건은 다음 날 상담 후 설치</span>됩니다.</li>
+					<li>법정 <span>공휴일 및 토요일/일요일은 상담 및 설치가 불가</span>합니다.</li>
+					<li>기상 악화 및 설치 지점 <span>상황에 따라 조정이 필요</span>할 수 있습니다.</li>
+				</ul>
+			</div>
+			<!-- // -->
+			<div id="wishDatepicker">
+				<div class="classify-mark">
+					<span class="possib">설치 가능</span>
+					<span class="impossib">설치 안됨</span>
+				</div>
+			</div>
+			<div class="calendar-guide-wrap">
+				<p class="calendar-guide-txt">인터넷 개통 지점의 상황에 따라 변동 사항이 발생될 수 있으며 <br /> 최종 확정을 위해 별도로 연락을 드릴 수도 있습니다. </p>
+			</div>
+			<div class="wishday-sel">
+				<label for="_selectedDate">
+					<h2>설치 예정일</h2>
+				</label>
+				<input type="text" class="sel-date-input" value="2022-04-19(화)" id="_selectedDate" readonly>
+				<div class="c-select-wrap">
+					<div class="c-select">
+						<!-- [D] 2023.08.09 접근성에 용이하게 변경 (초점회귀 개발작업 불필요) -->
+						<select name="select-time-list" class="select" id="_selectedTime" title="시간 선택">
+							<option value="none">시간 선택</option>
+							<option value="time_1"> 10:00 ~ 11:00 </option>
+							<option value="time_2"> 11:00 ~ 12:00 </option>
+							<option value="time_3"> 12:00 ~ 13:00 </option>
+							<option value="time_4"> 13:00 ~ 14:00 </option>
+							<option value="time_5"> 14:00 ~ 15:00 </option>
+							<option value="time_6"> 15:00 ~ 17:00 </option>
+							<option value="time_7"> 18:00 ~ 19:00 </option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup-footer">
+			<div class="btn-area">
+				<!-- [D] 활성/비활성 여부는 disabled 클래스 및 속성으로 추가/삭제로 컨트롤 -->
+				<button type="button" class="btn-primary btn-lg" disabled="disabled">선택 완료</button>
+			</div>
+		</div>
+
+    <button type="button" class="btn-close">
+			<span class="ico-close">팝업 닫기</span>
+		</button>
+	</div>
+</div>
+
+<!-- //popup -->
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/swiper.min.js"></script>
+	<script src="../js/tdirect-ui.js"></script>
+
+	<!-- jquery-ui.min.js : datepicker 사용 -->
+	<script src="../js/jquery-ui.min.js"></script>
+
+	<script>
+		// datepicker 달력 
+	  //선택가능 날짜 
+		var availableDates = ["2023-08-08","2023-08-09", "2023-08-10", "2023-08-30" ];
+	  //var originDate = ["2022-04-06"];
+		function available(date) {
+			var thismonth = date.getMonth()+1;
+			var thisday = date.getDate();
+			if(thismonth<10){
+				thismonth = "0"+thismonth;
+			}
+			if(thisday<10){
+				thisday = "0"+thisday;
+			}
+			ymd = date.getFullYear() + "-" + thismonth + "-" + thisday;
+		  // console.log(ymd);
+			if ($.inArray(ymd, availableDates) >= 0) {
+				return [true,"",""];
+			} else {
+				return [false,"",""];
+			} 
+		}
+
+		$("#wishDatepicker").datepicker({
+			dateFormat: 'yy-mm-dd(D)',
+			prevText: '이전 달',
+			nextText: '다음 달',
+			monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+			dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+			dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+			showMonthAfterYear: true,
+			yearSuffix: '년',
+			onSelect: function() {                                  
+			var wishDate = $("#wishDatepicker").val();                                
+			$('.sel-date-input').val(wishDate);
+			$('.wireline-select-wishday .c-select .head .placeholder').text('시간 선택');
+			$('.wireline-select-wishday .btn-primary').attr("disabled", true);
+			},
+			// [D] 2차 웹접근성 
+			onUpdateDatepicker :function(){
+        var availableDateEl = $( "a" , ".ui-datepicker-calendar tr td:not(.ui-state-disabled)");
+        availableDateEl.append('<span class="blind">(설치가능)</span>');
+        var unavailableDateEl = $( "span" ,".ui-datepicker-calendar tr td.ui-state-disabled");
+        unavailableDateEl.append('<span class="blind">(설치안됨)</span>');
+				// href 속성 추가
+				$(this).find('.ui-datepicker-header > a').attr('href','#');
+				//<table> 바로 아래 <caption> 속성 추가
+				$(this).find(".ui-datepicker-calendar").prepend('<caption>설치 희망일/시간 선택</caption>');
+      },
+			beforeShowDay:available    
+		});
+
+		// 기존 선택 날짜 표시
+		var today = new Date(); 
+		var originDate = "2022-04-23"; //기존 날짜 담는 변수 
+		originDate = parseInt(originDate.substring(8, 10))
+		today.setDate(originDate); 
+		$('#wishDatepicker').datepicker('setDate', today);
+
+		//시간 선택 시 버튼 활성화
+		var select = $('.wishday-sel .c-select-wrap select');
+		select.change(function(){
+			$(".popup-footer").find('button').attr("disabled", false);
+		});
+
+		//[D] 2023.08.04 MOZ000325-27 : '바로설치' 서비스 신청 기능추가
+		$("#_directSetting", ".direct-msg-box").click(function () {
+			if ($(this).is(":checked")) {
+				$(".direct-setting-msg").show(); //보여지는 안내 문구 
+				$(".wishday-tit , #wishDatepicker , .calendar-guide-wrap , .wishday-sel").hide(); //선택안내 타이틀 , Datepicker, 달력 하단 안내문구, 설치예정 선택 보이지 않게 처리
+				$('.wireline-select-wishday').find('.btn-primary').attr("disabled", false); //선택완료 버튼 활성화
+
+			} else {
+				$(".direct-setting-msg").hide();
+				$(".wishday-tit , #wishDatepicker , .calendar-guide-wrap , .wishday-sel").show();
+				$('.wireline-select-wishday').find('.btn-primary').attr("disabled", true);
+			}
+		});
+	</script>
+</body>
+</html>

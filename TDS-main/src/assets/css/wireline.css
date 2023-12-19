@@ -1,0 +1,3706 @@
+/* wireline add style */
+[class*="wireline-"] em {
+  font-style: normal;
+}
+.c-ick input[type=checkbox],
+.c-ick input[type=radio],
+.rdo-item input[type=checkbox],
+.rdo-item input[type=radio] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -100px;
+  opacity: 1
+}
+[class*="tds-popup-"] .btn-area {
+  display: flex;
+}
+[class*="tds-popup-"] .btn-area button[class^="btn-"] {
+  padding: 0;
+  font-size: 17px;
+  font-weight: 300;
+  height: 55px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  display: block;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+.btn-area button.btn-line{
+  border-top: 1px solid #e5e5e5;
+}
+.btn-area button.btn-primary{
+  background-color: #4130df;
+  border-color: #4130df;
+  border: 0;
+  color: #fff;
+}
+[class*="wireline-"] .c-select{
+  position: relative;
+}
+[class*="wireline-"] .c-select::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  margin-top: -6px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border: 1px solid #666666;
+  border-top: 0;
+  border-left: 0;
+  z-index: 11;
+  background: none;
+}
+/* wireline main module*/
+/*  */
+.wireline-popular-item-area .section-tit .popular-tab-box {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+  padding: 0 24px;
+  box-shadow: -2px 0 8px 0 rgba(0, 0, 0, 0.16);
+  display: block;
+  transition: all .5s ease-in-out;
+  z-index: 100050;
+}
+.wireline-popular-item-area .section-tit .popular-tab-box.active{
+  bottom: 0;
+}
+.wireline-popular-item-area .section-tit .popular-tab-box.active>h3 {
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 28px 0 10px;
+}
+.wireline-popular-item-area .section-tit span.ico-close {
+  position: absolute;
+  top: 28px;
+  right: 24px;
+  width: 14px;
+  height: 14px;
+  background: url('../img/wireline/btn-bottomsheet-X.png') 0 0 no-repeat;
+  background-size: contain;
+}
+
+.wireline-popular-item-area .section-tit .popular-tab-box .ico-close {
+  position: absolute;
+  top: 28px;
+  right: 24px;
+  width: 14px;
+  height: 14px;
+  background: url('../img/wireline/btn-bottomsheet-X.png') 0 0 no-repeat;
+  background-size: contain;
+}
+
+
+/*/// 커스텀 */
+.main-section.wireline-popular-item-area {
+  border-top: 7px solid #f0f0f5;
+  padding-top: 36px;
+}
+.wireline-popular-item-area .section-tit {
+  line-height: normal;
+  z-index: auto;
+  display: inline-block;
+  padding: 0;
+  padding-left: 20px;
+  width: calc(100% - 38px);
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.wireline-popular-item-area .section-tit .tab-value {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  font-size: 20px;
+  border-bottom: 1px solid #000;
+  margin-right: 15px;
+  height: 26px;
+  line-height: 25px;
+  font-weight: 500;
+  vertical-align: baseline;
+}
+.wireline-popular-item-area .section-tit .tab-value::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  bottom: 0;
+  right: -16px;
+  width: 12px;
+  height: 100%;
+  background: url('../img/wireline/arr_down_drk_black.png') 0 center no-repeat;
+  background-size: 12px auto;
+  color: transparent;
+}
+.wireline-popular-item-area .section-tit .popular-tab-box .tab-list {
+  width: 100%;
+}
+.wireline-popular-item-area .section-tit .popular-tab-box .tab-list .tab-item {
+  text-align: left;
+  letter-spacing: -1px;
+  background-color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 20px 0 20px;
+  box-sizing: border-box;
+  position:relative;
+}
+
+
+.wireline-popular-item-area .section-tit .popular-tab-box .tab-list .rdo-item input[type=radio] {
+  margin-left:0;
+  right:0;
+  left:auto;
+  width:22px;
+  height:22px;
+  top:20px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.wireline-popular-item-area .section-tit .popular-tab-box .tab-list .rdo-item input[type=radio]+label {
+  display: block;
+  overflow: hidden;
+}
+.wireline-popular-item-area .section-tit .popular-tab-box .tab-list .rdo-item input[type=radio]:checked+label::after {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url('../img/wireline/btn-check-radio-on@2x.png') 0 0 no-repeat;
+  background-size: 22px auto;
+  vertical-align: middle;
+}
+.wireline-popular-item-area .section-tit .popular-tab-box .tab-list .rdo-item input[type=radio]+label::after {
+  float:right;
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url('../img/wireline/btn-check-radio-off@2x.png') 0 0 no-repeat;
+  background-size: 22px auto;
+  vertical-align: middle;
+}
+
+/* 바텀시트 - 230808 */
+.bottomSheet .popular-tab-box {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+  padding: 0 24px;
+  box-shadow: -2px 0 8px 0 rgba(0, 0, 0, 0.16);
+  display: block;
+  transition: all .5s ease-in-out;
+  z-index: 100050;
+}
+.bottomSheet .popular-tab-box.active{
+  bottom: 0;
+}
+.bottomSheet .popular-tab-box.active>h3 {
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 28px 0 10px;
+  line-height:normal;
+}
+
+.bottomSheet .popular-tab-box .ico-close {
+  position: absolute;
+  top: 28px;
+  right: 24px;
+  width: 14px;
+  height: 14px;
+  background: url('../img/wireline/btn-bottomsheet-X.png') 0 0 no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 1px;
+  line-height: 1px;
+  color: transparent;
+  vertical-align: middle;
+}
+
+.bottomSheet .popular-tab-box .tab-list {
+  width: 100%;
+}
+.bottomSheet .popular-tab-box .tab-list .tab-item {
+  text-align: left;
+  letter-spacing: -1px;
+  background-color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 20px 0 20px;
+  box-sizing: border-box;
+  position:relative;
+}
+
+
+.bottomSheet .popular-tab-box .tab-list .rdo-item input[type=radio] {
+  margin-left:0;
+  right:0;
+  left:auto;
+  width:22px;
+  height:22px;
+  top:20px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.bottomSheet .popular-tab-box .tab-list .rdo-item input[type=radio]+label {
+  display: block;
+  overflow: hidden;
+}
+.bottomSheet .popular-tab-box .tab-list .rdo-item input[type=radio]:checked+label::after {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url('../img/wireline/btn-check-radio-on@2x.png') 0 0 no-repeat;
+  background-size: 22px auto;
+  vertical-align: middle;
+}
+.bottomSheet .popular-tab-box .tab-list .rdo-item input[type=radio]+label::after {
+  float:right;
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url('../img/wireline/btn-check-radio-off@2x.png') 0 0 no-repeat;
+  background-size: 22px auto;
+  vertical-align: middle;
+}
+
+
+/* 툴팁 */
+.tool-tip-wrap {
+  position: absolute;
+  top: auto;
+  bottom: 21px;
+  left: 20px;
+  right: 0px;
+}
+.tool-tip-wrap .tool-tip.mark-info {
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  background: url('../img/wireline/ico_info_mark_gray_line.png') 0 0 no-repeat;
+  background-size: contain;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  left: 215px;
+}
+.tool-tip-wrap .tool-tip.mark-info.on:before {
+  position: absolute;
+  top: 20px;
+  right: 3px;
+  content: "";
+  display: inline-block;
+  border-width: 1px 1px 0px 0px;
+  border-color: #a0a5de;
+  border-style: solid;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  z-index: 11;
+}
+.tool-tip-wrap .txt-box {
+  /* margin-top: 7px; */
+  border: 1px solid #a0a5de;
+  background-color: #fff;
+  position: absolute;
+  top: 25px;
+  left: 18px;
+  right: 38px;
+  min-width: 190px;
+  padding: 15px 20px 15px 15px;
+  text-align: left;
+  font-size: 12px;
+  color: #444;
+  display: none;
+  white-space: normal;
+  z-index: 10;
+  width:calc(100% - 76px);
+}
+.tool-tip-wrap  .ico-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 20px;
+  height: 20px;
+  background: url('../img/wireline/tooltip-x@2x.png') 3px 7px no-repeat;
+  background-size: 10px auto;
+}
+
+.tool-tip-wrap .txt-box.show{
+  display: block;
+}
+
+.wireline-popular-item-area .popular-item-box {
+  display: none;
+  overflow: hidden;
+}
+.wireline-popular-item-area .swiper-wrap {
+  position: relative;
+}
+.wireline-popular-item-area .swiper-wrap .swipe-nav {
+  position: absolute;
+  bottom: 26px;
+  right: 0;
+  left: 0;
+  width: auto;
+  line-height: 0;
+  text-align: center;
+  z-index: 2;
+}
+.wireline-popular-item-area .swiper-container {
+  position: relative;
+  overflow: visible;
+  width: 80%;
+  max-width: 240px;
+  padding: 24px 0 50px;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd {
+  width: 100%;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide {
+  position: relative;
+  perspective: 1000px;
+  height: 360px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .swiper-slide-container {
+  text-align: center;
+  height: 100%;
+  max-width: 600px;
+  margin: auto;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box,
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 3px;
+  border: solid 2px rgb(160 165 222 / 80%);
+  box-sizing: border-box;
+  background-color: #fff;
+  letter-spacing: -1px;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box::before,
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  z-index: 9;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .prod-name-wrap {
+  margin: auto;
+  text-align: center;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .prod-name-wrap .prod-name {
+  display: block;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #000;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .prod-name-wrap .prod-name.fontType2 {
+  line-height: 24px;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .prod-name-wrap .prod-name.fontType2>span {
+  display: block;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .prod-name-wrap .prod-name.dpType2>span {
+  display: block;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .gray-box {
+  width: calc(100% - 32px);
+  margin: 16px auto;
+  padding: 12px 0 8px 0;
+  background-color: #f5f5f7;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .gray-box .text {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #666666;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .gray-box .img-wrap {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .gray-box .img-wrap .img {
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 72px;
+  height: 72px;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .gray-box .img-wrap .img img{
+  width: 100%;
+  height:100%;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .gray-box .img-wrap .ico-plus {
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  margin: 0 8px;
+  font-size: 1px;
+  text-indent: -9999px;
+  background: url('../img/wireline/ico_plus.png') no-repeat center;
+  background-size: 20px 20px;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .price {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: #ff0000;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .price .num {
+  font-size: 17px;
+  padding-right: 2px;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .btm-btn-wrap {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .btm-btn-wrap::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .btm-btn-wrap .btn-flip {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto 12px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #808080;
+  text-decoration: underline;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .btm-btn-wrap .btn-flip::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  margin-top: -2px;
+  background: url("../img/wireline/ico_flip.png") no-repeat center;
+  background-size: contain;
+  vertical-align: middle;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .btm-btn-wrap .btn-counsel {
+  float: left;
+  width: calc(50% - 6px);
+  height: 36px;
+  margin-right: 11px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #4130df;
+  border-radius: 34px;
+  border: solid 2px #4130df;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box .btm-btn-wrap .btn-join {
+  height: 45px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  border-radius: 37.5px;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  color: #222;
+  cursor: pointer;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .tit {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: #000;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .tit span {
+  display: block;
+  font-size: 13px;
+  line-height: 19px;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .prod-name-wrap {
+  margin: auto;
+  text-align: center;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .prod-name-wrap .prod-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #000;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .prod-name-wrap .prod-name>span {
+  font-size: 12px;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box {
+  width: auto;
+  margin: 15px 15px 10px;
+  padding: 12px 10px 14px;
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: #f7f7f7;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box .question-list-wrap {
+  margin-top: 12px;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box .question-list-wrap .question-list~.question-list {
+  margin-top: 6px;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box .question-list-wrap .question-list>li::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box .question-list-wrap .question-list>li .topic {
+  float: left;
+  width: 70%;
+  max-width: 140px;
+  font-size: 11px;
+  line-height: 17px;
+  font-weight: 300;
+  color: #666666;
+  text-align: left;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box .question-list-wrap .question-list>li .topic.type2 {
+  width: 60%;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box .question-list-wrap .question-list>li .value {
+  float: right;
+  width: 30%;
+  font-size: 11px;
+  line-height: 17px;
+  font-weight: 300;
+  color: #666666;
+  text-align: right;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box .question-list-wrap .question-list>li .value.type2 {
+  width: 40%;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box .question-list-wrap .question-list>li.txt-point .topic {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #000;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box .question-list-wrap .question-list>li.txt-point .value {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #000;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box .question-list-wrap .question-list>li.txt-point+li {
+  margin-top: 8px;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box .question-list-wrap .question-list.total-box {
+  border-top: 2px dashed #000;
+  margin-top: 10px;
+  padding-top: 7px;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box .question-list-wrap .question-list.total-box .topic {
+  width: 60%;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box .question-list-wrap .question-list.total-box .value {
+  width: 40%;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ff404e;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .txt-refer {
+  width: calc(100% - 32px);
+  margin: -6px auto 0;
+  text-align: left;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .txt-refer p {
+  font-size: 10px;
+  line-height: 14px;
+  color: #666666;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box.discount-list-4 {
+  margin-top: 16px;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box.discount-list-4 .question-list-wrap {
+  margin-top: 0px;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box.discount-list-5 .question-list-wrap {
+  margin-top: 0px;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .gray-box.discount-list-6 .question-list-wrap {
+  margin-top: 10px;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .btm-btn-wrap {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .btm-btn-wrap::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .btm-btn-wrap .btn-flip {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto 5px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #808080;
+  text-decoration: underline;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .btm-btn-wrap .btn-flip::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  margin-top: -2px;
+  background: url("../img/wireline/ico_flip.png") no-repeat center;
+  background-size: contain;
+  vertical-align: middle;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .btm-btn-wrap .btn-counsel {
+  float: left;
+  width: calc(50% - 6px);
+  height: 36px;
+  margin-right: 11px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #4130df;
+  border-radius: 34px;
+  border: solid 2px #4130df;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box .btm-btn-wrap .btn-join {
+  height: 45px;
+  line-height: 44px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  border-radius: 37.5px;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  color: #222;
+  cursor: pointer;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide.swiper-slide-active .front-box,
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide.swiper-slide-active .behind-box {
+  border: solid 2px #3617ce;;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide.swiper-slide-active .front-box::before,
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide.swiper-slide-active .behind-box::before {
+  display: none;
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .front-box {
+  transform: scale(0.9) rotateY(0deg);
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide.swiper-slide-active .front-box {
+  transform: scale(1) rotateY(0deg);
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide.on .front-box {
+  transform: scale(1) rotateY(-180deg);
+}
+
+
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide .behind-box {
+  transform: scale(0.9) rotateY(180deg);
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide.on .behind-box {
+  transform: scale(0.9) rotateY(0deg);
+}
+.wireline-popular-item-area .swiper-wireline-popular-prd .swiper-slide.swiper-slide-active.on .behind-box {
+  transform: scale(1) rotateY(0deg);
+}
+/* 요금제 계산하기 베너 */
+.wireline-calc-fee-banner{
+  position: relative;
+  min-height: 80px;
+  box-sizing: border-box;
+}
+.wireline-calc-fee-banner button{
+  display: block;
+}
+.wireline-calc-fee-banner .ad-banner-img img {
+  display: block;
+  width: 100%;
+}
+.wireline-calc-fee-banner > div {
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: middle;
+  line-height: normal;
+  letter-spacing: -0.25px;
+  color: #4130df;
+  width: 100%;
+}
+.wireline-calc-fee-banner>div .user{
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+}
+.wireline-calc-fee-banner .btn-address {
+  display: block;
+  width: 168px;
+  height: 32px;
+  line-height: 35px;
+  border-radius: 32px;
+  border: 1px solid #4130df;
+  background-color: transparent;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  color: #4130df;
+  margin-top: 12px;
+}
+/* 메인 버튼 리스트 */
+.compare-devices-view-area.wireline-vw-list {
+  border-bottom: 7px solid #f0f0f5;
+  overflow: hidden;
+  width: 100%;  
+}
+.wireline-vw-list ul {
+  margin-top: 2px;
+  padding-bottom: 36px;
+}
+.wireline-vw-list .section-cnt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  padding-left: 0;
+}
+.wireline-vw-list .section-cnt:before {
+  top: auto;
+}
+.compare-devices-view-area.wireline-vw-list ul li{
+  vertical-align: middle;
+  border-radius: 3px;
+  width: 134px;
+  height: 134px;
+  padding: 16px 16px 21px;
+  margin-left: 8px;
+}
+.compare-devices-view-area.wireline-vw-list .section-cnt:before {
+  content: '';
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* 상담 신청하기 */
+.compare-devices-view-area.wireline-vw-list li:nth-child(1) .section-cnt:before {
+  background: url('../img/wireline/btn-ico-view4.png') 100% 100% no-repeat;
+  background-size: 48px auto;
+}
+/* 내게맞는 상품찾기 */
+.compare-devices-view-area.wireline-vw-list li:nth-child(2) .section-cnt:before {
+  background: url('../img/wireline/btn-ico-view7.png') 100% 100% no-repeat;
+  background-size: 48px auto;
+}
+/* 우리동네 가입현황*/
+.compare-devices-view-area.wireline-vw-list li:nth-child(3) .section-cnt:before {
+  background: url('../img/wireline/btn-ico-view5.png') 100% 100% no-repeat;
+  background-size: 48px auto;
+}
+/* 우리집 설치 가능한 상품 */
+.compare-devices-view-area.wireline-vw-list li:nth-child(4) .section-cnt:before {
+  background: url('../img/wireline/btn-ico-view6.png') 100% 100% no-repeat;
+  background-size: 48px auto;
+}
+.compare-devices-view-area.wireline-vw-list .section-cnt .btn-txt {
+  line-height: normal;
+  font-size: 14px;
+  font-weight: 400;
+  word-break: keep-all;
+  white-space: normal;
+}
+/* popup main Tab*/
+.wireline-calc-fee .seller-tab-wrap {
+  display: -webkit-box;
+  display: flex;
+  position: relative;
+  height: 45px;
+  padding: 0 20px;
+}
+.wireline-calc-fee .seller-tab-wrap:after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  bottom: -1px;
+  height: 1px;
+  background-color: #e1e1e1;
+  z-index: 1;
+}
+.wireline-calc-fee .seller-tab-wrap .tab-item {
+  flex: 1;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+.wireline-calc-fee .seller-tab-wrap .tab-item.on {
+  border-bottom: 2px solid #000;
+  font-weight: 500;
+  color: #000;
+}
+.wireline-prd-guide {
+  padding: 0 20px;
+}
+.wireline-prd-guide .title {
+  position: relative;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.wireline-prd-guide .title::after {
+  content: '';
+  background: url('../img/wireline/arr_down_gray.png') 0 0 no-repeat;
+  background-size: contain;
+  width: 12px;
+  height: 7px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+.wireline-prd-guide.active .title::after{
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+}
+.wireline-prd-guide.active .title {
+  border-bottom: 0;
+}
+.wireline-prd-guide-detail {
+  display: none;
+}
+.wireline-prd-guide.active .wireline-prd-guide-detail {
+  display: block;
+  border-bottom: 1px solid #e5e5e5;
+  padding:20px 0;
+}
+.seller-cont-wrap .seller-cont-area+.seller-cont-area {
+  display: none;
+}
+/* prd tab 1 : calc fee */
+.wireline-calc-fee .simulation-box {
+  position: relative;
+}
+.wireline-calc-fee .simulation-box .mark-info {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-position: center right 0;
+  background-size: 12px 12px;
+  background-image: url('../img/wireline/ico_info_mark_gray.png');
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.wireline-calc-fee .simulation-box .tool-tip .txt-box {
+  z-index: 10002;
+  visibility: hidden;
+  margin-top: 22px;
+  border: 1px solid #a0a5de;
+  background-color: #fff;
+  position: absolute;
+  bottom: auto;
+  left: 40px;
+  right: 35px;
+  min-width: 190px;
+  padding: 15px;
+  text-align: left;
+  font-size: 12px;
+  color: #444;
+  border-radius: 3px;
+}
+.wireline-calc-fee .simulation-box .tool-tip.on .txt-box .tooltip-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background: #fff url(../img/wireline/tooltip-x@2x.png) 0 0 no-repeat;
+  background-size: 10px;
+  font-size: 1px;
+  color: transparent;
+}
+.wireline-calc-fee .simulation-box .tool-tip .txt-box::before {
+  position: absolute;
+  top: -5px;
+  right: 50%;
+  margin-right: -13px;
+  content: "";
+  display: inline-block;
+  border-width: 1px 1px 0px 0px;
+  border-color: #a0a5de;
+  border-style: solid;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  z-index: 1;
+}
+.wireline-calc-fee .simulation-box .tool-tip .txt-box>b {
+  font-weight: 500;
+}
+.wireline-calc-fee .simulation-box .tool-tip.on .txt-box {
+  visibility: visible;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap {
+  position: relative;
+  width: auto;
+  padding-bottom: 100px;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .btn-reload {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: auto;
+  height: 18px;
+  padding-right: 16px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #757575;
+  cursor: pointer;
+  border: none;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .btn-reload::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: url('../img/wireline/ico_reload_2.png') no-repeat center;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap h3 {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box {
+  position: relative;
+  padding: 36px 20px 60px;
+  background-color: #fff;
+}
+
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box.on::before {
+  content:'';
+  background-color: rgb(0 0 0 / 50%);
+  width:100%;
+  height:100%;
+  position:absolute;
+  margin: -101px -20px 0;
+  z-index:2;
+  top:0;
+}
+
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box.on .item {
+  z-index:1;
+}
+
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item {
+  position: relative;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item+.item {
+  margin-top: 24px;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .tit {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: -0.67px;
+  color: #000;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 3px;
+  background-color: #f5f5f7;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box.on .accordion-cont {
+  display: block;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-trigger {
+  position: relative;
+  cursor: pointer;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-trigger.on .btn-arrow {
+  top: 20px;
+  background-image: url('../img/wireline/arr_up.png');
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-trigger .tit-box {
+  position: relative;
+  margin-top:0;
+  display: flex;
+  align-items: baseline;
+  width:-webkit-calc(100% - 70px)
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-trigger .tit-box>strong {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  white-space: nowrap;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-trigger .tit-box>strong span {
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: middle;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-trigger .tit-box>em {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: #000;
+  padding-left: 12px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  max-height: 34px;
+  line-height:17px;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-trigger .btn-arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-image: url('../img/wireline/arr_down.png');
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  font-size: 0px;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont {
+  position: relative;
+  margin-top: 28px;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .btn-more-view {
+  display: inline-block;
+  width: auto;
+  font-size: 11px;
+  font-weight: 500;
+  color: #a6a6a6;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .btn-more-view::after {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('../img/wireline/arr_right_gray_s.png') no-repeat center;
+  background-size: 100%;
+  margin-top: -1px;
+  vertical-align: middle;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box {
+  max-width: 360px;
+  font-size: 0;
+  margin: 0 auto;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .range-bar-values {
+  position: relative;
+  height: 20px;
+  font-size: 0;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .range-bar-values>li {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  text-align: center;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .range-bar-values>li:first-child {
+  left: 0%;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .range-bar-values>li:last-child {
+  right: 2%;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .range-bar-values>li::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 11;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .range-bar-values>li>label {
+  display: block;
+  font-size: 11px;
+  line-height: 17px;
+  font-weight: 500;
+  letter-spacing: -1.06px;
+  color: #000;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .range-bar-values>li>strong>span {
+  display: block;
+  font-weight: 400;
+  letter-spacing: -1.5px;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .range-bar-values.col3 li:nth-child(1) {
+  left: 1%;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .range-bar-values.col3 li:nth-child(2) {
+  left: 50%;
+  margin-left: -5%;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .range-bar-values.col3 li:last-child {
+  right: 4%;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .range-bar-values.col4 li:nth-child(2) {
+  left: 33.333%;
+  margin-left: -5%;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .range-bar-values.col4 li:nth-child(3) {
+  left: 66.666%;
+  margin-left: -9%;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box input {
+  width: 100%;
+  appearance: none;
+  opacity: 0;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .irs--flat {
+  position: relative;
+  margin-top: -17px;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .irs--flat::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: url('../img/wireline/range_bar_bg.png') no-repeat center;
+  background-size: 100% 30px;
+  z-index: 10;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .irs--flat .irs-line {
+  height: 28px;
+  background: #ccc;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .irs--flat .irs-bar {
+  height: 28px;
+  background: linear-gradient(to right, #e1dcff, #4130df);
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .irs--flat .irs-handle {
+  top: 24px;
+  width: 28px;
+  height: 28px;
+  background-color: #fff;
+  border: 5px solid #4130df;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: 3px 5px 10px 0 rgba(36, 36, 36, 0.62);
+  cursor: pointer;
+  z-index: 11;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .irs--flat .irs-handle>i {
+  display: none;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .irs--flat .irs-single {
+  display: none;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .irs--flat .irs-min,
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .irs--flat .irs-max,
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .irs--flat .irs-from,
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .irs--flat .irs-to {
+  display: none !important;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .range-bar-box .irs--flat .irs-grid {
+  display: none;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .option-types.wifi {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .option-types.wifi .c-ick {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  margin-right: 0;
+  line-height: 1.8rem;
+  vertical-align: top;
+  cursor: pointer;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .option-types.wifi .c-ick .label {
+  display: block;
+  position: relative;
+  padding-left: 1.8rem;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0;
+  color: #111;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .option-types.wifi .c-ick .label::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  margin-top:-3px;
+  margin-right: 4px;
+  background: #fff url('../img/wireline/btn-check-sel-s-off@2x.png') no-repeat center;
+  background-size: contain;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .option-types.wifi .c-ick .input {
+  position: absolute;
+  top: 8px;
+  left: 1.8rem;
+  right: auto;
+  opacity: 1;
+  margin: 0;
+  width: 10px;
+  height: 8px;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .option-types.wifi .c-ick .input[type=checkbox]:checked+.label::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  background: url('../img/wireline/btn-check-sel-s-on@2x.png') no-repeat center;
+  background-size: contain;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .option-types.setTopBox {
+  display: flex;
+  justify-content: space-between;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .option-types.setTopBox .rdo-item {
+  margin-right: 0;
+  position:relative;
+}
+
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .option-types.setTopBox .rdo-item input {
+  margin-left:0;
+  width:18px;
+  height:18px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .option-types.setTopBox .rdo-item .label {
+  display: block;
+  position: relative;
+  padding: 25px 0 0;
+  font-size: 11px;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  word-break: keep-all;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .option-types.setTopBox .rdo-item .label>span {
+  display: block;
+  font-weight: 400;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .option-types.setTopBox .rdo-item .label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  background: #fff url('../img/wireline/btn-check-radio-off@2x.png') no-repeat center;
+  border-radius: 50%;
+  background-size: contain;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .option-types.setTopBox .rdo-item input[type="radio"]:checked + .label::before,
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box .accordion-cont .option-types.setTopBox .rdo-item[aria-selected=true] .label::before {
+  background: url('../img/wireline/btn-check-radio-on@2x.png') no-repeat center;
+  background-size: contain;
+}
+
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box.disabled .accordion-cont .option-types.setTopBox .rdo-item input[type="radio"]:checked + .label::before,
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box.disabled .accordion-cont .option-types.setTopBox .rdo-item[aria-selected=true] .label::before,
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .item .accordion-box.disabled .accordion-cont .option-types.setTopBox .rdo-item .label::before {
+  background-image: url('../img/wireline/btn-check-radio-disabled@2x.png');
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group {
+  padding-top: 20px;
+  border-top: 1px solid #e2e2e2;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box {
+  font-size: 0;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box~.option-box {
+  margin-top: 20px;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box .option-tit {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: -0.58px;
+  color: #111;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box .option-cont {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-tit {
+  width: 130px;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont {
+  width: calc(100% - 130px);
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  font-size: 0;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity [class^=btn-] {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 26px 26px;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity .btn-minus {
+  left: 0;
+  background-image: url('../img/wireline/btn_minus.png');
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity .btn-minus.off {
+  background-image: url('../img/wireline/btn_minus_off.png');}
+
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity .btn-plus {
+  right: 0;
+  background-image: url('../img/wireline/btn_plus.png');}
+
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity .btn-plus.off {
+  background-image: url('../img/wireline/btn_plus_off.png');
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity .inp-wrap {
+  display: block;
+  height: 26px;
+  padding: 0px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 0;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity .inp-wrap .input,
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity .inp-wrap .label {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  color: #111;
+  background-color: transparent;
+  border: 0;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity .inp-wrap .input {
+  max-width: 15px;
+  text-align: right;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity .txt-wrap {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0px;
+  width: 70px;
+  height: 26px;
+  line-height: 26px;
+  overflow: hidden;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-color: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity .txt-wrap.on {
+  display: block;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity .txt-wrap .txt {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  color: #111;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity.disabled {
+  background-color: #f6f6f6;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity.disabled [class^=btn-] {
+  opacity: .6;
+  pointer-events: none;
+  cursor: default;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity.disabled .inp-wrap .input,
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity.disabled .inp-wrap .label {
+  color: #cacaca;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity.disabled .txt-wrap {
+  background-color: #f6f6f6;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-quantity .option-cont .option-types.quantity.disabled .txt-wrap .txt {
+  color: #cacaca;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-benefitType .option-tit {
+  width: 100%;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-benefitType .option-cont {
+  width: 100%;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-benefitType .option-cont .option-types.benefit {
+  margin-top: 12px;
+  font-size: 0;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-benefitType .option-cont .option-types.benefit .input-radio {
+  display: inline-block;
+  position: relative;
+  width: calc(50% - 6px);
+  text-align: center;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-benefitType .option-cont .option-types.benefit .input-radio:first-child {
+  margin-right: 12px;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-benefitType .option-cont .option-types.benefit .input-radio label {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  height: 50px;
+  line-height: 48px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: #222;
+  border: solid 1px #d9d9d9;
+  box-sizing: border-box;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-benefitType .option-cont .option-types.benefit .input-radio input[type=checkbox],
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-benefitType .option-cont .option-types.benefit .input-radio input[type=radio] {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-benefitType .option-cont .option-types.benefit .input-radio input[type=checkbox]:checked+label,
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-box.option-benefitType .option-cont .option-types.benefit .input-radio input[type=radio]:checked+label {
+  border: solid 2px #4130df;
+  color: #4130df;
+  font-weight: 500;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-txt-refer {
+  margin-top: 12px;
+  display: flex;
+  width: 100%;
+  padding: 12px 0;
+  background-color: #efeeff;
+  align-items: center;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-txt-refer .benefit-type-text {
+  display: none;
+  position: relative;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: -0.58px;
+  color: #4130df;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-txt-refer .benefit-type-text::before{
+  content: "";
+  position: absolute;
+  top: -17px;
+  left: auto;
+  border-width: 1px 1px 0px 0px;
+  border-color: #efeeff;
+  border-style: solid;
+  width: 12px;
+  height: 12px;
+  background-color: #efeeff;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-txt-refer #benefit-type-1::before{
+  left: calc((50% / 2) - 6px);
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-txt-refer #benefit-type-2::before{
+  left: calc((50% / 2 - 6px) + 50%);
+  top: -17px;
+}
+
+.wireline-calc-fee .simulation-box.prod-option-wrap .item-box .option-group .option-txt-refer .benefit-type-text.on {
+  display: block;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .option-txt-join {
+  padding-top: 16px;
+  vertical-align: middle;
+  position:relative;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .option-txt-join >  span {
+  font-size: 13px;
+  font-weight: 300;
+  color: #808080;
+}
+.wireline-calc-fee .simulation-box.prod-option-wrap .option-txt-join > span:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 3px;
+  height: 3px;
+  background-color: #666;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+/* 인터넷/B tv 요금 계산기 툴팁 */
+.wireline-calc-fee .simulation-box.prod-option-wrap .option-txt-join .tool-tip-wrap {
+  right:auto;
+  bottom:auto;
+  top:21px;
+  width:100%;
+  left:0;
+}
+
+.wireline-calc-fee .simulation-box.prod-option-wrap .option-txt-join .tool-tip-wrap .tool-tip.mark-info {
+  left:168px;
+}
+
+.wireline-calc-fee .simulation-box.prod-option-wrap .option-txt-join .tool-tip-wrap .txt-box {
+  z-index:10002;
+  top:24px;
+}
+
+.wireline-calc-fee .simulation-box.prod-option-wrap .option-txt-join .tool-tip-wrap .tool-tip.mark-info.on:before {
+  z-index: 10003;
+  right:2px;
+}
+
+
+
+/* 예상 요금 */
+.wireline-calc-fee .layer-pay .body{
+  padding-top: 0;
+}
+.wireline-calc-fee .layer-pay .depth-list .l-rows {
+  display: flex;
+  flex-direction: column;
+}
+.wireline-calc-fee .layer-pay .depth1 {
+  border-top: none;
+  padding: 0px 0 9px;
+}
+.wireline-calc-fee .layer-pay .depth-list .l-row {
+  color: #666666;
+  font-size: 13px;
+  font-weight: 400;
+}
+.wireline-calc-fee .layer-pay .depth-list .l-row-price .num {
+  font-weight: 400;
+}
+.wireline-calc-fee .layer-pay .depth-list .l-row-price .unit.weight {
+  font-weight: 600;
+}
+.wireline-calc-fee .layer-pay .depth-list .l-row.depth2 {
+  margin-top: 8px;
+}
+.wireline-calc-fee .layer-pay .depth-list .l-row.depth2 .l-row-stit {
+  font-size: 12px;
+  color: #666;
+}
+.wireline-calc-fee .layer-pay .dsc-list {
+  margin-bottom: 10px;
+}
+.wireline-calc-fee .layer-pay .depth1 .l-row-stit {
+  font-size: 14px;
+  font-weight: 600;
+}
+.wireline-calc-fee .layer-pay .l-row-price .num.point {
+  color: #ff0000;
+  font-size: 14px;
+}
+.wireline-calc-fee .pay-detail .bottom-tool-tip .txt-box {
+  width: auto;
+  margin-top: 22px;
+  left: -48px;
+  right: 0;
+  padding: 10px 22px 10px 10px;
+}
+
+.wireline-calc-fee .pay-detail .tool-tip-wrap {
+  top:0;
+}
+
+.wireline-calc-fee .pay-detail .bottom-tool-tip .txt-box br {
+  display: none;
+}
+
+.wireline-calc-fee .pay-detail .mark-info {
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-position: center right 0;
+  background-size: 14px 14px;
+  background-image: url('../img/wireline/ico_info_mark_gray.png');
+  cursor: pointer;
+  vertical-align: middle;
+  left:17px;
+}
+
+
+.wireline-calc-fee .pay-detail .bottom-tool-tip.mark-info .txt-box::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50px;
+}
+
+.sticky-bar .tool-tip-wrap .txt-box {
+  top:27px;
+  left:5px;
+  box-sizing: border-box;
+}
+
+
+.wire-dimm {
+  display:none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 50%);
+  z-index: 10000;
+  overflow: hidden;
+  cursor: none;
+}
+
+.wireline-calc-fee .item-box-wrap.internet-speed {
+  position: relative;
+  height: 340px;
+  background: url('../img/wireline/bg_speed.png') no-repeat 22.5px 0;
+  background-size: 10px auto;
+}
+.wireline-calc-fee .item-box-wrap.internet-speed .item-box {
+  position: absolute;
+  left: 89px;
+  padding: 10px 16px;
+  width: calc(100% - 120px);
+  width: -webkit-calc(100% - 120px);
+  background-color: #f5f5f7;
+}
+.wireline-calc-fee .item-box-wrap.internet-speed .item-box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -74px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: 1px solid #4130df;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 50;
+}
+.wireline-calc-fee .item-box-wrap.internet-speed .item-box::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -51px;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 1px;
+  background-color: #bdbdbd;
+  z-index: 49;
+}
+.wireline-calc-fee .item-box-wrap.internet-speed .item-box:nth-child(1) {
+  top: 0px;
+}
+.wireline-calc-fee .item-box-wrap.internet-speed .item-box:nth-child(2) {
+  top: 113px;
+}
+.wireline-calc-fee .item-box-wrap.internet-speed .item-box:nth-child(3) {
+  top: 226px;
+}
+.wireline-calc-fee .item-box-wrap.internet-speed .item-box .info h2.tit {
+  display: block;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #111;
+  border-bottom: none;
+}
+.wireline-calc-fee .item-box-wrap.internet-speed .item-box .info h2.tit .tit-s {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  color: #111;
+}
+.wireline-calc-fee .item-box-wrap.internet-speed .item-box .info .txt {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: -0.4px;
+  color: #666;
+}
+.wireline-calc-fee .item-box-wrap.internet-speed .item-box .info .keyword-box {
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #4130df;
+}
+.wireline-calc-fee .item-box-wrap.internet-speed .item-box .info .keyword-box .keyword {
+  margin-right: 5px;
+}
+.wireline-calc-fee .item-box-wrap.channel-info .item-box {
+  padding: 12px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.wireline-calc-fee .item-box-wrap.channel-info .item-box .info::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wireline-calc-fee .item-box-wrap.channel-info .item-box .info {
+  flex: 1;
+  padding-left: 22px;
+}
+.wireline-calc-fee .item-box-wrap.channel-info .item-box .info .con-lt {
+  position: relative;
+}
+.wireline-calc-fee .item-box-wrap.channel-info .item-box .info .con-lt .tit {
+  padding-bottom: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -.5px;
+}
+.wireline-calc-fee .item-box-wrap.channel-info .item-box .info .con-lt .tit .point {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #4130df;
+}
+.wireline-calc-fee .item-box-wrap.channel-info .item-box .info .con-lt .tit-s {
+  display: inline-block;
+  padding: 0 6px;
+  font-size: 11px;
+  line-height: 17px;
+  letter-spacing: -0.37px;
+  color: #a6a6a6;
+  border-radius: 8.5px;
+  background-color: #f7f7f7;
+}
+.wireline-calc-fee .item-box-wrap.channel-info .item-box .info .con-lt .text-tag {
+  display: block;
+  padding: 6px 0 15px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.43px;
+  color: #242424;
+}
+.wireline-calc-fee .item-box-wrap.channel-info .item-box .info .con-rt {
+}
+.wireline-calc-fee .item-box-wrap.channel-info .item-box .info .con-rt .txt {
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+  color: #202020;
+}
+.wireline-calc-fee .item-box-wrap.channel-info .item-box .box-img {
+  margin: 0;
+  width: 135px;
+  height: 135px;
+  text-align: center;
+}
+.wireline-calc-fee .item-box-wrap.channel-info .item-box .box-img>img {
+  max-width: 100%;
+}
+.wireline-calc-fee .item-box-wrap.channel-info .item-box+.item-box {
+  margin-top: 12px;
+}
+/* 셋톱박스란  */
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail {
+  position: relative;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail h3.tit {
+  display: block;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .txt {
+  display: block;
+  margin: 8px 0 20px;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+  color: #808080;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .tab-list {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  margin: 0 0 20px 0;
+  overflow: hidden;
+  border-radius: 3px;
+  border: solid 1px #d9d9d9;
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 550;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .tab-list select {
+  display: block;
+  width: 100%;
+  border: 0;
+  height: 40px;
+  appearance: none;
+  padding-left: 20px;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .tab-list:after {
+  content: "";
+  position: absolute;
+  left: unset;
+  right: 10px;
+  top: 14px;
+  width: 12px;
+  height: 12px;
+  background: url(../img/wireline/arr_down_gray.png) 0 center no-repeat;
+  background-size: 12px auto;
+  pointer-events: none;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .tab-list .head {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 41px;
+  padding: 0 14px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+  box-sizing: border-box;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .tab-list ul {
+  display: none;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .tab-list ul .tab-item {
+  height: 40px;
+  line-height: 41px;
+  padding: 0 10px;
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  text-align: left;
+  box-sizing: border-box;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .tab-list.active:after {
+  transform: rotate(180deg);
+  top: 10px;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .tab-list.active .head {
+  border-bottom: 1px solid #d9d9d9;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .tab-list.active ul {
+  display: block;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .top-box {
+  overflow: hidden;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .top-box .img {
+  float: left;
+  margin: 0 16px 0 0;
+  max-width: 64px;
+  min-height: 64px;
+  border-radius: 3px;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .top-box .img img {
+  width: 100%;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .top-box .right .tit {
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.33px;
+  color: #000;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .top-box .right .txt {
+  margin: 5px 0 0;
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.33;
+  letter-spacing: -0.4px;
+  color: #808080;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .top-box .price-area {
+  text-align: center;
+  color: #000;
+  margin-top: 20px;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .top-box .price-area .tl {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ff0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .top-box .price-area .tl span {
+  font-size: 16px;
+  padding-right: 2px; 
+  display: inline-block;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .top-box .price-area .stl {
+  font-size: 12px;
+  color: #757575;
+  letter-spacing: -0.5px;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap {
+  padding-bottom: 10px;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box {
+  padding: 24px 0;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .btm-box {
+  overflow: hidden;
+  margin-top: 16px;
+  text-align: center;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .btm-box img {
+  max-width: 100%;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info h3.tit {
+  display: block;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #333d4b;
+  border-bottom: none;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .txt {
+  display: block;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #242424;
+  border-bottom: none;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .tag-area {
+  display: flex;
+  justify-content: space-between;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .tag-area span {
+  width: calc(33% - 3px);
+  height: 24px;
+  border-radius: 12px;
+  background-color: #e6e6e6;
+  font-size: 11px;
+  color: #000;
+  letter-spacing: -0.46px;
+  text-align: center;
+  line-height: 24px;
+  vertical-align: middle;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .tl-area {
+  text-align: center;
+  color: #000;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .tl-area .tl {
+  font-size: 16px;
+  font-weight: 700;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .tl-area .stl {
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .price-list {
+  padding-top: 20px;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .price-list li {
+  width: 100%;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .price-list li+li {
+  margin-top: 8px;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .price-list li::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .price-list li .tit {
+  float: left;
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: -0.55px;
+  color: #757575;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .price-list li .cont {
+  float: right;
+  font-size: 13px;
+  font-weight: 400;
+  color: #000;
+  text-align: right;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .price-list li .cont .num{
+  padding-right:2px;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .cont-area {
+  text-align: left;
+  color: #000;
+  margin-top: 30px;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .cont-area dl {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .cont-area dl+dl {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e5e5;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .cont-area dl dt {
+  display: flex;
+  width: 88px;
+  height: 88px;
+  border-radius: 3px;
+  background-color: #f5f5f7;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .cont-area dl dt img {
+  width: 64px;
+  height: 64px;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .cont-area dl dd {
+  flex:1;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .cont-area dl dd .tl {
+  font-size: 13px;
+  font-weight: 400;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .cont-area dl dd .tl span {
+  color: #4130df;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .item-box-wrap .item-box .info .cont-area dl dd .txt {
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 7px;
+  color: #666666;
+  letter-spacing: -0.5px;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .setTop-cont {
+  display: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: auto;
+  margin: 77px 0px 0;
+}
+.wireline-calc-fee .item-box-wrap.settop-boxes-detail .setTop-cont.on {
+  display: block;
+}
+.data-none {
+  display: inline-flex;
+  width: 100%;
+  min-height: 150px;
+  padding-top: 70px;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  background: url('../img/wireline/icons-detail-server-error.png') center no-repeat;
+  background-size: 28px;
+}
+/* 가입 현황 조회 */
+.town-chart-area {
+  padding: 18px 30px 58px;
+  background: #fff;
+}
+.town-chart-area h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.25px;
+  color: #000;
+}
+.town-chart-area h3 .marker {
+  position: relative;
+  z-index: 1;
+}
+.town-chart-area h3 .marker::after {
+  content: '';
+  width: 100%;
+  height: 11px;
+  border-radius: 8px;
+  background-color: #d3d5f4;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  z-index: -1;
+}
+.town-chart-area p.stitle {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #000;
+}
+.town-chart-area .select-box-wrap {
+  position: relative;
+  top: 27px;
+  width: calc(100% - 72px);
+  margin: 0 auto;
+  font-size: 0;
+}
+/* new */
+.town-chart-area .select-box-wrap .area-select-box select {
+  border: 0;
+  border-bottom: 1px solid #4130df;
+  color: #4130df;
+  font-size: 14px;
+  font-weight: 400;
+  height: 30px;
+  width: 100%;
+  padding: 0 5px;
+  appearance: none;
+  background-color: #fff;
+}
+.town-chart-area .select-box-wrap .area-select-box {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  width: calc(50% - 8px);
+  margin: 0;
+  cursor: pointer;
+}
+.town-chart-area .select-box-wrap .area-select-box.area-select-1 {
+  margin-right: 16px;
+}
+.town-chart-area .select-box-wrap .area-select-box::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 6px;
+  right: 0px;
+  width: 16px;
+  height: 17px;
+  background: url("../img/wireline/arr_down_purple_s.png") no-repeat center;
+  background-size: 10px ;
+  pointer-events: none;
+}
+.town-chart-area .select-box-wrap .area-select-box .head {
+  display: block;
+  width: 100%;
+  height: 30px;
+  line-height: 31px;
+  padding: 0;
+  border-bottom: solid 1px #4130df;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-indent: 5px;
+  color: #4130df;
+}
+.town-chart-area .select-box-wrap .area-select-box .select-list {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: -2px;
+  max-height: 204px;
+  overflow-y: auto;
+  border: solid 1px #4130df;
+  border-top: none;
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 999;
+}
+.town-chart-area .select-box-wrap .area-select-box .select-list .option-item {
+  margin: 5px 0;
+  padding-left: 5px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  color: #4130df;
+}
+.town-chart-area .select-box-wrap .area-select-box .select-list .option-item.selected {
+  display: none;
+}
+.town-chart-area .select-box-wrap .area-select-box.active .head {
+  font-weight: 500;
+  border: 1px solid #4130df;
+  border-bottom: 1px solid #4130df;
+}
+.town-chart-area .select-box-wrap .area-select-box.active .select-list {
+  display: block;
+}
+.town-chart-area .map-area {
+  width: 100%;
+  /* height: 233px; */
+  border-radius: 3px;
+  border: solid 1px #d9d9d9;
+  background-color: #fff;
+  margin: -18px auto 0;
+  padding: 68px 0 30px;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.town-chart-area .map-area .img-box {
+  width: 240px;
+  height: 170px;
+}
+.town-chart-area .map-area .img-box img {
+  width: 100%;
+  height: auto;
+}
+.town-chart-area .donut-chart {
+  margin-top: 20px;
+}
+/* 도넛 차트 */
+[class *="wireline-"] .donut-chart {
+  position: relative;
+  /* width: 150px; */
+  margin: 30px auto;
+  flex-direction: column-reverse;
+  align-items: center;
+  display: flex;
+}
+[class *="wireline-"] .donut-chart .donut-guide {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+[class *="wireline-"] .donut-chart .donut-guide a.bb-legend-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+  pointer-events: none;
+}
+[class *="wireline-"] .donut-chart .donut-guide a:last-child.bb-legend-item {
+  margin-right: 0px;
+}
+
+[class *="wireline-"] .donut-chart .donut-guide a.bb-legend-item > span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+}
+[class *="wireline-"] .donut-chart .donut-guide a.bb-legend-item>span.title{
+  flex: 1;
+  width: auto;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 6px;
+}
+[class *="wireline-"] .donut-chart .donut-guide a.bb-legend-item>span.value{
+  width: auto;
+  letter-spacing: -0.37px;
+  font-weight: 500;
+}
+[class *="wireline-"] .donut-chart .no-data-wrap {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 99;
+}
+[class *="wireline-"] .donut-chart .no-data-wrap .con-box {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  color: #4130df;
+}
+[class *="wireline-"] .donut-chart .no-data-wrap .text {
+  font-size: 14px;
+  font-weight: 500;
+}
+[class *="wireline-"] .donut-chart .no-data-wrap .text-s {
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: 500;
+}
+.bb-tooltip-container {
+  z-index: 10
+}
+.bb-tooltip {
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #fff;
+  empty-cells: show;
+  opacity: .9;
+  -webkit-box-shadow: 7px 7px 12px -9px #777;
+  -moz-box-shadow: 7px 7px 12px -9px #777;
+  box-shadow: 7px 7px 12px -9px #777
+}
+.bb-tooltip tr {
+  border: 1px solid #ccc;
+  vertical-align: middle;
+}
+.bb-tooltip th {
+  background-color: #aaa;
+  font-size: 14px;
+  padding: 2px 5px;
+  text-align: left;
+  color: #fff
+}
+.bb-tooltip td {
+  font-size: 13px;
+  padding: 3px 6px 0;
+  background-color: #fff;
+  border-left: 1px dotted #999;
+}
+.bb-tooltip td>span,
+.bb-tooltip td>svg {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+}
+.bb-tooltip td.value {
+  text-align: right;
+}
+.bb-target.bb-focused {
+  opacity: 1;
+}
+.bb-target.bb-focused path.bb-line,
+.bb-target.bb-focused path.bb-step {
+  stroke-width: 2px;
+}
+.bb-target.bb-defocused {
+  opacity: .3 !important;
+}
+.bb-chart-arc path {
+  stroke: #fff;
+}
+.bb-chart-arc text {
+  fill: none;
+  font-size: 13px;
+  font-weight: 300;
+}
+/* // 도넛 차트 */
+
+/* 가입가능한 상품 조회 : 주소검색 */
+.wireline-search-zip {
+  overflow: auto;
+  height: 100%;
+}
+.wireline-address-search .wireline-cont-area{
+  padding: 0 20px;
+}
+
+.wireline-address-search .wireline-cont-area.pad-none{
+  padding: 0;
+}
+
+.wireline-address-search .wireline-cont-area.pad-none .area-form {
+  padding:0 20px;
+}
+
+.wireline-address-search .wireline-cont-area .scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.wireline-address-search .wireline-cont-area .gray-box {
+  margin-top: 28px;
+  padding: 20px 12px;
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+}
+.wireline-address-search .wireline-cont-area .gray-box .txt-info-value {
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: -0.5px;
+  color: #000;
+}
+.wireline-address-search .wireline-cont-area .gray-box .txt-info-value .value-address {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.wireline-address-search .wireline-cont-area .gray-box .txt-info-value .value-num {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #3617ce;
+}
+.wireline-address-search .wireline-cont-area .btn-more {
+  padding: 12px 0;
+  text-align: center;
+}
+.wireline-address-search .wireline-cont-area .area-form .tit {
+  margin:18px 0 19px 0;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  color: #000;
+}
+.wireline-address-search .wireline-cont-area .area-form .form-group {
+  font-size: 0;
+  flex-direction: column;
+  width: 100%;
+  margin:0;
+}
+.wireline-address-search .wireline-cont-area .area-form .form-group .input-inner {
+  width: 100%;
+}
+.wireline-address-search .wireline-cont-area .area-form .form-group .input-inner .input-box {
+  position: relative;
+  width: calc(100% - 39px);
+  padding: 0;
+  font-size: 18px;
+  line-height: normal;
+}
+
+.wireline-address-search .wireline-cont-area .area-form .form-group .input-inner .input-box .input {
+  width: 100%;
+  height: 55px;
+  line-height: 1;
+  font-size: 16px;
+  color: #000;
+  border-width:0 0 1px 0;
+  border-color:#d9d9d9;
+  box-sizing: border-box;
+  outline: 0;
+  letter-spacing: -0.43px;
+}
+
+
+.wireline-address-search .wireline-cont-area .area-form .form-group .input-inner .input-box.input-box-round .input {
+  height:44px;
+  border-radius: 23px;
+  border: solid 1px #d9d9d9;
+  padding:0 20px;
+  letter-spacing: -0.43px;
+}
+
+
+.wireline-address-search .wireline-cont-area.pad-none .area-form .form-group .input-inner.box-flex {
+  margin:0;
+}
+
+.wireline-address-search .wireline-cont-area .area-form .form-group .input-inner .input-box .input::placeholder {
+  font-size: 16px;
+  color: #909090;
+  opacity: 1;
+  letter-spacing: -0.43px;
+  font-weight:400;
+}
+.wireline-address-search .wireline-cont-area .area-form .form-group .input-inner .input-box .input:focus {
+  border-color: #000;
+}
+.wireline-address-search .wireline-cont-area .area-form .form-group .input-inner .btn-extra {
+  display: block;
+  width: 19px;
+  height: 19px;
+  /* text-indent: -999rem; */
+  padding: 0;
+  background-color: transparent;
+  border-width: 0;
+  background: url(../img/wireline/icon-search-post-on@2x.png) 0 0 no-repeat;
+  background-size: contain;
+  margin: 13px 0 0 20px;
+  color:transparent;
+}
+
+.wireline-address-search .wireline-cont-area .area-form .form-group .input-inner.box-flex {
+  display: flex;
+  margin:10px 0 5px 0;
+}
+
+.wireline-address-search .wireline-cont-area .area-form .form-group .input-inner.box-flex.typing-box {
+  margin:3px 0 5px 0;
+}
+
+.wireline-address-search .wireline-cont-area .area-form .form-group .input-inner.box-flex .c-select:first-child {
+  margin-right: 7.5px;
+}
+.wireline-address-search .wireline-cont-area .area-form .form-group .input-inner.box-flex .c-select:first-child + .c-select {
+  margin-left: 7.5px;
+}
+.wireline-address-search .wireline-cont-area .area-form .form-group .btn-sch-location {
+  display: block;
+  width: 100%;
+  height: 32px;
+  margin-top: 12px;
+  line-height: 32px;
+  border-radius: 16px;
+  border: solid 1px #3617ce;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #3617ce;
+}
+.wireline-address-search .wireline-cont-area .area-form .form-group .btn-sch-location::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 5px 3px -4px 0;
+  background: url('../img/wireline/ico_sch_location.png') no-repeat center;
+  background-size: 20px 20px;
+}
+.wireline-address-search .wireline-cont-area .area-search-tip {
+  margin:20px 0 24px;
+}
+
+.wireline-address-search .wireline-cont-area.pad-none .area-search-tip {
+  padding:0 24px;
+}
+
+
+.wireline-address-search .wireline-cont-area .area-search-tip .tit {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  vertical-align: middle;
+  color: #000;
+}
+.wireline-address-search .wireline-cont-area .area-search-tip .tit .ico-tip {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0px 6px;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  color: #fff;
+  border-radius: 12px;
+  background-color: #7575e0;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+.wireline-address-search .wireline-cont-area .area-search-tip .search-tip-list {
+  margin-top: 10px;
+}
+.wireline-address-search .wireline-cont-area .area-search-tip .search-tip-list>li {
+  font-size: 13px;
+  line-height: 1.31;
+  color:#909090;
+  letter-spacing: -0.42px;
+}
+.wireline-address-search .wireline-cont-area .area-search-tip .search-tip-list>li>span {
+  color: #4130df;
+  letter-spacing: -0.42px;
+}
+.wireline-address-search .wireline-cont-area .area-result {
+  min-height: 167px;
+  padding: 12px;
+  box-sizing: border-box;
+  border-top: 7px solid #f0f0f5;
+}
+
+.wireline-address-search .wireline-cont-area.pad-none .area-result {
+  padding:24px 20px 0;
+}
+
+
+
+.wireline-address-search .wireline-cont-area .area-result.no-result {
+  padding: 100px 0;
+  margin-top:19px;
+}
+
+.wireline-address-search .wireline-cont-area .area-result.no-result p {
+  position:relative;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: -0.35px;
+  color: #000;
+  padding-top:45px;
+}
+
+.wireline-address-search .wireline-cont-area .area-result.no-result p::before {
+  content:'';
+  position:absolute; 
+  top:0; 
+  left:50%;
+  margin-left:-14px;
+  width:28px;
+  height:28px;
+  background:url(../img/wireline/icons-detail-server-error.png) 0 0 no-repeat;
+  background-size:cover;
+}
+
+
+.wireline-address-search .wireline-cont-area .area-result .tit {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.38px;
+  color: #000;
+}
+.wireline-address-search .wireline-cont-area .area-result .list-address {
+  margin-top: 6px;
+}
+.wireline-address-search .wireline-cont-area .area-result .list-address >button {
+  padding:10px 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+.wireline-address-search .wireline-cont-area .area-result .list-address>button+button {
+  border-top: solid 1px #e5e5e5;
+}
+
+.wireline-address-search .wireline-cont-area .area-result .list-address>button>dl {
+  display: flex;
+}
+.wireline-address-search .wireline-cont-area .area-result .list-address>button>dl dt {
+  color: #fff;
+  width: 40px;
+  height: 18px;
+  line-height: 18px;
+  vertical-align: middle;
+  padding-left: 0px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 300;
+}
+.wireline-address-search .wireline-cont-area .area-result .list-address>button>dl dt.zipcode {
+  background-color: #8f7fe1;
+}
+.wireline-address-search .wireline-cont-area .area-result .list-address>button>dl dt.street-address {
+  background-color: #006bef;
+}
+.wireline-address-search .wireline-cont-area .area-result .list-address>button>dl dt.lot-num-address {
+  background-color: #666666;
+}
+.wireline-address-search .wireline-cont-area .area-result .list-address>button>dl dd {
+  font-size: 12px;
+  letter-spacing: -0.3px;
+  color: #000;
+  margin-left: 4px;
+  line-height: 18px;
+  vertical-align: middle;
+  text-align: left;
+  width:calc(100% - 40px);
+}
+.wireline-address-search .wireline-cont-area .area-result .list-address>button>dl+dl {
+  margin-top: 4px;
+}
+.wireline-address-search .wireline-cont-area .area-select .result-text {
+  display: block;
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+  color: #555;
+}
+.wireline-address-search .area-result .btn-area .btn-default {
+  position: relative;
+  border: 0;
+  background-color: #fff;
+  height: 53px;
+  line-height: 53px;
+  color: #666666;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.38px;
+  border-top: solid 1px #e5e5e5;
+}
+.wireline-address-search .area-result .btn-area .btn-default::after{
+  content: '';
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -6px;
+  margin-left: 25px;
+  background: url(../img/wireline/icon-vw-down@2x.png) 50% 50% no-repeat;
+  background-size: 12px;
+}
+.wireline-address-search .wireline-cont-area .area-select .area-form {
+  margin-top:24px;
+}
+.wireline-address-search .wireline-cont-area .area-select .area-form .form-group .c-select {
+  background-color: #fff;
+  border-width: 0 0 1px 0;
+  margin: 0;
+  border-radius:0;
+  flex: 1;
+  position: relative;
+}
+.wireline-address-search .wireline-cont-area .area-select .area-form .form-group .c-select:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.wireline-address-search .wireline-cont-area .area-select .area-form .form-group .c-select .select {
+  width: 100%;
+  height: 31px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 300;
+  border: 0;
+  appearance: none;
+  padding: 0 8px;
+  background-color: #fff;
+}
+
+.wireline-address-search .wireline-cont-area .area-select .area-form .form-group .c-select .select:invalid {
+  color: #909090;
+}
+.wireline-address-search .wireline-cont-area .area-select .area-form .form-group .c-select:after {
+  width:6px;
+  height:6px;
+  right:2px;
+}
+.wireline-address-search .wireline-cont-area .area-select .area-form .form-group .c-select .select option {
+  padding:0 10px;
+}
+.wireline-address-search .wireline-cont-area .area-select .area-form .form-group.input-type2 .input-box {
+  width: calc(50% - 11px);
+}
+.wireline-address-search .wireline-cont-area .area-select .area-form .form-group.input-type2 .input-box:first-child {
+  margin-right: 20px;
+}
+.wireline-address-search .wireline-cont-area .area-select .area-form .form-group.input-type2 .input-box .input {
+  float: left;
+  width: calc(100% - 18px);
+  border: 1px solid #d9d9d9;
+  height:40px;
+  padding:0 10px;
+}
+
+.wireline-address-search .wireline-cont-area .area-select .area-form .form-group.input-type2 .input-box .input:focus {
+  border-color: #000;
+}
+
+.wireline-address-search .wireline-cont-area .area-select .area-form .form-group.input-type2 .input-box span {
+  float: right;
+  width: 18px;
+  font-size: 15px;
+  line-height: 40px;
+  text-align: right;
+}
+.wireline-address-search .wireline-cont-area .area-select h3.tit {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  color: #000;
+  margin-top:18px;
+}
+
+.wireline-address-search .wireline-cont-area .area-select .item-address {
+  margin-top:16px;
+}
+
+.wireline-address-search .wireline-cont-area .area-select .item-address>dl {
+  position: relative;
+}
+.wireline-address-search .wireline-cont-area .area-select .item-address>dl dt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 18px;
+  line-height: 18px;
+  vertical-align: middle;
+  padding-left: 0px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 11px;
+  letter-spacing: -0.28px;
+  color: #fff;
+}
+.wireline-address-search .wireline-cont-area .area-select .item-address>dl dt.zipcode {
+  background-color: #9b8aea;
+}
+.wireline-address-search .wireline-cont-area .area-select .item-address>dl dt.street-address {
+  background-color: #006bef;
+}
+.wireline-address-search .wireline-cont-area .area-select .item-address>dl dt.lot-num-address {
+  background-color: #666666;
+}
+.wireline-address-search .wireline-cont-area .area-select .item-address>dl dd {
+  display: block;
+  padding-left: 50px;
+  font-size: 12px;
+  letter-spacing: -0.3px;
+  color: #000;
+  margin-left: 4px;
+  line-height: 18px;
+}
+.wireline-address-search .wireline-cont-area .area-select .item-address>dl+dl {
+  margin-top: 4px;
+}
+.wireline-address-search .wireline-cont-area .area-select .btn-re-search {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #757575;
+  padding: 10px 15px;
+  border: 1px solid #757575;
+  border-radius: 34px;
+}
+.wireline-address-search .wireline-cont-area .area-select .btn-confirm {
+  margin-top: 40px;
+}
+.wireline-address-search .wireline-cont-area .area-navi .map-box {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.wireline-address-search .wireline-cont-area .area-navi .map-box img {
+  width: 100%;
+  height: auto;
+}
+.wireline-address-search .wireline-cont-area .area-navi .map-box .current-position {
+  position: absolute;
+  right: 42%;
+  top: 17%;
+  width: 32px;
+  height: 36px;
+  background: url('../img/wireline/ico_sch_location_b.png') no-repeat center;
+  background-size: cover;
+}
+.wireline-address-search .wireline-cont-area .area-navi .map-box .map-rocal {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 30px;
+  height: 30px;
+  background: url('../img/wireline/icon_map_rocal.png') no-repeat center;
+  background-size: cover;
+}
+.wireline-address-search .wireline-cont-area .area-navi .info-location {
+  margin-top: 12px;
+}
+.wireline-address-search .wireline-cont-area .area-navi .info-location .tit {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  color: #000;
+}
+.wireline-address-search .wireline-cont-area .area-navi .info-location .select-address {
+  margin-top: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.35px;
+  color: #000;
+  border-radius: 12px;
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+}
+.wireline-address-search .wireline-cont-area .area-navi .btn-box-btm {
+  margin-top: 16px;
+  height: 32px;
+}
+.wireline-address-search .wireline-cont-area .area-navi .btn-box-btm>button {
+  float: left;
+  width: calc(50% - 10px);
+}
+.wireline-address-search .wireline-cont-area .area-navi .btn-box-btm>button:first-child {
+  margin-right: 20px;
+}
+
+/* 바텀 시튼 도넛그래프 */
+.pop-bottom-sheet.wireline-myplace .town-chart-area .map-area {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  margin: -18px auto 0;
+  padding: 68px 0 30px;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 330px;
+}
+.pop-bottom-sheet.wireline-myplace .town-chart-area .select-box-wrap {
+  position: relative;
+  top: 33px;
+  width: calc(100% - 72px);
+  margin: 0 auto;
+  font-size: 0;
+  max-width: 260px;
+}
+.pop-bottom-sheet.wireline-myplace .town-chart-area .select-box-wrap .area-select-box.area-select-1 {
+  margin-right: 16px;
+}
+.pop-bottom-sheet.wireline-myplace .town-chart-area .select-box-wrap .area-select-box {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  width: calc(50% - 8px);
+  margin: 0;
+  cursor: pointer;
+}
+.pop-bottom-sheet.wireline-myplace .town-chart-area .select-box-wrap .area-select-box select {
+  border: 0;
+  border-bottom: 1px solid #4130df;
+  border-radius: 0;
+  padding: 0 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.pop-bottom-sheet.wireline-myplace .town-chart-area .select-box-wrap .area-select-box:after {
+  content: "";
+  background-size: 10px;
+}
+.pop-bottom-sheet {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 75%;
+  padding-top: 15px;
+  z-index: 19001;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -6px 10px 5px rgb(175 175 175/30%);
+  transition: all .7s cubic-bezier(.65, .05, .36, 1);
+}
+.pop-bottom-sheet.active-on {
+  bottom: 0;
+}
+.pop-bottom-sheet.wireline-myplace .sheet-body {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.sheet-body .town-chart-area {
+  overflow: auto;
+  height: calc(100% - 90px);
+  padding-bottom: 0;
+  padding-top: 90px;
+  margin-top: -1px;
+  border-top: 5px solid #fff;
+}
+.sheet-body .town-chart-area h3 {
+  position: absolute;
+  height: 50px;
+  line-height: 50px;
+  top: -2px;
+  left: 30px;
+  right: 20px;
+  background-color: #fff;
+  z-index: 10;
+}
+.sheet-body .town-chart-area .select-box-wrap {
+  margin-top: 12px;
+}
+.sheet-body .town-chart-area p.stitle {
+  margin-top: 0;
+  position: absolute;
+  top: 45px;
+  left: 30px;
+  right: 30px;
+  padding: 10px 0;
+  background-color: #fff;
+  z-index: 10;
+}
+.pop-bottom-sheet .btn-close {
+  position: absolute;
+  top: 29px;
+  right: 30px;
+  width: 19px;
+  height: 19px;
+  z-index: 10;
+  background: url('../img/wireline/btn-bottomsheet-X.png') 0 0 no-repeat;
+  font-size: 1px;
+  color: transparent;
+  background-size: contain;
+}
+#popup-zip-code-module .tds-header.on::before {
+  content: '';
+  background-color: rgb(0 0 0 / 50%);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  height: 56px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 10;
+}
+#popup-zip-code-module {
+  overflow: hidden;
+}
+#popup-zip-code-module .tds-main.on::before {
+  content: '';
+  background-color: rgb(0 0 0 / 50%);
+  width: 100%;
+  height: 100%;
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 10;
+}
+/* 예상 요금 확인  */
+.layer-pay .dsc-list {
+  margin-bottom: 10px;
+}
+.dsc-item {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #757575;
+  letter-spacing: -.04em
+}
+.dsc-list .dsc-item {
+  position: relative;
+  padding-left: 1rem
+}
+.dsc-list .dsc-item:before {
+  position: absolute;
+  top: .6rem;
+  left: .1rem;
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50%;
+  overflow: hidden
+}
+.dsc-list .dsc-item~.dsc-item {
+  margin-top: .5rem
+}
+/*  */
+.wireline-available-prd-view {
+  min-height: 90vh;
+  padding: 0 20px;
+}
+.wireline-available-prd-view .box-swiper {
+  position: relative;
+  min-height: 147px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px 2px rgba(175, 175, 175, 0.2);
+  background-color: #fff;
+  margin: 24px auto 10px auto;
+}
+.wireline-available-prd-view .box-swiper .swiper-pagination-bullets {
+  width: 100%;
+  left: 0;
+  bottom: -30px;
+  text-align: center;
+}
+.wireline-available-prd-view .box-swiper .swiper-pagination-bullet {
+  margin: 3px;
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ddd;
+  opacity: 1;
+}
+.wireline-available-prd-view .box-swiper .swiper-pagination-bullet-active {
+  width: 28px;
+  height: 6px;
+  display: inline-block;
+  border-radius: 14px;
+  background: #ddd;
+  border: 1px solid #ddd;
+  opacity: 1;
+}
+.wireline-available-prd-view .btn-more {
+  display: block;
+  width: 100%;
+  padding: 13px 20px 13px 0;
+  color: #666;
+  font-size: 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
+.wireline-available-prd-view .btn-more::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url('../img/wireline/icon-vw-down@2x.png');
+  background-size: 12px auto;
+  position: absolute;
+  top: 17px;
+  left: calc(50% + 15px);
+}
+.wireline-available-prd-view {
+  padding: 18px 20px 24px;
+  text-align: left;
+  color: #000;
+}
+.wireline-available-prd-view .txt-addr {
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: -0.4px;
+  font-weight: 500;
+}
+.wireline-available-prd-view .txt-confirm {
+  margin: 10px 0 16px;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+}
+.wireline-available-prd-view .btn-view-other {
+  font-size: 12px;
+  color: #7575e0;
+  text-decoration: underline;
+  margin-bottom: 16px;
+}
+.wireline-available-prd-view button.btn-confirm.btn-type-full {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 23px;
+  border: 1px solid #d9d9d9;
+  min-height: 45px;
+  line-height: 45px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #222;
+}
+.wireline-available-prd-view .item-box {
+  margin: 0 15px;
+}
+.wireline-available-prd-view .item-box .info {
+  padding: 45px 0px 12px;
+  text-align: center;
+  position: relative;
+}
+.wireline-available-prd-view .item-box .info .txt-speed {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  display: inline-block;
+  height: 24px;
+  line-height: 25px;
+  padding: 0px 10px;
+  border-radius: 17px;
+  background-color: #4130df;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0;
+  text-align: center;
+  color: #fff;
+}
+.wireline-available-prd-view .item-box .info .tit-s {
+  position: absolute;
+  right: 0;
+  top: 16px;
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 400;
+  text-align: right;
+  color: #757575;
+}
+.wireline-available-prd-view .item-box .info .item-mid {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+.wireline-available-prd-view .item-box .info .item-mid .tit {
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.33px;
+  text-align: left;
+  color: #000;
+}
+.wireline-available-prd-view .item-box .info .item-mid .fee-box {
+  padding: 5px 0 0 0;
+  vertical-align: middle;
+  text-align: right;
+  color: #000;
+}
+.wireline-available-prd-view .item-box .info .item-mid .fee-box .topic {
+  font-size: 12px;
+  letter-spacing: -0.3px;
+}
+.wireline-available-prd-view .item-box .info .item-mid .fee-box .value {
+  line-height: 27px;
+}
+.wireline-available-prd-view .item-box .info .item-mid .fee-box .value b {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.42px;
+}
+.wireline-available-prd-view .item-box .info .btn-join {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.wireline-available-prd-view .item-box .info .box-btn-pop {
+  overflow: hidden;
+  margin: 6px 0 0 auto;
+  width: auto;
+  text-align: right;
+}
+.wireline-available-prd-view .item-box .info .box-btn-pop .btn-shop {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: url('../img/wireline/icon-cart.png') no-repeat center center;
+  background-size: 32px auto;
+  text-indent: -9999px;
+  text-align: right;
+  color: transparent;
+  margin-right: 10px;
+}
+.wireline-available-prd-view .item-box .info .box-btn-pop .btn-confirm {
+  float: right;
+  width: 126px;
+  display: inline-block;
+  height: 32px;
+  min-height: auto;
+  line-height: 31px;
+  border-radius: 36px;
+  border: solid 1px #4130df;
+  background-color: #4130df;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  color: #fff;
+  vertical-align: middle;
+}
+.wireline-available-prd-view .txt-refer {
+  margin-top: 20px;
+  line-height: 1.45;
+  letter-spacing: -0.5px;
+}
+.wireline-available-prd-view .txt-refer > p{
+  color: #808080;
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+.wireline-available-prd-view .txt-refer>p:before {
+  content: '\2022';
+  font-size: 13px;
+  display: inline-block;
+  color: #666;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.tds-popup-wrap.pop_page.wireline-pop-wrap .tds-header.on::before {
+  content:'';
+  position:absolute;
+  width:100%;
+  height:56px;
+  background-color: rgb(0 0 0 / 50%);
+}
+
+.tds-popup-wrap.wireline-pop-wrap .tds-header.on::before {
+  content:'';
+  position:absolute;
+  width:100%;
+  height:56px;
+  background-color: rgb(0 0 0 / 50%);
+}
+
+/* 공통  */
+.sticky-bar {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 8px 8px 0 0;
+  background-color: #fff;
+  z-index: 10001;
+}
+.sticky-bar .layer-body {
+  display: none
+}
+.sticky-bar .layer-pay {
+  transition: all .3s ease;
+  box-shadow: -2px 0 8px 0 rgba(0, 0, 0, 0.16);
+  border-top: 0;
+  border-radius: 8px 8px 0 0;
+  z-index:99;
+}
+.sticky-bar .l-grid {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+}
+.sticky-bar .layer-pay .layer-body.on {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  height: 0px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+.sticky-bar .layer-foot{
+  position: relative;
+  display: block;
+  background-color: #fff;
+  z-index: 1;
+}
+.sticky-bar .layer-pay .layer-body.on>div {
+  padding-top: 16px;
+}
+.sticky-bar .layer-pay .layer-body .btn-toggle + #detail-terms{
+  display: none;
+}
+.sticky-bar .layer-pay .layer-body .btn-toggle.active + #detail-terms {
+  display: block;
+}
+.sticky-bar .layer-pay .layer-body.on[style="height: auto; overflow: hidden;"]::after,
+.sticky-bar .layer-pay .layer-body.on[style="height: auto;"]::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f0f0f5;
+}
+.sticky-bar .layer-pay .layer-body .price-area {
+  display: none;
+}
+.sticky-bar .layer-pay .layer-body .btn-toggle {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #666;
+  border-right: 1px solid #666;
+  transform: rotate(-45deg);
+  margin: 0px 0 0 -3px;
+  content: '';
+}
+.sticky-bar .layer-pay .layer-body.on .price-area {
+  display: flex;
+}
+.sticky-bar .layer-pay .layer-body.on .btn-toggle.active {
+  transform: rotate(135deg);
+}
+.sticky-bar .layer-pay .layer-foot {
+  padding-bottom: 18px;
+  padding-top: 17px;
+}
+.sticky-bar .layer-pay .price-area {
+  padding-top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.sticky-bar .layer-pay .price-area .stit {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.57px;
+}
+.sticky-bar .layer-pay .price-area em.desc {
+  display: block;
+  color: #909090;
+  font-size: 12px;
+  font-weight: 300;
+}
+.sticky-bar .layer-pay .price-area .price {
+  text-align: right;
+  font-weight: 500;
+  color: #000;
+}
+.sticky-bar .layer-pay .price-area+.price-area {
+  margin-top: 0.8rem;
+}
+.sticky-bar .layer-pay .btn-area {
+  position: relative;
+  font-size: 17px;
+  padding-top: 0;
+  margin: 0 -20px;
+  height: 55px;
+}
+.sticky-bar .layer-pay .btn-area [class^=btn-] {
+  font-size: 17px;
+  font-weight: 300;
+  border-radius: 0;
+  margin: 0;
+}
+.sticky-bar .layer-pay .btn-area .btn-primary {
+  margin: 0;
+  border-radius: 0;
+  background-color: #4130df;
+  border-color: #4130df;
+}
+.sticky-bar .layer-pay .btn-area .btn-light {
+  color: #000;
+  background-color: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+.sticky-bar .layer-pay .btn-area.disabled [class^=btn-] {
+  font-size: 17px;
+  font-weight: 300;
+  color: #afafaf;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: #e5e5e5;
+  pointer-events: none;
+  box-shadow: none;
+}
+.sticky-bar .layer-pay .btn-area [class^=btn-].disabled,
+.sticky-bar .layer-pay .btn-area [class^=btn-][aria-disabled],
+.sticky-bar .layer-pay .btn-area [class^=btn-][disabled] {
+  background-color: #e5e5e5 !important;
+  border-color: #e5e5e5;
+  color: #afafaf;
+}
+.sticky-bar .layer-pay .layer-body.on.show::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f0f0f5;
+}
+.sticky-bar .layer-pay .price-area .price .num>strong {
+  color: #ff0000;
+  font-size: 16px;
+  padding: 0 2px;
+  font-weight: 500;
+  letter-spacing: -0.52px;
+}
+.sticky-bar .layer-pay .price-area .price .unit {
+  position: relative;
+  top: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+}
+.sticky-bar .layer-pay .price-area .price .desc {
+  display: block;
+  color: #909090;
+  font-size: 12px;
+  font-weight: 300;
+}
+.layer-pay .body {
+  overflow: hidden;
+  overflow-y: auto;
+  /* height: 0; */
+  padding-top: .1rem;
+  max-height: 310px
+}
+.layer-pay .l-rows.border {
+  padding-top: .9rem;
+  border-top: 1px solid #e1e1e1;
+}
+.layer-pay .l-row {
+  padding-bottom: .1rem;
+  color: #000;
+  text-align: right;
+}
+.layer-pay .l-row:after,
+.layer-pay .l-row:before {
+  display: table;
+  content: "";
+}
+.layer-pay .l-row:after {
+  clear: both;
+}
+.layer-pay .l-row-stit {
+  position: relative;
+  float: left;
+  font-size: 12px;
+}
+.layer-pay .l-row-stit.weight {
+  font-weight: 700;
+}
+.layer-pay .l-row-price {
+  white-space: nowrap;
+}
+.layer-pay .depth-list {
+  margin: 0 0 .9rem 0;
+}
+.layer-pay .depth-list .l-row {
+  padding-bottom: .0;
+  color: #666
+}
+.layer-pay .depth-list,
+.layer-pay .depth3 {
+  padding-left: .8rem;
+}
+.layer-pay .depth1 .l-row-price{
+  font-size: 14px;
+  color: #ff0000;
+}
+.layer-pay .depth1 .l-row-price .unit {
+  font-size: 14px;
+  color: #ff0000;
+}

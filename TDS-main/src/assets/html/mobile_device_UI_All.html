@@ -1,0 +1,2132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover" />
+  <title>T다이렉트샵 &lt; Tworld</title>
+  <!-- css import -->
+  <link rel="stylesheet" href="../css/import_style.css" />
+  <!-- js -->
+  <script src="../js/jquery-1.12.4.js"></script>
+  <script src="../js/swiper/swiper.min.js"></script>
+</head>
+
+<!-- 웹 접근성 작업 2차 시작 2022.12.05 -->
+
+<body>
+  <div id="skipNav" class="skip_navi">
+    <a href="#contents-area">본문 바로가기</a>
+  </div>
+  <!-- [D] "바닥 네비게이션" 유/무 Class 추가 02/16
+    'nav-logo-in' : 로그인  로그인 바 없는 상태
+    'nav-logo-out': 비로그인 로그인 바 있는 상태
+    '  ' : 네비게이션 바 자체가 없는 경우  -->
+  <div class="container-wrap nav-logo-in ">
+    <!-- 헤더 영역 -->
+    <div class="tds-header">
+      <div class="top-header">
+        <div class="top-header-left">
+          <!-- 12.15 웹접근성으로 수정 <a> -> <h1> -->
+          <h1>
+            <img class="top-logo" src="../img/t-directshop-logo@2x.png" alt="T direct shop" />
+          </h1>
+        </div>
+        <div class="top-header-right">
+          <button type="button" class="ico-sch"><img src="../img/ico-topbar-sch@2x.png" alt="검색"/></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 본문 영역 -->
+    <div class="tds-main">
+      <h2 id="contents-area" tabindex="-1"><span class="blind">본문시작</span></h2>
+      <div class="l-grid">
+
+        <!-- *공지 노티-->
+        <div class="main-section direct-link top-notice">
+          <span class="top-new-notice">새로운 알림</span>
+          <div class="swiper-wrap">
+            <div class="swiper-container swiper-notice">
+              <ul class="swiper-wrapper">
+                <li class="item swiper-slide">
+                  <button type="button" class="cnt-card" onclick="window.open('https://www.naver.com')">
+                    <span class="txt-notice">우체국 택배 배송 지연 안내</span>
+                  </button>
+                </li>
+                <li class="item swiper-slide">
+                  <button type="button" class="cnt-card" onclick="window.open('https://www.daum.net/')">
+                    <span class="txt-notice">11월 2주차 시스템점검1</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <!-- [D] 웹접근성으로 위치 변경 12.05  -->
+            <div class="swipe-nav pager-1"></div>
+          </div>
+
+        </div>
+
+        <!-- *메인 베너 통이미지
+          [D] class="main-banner" 추가 
+          이미지 사이즈는 변동 될수 있습니다 . 
+          360*165
+        -->
+        <div class="main-section main-banner">
+          <div class="swiper-wrap">
+            <!-- [D] 2023.11 통합 웹접근성 : 순서 변경 -->
+            <div class="swipe-play-control">
+              <button type="button" class="btn-stop" aria-pressed="false"><span class="blind">정지</span></button>
+            </div>
+            <div class="swipe-nav pager-2" role="tablist"></div>
+            <div class="swiper-container swiper-banner">
+              <ul class="swiper-wrapper">
+                <!-- [D] 2023 .01.04 ※ li 영역에 들어가는 id, aria-labelledby은 하단 js를 확인해주세요※ -->
+                <li class="item swiper-slide">
+                  <div class="item-inner">
+                    <a href="#">
+                      <img src="https://cdnm.shop.tworld.co.kr/pimg/display/page/content/page_content_760_2844516937799887.png" alt="애플워치 series 6 건강의 미래 이미 손목위에1" />
+                    </a>
+                  </div>
+                </li>
+                <li class="item swiper-slide">
+                  <div class="item-inner">
+                    <a href="#">
+                      <img src="https://cdnm.shop.tworld.co.kr/pimg/display/page/content/page_content_760_2302053997743986.jpg" alt="애플워치 series 6 건강의 미래 이미 손목위에2"/>
+                    </a>
+                  </div>
+                </li>
+                <li class="item swiper-slide">
+                  <div class="item-inner">
+                    <a href="#" >
+                      <img src="https://cdnm.shop.tworld.co.kr/pimg/display/page/content/page_content_760_2844552087297902.png" alt="애플워치 series 6 건강의 미래 이미 손목위에3" />
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- *메인 메뉴 -->
+        <div class="main-section">
+          <ul class="quick-menu-list">
+            <li>
+              <a href="https://stg-my-shop.tworld.co.kr/myshop/product-list?linkChnlSvcId=TWD-MOB&svcMgmtNum=GqRp7wnrbyRCxxSmCLEISA%3D%3D&categoryId=20010014" class="btn">
+                <img src="../img/tw_g/icon-tw-5gmobile@2x.png" alt="">
+                <span class="menu-txt">5G휴대폰</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://stg-my-shop.tworld.co.kr/myshop/product-list?linkChnlSvcId=TWD-MOB&svcMgmtNum=GqRp7wnrbyRCxxSmCLEISA%3D%3D&categoryId=20010001" class="btn">
+                <img src="../img/tw_g/icon-tw-mobile@2x.png" alt="">
+                <span class="menu-txt">휴대폰</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://stg-my-shop.tworld.co.kr/myshop/product-list?linkChnlSvcId=TWD-MOB&svcMgmtNum=GqRp7wnrbyRCxxSmCLEISA%3D%3D&categoryId=20010015" class="btn">
+                <img src="../img/tw_g/icon-tw-5gtab@2x.png" alt="">
+                <span class="menu-txt">5G태블릿</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://stg-my-shop.tworld.co.kr/myshop/product-list?linkChnlSvcId=TWD-MOB&svcMgmtNum=GqRp7wnrbyRCxxSmCLEISA%3D%3D&categoryId=20010002" class="btn">
+                <img src="../img/tw_g/icon-tw-tab@2x.png" alt="">
+                <span class="menu-txt">태블릿</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://stg-my-shop.tworld.co.kr/myshop/product-list?linkChnlSvcId=TWD-MOB&svcMgmtNum=GqRp7wnrbyRCxxSmCLEISA%3D%3D&categoryId=20010003" class="btn">
+                <img src="../img/tw_g/icon-tw-watch@2x.png" alt="">
+                <span class="menu-txt">스마트워치</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://stg-my-shop.tworld.co.kr/myshop/product-list?linkChnlSvcId=TWD-MOB&svcMgmtNum=GqRp7wnrbyRCxxSmCLEISA%3D%3D&categoryId=20010004" class="btn">
+                <img src="../img/tw_g/icon-tw-wifi@2x.png" alt="">
+                <span class="menu-txt">휴대용 와이파이</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://stg-my-shop.tworld.co.kr/myshop/product-list?linkChnlSvcId=TWD-MOB&svcMgmtNum=GqRp7wnrbyRCxxSmCLEISA%3D%3D&categoryId=20010005" class="btn">
+                <img src="../img/tw_g/icon-tw-kids@2x.png" alt="">
+                <span class="menu-txt">키즈폰</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://stg-my-shop.tworld.co.kr/myshop/exhibition?linkChnlSvcId=TWD-MOB&svcMgmtNum=GqRp7wnrbyRCxxSmCLEISA%3D%3D" class="btn">
+                <img src="../img/tw_g/icon-tw-used@2x.png" alt="">
+                <span class="menu-txt">자급제 쓰던 폰</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://m.shop.tworld.co.kr/exhibition/view?exhibitionId=P00000212" class="btn" title="T다이렉트샵 모바일웹 홈페이지(새창)" target="_blank">
+                <img src="../img/tw_g/icon-tw-iptv@2x.png" alt="">
+                <span class="menu-txt">인터넷 B tv</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://m.shop.tworld.co.kr/accessory/submain" class="btn" title="T다이렉트샵 모바일웹 홈페이지(새창)" target="_blank">
+                <img src="../img/tw_g/icon-tw-acc@2x.png" alt="">
+                <span class="menu-txt">액세서리</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://m.shop.tworld.co.kr/my/submain" class="btn" title="T다이렉트샵 모바일웹 홈페이지(새창)" target="_blank"> 
+                <img src="../img/tw_g/icon-tw-shop@2x.png" alt="">
+                <span class="menu-txt">나의 쇼핑</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://m.shop.tworld.co.kr/shopguide/rwv" class="btn">
+                <img src="../img/tw_g/icon-tw-review@2x.png" alt="">
+                <span class="menu-txt">구매후기</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- *기획 광고 베너-->
+        <div class="main-section direct-link ad-banner">
+          <a href="#" class="cnt-card">
+            <div class="ad-banner-img">
+              <img src="https://cdnm.shop.tworld.co.kr/pimg/display/page/content/page_content_701_2098728588889716.png" alt="T 다이렉트샵 X 작가 키크니 키크니가 소개하는 T 다이렉트샵 전용 혜택">
+            </div>
+          </a>
+        </div>
+
+        <div class="main-section direct-link ad-banner">
+          <a href="#" class="cnt-card">
+            <div class="ad-banner-img">
+              <img src="https://cdnm.shop.tworld.co.kr/pimg/display/page/content/page_content_877_2098207561283263.png" alt="T 다이렉트샵 X 민팃 중고폰으로 ESG실천하고 T 다이렉트샵 이용권 받으세요!">
+            </div>
+          </a>
+        </div>
+
+        <div class="main-section direct-link ad-banner">
+          <a href="#" class="cnt-card">
+            <div class="ad-banner-img">
+              <img src="../img/@sample-banner-img_03.png" alt="쏟아지는 할인쿠폰. 티.다.팩 인터넷과 IPTV 가입하고 최대 187만원 혜택을 받아보세요!">
+            </div>
+          </a>
+        </div>
+
+        <!-- *배송 조회 -->
+        <div class="main-section tracking-view">
+          <h3 class="section-tit">주문 완료하신 상품입니다.</h3>
+          <div class="section-cnt">
+            <div class="cnt-card">
+              <div class="device-area">
+                <!-- [D] 제품 사진 노출 필요 시 주석 처리 삭제 
+                  <div class="thumb">
+                    <img src="../img/img-tds-phone-product@2x.png" alt="갤럭시 노트20 5G" title="갤럭시 노트20 5G" />
+                  </div> 
+                  -->
+                <div class="service-cnt">
+                  <div class="service-date">
+                    <dl>
+                      <dt>2022.07.25</dt>|
+                      <dd>200331378710</dd>
+                    </dl>
+                  </div>
+                  <div class="service-name">
+                    갤럭시 노트 20 Ultra 5G
+                  </div>
+                  <div class="service-desc">
+                    <dl>
+                      <dt>블랙</dt>/
+                      <dd>256GB</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <!-- [D] CASE * 4 : 배송 조회 단계  -->
+              <div class="step-area">
+                <!-- [D]2022.09.21 : 웹접근성 작업으로 설명글 추가 -->
+                <div class="g-invisible">주문 완료 신청접수 단계</div>
+                <ul>
+                  <li class="current"><span>신청접수</span></li>
+                  <li><span>상품준비</span></li>
+                  <li><span>물품배송</span></li>
+                  <li><span>배송완료</span></li>
+                </ul>
+                <div class="bar order-status1"></div>
+              </div>
+              <div class="step-area">
+                <div class="g-invisible">주문 완료 상품준비 단계</div>
+                <ul>
+                  <li><span>신청접수</span></li>
+                  <li class="current"><span>상품준비</span></li>
+                  <li><span>물품배송</span></li>
+                  <li><span>배송완료</span></li>
+                </ul>
+                <div class="bar order-status2"></div>
+              </div>
+              <div class="step-area">
+                <div class="g-invisible">주문 완료 물품배송 단계</div>
+                <ul>
+                  <li><span>신청접수</span></li>
+                  <li><span>상품준비</span></li>
+                  <li class="current"><span>물품배송</span></li>
+                  <li><span>배송완료</span></li>
+                </ul>
+                <div class="bar order-status3"></div>
+              </div>
+              <div class="step-area">
+                <ul>
+                  <li><span>신청접수</span></li>
+                  <li><span>상품준비</span></li>
+                  <li><span>물품배송</span></li>
+                  <li class="current"><span>배송완료</span></li>
+                </ul>
+                <div class="bar order-status4"></div>
+              </div>
+              <!-- [D] 2022.08.04 안내문 case-> class 별 아이콘 변경
+              1. 셀프개통 안내 :  noti-case1
+              2. USIM사전기변 개통 안내 : noti-case2
+              3. 해피콜 진행 안내 : noti-case3
+              -->
+              <div class="txt-notice noti-case1">
+                <h3 class="txt-tt">셀프개통 안내</h3>
+                구매하신 상품을 수령하신 후 주문확인 메뉴에서 개통을 진행해주세요. <br>
+                별도의 개통 요청이 없을 경우 <strong>배송 완료 1~2일 후 자동 개통</strong>될 예정입니다.
+              </div>
+
+              <div class="btn-area">
+                <a href="#" class="btn bg-normal" alt="주문 확인하기로 가기"
+                  onClick="window.open('https://m.shop.tworld.co.kr/my/submain')">주문 확인하기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [D]2022.08.26 추가 컴포넌트 -->
+        <!-- *바로픽업 주문조회 프로세스 -->
+        <div class="main-section tracking-view direct-pick">
+          <h3 class="section-tit">바로픽업으로 주문 완료하신 상품입니다.</h3>
+          <div class="section-cnt">
+            <div class="cnt-card">
+              <div class="device-area">
+                <div class="service-cnt">
+                  <div class="service-date">
+                    <dl>
+                      <dt>2022.07.25</dt>|
+                      <dd>200331378710</dd>
+                    </dl>
+                  </div>
+                  <div class="service-name">
+                    갤럭시 노트 20 Ultra 5G
+                  </div>
+                  <div class="service-desc">
+                    <dl>
+                      <dt>블랙</dt>/
+                      <dd>256GB</dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <!-- [D] CASE * 4 : 바로픽업 조회 단계  -->
+              <div class="step-area">
+                <div class="g-invisible">바로픽업 주문완료 단계</div>
+                <ul>
+                  <li class="current"><span>주문완료</span></li>
+                  <li><span>주문확정</span></li>
+                  <li><span>픽업 대기중</span></li>
+                  <li><span>픽업완료</span></li>
+                </ul>
+                <div class="bar order-status1"></div>
+              </div>
+              <div class="step-area">
+                <ul>
+                  <li><span>주문완료</span></li>
+                  <li class="current"><span>주문확정</span></li>
+                  <li><span>픽업 대기중</span></li>
+                  <li><span>픽업완료</span></li>
+                </ul>
+                <div class="bar order-status2"></div>
+              </div>
+              <div class="step-area">
+                <ul>
+                  <li><span>주문완료</span></li>
+                  <li><span>주문확정</span></li>
+                  <li class="current"><span>픽업 대기중</span></li>
+                  <li><span>픽업완료</span></li>
+                </ul>
+                <div class="bar order-status3"></div>
+              </div>
+              <div class="step-area">
+                <ul>
+                  <li><span>주문완료</span></li>
+                  <li><span>주문확정</span></li>
+                  <li><span>픽업 대기중</span></li>
+                  <li class="current"><span>픽업완료</span></li>
+                </ul>
+                <div class="bar order-status4"></div>
+              </div>
+              <!-- [D] 추가 2022.08.29 안내문 case-> class 별 아이콘 변경
+                1. 주문완료 안내 :  noti-case4
+                2. 주문확정 안내 : noti-case5
+                3. 재고확인 안내 : noti-case6
+                4. 바로픽업 준비 안내 : noti-case7
+                5. 바로픽업 방문 사전 안내 : noti-case8
+              -->
+              <div class="txt-notice noti-case4">
+                <h3 class="txt-tt">주문완료 안내</h3>
+                현재 매장에서 보유 중인 재고이나 <br>구매확정 전에는 매진될 수 있습니다. <br>매장 담당자에게 재고를 확인해 주세요.
+                <p class="txt-s">매장명 : 대구교동대리점 </p>
+                <p class="txt-s">매장 연락처 : 053-421-6900</p>
+              </div>
+
+              <div class="btn-area">
+                <a href="#" class="btn bg-normal" alt="매장정보 확인하기로 가기">매장정보 확인하기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- *장바구니에 주문서 작성 중인 상품-->
+        <div class="main-section device-type-card">
+          <h3 class="section-tit">거의 다 왔어요! <br>신청서 작성을 완료해 보세요. </h3>
+          <!-- {/* swipe */} -->
+          <div class="swiper-wrap">
+            <div class="swiper-container swiper-cart">
+              <ul class="swiper-wrapper">
+                <li class="item swiper-slide" aria-labelledby="item-swiper-cart1" id="item-swiper-cart-pager1">
+                  <div class="item-inner">
+                    <div class="cnt-card">
+                      <div class="device-area">
+                        <div class="product-cnt">
+                          <div class="thumb">
+                            <img src="../img/img-phone-product@2x.png" alt="갤럭시 노트20" title="갤럭시 노트20" />
+                          </div>
+                          <button type="button" class="add-options" aria-haspopup="dialog" aria-controls="t-gift" aria-expanded="false">
+                            <span>[한정판] 하트 무선충전기 선물패키지 ></span>
+                          </button>
+                        </div>
+                        <div class="service-cnt">
+                          <div class="service-desc">
+                            <div class="device-name">갤럭시 노트 20 5G</div>
+                            <div class="device-info">미스틱 블루 / 256GB</div>
+                          </div>
+                          <!-- [D] 요금 정보 -->
+                          <div class="service-fare-wrap">
+                            <ul>
+                              <li class="cost">가격미정</li>
+                            </ul>
+                            <div class="discount-type f2-bage">24개월 휴대폰할인</div>
+                            <ul class="device-info-list">
+                              <!-- [D] 휴대폰 상세정보 -->
+                              <li class="fare-discount">휴대폰 24개월 분할 상환</li>
+                              <li class="device-fare">5GX 플래티넘</li>
+                              <li class="device-type">기기변경</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!--  -->
+                <li class="item swiper-slide" aria-labelledby="item-swiper-cart2" id="item-swiper-cart-pager2">
+                  <div class="item-inner">
+                    <div class="cnt-card">
+                      <div class="device-area">
+                        <div class="product-cnt">
+                          <div class="thumb">
+                            <img src="../img/img-phone-product@2x.png" alt="갤럭시 노트20" title="갤럭시 노트20" />
+                          </div>
+                          <button type="button" class="add-options" aria-haspopup="dialog" aria-controls="t-gift" aria-expanded="false">
+                            <span>[한정판] 하트 무선충전기 선물패키지 ></span>
+                          </button>
+                        </div>
+                        <div class="service-cnt">
+                          <div class="service-desc">
+                            <div class="device-name">갤럭시 노트 20 5G</div>
+                            <div class="device-info">미스틱 블루 / 256GB</div>
+                          </div>
+                          <!-- [D] 요금 정보 -->
+                          <div class="service-fare-wrap">
+                            <ul>
+                              <li class="title">휴대폰 일시불</li>
+                              <li class="cost"><em>1,100,000</em>원</li>
+                              <li class="title">월 납부금액</li>
+                              <li class="cost"><em>93,705</em>원</li>
+                            </ul>
+                            <div class="discount-type f1-bage">24개월 요금할인</div>
+                            <ul class="device-info-list">
+                              <!-- [D] 휴대폰 상세정보 -->
+                              <li class="fare-discount ">휴대폰 24개월 분할 상환</li>
+                              <li class="device-fare">5GX 플래티넘</li>
+                              <li class="device-type">기기변경</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!--  -->
+                <li class="item swiper-slide" aria-labelledby="item-swiper-cart3" id="item-swiper-cart-pager3">
+                  <div class="item-inner">
+                    <div class="cnt-card">
+                      <div class="device-area">
+                        <div class="product-cnt">
+                          <div class="thumb">
+                            <img src="../img/img-phone-product@2x.png" alt="갤럭시 노트20" title="갤럭시 노트20" />
+                          </div>
+                          <button type="button" class="add-options" aria-haspopup="dialog" aria-controls="t-gift" aria-expanded="false">
+                            <span>[한정판] 하트 무선충전기 선물패키지 ></span>
+                          </button>
+                        </div>
+                        <div class="service-cnt">
+                          <div class="service-desc">
+                            <div class="device-name">갤럭시 노트 20 5G</div>
+                            <div class="device-info">미스틱 블루 / 256GB</div>
+                          </div>
+                          <!-- [D] 요금 정보 -->
+                          <div class="service-fare-wrap">
+                            <ul>
+                              <li class="title">휴대폰 일시불</li>
+                              <li class="cost"><em>1,100,000</em>원</li>
+                              <li class="title">월 납부금액</li>
+                              <li class="cost"><em>93,705</em>원</li>
+                            </ul>
+                            <div class="discount-type f1-bage">24개월 요금할인</div>
+                            <ul class="device-info-list">
+                              <!-- [D] 휴대폰 상세정보 -->
+                              <li class="fare-discount ">휴대폰 24개월 분할 상환</li>
+                              <li class="device-fare">5GX 플래티넘</li>
+                              <li class="device-type">기기변경</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!--[D] 버튼 접근성 작업으로 인한 위치 수정  -->
+              <div class="btn-area">
+                <a href="#" class="btn bg-normal" alt="바로 구매하기로 가기">바로 구매하기</a>
+              </div>
+            </div>
+            <div class="swipe-nav pager-3"></div>
+          </div>
+          <!-- {/* //swipe */} -->
+        </div>
+
+        <!-- *최근 본 상품 / 휴대폰 추천 (스펙 비교하기) -->
+        <div class="main-section device-type-card device-recommend">
+          <h3 class="section-tit">고객님, 이 상품 보셨나요?</h3>
+          <!-- {/* swipe */} -->
+          <div class="swiper-wrap">
+            <div class="swiper-container swiper-compare-devices">
+              <ul class="swiper-wrapper">
+                <li class="item swiper-slide" aria-labelledby="item-swiper-recomm1" id="item-swiper-recomm-pager1">
+                  <div class="item-inner">
+                    <div class="cnt-card">
+                      <a href="#" class="device-area">
+                        <div class="product-cnt">
+                          <div class="thumb">
+                            <img src="../img/img-product-90px-iphone11pro@2x.png" alt="갤럭시 노트20" title="갤럭시 노트20" />
+                          </div>
+                        </div>
+                        <div class="service-cnt">
+                          <div class="service-name">iPhone 13 Pro</div>
+                          <!-- [D] 모델 색상 / 용량 정보 -->
+                          <div class="device-sub-info">
+                            <div class="device-size">알파인 그린 / 256GB</div>
+                          </div>
+                          <!-- // -->
+                          <!-- [D] 요금 정보 -->
+                          <div class="service-fare-wrap">
+                            <ul>
+                              <li class="cost">가격미정</li>
+                              <li class="title">5GX 프라임 기준</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item swiper-slide" aria-labelledby="item-swiper-recomm2" id="item-swiper-recomm-pager2">
+                  <div class="item-inner">
+                    <div class="cnt-card">
+                      <a href="#" class="device-area">
+                        <div class="product-cnt">
+                          <div class="thumb">
+                            <img src="../img/img-product-90px-iphone11pro@2x.png" alt="갤럭시 노트20" title="갤럭시 노트20" />
+                          </div>
+                        </div>
+                        <div class="service-cnt">
+                          <div class="service-name">iPhone 13 Pro</div>
+                          <!-- [D] 모델 색상 / 용량 정보 -->
+                          <div class="device-sub-info">
+                            <div class="device-size">알파인 그린 / 256GB</div>
+                          </div>
+                          <!-- // -->
+                          <span class="service-more-vw">
+                            아래 자세히 보기에서<br>상품 가격을 확인해 보세요.
+                          </span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="item swiper-slide" aria-labelledby="item-swiper-recomm3" id="item-swiper-recomm-pager3">
+                  <div class="item-inner">
+                    <div class="cnt-card">
+                      <a href="#" class="device-area">
+                        <div class="product-cnt">
+                          <div class="thumb">
+                            <img src="../img/img-product-90px-iphone11pro@2x.png" alt="갤럭시 노트20" title="갤럭시 노트20" />
+                          </div>
+                        </div>
+                        <div class="service-cnt">
+                          <div class="service-name">iPhone 13 Pro</div>
+                          <!-- [D] 모델 색상 / 용량 정보 -->
+                          <div class="device-sub-info">
+                            <div class="device-size">알파인 그린 / 256GB</div>
+                          </div>
+                          <!-- // -->
+                          <!-- [D] 요금 정보 -->
+                          <div class="service-fare-wrap">
+                            <ul>
+                              <li class="cost"><em>193,519</em>원/월</li>
+                              <li class="title">5GX 프라임 기준</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!--[D] 버튼 접근성 작업으로 인한 위치 수정  -->
+              <div class="btn-area">
+                <a  href="https://stg-my-shop.tworld.co.kr/myshop/product-select?linkChnlSvcId=TWD-MOB&svcMgmtNum=GqRp7wnrbyRCxxSmCLEISA%3D%3D&categoryId=20010001&productGrpId=000005072&productId=A321" type="button" class="btn bg-normal" alt="자세히 보기로 가기" >자세히 보기</a>
+              </div>
+            </div>
+            <div class="swipe-nav pager-4" role="tablist"></div>
+          </div>
+          <!-- {/* //swipe */} -->
+          <!-- [D] [구매현황 보기 / 스펙 비교하기 / 한눈에 보기] 영역 -->
+          <div class="compare-devices-view-area">
+            <ul>
+              <li class="item-view-list">
+                <button type="button" title="구매현황 보기 팝업 열기" onclick=" " id="btn_buyer">
+                  <div class="section-cnt">
+                    <span class="btn-txt btn-ico-view1">구매현황 보기</span>
+                    <span class="sub-info">다른 구매자들은 <br>어떤 선택을 했을까요?</span>
+                  </div>
+                </button>
+              </li>
+              <li class="item-view-list">
+                <button type="button" title="스펙 비교하기로 이동">
+                  <div class="section-cnt">
+                    <span class="btn-txt btn-ico-view2">스펙 비교하기</span>
+                    <span class="sub-info">지금 사용 중인<br>휴대폰과 다른 점은요?</span>
+                  </div>
+                </button>
+              </li>
+              <li class="item-view-list">
+                <button type="button" title="한눈에 보기로 이동"
+                  onClick="window.open('https://stg-my-shop.tworld.co.kr/myshop/product-select?linkChnlSvcId=TWD-MOB&svcMgmtNum=GqRp7wnrbyRCxxSmCLEISA%3D%3D&categoryId=20010001&productGrpId=000005072&productId=A321&scrollToAnchor=deviceSpecInfo')">
+                  <div class="section-cnt">
+                    <span class="btn-txt btn-ico-view3">한눈에 보기</span>
+                    <span class="sub-info">더 자세한<br>스펙이 궁금하시면!</span>
+                  </div>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- *디바이스 추천- 기본 -->
+        <div class="main-section recommended-mobile-devices">
+          <h3 class="section-tit">스마트한 라이프를 완성해 보세요.</h3>
+          <!-- {/* swipe */} -->
+          <div class="swiper-wrap">
+            <div class="swiper-container swiper-recommended-devices">
+              <ul class="swiper-wrapper">
+                <li class="item swiper-slide" aria-labelledby="item-swiper-recommdev1" id="item-swiper-recommdev-pager1">
+                  <div class="item-inner">
+                    <div class="cnt-card">
+                      <div class="section-cnt">
+                        <a href="#" class="device-area">
+                          <div class="thumb">
+                            <img src="../img/img-product@2x.png" alt="갤력시 탭 S4" title="갤력시 탭 S4" aria-hidden="true" />
+                          </div>
+                          <div class="service-cnt">
+                            <div class="service-name">갤럭시 탭 S7 LTE</div>
+                            <!-- [D] 모델 색상 / 용량 정보 -->
+                            <div class="device-sub-info">
+                              <ul class="device-color-area">
+                                <li class="device-color" style="background-color: #417550;">
+                                  <span class="device-name blind">알파인 그린</span>
+                                </li>
+                                <li class="device-color" style="background-color: #497590;">
+                                  <span class="blind">앙고라블루</span>
+                                </li>
+                              </ul>
+                              <div class="device-size">
+                                <span>128GB</span> |
+                                <span>256GB</span>
+                              </div>
+                            </div>
+                            <!-- // -->
+                            <span class="service-more-vw">
+                              아래 자세히 보기에서<br>상품 가격을 확인해 보세요.
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="item swiper-slide" aria-labelledby="item-swiper-recommdev2" id="item-swiper-recommdev-pager2">
+                  <div class="item-inner">
+                    <div class="cnt-card">
+                      <div class="section-cnt">
+                        <a href="#" class="device-area">
+                          <div class="thumb">
+                            <img src="../img/img-product@2x.png" alt="갤력시 탭 S4" title="갤력시 탭 S4" aria-hidden="true" />
+                          </div>
+                          <div class="service-cnt">
+                            <div class="service-name">갤럭시 탭 S7 LTE</div>
+                            <!-- [D] 모델 색상 / 용량 정보 -->
+                            <div class="device-sub-info">
+                              <ul class="device-color-area">
+                                <li class="device-color" style="background-color: #417550;">
+                                  <span class="device-name blind">알파인 그린</span>
+                                </li>
+                                <li class="device-color" style="background-color: #497590;">
+                                  <span class="blind">앙고라블루</span>
+                                </li>
+                              </ul>
+                              <div class="device-size">
+                                <span>128GB</span> |
+                                <span>256GB</span>
+                              </div>
+                            </div>
+                            <!-- // -->
+
+                            <!-- [D] 요금 정보 -->
+                            <div class="service-fare-wrap">
+                              <ul>
+                                <li class="cost"><em>71,608</em>원/월</li>
+                                <li class="title">T Tab 30 기준</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="item swiper-slide" aria-labelledby="item-swiper-recommdev3" id="item-swiper-recommdev-pager3">
+                  <div class="item-inner">
+                    <div class="cnt-card">
+                      <div class="section-cnt">
+                        <a href="#" class="device-area">
+                          <div class="thumb">
+                            <img src="../img/img-product@2x.png" alt="갤력시 탭 S4" title="갤력시 탭 S4" aria-hidden="true" />
+                          </div>
+                          <div class="service-cnt">
+                            <div class="service-name">갤럭시 탭 S7 LTE</div>
+                            <!-- [D] 모델 색상 / 용량 정보 -->
+                            <div class="device-sub-info">
+                              <ul class="device-color-area">
+                                <li class="device-color" style="background-color: #417550;">
+                                  <span class="device-name blind">알파인 그린</span>
+                                </li>
+                                <li class="device-color" style="background-color: #497590;">
+                                  <span class="blind">앙고라블루</span>
+                                </li>
+                              </ul>
+                              <div class="device-size">
+                                <span>128GB</span> |
+                                <span>256GB</span>
+                              </div>
+                            </div>
+                            <!-- // -->
+                            <!-- [D] 요금 정보 -->
+                            <div class="service-fare-wrap">
+                              <ul>
+                                <li class="cost"><em>71,608</em>원/월</li>
+                                <li class="title">T Tab 30 기준</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!--[D] 버튼 접근성 작업으로 인한 위치 수정  -->
+              <div class="btn-area">
+                <a href="https://stg-my-shop.tworld.co.kr/myshop/product-select?linkChnlSvcId=TWD-MOB&svcMgmtNum=GqRp7wnrbyRCxxSmCLEISA%3D%3D&categoryId=20010001&productGrpId=000005072&productId=A321" class="btn bg-normal" alt="자세히 보기로 가기" >자세히 보기</a>
+              </div>
+            </div>
+            <div class="swipe-nav pager-5"></div>
+          </div>
+          <!-- {/* //swipe */} -->
+        </div>
+
+        <!-- *추천 리스트 : 인기 휴대폰을 만나보세요.-->
+        <div class="main-section device-type-list">
+          <h3 class="section-tit">T 다이렉트샵의 <br>인기 휴대폰을 만나보세요.</h3>
+          <nav class="nav-detail-page">
+            <div class="swiper-wrap">
+              <div class="swiper-container recomm-nav">
+                <ul class="swiper-wrapper">
+                  <!--[D] ※ id="tab-nav-1" aria-controls="tab_content1" 값 세팅 -> 하단 js 에 추가 ※-->
+                  <li class="item swiper-slide"><button type="button" class="current">전체</button></li>
+                  <li class="item swiper-slide"><button type="button">12세 이하</button></li>
+                  <li class="item swiper-slide"><button type="button">10대</button></li>
+                  <li class="item swiper-slide"><button type="button">20대</button></li>
+                  <li class="item swiper-slide"><button type="button">30대</button></li>
+                  <li class="item swiper-slide"><button type="button">40대</button></li>
+                  <li class="item swiper-slide"><button type="button">50대</button></li>
+                  <li class="item swiper-slide"><button type="button">60대 이상</span></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- 상품 리스트 -->
+          <div class="device-list">
+            <h3 class="blind">전체</h3>
+            <!--[D] ※ id="tab_content1" aria-labelledby="tab-nav-1" 값 세팅 -> 하단 js 에 추가 ※-->
+            <ul class="item">
+              <li>
+                <button type="button">
+                  <span class="device-area">
+                    <span class="thumb">
+                      <img src="../img/img-product-110px-galaxy-note20@2x.png" alt="갤럭시 노트20" title="갤럭시 노트20" />
+                    </span>
+
+                    <span class="service-cnt">
+                      <span class="service-name">
+                        갤럭시 노트 20
+                        <span class="device-size">256GB</span>
+                      </span>
+                      <span class="service-more-vw">
+                        상품 이미지를 클릭해<br>상품 가격을 확인해 보세요.
+                      </span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li>
+                <button type="button" aria-label="iPhone 12 Pro">
+                  <span class="device-area">
+                    <span class="thumb">
+                      <img src="../img/img-product-90px-iphone11pro@2x.png" alt="iPhone 12 Pro" title="iPhone 12 Pro" />
+                    </span>
+
+                    <span class="service-cnt">
+                      <span class="service-name">
+                        iPhone 12 Pro
+                        <span class="device-size">256GB</span>
+                      </span>
+                      <!-- [D] 요금 정보 -->
+                      <div class="service-fare-wrap">
+                        <ul>
+                          <li class="cost"><em>71,608</em>원/월</li>
+                          <li class="title">5GX 프라임 기준</li>
+                        </ul>
+                      </div>
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li>
+                <button type="button">
+                  <span class="device-area">
+                    <span class="thumb">
+                      <img src="../img/img-product-70px-galaxy-zflip@2x.png" alt="갤럭시 노트20" title="갤럭시 노트20" />
+                    </span>
+
+                    <span class="service-cnt">
+                      <span class="service-name">
+                        갤럭시 노트 20
+                        <span class="device-size">256GB</span>
+                      </span>
+                      <!-- [D] 요금 정보 -->
+                      <div class="service-fare-wrap">
+                        <ul>
+                          <li class="cost"><em>71,608</em>원/월</li>
+                          <li class="title">5GX 프라임 기준</li>
+                        </ul>
+                      </div>
+                    </span>
+                  </span>
+                </button>
+              </li>
+            </ul>
+            <!-- 예시 소스 ul  -->
+            <ul class="item"></ul>
+            <ul class="item"></ul>
+          </div>
+        </div>
+
+        <!-- * 2023 유선영역 추가 : 가장 인기 있는 인터넷 상품을 만나 보세요. -->
+        <div class="main-section wireline-popular-item-area">
+          <div class="section-tit">지금 가장 인기 있는 <br>
+            <button type="button" id="popular-btn" class="tab-value" title="상품 선택" aria-haspopup="menu" aria-controls="bottomPopularProduct" aria-expanded="false">인터넷/B tv</button>
+            상품을 만나보세요.
+            <div class="tool-tip-wrap">
+              <button class="tool-tip mark-info" aria-describedby="discount-tip" aria-expanded="false"></button> 
+              <div class="txt-box" role="tooltip" id="discount-tip" aria-hidden="true"> 인터넷과 B tv 함께 가입 시 다양한 콘텐츠 혜택과 월 최대 7,700원의 요금 할인을 받으실 수 있습니다. 
+                <button type="button" class="ico-close">툴팁닫기</button>
+              </div>
+            </div>  
+          </div>
+          <!-- 인터넷/IPTV -->
+          <div class="popular-item-box" id="internet-iptv" style="display: block;">
+            <!-- {/* swipe */} -->
+            <div class="swiper-wrap">
+              <div class="swiper-container swiper-wireline-popular-prd box-1">
+                <ul class="swiper-wrapper">
+                  <li class="item swiper-slide" aria-labelledby="item-swiper-wireline-prd4" id="item-swiper-wireline-pager4">
+                    <div class="item-inner">
+                      <!-- [D] .btn-flip 클릭 시 .front-box 는 hide / .behind-box 는 show -->
+                      <!-- front-box -->
+                      <div class="front-box">
+                        <div class="prod-name-wrap">
+                          <strong class="prod-name">광랜 인터넷 <span>(100Mbps)</span>
+                          </strong>
+                          <strong class="prod-name">B tv 이코노미</strong>
+                        </div>
+                        <div class="gray-box">
+                          <p class="text">실속파 고객님을 위한 <br>합리적인 결합 상품 </p>
+                          <div class="img-wrap">
+                            <div class="img">
+                              <img src="../img/wireline/popular_item_btvNew.png" alt="B tv 이코노미 아이콘 이미지">
+                            </div>
+                            <i class="ico-plus">더하기</i>
+                            <div class="img">
+                              <img src="../img/wireline/popular_item_100m.png" alt="광랜 인터넷 아이콘 이미지">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="price"><span class="num">22,550</span>월/원</div>
+                        <div class="btm-btn-wrap">
+                          <button type="button" class="btn-flip">자세히보기</button>
+                          <button type="button" class="btn-join">바로 가입</button>
+                        </div>
+                      </div>
+                      <!-- // front-box -->
+                      <!-- behind-box -->
+                      <div class="behind-box" tabindex="-1" aria-hidden="true">
+                        <div class="prod-name-wrap">
+                          <strong class="prod-name">광랜 인터넷 <span>(100Mbps)</span>
+                          </strong>
+                          <strong class="prod-name">B tv 이코노미</strong>
+                        </div>
+                        <!-- [D] .discount-box>li 갯수에 따라 클래스명 변경 -->
+                        <div class="gray-box discount-list-5">
+                          <div class="question-list-wrap">
+                            <ul class="question-list">
+                              <li class="txt-point">
+                                <span class="topic">상품 이용요금</span>
+                                <span class="value">34,100원</span>
+                              </li>
+                            </ul>
+                            <ul class="question-list discount-box">
+                              <li class="txt-point">
+                                <span class="topic type2">총 할인 금액</span>
+                                <span class="value type2">- 11,550원</span>
+                              </li>
+                              <li>
+                                <span class="topic">휴대폰 결합할인(1대)</span>
+                                <span class="value">-7,700원</span>
+                              </li>
+                              <li>
+                                <span class="topic">온라인전용할인</span>
+                                <span class="value">-1,100원</span>
+                              </li>
+                              <li>
+                                <span class="topic">요금 할인 혜택(더슬림 요금제)</span>
+                                <span class="value">-2,750원</span>
+                              </li>
+                            </ul>
+                            <ul class="question-list total-box">
+                              <li>
+                                <span class="topic">월 납부 요금</span>
+                                <span class="value">22,550원</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="txt-refer">
+                          <p>* 3년 약정 기준, 부가세 포함</p>
+                          <p>* 셋톱박스 임대료 별도</p>
+                        </div>
+                        <div class="btm-btn-wrap">
+                          <button type="button" class="btn-flip">돌아가기</button>
+                          <button type="button" class="btn-join">바로 가입</button>
+                        </div>
+                      </div>
+                      <!-- // behind-box -->
+                    </div>
+                  </li>
+
+                  <li class="item swiper-slide" aria-labelledby="item-swiper-wireline-prd5" id="item-swiper-wireline-pager5">
+                    <div class="item-inner">
+                      <!-- [D] .btn-flip 클릭 시 .front-box 는 hide / .behind-box 는 show -->
+                      <!-- front-box -->
+                      <div class="front-box">
+                        <div class="prod-name-wrap">
+                          <strong class="prod-name">기가 라이트 인터넷 <span>(500Mbps)</span>
+                          </strong>
+                          <strong class="prod-name">B tv All</strong>
+                        </div>
+                        <div class="gray-box">
+                          <p class="text">잘 나가는 상품끼리 뭉친 <br>인기절정 결합상품 </p>
+                          <div class="img-wrap">
+                            <div class="img">
+                              <img src="../img/wireline/popular_item_btvAll.png" alt="B tv All 아이콘 이미지">
+                            </div>
+                            <i class="ico-plus">더하기</i>
+                            <div class="img">
+                              <img src="../img/wireline/popular_item_500m.png" alt="기가 라이트 인터넷 아이콘 이미지">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="price"><span class="num">24,200</span>월/원</div>
+                        <div class="btm-btn-wrap">
+                          <button type="button" class="btn-flip">자세히보기</button>
+                          <button type="button" class="btn-join">바로 가입</button>
+                        </div>
+                      </div>
+                      <!-- // front-box -->
+                      <!-- behind-box -->
+                      <div class="behind-box" tabindex="-1" aria-hidden="true">
+                        <div class="prod-name-wrap">
+                          <strong class="prod-name">기가 라이트 인터넷 <span>(500Mbps)</span>
+                          </strong>
+                          <strong class="prod-name">B tv All</strong>
+                        </div>
+                        <!-- [D] .discount-box>li 갯수에 따라 클래스명 변경 -->
+                        <div class="gray-box discount-list-5">
+                          <div class="question-list-wrap">
+                            <ul class="question-list">
+                              <li class="txt-point">
+                                <span class="topic">상품 이용요금</span>
+                                <span class="value">51,700원</span>
+                              </li>
+                            </ul>
+                            <ul class="question-list discount-box">
+                              <li class="txt-point">
+                                <span class="topic">총 할인 금액</span>
+                                <span class="value">-27,500원</span>
+                              </li>
+                              <li>
+                                <span class="topic">휴대폰 결합할인(1대)</span>
+                                <span class="value">-14,300원</span>
+                              </li>
+                              <li>
+                                <span class="topic">온라인전용할인</span>
+                                <span class="value">-2,200원</span>
+                              </li>
+                              <li>
+                                <span class="topic">요금 할인 혜택(더슬림 요금제)</span>
+                                <span class="value">-11,000원</span>
+                              </li>
+                            </ul>
+                            <ul class="question-list total-box">
+                              <li>
+                                <span class="topic">월 납부 요금</span>
+                                <span class="value">24,200원</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="txt-refer">
+                          <p>* 3년 약정 기준, 부가세 포함</p>
+                          <p>* 셋톱박스 임대료 별도</p>
+                        </div>
+                        <div class="btm-btn-wrap">
+                          <button type="button" class="btn-flip">돌아가기</button>
+                          <button type="button" class="btn-join">바로 가입</button>
+                        </div>
+                      </div>
+                      <!-- // behind-box -->                      
+                    </div>
+                  </li>
+
+                  <li class="item swiper-slide" aria-labelledby="item-swiper-wireline-prd6" id="item-swiper-wireline-pager6">
+                    <div class="item-inner">
+                      <!-- [D] .btn-flip 클릭 시 .front-box 는 hide / .behind-box 는 show -->
+                      <!-- front-box -->
+                      <div class="front-box">
+                        <div class="prod-name-wrap">
+                          <strong class="prod-name">기가 인터넷 <span>(1Gbps)</span>
+                          </strong>
+                          <strong class="prod-name">B tv All</strong>
+                        </div>
+                        <div class="gray-box">
+                          <p class="text">프리미엄끼리 만난 <br>고성능, 최다채널 결합상품 </p>
+                          <div class="img-wrap">
+                            <div class="img">
+                              <img src="../img/wireline/popular_item_btvAll.png" alt="B tv All 아이콘 이미지">
+                            </div>
+                            <i class="ico-plus">더하기</i>
+                            <div class="img">
+                              <img src="../img/wireline/popular_item_1g.png" alt="기가 인터넷 아이콘 이미지">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="price"><span class="num">27,500</span>월/원</div>
+                        <div class="btm-btn-wrap">
+                          <button type="button" class="btn-flip">자세히보기</button>
+                          <button type="button" class="btn-join">바로 가입</button>
+                        </div>
+                      </div>
+                      <!-- // front-box -->
+                      <!-- behind-box -->
+                      <div class="behind-box" tabindex="-1" aria-hidden="true">
+                        <div class="prod-name-wrap">
+                          <strong class="prod-name">기가 인터넷 <span>(1Gbps)</span>
+                          </strong>
+                          <strong class="prod-name">B tv All</strong>
+                        </div>
+                        <!-- [D] .discount-box>li 갯수에 따라 클래스명 변경 -->
+                        <div class="gray-box discount-list-5">
+                          <div class="question-list-wrap">
+                            <ul class="question-list">
+                              <li class="txt-point">
+                                <span class="topic">상품 이용요금</span>
+                                <span class="value">57,200원</span>
+                              </li>
+                            </ul>
+                            <ul class="question-list discount-box">
+                              <li class="txt-point">
+                                <span class="topic">총 할인 금액</span>
+                                <span class="value">-29,700원</span>
+                              </li>
+                              <li>
+                                <span class="topic">휴대폰 결합할인(1대)</span>
+                                <span class="value">-16,500원</span>
+                              </li>
+                              <li>
+                                <span class="topic">온라인전용할인</span>
+                                <span class="value">-2,200원</span>
+                              </li>
+                              <li>
+                                <span class="topic">요금 할인 혜택(더슬림 요금제)</span>
+                                <span class="value">-11,000원</span>
+                              </li>
+                            </ul>
+                            <ul class="question-list total-box">
+                              <li>
+                                <span class="topic">월 납부 요금</span>
+                                <span class="value">27,500원</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="txt-refer">
+                          <p>* 3년 약정 기준, 부가세 포함</p>
+                          <p>* 셋톱박스 임대료 별도</p>
+                        </div>
+                        <div class="btm-btn-wrap">
+                          <button type="button" class="btn-flip">돌아가기</button>
+                          <button type="button" class="btn-join">바로 가입</button>
+                        </div>
+                      </div>
+                      <!-- // behind-box -->
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="swipe-nav pager-6" role="tablist"></div>
+            </div>
+            <!-- {/* //swipe */} -->
+          </div>
+          <!-- 인터넷 -->
+          <div class="popular-item-box" id="internet" style="display: none;">
+            <!-- {/* swipe */} -->
+            <div class="swiper-wrap">
+              <div class="swiper-container swiper-wireline-popular-prd box-2">
+                <ul class="swiper-wrapper">
+                  <li class="item swiper-slide" aria-labelledby="item-swiper-wireline-prd1" id="item-swiper-wireline-pager1" tabindex="0"  aria-hidden="false">
+                    <div class="item-inner">
+                      <!-- [D] .btn-flip 클릭 시 .front-box 는 hide / .behind-box 는 show -->
+                      <!-- front-box -->
+                      <div class="front-box">
+                        <div class="prod-name-wrap">
+                          <strong class="prod-name">광랜 인터넷 <br>
+                            <span>(100Mbps)</span>
+                          </strong>
+                        </div>
+                        <div class="gray-box">
+                          <p class="text">적게 쓴만큼<br>경제적인 요금으로 만나보세요!</p>
+                          <div class="img-wrap">
+                            <div class="img">
+                              <img src="../img/wireline/popular_item_100m.png" alt="광랜 인터넷 아이콘 이미지">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="price"><span class="num">13,750</span>월/원</div>
+                        <div class="btm-btn-wrap">
+                          <button type="button" class="btn-flip">자세히보기</button>
+                          <button type="button" class="btn-join">바로 가입</button>
+                        </div>
+                      </div>
+                      <!-- // front-box -->
+                      <!-- behind-box -->
+                      <div class="behind-box" tabindex="-1" aria-hidden="true">
+                        <div class="prod-name-wrap">
+                          <strong class="prod-name">광랜인터넷<br>
+                            <span>(100Mbps)</span>
+                          </strong>
+                        </div>
+                        <!-- [D] .discount-box>li 갯수에 따라 클래스명 변경 -->
+                        <div class="gray-box discount-list-4">
+                          <div class="question-list-wrap">
+                            <ul class="question-list">
+                              <li class="txt-point">
+                                <span class="topic">상품 이용요금</span>
+                                <span class="value">22,000원</span>
+                              </li>
+                            </ul>
+                            <ul class="question-list discount-box">
+                              <li class="txt-point">
+                                <span class="topic">총 할인 금액</span>
+                                <span class="value">-8,250원</span>
+                              </li>
+                              <li>
+                                <span class="topic">휴대폰 결합할인(1대)</span>
+                                <span class="value">-4,400원</span>
+                              </li>
+                              <li>
+                                <span class="topic">온라인전용할인</span>
+                                <span class="value">-1,100원</span>
+                              </li>
+                              <li>
+                                <span class="topic">요금 할인 혜택(더슬림 요금제)</span>
+                                <span class="value">-2,750원</span>
+                              </li>
+                            </ul>
+                            <ul class="question-list total-box">
+                              <li>
+                                <span class="topic">월 납부 요금</span>
+                                <span class="value">13,750원</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="txt-refer">
+                          <p>* 3년 약정 기준, 부가세 포함</p>
+                        </div>
+                        <div class="btm-btn-wrap">
+                          <button type="button" class="btn-flip">돌아가기</button>
+                          <button type="button" class="btn-join">바로 가입</button>
+                        </div>
+                      </div>
+                      <!-- // behind-box -->
+                    </div>
+                  </li>
+
+                  <li class="item swiper-slide" aria-labelledby="item-swiper-wireline-prd2" id="item-swiper-wireline-pager2" tabindex="-1"  aria-hidden="true">
+                    <div class="item-inner">
+                      <!-- [D] .btn-flip 클릭 시 .front-box 는 hide / .behind-box 는 show -->
+                      <!-- front-box -->
+                      <div class="front-box">
+                        <div class="prod-name-wrap">
+                          <strong class="prod-name">기가라이트인터넷<br>
+                            <span>(500Mbps)</span>
+                          </strong>
+                        </div>
+                        <div class="gray-box">
+                          <p class="text">고화질 동영상을<br>마음껏 시청하세요!</p>
+                          <div class="img-wrap">
+                            <div class="img">
+                              <img src="../img/wireline/popular_item_500m.png" alt="기가라이트인터넷 아이콘 이미지">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="price"><span class="num">15,400</span>월/원</div>
+                        <div class="btm-btn-wrap">
+                          <button type="button" class="btn-flip">자세히보기</button>
+                          <button type="button" class="btn-join">바로 가입</button>
+                        </div>
+                      </div>
+                      <!-- // front-box -->
+                      <!-- behind-box -->
+                      <div class="behind-box" tabindex="-1" aria-hidden="true">
+                        <div class="prod-name-wrap">
+                          <strong class="prod-name">기가라이트인터넷<br>
+                            <span>(500Mbps)</span>
+                          </strong>
+                        </div>
+                        <!-- [D] .discount-box>li 갯수에 따라 클래스명 변경 -->
+                        <div class="gray-box discount-list-4">
+                          <div class="question-list-wrap">
+                            <ul class="question-list">
+                              <li class="txt-point">
+                                <span class="topic">상품 이용요금</span>
+                                <span class="value">33,000원</span>
+                              </li>
+                            </ul>
+                            <ul class="question-list discount-box">
+                              <li class="txt-point">
+                                <span class="topic">총 할인 금액</span>
+                                <span class="value">-17,600원</span>
+                              </li>
+                              <li>
+                                <span class="topic">휴대폰 결합할인(1대)</span>
+                                <span class="value">-11,000원</span>
+                              </li>
+                              <li>
+                                <span class="topic">온라인전용할인</span>
+                                <span class="value">-2,200원</span>
+                              </li>
+                              <li>
+                                <span class="topic">요금 할인 혜택(더슬림 요금제)</span>
+                                <span class="value">-4,400원</span>
+                              </li>
+                            </ul>
+                            <ul class="question-list total-box">
+                              <li>
+                                <span class="topic">월 납부 요금</span>
+                                <span class="value">15,400원</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="txt-refer">
+                          <p>* 3년 약정 기준, 부가세 포함</p>
+                        </div>
+                        <div class="btm-btn-wrap">
+                          <button type="button" class="btn-flip">돌아가기</button>
+                          <button type="button" class="btn-join">바로 가입</button>
+                        </div>
+                      </div>
+                      <!-- // behind-box -->
+                    </div>
+                  </li>
+
+                  <li class="item swiper-slide" aria-labelledby="item-swiper-wireline-prd3" id="item-swiper-wireline-pager3" tabindex="-1"  aria-hidden="true">
+                    <div class="item-inner">
+                      <!-- [D] .btn-flip 클릭 시 .front-box 는 hide / .behind-box 는 show -->
+                      <!-- front-box -->
+                      <div class="front-box">
+                        <div class="prod-name-wrap">
+                          <strong class="prod-name">기가 인터넷<br>
+                            <span>(1Gbps)</span>
+                          </strong>
+                        </div>
+                        <div class="gray-box">
+                          <p class="text">더 빠르게! 더 신나게! <br> 거침없는 속도를 즐기세요! </p>
+                          <div class="img-wrap">
+                            <div class="img">
+                              <img src="../img/wireline/popular_item_1g.png" alt="기가 인터넷 아이콘 이미지">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="price"><span class="num">18,700</span>월/원</div>
+                        <div class="btm-btn-wrap">
+                          <button type="button" class="btn-flip">자세히보기</button>
+                          <button type="button" class="btn-join">바로 가입</button>
+                        </div>
+                      </div>
+                      <!-- // front-box -->
+                      <!-- behind-box -->
+                      <div class="behind-box" tabindex="-1" aria-hidden="true">
+                        <div class="prod-name-wrap">
+                          <strong class="prod-name">기가 인터넷 <br>
+                            <span>(1Gbps)</span>
+                          </strong>
+                        </div>
+                        <!-- [D] .discount-box>li 갯수에 따라 클래스명 변경 -->
+                        <div class="gray-box discount-list-4">
+                          <div class="question-list-wrap">
+                            <ul class="question-list">
+                              <li class="txt-point">
+                                <span class="topic">상품 이용요금</span>
+                                <span class="value">38,500원</span>
+                              </li>
+                            </ul>
+                            <ul class="question-list discount-box">
+                              <li class="txt-point">
+                                <span class="topic">총 할인 금액</span>
+                                <span class="value">-19,800원</span>
+                              </li>
+                              <li>
+                                <span class="topic">휴대폰 결합할인(1대)</span>
+                                <span class="value">-13,200원</span>
+                              </li>
+                              <li>
+                                <span class="topic">온라인전용할인</span>
+                                <span class="value">-2,200원</span>
+                              </li>
+                              <li>
+                                <span class="topic">요금 할인 혜택(더슬림 요금제)</span>
+                                <span class="value">-4,400원</span>
+                              </li>
+                            </ul>
+                            <ul class="question-list total-box">
+                              <li>
+                                <span class="topic">월 납부 요금</span>
+                                <span class="value">18,700원</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="txt-refer">
+                          <p>* 3년 약정 기준, 부가세 포함</p>
+                        </div>
+                        <div class="btm-btn-wrap">
+                          <button type="button" class="btn-flip">돌아가기</button>
+                          <button type="button" class="btn-join">바로 가입</button>
+                        </div>
+                      </div>
+                      <!-- // behind-box -->
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="swipe-nav pager-7" role="tablist"></div>
+            </div>
+            <!-- {/* //swipe */} -->
+          </div>
+
+          <!-- 상담하기/ 우리동네가입현황/ 우리집설치가능상품/ 내게맞는상품찾기​ -->
+          <div class="compare-devices-view-area wireline-vw-list">
+            <ul>
+              <li class="item-view-list">
+                <button type="button" title="새창">
+                  <div class="section-cnt">
+                    <span class="btn-txt btn-ico-view4">상담<br> 신청하기</span>
+                  </div>
+                </button>
+              </li>
+              <!-- [D] 2023.06.27 : 순서 변경 -->
+              <li class="item-view-list">
+                <button type="button" title="내게 맞는 상품 찾기">
+                  <div class="section-cnt">
+                    <span class="btn-txt btn-ico-view7">내게 맞는<br> 상품 찾기</span>
+                  </div>
+                </button>
+              </li>
+              <li class="item-view-list">
+                <button type="button" title="우리 동네 가입 현황">
+                  <div class="section-cnt">
+                    <span class="btn-txt btn-ico-view5">우리 동네 <br> 가입 현황</span>
+                  </div>
+                </button>
+              </li>
+              <li class="item-view-list">
+                <button type="button" title="우리집 설치 가능한 상품">
+                  <div class="section-cnt">
+                    <span class="btn-txt btn-ico-view6">우리집 설치<br>가능한 상품</span>
+                  </div>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- *[D] 요금 계산하기 팝업 베너 -->
+        <div class="wireline-calc-fee-banner">
+          <button type="button" class="cnt-card">
+            <div class="ad-banner-img">
+              <img src="../img/wireline/banner-simulation@2x.png" alt="내가 원하는 조합으로! 인터넷/B tv 예상 요금 보러가기">
+            </div>
+          </button>
+        </div>
+        <!-- *이주의 특가 -->
+        <div class="main-section device-type-list-horizontal">
+          <h3 class="section-tit">이주의 특가 휴대폰을 확인해 보세요.</h3>
+          <!-- {/* swipe */} -->
+          <div class="swiper-wrap">
+            <div class="swiper-container swiper-special-devices">
+              <ul class="swiper-wrapper">
+                <!-- [D] 최대 20개 노출​ -->
+                <li class="item swiper-slide">
+                  <button type="button">
+                    <span class="device-area">
+                      <span class="thumb">
+                        <img src="../img/img-product-110px-galaxy-note20@2x.png" alt="갤럭시 노트 20" title="갤럭시 노트 20" />
+                      </span>
+                      <span class="service-cnt">
+                        <span class="service-name">갤럭시 노트 20 갤럭시 노트 20
+                          <span class="size">256GB</span>
+                        </span>
+                        <span class="service-desc">
+                          <span class="tit">
+                            <em class="srvc-label bdc-red">출시가격 인하</em>
+                            <em class="txt-line-through"><span class="g-invisible">할인전 가격 : </span>899,900원</em>
+                          </span>
+                          <span class="cnt">
+                            <strong><span class="g-invisible">현재 가격 : </span><em>699,900</em>원</strong>
+                          </span>
+                        </span>
+                        <!-- <span class="service-fee">T 플랜 에센스 기준</span> -->
+                      </span>
+                    </span>
+                  </button>
+                </li>
+                <li class="item swiper-slide">
+                  <button type="button">
+                    <span class="device-area">
+                      <span class="thumb">
+                        <img src="../img/img-product-110px-iphone11pro@2x.png" alt="iPhone11 PRO" title="iPhone11 PRO" />
+                      </span>
+                      <span class="service-cnt">
+                        <span class="service-name">iPhone11 PRO
+                          <span class="size"> 256GB</span>
+                        </span>
+                        <span class="service-desc">
+                          <span class="tit">
+                            <em class="srvc-label bdc-blu">공시지원금 확대</em>
+                            <em class="txt-line-through"><span class="g-invisible">할인전 가격 : </span>92,000원</em>
+                          </span>
+                          <span class="cnt">
+                            <strong><span class="g-invisible">현재 가격 : </span><em>317,000</em>원 할인</strong>
+                          </span>
+                        </span>
+                        <span class="service-fee">T 플랜 에센스 기준</span>
+                      </span>
+                    </span>
+                  </button>
+                </li>
+                <li class="item swiper-slide">
+                  <button type="button">
+                    <span class="device-area">
+                      <span class="thumb">
+                        <img src="../img/img-product-110px-galaxy-zflip@2x.png" alt="갤럭시 Z Flip" title="갤럭시 Z Flip" />
+                      </span>
+                      <span class="service-cnt">
+                        <span class="service-name">갤럭시 Z Flip
+                          <span class="size"> 256GB</span>
+                        </span>
+                        <span class="service-desc">
+                          <span class="tit">
+                            <em class="srvc-label bdc-blu">공시지원금 확대</em>
+                            <em class="txt-line-through"><span class="g-invisible">할인전 가격 : </span>760,000원</em>
+                          </span>
+                          <span class="cnt">
+                            <strong><span class="g-invisible">현재 가격 : </span><em>600,000</em>원</strong>
+                          </span>
+                        </span>
+                        <span class="service-fee">T 플랜 에센스 기준
+                        </span>
+                      </span>
+                    </span>
+                  </button>
+                </li>
+                <li class="item swiper-slide">
+                  <button type="button">
+                    <span class="device-area">
+                      <span class="thumb">
+                        <img src="../img/img-product-110px-iphone11pro@2x.png" alt="iPhone11 PRO" title="iPhone11 PRO" />
+                      </span>
+                      <span class="service-cnt">
+                        <span class="service-name">iPhone11 PRO
+                          <span class="size"> 256GB</span>
+                        </span>
+                        <span class="service-desc">
+                          <span class="tit">
+                            <em class="srvc-label bdc-blu">공시지원금 확대</em>
+                            <em class="txt-line-through"><span class="g-invisible">할인전 가격 : </span>899,900원</em>
+                          </span>
+                          <span class="cnt">
+                            <strong><span class="g-invisible">현재 가격 : </span><em>699,900</em>원</strong>
+                          </span>
+                        </span>
+                        <span class="service-fee">T 플랜 에센스 기준</span>
+                      </span>
+                    </span>
+                  </button>
+                </li>
+                <li class="item swiper-slide">
+                  <button type="button">
+                    <span class="device-area">
+                      <span class="thumb">
+                        <img src="../img/img-product-110px-galaxy-note20@2x.png" alt="갤럭시 노트 20" title="갤럭시 노트 20" />
+                      </span>
+                      <span class="service-cnt">
+                        <span class="service-name">갤럭시 노트 20
+                          <span class="size"> 256GB</span>
+                        </span>
+                        <span class="service-desc">
+                          <span class="tit">
+                            <em class="srvc-label bdc-red">출시가격 인하</em>
+                            <em class="txt-line-through"><span class="g-invisible">할인전 가격 : </span>899,900원</em>
+                          </span>
+                          <span class="cnt">
+                            <strong><span class="g-invisible">현재 가격 : </span><em>699,900</em>원</strong>
+                          </span>
+                        </span>
+                        <!-- <span class="service-fee">T 플랜 에센스 기준</span> -->
+                      </span>
+                    </span>
+                  </button>
+                </li>
+                <li class="item swiper-slide">
+                  <button type="button">
+                    <span class="device-area">
+                      <span class="thumb">
+                        <img src="../img/img-product-110px-galaxy-zflip@2x.png" alt="갤럭시 Z Flip" title="갤럭시 Z Flip" />
+                      </span>
+                      <span class="service-cnt">
+                        <span class="service-name">갤럭시 Z Flip
+                          <span class="size"> 256GB</span>
+                        </span>
+                        <span class="service-desc">
+                          <span class="tit">
+                            <em class="srvc-label bdc-blu">공시지원금 확대</em>
+                            <em class="txt-line-through"><span class="g-invisible">할인전 가격 : </span>760,000원</em>
+                          </span>
+                          <span class="cnt">
+                            <strong><span class="g-invisible">현재 가격 : </span><em>600,000</em>원</strong>
+                          </span>
+                        </span>
+                        <span class="service-fee">T 플랜 에센스 기준</span>
+                      </span>
+                    </span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- {/* //swipe */} -->
+        </div>
+
+        <!-- *바로가기 링크 -->
+        <!-- {/* CASE 1. 주문 확인 */} -->
+        <div class="main-section direct-link direct-link-bot">
+          <a href="https://m.shop.tworld.co.kr/my/submain" class="cnt-card type-arrow" title="T다이렉트샵 모바일웹 홈페이지(새창)" target="_blank">
+            <span class="txt-notice">T 다이렉트샵 주문내역 확인하기</span>
+          </a>
+        </div>
+        <!-- {/* CASE 2. 구매후기 */} -->
+        <div class="main-section direct-link direct-link-bot">
+          <a href="https://m.shop.tworld.co.kr/shopguide/rwv" type="button" class="cnt-card type-arrow" title="T다이렉트샵 모바일웹 홈페이지(새창)" target="_blank">
+            <span class="txt-notice">구매후기 보러가기</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 바텀시트 -->
+  <div id="bottomPopularProduct" class="bottomSheet">
+    <div class="popular-tab-box" role="menu" aria-labelledby="popular-btn" aria-hidden="true" aria-modal="true">
+      <h3 class="sheet-title">상품 카테고리 선택</h3>
+      <ul class="tab-list">
+        <li class="tab-item rdo-item on " data-cont="internet-iptv">
+          <input type="radio" name="_internetIptv_prd" id="_internetIptv" checked="checked">
+          <label for="_internetIptv" class="label">인터넷/B tv</label>
+        </li>
+        <li class="tab-item rdo-item" data-cont="internet">
+          <input type="radio" name="_internetIptv_prd" id="_internet">
+          <label for="_internet" class="label">인터넷</label>
+        </li>
+      </ul>
+      <button type="button" class="ico-close">시트 닫기</button>
+    </div> 
+    <div class='wire-dimm'></div>
+  </div>
+
+  <!--[D] 2023.02.06 상담하기 버튼 디자인 변경 02/06 -->
+  <div class="sticky-shortcut">
+    <div class="btn-counsel-toggle">
+      <button type="button" class="ico-counsel-text" id="btn_pop_menu" aria-controls="pop_menu" aria-haspopup="menu" aria-pressed="false">상담하기 열기</button>
+      <ul class="toggle-list" role="menu" id="pop_menu" aria-labelledby="btn_pop_menu" >
+        <li class="ico-counsel-phone"><a href="https://m.shop.tworld.co.kr/common-campaign?cmpId=000029" target="_blank" title="T다이렉트샵 모바일웹(새창)" tabindex="-1">전화상담</a></li>
+        <li class="ico-counsel-chat"><a href="https://chat.tworld.co.kr:17443/sharedfront/jsp/view/liveChatCheck.jsp?domainId=MOBILE" target="_blank" title="T다이렉트샵 모바일웹(새창)" tabindex="-1">1:1 채팅</a></li>
+        <li class="ico-counsel-kakaotalk"><a href="https://chat.tworld.co.kr:17443/sharedfront/jsp/view/liveChatKakaoCheck.jsp?domainId=MOBILE" target="_blank" title="카카오톡 모바일앱(새창)" tabindex="-1">카카오톡</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--[D] 2023.01.06 구매현황 레이어 팝업, 개발시 혼란이 생길 것 같아 삭제 처리 -->
+  <script>
+    //[D] 2023.02.06 상담하기 버튼 수정
+    //상단 상담하기 클릭 이벤트 (기획전 페이지도 추가)
+    $(".ico-counsel-text").on('click', function () {
+      var parentEl = $(this).parent();
+      var dimmedEl = '<div class="sticky-counsel-dimmed"></div>'
+      // [D] 추가 2022.08.29 상담버튼 클릭시 상단 버튼 숨김
+      if(parentEl.hasClass("active")){
+        parentEl.removeClass('active').parents('body').removeClass('js-noscroll');
+        $('.sticky-counsel-dimmed').remove();
+        $(this).attr("aria-pressed" , false).text('상담하기 열기');
+        $(this).parent('.btn-counsel-toggle').find('.toggle-list').find('a').attr({"tabindex" : "-1"});     
+      }else{
+        parentEl.addClass('active').parents('body').addClass('js-noscroll'); // js-noscroll < 바닥페이지 스크롤링 막아줌
+        parentEl.parents('body').prepend(dimmedEl);
+        $(this).attr("aria-pressed" , true).text('상담하기 닫기');
+        $(this).parent('.btn-counsel-toggle').find('.toggle-list').find('a').attr({"tabindex" : "0"});     
+      }           
+    });
+
+    //[D] 2023.01.06 상단 공지
+    var swiperTopNotice = new Swiper(".swiper-container.swiper-notice", {
+      loop: true,
+      a11y: {
+        enabled: false
+      },
+      slidesPerView: 'auto',
+      pagination: {
+        clickable: true,
+        el: ".swipe-nav.pager-1",
+        type: "fraction",
+      },
+      on : {
+        slideChange : function(){
+          //[D] 슬라이드 작동 시 베너 li
+          $(".swiper-slide", $(this.el)).attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").attr({tabindex:"0" , "aria-hidden" : "false"});
+          $(".swiper-slide-duplicate", $(this.el)).find('button').attr("tabindex","-1");//슬라이드 내 'swiper-slide-duplicate' 'button' 포커싱 X
+        },
+        init : function () {
+          $(".swiper-slide", $(this.el)).attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").attr({"tabindex":"0" , "aria-hidden" : "false"});
+          $(".swiper-slide-duplicate", $(this.el)).find('button').attr("tabindex","-1");//슬라이드 내 'swiper-slide-duplicate' 'button' 포커싱 X
+        }
+      }
+    });
+
+    // [D] 2023.01.04 메인 베너 swiper slider
+    var mainBannerCnt = $('li.item','.swiper-container.swiper-banner').length; // 베너의 갯수
+    var swiper = new Swiper('.swiper-container.swiper-banner', {
+      loop: true,
+      a11y: {
+        enabled: false
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swipe-nav.pager-2",
+        type: 'bullets',
+        clickable: true,
+        slidesPerView: 'auto',
+        bulletClass: 'bullet',
+        bulletActiveClass: 'active',
+        renderBullet: function (index, className) {
+          var _selected = (index == 0 ? 'aria-selected="true" ' : 'aria-selected="false"'); //[D] 2023.01.04 첫번째 인디케이터만  aria-selected="true"
+          return '<div class="' + className + '" role="presentation"><button role="tab" aria-lable="'+ (index + 1) +' of '+ mainBannerCnt + '" '+ _selected +'>"' + (index + 1) + '"</button></div>';
+        }
+      },
+      on: {
+        slideChange : function(){
+          //[D] 인디케이터 aria-selected="true"
+          $('.main-banner .pager-2 .bullet').find('button').attr('aria-selected', false);
+          $('.main-banner .pager-2 .bullet.active').find('button').attr('aria-selected', true);
+
+          //[D] 슬라이드 작동 시 베너 li
+          $(".swiper-slide", $(this.el)).find('a').attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('a').attr({tabindex:"0" , "aria-hidden" : "false"});
+        },
+        init : function() {
+          $(".swiper-slide", $(this.el)).find('a').attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('a').attr({"tabindex":"0" , "aria-hidden" : "false"});
+
+          // 재생 / 정지 js 하나의 버튼으로 수정 변경 
+          thisSlide = this;
+          autoPlayBtn = document.querySelector('.swipe-play-control > button');
+          autoPlayBtn.addEventListener('click', (e) => {
+            autoPlayState = autoPlayBtn.getAttribute('aria-pressed');
+            if (autoPlayState === 'false') {
+              autoPlayBtn.setAttribute('aria-pressed', 'true');
+              
+              $('.swipe-play-control > button').removeClass("btn-stop").addClass("btn-start").find('span').html('시작');
+              thisSlide.autoplay.stop();
+            } else if (autoPlayState === 'true') {
+              autoPlayBtn.setAttribute('aria-pressed', 'false');
+              
+              $('.swipe-play-control > button').removeClass("btn-start").addClass("btn-stop").find('span').html('정지');
+              thisSlide.autoplay.start();
+            };
+          });
+          //-- end : 재생/정지 btn
+        }
+      } 
+    });
+    
+    // [D] 2023.01.04 주문서 작성 (거의 다 왔어요! 신청서 작성을 완료해 보세요.)
+    var inCartCnt = $("li.item",".swiper-container.swiper-cart").length; // 상품 슬라이드 갯수
+    var swiperInCart = new Swiper(".swiper-container.swiper-cart", {
+      slidesPerView: 'auto',
+      a11y: {
+        enabled: false
+      },
+      pagination: {
+        el: ".swipe-nav.pager-3",
+        type: 'bullets',
+        bulletClass: 'tds-bullet',
+        bulletActiveClass: 'active',
+        clickable: true,
+        renderBullet: function (index, className) {
+          var _selected = (index == 0 ? 'aria-selected="true"' : 'aria-selected="false"'); //[D] 2023.01.04 첫번째 인디케이터만  aria-selected="true"
+          return '<div class="' + className + '" role="presentation"><button id="item-swiper-cart' + (index + 1) + '" role="tab" aria-controls="item-swiper-cart-pager' + (index + 1) + '" aria-lable="'+ (index + 1) +' of '+ inCartCnt + '" '+ _selected +'>"' + (index + 1) + '"</button></div>';
+        },
+      },
+      on: {
+        slideChange : function(){
+          //[D] 2023.01.04 인디케이터 aria-selected="true"
+          $('.pager-3 .tds-bullet').find('button').attr('aria-selected', false);
+          $('.pager-3 .tds-bullet.active').find('button').attr('aria-selected', true);
+          //[D] 2023.01.04 슬라이드 작동 시 베너 li
+          $(".swiper-slide", $(this.el)).attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $(".item.swiper-slide", $(this.el)).eq(this.realIndex).attr({"tabindex":"0", "aria-hidden" : "false"});         
+        },  
+        init : function() {
+          $(".swiper-slide", $(this.el)).attr({"role" : "tabpanel", "tabindex":"-1", "aria-hidden" : "true"});
+          $(".item.swiper-slide.swiper-slide-active", $(this.el)).attr({"tabindex":"0", "aria-hidden" : "false"});
+        }
+      }
+    });
+    
+    // [D] 2023.01.04 휴대폰 추천 (고객님, 이 상품 보셨나요?)
+    var compareMoCnt = $("li.item",".swiper-container.swiper-compare-devices").length; // 상품 슬라이드 갯수
+    var swiperCompareMo = new Swiper(".swiper-container.swiper-compare-devices", {
+      slidesPerView: 'auto',
+      a11y: {
+        enabled: false
+      },
+      pagination: {
+        el: ".swipe-nav.pager-4",
+        type: 'bullets',
+        clickable:true,
+        bulletClass: 'tds-bullet',
+        bulletActiveClass: 'active',
+        renderBullet: function (index, className) {
+          var _selected = (index == 0 ? 'aria-selected="true" ' : 'aria-selected="false"'); //[D] 첫번째 인디케이터만  aria-selected="true"
+          return '<div class="' + className + '" role="presentation"><button id="item-swiper-recomm' + (index + 1) + '" role="tab" aria-controls="item-swiper-recomm-pager' + (index + 1) + '" aria-lable="'+ (index + 1) +' of '+ compareMoCnt + '" '+ _selected +'>"' + (index + 1) + '"</button></div>';
+        },
+      },
+      on: {
+        slideChange : function(){
+          //[D] 2023.01.04 인디케이터 aria-selected="true"
+          $('.pager-4 .tds-bullet').find('button').attr('aria-selected', false);
+          $('.pager-4 .tds-bullet.active').find('button').attr('aria-selected', true);
+          //[D] 2023.01.04 슬라이드 작동 시 베너 li
+          $(".swiper-slide", $(this.el)).attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $(".item.swiper-slide", $(this.el)).eq(this.realIndex).attr({"tabindex":"0", "aria-hidden" : "false"});         
+        },  
+        init : function() {
+          $(".swiper-slide", $(this.el)).attr({"role" : "tabpanel", "tabindex":"-1", "aria-hidden" : "true"});
+          $(".item.swiper-slide.swiper-slide-active", $(this.el)).attr({"tabindex":"0", "aria-hidden" : "false"});
+        }
+      }
+    });
+    
+    // [D] 2023.01.04 추천- 기본('스마트한 라이프를 완성해 보세요.')
+    var smartLifeMoCnt = $("li.item",".swiper-container.swiper-recommended-devices").length; // 상품 슬라이드 갯수
+    var swiperSmartLife = new Swiper(".swiper-container.swiper-recommended-devices", {
+      slidesPerView: 'auto',
+      a11y: {
+        enabled: false
+      },
+      pagination: {
+        el: ".swipe-nav.pager-5",
+        type: 'bullets',
+        clickable: true,
+        bulletClass: 'tds-bullet',
+        bulletActiveClass: 'active',
+        renderBullet: function (index, className) {
+          var _selected = (index == 0 ? 'aria-selected="true" ' : 'aria-selected="false"'); //[D] 첫번째 인디케이터만  aria-selected="true"
+          return '<div class="' + className + '" role="presentation"><button id="item-swiper-recommdev' + (index + 1) + '" role="tab" aria-controls="item-swiper-recommdev-pager' + (index + 1) + '" aria-lable="'+ (index + 1) +' of '+ smartLifeMoCnt + '" '+ _selected +'>"' + (index + 1) + '"</button></div>';
+        },
+      },
+      on: {
+        slideChange : function(){
+          //[D] 인디케이터 aria-selected="true"
+          $('.pager-5 .tds-bullet').find('button').attr('aria-selected', false);
+          $('.pager-5 .tds-bullet.active').find('button').attr('aria-selected', true);
+          //[D] 슬라이드 작동 시 베너 li
+          $(".swiper-slide", $(this.el)).attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $(".item.swiper-slide", $(this.el)).eq(this.realIndex).attr({"tabindex":"0", "aria-hidden" : "false"});         
+        },  
+        init : function() {
+          $(".swiper-slide", $(this.el)).attr({"role" : "tabpanel", "tabindex":"-1", "aria-hidden" : "true"});
+          $(".item.swiper-slide.swiper-slide-active", $(this.el)).attr({"tabindex":"0", "aria-hidden" : "false"});
+        }
+      }
+    });
+    
+    // [D] 2023.01.04 인기 휴대폰 메뉴 리스트(10대, 20대...)
+    var swiperListmenu = new Swiper('.swiper-container.recomm-nav', {
+      slidesPerView: 'auto',
+      a11y: {
+        enabled: false
+      },
+      spaceBetween: 24,
+    });
+    
+    // [D] 2023.01.04 인기 휴대폰 메뉴 클릭시 탭 attr 변경
+    // 2023.11 통합 웹접근성 'aria~' 수정
+    //**.nav-detail-page li.item 
+    $.each($(".nav-detail-page li.item ",".device-type-list"), function(i) { 
+      var _navlistIdx = (i+1);
+      var _tslist = $(this).find('button');
+
+      _tslist.parents('ul').attr('role','tablist')
+      _tslist.attr({"id":"tab-nav-"+_navlistIdx,"aria-controls":"tab_content"+_navlistIdx, "role":"tab"}); //id, aria-controls, role 값 세팅.
+
+      //탭 버튼 class ="current" aria-selected 값
+      if(_tslist.hasClass('current')){
+        _tslist.attr("aria-selected", "true");
+      }else{
+        _tslist.removeClass('current').attr("aria-selected", "false");
+      }
+      //탭 버튼 클릭 시 이벤트 : class ="current"
+      $('.nav-detail-page li.item').find('button').on('click',function(){
+        var _ts = $(this);
+        //연령 버튼 활성화 시 aria-selected "true/false" 값 세팅
+        _tslist.removeClass('current').attr("aria-selected", "false");
+        _ts.addClass('current').attr("aria-selected", "true");
+      });
+    });
+
+    //**device-list ul 
+    $.each($(".device-list > ul ",".device-type-list"), function(i) { 
+      var _listIdx = (i+1);
+      var _tsul = $(this);
+
+      _tsul.attr({"id":"tab_content"+_listIdx,"aria-labelledby":"tab-nav-"+_listIdx, "role":"tabpanel"}); //id, aria-labelledby, role 값 세팅.
+      //첫번째 ul : 고정되어 있는 aria-hidden , tabindex 값 세팅.
+      $(".device-list > ul ",".device-type-list").eq(0).attr({"aria-hidden": "false", "tabindex" : "0"});
+      _tsul.attr({"aria-hidden" : "true", "tabindex":"-1"});
+      
+      //탭 버튼 클릭시 ul : 변하는 aria-hidden , tabindex 값 세팅.
+      // 2023.11 통합 웹접근성 수정
+      $('.nav-detail-page li.item').find('button').on('click',function(){
+        var _tsIdx = ( $(this).parent('li').index() + 1 );
+        var _tsTxtVal = $(this).text();
+
+        $("[aria-labelledby='tab-nav-"+ _tsIdx +"']").attr({"aria-hidden" : "false", "tabindex":"0",});
+        $("[aria-labelledby='tab-nav-"+ _tsIdx +"']").siblings('ul').attr({"aria-hidden" : "true", "tabindex":"-1"});
+
+        $('.device-type-list .device-list').find('h3').html(_tsTxtVal);
+      });
+    });
+    
+    //이주의 특가 휴대폰
+    var swiperSpecialMo = new Swiper('.swiper-container.swiper-special-devices', {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      breakpoints: {        
+        320: {
+          spaceBetween:20,
+        },
+      },
+    });
+  
+    // ****2023_ 유선 모듈 추가****
+    // [D] 유선 Title 클릭 시 바텀시트로 노출
+    $('.tab-value', '.wireline-popular-item-area').off().on('click', function(){
+      //var dimmEl = $("<div class='wire-dimm'></div>"); // 딤 
+     
+  
+      $('.popular-tab-box').addClass('active').css('display','block').attr({'aria-hidden':false, 'tabindex':'0'}).focus();
+      $(this).attr({'aria-expanded': true, 'aria-hidden':true});
+      $(this).parents('body').children('div').not('.bottomSheet').attr({'aria-hidden':true});
+      //$('body').append(dimmEl); // 딤 추가
+      //$('body div').not('#bottomPopularProduct').attr({'aria-hidden':true, 'tabindex':'-1'});
+      $('.wire-dimm').css('display','block');
+      $('.current').removeClass('current');
+      $(this).addClass('current');
+
+      
+      var lpObjTabbable = $('#bottomPopularProduct').find("button, input:not([type='hidden']), select, iframe, textarea, [href], [tabindex]:not([tabindex='-1'])");
+      var lpObjTabbableFirst = lpObjTabbable && lpObjTabbable.first();
+      var lpObjTabbableLast = lpObjTabbable && lpObjTabbable.last();
+      lpObjTabbableLast.on("keydown", function(event) {
+        if (!event.shiftKey && (event.keyCode || event.which) === 9) {
+          event.preventDefault();
+          lpObjTabbableFirst.focus();
+        }
+      });
+
+      //닫기 클릭 닫힘
+      $('.popular-tab-box > .ico-close').on('click',function(){
+        $('body').children('div').not('.bottomSheet').removeAttr('aria-hidden');
+        $(this).parent().removeClass('active').attr({'aria-hidden':true, 'tabindex':'-1'}).css('display','none');
+        $(this).parents('.wireline-popular-item-area').find('.tab-value').removeAttr('aria-hidden').attr({'aria-expanded':false});
+        $( ".wire-dimm" ).css('display','none'); // 딤 처리
+        $('.current').focus();   
+      });
+
+      // 카테고리 선택 시 aria-expanded 값 변경
+      $('.tab-list .tab-item').on('click',function(){
+        $(this).parents('.section-tit').find('#popular-btn').attr({'aria-expanded':false});
+        $('body').children('div').not('.bottomSheet').removeAttr('aria-hidden');
+      });
+
+       // 바텀시트 외 주변 클릭시 바텀시트 닫힘
+      $('.wire-dimm').on('click', function(){
+        if($(this)){
+          $('body').children('div').not('.bottomSheet').removeAttr('aria-hidden');
+          $('.popular-tab-box').removeClass('active').attr({'aria-hidden':true, 'tabindex':'-1'}).blur();
+          $(this).css('display','none');  
+          $('#popular-btn').attr({'aria-expanded':false});
+          $('.current').focus();  
+          lpObjTabbable.blur(); 
+        }
+      });
+    });
+
+    
+    // [D] 유선 Title 인기있는 상품 탭 박스 활성화
+    $('.popular-tab-box .tab-item').on('click', function () {
+
+      $(this).siblings().removeClass('on').removeAttr('aria-selected').find('input').attr('checked', false);
+      $(this).addClass('on').attr('aria-selected', true).find('input').attr('checked', true);
+      
+      // 유선 상품 선택 시 - 바텀시트 닫힘
+      if($(this).attr('aria-selected' , true)){
+        $('.popular-tab-box ').removeClass('active').attr('aria-hidden', true).css('display','none');
+        $( ".wire-dimm" ).css('display','none'); // 딤 처리
+      }
+
+      $('.popular-item-box').hide();
+      $('.current').focus();  
+
+      $(this).addClass('on');
+      var tabID = $(this).attr('data-cont');
+      $('#' + tabID).show();
+
+      //타이틀 선택된 텍스트 변경
+      var changeTxt = $('.popular-tab-box .tab-item.on').text();
+      $('.tab-value').text(changeTxt);
+
+      //tool tip: '!' show + contents show
+      if($('.popular-tab-box .tab-item[data-cont="internet"]').hasClass('on')){
+        
+        $('.mark-info','.wireline-popular-item-area').show();
+        $('.tool-tip.mark-info').off().on('click',function(){
+          var _tsEl = $(this);
+          $('.current').removeClass('current');
+          _tsEl.addClass('on current').attr({'aria-expanded':true});
+          _tsEl.parent('.tool-tip-wrap').find('.txt-box').addClass('show').attr({'aria-hidden':false});
+          
+
+          var lpObjTabbable = $('#discount-tip').find("button, input:not([type='hidden']), select, iframe, textarea, [href], [tabindex]:not([tabindex='-1'])");
+          var lpObjTabbableFirst = lpObjTabbable && lpObjTabbable.first();
+          var lpObjTabbableLast = lpObjTabbable && lpObjTabbable.last();
+          lpObjTabbableLast.on("keydown", function(event) {
+            if (!event.shiftKey && (event.keyCode || event.which) === 9) {
+              event.preventDefault();
+              lpObjTabbableFirst.focus();
+            }
+          });
+
+        });
+
+        $('.txt-box .ico-close').off().on('click',function(){
+          var _tsElClose = $(this);
+          _tsElClose.parent('.txt-box').prev('.tool-tip.mark-info').removeClass('on').attr({'aria-expanded':false});
+          _tsElClose.parent('.txt-box').removeClass('show').attr({'aria-hidden':true});
+          $('.current').focus(); 
+
+        });
+        
+      }else{
+        $('.mark-info').hide();
+      };
+    });
+
+    // 05/04 swiper
+    //internet/iptv swiper
+    var popularItCnt_1 = $("li.item",".swiper-container.swiper-wireline-popular-prd.box-1").length; // 상품 슬라이드 갯수
+    var swiperLpopular = new Swiper('.swiper-container.swiper-wireline-popular-prd.box-1', {
+      a11y: {
+        enabled: false
+      },
+      observer: true,
+      observeParents: true,
+      pagination: {
+        el: ".pager-6",
+        type: 'bullets',
+        clickable:true,
+        bulletClass: 'tds-bullet',
+        bulletActiveClass: 'active',
+        renderBullet: function (index, className) {
+          var _selected = (index == 0 ? 'aria-selected="true" ' : 'aria-selected="false"'); //[D] 첫번째 인디케이터만  aria-selected="true"
+          return '<div class="' + className + '" role="presentation"><button id="item-swiper-recomm' + (index + 1) + '" role="tab" aria-controls="item-swiper-recomm-pager' + (index + 1) + '" aria-lable="'+ (index + 1) +' of '+ popularItCnt_1 + '" '+ _selected +'>"' + (index + 1) + '"</button></div>';
+        }
+      },
+      // <유선 웹접근성 6/30>
+      on: {
+        slideChange : function(){
+          //[D] 인디케이터 aria-selected="true"
+          $('.pager-6 .tds-bullet').find('button').attr('aria-selected', false);
+          $('.pager-6 .tds-bullet.active').find('button').attr('aria-selected', true);
+          //[D] 슬라이드 작동 시 베너 li
+          $(".swiper-slide", $(this.el)).attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $(".item.swiper-slide", $(this.el)).eq(this.realIndex).attr({"tabindex":"0", "aria-hidden" : "false"});         
+        },  
+        init : function() {
+          $(".swiper-slide", $(this.el)).attr({"role" : "tabpanel", "tabindex":"-1", "aria-hidden" : "true"});
+          $(".item.swiper-slide.swiper-slide-active", $(this.el)).attr({"tabindex":"0", "aria-hidden" : "false"});
+        }
+      }
+    });
+    // internet swiper
+    var popularItCnt_2 = $("li.item",".swiper-container.swiper-wireline-popular-prd.box-2").length; // 상품 슬라이드 갯수
+    var swiperLpopular = new Swiper('.swiper-container.swiper-wireline-popular-prd.box-2', {
+      a11y: {
+        enabled: false
+      },
+      observer: true,
+      observeParents: true,
+      pagination: {
+        el: ".pager-7",
+        type: 'bullets',
+        clickable:true,
+        bulletClass: 'tds-bullet',
+        bulletActiveClass: 'active',
+        renderBullet: function (index, className) {
+          var _selected = (index == 0 ? 'aria-selected="true" ' : 'aria-selected="false"'); //[D] 첫번째 인디케이터만  aria-selected="true"
+          return '<div class="' + className + '" role="presentation"><button id="item-swiper-recomm' + (index + 1) + '" role="tab" aria-controls="item-swiper-recomm-pager' + (index + 1) + '" aria-lable="'+ (index + 1) +' of '+ popularItCnt_2 + '" '+ _selected +'>"' + (index + 1) + '"</button></div>';
+        }
+      },
+      // <유선 웹접근성 6/30>
+      on: {
+        slideChange : function(){
+          //[D] 인디케이터 aria-selected="true"
+          $('.pager-7 .tds-bullet').find('button').attr('aria-selected', false);
+          $('.pager-7 .tds-bullet.active').find('button').attr('aria-selected', true);
+          //[D] 슬라이드 작동 시 베너 li
+          $(".swiper-slide", $(this.el)).attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $(".item.swiper-slide", $(this.el)).eq(this.realIndex).attr({"tabindex":"0", "aria-hidden" : "false"});         
+        },  
+        // init : function() {
+        //   $(".swiper-slide", $(this.el)).attr({"role" : "tabpanel", "tabindex":"-1", "aria-hidden" : "true"});
+        //   $(".item.swiper-slide.swiper-slide-active", $(this.el)).attr({"tabindex":"0", "aria-hidden" : "false"});
+        // }
+      }
+    });
+
+    // .btn-flip 클릭 시 .popular-item-list>li 클래스 on 토글 
+    var btnViewFee = $('.wireline-popular-item-area .btn-flip');
+    btnViewFee.on('click', function () {
+      var btnViewFeeParents = $(this).parents('.item');
+      btnViewFeeParents.toggleClass('on');
+
+      if (btnViewFeeParents.hasClass('on')){
+        btnViewFeeParents.find('.front-box').attr({"tabindex":"-1", "aria-hidden" : "true"}).blur();
+        btnViewFeeParents.find('.behind-box').attr({"tabindex":"0", "aria-hidden" : "false"}).focus();
+      } else {
+        btnViewFeeParents.find('.front-box').attr({"tabindex":"0", "aria-hidden" : "false"}).focus();
+        btnViewFeeParents.find('.behind-box').attr({"tabindex":"-1", "aria-hidden" : "true"}).blur();
+      }
+    });
+    
+  </script>
+
+</body>
+
+</html>

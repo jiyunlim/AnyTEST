@@ -1,0 +1,417 @@
+<!--design: 자급제폰 등록 및 개통 
+process : 옵션/혜택
+-->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+  <title>[상품 Mobile] 자급제 / 쓰던폰 | SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../css/seller.css">
+  <script>
+    document.documentElement.dataset.userAgent = navigator.userAgent;
+  </script>
+</head>
+
+<body>
+  <!-- popup pop-seller -->
+  <div class="wrap seller-wrap seller-phone-registration">
+    <div class="sticky-top">
+      <div class="spot-step">
+        <ol class="step-list">
+          <!-- [D] 작성 완료시 end 클래스 추가, 현재페이지는 링크에 aria-current="step" 추가 -->
+          <li class="step-item end"><a href="#none" class="link-block"><span>01</span><span>자급제폰 정보</span></a></li>
+          <li class="step-item"><a href="#none" class="link-block" aria-current="step"><span>02</span><span>옵션/혜택</span></a></li>
+          <li class="step-item"><a href="#none" class="link-block"><span>03</span><span>신청서 작성</span></a></li>
+      </ol>
+      </div>
+    </div>
+    <!-- content -->
+    <main role="main" class="content">
+      <h1 class="g-invisible">자급제폰 정보</h1>
+      <div class="l-grid l-seller">
+        <!-- s: 가입유형 -->
+        <div class="opt-group" id="inputAnchor1">
+          <div class="opt-group-tit-area">
+            <h2 class="opt-group-tit">가입유형</h2>
+          </div>
+          <div class="opt-group-con">
+            <div class="product-option-col join-types">
+              <span class="c-ick-var">
+                <input type="radio" name="_joinType" id="_joinType1" checked="checked">
+                <label for="_joinType1">기기변경</label>
+              </span>
+              <span class="c-ick-var">
+                <!-- [D] 비활성 상태 애트리뷰트 disabled 추가/삭제 -->
+                <input type="radio" name="_joinType" id="_joinType2">
+                <label for="_joinType2">번호이동</label>
+              </span>
+              <span class="c-ick-var">
+                <input type="radio" name="_joinType" id="_joinType3">
+                <label for="_joinType3">신규가입</label>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- //e: 가입유형 -->
+
+        <!-- s: 요금제 선택 -->
+        <div class="opt-group" id="inputAnchor2">
+          <div class="opt-group-tit-area">
+            <h2 class="opt-group-tit">요금제 선택</h2>
+            <button type="button" class="notice popup-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="pop-benefit-detail">혜택 자세히보기</button>
+          </div>
+          <div class="opt-group-con type-plan">
+            <!-- open -->
+            <div class="seller-plan-item ">
+              <button type="button" class="inner" aria-expanded="false" aria-controls="plan_detail_1">
+                <div class="fee-name">
+                  <span>T 플랜 에센스+다이렉트 플랜</span>
+                  <span class="status-box use-color">사용중</span>
+                </div>
+                <div class="fee-info">
+                  <div class="status-size">데이터 100GB</div>
+                  <div class="status-fee">
+                    <span>999,999</span>
+                    <span class="status-unit">원/월</span>
+                  </div>
+                </div>
+                <div class="fee-guide">데이터 모두 소진시 5Mps 속도로 무제한 제공</div>
+              </button>
+              <div class="area-toggle-cont" id="plan_detail_1">
+                <h3 class="g-invisible">혜택 자세히보기</h3>
+                <!-- [D] 모회선 인증이 필요한 요금제를 선택 시 노출 -->
+                <div class="auth-group">
+                  <h3 class="auth-title">다이렉트 플랜 가입 가능 여부 확인</h3>
+                  <div class="auth-content">
+                    <!-- [D] 인증 전 -->
+                    <!--영역삭제 <span class="txt-info">선택하신 요금제는 함께쓰기 스마트폰 회선 인증이 필요합니다.</span> -->
+                    <div class="form-group">
+                      <span class="c-input">
+                        <!-- [D] 검색어 입력시 btn-delete 노출 / 비 활성화시 disabled 속성으로 제어 -->
+                        <input type="tel" placeholder="'-'없이 숫자만 입력해주세요" title="휴대폰 번호 입력" maxlength="11" class="input">
+                        <button type="button" class="btn-delete"><span class="ico-delete">입력 내용 삭제</span></button>
+                      </span>
+                      <!--[D] input 비활성화시 disabled 속성으로 제어 -->
+                      <button type="button" class="btn-extra">인증</button>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- [D] 인증 완료 -->
+                <div class="auth-group">
+                  <h3 class="auth-title">다이렉트 플랜 가입 가능 여부 확인</h3>
+                  <div class="auth-content">
+                    <p class="auth-status">
+                      <span>010-0000-0000</span>
+                      <em class="txt-auth-status">인증완료</em>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn-plan-list"><span>다른 요금제 더보기</span></button>
+          </div>
+        </div>
+        <!-- //e: 요금제 선택 -->
+
+        <!--S: ---- 노출 영역 -->
+        <!-- [D] 요금 약정 -->
+        <div class="opt-group" id="inputAnchor3">
+          <div class="opt-group-con  type-discount">
+            <div class="product-option-row discount-types">
+              <span class="c-ick-var">
+                <input type="radio" name="_discountType2" id="_discountType1" checked="checked">
+                <label for="_discountType1">
+                  <div class="row">
+                    <span class="txt">12개월 요금 약정</span> <span class="desc">총 -2,000원</span>
+                  </div>
+                </label>
+              </span>
+              <span class="c-ick-var">
+                <input type="radio" name="_discountType2" id="_discountType2">
+                <label for="_discountType2">
+                  <div class="row">
+                    <span class="txt">24개월 휴대폰 할인</span> <span class="desc">총 - 3,000원</span>
+                  </div>
+                </label>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- [D] 할인 방법 -->
+        <div class="opt-group" id="inputAnchor4">
+          <div class="opt-group-tit-area">
+            <h2 class="opt-group-tit">할인 방법</h2>
+          </div>
+          <div class="opt-group-con type-discount">
+            <div class="product-option-row discount-types">
+              <span class="c-ick-var">
+                <input type="radio" name="_discountType" id="_discountType3" checked="checked">
+                <label for="_discountType3">
+                  <div class="row">
+                    <span class="txt">12개월 요금 할인</span> <span class="desc">총 - 123,000원</span>
+                  </div>
+                  <div class="row">
+                    <span class="txt">통신요금의 25%(선택약정)</span> <span class="desc">월 - 10,000원</span>
+                  </div>
+                </label>
+              </span>
+              <span class="c-ick-var">
+                <input type="radio" name="_discountType" id="_discountType4">
+                <label for="_discountType4">
+                  <div class="row">
+                    <span class="txt">24개월 요금 할인</span> <span class="desc">총 - 123,000원</span>
+                  </div>
+                  <div class="row">
+                    <span class="txt">통신요금의 25%(선택약정)</span> <span class="desc">월 - 10,000원</span>
+                  </div>
+                </label>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- //e: case end 할인 방법 -->
+
+        <!-- [D] 할인 방법 안내 -->
+        <div class="opt-group">
+          <div class="opt-group-tit-area">
+            <h2 class="opt-group-tit">할인 방법</h2>
+          </div>
+          <div class="opt-group-con">
+            <p class="txt-info"><strong class="text-secondary">다이렉트5G 67 </strong>요금제는 휴대폰/요금 할인을 추가할 수 없습니다.</p>
+          </div>
+        </div>
+
+        <!-- s: 온가족 할인 -->
+        <div class="opt-group" id="inputAnchor4">
+          <div class="opt-group-tit-area">
+            <h2 class="opt-group-tit">온가족 할인</h2>
+          </div>
+          <div class="opt-group-con type-family">
+            <div class="product-option-col">
+              <span class="c-ick-var">
+                <input type="radio" name="f" id="f1" checked="checked">
+                <label for="f1"><em>적용</em>-30,000<span class="unit">원/월</span></label>
+              </span>
+              <!-- [D] 비활성 상태 애트리뷰트 disabled 추가/삭제 -->
+              <span class="c-ick-var">
+                <input type="radio" name="f" id="f2">
+                <label for="f2">미적용</label>
+              </span>
+            </div>
+          </div>
+        </div>
+          <!-- //e: 온가족 할인 -->
+
+        <!-- s: 복지 할인 -->
+        <div class="opt-group" id="inputAnchor5">
+          <div class="opt-group-tit-area">
+            <h2 class="opt-group-tit">복지 할인</h2>
+          </div>
+          <div class="opt-group-con type-welfare">
+            <div class="product-option-col">
+              <span class="c-ick-var">
+                <input type="radio" name="w" id="w1" checked="checked">
+                <label for="w1"><em>적용</em>-30,000<span class="unit">원/월</span></label>
+              </span>
+              <!-- [D] 비활성 상태 애트리뷰트 disabled 추가/삭제 -->
+              <span class="c-ick-var">
+                <input type="radio" name="w" id="w2">
+                <label for="w2">미적용</label>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- //e: 복지 할인 -->
+
+        <!-- s: 유의사항 -->
+        <button type="button" class="seller-notice-link popup-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="pop-checkpoint">유의사항 확인하기</button>
+        <!-- //e: 유의사항 -->
+      </div>
+    </main>
+    <!-- //content -->
+    <!-- [D] sticky-bar 숨김시 .active 추가 -->
+    <div class="sticky-bar">
+      <div class="layer-pay">
+        <h2 class="g-invisible">출고가 가격정보</h2>
+        <div class="l-grid">
+          <!-- [D] : layer-body 영역 노출시 class .show 추가 -->
+          <!-- [D] : layer-body 안 price-area 노출시 class .on 추가 -->
+          <div class="layer-body">
+            <button type="button" class="btn-toggle"><span class="g-invisible">상세보기</span></button>
+            <div class="price-area">
+              <div class="stit">
+                <span class="text">
+                  <span class="sunit">휴대폰 월 할부금(24개월)</span>
+                </span>
+              </div>
+              <div class="price">
+                <span class="num">59,000</span> <span class="unit">원</span>
+              </div>
+            </div>
+            <div class="price-area">
+              <div class="stit">
+                <span class="text">
+                  <span class="sunit">월 통신요금</span>
+                </span>
+              </div>
+              <div class="price">
+                <span class="num">29,000</span> <span class="unit">원</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="layer-foot">
+            <div class="price-area">
+              <div class="stit">
+                <span class="text">
+                  <span class="sunit">월 통신요금</span>
+                </span>
+              </div>
+              <div class="price">
+                <span class="num"><strong>69,000</strong></span>
+                <span class="unit">원</span>
+                <em class="desc">*부가세, 할부 수수료 5.9% 포함</em>
+              </div>
+            </div>
+          </div>
+          <!-- [D] 활성/비활성 여부는 클래스 disabled 추가/삭제로 컨트롤 -->
+          <div class="btn-area">
+            <button type="button" class="btn-primary">신청서 작성하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //e: 하단 스티키 바 -->
+  </div>
+  <!-- 
+    [D] 12/09웹접근성 공통부분으로 
+    혜택자세히 보기 팝업, 유의사항 팝업 삭제 함 
+    참고 산출물 : 구매프로세스 2단계에서 확인 (seller_process2.html)
+  -->
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/swiper.min.js"></script>
+  <script src="../js/tdirect-ui.js"></script>
+
+  <script>
+    (function () {
+      // 요금제카드 혜택자세히보기 토글 및 앵커링 애니메이션
+      $('.seller-plan-item .inner').on('click', function () {
+        var $this = $(this);
+        const $parent = $this.parent('.seller-plan-item');
+
+        $parent.siblings('.seller-plan-item').removeClass('open');
+        $parent.toggleClass('open');
+
+        if ($parent.hasClass('open')) {
+          $('.seller-plan-item .inner').attr('aria-expanded', false);
+          $this.attr('aria-expanded', true);
+        } else {
+          $this.attr('aria-expanded', false);
+        }
+
+        if (!$this.next('.area-toggle-cont').length && $this.parents('.wrap').length) {
+          animateToNextAnchor($(hasNextAnchor($this)));
+        }
+      });
+
+      function animateToNextAnchor(targetElem) {
+        var $target = $(targetElem);
+        // var $headerHeight = $('header').height();
+        var $stickyHeight = $('.sticky-top').height();
+        var SPEED = 300;
+        $('html, body').animate({
+          scrollTop: $target.offset().top - $stickyHeight
+        }, SPEED);
+
+      }
+
+      function hasNextAnchor($element) {
+        var currentIDNumber = parseInt($element.parents('.opt-group').attr('id').match(/\d+/g).join());
+        var nextAnchor = '#inputAnchor' + (currentIDNumber + 1);
+
+        if ($(nextAnchor).length) {
+          return nextAnchor;
+        }
+
+        return false;
+      }
+      $('.c-ick-var input').on('change', function () {
+        var hasNext = hasNextAnchor($(this));
+
+        if (hasNext) {
+          animateToNextAnchor($(hasNext));
+        }
+      });
+
+      $('.wrap .seller-plan-item .select').on('change', function () {
+        var $this = $(this);
+        var hasNext = hasNextAnchor($this);
+        var isAllSelectChanged = false;
+
+        $this.parents('.area-toggle-cont').find('.c-select').each(function (i, item) {
+          if (!$(item).children('.select').val()) {
+            isAllSelectChanged = false;
+            return false;
+          }
+          isAllSelectChanged = true;
+        });
+
+        if (isAllSelectChanged && hasNext) {
+          animateToNextAnchor($(hasNext));
+        }
+      });
+    })();
+
+    //input 라디오 버튼 수정 - 221219 
+    //input 라디오 버튼 키보드 제어
+    $('.product-option-row span, .type-family .product-option-col span, .type-welfare .product-option-col span').keydown(function(){
+      var disabledEl = $(this).children('input').attr("disabled");
+      if (!disabledEl && window.event.keyCode==13) {      
+        $(this).parent('div').find('input').attr('checked', false);
+        $(this).find('input').attr('checked', true);
+      } else if (disabledEl && window.event.keyCode==13) {
+        $(this).find('input').attr("checked", false);
+      }
+    });
+
+    //input 라디오 버튼 글릭시 
+    $('.product-option-row span, .type-family .product-option-col span, .type-welfare .product-option-col span').click(function(){
+      var disabledEl = $(this).children('input').attr("disabled");
+      if (!disabledEl){
+        $(this).parent('div').find('input').attr('checked', false);
+        $(this).find('input').attr('checked', true);   
+      }
+    });
+
+    // 가입유형 선택 - 클릭
+    $('.join-types .c-ick-var').on('click', function(){
+      var disabledEl = $(this).children('input').attr("disabled");
+      if (!disabledEl){
+        $('.join-types .c-ick-var input').attr('checked', false);
+        $(this).find('input').attr('checked', true);   
+      }
+    });
+
+    // 가입유형 선택 - 키보드 제어
+    $('.join-types .c-ick-var').on('keydown', function(){   
+      var disabledEl = $(this).children('input').attr("disabled");
+      if (!disabledEl && window.event.keyCode==13) {      
+        $('.join-types .c-ick-var input').attr('checked', false);
+        $(this).find('input').attr('checked', true);
+      } else if (disabledEl && window.event.keyCode==13) {
+        $(this).find('input').attr("checked", false);
+      }
+    }); 
+
+  </script>
+</body>
+
+</html>

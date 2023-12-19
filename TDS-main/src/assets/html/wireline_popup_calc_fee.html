@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+	<title>[팝업] 인터넷/B tv 요금 계산기​ | T 월드 다이렉트</title>
+	<link rel="stylesheet" href="../css/import_style.css" />
+	<link rel="stylesheet" href="../css/ion.rangeSlider.css">
+
+	<script src="../js/jquery-1.12.4.js"></script>
+	<script src="../js/ion.rangeSlider.min.js"></script>
+	<script>
+			document.documentElement.dataset.userAgent = navigator.userAgent;
+	</script>
+</head>
+
+<body>
+	<!-- 유선 popup -->
+	<!-- [D] 공통 팝업 영역
+		팝업 레이어 일 경우 class = " tds-popup-wrap " 추가
+		팝업 새창 일 경우 class = " tds-popup-wrap pop_page" 추가
+	-->
+	<div class="container-wrap tds-popup-wrap wireline-pop-wrap" >
+		<!-- 헤더 영역 -->
+		<div class="tds-header">
+			<div class="top-header">
+				<div class="top-header-left">
+					<h1 class="title">요금 계산기</h1>
+				</div>
+				<div class="top-header-right"></div>
+			</div>
+		</div>
+
+		<!-- 본분 영역 -->
+		<div class="tds-main">
+			<div class="l-grid">
+				<div class="wireline-calc-fee">
+					<div class="seller-tab-wrap" role="tablist">
+						<button type="button" class="tab-item on" id="wireline_tab_menu_1" role="tab" aria-selected="true" aria-controls="wireline_tab_content1"><span>상품 할인/선택</span></button>
+						<button type="button" class="tab-item" id="wireline_tab_menu_2" role="tab" aria-selected="false" aria-controls="wireline_tab_content2"><span>상품 선택 가이드</span></button>
+					</div>
+					<h2 class="g-invisible">상품 할인/선택</h2>
+					<div class="seller-cont-wrap">
+						<!-- 상품 할인/선택-->
+						<div class="seller-cont-area" role="tabpanel" aria-labelledby="wireline_tab_menu_1" id="wireline_tab_content1">
+							<div class="prod-option-wrap simulation-box">
+								<div class="item-box">
+									<div class="item">
+										<strong class="tit">원하시는 인터넷 속도를 선택해 주세요.</strong>
+										<div class="accordion-box">
+											<div class="accordion-trigger">
+												<div class="tit-box">
+													<strong>1<span>GB</span></strong>
+													<em>기가 인터넷 와이파이</em>
+												</div>
+
+												<div class="option-types wifi">
+													<!-- [D] 선택된 상태 클래스 checked 적용 / 비활성 상태 클래스 disabled 적용 -->
+													<span class="c-ick">
+														<!-- [D] label for값과 연결 input id 값 동일하게 적용 -->
+														<input type="checkbox" name="wifi" id="_wifi" class="input" required>
+														<label for="_wifi" class="label">Wi-Fi 포함</label>
+													</span>
+												</div>
+											</div>
+											<div class="accordion-cont">
+												<div class="range-bar-box">
+													<ul class="range-bar-values col3 wifi">
+														<li>
+															<label><input type='radio' name='wifiValue' value='100Mbps' />100Mbps</label>
+														</li>
+														<li>
+															<label><input type='radio' name='wifiValue' value='500Mbps' />500Mbps</label>
+														</li>
+														<li>
+															<label><input type='radio' name='wifiValue' value='1Gbps' />1Gbps</label>
+														</li>
+													</ul>
+													<!-- [D] data-values 에 range 항목 입력 / data-from 에 원하는 range 항목 index 입력 -->
+													<input type="text" class="ai-range-bar" name="ai-range" data-values="100Mbps, 500Mbps, 1Gbps" data-from="2" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<strong class="tit">원하시는 B tv 채널 수를 선택해 주세요.</strong>
+										<div class="accordion-box">
+											<div class="accordion-trigger">
+												<div class="tit-box">
+													<strong>253<span>채널</span></strong>
+													<em>B tv All</em>
+												</div>
+											</div>
+											<div class="accordion-cont">
+												<div class="range-bar-box">
+													<ul class="range-bar-values col4 iptv">
+														<li>
+															<label><input type='radio' name='iptvValue' value='noselect'/>선택 안함</label>
+														</li>
+														<li>
+															<label><input type='radio' name='iptvValue' value='181channel'/>181채널</label>
+														</li>
+														<li>
+															<label><input type='radio' name='iptvValue' value='223channel'/>223채널</label>
+														</li>
+														<li>
+															<label><input type='radio' name='iptvValue' value='253channel'/>253채널</label>
+														</li>
+													</ul>
+													<!-- [D] data-values 에 range 항목 입력 / data-from 에 원하는 range 항목 index 입력 -->
+													<input type="text" class="ai-range-bar" name="ai-range" data-values="선택안함, 181채널, 223채널, 253채널" data-from="1" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<strong class="tit">B tv 셋톱박스를 골라주세요.</strong>
+										<!-- [D] 비활성화 시 .accordion-box에 클래스 'disabled' 추가 -->
+										<!-- [D] 셋톱박스 disable은 B tv 선택 안함 시 -->
+										<div class="accordion-box">
+											<div class="accordion-trigger">
+												<div class="tit-box">
+													<strong>AI 스피커형</strong>
+													
+												</div>
+											</div>
+											<div class="accordion-cont">
+												<ul class="option-types setTopBox">
+													<li class="rdo-item" aria-selected="true">
+														<!-- [D] label for값과 연결 input id 값 동일하게 적용 -->
+														<input type="radio" name="_setTopBox" id="_setTopBox1" checked="checked" >
+														<label for="_setTopBox1" class="label">AI 스피커형</label>
+													</li>
+													<li class="rdo-item">
+														<!-- [D] label for값과 연결 input id 값 동일하게 적용 -->
+														<input type="radio" name="_setTopBox" id="_setTopBox2">
+														<label for="_setTopBox2" class="label">B tv air 2</label>
+													</li>
+													<li class="rdo-item">
+														<!-- [D] label for값과 연결 input id 값 동일하게 적용 -->
+														<input type="radio" name="_setTopBox" id="_setTopBox3">
+														<label for="_setTopBox3" class="label">AI 스피커형</label>
+													</li>
+													<li class="rdo-item">
+														<!-- [D] label for값과 연결 input id 값 동일하게 적용 -->
+														<input type="radio" name="_setTopBox" id="_setTopBox4">
+														<label for="_setTopBox4" class="label">Apple TV 4K</label>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="option-group">
+											<div class="option-box option-benefitType">
+												<strong class="option-tit">가입 혜택</strong>
+												<div class="option-cont">
+													<div class="option-types benefit">
+														<span class="input-radio">
+															<input type="radio" name="benefitType" id="benefitType1" data-id="benefit-type-1" aria-label="더슬림 요금제 사용" checked>
+															<label class="benefitType1">매달 요금 할인</label>
+														</span>
+														<span class="input-radio">
+															<input type="radio" name="benefitType" id="benefitType2" data-id="benefit-type-2" aria-label="실물 사은품">
+															<label class="benefitType2">사은품</label>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="option-txt-refer">
+												<p id="benefit-type-1" class="benefit-type-text on">더슬림 요금제로 월 최대 11,000원 할인</p>
+												<p id="benefit-type-2" class="benefit-type-text">사은품은 주문 시 선택 가능하며, <br>사은품 페이지에서도 확인하실 수 있습니다. </p>
+											</div>
+											<div class="option-txt-join">
+												<span>SK텔레콤 휴대폰 결합 할인 적용</span>
+												<!-- <div class="tool-tip mark-info" aria-pressed="false">
+													<div class="txt-box"> 
+														1대 - “휴대폰 요금 3,500원 할인” <br> 
+														2대 - “휴대폰 요금 총 7,000원 할인” <br> 
+														3대 - “휴대폰 요금 총 18,000원 할인” <br> 
+														4대, 5대(광랜) - “휴대폰 요금 총 18,000원 할인” <br> 
+														4대, 5대(기가라이트,기가) - "휴대폰 요금 총 24,000원 할인" 
+														<button type="button" class="tooltip-close">닫기</button>
+													</div>
+												</div> -->
+                        <div class="tool-tip-wrap">
+                          <button class="tool-tip mark-info" aria-describedby="discount-tip" aria-expanded="false"></button> 
+                          <div class="txt-box" role="tooltip" id="discount-tip" aria-hidden="true">
+                            1대 - “휴대폰 요금 3,500원 할인” <br> 
+														2대 - “휴대폰 요금 총 7,000원 할인” <br> 
+														3대 - “휴대폰 요금 총 18,000원 할인” <br> 
+														4대, 5대(광랜) - “휴대폰 요금 총 18,000원 할인” <br> 
+														4대, 5대(기가라이트,기가) - "휴대폰 요금 총 24,000원 할인" 
+                            <button type="button" class="ico-close">툴팁닫기</button>
+                          </div>
+                        </div>  
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- s: 하단 스티키 바 : 기존 마이샵 사용한 구조 유지 -->
+								<!-- [D] sticky-bar 숨김시 .active 추가 -->
+								<div class="sticky-bar">
+									<div class="layer-pay">
+										<h2 class="g-invisible">요금 계산정보</h2>
+										<div class="l-grid">
+											<div class="layer-body on">
+												<button type="button" class="btn-toggle" aria-expanded="true" aria-controls="detail-terms">
+													<span class="g-invisible">상세보기 열기</span>
+												</button>
+												<div id="detail-terms">
+													<div class="body pay-detail">
+														<div class="l-rows">
+															<p class="l-row depth1">
+																<span class="l-row-stit weight">이용요금</span>
+																<span class="l-row-price">월
+																	<span class="num point">64,900</span>
+																	<span class="unit">원</span>
+																</span>
+															</p>
+															<ul class="depth-list">
+																<li class="l-row">
+																	<span class="l-row-stit">기가 인터넷 와이파이</span>
+																	<span class="l-row-price">
+																		<span class="num">39,600</span>
+																		<span class="unit">원</span>
+																	</span>
+																</li>
+																<li class="l-row">
+																	<span class="l-row-stit">B tv All(253채널)</span>
+																	<span class="l-row-price">
+																		<span class="num">18,700</span>
+																		<span class="unit">원</span>
+																	</span>
+																</li>
+																<li class="l-row">
+																	<span class="l-row-stit">AI2(인공지능)</span>
+																	<span class="l-row-price">
+																		<span class="num">6,600</span>
+																		<span class="unit">원</span>
+																	</span>
+																</li>
+															</ul>
+														</div>
+														<div class="l-rows border">
+															<p class="l-row depth1">
+																<span class="l-row-stit weight">할인 금액</span>
+																<span class="l-row-price">월
+																	<span class="num point">- 27,500</span>
+																	<span class="unit">원</span>
+																</span>
+															</p>
+															<ul class="depth-list">
+																<li class="l-row">
+																	<span class="l-row-stit">인터넷+B tv 결합할인
+																		<!-- <button class="tool-tip-2 tool-tip mark-info">
+																			<span class="txt-box">
+																				인터넷과 B tv 함께 가입 시 받을 수 있는 <br> 할인 혜택으로 선택한 상품에 따라 할인이 자동 적용됩니다.
+																			</span>
+																		</button>
+                                    <div class="tool-tip-2 tool-tip mark-info">
+																			<div class="txt-box">
+																				인터넷과 B tv 함께 가입 시 받을 수 있는 <br> 할인 혜택으로 선택한 상품에 따라 할인이 자동 적용됩니다.
+																				<button type="button" class="tooltip-close">닫기</button>
+																			</div>
+																		</div> -->
+                                    <div class="tool-tip-wrap">
+                                      <button class="tool-tip bottom-tool-tip mark-info" aria-describedby="discount-tip" aria-expanded="false"></button> 
+                                      <div class="txt-box" role="tooltip" id="discount-tip" aria-hidden="true">
+                                        인터넷과 B tv 함께 가입 시 받을 수 있는 할인 혜택으로 선택한 상품에 따라 할인이 자동 적용됩니다.
+                                        <button type="button" class="ico-close">툴팁닫기</button>
+                                      </div>
+                                    </div>
+																	</span>
+																	<span class="l-row-price">
+																		<span class="num">- 2,200</span>
+																		<span class="unit">원</span>
+																	</span>
+																</li>
+																<li class="l-row">
+																	<span class="l-row-stit">
+																		휴대폰 결합할인
+																		<!-- <button class="tool-tip-2 tool-tip mark-info">
+																			<span class="txt-box">
+																				SK텔레콤 휴대폰과 인터넷, <br>
+																				B tv 결합 시 받을 수 있는 <br>
+																				할인 혜택입니다.
+																			</span>
+																		</button> -->
+                                    <!-- <div class="tool-tip-2 tool-tip mark-info">
+																			<div class="txt-box">
+																				SK텔레콤 휴대폰과 인터넷, <br>
+																				IPTV 결합 시 받을 수 있는 <br>
+																				할인 혜택입니다.
+																				<button type="button" class="tooltip-close">닫기</button>
+																			</div>
+																		</div> -->
+                                    <div class="tool-tip-wrap">
+                                      <button class="tool-tip bottom-tool-tip mark-info" aria-describedby="discount-tip" aria-expanded="false"></button> 
+                                      <div class="txt-box" role="tooltip" id="discount-tip" aria-hidden="true">
+                                        SK텔레콤 휴대폰과 인터넷, <br>
+																				IPTV 결합 시 받을 수 있는 <br>
+																				할인 혜택입니다.
+                                        <button type="button" class="ico-close">툴팁닫기</button>
+                                      </div>
+                                    </div>
+																	</span>
+																	<span class="l-row-price">
+																		<span class="num">- 14,300</span>
+																		<span class="unit">원</span>
+																	</span>
+																</li>
+																<li class="l-row">
+																	<span class="l-row-stit">요금 할인 혜택(더슬림 요금제)</span>
+																	<span class="l-row-price">
+																		<span class="num">- 11,000</span>
+																		<span class="unit">원</span>
+																	</span>
+																</li>
+																<li class="l-row">
+																	<span class="l-row-stit">온라인 전용 할인</span>
+																	<span class="l-row-price">
+																		<span class="num">- 2,200</span>
+																		<span class="unit">원</span>
+																	</span>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="layer-foot">
+												<!--예상 납부 요금 -->
+												<div class="price-area">
+													<div class="stit">
+														<span class="text">
+															<span class="sunit">예상 월 납부 요금</span>
+															<em class="desc">(부가세 포함)</em>
+														</span>
+													</div>
+													<div class="price">월<span class="num"><strong>29,700</strong></span>원
+														<em class="desc">3년 약정 기준, 출동비 별도</em>
+													</div>
+												</div>
+											</div>
+											<div class="btn-area">
+												<!-- [D] 활성/비활성 여부는 클래스 disabled 추가/삭제로 컨트롤 -->
+												<button type="button" class="btn-light">장바구니</button>
+												<button type="button" class="btn-primary">바로 가입</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //e: 하단 스티키 바 -->
+							</div>
+						</div>
+						<!-- 상품 선택 가이드-->
+						<div class="seller-cont-area" role="tabpanel" aria-labelledby="wireline_tab_menu_2" id="wireline_tab_content2">
+							<!-- 인터넷 속도 비교하기 -->
+							<!-- [D] 내용 펼쳐짐 기본값 'active '-->
+							<div class="wireline-prd-guide active">
+								<button type="button" class="title" aria-expanded="true" aria-controls="wireline_list_1">인터넷 속도 비교하기</button>
+								
+								<div id="wireline_list_1" class="wireline-prd-guide-detail">
+									<div class="item-box-wrap internet-speed">
+										<div class="item-box">
+											<div class="info">
+												<h2 class="tit">1<span class="tit-s">Gbps</span></h2>
+												<p class="txt">
+													실시간 데이터, 4K 고화질 <br>스트리밍, 초고속 다운로드
+												</p>
+												<div class="keyword-box">
+													<span class="keyword">#초고화질</span>
+													<span class="keyword">#가장빠른</span>
+												</div>
+											</div>
+										</div>
+										<div class="item-box">
+											<div class="info">
+												<h2 class="tit">500<span class="tit-s">Mbps</span></h2>
+												<p class="txt">
+													끊김 없는 영상 통화, <br>
+													대용량 업로드 및 다운로드
+												</p>
+												<div class="keyword-box">
+													<span class="keyword">#동영상 시청</span>
+													<span class="keyword">#실속형</span>
+												</div>
+											</div>
+										</div>
+										<div class="item-box">
+											<div class="info">
+												<h2 class="tit">100<span class="tit-s">Mbps</span></h2>
+												<p class="txt">
+													간단한 웹서핑 및 사무, <br>
+													저용량 다운로드
+												</p>
+												<div class="keyword-box">
+													<span class="keyword">#1인 가구</span>
+													<span class="keyword">#저렴한</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- B tv 채널 비교하기 -->
+							<div class="wireline-prd-guide">
+								<button type="button" class="title" aria-expanded="false" aria-controls="wireline_list_2">B tv 채널 비교하기</button>
+	
+								<div id="wireline_list_2" class="wireline-prd-guide-detail">
+									<div class="item-box-wrap channel-info">
+										<div class="item-box">
+											<div class="info">
+												<div class="con-lt">
+													<strong class="tit">B tv 이코노미</strong>
+													<span class="text-tag">#실속형</span>
+												</div>
+												<div class="con-rt">
+													<p class="txt"> 기본 채널 및 드라마/예능 채널을 저렴한 요금으로 시청할 수 있는 실속형 상품 </p>
+												</div>
+											</div>
+											<div class="box-img">
+												<img src="../img/wireline/img_pop_channel_01.png" alt="B tv 이코노미 (상세내용 참고)">
+												<!-- [D] 웹접근성 12.06 : 티월드 윈도우 팝업 '예상 요금 보기' step2 화면 소스 참고  -->
+												<div class="blind">
+													<ul class="fe-channelChart1-text">
+														<li>지상파: 90%</li>
+														<li>예능: 80%</li>
+														<li>드라마: 80%</li>
+														<li>시리즈: 50%</li>
+														<li>스포츠: 50%</li>
+														<li>취미: 60%</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="item-box">
+											<div class="info">
+												<div class="con-lt">
+													<strong class="tit">B tv 스탠다드</strong>
+													<!-- <span class="tit-s">B tv 스탠다드</span> -->
+													<span class="text-tag">#가장 인기</span>
+												</div>
+												<div class="con-rt">
+													<p class="txt"> 기본 채널에 일부 애니/키즈/스포츠 채널 등 다양하게 시청할 수 있는 인기 상품 </p>
+												</div>
+											</div>
+											<div class="box-img">
+												<img src="../img/wireline/img_pop_channel_02.png" alt="B tv 스탠다드 (상세내용 참고)">
+												<div class="blind">
+													<ul class="fe-channelChart2-text">
+														<li>지상파: 100%</li>
+														<li>예능: 80%</li>
+														<li>드라마: 70%</li>
+														<li>시리즈: 70%</li>
+														<li>스포츠: 70%</li>
+														<li>취미: 60%</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="item-box">
+											<div class="info">
+												<div class="con-lt">
+													<strong class="tit">B tv All</strong>
+													<!-- <span class="tit-s">B tv All</span> -->
+													<span class="text-tag">#프리미엄</span>
+												</div>
+												<div class="con-rt">
+													<p class="txt"> 채널 고민 없이 B tv의 모든 채널을 한 번에 시청할 수 있는 프리미엄 상품 </p>
+												</div>
+											</div>
+											<div class="box-img">
+												<img src="../img/wireline/img_pop_channel_03.png" alt="B tv All (상세내용 참고)">
+												<div class="blind">
+													<ul class="fe-channelChart3-text">
+														<li>지상파: 100%</li>
+														<li>예능: 100%</li>
+														<li>드라마: 100%</li>
+														<li>시리즈: 100%</li>
+														<li>스포츠: 85%</li>
+														<li>취미: 100%</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 셋톱박스 자세히 보기 -->
+							<div class="wireline-prd-guide">
+								<button type="button" class="title" aria-expanded="false" aria-controls="wireline_list_3">셋톱박스 자세히 보기</button>
+	
+								<div id="wireline_list_3" class="wireline-prd-guide-detail">
+									<div class="item-box-wrap settop-boxes-detail">
+										<h3 class="tit">셋톱박스란?</h3>
+										<p class="txt">B tv에 연결하여 방송을 수신하는 장비로 <br /> 다양한 서비스가 탑재되어 있습니다. </p>
+										<!-- [D] 12.08 웹접근성 구조 변경 -->
+										<div class="tab-list">
+											<select name="_setTopBox_Selc" id="_setTopBox_Selc">
+												<option value="01">Apple TV 4K</option>
+												<option value="02">AI 2</option>
+												<option value="03">Smart3</option>
+												<option value="04">B tv air</option>
+											</select>
+										</div>
+										<!-- Apple TV 4K -->
+										<div id="setTop-list-01" class="tab-cont setTop-cont on">
+											<div class="top-box">
+												<p class="img">
+													<img src="../img/wireline/img_appletv_s.png" alt="" />
+												</p>
+												<div class="right">
+													<h3 class="tit">Apple TV 4K</h3>
+													<p class="txt"> Apple 매니아라면 강력 추천, <br> 콘텐츠를 즐기는 최고의 방법! </p>
+												</div>
+												<div class="price-area">
+													<div class="tl"><span>6,600</span> 월/원</div>
+													<div class="stl">(부가세 포함, 3년 약정 기준)</div>
+												</div>
+											</div>
+											<div class="item-box-wrap">
+												<div class="item-box">
+													<div class="wireline-tab-wrap">
+														<div class="info">
+															<!-- <div class="tag-area"><span>뛰어난 영상미</span><span>Apple 기기 연동</span><span>특별 프로모션</span></div> -->
+															<div class="tl-area">
+																<div class="tl">Apple TV 4K</div>
+																<div class="stl">당신의 TV, Apple을 만나다.</div>
+															</div>
+															<div class="btm-box">
+																<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_appletv_b.png" alt="" />
+															</div>
+															<ul class="price-list">
+																<li>
+																	<strong class="tit">3년 약정(할부)</strong>
+																	<div class="cont"><span class="num">6,600</span>월/원</div>
+																</li>
+																<li>
+																	<strong class="tit">무약정(일시납)</strong>
+																	<div class="cont"><span class="num">237,600</span>월/원</div>
+																</li>
+															</ul>
+															<div class="cont-area">
+																<dl>
+																	<dt>
+																		<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_appletv_conimg01.png" alt="" />
+																	</dt>
+																	<dd>
+																		<div class="tl"> 최적의 <br>
+																			<span>컨텐츠 감상 환경</span>
+																		</div>
+																		<div class="txt">Dolby Vision 방식의 4K HDR로 매끄럽고 선명한 동영상을 즐길 수 있고 Dolby Atmos 시스템으로 몰입감 만점의 사운드를 느낄 수 있어요!</div>
+																	</dd>
+																</dl>
+																<dl>
+																	<dt>
+																		<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_appletv_conimg02.png" alt="" />
+																	</dt>
+																	<dd>
+																		<div class="tl"> Apple이 만든 <br>
+																			<span>탁월한 셋톱박스</span>
+																		</div>
+																		<div class="txt">원하는 OTT 서비스를 한곳에서 볼 수 있는 콘텐츠 통합 검색 기능을 제공하며 A12 Bionic 칩을 통해 오디오, 동영상, 그래픽 성능을 향상시켜 게임 및 앱 경험을 더욱 탁월하게 만들어 줘요.</div>
+																	</dd>
+																</dl>
+																<dl>
+																	<dt>
+																		<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_appletv_conimg03.png" alt="" />
+																	</dt>
+																	<dd>
+																		<div class="tl"> Apple 디바이스 <br>
+																			<span>연동 최적화</span>
+																		</div>
+																		<div class="txt">iPhone과 연계하여 TV 화질 최적화 및 TV 컨트롤 기능을 제공할 뿐만 아니라 Air play를 이용하여 다양한 Apple 디바이스 및 서비스를 TV에서 공유할 수 있어요.</div>
+																	</dd>
+																</dl>
+																<dl>
+																	<dt>
+																		<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_appletv_conimg04.png" alt="" />
+																	</dt>
+																	<dd>
+																		<div class="tl"> B tv 만의 <br>
+																			<span>특별 프로모션</span>
+																		</div>
+																		<div class="txt">지금 Apple TV 신규 구입시 Apple의 오리지널 월정액 Apple TV+ 6개월 무료 혜택을 제공해드려요.</div>
+																	</dd>
+																</dl>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- AI 2 -->
+										<div id="setTop-list-02" class="tab-cont setTop-cont">
+											<div class="top-box">
+												<p class="img">
+													<img src="../img/wireline/img_ai2_s.png" alt="" />
+												</p>
+												<div class="right">
+													<h3 class="tit">AI 2</h3>
+													<p class="txt"> 감각적인 AI 스피커형 디자인, <br> 더 정확해진 음성 인식 기능! </p>
+												</div>
+												<div class="price-area">
+													<div class="tl"><span>6,600</span>월/원 </div>
+													<div class="stl">(부가세 포함, 3년 약정 기준)</div>
+												</div>
+											</div>
+											<div class="item-box-wrap">
+												<div class="item-box">
+													<div class="wireline-tab-wrap">
+														<div class="info">
+															<div class="tl-area">
+																<div class="tl">AI 2</div>
+																<div class="stl">디자인은 예뻐지고, 내 말은 더 잘 알아듣는!</div>
+															</div>
+															<div class="btm-box">
+																<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_ai2_b.png" alt="" />
+															</div>
+															<ul class="price-list">
+																<li>
+																	<strong class="tit">3년 약정</strong>
+																	<div class="cont"><span class="num">6,600</span>월/원</div>
+																</li>
+																<li>
+																	<strong class="tit">2년 약정</strong>
+																	<div class="cont"><span class="num">7,700</span>월/원</div>
+																</li>
+																<li>
+																	<strong class="tit">1년 약정</strong>
+																	<div class="cont"><span class="num">9,900</span>월/원</div>
+																</li>
+																<li>
+																	<strong class="tit">무약정</strong>
+																	<div class="cont"><span class="num">12,100</span>월/원</div>
+																</li>
+															</ul>
+															<div class="cont-area">
+																<dl>
+																	<dt>
+																		<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_ai2_conimg01.png" alt="" />
+																	</dt>
+																	<dd>
+																		<div class="tl"> 더 정확해진<br>
+															<span>음성인식 기능</span>
+														</div>
+														<div class="txt">소리가 나는 위치를 정교하게 파악하는 빔 포밍(Beam Forming)기술로 똑똑해진 음성인식 서비스를 이용해 보세요.</div>
+													</dd>
+												</dl>
+												<dl>
+													<dt>
+														<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_ai2_conimg02.png" alt="" />
+													</dt>
+													<dd>
+														<div class="tl"> 감각적인 <br>
+															<span>디자인</span>
+														</div>
+														<div class="txt">어떤 인테리어에도 잘 어울리도록 디자인되었으며, 앞면 불빛이 내 목소리에 따라 반응해 얼굴을 마주하고 대화하는 느낌을 받을 수 있어요.</div>
+													</dd>
+												</dl>
+												<dl>
+													<dt>
+														<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_ai2_conimg03.png" alt="" />
+													</dt>
+													<dd>
+														<div class="tl"> 한층 더 <br>
+															<span>깊이 있는 저음</span>
+														</div>
+														<div class="txt">아스델앤컨(Astell&Kern)의 사운드 전문가가 제작하여 깊이 있는 저음을 만들었기 때문에 더욱 중후한 사운드를 즐길 수 있어요.</div>
+													</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+										</div>
+										<!-- Smart 3 -->
+										<div id="setTop-list-03" class="tab-cont setTop-cont">
+											<div class="top-box">
+												<p class="img">
+													<img src="../img/wireline/img_smart3_s.png" alt="" />
+												</p>
+												<div class="right">
+													<h3 class="tit">Smart 3</h3>
+													<p class="txt"> 작은 크기로 콤팩트하게! <br> NUGU, 유튜브도 문제없이 </p>
+												</div>
+												<div class="price-area">
+													<div class="tl"><span>4,400</span>월/원 </div>
+													<div class="stl">(부가세 포함, 3년 약정 기준)</div>
+												</div>
+											</div>
+											<div class="item-box-wrap">
+												<div class="item-box">
+													<div class="wireline-tab-wrap">
+														<div class="info">
+															<!-- <div class="tag-area"><span>구글 서비스</span><span>NUGU</span><span>경제적</span></div> -->
+															<div class="tl-area">
+																<div class="tl">Smart 3</div>
+																<div class="stl">구글 서비스부터 스마트한 인공지능 생활까지.</div>
+															</div>
+															<div class="btm-box">
+																<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_smart3_b.png" alt="" />
+															</div>
+															<ul class="price-list">
+																<li>
+																	<strong class="tit">3년 약정</strong>
+																	<div class="cont"><span class="num">4,400</span>월/원 </div>
+																</li>
+																<li>
+																	<strong class="tit">2년 약정</strong>
+																	<div class="cont"><span class="num">5,500</span>월/원</div>
+																</li>
+																<li>
+																	<strong class="tit">1년 약정</strong>
+																	<div class="cont"><span class="num">7,700</span>월/원</div>
+																</li>
+																<li>
+																	<strong class="tit">무약정</strong>
+																	<div class="cont"><span class="num">9,900</span>월/원</div>
+																</li>
+															</ul>
+															<div class="cont-area">
+																<dl>
+																	<dt>
+																		<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_smart3_conimg01.png" alt="" />
+																	</dt>
+																	<dd>
+																		<div class="tl"> B tv로 즐기는 <br>
+																			<span>구글의 다양한 서비스</span>
+																		</div>
+																		<div class="txt">유튜브, 유튜브 키즈 등 구글 TV앱을 마음껏 이용할 수 있고, 구글 어시스턴트도 리모컨 버튼으로 손쉽게 즐길 수 있어요.</div>
+																	</dd>
+																</dl>
+																<dl>
+																	<dt>
+																		<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_smart3_conimg02.png" alt="" />
+																	</dt>
+																	<dd>
+																		<div class="tl"> 리모컨 버튼 하나로 다 되는 <br>
+																			<span>인공지능 NUGU 서비스</span>
+																		</div>
+																		<div class="txt">콘텐츠를 음성으로 검색하는 것은 물론, 날씨, 일정관리, 음악감상, 쇼핑 등 스마트한 인공지능 생활을 누려보세요.</div>
+																	</dd>
+																</dl>
+																<dl>
+																	<dt>
+																		<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_smart3_conimg03.png" alt="" />
+																	</dt>
+																	<dd>
+																		<div class="tl"> 어디에나 잘 어울리는 <br>
+																			<span>작고 가벼운 셋톱박스</span>
+																		</div>
+																		<div class="txt">크기도 작고 발열도 적으며, 전력 사용량은 절반 수준이기 때문에 전기 요금까지 절약할 수 있어요.</div>
+																	</dd>
+																</dl>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- B tv Air -->
+										<div id="setTop-list-04" class="tab-cont setTop-cont">
+											<div class="top-box">
+												<p class="img">
+													<img src="../img/wireline/img_btvair_s.png" alt="" />
+												</p>
+												<div class="right">
+													<h3 class="tit">B tv Air</h3>
+													<p class="txt"> 태블릿으로 B tv 서비스를 <br> 집안 어디서나 이용! </p>
+												</div>
+												<div class="price-area">
+													<div class="tl"><span>8,800</span>월/원</div>
+													<div class="stl">(부가세 포함, 3년 약정 기준)</div>
+												</div>
+											</div>
+											<div class="item-box-wrap">
+												<div class="item-box">
+													<div class="wireline-tab-wrap">
+														<div class="info">
+															<!-- <div class="tag-area"><span>내 손안의 TV</span><span>편리성</span><span>다양한 시청 가능</span></div> -->
+															<div class="tl-area">
+																<div class="tl">B tv Air</div>
+																<div class="stl">태블릿 하나로 B tv를 집 어디서든지 즐기다.</div>
+															</div>
+															<div class="btm-box">
+																<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_btvair_b.png" alt="" />
+															</div>
+															<ul class="price-list">
+																<li>
+																	<strong class="tit">3년 약정(할부)</strong>
+																	<div class="cont"><span class="num">8,800</span>월/원</div>
+																</li>
+																<li>
+																	<strong class="tit">무약정(일시납)</strong>
+																	<div class="cont"><span class="num">316,800</span>월/원 </div>
+																</li>
+															</ul>
+															<div class="cont-area">
+																<dl>
+																	<dt>
+																		<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_btvair_conimg01.png" alt="" />
+																	</dt>
+																	<dd>
+																		<div class="tl"> 원하는 콘텐츠를 맘껏 즐기는 <br>
+																			<span>나만의 프라이빗 TV</span>
+																		</div>
+																		<div class="txt">B tv Air만 있으면 내 손안에 나만의 TV가 생겨요. 10.3인치 고화질 태블릿에 듀얼스피커 형태의 스피커 독(Speaker Dock)을 통해 더욱 풍성한 음향을 느껴보세요.</div>
+																	</dd>
+																</dl>
+																<dl>
+																	<dt>
+																		<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_btvair_conimg02.png" alt="" />
+																	</dt>
+																	<dd>
+																		<div class="tl"> 집 어디서나 자유롭게 <br> 시청 가능한 <span>편리함</span>
+																		</div>
+																		<div class="txt">주방, 침실, 집안 어디에서나 Giga Wifi 연결을 통해 B tv를 이용할 수 있어요. 가벼운 무게와 거치대로 활용 가능한 스피커 독으로 휴대성과 편안함까지 갖췄어요.</div>
+																	</dd>
+																</dl>
+																<dl>
+																	<dt>
+																		<img src="https://cdnm.shop.tworld.co.kr/public/img/wireline_develop/img_btvair_conimg03.png" alt="" />
+																	</dt>
+																	<dd>
+																		<div class="tl"> B tv와 태블릿PC를 <br>
+																			<span>하나로 2in1</span>
+																		</div>
+																		<div class="txt">실시간 채널과 VOD시청은 물론 영화(오션), 키즈(ZEM키즈) 등 다양한 프리미엄 콘텐츠를 고화질로 감상할 수 있고 온라인 수업, OTT시청, 게임, 웹서핑 등 멀티미디어 기능도 이용할 수 있어요.</div>
+																	</dd>
+																</dl>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- close btn -->
+		<button type="button" class="btn-close"><span class="ico-close">팝업 닫기</span></button>
+	</div>
+
+	<script>
+		// 탭 활성화 
+		$('[ role="tablist"] > button','.wireline-calc-fee').on('click',function(){
+			var i = $(this).index();
+			$(this).addClass('on').attr("aria-selected", true );
+			$(this).siblings().removeClass('on').attr("aria-selected", false );
+
+			$('[role="tabpanel"] ','.wireline-calc-fee').eq(i).css({'display':'block'});
+			$('[role="tabpanel"] ','.wireline-calc-fee').eq(i).siblings().css({'display':'none'});
+
+		});
+		
+		// 상품 선택 가이드 : 아코디언 활성화 + 웹접근성 상태값 변경
+		$(".wireline-prd-guide > .title " ,".wireline-calc-fee ").on("click", function(){
+			$(this).parent().toggleClass('active');
+
+			if($(this).parent().hasClass("active")){
+				$(this).attr("aria-expanded", true );
+			}else{
+				$(this).attr("aria-expanded", false );
+			}
+		});
+
+		// 웹접근성 tab title 클릭시 hidden 제목 유동적으로 제공
+		$('.seller-tab-wrap > .tab-item').on('click', function(){
+			var txtItem =  $(this).find('span').text();
+
+			if($(this).hasClass('on')){
+				$(this).parents().siblings('h2').html( txtItem);
+			}
+		});
+
+		// ai-range-bar 세팅
+    $(".ai-range-bar").ionRangeSlider({
+      type: "single",
+      grid: true
+    });
+
+    $('.range-bar-values li').on('click', function () {
+      var targetIdx = $(this).index();
+      var aiRangeBar = $(this).parents(".range-bar-box").find(".ai-range-bar");
+      var my_range = aiRangeBar.data("ionRangeSlider");
+
+      my_range.update({
+        from: targetIdx
+      });
+    })
+		
+		// 셋톱박스를 골라주세요
+		$('.setTopBox > li').click(function() {
+			if ($(this).children('input').is(':checked')) {
+				$(this).attr("aria-selected", true );
+				$(this).siblings().attr("aria-selected", false );
+			} else {
+        $(this).children('input').attr("checked", true);
+        $(this).siblings().children('input').attr("checked", false);
+      }
+		});
+		//tool-tip 클릭 시 클래스 on 토글
+		// $('.tool-tip').on('click', function () {
+    //   $(this).toggleClass('on');
+		// 	if($(this).hasClass('on')){
+		// 		$(this).attr('aria-pressed',true);
+		// 	}else{
+		// 		$(this).attr('aria-pressed',false);
+		// 	}
+    // });
+    $('.tool-tip.mark-info').off().on('click',function(){
+      var _tsEl = $(this);
+      $('.current').removeClass('current');
+      _tsEl.addClass('on current').attr({'aria-expanded':true});
+      _tsEl.parent('.tool-tip-wrap').find('.txt-box').addClass('show').attr({'aria-hidden':false});
+      
+
+      var lpObjTabbable = $('#discount-tip').find("button, input:not([type='hidden']), select, iframe, textarea, [href], [tabindex]:not([tabindex='-1'])");
+      var lpObjTabbableFirst = lpObjTabbable && lpObjTabbable.first();
+      var lpObjTabbableLast = lpObjTabbable && lpObjTabbable.last();
+      lpObjTabbableLast.on("keydown", function(event) {
+        if (!event.shiftKey && (event.keyCode || event.which) === 9) {
+          event.preventDefault();
+          lpObjTabbableFirst.focus();
+        }
+      });
+
+    });
+
+    $('.txt-box .ico-close').off().on('click',function(){
+      var _tsElClose = $(this);
+      _tsElClose.parent('.txt-box').prev('.tool-tip.mark-info').removeClass('on').attr({'aria-expanded':false});
+      _tsElClose.parent('.txt-box').removeClass('show').attr({'aria-hidden':true});
+      $('.current').focus(); 
+
+    });
+		
+		// 요금 미리보기 하단 스티키		
+		//요금 자세히 보기 버튼 토글
+    $('.btn-toggle').on('click',function(){
+      $(this).toggleClass('active');
+      const btnParents = $(this).parents(".wireline-pop-wrap");
+
+      if ($('.btn-toggle').hasClass('active')) {
+        btnParents.find('.tds-header, .item-box, .layer-body').addClass("on");
+        $('.layer-body.on').css({'height': 'auto'});
+        //$('.wireline-calc-fee .layer-pay .body').css({'height': 'auto'});
+        $('.wireline-pop-wrap .tds-main').css({'overflow': 'hidden'});
+        $(this).children('.g-invisible').text('상세보기 닫기');
+      }else {
+        $('.layer-body.on').css({'height': '0','overflow' : 'hidden'});
+        btnParents.find('.tds-header, .item-box').removeClass("on");
+        $('.wireline-pop-wrap .tds-main').css({'overflow-y': 'auto','overflow-x': 'hidden'});
+        $(this).children('.g-invisible').text('상세보기 열기');
+      }
+    });
+
+
+		// 가입혜택 input 변경에 따른 텍스트/요금 변경
+    var benefitInput = $('.option-types.benefit input');
+    var benefitInputType1 = $('.option-types.benefit #benefitType1');
+    var benefitInputType2 = $('.option-types.benefit #benefitType2');
+
+    benefitInput.on('click', function () {
+      $('.benefit-type-text').removeClass('on');
+
+      var benefitTypeId = $(this).attr('data-id');
+      $('#' + benefitTypeId).addClass('on');
+    });
+
+    /* 요금 미리보기 - 요금 할인 혜택 (더슬림 요금제 할인) 항목 토글 */
+    benefitInputType1.on('click', function () {
+      $('.benefit-type-price').addClass('on');
+    });
+
+    benefitInputType2.on('click', function () {
+      $('.benefit-type-price').removeClass('on');
+    });
+
+		//셋톱박스 비교하기
+		// 웹접근성 js 변경 12/06
+		$('#_setTopBox_Selc').on('click', function (){
+			$(this).parent('.tab-list').toggleClass('active');
+		});
+
+		$('#_setTopBox_Selc').change(function () {
+
+			dropdown = $('#_setTopBox_Selc option').index( $("#_setTopBox_Selc option:selected") ) + 1; //옵션 인덱스 값
+
+			$('.tab-cont').removeClass('on');
+			$('#' + "setTop-list-0" + dropdown).addClass('on'); // 탭 콘텐츠 id 값과 index값 일치, 클래스 'on'         
+		});
+
+		// 웹접근성 7/20 체크박스 선택
+		$(".option-types.wifi .c-ick").keydown(function() {
+			if (window.event.keyCode==13 && $(this).find('input').is(':checked')) {
+				$(this).find('input').prop("checked", false);
+			} else if (window.event.keyCode==13 && !$(this).find('input').is(':checked')){
+				$(this).find('input').prop("checked", true);
+			}    
+		});
+	</script>
+</body>
+
+</html>

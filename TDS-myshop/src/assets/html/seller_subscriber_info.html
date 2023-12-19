@@ -1,0 +1,106 @@
+<!-- 
+  가입자 정보 화면
+ -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+  <title>[상품 Mobile] detail | SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../css/seller.css">
+  <script>
+    document.documentElement.dataset.userAgent = navigator.userAgent;
+  </script>
+</head>
+
+<body>
+  <!-- popup -->
+  <div class="popup pop-seller seller_subscriber_info">
+    <div class="popup-body">
+      <div class="popup-header">
+        <h1 class="popup-title">가입자 정보</h1>
+      </div>
+
+      <main role="main" class="popup-content">
+
+        <p class="subscrib-txt-msg">신청서로 이동하기 전 가입자 정보를 확인해 주세요.</p>
+        <!-- [D] Case: 비회원 -->
+        <div class="opt-group">
+          <div class="opt-group-tit-area">
+            <div class="opt-group-tit"><label for="name">가입자명</label></div>
+          </div>
+          <div class="opt-group-con">
+            <div class="form-group">
+              <span class="c-input">
+                <input type="text" id="name" placeholder="가입하실 분의 이름을 입력하세요" title="가입이름 입력" class="input">
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="opt-group">
+          <div class="opt-group-tit-area">
+            <div class="opt-group-tit"><label for="phoneNum">휴대폰번호</label></div>
+          </div>
+          <div class="opt-group-con">
+            <div class="form-group">
+              <span class="c-input">
+                <input type="text" id="phoneNum" placeholder="‘-’ 없이 숫자만 입력해 주세요" title="휴대폰번호 입력" maxlength="11"
+                  class="input" numberOnly>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- [D] Case: 다이렉트 플랜 case (비회원 or 회원&다른번호 입력)-->
+        <div class="opt-group">
+          <div class="opt-group-tit-area">
+            <div class="opt-group-tit"><label for="name">가입자명</label> </div>
+          </div>
+          <div class="opt-group-con">
+            <div class="form-group">
+              <span class="c-input">
+                <input type="text" id="name" placeholder="가입하실 분의 이름을 입력하세요" title="가입이름 입력" class="input">
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="opt-group">
+          <div class="opt-group-tit-area">
+            <div class="opt-group-tit">휴대폰번호</div>
+          </div>
+          <div class="opt-group-con">
+            <div class="form-group">
+              <span class="c-input">
+                010-8912-1706
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </main>
+      <!-- s: 하단 버튼 바 -->
+      <div class="popup-footer">
+        <!-- [D] 활성/비활성 여부는 클래스 disabled 추가/삭제로 컨트롤 -->
+        <div class="btn-area">
+          <button type="button" class="btn-middle-light">취소</button>
+          <button type="button" class="btn-primary">확인</button>
+        </div>
+      </div>
+      <!-- //e: 하단 버튼 바 -->
+
+      <!-- 닫기 버튼 -->
+      <button type="button" class="btn-close" onclick="UI.modalClose(this);return false;">
+					<span class="ico-close">팝업 닫기</span>
+			</button>
+    </div>
+
+  </div>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/swiper.min.js"></script>
+  <script src="../js/tdirect-ui.js"></script>
+</body>
+
+</html>

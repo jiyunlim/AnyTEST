@@ -1,0 +1,816 @@
+<!-- 유선 리스트 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>My Shop &lt; Wireline List</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/seller.css">
+
+	<script>
+			document.documentElement.dataset.userAgent = navigator.userAgent;
+	</script>
+</head>
+
+<body>
+  <!-- #skip_navigation -->
+  <div id="skipNav" class="skip_navi">
+    <a href="#contents-area" class="skip-link">본문 바로가기</a>
+  </div>
+  <!-- [D] "바닥 네비게이션" 유/무 Class 
+        'nav-logo-in' : 로그인  로그인 바 없는 상태
+        'nav-logo-out': 비로그인 로그인 바 있는 상태
+        '  ' : 네비게이션 바 자체가 없는 경우  
+    -->
+  <!-- [D] 유선 : wireline-list 추가  -->
+  <div class="wrap-device-list wireline-list nav-logo-out">
+    <!-- 헤더영역 -->
+    <div class="device-list-header">
+      <div class="top-header">
+        <div class="top-header-left">
+          <a href="#" class="ico-goback">
+            <img src="../img/icon-header-back@2x.png" alt="이전 페이지">
+          </a>
+        </div>
+        <div class="top-header-right">
+					<button type="button" class="ico-cart"><img src="../img/icon-header-cart@2x.png" alt="장바구니"></button>
+          <button type="button" class="ico-mypage" title="T 다이렉트샵 모바일웹(새창)"><img src="../img/icon-header-my@2x.png" alt="마이페이지"></button>
+				</div>
+      </div>
+    </div>
+    <!-- 상단네비 -->
+    <div class="top-navi-area-area">
+      <nav class="top-navi-area">
+        <div class="swiper-wrap">
+          <div class="swiper-container-menu">
+            <ul class="swiper-wrapper" role="tablist">
+              <li class="item swiper-slide" role="presentation">
+                <button type="button" class="btn" id="wireline_tab_menu_1" role="tab" aria-selected="true" aria-controls="wireline_tab_content1">인터넷</button>
+              </li>
+              <li class="item swiper-slide" role="presentation">
+                <button type="button" class="btn" id="wireline_tab_menu_2" role="tab" aria-selected="false" aria-controls="wireline_tab_content2"> B tv</button>
+              </li>
+              <li class="item swiper-slide item-active" role="presentation">
+                <button type="button" class="btn current" id="wireline_tab_menu_3" role="tab" aria-selected="false" aria-controls="wireline_tab_content3">결합할인</button>
+              </li>
+              <li class="item swiper-slide" role="presentation">
+                <button type="button" class="btn" id="wireline_tab_menu_4" role="tab" aria-selected="false" aria-controls="wireline_tab_content4">사은품</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- [웹접근성] aria-labelledby , id 값 유동적으로 변경 -->
+    <div class="tab-contents-area" role="tabpanel" aria-labelledby="wireline_tab_menu_3" id="wireline_tab_content3">
+			<h2 id="contents-area" tabindex="-1">
+        <span class="blind">본문시작</span>
+      </h2>
+      <h2 class="g-invisible">결합할인</h2>
+			<div class="combined-prod-cnts">
+				<!-- '요즘' 결합상품 알아보기 -->
+				<div class="combined-prod-cnt01">
+					<div class="combined-prod-tit">
+						<h3>한 명부터 할인받는 <br>‘요즘’ 결합 상품 알아보기 </h3>
+					</div>
+					<div class="combined-prod-type">
+						<h4>인터넷/IPTV 가입과 함께 신청할 수 있는 <br>
+							<b>‘요즘가족결합’</b>과 <b>‘요즘우리집결합’</b> 상품을 <br>소개합니다.
+						</h4>
+						<div class="swiper-container type-wrap type-list">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" aria-labelledby="item-swiper-combined-01-1" id="item-swiper-combined-01-pager-1">
+									<div class="prod-recom-wrap">
+										<div class="inner">
+											<div class="img">
+												<img src="../img/wireline/ico_combined_type_single.png" alt="요즘 싱글 사람 일러스트">
+											</div>
+											<p>혼자여도 결합하고 <br>혜택 받고 싶어요! </p>
+										</div>
+									</div>
+									<div class="type-desc-wrap">
+										<strong class="tit">
+											<img src="../img/wireline/ico_combined_type_01.png" alt="요즘 싱글 텍스트 이미지">
+										</strong>
+										<ul class="type-desc-list">
+											<li>한 명부터 가족결합 OK</li>
+											<li>1회선 결합도 혜택은 크게!</li>
+											<li>나중에 5명까지 가족 추가 가능</li>
+											<li>같이 사는 친구도 동거인으로 결합 가능</li>
+										</ul>
+									</div>
+								</div>
+								<div class="swiper-slide" aria-labelledby="item-swiper-combined-01-2" id="item-swiper-combined-01-pager-2">
+									<div class="prod-recom-wrap">
+										<div class="inner">
+											<div class="img">
+												<img src="../img/wireline/ico_combined_type_independ.png" alt="요즘 독립 사람 일러스트">
+											</div>
+											<p>인터넷도 같이 <br>독립 하고 싶어요! </p>
+										</div>
+									</div>
+									<div class="type-desc-wrap">
+										<strong class="tit">
+											<img src="../img/wireline/ico_combined_type_02.png" alt="요즘 독립 텍스트 이미지">
+										</strong>
+										<ul class="type-desc-list">
+											<li>독립할 때 부모님 집과 동일한 할인 혜택</li>
+											<li>인터넷, IPTV는 2대까지 결합 가능</li>
+										</ul>
+									</div>
+								</div>
+								<div class="swiper-slide" aria-labelledby="item-swiper-combined-01-3" id="item-swiper-combined-01-pager-3">
+									<div class="prod-recom-wrap">
+										<div class="inner">
+											<div class="img">
+												<img src="../img/wireline/ico_combined_type_honeymoon.png" alt="요즘 신혼 사람 일러스트">
+											</div>
+											<p>예비부부도 미리 <br>가족 결합 하고 싶어요! </p>
+										</div>
+									</div>
+									<div class="type-desc-wrap">
+										<strong class="tit">
+											<img src="../img/wireline/ico_combined_type_03.png" alt="요즘 신혼 텍스트 이미지">
+										</strong>
+										<ul class="type-desc-list">
+											<li>아직 혼인신고 전이라도 OK</li>
+											<li> 증빙만 있으면 예비부부도 <br>결합 가능 <span>(주민등록등본상 동거인) </span>
+											</li>
+											<li>신혼집 인터넷까지 요즘 <br>가족결합으로 완벽 준비 </li>
+										</ul>
+									</div>
+								</div>
+								<div class="swiper-slide" aria-labelledby="item-swiper-combined-01-4" id="item-swiper-combined-01-pager-4">
+									<div class="prod-recom-wrap">
+										<div class="inner">
+											<div class="img">
+												<img src="../img/wireline/ico_combined_type_family.png" alt="요즘가족결합 사람 일러스트">
+											</div>
+											<p>가족 모두 SK텔레콤 <br>휴대폰을 써요! </p>
+										</div>
+									</div>
+									<div class="type-desc-wrap">
+										<strong class="tit">
+											<img src="../img/wireline/ico_combined_type_04.png" alt="요즘가족일러스트 텍스트 이미지">
+										</strong>
+										<ul class="type-desc-list">
+											<li>가족 수가 많을 수록 <br>기가 인터넷 가입이 유리! </li>
+											<li> 최대 3만 6천원 할인 받고, <br>1만원으로 기가라이트인터넷 <br>+ IPTV 모두 사용 <span>(기가라이트인터넷, 4인 결합 기준)</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- [D] 2023/08/17웹접근성 인디케이터 추가 -->
+							<div class="swiper-pagination swiper-pagination-bullets" role="tablist"></div>
+						</div>
+					</div>
+				</div>
+				<!-- //'요즘' 결합상품 알아보기 -->
+				<!-- 내게 맞는 조건으로 최대 할인 혜택을 받아보세요. -->
+				<div class="combined-prod-cnt02">
+					<div class="combined-prod-tit">
+						<h3>내게 맞는 조건으로 <br>최대 할인 혜택을 받아보세요. </h3>
+					</div>
+					<div class="compare-list-wrap">
+						<div class="compare-anchor-wrap">
+							<ul class="compare-anchor-list" role="tablist">
+								<li role="presentation" class="active">
+									<a href="#compare-item-case-1" role="tab" aria-selected="true" class="item" id="tab_menu_compare_1" aria-controls="compare-item-case-1">
+										<span>인터넷</span>
+										<span>IPTV</span>
+										<span>휴대폰</span>
+									</a>
+								</li>
+								<li role="presentation">
+									<a href="#compare-item-case-2" role="tab" aria-selected="false" class="item" id="tab_menu_compare_2" aria-controls="compare-item-case-2">
+										<span>인터넷</span>
+										<span>휴대폰</span>
+									</a>
+								</li>
+								<li role="presentation">
+									<a href="#compare-item-case-3" role="tab" aria-selected="false" class="item" id="tab_menu_compare_3" aria-controls="compare-item-case-3">
+										<span>인터넷</span>
+										<span>IPTV</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="compare-item-wrap case-1" id="compare-item-case-1"  aria-labelledby="tab_menu_compare_1" role="tabpanel">
+							<div class="inner">
+								<strong class="tit">요즘가족결합 <span>(인터넷 + IPTV + SK텔레콤 휴대폰 결합할인)</span>
+								</strong>
+								<div class="swiper-container compare-item-list">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide" aria-labelledby="item-swiper-combined-02-1" id="item-swiper-combined-02-pager-1">
+											<div class="item">
+												<div class="compare-info">
+													<div class="info-box">
+														<p class="info-tit">기가라이트인터넷 + B tv 할인</p>
+														<dl>
+															<dt>기가라이트인터넷</dt>
+															<dd>-11,000원</dd>
+														</dl>
+														<dl>
+															<dt>B tv 이코노미/스탠다드/All</dt>
+															<dd>-3,300원</dd>
+														</dl>
+														<dl class="info-total">
+															<dt></dt>
+															<dd>-14,300원</dd>
+														</dl>
+													</div>
+													<div class="info-box">
+														<p class="info-tit">휴대폰 요금 할인</p>
+														<dl>
+															<dt>1대 결합</dt>
+															<dd>-3,500원</dd>
+														</dl>
+														<dl>
+															<dt>2대 결합</dt>
+															<dd>-7,000원</dd>
+														</dl>
+														<dl>
+															<dt>3대 결합</dt>
+															<dd>-18,000원</dd>
+														</dl>
+														<dl>
+															<dt>4~5대 결합</dt>
+															<dd>-24,000원</dd>
+														</dl>
+														<dl class="info-total">
+															<dt>최대</dt>
+															<dd>-38,300원</dd>
+														</dl>
+													</div>
+												</div>
+												<p class="tip-refer">
+													<strong class="tip-tit">기가 + B tv All 혜택</strong>
+													<span>
+														<i class="num">①</i> 매월 VOD 콘텐츠 3,300원 쿠폰 제공 </span>
+													<span>
+														<i class="num">②</i> AI 스피커형 셋톱박스 월 이용료 2,200원 할인 </span>
+												</p>
+											</div>
+										</div>
+										<div class="swiper-slide" aria-labelledby="item-swiper-combined-02-2" id="item-swiper-combined-02-pager-2">
+											<div class="item">
+												<div class="compare-info">
+													<div class="info-box">
+														<p class="info-tit">기가인터넷 + B tv 할인</p>
+														<dl>
+															<dt>기가인터넷</dt>
+															<dd>-13,200원</dd>
+														</dl>
+														<dl>
+															<dt>B tv 이코노미/스탠다드/All</dt>
+															<dd>-3,300원</dd>
+														</dl>
+														<dl class="info-total">
+															<dt></dt>
+															<dd>-16,500원</dd>
+														</dl>
+													</div>
+													<div class="info-box">
+														<p class="info-tit">휴대폰 요금 할인</p>
+														<dl>
+															<dt>1대 결합</dt>
+															<dd>-3,500원</dd>
+														</dl>
+														<dl>
+															<dt>2대 결합</dt>
+															<dd>-7,000원</dd>
+														</dl>
+														<dl>
+															<dt>3대 결합</dt>
+															<dd>-18,000원</dd>
+														</dl>
+														<dl>
+															<dt>4~5대 결합</dt>
+															<dd>-24,000원</dd>
+														</dl>
+														<dl class="info-total">
+															<dt>최대</dt>
+															<dd>-40,500원</dd>
+														</dl>
+													</div>
+												</div>
+												<p class="tip-refer">
+													<strong class="tip-tit">기가 + B tv All 혜택</strong>
+													<span>
+														<i class="num">①</i> 매월 VOD 콘텐츠 3,300원 쿠폰 제공 </span>
+													<span>
+														<i class="num">②</i> AI 스피커형 셋톱박스 월 이용료 2,200원 할인 </span>
+												</p>
+											</div>
+										</div>
+										<div class="swiper-slide" aria-labelledby="item-swiper-combined-02-3" id="item-swiper-combined-02-pager-3">
+											<div class="item">
+												<div class="compare-info">
+													<div class="info-box">
+														<p class="info-tit">광랜인터넷 + B tv 할인</p>
+														<dl>
+															<dt>광랜인터넷</dt>
+															<dd>-4,400원</dd>
+														</dl>
+														<dl>
+															<dt>B tv 이코노미/스탠다드/All</dt>
+															<dd>-3,300원</dd>
+														</dl>
+														<dl class="info-total">
+															<dt></dt>
+															<dd>-7,700원</dd>
+														</dl>
+													</div>
+													<div class="info-box">
+														<p class="info-tit">휴대폰 요금 할인</p>
+														<dl>
+															<dt>1대 결합</dt>
+															<dd>-3,500원</dd>
+														</dl>
+														<dl>
+															<dt>2대 결합</dt>
+															<dd>-7,000원</dd>
+														</dl>
+														<dl>
+															<dt>3~5대 결합</dt>
+															<dd>-18,000원</dd>
+														</dl>
+														<dl class="info-total">
+															<dt>최대</dt>
+															<dd>-25,700원</dd>
+														</dl>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- [D] 2023/08/17웹접근성 인디케이터 추가 -->
+									<div class="swiper-pagination swiper-pagination-bullets" role="tablist"></div>
+									<button type="button" class="btn-chk-fee" aria-haspopup="dialog">예상 요금 확인하기</button>
+								</div>
+							</div>
+						</div>
+						<div class="compare-item-wrap case-2" id="compare-item-case-2"  aria-labelledby="tab_menu_compare_2" role="tabpanel">
+							<div class="inner">
+								<strong class="tit">요즘가족결합 <span>(인터넷 + SK텔레콤 휴대폰 결합할인)</span>
+								</strong>
+								<div class="swiper-container compare-item-list">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide" aria-labelledby="item-swiper-combined-03-1" id="item-swiper-combined-03-pager-1">
+											<div class="item">
+												<div class="compare-info">
+													<div class="info-box">
+														<p class="info-tit">기가라이트인터넷</p>
+														<dl>
+															<dt>기가라이트인터넷</dt>
+															<dd>-11,000원</dd>
+														</dl>
+														<dl class="info-total">
+															<dt></dt>
+															<dd></dd>
+														</dl>
+													</div>
+													<div class="info-box">
+														<p class="info-tit">휴대폰 요금 할인</p>
+														<dl>
+															<dt>1대 결합</dt>
+															<dd>-3,500원</dd>
+														</dl>
+														<dl>
+															<dt>2대 결합</dt>
+															<dd>-7,000원</dd>
+														</dl>
+														<dl>
+															<dt>3대 결합</dt>
+															<dd>-18,000원</dd>
+														</dl>
+														<dl>
+															<dt>4~5대 결합</dt>
+															<dd>-24,000원</dd>
+														</dl>
+														<dl class="info-total">
+															<dt>최대</dt>
+															<dd>-35,000원</dd>
+														</dl>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide" aria-labelledby="item-swiper-combined-03-2" id="item-swiper-combined-03-pager-2">
+											<div class="item">
+												<div class="compare-info">
+													<div class="info-box">
+														<p class="info-tit">기가인터넷</p>
+														<dl>
+															<dt>기가인터넷</dt>
+															<dd>-13,200원</dd>
+														</dl>
+														<dl class="info-total">
+															<dt></dt>
+															<dd></dd>
+														</dl>
+													</div>
+													<div class="info-box">
+														<p class="info-tit">휴대폰 요금 할인</p>
+														<dl>
+															<dt>1대 결합</dt>
+															<dd>-3,500원</dd>
+														</dl>
+														<dl>
+															<dt>2대 결합</dt>
+															<dd>-7,000원</dd>
+														</dl>
+														<dl>
+															<dt>3대 결합</dt>
+															<dd>-18,000원</dd>
+														</dl>
+														<dl>
+															<dt>4~5대 결합</dt>
+															<dd>-24,000원</dd>
+														</dl>
+														<dl class="info-total">
+															<dt>최대</dt>
+															<dd>-37,200원</dd>
+														</dl>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide" aria-labelledby="item-swiper-combined-03-3" id="item-swiper-combined-03-pager-3">
+											<div class="item">
+												<div class="compare-info">
+													<div class="info-box">
+														<p class="info-tit">광랜인터넷</p>
+														<dl>
+															<dt>광랜인터넷</dt>
+															<dd>-4,400원</dd>
+														</dl>
+														<dl class="info-total">
+															<dt></dt>
+															<dd></dd>
+														</dl>
+													</div>
+													<div class="info-box">
+														<p class="info-tit">휴대폰 요금 할인</p>
+														<dl>
+															<dt>1대 결합</dt>
+															<dd>-3,500원</dd>
+														</dl>
+														<dl>
+															<dt>2대 결합</dt>
+															<dd>-7,000원</dd>
+														</dl>
+														<dl>
+															<dt>3~5대 결합</dt>
+															<dd>-18,000원</dd>
+														</dl>
+														<dl class="info-total">
+															<dt>최대</dt>
+															<dd>-22,400원</dd>
+														</dl>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- [D] 2023/08/17웹접근성 인디케이터 추가 -->
+									<div class="swiper-pagination swiper-pagination-bullets" role="tablist"></div>
+									<button type="button" class="btn-chk-fee" aria-haspopup="dialog">예상 요금 확인하기</button>
+								</div>
+							</div>
+						</div>
+						<div class="compare-item-wrap case-3" id="compare-item-case-3"  aria-labelledby="tab_menu_compare_3" role="tabpanel">
+							<div class="inner">
+								<strong class="tit">요즘우리집결합 <span>(인터넷 + IPTV 결합힐인)</span>
+								</strong>
+								<div class="swiper-container compare-item-list">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide" aria-labelledby="item-swiper-combined-04-1" id="item-swiper-combined-04-pager-1">
+											<div class="item">
+												<div class="compare-info">
+													<div class="info-box">
+														<p class="info-tit">기가 계열 인터넷과 <br>B tv 결합할인 </p>
+														<dl>
+															<dt>기가라이트인터넷/ <br>기가인터넷* </dt>
+															<dd>-5,500원</dd>
+														</dl>
+														<dl>
+															<dt>B tv 이코노미/ <br>스탠다드/All </dt>
+															<dd>-2,200원</dd>
+														</dl>
+														<dl class="info-total">
+															<dt></dt>
+															<dd>-7,700원</dd>
+														</dl>
+													</div>
+												</div>
+												<p class="tip-refer">
+													<strong class="tip-tit">기가 + B tv All 혜택</strong>
+													<span>
+														<i class="num">①</i> 매월 VOD 콘텐츠 3,300원 쿠폰 제공 </span>
+													<span>
+														<i class="num">②</i> AI 스피커형 셋톱박스 월 이용료 2,200원 할인 </span>
+												</p>
+											</div>
+										</div>
+										<div class="swiper-slide" aria-labelledby="item-swiper-combined-04-2" id="item-swiper-combined-04-pager-2">
+											<div class="item">
+												<div class="compare-info">
+													<div class="info-box">
+														<p class="info-tit">광랜 계열 인터넷과 <br>B tv 결합할인 </p>
+														<dl class="line-connect ico-line">
+															<dt>광랜인터넷</dt>
+															<dd>-2,200원</dd>
+														</dl>
+														<dl class="line-connect">
+															<dt>광랜인터넷 와이파이, <br>부가서비스 통합상품* </dt>
+															<dd>-1,100원</dd>
+														</dl>
+														<dl>
+															<dt>B tv 이코노미/스탠다드/All</dt>
+															<dd>-2,200원</dd>
+														</dl>
+														<dl class="info-total">
+															<dt>최대</dt>
+															<dd>-4,400원</dd>
+														</dl>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- [D] 2023/08/17웹접근성 인디케이터 추가 -->
+									<div class="swiper-pagination swiper-pagination-bullets" role="tablist"></div>
+									<button type="button" class="btn-chk-fee" aria-haspopup="dialog">예상 요금 확인하기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="noti-wrap">
+						<strong class="noti-tit">꼭 확인하세요.</strong>
+						<div class="noti-item active">
+							<div class="tit">
+								<span >요즘가족결합 (인터넷 + IPTV + SK텔레콤 휴대폰 결합할인)</span>
+								<button type="button" class="link-block"  aria-expanded="true" aria-controls="notice_item_1">상세보기</button>
+							</div>
+							<div class="noti-detail" id="notice_item_1">
+								<ul class="noti-list">
+									<li>할인 금액은 부가세 포함 가격이며, 3년 약정으로 인터넷과 B tv를 신규 가입하면서 SK텔레콤 휴대폰과 결합하면 받을 수 있는 혜택입니다. (B tv 할인은 ‘요즘우리집결합’이 함께 적용된 가격입니다.)</li>
+									<li>휴대폰 결합은 SK텔레콤 휴대폰 1대부터 5대까지 가능하며, 할인 금액은 총 합산 금액입니다. 휴대폰 사용 정지 시 할인에서 제외될 수 있습니다.</li>
+									<li>B tv 가입 고객은 동일 명의의 이동전화 회선으로 ‘모비데이터팩’을 무료로 이용할 수 있습니다. 모비데이터팩은 모바일 B tv 콘텐츠를 이용할 수 있는 전용 데이터 요금제입니다. 이용을 원하시면 T월드 홈페이지/앱에서 가입 또는 114 고객센터에 문의해 주시기 바랍니다.</li>
+									<li>인터넷 할인금액은 단독형, 와이파이 통합형 모두 동일합니다.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="noti-item">
+							<div class="tit">
+								<span>요즘가족결합 (인터넷 + SK텔레콤 휴대폰 결합할인)</span>
+								<button type="button" class="link-block" aria-pressed="false" aria-controls="notice_item_2">상세보기</button>
+							</div>
+							<div class="noti-detail" id="notice_item_2">
+								<ul class="noti-list">
+									<li>인터넷 할인 금액은 부가세 포함 가격이며, 3년 약정으로 신규 가입하면서 SK텔레콤 휴대폰과 결합하면 받을 수 있는 할인 혜택입니다.</li>
+									<li>휴대폰 결합은 SK텔레콤 휴대폰 1대부터 5대까지 가능하며, 할인 금액은 총 합산 금액입니다. 휴대폰 사용 정지 시 할인에서 제외될 수 있습니다.</li>
+									<li>인터넷 할인금액은 단독형, 와이파이 통합형 모두 동일합니다.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="noti-item">
+							<div class="tit">
+								<span>요즘우리집결합(인터넷 + IPTV 결합할인)</span>
+								<button type="button" class="link-block" aria-expanded="false" aria-controls="notice_item_3">상세보기</button>
+							</div>
+							<div class="noti-detail" id="notice_item_2">
+								<ul class="noti-list">
+									<li>SK텔레콤 휴대폰이 없어도 인터넷과 B tv를 3년 약정으로 가입할 때 받을 수 있는 혜택이며 부가세 포함 가격입니다.</li>
+									<li>광랜인터넷 계열의 부가서비스 통합상품에는 광랜인터넷 와이파이, 모두안심 광랜, 원격케어 광랜, 파워백신 광랜 등이 있습니다.</li>
+									<li>기가 계열 인터넷은 단독형, 와이파이 통합형 모두 할인금액이 동일합니다.</li>
+									<li>약정기간 이내에 해지하거나 약정기간을 줄이면 할인반환금이 부과됩니다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //내게 맞는 조건으로 최대 할인 혜택을 받아보세요. -->
+			</div>
+    </div>
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/swiper.min.js"></script>
+  <!-- <script src="../js/tdirect-ui.js"></script> -->
+
+	<script>
+    // 메뉴
+    var swiper_menu = new Swiper('.swiper-container-menu', {
+      slidesPerView: 'auto',
+      spaceBetween: 24,
+      loop: false,
+    });
+    // 상단네비활성화
+    $('.swiper-container-menu ul li button').on('click', function() {
+      var tabId = $(this).attr('id');
+      var tabControl = $(this).attr('aria-controls');
+      $('.tab-contents-area').attr({
+        "aria-labelledby": tabId,
+        "id": tabControl
+      });
+      $('.swiper-container-menu ul li button').removeClass('current').attr("aria-selected", "false");
+      $(this).addClass('current').attr("aria-selected", "true");
+    })
+    // ----유선 콘텐츠 js----
+		// '요즘' 결합상품 알아보기 영역 스와이퍼
+		var swiperCompareListCnt01 = $('.swiper-slide','.type-list.swiper-container').length; // 슬라이드 갯수
+		var swiperCompareList = new Swiper('.type-list.swiper-container', {
+			a11y: {
+        enabled: false
+			},
+			centeredSlides: true,
+			slidesPerView:'auto',
+			loop: true,
+			spaceBetween:35,
+			speed:1000,
+			//<유선 웹접근성 08/17>
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+        clickable: true,
+				renderBullet: function (index, className) {
+          var _selected = (index == 0 ? 'aria-selected="true"' : 'aria-selected="false"'); // 첫번째 인디케이터만  aria-selected="true"
+          return '<div class="' + className + '" role="presentation"><button id="item-swiper-combined-01-' + (index + 1) + '" role="tab" aria-controls="item-swiper-combined-01-pager-' + (index + 1) + '" aria-lable="'+ (index + 1) +' of '+ swiperCompareListCnt01 + '" '+ _selected +'>' + (index + 1) + '</button></div>';
+        },
+			},
+      on: {
+        slideChange : function(){
+					//[D] 인디케이터 aria-selected="true"
+          $('.swiper-container .swiper-pagination-bullet').find('button').attr('aria-selected', false);
+          $('.swiper-container .swiper-pagination-bullet-active').find('button').attr('aria-selected', true);
+          //[D] 슬라이드 작동 시 el 값
+          $(".swiper-slide", $(this.el)).attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").attr({tabindex:"0" , "aria-hidden" : "false"});
+        },
+        init : function() {
+          //[D] 슬라이드 el 값
+          $(".swiper-slide", $(this.el)).attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").attr({tabindex:"0" , "aria-hidden" : "false"});
+        }
+      }
+      // < //유선 웹접근성 >
+		});
+
+		// '내게 맞는 조건으로 최대 할인 혜택을 받아보세요.'영역 스와이퍼 1
+		var swiperCompareListCnt02 = $('.swiper-slide','#compare-item-case-1').length; // 슬라이드 갯수
+		var swiperCompareList = new Swiper('#compare-item-case-1 .compare-item-list.swiper-container', {
+			a11y: {
+        enabled: false
+			},
+			centeredSlides: true,
+			slidesPerView:'auto',
+			loop: true,
+			spaceBetween:35,
+			speed:1000,
+			//<유선 웹접근성 08/17>
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+        clickable: true,
+				renderBullet: function (index, className) {
+          var _selected = (index == 0 ? 'aria-selected="true"' : 'aria-selected="false"'); // 첫번째 인디케이터만  aria-selected="true"
+          return '<div class="' + className + '" role="presentation"><button id="item-swiper-combined-02-' + (index + 1) + '" role="tab" aria-controls="item-swiper-combined-02-pager-' + (index + 1) + '" aria-lable="'+ (index + 1) +' of '+ swiperCompareListCnt02 + '" '+ _selected +'>' + (index + 1) + '</button></div>';
+        },
+			},
+      on: {
+        slideChange : function(){
+					//[D] 인디케이터 aria-selected="true"
+          $('.swiper-container .swiper-pagination-bullet').find('button').attr('aria-selected', false);
+          $('.swiper-container .swiper-pagination-bullet-active').find('button').attr('aria-selected', true);
+          //[D] 슬라이드 작동 시 el 값
+          $(".swiper-slide", $(this.el)).find('div.item').attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('div.item').attr({tabindex:"0" , "aria-hidden" : "false"});
+        },
+        init : function() {
+          //[D] 슬라이드 el 값
+          $(".swiper-slide", $(this.el)).find('div.item').attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('div.item').attr({tabindex:"0" , "aria-hidden" : "false"});
+        }
+      }
+      // < //유선 웹접근성 >
+		});
+
+		// '내게 맞는 조건으로 최대 할인 혜택을 받아보세요.'영역 스와이퍼 2
+		var swiperCompareListCnt03 = $('.swiper-slide','#compare-item-case-2').length; // 슬라이드 갯수
+		var swiperCompareList = new Swiper('#compare-item-case-2 .compare-item-list.swiper-container', {
+			a11y: {
+        enabled: false
+			},
+			centeredSlides: true,
+			slidesPerView:'auto',
+			loop: true,
+			spaceBetween:35,
+			speed:1000,
+			//<유선 웹접근성 08/17>
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+        clickable: true,
+				renderBullet: function (index, className) {
+          var _selected = (index == 0 ? 'aria-selected="true"' : 'aria-selected="false"'); // 첫번째 인디케이터만  aria-selected="true"
+          return '<div class="' + className + '" role="presentation"><button id="item-swiper-combined-03-' + (index + 1) + '" role="tab" aria-controls="item-swiper-combined-03-pager-' + (index + 1) + '" aria-lable="'+ (index + 1) +' of '+ swiperCompareListCnt03 + '" '+ _selected +'>' + (index + 1) + '</button></div>';
+        },
+			},
+      on: {
+        slideChange : function(){
+					//[D] 인디케이터 aria-selected="true"
+          $('.swiper-container .swiper-pagination-bullet').find('button').attr('aria-selected', false);
+          $('.swiper-container .swiper-pagination-bullet-active').find('button').attr('aria-selected', true);
+          //[D] 슬라이드 작동 시 el 값
+          $(".swiper-slide", $(this.el)).find('div.item').attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('div.item').attr({tabindex:"0" , "aria-hidden" : "false"});
+        },
+        init : function() {
+          //[D] 슬라이드 el 값
+          $(".swiper-slide", $(this.el)).find('div.item').attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('div.item').attr({tabindex:"0" , "aria-hidden" : "false"});
+        }
+      }
+      // < //유선 웹접근성 >
+		});
+
+		// '내게 맞는 조건으로 최대 할인 혜택을 받아보세요.'영역 스와이퍼 3
+		var swiperCompareListCnt04 = $('.swiper-slide','#compare-item-case-3').length; // 슬라이드 갯수
+		var swiperCompareList = new Swiper('#compare-item-case-3 .compare-item-list.swiper-container', {
+			a11y: {
+        enabled: false
+			},
+			centeredSlides: true,
+			slidesPerView:'auto',
+			loop: true,
+			spaceBetween:35,
+			speed:1000,
+			//<유선 웹접근성 08/17>
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+        clickable: true,
+				renderBullet: function (index, className) {
+          var _selected = (index == 0 ? 'aria-selected="true"' : 'aria-selected="false"'); // 첫번째 인디케이터만  aria-selected="true"
+          return '<div class="' + className + '" role="presentation"><button id="item-swiper-combined-04-' + (index + 1) + '" role="tab" aria-controls="item-swiper-combined-04-pager-' + (index + 1) + '" aria-lable="'+ (index + 1) +' of '+ swiperCompareListCnt04 + '" '+ _selected +'>' + (index + 1) + '</button></div>';
+        },
+			},
+      on: {
+        slideChange : function(){
+					//[D] 인디케이터 aria-selected="true"
+          $('.swiper-container .swiper-pagination-bullet').find('button').attr('aria-selected', false);
+          $('.swiper-container .swiper-pagination-bullet-active').find('button').attr('aria-selected', true);
+          //[D] 슬라이드 작동 시 el 값
+          $(".swiper-slide", $(this.el)).find('div.item').attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('div.item').attr({tabindex:"0" , "aria-hidden" : "false"});
+        },
+        init : function() {
+          //[D] 슬라이드 el 값
+          $(".swiper-slide", $(this.el)).find('div.item').attr({"tabindex":"-1", "aria-hidden" : "true"});
+          $("[data-swiper-slide-index='"+ this.realIndex +"']", $(this.el)).not(".swiper-slide-duplicate").find('div.item').attr({tabindex:"0" , "aria-hidden" : "false"});
+        }
+      }
+      // < //유선 웹접근성 >
+		});
+
+		// '내게 맞는 조건으로 최대 할인 혜택을 받아보세요.'영역 앵커 이동
+		$('.compare-anchor-list .item').click(function(e){
+			e.preventDefault();
+			$('.compare-anchor-list .item').closest('li').removeClass('active');
+			$(this).closest('li').addClass('active');
+
+			$(this).attr("aria-selected", "false");
+			$(this).parent('active').attr("aria-selected", "true");
+
+			var compareItemAnc = $(this).attr('href');
+
+			// 유선 웹접근성 2023.08.01
+			$('.compare-list-wrap .compare-item-wrap').removeAttr('tabindex').attr('tabindex' , '-1');
+			var fousOn = $(compareItemAnc);
+			fousOn.attr('tabindex' , '0').focus(); 
+			// __ .
+			
+			$('html, body').animate({
+				scrollTop: $(compareItemAnc).offset().top - 50
+			}, 500)
+		});
+
+		// '꼭 확인하세요' 클릭/노출영역
+		// 유선 웹접근성 08/01
+		$('.noti-item button.link-block').on('click', function () {
+			$(this).closest('.noti-item').toggleClass('active');
+			
+			if( $(this).closest('.noti-item').hasClass('active') ){
+				$(this).attr("aria-pressed", true );
+			}else{
+				$(this).attr("aria-pressed", false );
+			}
+			
+		});
+		
+  </script>
+</body>
+</html>

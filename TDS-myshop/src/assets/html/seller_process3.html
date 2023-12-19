@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+  <title>[상품 Mobile] detail | SK텔레콤 공식 온라인 쇼핑몰 T 월드 다이렉트</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../css/seller.css">
+  <script>
+    document.documentElement.dataset.userAgent = navigator.userAgent;
+  </script>
+</head>
+
+<body>
+  <div class="wrap seller-wrap seller-order-confirm">
+    <div class="sticky-top">
+      <div class="spot-step">
+        <ol class="step-list">
+          <!-- [D] 작성 완료시 end 클래스 추가, 현재페이지는 링크에 aria-current="step" 추가 -->
+          <li class="step-item end"><a href="#none" class="link-block"><span>01</span><span>옵션/배송방법</span></a></li>
+          <li class="step-item end"><a href="#none" class="link-block"><span>02</span><span>가입조건</span></a></li>
+          <li class="step-item"><a href="#none" class="link-block" aria-current="step"><span>03</span><span>주문확인</span></a></li>
+        </ol>
+      </div>
+    </div>
+    <main role="main" class="content">
+      <h1 class="g-invisible">주문확인</h1>
+      <div class="l-grid l-seller">
+        <!-- s: 한번 더 할인 -->
+        <div class="opt-group group-more-discount">
+          <h2 class="opt-group-tit">한번 더 할인</h2>
+          <div class="opt-group-con type-discount-more">
+            <!-- 쿠폰 할인 -->
+            <!-- [D] case : 1 -->
+            <div class="item">
+              <a href="#" class="link">
+                <span class="text">쿠폰할인</span>
+                <span class="bundle">
+                  <span class="btn"><em class="point">2</em> 장</span>
+                </span>
+              </a>
+            </div>
+            <!-- [D] case : 2 -->
+            <div class="item">
+              <a href="#" class="link">
+                <span class="text">쿠폰할인</span>
+                <span class="bundle">
+                  <span class="btn seller-txt-style">등록하기</span></a>
+              </span>
+              </a>
+            </div>
+            <!-- [D] case : 3 -->
+            <div class="item">
+              <a href="#" class="link">
+                <span class="text">쿠폰할인</span>
+                <span class="bundle">
+                  <em class="price">- 20,000원</em> <span class="btn seller-txt-style">변경</span>
+                </span>
+              </a>
+            </div>
+
+            <!-- 포인트 할인 -->
+            <div class="item">
+              <a href="#" class="link">
+                <span class="text">포인트 및 이용권 할인</span>
+                <span class="bundle">
+                  <span class="btn">포인트 조회 및 사용</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- //e: 한번 더 할인 -->
+
+        <!-- s: T 기프트 -->
+        <!-- 선택 전 -->
+        <div class="opt-group">
+          <h2 class="opt-group-tit">T 기프트</h2>
+          <div class="opt-group-con">
+            <div class="tgift-type before-selected">
+              <div class="cont">
+                <span class="tgift-text-s">T 다이렉트샵의 특별한 혜택</span>
+                <p class="tgift-text-m">원하시는 <strong>T 기프트를</strong> 선택해 주세요.</p>
+                <button type="button" class="btn-tgift">
+                  <span>T 기프트 선택하기</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //e: T 기프트 -->
+        <!-- [D] case 선택 후 -->
+        <div class="opt-group">
+          <div class="opt-group-tit-area">
+            <h2 class="opt-group-tit">T 기프트</h2>
+            <button type="button" class="notice">변경</button>
+          </div>
+          <div class="opt-group-con">
+            <div class="tgift-type">
+              <div class="cont">
+                <p class="title">[베루스] 노트9 필수패키지</p>
+                <div class="option">랜덤발송</div>
+                <div class="thumb"><img src="https://cdnm.shop.tworld.co.kr/pimg/gift/000008223/000008223_Thumb1.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- s: 주문 확인 -->
+        <div class="opt-group group-order-confirm">
+          <div class="opt-group-tit-area">
+            <h2 class="opt-group-tit">주문 확인</h2>
+            <button type="button" href="#none" class="notice">주문내역 자세히 보기</button>
+          </div>
+          <div class="opt-group-con order-confirm-type">
+            <h3 class="tit">iPhone 12 Pro Max</h3>
+            <span class="desc">IPHONE_12_PRO_MAX_128GBL</span>
+            <div class="thumb-box">
+              <img src="https://cdnm.shop.tworld.co.kr/pimg/phone/A3/A3ZN/default/A3ZN_001_13.png" alt="">
+            </div>
+            <div class="btn-area-center">
+              <!-- [웹접근성] button 태그에 layer-open-btn 추가 -->
+              <button type="button" class="btn-s-round layer-open-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="modal-delivery-info"><span>택배</span> 배송정보 확인</button>
+            </div>
+            <!-- [D] 22.11.08 case1. 기본-->
+            <div class="order-detail-area">
+              <table class="table-row-list">
+                <caption>주문확인 요금상세</caption>
+                <colgroup>
+                  <col style="width:35%;">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">휴대폰 월 할부금</th>
+                    <td><strong class="price">86,169</strong><span class="unit">원</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">월 통신요금</th>
+                    <td><strong class="price">66,725</strong><span class="unit">원</span></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th scope="row"><strong>&#8361; 월 납부금액</strong></th>
+                    <td>
+                      <span class="block">
+                        <strong class="price">152,894</strong><span class="unit">원/월</span>
+                      </span>
+                      <span class="block">
+                        <em class="small">*부가세, 할부 수수료 5.9% 포함</em>
+                      </span>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- [D] 22.11.08 case2. 일시불 추가-->
+            <div class="order-detail-area">
+              <table class="table-row-list">
+                <caption>주문확인 요금상세</caption>
+                <colgroup>
+                  <col style="width:35%;">
+                  <col>
+                </colgroup>
+                <tfoot>
+                  <tr>
+                    <th scope="row"><strong>휴대폰 일시불</strong></th>
+                    <td>
+                      <span class="block">
+                        <strong class="price">1,166,752</strong><span class="unit">원</span>
+                      </span>
+                      <span class="block">
+                        <em class="small">*부가세 포함</em>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><strong>월 통신요금</strong></th>
+                    <td>
+                      <span class="block">
+                        <strong class="price">52,894</strong><span class="unit">원</span>
+                      </span>
+                      <span class="block">
+                        <em class="small">*부가세 포함</em>
+                      </span>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- //e: 주문 확인 -->
+        <!-- s: 유의사항 -->
+        <button type="button" class="seller-notice-link">유의사항 확인하기</button>
+        <!-- //e: 유의사항 -->
+      </div>
+    </main>
+    <!-- [D] sticky-bar 숨김시 .active 추가 -->
+    <div class="sticky-bar">
+      <div class="layer-pay layer-none">
+        <h2 class="g-invisible">출고가 가격정보</h2>
+        <div class="l-grid">
+          <div class="btn-area">
+            <!-- [D] 활성/비활성 여부는 클래스 disabled 추가/삭제로 컨트롤 -->
+            <button type="button" class="btn-light">장바구니 담기</button>
+            <button type="button" class="btn-primary" title="T다이렉트샵 모바일웹(새창)">신청서 작성</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- //e: 하단 스티키 바 -->
+  </div>
+  <!-- layer -->
+  <!-- [D] 오픈시 div.modal에 display:block, body에 j-noscroll클래스 추가 -->
+  <!-- [웹접근성] 모달팝업 닫기 버튼에 btn-close-modal 클래스 추가 -->
+  <div class="modal modal-delivery-info layer-popup-area" role="dialog" aria-modal="true" style="display:none;" aria-modal="true" aria-labelledby="dialog_title" aria-describedby="dialog_content" id="modal-delivery-info" tabindex="0">
+    <div class="modal-dialog" role="document">
+      <div class="modal-body" tabindex="0">
+        <div class="modal-header">
+          <h1 class="modal-title">바로도착</h1>
+        </div>
+
+        <div class="modal-content">
+          <p class="title-desc"><em>00시 00분 00초</em> 이내 주문하면 오늘 도착</p>
+          <p class="title-desc">꼼꼼하게 포장하여 우체국 익일 특급 배송</p>
+
+          <table class="table-row-list">
+            <caption>배송 정보</caption>
+            <colgroup>
+              <col style="width:30%;">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">휴대폰번호</th>
+                <td>010-1234-5678</td>
+              </tr>
+              <tr>
+                <th scope="row">매장정보</th>
+                <td>
+                  <span class="txt-row">인천중구대리점 부천시청역</span>
+                  <span class="txt-row">직영점</span>
+                  <span class="txt-row">032-000-0000</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">방문일시</th>
+                <td>
+                  <span class="txt-row">2020년 12월 02일</span>
+                  <span class="txt-row">18:00 - 18:30</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">주소</th>
+                <td>
+                  <span class="txt-row">12345</span>
+                  <span class="txt-row">서울시 중구 을지로(을지로1가)</span>
+                  <span class="txt-row">페럼타워 14층</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <button type="button" class="btn-close layer-close-btn">
+          <span class="ico-close">팝업 닫기</span>
+        </button>
+      </div>
+    </div>
+    <div class="dimmed"></div>
+  </div>
+  <!-- //layer -->
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/swiper.min.js"></script>
+  <script src="../js/tdirect-ui.js"></script>
+
+
+  <script>
+    // 레이어팝업, 모달 팝업 열기
+    // $('.popup-btn').bind('click', function(){
+    //     var layerId = $(this).attr('aria-controls');
+    //     var layerClass = layerId + "-btn";
+    //     $(this).addClass(layerClass);
+    //     $(this).attr("aria-expanded", "true");     
+    //     $('.' + layerId).show().focus();   
+    //     $('body, html').css('overflow','hidden').not('.' + layerId).attr({"tabindex" : "-1"});
+    //   });
+
+      // 모달팝업 닫기
+      // $('.btn-close-modal').bind('click', function(){
+      //   var btnId = $(this).parents('.modal').attr('id');
+      //   $('.' + btnId + '-btn').attr("aria-expanded", "false").focus();     
+      //   $(this).parents('.modal').hide();
+      //   $('body, html').css('overflow','auto').not($(this).parents('.modal')).removeAttr("tabindex");       
+      // });   
+
+      //레이어팝업열기
+      $('.layer-open-btn').bind('click', function(){
+          $(this).attr("aria-expanded", "true");     
+          var layerPopEl = '#' + $(this).attr('aria-controls');
+          $(layerPopEl).show().focus();   
+          $('.current').removeClass('current');
+          $(this).addClass('current');
+          $('body, html').css('overflow','auto');
+          var lpObjTabbable = $(layerPopEl).find("button, input:not([type='hidden']), select, iframe, textarea, [href], [tabindex]:not([tabindex='-1'])");
+          var lpObjTabbableFirst = lpObjTabbable && lpObjTabbable.first();
+          var lpObjTabbableLast = lpObjTabbable && lpObjTabbable.last();
+
+          lpObjTabbableLast.on("keydown", function(event) {
+            if (!event.shiftKey && (event.keyCode || event.which) === 9) {
+              event.preventDefault();
+              lpObjTabbableFirst.focus();
+            }
+          });
+        });
+
+      //레이어팝업닫기  
+      $('.layer-close-btn').bind('click', function(){  
+        var btnParentEl = $(this).parents('.layer-popup-area').attr('id');
+        
+        $('.layer-open-btn').each(function(){       
+          var btnControls = $(this).attr('aria-controls');    
+          if(btnControls === btnParentEl) {
+            $(this).attr("aria-expanded", "false").focus(); 
+          }
+        });
+
+        $(this).parents('.layer-popup-area').hide();
+        $('.current').focus();    
+      });
+
+  </script>
+</body>
+
+</html>

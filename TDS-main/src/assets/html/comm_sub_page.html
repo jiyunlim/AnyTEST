@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+    <title>[TDS Layer] T 월드 다이렉트</title>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/swiper/swiper.min.js"></script>
+    <link rel="stylesheet" href="../css/import_style.css" />
+    <!-- 기획전 전용 css : swiper_exhibition -->
+    <link rel="stylesheet" href="../css/swiper_exhibition.css"> 
+  </head>
+  <!-- 웹 접근성 작업 시작 2022.09.21 -->
+
+  <body>
+    <!-- [D] 팝업일 경우 container-wrap 영역 안에
+      팝업 레이어 일 경우 class = " tds-popup-wrap " 추가
+      팝업 새창 일 경우 class = " tds-popup-wrap pop_page" 추가
+    -->
+    <div class="container-wrap ">
+      <!-- 헤더 영역 -->
+      <div class="tds-header">
+        <div class="top-header">
+          <div class="top-header-left">
+            <a href="#" class="ico-goback">
+                <img src="../img/icon-header-back@2x.png" alt="이전 페이지">
+            </a>
+          </div>
+          <div class="top-header-right">
+            <button type="button" class="ico-cart"><img src="../img/icon-header-cart@2x.png" alt="장바구니"></button>
+            <button type="button" class="ico-mypage" title="T다이렉트샵 모바일웹(새창)"><img src="../img/icon-header-my@2x.png" alt="마이페이지"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 본분 영역 -->
+      <div class="tds-main">
+        <div class="l-grid grid-spaces">
+          <div class="admin-area">
+            <!-- [D] 어드민 영역 2022.07.06 이미지 예시 -->
+            <img src="../img/@sample-img01.jpg" alt="기획전 내용1">
+            <img src="../img/@sample-img02.jpg" alt="기획전 내용2">
+            <img src="../img/@sample-img03.jpg" alt="기획전 내용3">
+          </div>
+        </div>
+      </div>
+      <!--[D] 2023.02.06 상담하기 버튼 디자인 변경 02/06 -->
+      <div class="sticky-shortcut">
+        <div class="btn-counsel-toggle">
+          <button type="button" class="ico-counsel-text" id="btn_pop_menu" aria-controls="pop_menu" aria-haspopup="menu" aria-pressed="false">상담하기 열기</button>
+          <ul class="toggle-list" role="menu" id="pop_menu" aria-labelledby="btn_pop_menu" >
+            <li class="ico-counsel-phone"><a href="https://m.shop.tworld.co.kr/common-campaign?cmpId=000029" target="_blank" title="T다이렉트샵 모바일웹(새창)" tabindex="-1">전화상담</a></li>
+            <li class="ico-counsel-chat"><a href="https://chat.tworld.co.kr:17443/sharedfront/jsp/view/liveChatCheck.jsp?domainId=MOBILE" target="_blank" title="T다이렉트샵 모바일웹(새창)" tabindex="-1">1:1 채팅</a></li>
+            <li class="ico-counsel-kakaotalk"><a href="https://chat.tworld.co.kr:17443/sharedfront/jsp/view/liveChatKakaoCheck.jsp?domainId=MOBILE" target="_blank" title="카카오톡 모바일앱(새창)" tabindex="-1">카카오톡</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      //[D] 2023.02.06 상담하기 버튼 수정
+      //상단 상담하기 클릭 이벤트 (기획전 페이지도 추가)
+      $(".ico-counsel-text").on('click', function () {
+        var parentEl = $(this).parent();
+        var dimmedEl = '<div class="sticky-counsel-dimmed"></div>'
+        // [D] 추가 2022.08.29 상담버튼 클릭시 상단 버튼 숨김
+        if(parentEl.hasClass("active")){
+          parentEl.removeClass('active').parents('body').removeClass('js-noscroll');
+          $('.sticky-counsel-dimmed').remove();
+          $(this).attr("aria-pressed" , false).text('상담하기 열기');
+          $(this).parent('.btn-counsel-toggle').find('.toggle-list').find('a').attr({"tabindex" : "-1"});     
+        }else{
+          parentEl.addClass('active').parents('body').addClass('js-noscroll'); // js-noscroll < 바닥페이지 스크롤링 막아줌
+          parentEl.parents('body').prepend(dimmedEl);
+          $(this).attr("aria-pressed" , true).text('상담하기 닫기');
+          $(this).parent('.btn-counsel-toggle').find('.toggle-list').find('a').attr({"tabindex" : "0"});     
+        }           
+      });
+    </script>
+
+  </body>
+</html>

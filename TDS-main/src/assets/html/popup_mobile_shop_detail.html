@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+    <title>[TDS Layer] T 월드 다이렉트</title>
+    <link rel="stylesheet" href="../css/import_style.css" />
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/swiper/swiper.min.js"></script>
+  </head>
+
+  <body>
+    <!-- [D] 공통 팝업 영역
+      팝업 레이어 일 경우 class = " tds-popup-wrap " 추가
+      팝업 새창 일 경우 class = " tds-popup-wrap pop_page" 추가
+    -->
+    <div class="container-wrap tds-popup-wrap pop_page">
+      <!-- 헤더 영역 -->
+      <div class="tds-header">
+        <div class="top-header">
+          <div class="top-header-left">
+            <h1 class="title">매장정보</h1>
+          </div>
+          <div class="top-header-right">
+          </div>
+        </div>
+      </div>
+
+      <!-- 본분 영역 -->
+      <div class="tds-main">
+        <div class="l-grid">
+          <div class="main-section pop-shop-detail">
+            <h2 class="shop-title">대구교동대리점/대구교동대리점 본점</h2>
+            <span class="shop-score">
+              <span class="star-area">
+                <div class="star_sub star4"></div>
+              </span>
+              <span class="reply-count">(1)</span>
+            </span>
+
+            <div class="seller-tab-wrap">
+              <button type="button" class="tab-item on"><span>매장 정보</span></button>
+              <button type="button" class="tab-item"><span>매장 위치</span></button>
+            </div>
+
+            <h2 class="g-invisible">요금제 목록</h2>
+            <div class="seller-container-wrap">
+              <!-- 매장정보 -->
+              <div class="seller-cont-area shop-info">
+                <div class="shop-detail-list">
+                  <ul>
+                    <li>
+                      <p class="detail-stl">주소</p>
+                      <div>
+                        대구 중구 국채보상로 123길 22(문화동) 1층 남쪽2번째 <br>
+                        (지번:문화동 8-1번지 SK교동시장점)
+                      </div>
+                    </li>
+                    <li class="tel-area">
+                      <p class="detail-stl">연락처</p>
+                      <div>
+                        053-421-6900
+                        <div class="ico-tel">
+                          <a href="tel:053-421-6900"></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="detail-stl">운영시간</p>
+                      <div>
+                        <p>평일 10:00~19:00</p>
+                        <p>주말 11:00~17:00</p>
+                        <p>휴일 11:00~17:00</p>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="detail-stl">찾아오시는 길</p>
+                      <div>
+                        <p class="detail-con-stl">1. 구술약도</p>
+                        <p>대구 노보텔 뒷 건물(시티센터) 오리온사우나앞</p>
+                        <p class="detail-con-stl">2. 대중교통</p>
+                        <p>518번 2.28 기념 중앙공원 건너편 대구시티센터하차</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 매장위치 -->
+              <div class="seller-cont-area shop-map" style="display: none ;">
+                <div class="shop-detail-map">
+                  <img src="../img/seller/shop-map.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- close btn -->
+      <button type="button" class="btn-close"><span class="ico-close">팝업 닫기</span></button>
+    </div>
+
+    <script>
+
+      /* 매장검색 (마이샵 js와 다름으로 구조 확인이 필요합니다.)*/ 
+      $(".pop-shop-detail .seller-tab-wrap .tab-item").on('click',function(e){
+        e.preventDefault();
+        var i = $(this).index();
+        $(this).addClass('on');
+        $(this).siblings().removeClass('on');
+        $(' .seller-container-wrap > div').eq(i).css({'display':'block'});
+        $(' .seller-container-wrap > div').eq(i).siblings().css({'display':'none'});
+
+      });
+
+    </script>
+
+  </body>
+</html>
