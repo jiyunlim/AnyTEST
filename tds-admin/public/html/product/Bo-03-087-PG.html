@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]--> 
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">액세서리상품 등록관리</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>상품 관리</li>
+					<li><strong>액세서리상품 등록관리</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+			<!--액세서리 조회-->
+			<h2 class="h-type2">액세서리 조회</h2>
+			<table id="srch-list" class="table-row">
+				<caption>액세서리 조회</caption>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:16%">
+					<col style="width:10%">
+					<col style="width:16%">
+					<col style="width:8%">
+					<col>
+					<col style="width:10%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">생성기간</th>
+						<td colspan="3">
+							<div class="form-group calendar">
+								<select class="c-select" title="기간선택">
+									<option value="" selected="selected">기간선택</option>
+									<option value="">오늘</option>
+									<option value="">1주일</option>
+									<option value="">1개월</option>
+									<option value="">이달</option>
+									<option value="">금년</option>
+								</select>
+								<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+								<a href="#none" class="btn-calendar">달력</a>
+								<span class="txt-unit">━</span>
+								<input type="text" class="c-input" title="종료일자">
+								<a href="#none" class="btn-calendar">달력</a>
+							</div>
+						</td>
+						<th scope="row">분류</th>
+						<td>
+							<select class="c-select" title="분류 선택">
+								<option value="" selected="selected">전체</option>
+								<option value="">케이스/필름</option>
+								<option value="">배터리/케이블</option>
+								<option value="">음향기기</option>
+								<option value="">생활기기</option>
+								<option value="">애플존 </option>
+							</select>
+						</td>
+						<th scope="row">상세분류</th>
+						<td>
+							<select class="c-select" title="상세분류 선택">
+								<option value="" selected="selected">전체</option>
+								<option value="">애플단말용</option>
+								<option value="">LG단말용</option>
+								<option value="">기타단말용</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">엑세서리 ID</th>
+						<td><input type="text" class="c-input" title="엑세서리 ID 입력" placeholder="영문+숫자로 입력"></td>
+						<th scope="row">상품명</th>
+						<td><input type="text" class="c-input" title="상품명 입력" placeholder="한글 또는 영문 입력"></td>
+						<th scope="row">모델명</th>
+						<td><input type="text" class="c-input" title="모델명 입력" placeholder="영문+숫자로 입력"></td>
+						<th scope="row">T 다 할인<br>적용 여부</th>
+						<td>
+							<select class="c-select" title="T 다 할인 적용 여부 선택">
+								<option value="" selected="selected">전체</option>
+								<option value="">Y</option>
+								<option value="">N</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">전시여부</th>
+						<td colspan="3">
+							<select class="c-select" title="전시여부 선택">
+								<option value="" selected="selected">전체</option>
+								<option value="">Y</option>
+								<option value="">N</option>
+							</select>
+						</td>
+						<th scope="row">판매상태</th>
+						<td colspan="3">
+							<select class="c-select" title="판매상태 선택">
+								<option value="" selected="selected">전체</option>
+							</select>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!--//액세서리 조회-->
+			<!-- btn -->
+			<div class="btn-area">
+				<a href="#none" class="btn-base">검색</a>
+				<a href="#none" class="btn-base">초기화</a>
+			</div>
+			<!-- //btn -->
+			<div class="h-area2">
+				<h2 class="h-type2">액세서리 조회결과 <span class="txt-count">(<em>5</em>건)</span></h2>
+				<div class="btn-area">
+					<a href="#none" class="btn-base btn-blue">등록</a>
+				</div>
+			</div>
+			<div class="table-data-wrap">
+				<!-- top button -->
+				<div class="btn-area table-top">
+					<div class="l-btn">
+						<button type="button" class="btn-base btn-gray">삭제</button>
+					</div>
+					<button type="button" class="btn-excel">엑셀다운로드</button>
+				</div>
+				<!-- //top button -->
+				
+				<!-- list -->				
+				<table class="table-col">
+					<caption>액세서리 조회결과</caption>
+					<colgroup>
+						<col>
+						<col style="width:8%">
+						<col style="width:8%">
+						<col style="width:8%">
+						<col style="width:15%">
+						<col style="width:7%">
+						<col style="width:5%">
+						<col style="width:5%">
+						<col style="width:5%">
+						<col style="width:9%">
+						<col style="width:8%">
+						<col style="width:9%">
+						<col style="width:8%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">
+								<span class="c-chk txt-no">
+									<input type="checkbox" id="chk1" name="chk">
+									<label for="chk1">선택</label>
+								</span>
+							</th>
+							<th scope="col">액세서리 ID</th>
+							<th scope="col">분류</th>
+							<th scope="col">상세분류</th>
+							<th scope="col">상품명</th>
+							<th scope="col">모델명</th>
+							<th scope="col">T 다 할인 적용</th>
+							<th scope="col">전시여부</th>
+							<th scope="col">판매상태</th>
+							<th scope="col">최초<br>생성일시</th>
+							<th scope="col">최초<br>생성자</th>
+							<th scope="col">최종<br>변경일시</th>
+							<th scope="col">최종<br>변경자</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="c-chk txt-no">
+									<input type="checkbox" id="chk2" name="chk">
+									<label for="chk2">선택</label>
+								</span>
+							</td>
+							<td><a href="#none">3311121041166</a></td>
+							<td>케이스/필름</td>
+							<td>삼성단말용</td>
+							<td class="l-data"><a href="#none">[포켓몬스터] 펄 아머 케이스</a></td>
+							<td><a href="#none">NU110</a></td>
+							<td>Y</td>
+							<td>Y</td>
+							<td>진행중</td>
+							<td>2018-01-16<br>08:54</td>
+							<td>홍길동<br>(아이디)</td>
+							<td>2018-01-16<br>08:54</td>
+							<td>홍길동<br>(아이디)</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="c-chk txt-no">
+									<input type="checkbox" id="chk3" name="chk">
+									<label for="chk3">선택</label>
+								</span>
+							</td>
+							<td><a href="#none">3311121041166</a></td>
+							<td>케이스/필름</td>
+							<td>삼성단말용</td>
+							<td class="l-data"><a href="#none">[포켓몬스터] 펄 아머 케이스</a></td>
+							<td><a href="#none">NU110</a></td>
+							<td>Y</td>
+							<td>Y</td>
+							<td>진행중</td>
+							<td>2018-01-16<br>08:54</td>
+							<td>홍길동<br>(아이디)</td>
+							<td>2018-01-16<br>08:54</td>
+							<td>홍길동<br>(아이디)</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="c-chk txt-no">
+									<input type="checkbox" id="chk4" name="chk">
+									<label for="chk4">선택</label>
+								</span>
+							</td>
+							<td><a href="#none">3311121041166</a></td>
+							<td>케이스/필름</td>
+							<td>삼성단말용</td>
+							<td class="l-data"><a href="#none">[포켓몬스터] 펄 아머 케이스</a></td>
+							<td><a href="#none">NU110</a></td>
+							<td>Y</td>
+							<td>Y</td>
+							<td>진행중</td>
+							<td>2018-01-16<br>08:54</td>
+							<td>홍길동<br>(아이디)</td>
+							<td>2018-01-16<br>08:54</td>
+							<td>홍길동<br>(아이디)</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="c-chk txt-no">
+									<input type="checkbox" id="chk5" name="chk">
+									<label for="chk5">선택</label>
+								</span>
+							</td>
+							<td><a href="#none">3311121041166</a></td>
+							<td>케이스/필름</td>
+							<td>삼성단말용</td>
+							<td class="l-data"><a href="#none">[포켓몬스터] 펄 아머 케이스</a></td>
+							<td><a href="#none">NU110</a></td>
+							<td>Y</td>
+							<td>Y</td>
+							<td>진행중</td>
+							<td>2018-01-16<br>08:54</td>
+							<td>홍길동<br>(아이디)</td>
+							<td>2018-01-16<br>08:54</td>
+							<td>홍길동<br>(아이디)</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="c-chk txt-no">
+									<input type="checkbox" id="chk6" name="chk">
+									<label for="chk6">선택</label>
+								</span>
+							</td>
+							<td><a href="#none">3311121041166</a></td>
+							<td>케이스/필름</td>
+							<td>삼성단말용</td>
+							<td class="l-data"><a href="#none">[포켓몬스터] 펄 아머 케이스</a></td>
+							<td><a href="#none">NU110</a></td>
+							<td>Y</td>
+							<td>Y</td>
+							<td>진행중</td>
+							<td>2018-01-16<br>08:54</td>
+							<td>홍길동<br>(아이디)</td>
+							<td>2018-01-16<br>08:54</td>
+							<td>홍길동<br>(아이디)</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- //list -->
+
+				<!-- paginate -->
+				<div class="paginate-area">
+					<a href="#none" class="pg-first">처음 리스트</a>
+					<a href="#none" class="pg-prev">이전 리스트</a>
+					<ul class="paginate">
+					<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+					<li><a href="#none">4</a></li>
+					<li><a href="#none">5</a></li>
+					<li><a href="#none">6</a></li>
+					<li><a href="#none">7</a></li>
+					<li><a href="#none">8</a></li>
+					<li><a href="#none">9</a></li>
+					<li><a href="#none">10</a></li>
+					</ul>
+					<a href="#none" class="pg-next">다음 리스트</a>
+					<a href="#none" class="pg-last">마지막 리스트</a>
+				</div>
+				<!-- //paginate -->
+
+				<!-- bottom button -->
+				<div class="btn-area table-bottom">
+					<div class="l-btn">
+						<button type="button" class="btn-base btn-gray">삭제</button>
+					</div>
+					<button type="button" class="btn-base btn-line-gray">검색 결과만 보기</button>
+					<button type="button" class="btn-base btn-line-gray">조회항목 설정</button>
+					<button type="button" class="btn-excel">엑셀다운로드</button>
+				</div>
+				<!-- //bottom button -->
+			</div>
+			<div class="btn-area">
+				<a href="#none" class="btn-base btn-blue">등록</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

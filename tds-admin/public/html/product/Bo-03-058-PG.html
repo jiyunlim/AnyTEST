@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">디바이스 기본정보</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>상품관리</li>
+					<li><strong>디바이스 기본정보</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none">기본정보</a></li>
+				<li><a href="#none">기본 이미지</a></li>
+				<li><a href="#none">추가 이미지</a></li>
+				<li><a href="#none">광고 이미지</a></li>
+				<li><a href="#none" class="on">스펙</a></li>
+				<li><a href="#none">전문가 리뷰</a></li>
+			</ul>
+			<!-- //tab -->
+
+			<div class="h-area2">
+				<h3 class="h-type2">스펙 정보</h3>
+			</div>
+
+			<table class="table-row">
+				<caption>스펙 정보 등록</caption>
+				<colgroup>
+					<col style="width:19.2%">
+					<col>
+				</colgroup>
+				<tbody>
+				<tr>
+					<th scope="row">모델명</th>
+					<td>
+						<div class="align-block">
+							SM-G965N_64GR
+							<div class="r-btn">
+								<button type="button" class="btn-base btn-gray">내용 복사</button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">내용</th>
+					<td>
+						에디터 영역
+					</td>
+				</tr>
+				</tbody>
+			</table>
+
+			<!-- btn -->
+			<div class="btn-area center">
+				<button type="button" class="btn-base btn-line-blue">미리보기</button>
+				<button type="button" class="btn-base btn-blue">저장</button>
+			</div>
+			<!-- //btn -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

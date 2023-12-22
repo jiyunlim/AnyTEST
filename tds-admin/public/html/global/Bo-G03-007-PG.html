@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">차단관리</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>Global </li>
+					<li>차단관리</li>
+					<li><strong>온라인 개별 차단관리</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none" class="on">온라인 개별 차단관리</a></li>
+				<li><a href="#none">모바일 개별 차단관리</a></li>
+				<li><a href="#none">온라인 그룹 차단관리</a></li>
+				<li><a href="#none">모바일 그룹 차단관리</a></li>
+				<li><a href="#none">우회ID 관리</a></li>
+			</ul>
+			<!-- //tab -->
+
+			<h2 class="hidden">온라인 개별 차단관리</h2>
+			<h3 class="h-type2">온라인 개별 차단 조회</h3>
+			<table class="table-row">
+			<caption>온라인 개별 차단 조회</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">차단명*</th>
+					<td>
+						<input type="text" class="c-input" title="차단URL 입력" placeholder="차단명을 입력하세요.">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">차단명*</th>
+					<td>
+						<input type="text" class="c-input" title="차단URL 입력" placeholder="영문,특수문자로 입력하세요.">
+						<p class="txt-unit txt-red mt-6">
+							※ /handler/ShopTworldMain-Start 형태로 저장됩니다.<br>
+							URL 예시 1) /handler/ShopTworldMain-Start<br>
+							URL 예시2) /handler/ShopTworldMain<br>
+						</p>
+						
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">안내화면URL</th>
+					<td>
+						<input type="text" class="c-input" title="차단URL 입력" placeholder="차단 안내페이지 URL 또는 차단 시 이동시킬 URL을 입력하세요.">
+						<p class="txt-unit txt-red mt-6">
+								※ 미입력 시 기본 차단 안내페이지 (/common/error/error_system_check.html)로 이동됩니다.
+								<br>
+						</p>
+						
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">차단기간*</th>
+					<td>
+						<div class="form-group calendar">
+							<select class="c-select" title="기간선택">
+								<option value="" selected="selected">기간선택</option>
+								<option value="">오늘</option>
+								<option value="">1주일</option>
+								<option value="">1개월</option>
+								<option value="">이달</option>
+								<option value="">금년</option>
+							</select>
+							<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+							<a href="#none" class="btn-calendar">달력</a>
+							<span class="txt-unit">━</span>
+							<input type="text" class="c-input" title="종료일자">
+							<a href="#none" class="btn-calendar">달력</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">파라미터 차단여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="cut_off1" name="cut_off" checked="checked">
+								<label for="cut_off1">사용</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="cut_off2" name="cut_off">
+								<label for="cut_off2">미사용</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">파라미터명</th>
+					<td>
+						<input type="text" class="c-input" title="차단URL 입력" placeholder="파라미터명을 입력하세요.">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">파라미터값</th>
+					<td>
+						파라미터값 : <input type="text" class="c-input" title="차단URL 입력" placeholder="영문,특수문자로 입력하세요." style="width:300px;"> <a href="#none" class="btn-base">추가</a>
+
+						<table class="table-col mt-10">
+						<caption>파라미터값 리스트</caption>
+						<colgroup>
+							<col style="width:5%">
+							<col style="width:6%">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="chk0" name="chk">
+										<label for="chk0">전체 선택</label>
+									</span>
+								</th>
+								<th scope="col">No</th>
+								<th scope="col">파라미터값</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="chk1" name="chk">
+										<label for="chk1">선택</label>
+									</span>
+								</td>
+								<td>3</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="chk2" name="chk">
+										<label for="chk2">선택</label>
+									</span>
+								</td>
+								<td>2</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="chk3" name="chk">
+										<label for="chk3">선택</label>
+									</span>
+								</td>
+								<td>1</td>
+								<td></td>
+							</tr>
+						</tbody>
+						</table>
+						<a href="#none" class="btn-base btn-gray mt-6">삭제</a>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="btn-area center">
+				<a href="#none" class="btn-base btn-blue">저장</a>
+				<a href="#none" class="btn-base btn-line-blue">목록</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

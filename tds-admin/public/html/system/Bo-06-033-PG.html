@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">Open API</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>시스템관리</li>
+					<li>공시지원금 알리미</li>
+					<li><strong>Open API 통계</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none">Open API 관리</a></li>
+				<li><a href="#none" class="on">Open API 통계</a></li>
+				<li><a href="#none">Open API 모니터링</a></li>
+				<li><a href="#none">BP사 관리</a></li>
+			</ul>
+			<!-- //tab -->
+
+			<h2 class="hidden">Open API 통계</h2>
+
+			<h3 class="h-type2">Open API 통계 조회</h3>
+			<table class="table-row">
+			<caption>Open API 통계 조회</caption>
+			<colgroup>
+				<col style="width:12%">
+				<col style="width:46%">
+				<col style="width:12%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">조회기간</th>
+					<td>
+						<div class="form-group calendar">
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="rdo1" name="rdo" checked="checked">
+									<label for="rdo1">일별</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="rdo2" name="rdo">
+									<label for="rdo2">월별</label>
+								</span>
+							</div>
+							<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+							<a href="#none" class="btn-calendar">달력</a>
+							<span class="txt-unit">━</span>
+							<input type="text" class="c-input" title="종료일자">
+							<a href="#none" class="btn-calendar">달력</a>
+						</div>
+					</td>
+					<th scope="row">채널 구분</th>
+					<td>
+						<select class="c-select" title="채널 구분 선택">
+							<option value="" selected="selected">전체</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<div class="btn-area">
+				<a href="#none" class="btn-base">검색</a>
+				<a href="#none" class="btn-base">초기화</a>
+			</div>
+
+			<div class="h-area2">
+				<h3 class="h-type2">Open API 통계 조회 결과 <span class="txt-count">(<em>3256</em>건)</span></h3>
+			</div>
+
+			<div class="table-data-wrap">
+				<div class="btn-area table-top">
+					<button type="button" class="btn-excel">엑셀다운로드</button>
+				</div>
+
+				<table class="table-col">
+				<caption>Open API 통계 조회 목록</caption>
+				<colgroup>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk3" name="chk">
+								<label for="chk3">선택</label>
+							</span>
+						</th>
+						<th scope="col">항목2</th>
+						<th scope="col">항목3</th>
+						<th scope="col">항목4</th>
+						<th scope="col">항목5</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk1" name="chk">
+								<label for="chk1">선택</label>
+							</span>
+						</td>
+						<td>데이터2</td>
+						<td><a href="#none" class="text-primary">55555</a></td>
+						<td>데이터4</td>
+						<td>데이터5</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk2" name="chk">
+								<label for="chk2">선택</label>
+							</span>
+						</td>
+						<td>데이터2</td>
+						<td><a href="#none" class="text-primary">55555</a></td>
+						<td>데이터4</td>
+						<td>데이터5</td>
+					</tr>
+				</tbody>
+				</table>
+
+				<!-- paginate -->
+				<div class="paginate-area">
+					<a href="#none" class="pg-first">처음 리스트</a>
+					<a href="#none" class="pg-prev">이전 리스트</a>
+					<ul class="paginate">
+						<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+						<li><a href="#none">2</a></li>
+						<li><a href="#none">3</a></li>
+						<li><a href="#none">4</a></li>
+						<li><a href="#none">5</a></li>
+						<li><a href="#none">6</a></li>
+						<li><a href="#none">7</a></li>
+						<li><a href="#none">8</a></li>
+						<li><a href="#none">9</a></li>
+						<li><a href="#none">10</a></li>
+					</ul>
+					<a href="#none" class="pg-next">다음 리스트</a>
+					<a href="#none" class="pg-last">마지막 리스트</a>
+				</div>
+				<!-- //paginate -->
+
+				<div class="btn-area table-bottom">
+					<button type="button" class="btn-base btn-line-gray">검색 결과만 보기</button>
+					<button type="button" class="btn-base btn-line-gray">조회항목 설정</button>
+					<button type="button" class="btn-excel">엑셀다운로드</button>
+				</div>
+      		</div>
+				
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

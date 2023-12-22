@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>월말 예상 판매량 보기</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 860*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">월말 예상 판매량 보기</h1>
+	</div>
+	<div class="pop-content">
+		<h2 class="h-type2">2018년 8월 예상 판매량</h2>
+		<!-- data table -->
+		<div class="table-data-wrap">
+			<!-- top button -->
+			<div class="btn-area table-top">
+				<div class="l-btn">
+					<span class="txt-unit">채널 선택</span>
+					<select class="c-select" title="채널 선택" style="width:140px;">
+						<option value="" selected="selected">전체</option>
+						<option value="">TWD온라인</option>
+						<option value="">TWD상담</option>
+						<option value="">TWD온라인+상담</option>
+					</select>
+				</div>
+				<button type="button" class="btn-excel">엑셀다운로드</button>
+			</div>
+			<!-- //top button -->
+
+			<!-- list -->
+			<table class="table-col">
+			<caption>데이타리스트</caption>
+			<colgroup>
+				<col>
+				<col style="width:23%">
+				<col style="width:23%">
+				<col style="width:23%">
+				<col style="width:23%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk1" name="chk">
+							<label for="chk1">선택</label>
+						</span>
+					</th>
+					<th scope="col">항목1</th>
+					<th scope="col">항목2</th>
+					<th scope="col">항목3</th>
+					<th scope="col">항목4<br>항목4</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk2" name="chk">
+							<label for="chk2">선택</label>
+						</span>
+					</td>
+					<td>데이터1</td>
+					<td>데이터2</td>
+					<td>데이터3</td>
+					<td>데이터4</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk3" name="chk">
+							<label for="chk3">선택</label>
+						</span>
+					</td>
+					<td>데이터1</td>
+					<td>데이터2</td>
+					<td>데이터3</td>
+					<td>데이터4</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk4" name="chk">
+							<label for="chk4">선택</label>
+						</span>
+					</td>
+					<td>데이터1</td>
+					<td>데이터2</td>
+					<td>데이터3</td>
+					<td>데이터4</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk5" name="chk">
+							<label for="chk5">선택</label>
+						</span>
+					</td>
+					<td>데이터1</td>
+					<td>데이터2</td>
+					<td>데이터3</td>
+					<td>데이터4</td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- //list -->
+
+			<!-- paginate -->
+			<div class="paginate-area">
+				<a href="#none" class="pg-first">처음 리스트</a>
+				<a href="#none" class="pg-prev">이전 리스트</a>
+				<ul class="paginate">
+					<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+					<li><a href="#none">4</a></li>
+					<li><a href="#none">5</a></li>
+					<li><a href="#none">6</a></li>
+					<li><a href="#none">7</a></li>
+					<li><a href="#none">8</a></li>
+					<li><a href="#none">9</a></li>
+					<li><a href="#none">10</a></li>
+				</ul>
+				<a href="#none" class="pg-next">다음 리스트</a>
+				<a href="#none" class="pg-last">마지막 리스트</a>
+			</div>
+			<!-- //paginate -->
+			
+			<!-- bottom button -->
+			<div class="btn-area table-bottom">
+				<button type="button" class="btn-base btn-line-gray">검색 결과만 보기</button>
+				<button type="button" class="btn-base btn-line-gray">조회항목 설정</button>
+				<button type="button" class="btn-excel">엑셀다운로드</button>
+			</div>
+			<!-- //bottom button -->
+		</div>
+		<!-- //data table -->
+
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">닫기</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

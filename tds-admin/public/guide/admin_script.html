@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN GUIDE</title>
+	<link rel="stylesheet" type="text/css" href="../../public/css/tdirect_admin.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/@tdirect_guide.css">
+	<!--[if lt IE 9]>
+	<script src="../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../public/js/jquery.shCore.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+<body>
+<div id="guide-wrap">
+	<header id="header">
+		<h1><strong>T다이렉트샵</strong><em>ADMIN GUIDE</em></h1>
+		<nav>
+			<div class="inner">
+				<a href="coding_list.html">파일리스트</a>
+				<a href="admin_title.html" class="on">페이지가이드</a>
+			</div>
+		</nav>
+	</header>
+	<article>
+		<nav>
+			<a href="../html/layout/admin_layout.html" target="_blank">레이아웃</a>
+			<a href="admin_title.html">타이틀</a>
+			<a href="admin_btn.html">버튼</a>
+			<a href="admin_form.html">폼요소</a>
+			<a href="admin_table.html">테이블</a>
+			<a href="admin_etc.html">탭/페이징</a>
+			<a href="admin_popup.html">팝업</a>
+			<a href="admin_script.html" class="on">스크립트</a>
+			<a href="admin_loading.html">로딩중</a>
+		</nav>
+
+		<section class="guide-content">
+			<h2 class="tit-con">스크립트 가이드</h2>
+			<div class="box-wrap">
+				<h3>라디오버튼</h3>
+				
+				<h4>라디오버튼 체크시 컨텐츠 보여주기 : [ form-group ] > [ tab-radio-con ]</h4>
+				<div class="guide-list-wrap">
+					<table id="srch-list" class="table-row">
+					<caption>휴대폰 개통 내역 조회</caption>
+					<colgroup>
+						<col style="width:14%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">항목</th>
+							<td>
+								<div class="form-group">
+									<span class="c-rdo">
+										<input type="radio" id="rdo1" name="rdo" checked="checked">
+										<label for="rdo1">라디오1</label>
+									</span>
+									<span class="c-rdo">
+										<input type="radio" id="rdo2" name="rdo">
+										<label for="rdo2">라디오2</label>
+									</span>
+									<div class="tab-radio-con open">
+										<select class="c-select" title="" style="width:120px;">
+											<option value="" selected="selected">선택</option>
+										</select>
+										<select class="c-select" title="" style="width:120px;">
+											<option value="" selected="selected">선택</option>
+										</select>
+										<select class="c-select" title="" style="width:120px;">
+											<option value="" selected="selected">선택</option>
+										</select>
+									</div>
+									<div class="tab-radio-con">
+										<select class="c-select" title="" style="width:120px;">
+											<option value="" selected="selected">선택</option>
+										</select>
+										<select class="c-select" title="" style="width:120px;">
+											<option value="" selected="selected">선택</option>
+										</select>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th class="row">검색 방법</th>
+							<td>
+								<div>
+									<div class="form-group">
+										<span class="c-rdo">
+											<input type="radio" id="srchtype1" name="srchtype" checked="checked">
+											<label for="srchtype1">조직도로 찾기</label>
+										</span>
+										<span class="c-rdo">
+											<input type="radio" id="srchtype2" name="srchtype">
+											<label for="srchtype2">지하철역으로 찾기</label>
+										</span>
+										<span class="c-rdo">
+											<input type="radio" id="srchtype3" name="srchtype">
+											<label for="srchtype3">주소로 찾기</label>
+										</span>
+										<div class="tab-radio-con open">
+											<select class="c-select" title="" style="width:120px;">
+												<option value="" selected="selected">선택</option>
+											</select>
+											<select class="c-select" title="" style="width:120px;">
+												<option value="" selected="selected">선택</option>
+											</select>
+											<select class="c-select" title="" style="width:120px;">
+												<option value="" selected="selected">선택</option>
+											</select>
+											<select class="c-select" title="" style="width:120px;">
+												<option value="" selected="selected">선택</option>
+											</select>
+										</div>
+										<div class="tab-radio-con">
+											<select class="c-select" title="" style="width:120px;">
+												<option value="" selected="selected">선택</option>
+											</select>
+											<select class="c-select" title="" style="width:120px;">
+												<option value="" selected="selected">선택</option>
+											</select>
+											<select class="c-select" title="" style="width:120px;">
+												<option value="" selected="selected">선택</option>
+											</select>
+										</div>
+										<div class="tab-radio-con">
+											<select class="c-select" title="" style="width:120px;">
+												<option value="" selected="selected">선택</option>
+											</select>
+											<select class="c-select" title="" style="width:120px;">
+												<option value="" selected="selected">선택</option>
+											</select>
+											<select class="c-select" title="" style="width:120px;">
+												<option value="" selected="selected">선택</option>
+											</select>
+											<span class="txt-unit">지번주소</span>
+											<input type="text" class="c-input" title="" style="width:120px;">
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+				<div class="guide-box">
+<pre class="brush: xml;">
+&lt;div class="form-group"&gt;
+	&lt;span class="c-rdo"&gt;
+		&lt;input type="radio" id="rdo1" name="rdo" checked="checked"&gt;
+		&lt;label for="rdo1"&gt;라디오1&lt;/label&gt;
+	&lt;/span&gt;
+	&lt;span class="c-rdo"&gt;
+		&lt;input type="radio" id="rdo2" name="rdo"&gt;
+		&lt;label for="rdo2"&gt;라디오2&lt;/label&gt;
+	&lt;/span&gt;
+	&lt;!-- 라디오버튼 해당 컨텐츠  --&gt;
+	&lt;div class="tab-radio-con open"&gt;
+		&lt;select class="c-select" title="" style="width:30%;"&gt;
+			&lt;option value="" selected="selected"&gt;선택&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;select class="c-select" title="" style="width:30%;"&gt;
+			&lt;option value="" selected="selected"&gt;선택&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;select class="c-select" title="" style="width:30%;"&gt;
+			&lt;option value="" selected="selected"&gt;선택&lt;/option&gt;
+		&lt;/select&gt;
+	&lt;/div&gt;
+	&lt;!-- //라디오버튼 해당 컨텐츠  --&gt;
+	&lt;!-- 라디오버튼 해당 컨텐츠  --&gt;
+	&lt;div class="tab-radio-con"&gt;
+		&lt;select class="c-select" title="" style="width:30%;"&gt;
+			&lt;option value="" selected="selected"&gt;선택&lt;/option&gt;
+		&lt;/select&gt;
+		&lt;select class="c-select" title="" style="width:30%;"&gt;
+			&lt;option value="" selected="selected"&gt;선택&lt;/option&gt;
+		&lt;/select&gt;
+	&lt;/div&gt;
+	&lt;!-- //라디오버튼 해당 컨텐츠  --&gt;
+&lt;/div&gt;
+</pre>
+				</div>
+
+			</div>
+
+			<div class="box-wrap">
+				<h3>더보기</h3>
+				
+				<h4>테이블 더보기 : [ btn-srch-more ] + [ js-more ], [ table-row ] + [ js-table ], [ table-col ] + [ js-table ]</h4>
+				<div class="guide-list-wrap">
+					<p><strong>- 테이블의 id값과 버튼의 href값 같게 하기</strong></p>
+					<p><strong>- 보여질 테이블 tr값에 class="show-row" 추가</strong></p><br />
+					
+					<table id="table-srch" class="table-row js-table">
+					<caption>휴대폰 개통 내역 조회</caption>
+					<colgroup>
+						<col style="width:14%">
+						<col>
+						<col style="width:14%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr class="show-row">
+							<th class="row">주문일자</th>
+							<td>
+								<div class="form-group calendar">
+									<select class="c-select">
+										<option value="" selected="selected">기간선택</option>
+										<option value="">오늘</option>
+										<option value="">1주일</option>
+										<option value="">1개월</option>
+										<option value="">이달</option>
+										<option value="">금년</option>
+									</select>
+									<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+									<a href="#none" class="btn-calendar">달력</a>
+									<span class="txt-unit">━</span>
+									<input type="text" class="c-input" title="종료일자">
+									<a href="#none" class="btn-calendar">달력</a>
+								</div>
+							</td>
+							<th class="row">배송방법</th>
+							<td>
+								<div class="form-group">
+									<span class="c-chk">
+										<input type="checkbox" id="delivery1" name="delivery">
+										<label for="delivery1">택배</label>
+									</span>
+									<span class="c-chk">
+										<input type="checkbox" id="delivery2" name="delivery">
+										<label for="delivery2">SCL</label>
+									</span>
+									<span class="c-chk">
+										<input type="checkbox" id="delivery3" name="delivery">
+										<label for="delivery3">바로픽업</label>
+									</span>
+									<span class="c-chk">
+										<input type="checkbox" id="delivery4" name="delivery">
+										<label for="delivery4">퀵</label>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr class="show-row">
+							<th scope="row">가입유형</th>
+							<td>
+								<select class="c-select">
+									<option value="" selected="selected">전체</option>
+									<option value="">010신규</option>
+									<option value="">기기변경</option>
+									<option value="">번호이동</option>
+								</select>
+							</td>
+							<th scope="row">일련번호</th>
+							<td>
+								<div class="form-group">
+									<span class="c-chk">
+										<input type="checkbox" id="serial1" name="serial">
+										<label for="serial1">유</label>
+									</span>
+									<span class="c-chk">
+										<input type="checkbox" id="serial2" name="serial">
+										<label for="serial2">무</label>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr class="show-row">
+							<th scope="row">검색구분</th>
+							<td>
+								<select class="c-select" style="width:52%;">
+									<option value="" selected="selected">주문코드</option>
+									<option value="">회원명</option>
+									<option value="">아이디</option>
+									<option value="">단말기일련번호</option>
+								</select>
+								<input type="text" class="c-input" title="검색어 입력" style="width:46%;">
+							</td>
+							<th scope="row">개통상태</th>
+							<td>
+								<select class="c-select" title="개통상태 선택">
+									<option value="" selected="selected">전체</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">검색구분</th>
+							<td>
+								<select class="c-select" style="width:52%;">
+									<option value="" selected="selected">주문코드</option>
+									<option value="">회원명</option>
+									<option value="">아이디</option>
+									<option value="">단말기일련번호</option>
+								</select>
+								<input type="text" class="c-input" title="검색어 입력" style="width:46%;">
+							</td>
+							<th scope="row">개통상태</th>
+							<td>
+								<select class="c-select" title="개통상태 선택">
+									<option value="" selected="selected">전체</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">검색구분</th>
+							<td>
+								<select class="c-select" style="width:52%;">
+									<option value="" selected="selected">주문코드</option>
+									<option value="">회원명</option>
+									<option value="">아이디</option>
+									<option value="">단말기일련번호</option>
+								</select>
+								<input type="text" class="c-input" title="검색어 입력" style="width:46%;">
+							</td>
+							<th scope="row">개통상태</th>
+							<td>
+								<select class="c-select" title="개통상태 선택">
+									<option value="" selected="selected">전체</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">검색구분</th>
+							<td>
+								<select class="c-select" style="width:52%;">
+									<option value="" selected="selected">주문코드</option>
+									<option value="">회원명</option>
+									<option value="">아이디</option>
+									<option value="">단말기일련번호</option>
+								</select>
+								<input type="text" class="c-input" title="검색어 입력" style="width:46%;">
+							</td>
+							<th scope="row">개통상태</th>
+							<td>
+								<select class="c-select" title="개통상태 선택">
+									<option value="" selected="selected">전체</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">검색구분</th>
+							<td>
+								<select class="c-select" style="width:52%;">
+									<option value="" selected="selected">주문코드</option>
+									<option value="">회원명</option>
+									<option value="">아이디</option>
+									<option value="">단말기일련번호</option>
+								</select>
+								<input type="text" class="c-input" title="검색어 입력" style="width:46%;">
+							</td>
+							<th scope="row">개통상태</th>
+							<td>
+								<select class="c-select" title="개통상태 선택">
+									<option value="" selected="selected">전체</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">검색구분</th>
+							<td>
+								<select class="c-select" style="width:52%;">
+									<option value="" selected="selected">주문코드</option>
+									<option value="">회원명</option>
+									<option value="">아이디</option>
+									<option value="">단말기일련번호</option>
+								</select>
+								<input type="text" class="c-input" title="검색어 입력" style="width:46%;">
+							</td>
+							<th scope="row">개통상태</th>
+							<td>
+								<select class="c-select" title="개통상태 선택">
+									<option value="" selected="selected">전체</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">검색구분</th>
+							<td>
+								<select class="c-select" style="width:52%;">
+									<option value="" selected="selected">주문코드</option>
+									<option value="">회원명</option>
+									<option value="">아이디</option>
+									<option value="">단말기일련번호</option>
+								</select>
+								<input type="text" class="c-input" title="검색어 입력" style="width:46%;">
+							</td>
+							<th scope="row">개통상태</th>
+							<td>
+								<select class="c-select" title="개통상태 선택">
+									<option value="" selected="selected">전체</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">검색구분</th>
+							<td>
+								<select class="c-select" style="width:52%;">
+									<option value="" selected="selected">주문코드</option>
+									<option value="">회원명</option>
+									<option value="">아이디</option>
+									<option value="">단말기일련번호</option>
+								</select>
+								<input type="text" class="c-input" title="검색어 입력" style="width:46%;">
+							</td>
+							<th scope="row">개통상태</th>
+							<td>
+								<select class="c-select" title="개통상태 선택">
+									<option value="" selected="selected">전체</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">검색구분</th>
+							<td>
+								<select class="c-select" style="width:52%;">
+									<option value="" selected="selected">주문코드</option>
+									<option value="">회원명</option>
+									<option value="">아이디</option>
+									<option value="">단말기일련번호</option>
+								</select>
+								<input type="text" class="c-input" title="검색어 입력" style="width:46%;">
+							</td>
+							<th scope="row">개통상태</th>
+							<td>
+								<select class="c-select" title="개통상태 선택">
+									<option value="" selected="selected">전체</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">검색구분</th>
+							<td>
+								<select class="c-select" style="width:52%;">
+									<option value="" selected="selected">주문코드</option>
+									<option value="">회원명</option>
+									<option value="">아이디</option>
+									<option value="">단말기일련번호</option>
+								</select>
+								<input type="text" class="c-input" title="검색어 입력" style="width:46%;">
+							</td>
+							<th scope="row">개통상태</th>
+							<td>
+								<select class="c-select" title="개통상태 선택">
+									<option value="" selected="selected">전체</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">검색구분</th>
+							<td>
+								<select class="c-select" style="width:52%;">
+									<option value="" selected="selected">주문코드</option>
+									<option value="">회원명</option>
+									<option value="">아이디</option>
+									<option value="">단말기일련번호</option>
+								</select>
+								<input type="text" class="c-input" title="검색어 입력" style="width:46%;">
+							</td>
+							<th scope="row">개통상태</th>
+							<td>
+								<select class="c-select" title="개통상태 선택">
+									<option value="" selected="selected">전체</option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<div class="btn-area">
+						<div class="l-btn">
+							<a href="#table-srch" class="btn-srch-more js-more">검색 더보기</a>
+						</div>
+						<a href="#none" class="btn-base">검색</a>
+						<a href="#none" class="btn-base">초기화</a>
+					</div>
+					
+					<div class="guide-box">
+<pre class="brush: xml;">
+&lt;!-- 테이블 아이디 값과 검색더보기 버튼 href 값 같게하기 --&gt;
+&lt;table id="table-srch" class="table-row js-table"&gt;
+.
+&lt;tbody&gt;
+	&lt;!-- 보여줄 tr에 class="show-row" 추가 --&gt;
+	&lt;tr class="show-row"&gt;
+	&lt;/tr&gt;
+	&lt;tr class="show-row"&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+	&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class="btn-area"&gt;
+	&lt;div class="l-btn"&gt;
+		&lt;!-- 더보기 할 버튼에 class="js-more" 추가  --&gt;
+		&lt;a href="#table-srch" class="btn-srch-more js-more"&gt;검색 더보기&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;a href="#none" class="btn-base"&gt;검색&lt;/a&gt;
+	&lt;a href="#none" class="btn-base"&gt;초기화&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+				</div>
+
+					<table id="order-state" class="table-col l-data mt-20 js-table">
+					<caption>주문상태 선택</caption>
+					<colgroup>
+						<col style="width:14%">
+						<col style="width:14%">
+						<col style="width:14%">
+						<col style="width:14%">
+						<col style="width:14%">
+						<col style="width:14%">
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" colspan="7">
+								<div class="fold-area">
+									<span class="c-chk">
+										<input type="checkbox" id="order0" name="order">
+										<label for="order0">주문상태</label>
+									</span>
+									<div class="r-fold">
+										<a href="#order-state" class="btn-unfold js-more">펼치기</a>
+									</div>
+								</div>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order1" name="order">
+									<label for="order1">개통대기</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order2" name="order">
+									<label for="order2">개통요청</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order3" name="order">
+									<label for="order3">개통취소</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order4" name="order">
+									<label for="order4">교환물품신청접수</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order5" name="order">
+									<label for="order5">배송보류</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order6" name="order">
+									<label for="order6">신청접수</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order7" name="order">
+									<label for="order7">접수완료</label>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order8" name="order">
+									<label for="order8">개통보류</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order9" name="order">
+									<label for="order9">개통요청_고객</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order10" name="order">
+									<label for="order10">교환물품 개통신청_고객</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order11" name="order">
+									<label for="order11">구매완료</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order12" name="order">
+									<label for="order12">배송완료</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order13" name="order">
+									<label for="order13">신청취소</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order14" name="order">
+									<label for="order14">지점_배송완료</label>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order15" name="order">
+									<label for="order15">개통완료</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order16" name="order">
+									<label for="order16">개통요청_야간</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order17" name="order">
+									<label for="order17">교환물품개통신청_운영자</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order18" name="order">
+									<label for="order18">물품배송중</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order19" name="order">
+									<label for="order19">배송준비</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order20" name="order">
+									<label for="order20">예약접수</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order21" name="order">
+									<label for="order21">지점_접수완료</label>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order22" name="order">
+									<label for="order22">개통요청</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order23" name="order">
+									<label for="order23">개통요청_운영자</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order24" name="order">
+									<label for="order24">교환물품발송</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order25" name="order">
+									<label for="order25">반품</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order26" name="order">
+									<label for="order26">신청반려</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order27" name="order">
+									<label for="order27">유키반려</label>
+								</span>
+							</td>
+							<td>
+								<span class="c-chk">
+									<input type="checkbox" id="order28" name="order">
+									<label for="order28">해피콜대기중</label>
+								</span>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+
+				<h4>컨텐츠값 더보기 : [ btn-more ] + [ js-more ]</h4>
+				<div class="guide-list-wrap">
+					<table class="table-row">
+					<caption></caption>
+					<colgroup>
+						<col style="width:14%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th class="row">기프트그룹 노출 조건</th>
+							<td>
+								<input type="text" class="c-input" title="" style="width:30%;">
+								<a href="#none" class="btn-base">검색</a>
+								<div id="morecon1" class="hidden-con">
+									<a href="#none" class="btn-text">1X 기본정액제(2,000)</a>
+									<a href="#none" class="btn-text">Bridge 데이터로밍 할인요금</a>
+									<a href="#none" class="btn-text">LTE 안심 옵션</a>
+									<a href="#none" class="btn-text">NATE 북클럽</a>
+									<a href="#none" class="btn-text">레귤러</a>
+									<a href="#none" class="btn-text">할리스 생활팩</a>
+									<a href="#none" class="btn-text">1X 기본정액제(2,000)</a>
+									<a href="#none" class="btn-text">Bridge 데이터로밍 할인요금</a>
+									<a href="#none" class="btn-text">LTE 안심 옵션</a>
+									<a href="#none" class="btn-text">NATE 북클럽</a>
+									<a href="#none" class="btn-text">레귤러</a>
+									<a href="#none" class="btn-text">1X 기본정액제(2,000)</a>
+									<a href="#none" class="btn-text">Bridge 데이터로밍 할인요금</a>
+									<a href="#none" class="btn-text">LTE 안심 옵션</a>
+									<a href="#none" class="btn-text">NATE 북클럽</a>
+									<a href="#none" class="btn-text">레귤러</a>
+									<a href="#none" class="btn-text">할리스 생활팩</a>
+									<a href="#none" class="btn-text">1X 기본정액제(2,000)</a>
+									<a href="#none" class="btn-text">Bridge 데이터로밍 할인요금</a>
+									<a href="#none" class="btn-text">LTE 안심 옵션</a>
+									<a href="#none" class="btn-text">NATE 북클럽</a>
+									<a href="#none" class="btn-text">레귤러</a>
+									<a href="#none" class="btn-text">1X 기본정액제(2,000)</a>
+									<a href="#none" class="btn-text">Bridge 데이터로밍 할인요금</a>
+									<a href="#none" class="btn-text">LTE 안심 옵션</a>
+									<a href="#none" class="btn-text">NATE 북클럽</a>
+									<a href="#none" class="btn-text">레귤러</a>
+									<a href="#none" class="btn-text">할리스 생활팩</a>
+									<a href="#none" class="btn-text">1X 기본정액제(2,000)</a>
+									<a href="#none" class="btn-text">Bridge 데이터로밍 할인요금</a>
+									<a href="#none" class="btn-text">LTE 안심 옵션</a>
+									<a href="#none" class="btn-text">NATE 북클럽</a>
+									<a href="#none" class="btn-text">레귤러</a>
+									<a href="#none" class="btn-text">1X 기본정액제(2,000)</a>
+									<a href="#none" class="btn-text">Bridge 데이터로밍 할인요금</a>
+									<a href="#none" class="btn-text">LTE 안심 옵션</a>
+									<a href="#none" class="btn-text">NATE 북클럽</a>
+									<a href="#none" class="btn-text">레귤러</a>
+									<a href="#none" class="btn-text">할리스 생활팩</a>
+									<a href="#none" class="btn-text">1X 기본정액제(2,000)</a>
+									<a href="#none" class="btn-text">Bridge 데이터로밍 할인요금</a>
+									<a href="#none" class="btn-text">LTE 안심 옵션</a>
+									<a href="#none" class="btn-text">NATE 북클럽</a>
+									<a href="#none" class="btn-text">레귤러</a>
+								</div>
+								<div class="btn-area">
+									<a href="#morecon1" class="btn-more js-more">더보기</a>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+
+					<div class="guide-box">
+<pre class="brush: xml;">
+&lt;table class="table-row"&gt;
+.
+&lt;tbody&gt;
+	&lt;tr&gt;
+	&lt;th class="row"&gt;기프트그룹 노출 조건&lt;/th&gt;
+	&lt;td&gt;
+		&lt;input type="text" class="c-input" title="" style="width:30%;"&gt;
+		&lt;a href="#none" class="btn-base"&gt;검색&lt;/a&gt;
+		&lt;!-- 더보기 해야될 컨텐츠에 class="hidden-con" 추가 --&gt;
+		&lt;div id="morecon1" class="hidden-con"&gt;
+			&lt;a href="#none" class="btn-text"&gt;1X 기본정액제(2,000)&lt;/a&gt;
+			&lt;a href="#none" class="btn-text"&gt;Bridge 데이터로밍 할인요금  &lt;/a&gt;
+			&lt;a href="#none" class="btn-text"&gt;LTE 안심 옵션  &lt;/a&gt;
+			&lt;a href="#none" class="btn-text"&gt;NATE 북클럽  &lt;/a&gt;
+			&lt;a href="#none" class="btn-text"&gt;레귤러  &lt;/a&gt;
+			.
+			.
+		&lt;/div&gt;
+		&lt;div class="btn-area"&gt;
+			&lt;a href="#morecon1" class="btn-more js-more"&gt;더보기&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+</pre>
+					</div>
+				</div>
+			</div>
+
+			<div class="box-wrap">
+				<h3>테이블 tr행 추가/삭제 및 토글</h3>
+				
+				<h4>테이블 tr행 추가/삭제 : [ btn-base ] + [ js-tr-add ], [ btn-base.btn-gray ] + [ js-tr-delete ], [ table-col ] + [ js-table-toggle ]</h4>
+				<div class="guide-list-wrap">
+					<div class="h-area2">
+						<h3 class="h-type2">주문 메모</h3>
+						<div class="btn-area">
+							<a href="#table-add-row" class="btn-base js-tr-add">추가</a>
+							<a href="#none" class="btn-base btn-gray js-tr-delete">삭제</a>
+						</div>
+					</div>
+					<table id="table-add-row" class="table-col js-table-toggle">
+					<caption>주문 메모</caption>
+					<colgroup>
+						<col>
+						<col style="width:16%">
+						<col style="width:16%">
+						<col style="width:16%">
+						<col style="width:16%">
+						<col style="width:10%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">순번</th>
+							<th scope="col">구분</th>
+							<th scope="col">작성자</th>
+							<th scope="col">소속</th>
+							<th scope="col">날짜</th>
+							<th scope="col">
+								전체
+								<a href="#none" class="btn-unfold">전체보기</a>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>물품교환/반품</td>
+							<td>홍길동 (abcde) /</td>
+							<td>장안고객 Care센터</td>
+							<td>YYYY-MM-DD HH:MM:SS</td>
+							<td><a href="#none" class="btn-base btn-gray btn-view">보기</a></td>
+						</tr>
+						<tr class="hide-con">
+							<td colspan="6">
+								상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>물품교환/반품</td>
+							<td>홍길동 (abcde) /</td>
+							<td>장안고객 Care센터</td>
+							<td>YYYY-MM-DD HH:MM:SS</td>
+							<td><a href="#none" class="btn-base btn-gray btn-view">보기</a></td>
+						</tr>
+						<tr class="hide-con">
+							<td colspan="6">
+								상담2 작성 내용2 상담 작성 내용상담2 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 
+							</td>
+						</tr>
+					</tbody>
+					</table>
+
+					<div class="guide-box">
+<pre class="brush: xml;">
+&lt;div class="h-area2"&gt;
+	&lt;h3 class="h-type2"&gt;주문 메모&lt;/h3&gt;
+	&lt;div class="btn-area"&gt;
+		&lt;a href="#table-add-row" class="btn-base js-tr-add"&gt;추가&lt;/a&gt;
+		&lt;a href="#none" class="btn-base btn-gray js-tr-delete"&gt;삭제&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;table id="table-add-row" class="table-col js-table-toggle"&gt;
+&lt;caption&gt;주문 메모&lt;/caption&gt;
+.
+&lt;thead&gt;
+	&lt;tr&gt;
+		&lt;th scope="col"&gt;순번&lt;/th&gt;
+		&lt;th scope="col"&gt;구분&lt;/th&gt;
+		&lt;th scope="col"&gt;작성자&lt;/th&gt;
+		&lt;th scope="col"&gt;소속&lt;/th&gt;
+		&lt;th scope="col"&gt;날짜&lt;/th&gt;
+		&lt;th scope="col"&gt;
+			전체
+			&lt;a href="#none" class="btn-unfold"&gt;전체보기&lt;/a&gt;
+		&lt;/th&gt;
+	&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;물품교환/반품&lt;/td&gt;
+		&lt;td&gt;홍길동 (abcde) /&lt;/td&gt;
+		&lt;td&gt;장안고객 Care센터&lt;/td&gt;
+		&lt;td&gt;YYYY-MM-DD HH:MM:SS&lt;/td&gt;
+		&lt;td&gt;&lt;a href="#none" class="btn-base btn-gray btn-view"&gt;보기&lt;/a&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="hide-con"&gt;
+		&lt;td colspan="6"&gt;
+			상담 작성 내용 상담 작성 내용상담 
+		&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+</pre>
+					</div>
+
+
+
+				</div>
+
+				<h4>테이블 토글 : [ btn-base.btn-gray ] + [ btn-view ], [ table-col ] + [ js-table-toggle ]</h4>
+				<div class="guide-list-wrap">
+					<table class="table-col js-table-toggle">
+					<caption>주문 메모</caption>
+					<colgroup>
+						<col>
+						<col style="width:16%">
+						<col style="width:16%">
+						<col style="width:16%">
+						<col style="width:16%">
+						<col style="width:10%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">순번</th>
+							<th scope="col">구분</th>
+							<th scope="col">작성자</th>
+							<th scope="col">소속</th>
+							<th scope="col">날짜</th>
+							<th scope="col">전체 </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>물품교환/반품</td>
+							<td>홍길동 (abcde) /</td>
+							<td>장안고객 Care센터</td>
+							<td>YYYY-MM-DD HH:MM:SS</td>
+							<td><a href="#none" class="btn-base btn-gray btn-view">보기</a></td>
+						</tr>
+						<tr class="hide-con">
+							<td colspan="6">
+								상담2 작성 내용2 상담 작성 내용상담2 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>물품교환/반품</td>
+							<td>홍길동 (abcde) /</td>
+							<td>장안고객 Care센터</td>
+							<td>YYYY-MM-DD HH:MM:SS</td>
+							<td><a href="#none" class="btn-base btn-gray btn-view">보기</a></td>
+						</tr>
+						<tr class="hide-con">
+							<td colspan="6">
+								상담2 작성 내용2 상담 작성 내용상담2 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 
+							</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+	</article>
+	<a href="#top" class="btn-top">TOP</a>
+</div>
+
+<script type="text/javascript" src="../../public/js/common.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	/* tr 행추가 삭제 */
+	$('.js-tr-add').click(function(){
+		var row = "<tr class='add-row'>";
+			row += "<td>신규</td>";
+			row += "<td></td>";
+			row += "<td></td>";
+			row += "<td></td>";
+			row += "<td></td>";
+			row += "<td></td>";
+			row += "</tr>";
+			row += "</tr>";
+			row += "<tr class='add-row'>";
+			row += "<td colspan='6'><textarea style='width:100%;height:100px;' class='c-textarea' title='내용입력'></textarea><div class='btn-area'><a href='#none' class='btn-base'>저장</a></div></td>";
+			row += "</tr>";
+		$($(this).attr('href')).find('tbody:last').append(row);
+	});
+	$('.js-tr-delete').click(function() {
+		$('.table-col > tbody tr.add-row:last').remove();
+		$('.table-col > tbody tr.add-row:last').before().remove();
+	});
+});
+</script>
+</body>
+</html>

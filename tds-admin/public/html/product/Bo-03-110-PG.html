@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">부가서비스 관리</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>상품관리</li>
+					<li>상품가격 옵션관리</li>
+					<li><strong>USIM 관리</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<div class="h-area2">
+				<h2 class="h-type2">USIM 관리</h2>
+				<div class="r-txt">
+					<span class="txt-red">'간략설명' HTML부분은 with 160 Pixel로 작성해 주시기 바랍니다.</span>
+				</div>
+			</div>
+			
+			<table class="table-col">
+			<caption>USIM 관리</caption>
+			<colgroup>
+				<col style="width:40%">
+				<col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">USIM 구분</th>
+					<th scope="col">가격</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>없음</td>
+					<td>
+						<input type="text" class="c-input ar" title="유심 미구입시 가격 처리" value="0 원" style="width:30%;">
+					</td>
+				</tr>
+				<tr>
+					<td>일반 USIM</td>
+					<td>
+						<input type="text" class="c-input ar" title="일반유심가격 입력" value="5,500 원" style="width:30%;">
+					</td>
+				</tr>
+				<tr>
+					<td>금융 USIM</td>
+					<td>
+						<input type="text" class="c-input ar" title="금융유심가격 입력" value="7,700 원" style="width:30%;">
+					</td>
+				</tr>
+				<tr>
+					<td>본인명의재사용</td>
+					<td>
+						<input type="text" class="c-input ar" title="본인명의재사용인 경우 가격 입력" value="0 원" style="width:30%;">
+					</td>
+				</tr>
+				<tr>
+					<td>NanoUSIM</td>
+					<td>
+						<input type="text" class="c-input ar" title="나노유심가격 입력" value="5,500 원" style="width:30%;">
+					</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

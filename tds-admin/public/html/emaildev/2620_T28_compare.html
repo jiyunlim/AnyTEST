@@ -1,0 +1,430 @@
+<%
+//-----------HANDLER Context Get-------------//
+record=context.get("record")
+con=context.get("con")
+//-----------compare - A  쿼리-------------//
+aquery=java.lang.StringBuffer.new()
+aquery.append(" select ")
+aquery.append("   min(decode(tab_seq, 1, decode(instr(cmp_ctt,'||',1,1),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 1)+2, instr(cmp_ctt,'||',1,2)-instr(cmp_ctt,'||',1,1)-2)))) cmp_img ")
+aquery.append("  ,min(decode(tab_seq, 1, decode(instr(cmp_ctt,'||',1,2),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 2)+2, instr(cmp_ctt,'||',1,3)-instr(cmp_ctt,'||',1,2)-2)))) cmp_img1 ")
+aquery.append("  ,min(decode(tab_seq, 1, decode(instr(cmp_ctt,'||',1,3),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 3)+2, instr(cmp_ctt,'||',1,4)-instr(cmp_ctt,'||',1,3)-2)))) cmp_img2 ")
+aquery.append("  ,min(decode(tab_seq, 1, decode(instr(cmp_ctt,'||',1,4),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 4)+2, instr(cmp_ctt,'||',1,5)-instr(cmp_ctt,'||',1,4)-2)))) cmp_img3 ")
+aquery.append("  ,min(decode(tab_seq, 1, decode(instr(cmp_ctt,'||',1,5),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 5)+2, instr(cmp_ctt,'||',1,6)-instr(cmp_ctt,'||',1,5)-2)))) cmp_img4 ")
+aquery.append("  ,min(decode(tab_seq, 2, decode(instr(cmp_ctt,'||',1,1),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 1)+2, instr(cmp_ctt,'||',1,2)-instr(cmp_ctt,'||',1,1)-2)))) cmp_mkr ")
+aquery.append("  ,min(decode(tab_seq, 2, decode(instr(cmp_ctt,'||',1,2),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 2)+2, instr(cmp_ctt,'||',1,3)-instr(cmp_ctt,'||',1,2)-2)))) cmp_mkr1 ")
+aquery.append("  ,min(decode(tab_seq, 2, decode(instr(cmp_ctt,'||',1,3),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 3)+2, instr(cmp_ctt,'||',1,4)-instr(cmp_ctt,'||',1,3)-2)))) cmp_mkr2 ")
+aquery.append("  ,min(decode(tab_seq, 2, decode(instr(cmp_ctt,'||',1,4),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 4)+2, instr(cmp_ctt,'||',1,5)-instr(cmp_ctt,'||',1,4)-2)))) cmp_mkr3 ")
+aquery.append("  ,min(decode(tab_seq, 2, decode(instr(cmp_ctt,'||',1,5),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 5)+2, instr(cmp_ctt,'||',1,6)-instr(cmp_ctt,'||',1,5)-2)))) cmp_mkr4 ")
+aquery.append("  ,min(decode(tab_seq, 3, decode(instr(cmp_ctt,'||',1,1),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 1)+2, instr(cmp_ctt,'||',1,2)-instr(cmp_ctt,'||',1,1)-2)))) cmp_prod ")
+aquery.append("  ,min(decode(tab_seq, 3, decode(instr(cmp_ctt,'||',1,2),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 2)+2, instr(cmp_ctt,'||',1,3)-instr(cmp_ctt,'||',1,2)-2)))) cmp_prod1 ")
+aquery.append("  ,min(decode(tab_seq, 3, decode(instr(cmp_ctt,'||',1,3),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 3)+2, instr(cmp_ctt,'||',1,4)-instr(cmp_ctt,'||',1,3)-2)))) cmp_prod2 ")
+aquery.append("  ,min(decode(tab_seq, 3, decode(instr(cmp_ctt,'||',1,4),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 4)+2, instr(cmp_ctt,'||',1,5)-instr(cmp_ctt,'||',1,4)-2)))) cmp_prod3 ")
+aquery.append("  ,min(decode(tab_seq, 3, decode(instr(cmp_ctt,'||',1,5),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 5)+2, instr(cmp_ctt,'||',1,6)-instr(cmp_ctt,'||',1,5)-2)))) cmp_prod4 ")
+aquery.append("  ,min(decode(tab_seq, 4, decode(instr(cmp_ctt,'||',1,1),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 1)+2, instr(cmp_ctt,'||',1,2)-instr(cmp_ctt,'||',1,1)-2)))) cmp_url ")
+aquery.append("  ,min(decode(tab_seq, 4, decode(instr(cmp_ctt,'||',1,2),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 2)+2, instr(cmp_ctt,'||',1,3)-instr(cmp_ctt,'||',1,2)-2)))) cmp_url1 ")
+aquery.append("  ,min(decode(tab_seq, 4, decode(instr(cmp_ctt,'||',1,3),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 3)+2, instr(cmp_ctt,'||',1,4)-instr(cmp_ctt,'||',1,3)-2)))) cmp_url2 ")
+aquery.append("  ,min(decode(tab_seq, 4, decode(instr(cmp_ctt,'||',1,4),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 4)+2, instr(cmp_ctt,'||',1,5)-instr(cmp_ctt,'||',1,4)-2)))) cmp_url3 ")
+aquery.append("  ,min(decode(tab_seq, 4, decode(instr(cmp_ctt,'||',1,5),0,'',substr(cmp_ctt, instr(cmp_ctt,'||',1, 5)+2, instr(cmp_ctt,'||',1,6)-instr(cmp_ctt,'||',1,5)-2)))) cmp_url4 ")
+aquery.append(" from  ")
+aquery.append(" (select to_number(substr(cmp_nm, 3)) tab_seq, cmp_ctt||'||' cmp_ctt ")
+aquery.append(" from tshop_batch_compare  WHERE seq_no = ? and substr(cmp_nm, 1,1) = 'A' ) ")
+//-----------compare - B,C  쿼리-------------//
+bquery=java.lang.StringBuffer.new()
+bquery.append(" SELECT  ")
+bquery.append("   substr(cmp_nm, 1,1) type_fg ")
+bquery.append("  ,substr(cmp_nm, 3) type_seq ")
+bquery.append("  ,substr(cmp_ctt,1,1) cimg_fg ")
+bquery.append("  ,decode(instr(cmp_ctt||'||', '||', 1, 1), 0, '',substr(cmp_ctt||'||', instr(cmp_ctt||'||', '||', 1, 1)+2, instr(cmp_ctt||'||', '||', 1, 2) - instr(cmp_ctt||'||', '||', 1, 1)-2)) cmp_ctt0 ")
+bquery.append("  ,decode(instr(cmp_ctt||'||', '||', 1, 2), 0, '',substr(cmp_ctt||'||', instr(cmp_ctt||'||', '||', 1, 2)+2, instr(cmp_ctt||'||', '||', 1, 3) - instr(cmp_ctt||'||', '||', 1, 2)-2)) cmp_ctt1 ")
+bquery.append("  ,decode(instr(cmp_ctt||'||', '||', 1, 3), 0, '',substr(cmp_ctt||'||', instr(cmp_ctt||'||', '||', 1, 3)+2, instr(cmp_ctt||'||', '||', 1, 4) - instr(cmp_ctt||'||', '||', 1, 3)-2)) cmp_ctt2 ")
+bquery.append("  ,decode(instr(cmp_ctt||'||', '||', 1, 4), 0, '',substr(cmp_ctt||'||', instr(cmp_ctt||'||', '||', 1, 4)+2, instr(cmp_ctt||'||', '||', 1, 5) - instr(cmp_ctt||'||', '||', 1, 4)-2)) cmp_ctt3 ")
+bquery.append("  ,decode(instr(cmp_ctt||'||', '||', 1, 5), 0, '',substr(cmp_ctt||'||', instr(cmp_ctt||'||', '||', 1, 5)+2, instr(cmp_ctt||'||', '||', 1, 6) - instr(cmp_ctt||'||', '||', 1, 5)-2)) cmp_ctt4 ")
+bquery.append("  FROM tshop_batch_compare  WHERE substr(cmp_nm, 1,1) <> 'A' and seq_no = ? ")
+bquery.append("  order by substr(cmp_nm, 1,1), to_number(substr(cmp_nm, 3)) ")
+%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>비교하기</title>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+  <table border="0" cellpadding="0" cellspacing="0"  style="width:100%;background-color:#f1f2f2;" align="center">
+      <!-- head -->
+      <tr>
+   <td align="center">
+                <div style="max-width:700px;margin:0 auto">
+                    <table border="0" cellpadding="0" cellspacing="0" align="center" style="width:700px;font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,Sans-serif;-webkit-text-size-adjust:100%;text-align:left;background-color:#fff;">
+      <tr><td colspan="3" height="6" style="background-color:#f34132;font-size:0;line-height:0;"></td></tr>
+      <tr>
+       <td colspan="3" style="padding-top:24px;padding-right:40px;padding-bottom:23px;padding-left:24px;border-bottom:1px solid #cfcfcf;">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left">
+         <tbody>
+          <tr>
+           <td width="50%" style="font-size:0;line-height:normal">
+            <a href="http://shop.tworld.co.kr/" target="_blank"><img src="http://cdnw.shop.tworld.co.kr/public/img/email/logo.png" width="160" height="28" border="0" alt="T direct shop" style="vertical-align:top;"></a>
+           </td>
+           <td width="50%" align="right" style="text-align:right;font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:normal;font-size:13px;color:#888;">
+            <a href="http://shop.tworld.co.kr/" target="_blank" style="color:#888;text-decoration:none;">홈</a>
+           <span style="margin-right:5px;margin-left:5px;color:#e1e1e1;">|</span>
+            <a href="http://shop.tworld.co.kr/my/submain/" target="_blank" style="color:#888;text-decoration:none;">나의 쇼핑</a>
+           <span style="margin-right:5px;margin-left:5px;color:#e1e1e1;">|</span>
+            <a href="https://www.tworld.co.kr/normal.do?serviceId=S_CMIS0054&viewId=V_CENT0664" target="_blank" style="color:#888;text-decoration:none;">고객센터</a>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </td>
+         </tr>
+                  <!-- //Header -->
+      <tr><td colspan="3" height="38" style="font-size:0;line-height:0;"></td></tr>
+         <tr>
+          <td width="40"></td>
+       <td align="left" style="text-align:left">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+         <tbody>
+          <tr>
+           <td style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:normal;font-size:28px;color:#000;">
+           [T다이렉트샵] 상품 비교 내용 안내드립니다.
+           </td>
+          </tr>
+          <tr>
+           <td height="33" style="font-size:0;line-height:0;"></td>
+          </tr>
+          <tr>
+           <td style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:normal;font-size:17px;color:#000;">
+           안녕하세요, 고객님.
+          </td>
+         </tr>
+         <tr>
+           <td height="9" style="font-size:0;line-height:0;"></td>
+         </tr>
+         <tr>
+           <td style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:normal;font-size:14px;color:#757575;">
+           비교하신 상품정보를 보내드립니다.
+           </td>
+          </tr>    
+          <tr>
+           <td height="40" style="font-size:0;line-height:0;"></td>
+          </tr>
+         </tbody>
+        </table>
+       </td>
+       <td width="40"></td>
+         </tr>
+        </table>
+        </div>
+       </td>
+      </tr>
+  
+      <!-- //head -->
+      <!-- container -->
+         <tr>
+     <td align="center">
+   <div style="max-width:700px;margin:0 auto">
+     <table border="0" cellpadding="0" cellspacing="0" align="center" style="width:700px;font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,Sans-serif;-webkit-text-size-adjust:100%;text-align:left;background-color:#fff;">
+         <!-- contents -->
+      <tbody>
+         <tr>
+        <td width="40"></td>
+        <td>
+<%
+st1 = "border-top:1px solid #e4e4e4"
+//--------------데이터 처리A------------------//
+aStmt=con.prepareStatement(aquery.toString())
+aStmt.setString("1",context.get("seq"))
+aRs=aStmt.execute()
+prodGrpCnt = context.get("PRODUCT_GRP_CNT")
+curcnt ="0" 
+if(aRs.next())
+%>
+                                    <table border="0" cellspacing="0" cellpadding="0" style="text-align:left;background-color:white;width:100%;margin-top:13px;border-top:1px solid #000;border-bottom:1px solid #CCCCCC;">
+                                        <tbody>
+                                            <tr>
+            <th scope="row" style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;background-color:#F1F1F1;padding:15px 15px;letter-spacing:-2px; width:21%; text-align:center; font-weight:normal;">
+                                                선택한 단말기<br> 총 <%=(context.get("PRODUCT_GRP_CNT"))%>개</th>
+    <%  if(prodGrpCnt.equals(curcnt)) %>
+                                                <td style="color:#333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;font-weight:bold;width:19.75%;">&nbsp;</td>
+                                                <td style="color:#333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;font-weight:bold;width:19.75%;">&nbsp;</td>
+                                                <td style="color:#333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;font-weight:bold;width:19.75%;">&nbsp;</td>
+                                                <td style="color:#333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;font-weight:bold;width:19.75%;">&nbsp;</td>
+    <%    else  %> 
+                                                 <td style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;padding:15px 15px;border-left:1px solid #E4E4E4;letter-spacing:-1px; width:19.75%; text-align:center;"><%=(aRs.getString("cmp_prod1"))%></td>
+    <%      curcnt="1" %> 
+    <%    end if %> 
+    <%  if(prodGrpCnt.equals(curcnt))%>
+                                                <td style="color:#333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;font-weight:bold;width:19.75%;">&nbsp;</td>
+                                                <td style="color:#333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;font-weight:bold;width:19.75%;">&nbsp;</td>
+                                                <td style="color:#333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;font-weight:bold;width:19.75%;">&nbsp;</td>
+    <%    else  %> 
+            <td style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;padding:15px 15px;border-left:1px solid #E4E4E4;letter-spacing:-1px; width:19.75%; text-align:center;"><%=(aRs.getString("cmp_prod2"))%></td>
+    <%      curcnt="2"%> 
+    <%    end if %> 
+    <%  if(prodGrpCnt.equals(curcnt))%>
+                                                <td style="color:#333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;font-weight:bold;width:19.75%;">&nbsp;</td>
+                                                <td style="color:#333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;font-weight:bold;width:19.75%;">&nbsp;</td>
+    <%    else  %> 
+            <td style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;padding:15px 15px;border-left:1px solid #E4E4E4;letter-spacing:-1px; width:19.75%; text-align:center;"><%=(aRs.getString("cmp_prod3"))%></td>
+    <%      curcnt="3"%> 
+    <%    end if %> 
+    <%  if(prodGrpCnt.equals(curcnt))%>
+                                                <td style="color:#333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;font-weight:bold;width:19.75%;">&nbsp;</td>
+    <%    else  %> 
+            <td style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;padding:15px 15px;border-left:1px solid #E4E4E4;letter-spacing:-1px; width:19.75%; text-align:center;"><%=(aRs.getString("cmp_prod4"))%></td>
+    <%       curcnt="4" %> 
+    <%    end if %> 
+                                            </tr>
+ 
+ 
+   <%      curcnt="0" %>
+                                            <tr>
+            <th scope="row" style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;background-color:#F1F1F1;padding:15px 15px;letter-spacing:-2px; width:21%; text-align:center; font-weight:normal;border-top:1px solid #e4e4e4">
+                                                   색상
+                                                </th>
+    <%  if(prodGrpCnt.equals(curcnt)) %>
+                                                <td style="color:#333;font-size:14px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;border-top:1px solid #e4e4e4;width:19.75%;">&nbsp;</td>
+                                                <td style="color:#333;font-size:14px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;border-top:1px solid #e4e4e4;width:19.75%;">&nbsp;</td>
+                                                <td style="color:#333;font-size:14px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;border-top:1px solid #e4e4e4;width:19.75%;">&nbsp;</td>
+                                                <td style="color:#333;font-size:14px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;border-top:1px solid #e4e4e4;width:19.75%;">&nbsp;</td>
+    <%    else  %> 
+                             <td style="color:#333;font-size:14px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;border-top:1px solid #e4e4e4;width:19.75%;">
+                                                                       <span style="letter-spacing:-1px"><%=(aRs.getString("cmp_mkr1"))%></span>
+                                                    <div style="display:block;margin-top:10px;text-align:center;">
+                                                        <a href='<%=(aRs.getString("cmp_url1"))%>' target="_blank" title="새창"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/btn_link_buy.png" alt="지금 구매하기" width="99" height="28" border="0" style="vertical-align:top;"></a>
+                                                    </div>
+                                                </td>
+     <%      curcnt="1"
+        end if %> 
+    <%  if(prodGrpCnt.equals(curcnt)) %>
+                                                <td style="color:#333;font-size:14px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;border-top:1px solid #e4e4e4;width:19.75%;">&nbsp;</td>
+                                                <td style="color:#333;font-size:14px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;border-top:1px solid #e4e4e4;width:19.75%;">&nbsp;</td>
+                                                <td style="color:#333;font-size:14px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;border-top:1px solid #e4e4e4;width:19.75%;">&nbsp;</td>
+    <%    else  %> 
+                   
+                                  <td style="color:#333;font-size:14px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;border-top:1px solid #e4e4e4;width:19.75%;">
+                                                    <span style="letter-spacing:-1px"><%=(aRs.getString("cmp_mkr2"))%></span>
+                                                    <div style="display:block;margin-top:10px;text-align:center;">
+                                                        <a href='<%=(aRs.getString("cmp_url2"))%>' target="_blank" title="새창"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/btn_link_buy.png" alt="지금 구매하기" width="99" height="28" border="0" style="vertical-align:top;"></a>
+                                                    </div>
+                                                </td>
+    <%      curcnt="2"
+        end if %> 
+    <%  if(prodGrpCnt.equals(curcnt)) %>
+                                                <td style="color:#333;font-size:14px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;border-top:1px solid #e4e4e4;width:19.75%;">&nbsp;</td>
+                                                <td style="color:#333;font-size:14px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;border-top:1px solid #e4e4e4;width:19.75%;">&nbsp;</td>
+    <%    else  %> 
+                                                <td style="color:#333;font-size:14px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;border-top:1px solid #e4e4e4;width:19.75%;">
+                                                    <span style="letter-spacing:-1px"><%=(aRs.getString("cmp_mkr3"))%></span>
+                                                    <div style="display:block;margin-top:10px;text-align:center;">
+                                                        <a href='<%=(aRs.getString("cmp_url3"))%>' target="_blank" title="새창"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/btn_link_buy.png" alt="지금 구매하기" width="99" height="28" border="0" style="vertical-align:top;"></a>
+                                                    </div>
+                                                </td>
+    <%      curcnt="3"
+        end if %> 
+  
+    <%  if(prodGrpCnt.equals(curcnt)) %>
+                                                <td style="color:#333;font-size:14px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;border-top:1px solid #e4e4e4;width:19.75%;">&nbsp;</td>
+    <%    else  %> 
+                             <td style="color:#333;font-size:14px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:center;padding:30px 10px;border-left:1px solid #E4E4E4;border-top:1px solid #e4e4e4;width:19.75%;">
+                                                                       <span style="letter-spacing:-1px"><%=(aRs.getString("cmp_mkr4"))%></span>
+                                                    <div style="display:block;margin-top:10px;text-align:center;">
+                                                        <a href='<%=(aRs.getString("cmp_url4"))%>' target="_blank" title="새창"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/btn_link_buy.png" alt="지금 구매하기" width="99" height="28" border="0" style="vertical-align:top;"></a>
+                                                    </div>
+                                                </td>                                            
+     <%  end if %> 
+           </tr>                                        
+                                        </tbody>
+                                    </table>          
+        
+<% end if %>
+<% aStmt.close()
+   aRs.close() %>
+<%
+//--------------데이터 처리 B and C------------------//
+bStmt=con.prepareStatement(bquery.toString())
+bStmt.setString("1",context.get("seq"))
+bRs=bStmt.execute()
+bTabYn = "N"
+cTabYn = "N"
+cImgYn = "N"
+while(bRs.next())
+    // cimgFg : B 월납부액 비교, C 상세스팩 
+    tabFg = bRs.getString("type_fg")
+    tabSeq = bRs.getString("type_seq")
+    cmpCtt0 = bRs.getString("cmp_ctt0")
+    // cimgFg : B 월납부액 비교, C 상세스팩 일반 , D: 상세스팩중 이미지 비교 처리 부분 
+    cimgFg = bRs.getString("cimg_fg")
+    if (tabSeq.equals("1"))
+        st1 = ""
+    else
+        st1 = " border-top:1px solid #e4e4e4"
+    end if
+    if( cimgFg.equals("D"))
+        if (cmpCtt0.equals("상품이미지"))
+            cImgYn = "Y"
+            ccmpImg1 = bRs.getString("cmp_ctt1")
+            ccmpImg2 = bRs.getString("cmp_ctt2")
+            ccmpImg3 = bRs.getString("cmp_ctt3")
+            ccmpImg4 = bRs.getString("cmp_ctt4")
+        end if
+        if (cmpCtt0.equals("컬러"))
+            cImgYn = "Y"
+            ccmpColor1 = bRs.getString("cmp_ctt1")
+            ccmpColor2 = bRs.getString("cmp_ctt2")
+            ccmpColor3 = bRs.getString("cmp_ctt3")
+            ccmpColor4 = bRs.getString("cmp_ctt4")
+        end if
+        if (cmpCtt0.equals("링크URL"))
+            cImgYn = "Y"
+            ccmpUrl1 = bRs.getString("cmp_ctt1")
+            ccmpUrl2 = bRs.getString("cmp_ctt2")
+            ccmpUrl3 = bRs.getString("cmp_ctt3")
+            ccmpUrl4 = bRs.getString("cmp_ctt4")
+        end if
+    else
+        cImgYn = "N"
+    end if
+%>
+<% if (tabFg.equals("B"))
+    if(bTabYn.equals("N")) %>
+           <!-- 월 납부액 비교 -->
+         <table border="0" cellspacing="0" cellpadding="0" style="text-align:left;background-color:white;width:100%;margin-top:40px;">
+          <tbody>
+           <tr>
+            <td style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;font-weight:bold;">월 납부액 비교</td>
+            <td style="color:#333333;font-size:13px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;text-align:right;">※ 월 통신요금과 단말분할상환금액을 합한 금액(24개월 분할상환/약정 기준)</td>
+           </tr>
+          </tbody>
+         </table> 
+         <table border="0" cellspacing="0" cellpadding="0" style="text-align:left;background-color:white;width:100%;margin-top:13px;border-top:1px solid #000;border-bottom:1px solid #CCCCCC;">
+            <tbody>
+<%      bTabYn="Y"
+    end if %>
+             <tr>
+            <th scope="row" style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;background-color:#F1F1F1;padding:15px 15px;letter-spacing:-2px; width:21%; text-align:center; font-weight:normal;<%=(st1)%>">
+               <%=(cmpCtt0)%></th>
+            <td style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;padding:15px 15px;border-left:1px solid #E4E4E4;letter-spacing:-1px; width:19.75%; text-align:center;<%=(st1)%>">
+           <%=(bRs.getString("cmp_ctt1"))%>
+              </td>
+            <td style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;padding:15px 15px;border-left:1px solid #E4E4E4;letter-spacing:-1px; width:19.75%; text-align:center;<%=(st1)%>">
+           <%=(bRs.getString("cmp_ctt2"))%>
+              </td>
+            <td style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;padding:15px 15px;border-left:1px solid #E4E4E4;letter-spacing:-1px; width:19.75%; text-align:center;<%=(st1)%>">
+           <%=(bRs.getString("cmp_ctt3"))%> 
+              </td>
+            <td style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;padding:15px 15px;border-left:1px solid #E4E4E4;letter-spacing:-1px; width:19.75%; text-align:center;<%=(st1)%>">
+           <%=(bRs.getString("cmp_ctt4"))%> 
+              </td>
+             </tr>
+<%  end if %>
+<% if (tabFg.equals("C"))
+    if(cTabYn.equals("N")) %>
+        <% if(bTabYn.equals("Y")) %>
+            </tbody>
+           </table>
+           <!-- //월 납부액 비교 -->
+            <% bTabYn="E" %>
+        <% end if %>
+           <!-- 상세 스펙 비교 -->
+         <p style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;margin:40px 0 0 0;font-weight:bold;">상세 스펙 비교</p>
+         <table border="0" cellspacing="0" cellpadding="0" style="text-align:left;background-color:white;width:100%;margin-top:13px;border-top:1px solid #000;border-bottom:1px solid #CCCCCC;">
+            <tbody>
+<%      cTabYn="Y"
+    end if %>
+<%  if (cImgYn.equals("N")) %>
+             <tr>
+            <th scope="row" style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;background-color:#F1F1F1;padding:15px 15px;letter-spacing:-2px; width:21%; text-align:center; font-weight:normal;<%=(st1)%>">
+                <%=(cmpCtt0)%>
+            </th>
+            <td style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;padding:15px 15px;border-left:1px solid #E4E4E4;letter-spacing:-1px; width:19.75%; text-align:center;<%=(st1)%>">
+             <%=(bRs.getString("cmp_ctt1"))%>
+             </td>
+            <td style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;padding:15px 15px;border-left:1px solid #E4E4E4;letter-spacing:-1px; width:19.75%; text-align:center;<%=(st1)%>">
+             <%=(bRs.getString("cmp_ctt2"))%>
+              </td>
+            <td style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;padding:15px 15px;border-left:1px solid #E4E4E4;letter-spacing:-1px; width:19.75%; text-align:center;<%=(st1)%>">
+             <%=(bRs.getString("cmp_ctt3"))%>
+              </td>
+            <td style="color:#333333;font-size:15px;font-family:Malgun Gothic,맑은 고딕,돋움,Dotum;padding:15px 15px;border-left:1px solid #E4E4E4;letter-spacing:-1px; width:19.75%; text-align:center;<%=(st1)%>">
+             <%=(bRs.getString("cmp_ctt4"))%>
+              </td>
+             </tr>
+<%  end if %>
+<% end if %>
+<% end while %>
+<% bStmt.close()
+   bRs.close() %>
+<% if(bTabYn.equals("Y")) %>
+    <% if (cTabYn.equals("N")) %>
+            </tbody>
+           </table>
+           <!-- //월 납부액 비교 -->
+        <% if (cImgYn.equals("Y")) %>
+   <!-- //상세 스펙 비교 -->
+            <% cTabYn="Y" %>
+        <% end if %>
+    <% end if %>
+<% end if %>
+<!-- 컬러 로우제거(이미지, 색상, 지금구매하러가기 바로가기 URL) -->
+<!-- 컬러 로우제거(이미지, 색상, 지금구매하러가기 바로가기 URL) -->
+<% if (cTabYn.equals("Y")) %>
+           <!-- //상세 스펙 비교 -->
+<% end if %>
+       </td>
+       <td width="40"></td>
+      </tr>
+      <!-- //contents -->
+      </tbody>
+     </table>
+     </div>
+
+     <table border="0" cellpadding="0" cellspacing="0" align="center" style="width:700px;font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,Sans-serif;-webkit-text-size-adjust:100%;text-align:left;background-color:#fff;">
+            <tbody>
+             <tr>
+                <td width="40"></td>
+                <td style="text-align:center;">
+                <div style="display:block;text-align:center;">
+                 <br><br>
+                 <a href="http://shop.tworld.co.kr" target="_blank" title="새창"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/btn_link_home.png" alt="T다이렉트샵으로 이동" width="240" height="46" border="0" style="vertical-align:top;"></a>
+                <br><br><br>
+               </div>
+              </td>
+              <td width="40"></td>
+             </tr>
+            </tbody>
+           </table>
+    <!-- //footer -->
+            
+     <table border="0" cellpadding="0" cellspacing="0" align="center" style="width:700px;font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,Sans-serif;-webkit-text-size-adjust:100%;text-align:left;background-color:#fff;">
+      <tr><td colspan="3" height="32" style="font-size:0;line-height:0;background-color:#fafafa;"></td></tr>
+      <tr>
+       <td width="40" style="background-color:#fafafa;"></td>
+       <td style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:1.5;font-size:13px;color:#757575;background-color:#fafafa;">
+        더 이상 수신을 원하지 않으시면, <a href="https://cdnw.shop.tworld.co.kr/public/doc/email/emailurl.html?link=refusal&user_id=(context.get("USER_ID"))" target="_blank" style="font-size:13px;color:#3e9ae6;text-decoration:underline;">수신거부</a>를 클릭하여 E-mail 수신을 거부하여 주시기 바랍니다. <br>
+        T world 미가입자는 고객센터(SKT 핸드폰에서 114 또는1525)를 통해 수신거부하실 수 있습니다. <br>
+        If you do not wish to receive this e-mail anymore, please <a href="https://cdnw.shop.tworld.co.kr/public/doc/email/emailurl.html?link=refusal&user_id=(context.get("USER_ID"))" target="_blank" style="font-size:13px;color:#3e9ae6;text-decoration:underline;">click here</a>.
+    <!--</span>-->
+          </td>
+       <td width="40" style="background-color:#fafafa;"></td>
+         </tr>
+      <tr><td colspan="3" height="25" style="font-size:0;line-height:0;background-color:#fafafa;"></td></tr>
+      <tr>
+       <td width="40" style="background-color:#fafafa;"></td>
+       <td style="background-color:#fafafa;font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:17px;font-size:11px;color:#757575;">
+        서울특별시 중구 을지로 65 |  대표이사/사장 : 박정호 | 사업자등록번호 104-81-37225<br>
+        고객상담 : 1599-0111(유료/타사고객), 1525(무료/SK텔레콤 휴대폰)<br>
+        COPYRIGHT ⓒ SK TELECOM CO., LTD. All RIGHTS RESERVED.
+       </td>
+       <td width="40" style="background-color:#fafafa;"></td>
+      </tr>
+      <tr><td colspan="3" height="32" style="font-size:0;line-height:0;background-color:#fafafa;"></td></tr>
+     </table>
+    <!-- //footer -->
+    </td>
+   </tr>
+ <!-- //container -->
+  </table>
+    
+</body>
+</html>

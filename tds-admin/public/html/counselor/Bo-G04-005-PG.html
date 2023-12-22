@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">상담사 주문</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li><strong>상담사 주문</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none">휴대폰</a></li>
+				<li><a href="#none">5G 태블릿</a></li>
+				<li><a href="#none" class="on">태블릿</a></li>
+				<li><a href="#none">스마트워치</a></li>
+				<li><a href="#none">휴대용 와이파이</a></li>
+				<li><a href="#none">키즈폰</a></li>
+				<li><a href="#none">상담사주문조회</a></li>
+			</ul>
+			<!-- //tab -->
+
+			<h2 class="hidden">태블릿</h2>
+			<div class="h-area2">
+				<h3 class="h-type2">상품 검색</h3>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">자급제 /중고폰 개통</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>상품 검색</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col>
+				<col style="width:10%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">단말 선택</th>
+					<td>
+						<div class="form-group block">
+							<span class="c-chk">
+								<input type="checkbox" id="deviceBrand1" name="deviceBrand">
+								<label for="deviceBrand1">삼성전자</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="deviceBrand2" name="deviceBrand">
+								<label for="deviceBrand2">LG전자</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="deviceBrand3" name="deviceBrand">
+								<label for="deviceBrand3">Apple</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="deviceBrand4" name="deviceBrand">
+								<label for="deviceBrand4">팬택</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="deviceBrand5" name="deviceBrand">
+								<label for="deviceBrand5">기타</label>
+							</span>
+						</div>
+						<p class="mt-6"><input type="text" class="c-input" title="모상품 그룹명 입력" placeholder="모상품 그룹명을 입력해주세요."></p>
+					</td>
+					<th scope="row">가입유형</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="joinType1" name="joinType">
+								<label for="joinType1">기기변경</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="joinType2" name="joinType">
+								<label for="joinType2">번호이동</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="joinType3" name="joinType">
+								<label for="joinType3">010신규</label>
+							</span>
+						</div>
+						<p class="txt-info">온라인 주문 시 일시불 결제만 가능</p>
+						<p class="txt-info">바로 픽업 시 분할상환 결제만 가능</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">
+						요금제 선택<br>
+						<a href="#layerPop1" data-model="layerPop1" class="btn-base btn-gray mt-6">변경</a>
+					</th>
+					<td>
+						<ul class="bill-area1">
+							<li class="bill-subject">
+								<a href="#none" class="bill-tit">데이터 전용 5G</a>
+								<span class="bill-price">53,900원 / 월</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 약정할인 12개월</span>
+								<span class="bill-price">-6,300원</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 차상위계층 <a href="#none" class="ico-tooltip">툴팁</a></span>
+								<span class="bill-price">-12,100원</span>
+							</li>
+						</ul>
+					</td>
+					<th scope="row">지원금 선택</th>
+					<td>
+						<div class="form-group all-block">
+							<span class="c-chk">
+								<input type="checkbox" id="supportType1" name="supportType">
+								<label for="supportType1">단말지원금</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="supportType2" name="supportType">
+								<label for="supportType2">요금할인 12개월</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="supportType3" name="supportType">
+								<label for="supportType3">요금할인 24개월</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="supportType4" name="supportType">
+								<label for="supportType4">무약정 플랜</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h3 class="h-type2">태블릿 조회 결과 <span class="txt-count">(<em>90,865</em>건)</span></h3>
+			<!-- data table -->
+			<div class="table-data-wrap">
+				<!-- top button -->
+				<div class="btn-area table-top">
+					<select class="c-select" title="단말 할부선택" style="width:120px;">
+						<option value="" selected="selected">선택</option>
+						<option value="">일시불</option>
+						<option value="">단말할부 : 12개월</option>
+						<option value="">단말할부 : 24개월</option>
+						<option value="">단말할부 : 30개월</option>
+						<option value="">T렌탈</option>
+					</select>
+					<select class="c-select" title="정렬 선택" style="width:100px;">
+						<option value="" selected="selected">선택</option>
+						<option value="">최신순</option>
+						<option value="">인기순</option>
+						<option value="">낮은가격순</option>
+						<option value="">높은가격순</option>
+					</select>
+				</div>
+				<!-- //top button -->
+				
+				<div class="table-scroll">
+					<!-- list -->
+					<table class="table-col" style="width:1150px;">
+					<caption>태블릿 조회 결과  리스트</caption>
+					<colgroup>
+						<col style="width:50px">
+						<col style="width:auto">
+						<col style="width:80px">
+						<col style="width:40px">
+						<col style="width:80px">
+						<col style="width:80px">
+						<col style="width:80px">
+						<col style="width:80px">
+						<col style="width:80px">
+						<col style="width:80px">
+						<col style="width:80px">
+						<col style="width:80px">
+						<col style="width:110px">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">순번</th>
+							<th scope="col">휴대폰명 /  모델명</th>
+							<th scope="col">출고가</th>
+							<th scope="col">
+								<span class="c-chk txt-no">
+									<input type="checkbox" id="allChk" name="allChk">
+									<label for="allChk">전체선택</label>
+								</span>
+							</th>
+							<th scope="col">지원금선택</th>
+							<th scope="col">공시지원금</th>
+							<th scope="col">추가지원금</th>
+							<th scope="col">단말대금<br><span class="f-11">(수수료포함)</span></th>
+							<th scope="col">단말분할상환금<br><span class="f-11">(수수료포함)</span></th>
+							<th scope="col">기본요금<br><span class="f-11">(약정/복지할인적용)</span></th>
+							<th scope="col">요금할인<br><span class="f-11">(할인총액)</span></th>
+							<th scope="col">월납부금액<br><span class="f-11">(수수료포함)</span></th>
+							<th scope="col">배송방법</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td class="l-data">
+								<div class="device-tit">
+									<span class="device-brand">Lenovo</span>
+									<a href="#none" class="txt-type2">Tab 4 10 Plus (OMD LENOVO TAB4 10 PLUS)</a>
+									<select class="c-select" title=" 선택">
+										<option value="" selected="selected">실버 / 64GB (재고 : 9)</option>
+									</select>
+									<a href="#none">[이벤트 자세히 보기]</a>
+								</div>
+							</td>
+							<td class="r-data">1,360,700</td>
+							<td>
+								<span class="c-chk txt-no">
+									<input type="checkbox" id="payChk1_1" name="payChk1">
+									<label for="payChk1_1">선택</label>
+								</span>
+							</td>
+							<td class="l-data">단말지원</td>
+							<td class="r-data txt-red">-81,000</td>
+							<td class="r-data txt-red">-12,100</td>
+							<td class="r-data">
+								1,267,600<br>(1,346,974)
+							</td>
+							<td class="r-data">
+								52,816<br>(56,123)
+							</td>
+							<td class="r-data">57420</td>
+							<td class="r-data txt-red">0</td>
+							<td class="r-data">
+								<strong class="txt-black2">110,236<br>(113,543)</strong>
+							</td>
+							<td>
+								<p>
+									택배배송<br>
+									오늘도착<br>
+									바로픽업<br>
+									찾아가는서비스
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td rowspan="4">1</td>
+							<td rowspan="4" class="l-data">
+								<div class="device-tit">
+									<span class="device-brand">Lenovo</span>
+									<a href="#none" class="txt-type2">Tab 4 10 Plus (OMD LENOVO TAB4 10 PLUS)</a>
+									<select class="c-select" title=" 선택">
+										<option value="" selected="selected">실버 / 64GB (재고 : 9)</option>
+									</select>
+									<a href="#none">[이벤트 자세히 보기]</a>
+								</div>
+							</td>
+							<td rowspan="4" class="r-data">1,360,700</td>
+							<td>
+								<span class="c-chk txt-no">
+									<input type="checkbox" id="payChk2_1" name="payChk2">
+									<label for="payChk2_1">선택</label>
+								</span>
+							</td>
+							<td class="l-data">단말지원</td>
+							<td class="r-data txt-red">-81,000</td>
+							<td class="r-data txt-red">-12,100</td>
+							<td class="r-data">
+								1,267,600<br>(1,346,974)
+							</td>
+							<td class="r-data">
+								52,816<br>(56,123)
+							</td>
+							<td class="r-data">57420</td>
+							<td class="r-data txt-red">0</td>
+							<td class="r-data">
+								<strong class="txt-black2">110,236<br>(113,543)</strong>
+							</td>
+							<td rowspan="4">
+								<p>
+									택배배송<br>
+									오늘도착<br>
+									바로픽업<br>
+									찾아가는서비스
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="c-chk txt-no">
+									<input type="checkbox" id="payChk2_2" name="payChk2">
+									<label for="payChk2_2">선택</label>
+								</span>
+							</td>
+							<td class="l-data">12개월요금할인</td>
+							<td class="r-data txt-red">-81,000</td>
+							<td class="r-data txt-red">-12,100</td>
+							<td class="r-data">
+								1,267,600<br>(1,346,974)
+							</td>
+							<td class="r-data">
+								52,816<br>(56,123)
+							</td>
+							<td class="r-data">57420</td>
+							<td class="r-data txt-red">0</td>
+							<td class="r-data">
+								<strong class="txt-black2">110,236<br>(113,543)</strong>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="c-chk txt-no">
+									<input type="checkbox" id="payChk2_3" name="payChk2">
+									<label for="payChk2_3">선택</label>
+								</span>
+							</td>
+							<td class="l-data">24개월요금할인</td>
+							<td class="r-data txt-red">-81,000</td>
+							<td class="r-data txt-red">-12,100</td>
+							<td class="r-data">
+								1,267,600<br>(1,346,974)
+							</td>
+							<td class="r-data">
+								52,816<br>(56,123)
+							</td>
+							<td class="r-data">57420</td>
+							<td class="r-data txt-red">0</td>
+							<td class="r-data">
+								<strong class="txt-black2">110,236<br>(113,543)</strong>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="c-chk txt-no">
+									<input type="checkbox" id="payChk2_4" name="payChk2">
+									<label for="payChk2_4">선택</label>
+								</span>
+							</td>
+							<td class="l-data">무약정플랜</td>
+							<td class="r-data txt-red">-81,000</td>
+							<td class="r-data txt-red">-12,100</td>
+							<td class="r-data">
+								1,267,600<br>(1,346,974)
+							</td>
+							<td class="r-data">
+								52,816<br>(56,123)
+							</td>
+							<td class="r-data">57420</td>
+							<td class="r-data txt-red">0</td>
+							<td class="r-data">
+								<strong class="txt-black2">110,236<br>(113,543)</strong>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<!-- //list -->
+				</div>
+			</div>
+			<!-- //data table -->
+
+			<!-- btn fixed -->
+			<div class="btn-fixed">
+				<a href="#none" class="btn-base btn-gray">비교하기</a>
+				<a href="#none" class="btn-base btn-blue">셀프동의 주문</a>
+				<a href="#none" class="btn-base btn-red">온라인 주문</a>
+			</div>
+			<!-- //btn fixed -->
+		</div>
+	</div>
+</div>
+<!-- 레이어팝업 : 요금제 선택 -->
+<div id="layerPop1" class="pop-wrap pop-layer">
+	<div class="pop-header">
+		<strong class="h-type1">요금제 선택</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		<h3 class="h-type2">요금제 조회</h3>
+		<table class="table-row">
+		<caption>요금제 조회</caption>
+		<colgroup>
+			<col style="width:10%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">요금제명</th>
+				<td>
+					<select class="c-select" title="요금제 선택" style="width:150px;">
+						<option value="" selected="selected">전체</option>
+					</select>
+					<input type="text" class="c-input" title="요금제 입력" style="width:74%;">
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">이용요금</th>
+				<td>
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="useBill1" name="useBill">
+							<label for="useBill1">~3만원대</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="useBill2" name="useBill">
+							<label for="useBill2">4~5만원대</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="useBill3" name="useBill">
+							<label for="useBill3">6만원대~</label>
+						</span>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+		<!-- btn -->
+		<div class="btn-area right">
+			<a href="#none" class="btn-base">검색</a>
+			<a href="#none" class="btn-base">초기화</a>
+		</div>
+		<!-- //btn -->
+
+		<h3 class="h-type2">요금제 조회 결과 <span class="txt-count">(<em>90,865</em>건)</span></h3>
+		<table class="table-col">
+		<caption>요금제 조회 결과</caption>
+		<colgroup>
+			<col style="width:8%">
+			<col>
+			<col style="width:16%">
+			<col style="width:16%">
+			<col style="width:16%">
+			<col style="width:16%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">순번</th>
+				<th scope="col">요금제명</th>
+				<th scope="col">음성</th>
+				<th scope="col">데이터</th>
+				<th scope="col">문자</th>
+				<th scope="col">월정액</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td class="l-data"><a href="#none">T Tab 9</a></td>
+				<td>해당없음</td>
+				<td class="r-data">500MB</td>
+				<td class="r-data">-</td>
+				<td class="r-data">9,900</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td class="l-data"><a href="#none">T Tab 9</a></td>
+				<td>해당없음</td>
+				<td class="r-data">500MB</td>
+				<td class="r-data">-</td>
+				<td class="r-data">9,900</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td class="l-data"><a href="#none">T Tab 9</a></td>
+				<td>해당없음</td>
+				<td class="r-data">500MB</td>
+				<td class="r-data">-</td>
+				<td class="r-data">9,900</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td class="l-data"><a href="#none">T Tab 9</a></td>
+				<td>해당없음</td>
+				<td class="r-data">500MB</td>
+				<td class="r-data">-</td>
+				<td class="r-data">9,900</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td class="l-data"><a href="#none">T Tab 9</a></td>
+				<td>해당없음</td>
+				<td class="r-data">500MB</td>
+				<td class="r-data">-</td>
+				<td class="r-data">9,900</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td class="l-data"><a href="#none">T Tab 9</a></td>
+				<td>해당없음</td>
+				<td class="r-data">500MB</td>
+				<td class="r-data">-</td>
+				<td class="r-data">9,900</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td class="l-data"><a href="#none">T Tab 9</a></td>
+				<td>해당없음</td>
+				<td class="r-data">500MB</td>
+				<td class="r-data">-</td>
+				<td class="r-data">9,900</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td class="l-data"><a href="#none">T Tab 9</a></td>
+				<td>해당없음</td>
+				<td class="r-data">500MB</td>
+				<td class="r-data">-</td>
+				<td class="r-data">9,900</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td class="l-data"><a href="#none">T Tab 9</a></td>
+				<td>해당없음</td>
+				<td class="r-data">500MB</td>
+				<td class="r-data">-</td>
+				<td class="r-data">9,900</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td class="l-data"><a href="#none">T Tab 9</a></td>
+				<td>해당없음</td>
+				<td class="r-data">500MB</td>
+				<td class="r-data">-</td>
+				<td class="r-data">9,900</td>
+			</tr>
+		</tbody>
+		</table>
+		<!-- paginate -->
+		<div class="paginate-area">
+			<a href="#none" class="pg-first">처음 리스트</a>
+			<a href="#none" class="pg-prev">이전 리스트</a>
+			<ul class="paginate">
+				<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+				<li><a href="#none">2</a></li>
+				<li><a href="#none">3</a></li>
+				<li><a href="#none">4</a></li>
+				<li><a href="#none">5</a></li>
+				<li><a href="#none">6</a></li>
+				<li><a href="#none">7</a></li>
+				<li><a href="#none">8</a></li>
+				<li><a href="#none">9</a></li>
+				<li><a href="#none">10</a></li>
+			</ul>
+			<a href="#none" class="pg-next">다음 리스트</a>
+			<a href="#none" class="pg-last">마지막 리스트</a>
+		</div>
+		<!-- //paginate -->
+
+		<h3 class="h-type2">선택된 요금제</h3>
+		<table class="table-row">
+		<caption>선택된 요금제</caption>
+		<colgroup>
+			<col style="width:14%">
+			<col>
+			<col style="width:14%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">요금제명</th>
+				<td>T Tab 18</td>
+				<th scope="row">월정액</th>
+				<td class="r-data"><strong class="txt-black2">19,800원</strong></td>
+			</tr>
+			<tr>
+				<th scope="row" rowspan="2">약정할인</th>
+				<td>
+					<select class="c-select" title="모바일종류 선택">
+						<option value="" selected="selected">무약정</option>
+					</select>
+				</td>
+				<th scope="row" rowspan="2">복지할인</th>
+				<td>
+					<select class="c-select" title="복지할인 선택">
+						<option value="" selected="selected">해당 없음</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="r-data">
+					<strong class="txt-red">-0원</strong>
+				</td>
+				<td class="r-data">
+					<strong class="txt-red">-0원</strong>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<h3 class="h-type2">회선인증</h3>
+		<table class="table-row">
+		<caption>회선인증</caption>
+		<colgroup>
+			<col style="width:14%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">휴대폰번호 *</th>
+				<td>
+					<select class="c-select" title="휴대폰번호 첫자리 선택" style="width:60px;">
+						<option value="" selected="selected">010</option>
+					</select>
+					<span class="txt-unit">-</span>
+					<input type="text" class="c-input" title="휴대폰번호 중간자리 입력" style="width:60px;">
+					<span class="txt-unit">-</span>
+					<input type="text" class="c-input" title="휴대폰번호 끝자리 입력" style="width:60px;">
+					<a href="#none" class="btn-base btn-gray">인증</a>
+					<a href="#none" class="btn-base btn-gray">인증완료</a>
+					<a href="#none" class="btn-base btn-line-gray">재인증</a>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+		<p class="align-center mt-10">본 요금제는 반드시 회선인증을 하셔야 합니다. 인증 후 호환기기만 노출됩니다.</p>
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-gray btn-layer-close">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<!-- //레이어팝업 : 요금제 선택 -->
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	//레이어팝업 호출
+		$('[data-model]').click(function(ev){
+			ev.preventDefault();
+			var model = $(this).attr('data-model');
+			modalCon(model,false,true);
+		});
+	});
+</script>
+</body>
+</html>

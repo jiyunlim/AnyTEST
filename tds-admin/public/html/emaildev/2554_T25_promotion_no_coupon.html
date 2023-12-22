@@ -1,0 +1,144 @@
+<%
+//-----------HANDLER Context Get-------------//
+record=context.get("record")
+con=context.get("con")
+//-----------파람 쿼리-------------//
+paramquery=java.lang.StringBuffer.new()
+paramquery.append(" SELECT  MAIL_SND_ITM_NM, MAIL_SND_ITM_CTT  FROM tshop_batch_param  WHERE seq_no = ? ")
+
+//--------------데이터 처리------------------//
+ parmStmt=con.prepareStatement(paramquery.toString())
+ parmStmt.setString("1",context.get("seq"))
+ param=parmStmt.execute()
+ while(param.next())
+  keyNM=param.getString("MAIL_SND_ITM_NM")
+  value=param.getString("MAIL_SND_ITM_CTT")
+  keyNM=keyNM.trim()
+  value=value
+  context.put(keyNM,value)
+ end while
+ parmStmt.close()
+ param.close()
+//--------------EVENT_CNT 정보------------------//
+  pEvtCnt="0"
+  pEvtCnt=context.get("EVENT_CNT")
+  pEvtCnt=pEvtCnt.trim()
+  if(pEvtCnt.equals(""))
+   pEvtCnt="0"
+  end if
+  
+  pEvtCntFg = "N"
+  if(pEvtCnt.equals(""))
+  else
+   pEvtCntFg = "Y"
+  end if   
+//--------------EVENT_CNT 정보 ------------------//
+%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">  
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>T world 다이렉트 - mailform</title><!-- //네이밍 -->
+</head> 
+<body>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tr>
+  <td style="background-color:#f0e8df; txt-align:center;">
+  
+   <br>  
+   <table border="0" cellpadding="0" cellspacing="0" width="796" style="margin:0 auto;">
+    <tr>
+     <td colspan="3" width="796" style="font-size:0; line-height:0"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/ml_tp_top.gif" border="0" usemap="#Map" alt="T다이렉트샵"><map name="Map"><area shape="rect" coords="601,74,737,92" href="http://shop.tworld.co.kr/email/common/emailurl.html?link=tworldshop" target="_blank" alt="shop.tworld.co.kr 바로가기"></map></td><!-- //네이밍 -->
+    </tr>
+    <tr>
+<!-- 개편수정_140708 -->
+     <td colspan="3" width="796" style="font-size:0; line-height:0"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/20140708_text_carecenter.gif" alt="T다이렉트샵만의
+특별한 이벤트!"></td>
+<!-- //개편수정_140708 -->
+    </tr>
+    <tr>
+     <td width="62" style="background-color:#f8f8f8;font-size:0; line-height:0"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/ml_tp_left_s1.gif" alt=""></td>
+     <td width="668" style="text-align:left;  line-height:20px;font-size:12px; color:#4c4c4c; background-color:#f8f8f8; vertical-align:top;">
+      <p style="text-align:left; font-size:12px; line-height:20px;color:#4c4c4c; padding:5px 0 10px 0;">
+       <strong>안녕하세요, <%=(context.get("CUST_NAM"))%> 고객님</strong>
+      </p>
+<!-- 개편수정_140708 -->
+      <div style="text-align:left; font-size:12px; line-height:20px;color:#4c4c4c;">
+       T다이렉트샵에서 <strong><%=(context.get("EVENT_DESC"))%></strong> 특별 이벤트를 진행 중입니다.
+       <br><br>
+       <strong>T다이렉트샵</strong><a style="text-decoration:underline; color:#006ea6;" title="shop.tworld.co.kr 바로가기" target="_blank" href="(shop.tworld.co.kr)http://shop.tworld.co.kr/email/common/emailurl.html?link=tworldshop">(shop.tworld.co.kr)</a><strong>만의 특별한 혜택</strong>을 경험하세요!
+      </div>
+<!-- //개편수정_140708 -->
+     </td>
+     <td width="66"style="font-size:0; line-height:0"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/ml_tp_right_s1.gif" alt=""></td>
+    </tr>
+    <tr>
+     <td colspan="3" style="font-size:0; line-height:0"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/ml_tp_btm.gif" alt=""></td>
+    </tr>
+   </table>
+   <table border="0" cellpadding="0" cellspacing="0" width="796" style="margin:0 auto;">
+    <tr>
+     <td style="text-align:left;">
+      <table border="0" cellpadding="0" cellspacing="0" style="border-left:1px solid #e9e2d9;border-right:1px solid #c3bcb5;">
+       <tr>
+        <td width="760" style="font-size:12px; background-color:#fff; border-right:1px solid #c5c5c5;">
+                                    <table width="700" border="0" cellpadding="0" cellspacing="0" style="margin-left:30px;">
+<% if(pEvtCntFg.equals("Y")) %> 
+<!-- 이벤트 갯수 EVENT_CNT:1 일 경우 노출 START -->         
+                                     <tr>
+                                          <td width="700" style="padding:30px 0 0 0">
+                                             <p><a style="text-decoration:underline; color:#006ea6;" title="" target="_blank" href='<%=(context.get("EVENT_LINK_1"))%>'><img src='<%=(context.get("EVENT_IMG_URL_1"))%>' alt="" border="0"></a></p>
+                                            </td>
+          </tr>
+<!-- 이벤트 갯수 EVENT_CNT:1 일 경우 노출 END --> 
+<% if(pEvtCnt.equals("2")) %> 
+<!-- 이벤트 갯수 EVENT_CNT:2 이상 일 경우 노출 START -->         
+                                     <tr>
+                                          <td width="700" style="padding:30px 0 0 0">
+                                             <p><a style="text-decoration:underline; color:#006ea6;" title="" target="_blank" href='<%=(context.get("EVENT_LINK_2"))%>'><img src='<%=(context.get("EVENT_IMG_URL_2"))%>' alt="" border="0"></a></p>
+                                            </td>
+          </tr>
+<!-- 이벤트 갯수 EVENT_CNT:2 이상 일 경우 노출 END -->         
+<% end if %>
+<% end if %>
+                                    </table>
+                                </td>
+        <td width="2" style="border-right:1px solid #cfcfcf;font-size:0; line-height:0"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/img_blank.gif" width="2" height="1" alt=""></td>
+        <td width="2" style="font-size:0; line-height:0"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/img_blank.gif" width="2" height="1" alt=""></td>
+                            </tr>
+       <tr>
+        <td width="760" style="font-size:12px; background-color:#fff; border-right:1px solid #c5c5c5;">
+         
+         <table width="700" border="0" cellpadding="0" cellspacing="0" style="margin-left:30px;border-top:1px #d2d3d3 dotted;">
+          <tr>
+           <td colspan="2" width="700" style="font-size:11px; font-family:dotum; color:#808080; line-height:16px;padding:20px 0;">
+본 메일은 <%=(context.get("CUST_NAM"))%> 고객님께서 <%=(context.get("RCV_AGREE_DTM"))%>, 광고 메일수신을 동의하셨기에 정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령 제23조의6 제2항 별표에 의거 (광고), (성인광고) 또는 @를 표시하지 않았습니다. 발신전용 메일이므로 회신을 통한 문의는 처리되지 않습니다. <br>
+메일수신을 원치 않는 고객님께서는 <a href='http://shop.tworld.co.kr/email/common/emailurl.html?link=refusal&user_id=<%=(context.get("USER_ID"))%>' style="font-size:11px; color:#006ea6; text-decoration:underline;">수신거부</a>를 클릭하여 주시기 바랍니다.<br> (단 Tworld 미가입자인 경우, Tworld 가입 후 회원정보변경을 통해 수신거부 가능합니다.) <br>
+If you do not wish to receive further mailings, <a href='http://shop.tworld.co.kr/email/common/emailurl.html?link=refusal&user_id=<%=(context.get("USER_ID"))%>' target="_blank" style="font-size:11px; color:#006ea6; text-decoration:underline;">click here. </a>
+           </td>
+          </tr> 
+          <tr>
+           <td width="230" style="font-size:0; line-height:0; vertical-align:top;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/ct_bt_logo.gif" alt="T다이렉트샵"></td><!-- //네이밍 -->
+           <td width="470" style="font-size:0; line-height:0; text-align:left; vertical-align:top;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/ct_bt_address.gif" alt="서울시 중구 을지로 2가 11, 대표이사/사장 : 박정호, 사업자등록번호 : 104-81-37225, 고객상담: 휴대폰, 국번없이 T 114 (무료)  또는 국번없이 1599-0111(유료) Copyright@ 2013  SK TELECOM  CO. LTD.  All rights reserved."><p style="padding:15px 0 0 0;margin:0"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/ct_bt_copy.gif" alt=""></p></td>
+          </tr>
+         </table> 
+        
+        </td> 
+        <td width="2" style="border-right:1px solid #cfcfcf;font-size:0; line-height:0"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/img_blank.gif" width="2" height="1" alt=""></td>
+        <td width="2" style="font-size:0; line-height:0"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/img_blank.gif" width="2" height="1" alt=""></td>
+       </tr> 
+      </table>
+     </td>
+    </tr>
+    <tr>
+     <td style="font-size:0; line-height:0"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/ml_bt_box.gif" alt=""></td>
+    </tr>   
+   </table> 
+   <br>
+  
+  </td>
+ </tr>
+</table>
+</body>
+</html>

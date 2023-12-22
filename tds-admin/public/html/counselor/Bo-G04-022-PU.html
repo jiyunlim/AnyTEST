@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>포인트 할인 포인트 조회</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 600*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">포인트 할인 포인트 조회</h1>
+	</div>
+	<div class="pop-content">
+		<table class="table-col">
+		<caption>포인트 할인 포인트 조회</caption>
+		<colgroup>
+			<col style="width:32%">
+			<col style="width:18%">
+			<col>
+			<col style="width:12%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">제휴포인트</th>
+				<th scope="col">보유포인트</th>
+				<th scope="col">사용포인트</th>
+				<th scope="col">선택</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="l-data">
+					현대카드 M포인트 
+					<div class="tooltip-area">
+						<a href="#none" class="ico-tooltip">현대카드 M포인트 안내툴팁</a>
+						<div class="tooltip-con">
+							<a href="#none" class="tooltip-close">닫기</a>
+							<ul class="point-info">
+								<li>1,500P = 1,000원</li>
+								<li>최대 750,000P 이하 사용 가능</li>
+								<li>최소 1,500P 이상 사용 가능</li>
+								<li>사용 1,500P 단위로 사용 가능</li>
+								<li>총 금액 합산 750,000원 까지 사용 가능</li>
+								<li>현대카드 고객센터 : 1577-6000</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+				<td class="r-data">4,539P</td>
+				<td class="l-data"><input type="text" class="c-input" title="사용포인트 입력"></td>
+				<td><a href="#none" class="btn-base btn-gray">사용</a></td>
+			</tr>
+			<tr>
+				<td class="l-data">
+					GS&amp;POINT 
+					<div class="tooltip-area">
+						<a href="#none" class="ico-tooltip">GS&amp;POINT 안내툴팁</a>
+						<div class="tooltip-con">
+							<a href="#none" class="tooltip-close">닫기</a>
+							<ul class="point-info">
+								<li>1P = 1원</li>
+								<li>최대 100,000P 이하 사용 가능</li>
+								<li>최소 1,000P 이상 사용 가능</li>
+								<li>사용 1,000P 단위로 사용 가능</li>
+								<li>총 금액 합산 750,000원 까지 사용 가능</li>
+								<li>GS&POINT 고객센터 : 1544-5151</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+				<td class="r-data">4,539P</td>
+				<td class="l-data"><input type="text" class="c-input" title="사용포인트 입력"></td>
+				<td><a href="#none" class="btn-base btn-gray">취소</a></td>
+			</tr>
+			<tr>
+				<td class="l-data">
+					이지웰 복지포인트 
+					<div class="tooltip-area">
+						<a href="#none" class="ico-tooltip">이지웰 복지포인트 안내툴팁</a>
+						<div class="tooltip-con">
+							<a href="#none" class="tooltip-close">닫기</a>
+							<ul class="point-info">
+								<li>1,000P = 1,000원</li>
+								<li>최대 300,000P 이하 사용 가능</li>
+								<li>최소 1,000P 이상 사용 가능</li>
+								<li>사용 1,000P단위로 사용 가능</li>
+								<li>총 금액 합산 750,000원 까지 사용 가능</li>
+								<li>이지웰 고객센터 : 02-3282-0579</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+				<td class="r-data"><a href="#none" class="txt-link">[조회하기]</a></td>
+				<td class="l-data"><input type="text" class="c-input" readonly="readonly" title="사용포인트 입력"></td>
+				<td><a href="#none" class="btn-base btn-gray disabled">사용</a></td>
+			</tr>
+			<tr>
+				<td class="l-data">
+					문화상품권 
+					<div class="tooltip-area">
+						<a href="#none" class="ico-tooltip">문화상품권 안내툴팁</a>
+						<div class="tooltip-con">
+							<a href="#none" class="tooltip-close">닫기</a>
+							<ul class="point-info">
+								<li>1원 = 1원</li>
+								<li>최대 750,000원 이하 사용 가능</li>
+								<li>최소 1,000원 이상 사용 가능</li>
+								<li>사용 1,000원 단위로 사용 가능</li>
+								<li>총 금액 합산 750,000원 까지 사용 가능</li>
+								<li>컬쳐랜드 고객센터 : 1577-2111</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+				<td class="r-data"><a href="#none" class="txt-link">[조회하기]</a></td>
+				<td class="l-data"><input type="text" class="c-input" readonly="readonly" title="사용포인트 입력"></td>
+				<td><a href="#none" class="btn-base btn-gray disabled">사용</a></td>
+			</tr>
+			<tr>
+				<td class="l-data">
+					T모아금액권 
+					<div class="tooltip-area">
+						<a href="#none" class="ico-tooltip">T모아금액권 안내툴팁</a>
+						<div class="tooltip-con">
+							<a href="#none" class="tooltip-close">닫기</a>
+							<ul class="point-info">
+								<li>1,000P = 1,000원</li>
+								<li>최대 750,000P 이하 사용 가능</li>
+								<li>최소 1,000P 이상 사용 가능</li>
+								<li>사용 1,000P단위로 사용 가능</li>
+								<li>총 금액 합산 750,000원 까지 사용 가능</li>
+								<li>고객센터 : 1599-7963</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+				<td class="r-data"><a href="#none" class="txt-link">[금액권입력]</a></td>
+				<td class="l-data"><input type="text" class="c-input" readonly="readonly" title="사용포인트 입력"></td>
+				<td><a href="#none" class="btn-base btn-gray disabled">사용</a></td>
+			</tr>
+			<tr>
+				<td class="l-data">
+					T다이렉트샵 이용권 
+					<div class="tooltip-area">
+						<a href="#none" class="ico-tooltip">T다이렉트샵 이용권 안내툴팁</a>
+						<div class="tooltip-con">
+							<a href="#none" class="tooltip-close">닫기</a>
+							<ul class="point-info">
+								<li>1,000P = 1,000원</li>
+								<li>최대 750,000P 이하 사용 가능</li>
+								<li>최소 1,000P 이상 사용 가능</li>
+								<li>사용 1,000P단위로 사용 가능</li>
+								<li>총 금액 합산 750,000원 까지 사용 가능</li>
+								<li>고객센터 : 1599-7963</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+				<td class="r-data"><a href="#none" class="txt-link">[이용권입력]</a></td>
+				<td class="l-data"><input type="text" class="c-input" readonly="readonly" title="사용포인트 입력"></td>
+				<td><a href="#none" class="btn-base btn-gray disabled">사용</a></td>
+			</tr>
+			<tr>
+				<td class="l-data">
+					하나멤버스 포인트 
+					<div class="tooltip-area">
+						<a href="#none" class="ico-tooltip">하나멤버스 포인트 안내툴팁</a>
+						<div class="tooltip-con">
+							<a href="#none" class="tooltip-close">닫기</a>
+							<ul class="point-info">
+								<li>1P = 1원</li>
+								<li>최대 750,000P 이하 사용 가능</li>
+								<li>최소 1,000P 이상 사용 가능</li>
+								<li>사용 1,000P 단위로 사용 가능</li>
+								<li>총 금액 합산 750,000원 까지 사용 가능</li>
+								<li>하나멤버스 고객센터 : 1800-0000</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+				<td class="r-data">-P</td>
+				<td class="l-data">고객정보가 존재하지 않습니다.</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="l-data">
+					OK캐쉬백 포인트 
+					<div class="tooltip-area">
+						<a href="#none" class="ico-tooltip">OK캐쉬백 포인트 안내툴팁</a>
+						<div class="tooltip-con">
+							<a href="#none" class="tooltip-close">닫기</a>
+							<ul class="point-info">
+								<li>1P = 1원</li>
+								<li>최대 750,000P 이하 사용 가능</li>
+								<li>최소 1,000P 이상 사용 가능</li>
+								<li>사용 1,000P 단위로 사용 가능</li>
+								<li>총 금액 합산 750,000원 까지 사용 가능</li>
+								<li>OK캐쉬백 고객센터 : 1599-0512</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+				<td class="r-data">-P</td>
+				<td class="l-data">
+					카드번호가 올바르지 않거나, 본인의 카드가 아닌 경우 OK캐쉬백 포인트를 조회/사용하실 수 없습니다. OK캐쉬백 회원이 아닌 경우 OK캐쉬백 회원가입 후 본인의 카드를 사용하시기 바랍니다.
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="l-data">
+					베네피아 포인트 
+					<div class="tooltip-area">
+						<a href="#none" class="ico-tooltip">베네피아 포인트 안내툴팁</a>
+						<div class="tooltip-con">
+							<a href="#none" class="tooltip-close">닫기</a>
+							<ul class="point-info">
+								<li>1,000P = 1,000원</li>
+								<li>최대 750,000P 이하 사용 가능</li>
+								<li>최소 1,000P 이상 사용 가능</li>
+								<li>사용 1,000P단위로 사용 가능</li>
+								<li>총 금액 합산 750,000원 까지 사용 가능</li>
+								<li>베네피아 고객센터 : 1566-9955</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+				<td class="r-data">-P</td>
+				<td class="l-data">
+					베네피아 가입 정보가 조회되지 않습니다.
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="l-data">
+					마이신한 포인트 
+					<div class="tooltip-area">
+						<a href="#none" class="ico-tooltip">마이신한 포인트 안내툴팁</a>
+						<div class="tooltip-con">
+							<a href="#none" class="tooltip-close">닫기</a>
+							<ul class="point-info">
+								<li>1P = 1원 최대 750,000P 이하 사용 가능</li>
+								<li>최소 1,000P 이상 사용 가능</li>
+								<li>사용 1,000P 단위로 사용 가능</li>
+								<li>총 금액 합산 750,000원 까지 사용 가능</li>
+								<li>신한카드 고객센터 : 1544-7000 </li>
+							</ul>
+						</div>
+					</div>
+				</td>
+				<td class="r-data">23P</td>
+				<td class="l-data">
+					최소 사용 가능한 포인트는 1,000P부터 입니다.
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="l-data">
+					삼성카드 포인트 
+					<div class="tooltip-area">
+						<a href="#none" class="ico-tooltip">삼성카드 포인트 안내툴팁</a>
+						<div class="tooltip-con">
+							<a href="#none" class="tooltip-close">닫기</a>
+							<ul class="point-info">
+								<li>1P = 1원</li>
+								<li>최대 750,000P 이하 사용 가능</li>
+								<li>최소 1,000P 이상 사용 가능</li>
+								<li>사용 1,000P 단위로 사용 가능</li>
+								<li>총 금액 합산 750,000원 까지 사용 가능</li>
+								<li>삼성카드 고객센터 : 1588-8700</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+				<td class="r-data">-P</td>
+				<td class="l-data">
+					거래가능 회원이 아닙니다.
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="l-data">
+					하나카드 하나머니 
+					<div class="tooltip-area">
+						<a href="#none" class="ico-tooltip">하나카드 하나머니 안내툴팁</a>
+						<div class="tooltip-con">
+							<a href="#none" class="tooltip-close">닫기</a>
+							<ul class="point-info">
+								<li>1P = 1원</li>
+								<li>최대 750,000P 이하 사용 가능</li>
+								<li>최소 1,000P 이상 사용 가능</li>
+								<li>사용 1,000P 단위로 사용 가능</li>
+								<li>총 금액 합산 750,000원 까지 사용 가능</li>
+								<li>하나카드 고객센터 : 1800-1111</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+				<td class="r-data">-P</td>
+				<td class="l-data">
+					최소 사용 가능한 포인트는 1,000P부터 입니다
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="l-data">
+					KB국민카드 포인트 
+					<div class="tooltip-area">
+						<a href="#none" class="ico-tooltip">KB국민카드 포인트 안내툴팁</a>
+						<div class="tooltip-con">
+							<a href="#none" class="tooltip-close">닫기</a>
+							<ul class="point-info">
+								<li>1P = 1원</li>
+								<li>최대 750,000P 이하 사용 가능</li>
+								<li>최소 1,000P 이상 사용 가능</li>
+								<li>사용 1,000P 단위로 사용 가능</li>
+								<li>총 금액 합산 750,000원 까지 사용 가능</li>
+								<li>KB국민카드 고객센터 : 1588-1688</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+				<td class="r-data">-P</td>
+				<td class="l-data">
+					미등록 CI번호 입니다.
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="l-data">
+					우리카드 포인트 
+					<div class="tooltip-area">
+						<a href="#none" class="ico-tooltip">우리카드 포인트 안내툴팁</a>
+						<div class="tooltip-con">
+							<a href="#none" class="tooltip-close">닫기</a>
+							<ul class="point-info">
+								<li>1P = 1원</li>
+								<li>최대 750,000P 이하 사용 가능</li>
+								<li>최소 1,000P 이상 사용 가능</li>
+								<li>사용 1,000P 단위로 사용 가능</li>
+								<li>총 금액 합산 750,000원 까지 사용 가능</li>
+								<li>우리카드 고객센터 : 1588-9955</li>
+							</ul>
+						</div>
+					</div>
+				</td>
+				<td class="r-data">-P</td>
+				<td class="l-data">
+					사용 가능한 포인트가 없습니다.
+				</td>
+				<td></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th scope="row" colspan="2">포인트 할인 합계</th>
+				<td class="r-data"><strong class="txt-red">2,000원</strong></td>
+				<td></td>
+			</tr>
+		</tfoot>
+		</table>
+
+		<table class="table-row mt-20">
+		<caption>출고가</caption>
+		<colgroup>
+			<col style="width:24%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">출고가</th>
+				<td class="r-data"><strong class="txt-black1">396,000원</strong></td>
+			</tr>
+		</tbody>
+		</table>
+
+		<table class="table-row mt-10">
+		<caption>단말 할인정보</caption>
+		<colgroup>
+			<col style="width:24%">
+			<col style="width:24%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">공시지원금할인</th>
+				<td class="r-data" colspan="2">-297,800원</td>
+			</tr>
+			<tr>
+				<th scope="row">T가족포인트</th>
+				<td class="r-data" colspan="2">-0</td>
+			</tr>
+			<tr>
+				<th scope="row">쿠폰할인금액</th>
+				<td class="r-data" colspan="2">-2,000원</td>
+			</tr>
+			<tr>
+				<th scope="rowgroup" rowspan="2">포인트할인금액</th>
+				<th scope="row" class="th-sub">현대카드 포인트</th>
+				<td class="r-data txt-red">-1,000원</td>
+			</tr>
+			<tr>
+				<th scope="row" class="th-sub">GS 포인트</th>
+				<td class="r-data txt-red">-1,000원</td>
+			</tr>
+			<tr>
+				<th scope="row">단말 할인총액</th>
+				<td class="r-data" colspan="2"><strong class="txt-black1">-299,800원</strong></td>
+			</tr>
+		</tbody>
+		</table>
+
+		<table class="table-row mt-10">
+		<caption>구매가격</caption>
+		<colgroup>
+			<col style="width:24%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">구매가격</th>
+				<td class="r-data"><strong class="txt-type2 txt-red">96,200원</strong></td>
+			</tr>
+		</tbody>
+		</table>
+
+		<!-- btn -->
+		<div class="btn-area center">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div>
+		<!-- //btn -->
+
+		<div class="box-type1 mt-20">
+			<h2 class="h-type3">Check point</h2>
+			<ul class="txt-info">
+				<li class="txt-red">OK캐쉬백 포인트와 신용카드 포인트(KB국민카드, 우리카드)를 합산 사용 중인 고객의 경우 OK캐쉬백 포인트와 합산 사용중인 신용카드 포인트를 동시에 사용하실 경우 T모아쿠폰 정상 발급이 불가합니다.</li>
+				<li class="txt-red">신용카드 포인트(KB국민카드, 우리카드)를 합산하여 사용 중인 고객께서는 OK캐쉬백 포인트만 사용 부탁 드립니다.</li>
+				<li class="txt-red">조회된 신한카드 포인트는 현재 사용 가능한 신한카드를 소지하신 경우에만 사용 가능합니다. 소지하신 신한카드가 사용 불가한 상태인 경우 포인트가 조회 되더라도 정상적인 사용이 불가합니다.</li>
+				<li>매일 00:00 ~ 00:30까지(30분간) 현대카드 일자전환 작업으로 인해 현대카드 M포인트 사용이 제한됩니다.</li>
+				<li>제휴 포인트/마일리지 사용은 각 제휴사의 포인트정책에 따라 사용 가능합니다.</li>
+				<li>포인트할인 적용 완료 후 개통취소로 인한 포인트/마일리지 사용취소는 개통취소와 함께 자동 취소처리 됩니다.</li>
+				<li>포인트할인 적용 완료로 사용된 포인트/마일리지 취소처리는 제휴사에 따라 최대3~5일 소요될 수 있습니다.</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

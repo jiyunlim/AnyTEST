@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>패키지 구성 선택</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 860*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">패키지 구성 선택</h1>
+	</div>
+	<div class="pop-content">
+		<div class="section-area1">
+			<div class="l-con">
+				<h2 class="h-type2 mt-0">스마트홈 단말기</h2>
+				<div class="">
+					<select class="c-select" title="검색 유형 선택" style="width:110px;">
+						<option value="" selected="selected">단말기모델코드</option>
+						<option value="">단말기명 선택</option>
+					</select>
+					<input type="text" class="c-input" title="단말기모델코드 입력" placeholder="단말기모델코드를 입력하세요." style="width:140px;">
+					<a href="#none" class="btn-base">초기화</a>
+					<a href="#none" class="btn-base">검색</a>
+				</div>
+				<table class="table-col mt-10">
+				<caption>스마트홈 단말기 조회 결과</caption>
+				<colgroup>
+					<col style="width:8%">
+					<col>
+					<col style="width:18%">
+					<col style="width:13%">
+					<col style="width:13%">
+					<col style="width:16%">
+					<col style="width:12%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="allChk1" name="allChk1">
+								<label for="allChk1">전체선택</label>
+							</span>
+						</th>
+						<th scope="col">SWING<br>단말기모델코드</th>
+						<th scope="col">단말기명</th>
+						<th scope="col">제조사</th>
+						<th scope="col">옵션값</th>
+						<th scope="col">기기<br>판매가격</th>
+						<th scope="col">재고수량</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk1_1" name="chk1">
+								<label for="chk1_1">전체선택</label>
+							</span>
+						</td>
+						<td>A0MP</td>
+						<td>단말기 #1</td>
+						<td>삼성</td>
+						<td>Gray</td>
+						<td class="r-data">27,500</td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk1_2" name="chk1">
+								<label for="chk1_2">전체선택</label>
+							</span>
+						</td>
+						<td>A0MP</td>
+						<td>단말기 #1</td>
+						<td>삼성</td>
+						<td>Gray</td>
+						<td class="r-data">27,500</td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk1_3" name="chk1">
+								<label for="chk1_3">전체선택</label>
+							</span>
+						</td>
+						<td>A0MP</td>
+						<td>단말기 #1</td>
+						<td>삼성</td>
+						<td>Gray</td>
+						<td class="r-data">27,500</td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk1_4" name="chk1">
+								<label for="chk1_4">전체선택</label>
+							</span>
+						</td>
+						<td>A0MP</td>
+						<td>단말기 #1</td>
+						<td>삼성</td>
+						<td>Gray</td>
+						<td class="r-data">27,500</td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk1_5" name="chk1">
+								<label for="chk1_5">전체선택</label>
+							</span>
+						</td>
+						<td>A0MP</td>
+						<td>단말기 #1</td>
+						<td>삼성</td>
+						<td>Gray</td>
+						<td class="r-data">27,500</td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk1_6" name="chk1">
+								<label for="chk1_6">전체선택</label>
+							</span>
+						</td>
+						<td>A0MP</td>
+						<td>단말기 #1</td>
+						<td>삼성</td>
+						<td>Gray</td>
+						<td class="r-data">27,500</td>
+						<td>100</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+			<div class="m-con" style="padding-top:10%;">
+				<a href="#none" class="btn-move-right">우측이동</a>
+				<a href="#none" class="btn-move-left">좌측이동</a>
+			</div>
+			<div class="r-con">
+				<h2 class="h-type2">스마트 패키지 구성품</h2>
+				<table class="table-col">
+				<caption>스마트 패키지 구성품</caption>
+				<colgroup>
+					<col style="width:8%">
+					<col>
+					<col style="width:18%">
+					<col style="width:13%">
+					<col style="width:13%">
+					<col style="width:16%">
+					<col style="width:12%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="allChk2" name="allChk12">
+								<label for="allChk2">전체선택</label>
+							</span>
+						</th>
+						<th scope="col">SWING<br>단말기모델코드</th>
+						<th scope="col">단말기명</th>
+						<th scope="col">제조사</th>
+						<th scope="col">옵션값</th>
+						<th scope="col">기기<br>판매가격</th>
+						<th scope="col">재고수량</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk2_1" name="chk2">
+								<label for="chk2_1">전체선택</label>
+							</span>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk2_2" name="chk2">
+								<label for="chk2_2">전체선택</label>
+							</span>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk2_3" name="chk2">
+								<label for="chk2_3">전체선택</label>
+							</span>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk2_4" name="chk2">
+								<label for="chk2_4">전체선택</label>
+							</span>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk2_5" name="chk2">
+								<label for="chk2_5">전체선택</label>
+							</span>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk2_6" name="chk2">
+								<label for="chk2_6">전체선택</label>
+							</span>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-blue">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

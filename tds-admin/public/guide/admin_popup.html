@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN GUIDE</title>
+	<link rel="stylesheet" type="text/css" href="../../public/css/tdirect_admin.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/@tdirect_guide.css">
+	<!--[if lt IE 9]>
+	<script src="../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../public/js/jquery.shCore.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+<body>
+<div id="guide-wrap">
+	<header id="header">
+		<h1><strong>T다이렉트샵</strong><em>ADMIN GUIDE</em></h1>
+		<nav>
+			<div class="inner">
+				<a href="coding_list.html">파일리스트</a>
+				<a href="admin_title.html" class="on">페이지가이드</a>
+			</div>
+		</nav>
+	</header>
+	<article>
+		<nav>
+			<a href="../html/layout/admin_layout.html" target="_blank">레이아웃</a>
+			<a href="admin_title.html">타이틀</a>
+			<a href="admin_btn.html">버튼</a>
+			<a href="admin_form.html">폼요소</a>
+			<a href="admin_table.html">테이블</a>
+			<a href="admin_etc.html">탭/페이징</a>
+			<a href="admin_popup.html" class="on">팝업</a>
+			<a href="admin_script.html">스크립트</a>
+			<a href="admin_loading.html">로딩중</a>
+		</nav>
+
+		<section class="guide-content">
+			<h2 class="tit-con">팝업 가이드</h2>
+				
+			<div class="box-wrap">
+				<h3>팝업</h3>
+				<h4>윈도우팝업 : [ pop-wrap ]</h4>
+				<div class="guide-box">
+					<a href="../html/layout/admin_layout_popup.html" onclick="window.open('../html/layout/admin_layout_popup.html','pop','width=860,height=650');return false;" target="_blank" title="팝업" class="btn-base">윈도우팝업 띄우기</a>
+					<p>
+						- &lt;a <span class="txt-red">href="admin_layout_popup.html" onclick="window.open('admin_layout_popup.html','pop','width=860,height=650');return false;" target="_blank" title="팝업"</span> class="btn-base"&gt;윈도우팝업 띄우기&lt;/a&gt;
+					</p>
+					<p>
+						- &lt;a <span class="txt-red">href="admin_layout_popup.html" onclick="window.open('admin_layout_popup.html','pop','width=600,height=400');return false;" target="_blank" title="팝업"</span> class="btn-base"&gt;윈도우팝업 띄우기&lt;/a&gt;
+					</p>
+					<p>
+						- &lt;a <span class="txt-red">href="admin_layout_popup.html" onclick="window.open('admin_layout_popup.html','pop','width=400,height=300');return false;" target="_blank" title="팝업"</span> class="btn-base"&gt;윈도우팝업 띄우기&lt;/a&gt;
+					</p>
+
+
+				</div>
+				
+				<h4>레이어팝업(딤처리) : [ pop-wrap ] + [ pop-layer ]</h4>
+				<div class="guide-box">
+					<a href="#layerPop" data-model="layerPop" class="btn-base">레이어팝업</a>
+					<a href="#layerPopLarge" data-model="layerPopLarge" class="btn-base">레이어팝업 Large</a>
+					<a href="#layerPopMedium" data-model="layerPopMedium" class="btn-base">레이어팝업 Medium</a>
+					<a href="#layerPopSmall" data-model="layerPopSmall" class="btn-base">레이어팝업 Small</a>
+					<p>
+						- &lt;a <span class="txt-red">href="#layerPop" data-model="layerPop"</span> class="btn-base"&gt;레이어팝업&lt;/a&gt;
+					</p>
+					<p>- 레이어팝업 태그 위치는 &lt;div id="wrap">&lt;/div&gt; 밖으로 위치</p>
+<pre class="brush: xml;">
+&lt;div id="wrap"&gt;
+	&lt;div id="header"&gt;&lt;/div&gt;
+	&lt;div id="container"&gt;
+		&lt;a href="#layerPop" data-model="layerPop" class="btn-base" title="팝업"&gt;레이어팝업&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 레이어팝업  --&gt;
+&lt;div id="layerPop" class="pop-wrap pop-layer"&gt;
+	&lt;div class="pop-header"&gt;
+		&lt;strong class="h-type1"&gt;레이어팝업 타이틀&lt;/strong&gt;
+		&lt;a href="#none" class="layer-close"&gt;닫기&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class="pop-content"&gt;
+		팝업컨텐츠
+		&lt;div class="btn-area"&gt;
+			&lt;a href="#none" class="btn-base btn-blue"&gt;확인&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- //레이어팝업  --&gt;
+</pre>
+				</div>
+
+				<h4>요소 내레이어팝업(딤처리없음) : [ pop-layer ]</h4>
+				<div class="guide-box">
+					<table class="table-row">
+					<caption>가입 신청 내역 조회</caption>
+					<colgroup>
+						<col style="width:20%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">판매자</th>
+							<td>
+								<div class="select-layer-area">
+									<a href="#none" class="c-select-layer js-select-layer" title="팝업">판매자선택</a>
+									<!-- 레이어팝업 -->
+									<div class="pop-layer">
+										<div class="pop-header">
+											<a href="#none" class="layer-close">닫기</a>
+											<a href="#none" class="btn-chk">전체선택</a>
+											<a href="#none" class="btn-unchk">전체해제</a>
+										</div>
+										<div class="pop-content">
+											<ul class="chk-list">
+												<li>
+													<span class="c-chk">
+														<input type="checkbox" id="buyName1" name="buyName">
+														<label for="buyName1">판매자1</label>
+													</span>
+												</li>
+												<li>
+													<span class="c-chk">
+														<input type="checkbox" id="buyName2" name="buyName">
+														<label for="buyName2">판매자2</label>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<!-- //레이어팝업 -->
+								</div>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<p>
+						- &lt;a <span class="txt-red">href="#none" class="c-select-layer js-select-layer"</span>&gt;판매자선택&lt;/a&gt;
+					</p>
+					<p>- 레이어팝업 태그 위치는 &lt;div class="select-layer-area">&lt;/div&gt; 안에 위치</p>
+<pre class="brush: xml;">
+&lt;div class="select-layer-area"&gt;
+	&lt;a href="#none" class="c-select-layer js-select-layer" title="팝업"&gt;판매자선택&lt;/a&gt;
+	&lt;!-- 레이어팝업  --&gt;
+	&lt;div class="pop-layer"&gt;
+		&lt;div class="pop-header"&gt;
+			&lt;a href="#none" class="layer-close"&gt;닫기&lt;/a&gt;
+			&lt;a href="#none" class="btn-chk"&gt;전체선택&lt;/a&gt;
+			&lt;a href="#none" class="btn-unchk"&gt;전체해제&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class="pop-content"&gt;
+			&lt;ul class="chk-list"&gt;
+				&lt;li&gt;
+					&lt;span class="c-chk"&gt;
+						&lt;input type="checkbox" id="buyName1" name="buyName"&gt;
+						&lt;label for="buyName1"&gt;판매자1&lt;/label&gt;
+					&lt;/span&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+					&lt;span class="c-chk"&gt;
+						&lt;input type="checkbox" id="buyName2" name="buyName"&gt;
+						&lt;label for="buyName2"&gt;판매자2&lt;/label&gt;
+					&lt;/span&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- //레이어팝업  --&gt;
+&lt;/div&gt;
+
+
+</pre>
+				</div>
+					
+				<h4>요소 내 툴팁 : [ tooltip-area]</h4>
+				<div class="guide-box">
+					현대카드 M포인트 
+					<div class="tooltip-area">
+						<a href="#none" class="ico-tooltip">현대카드 M포인트 안내툴팁</a>
+						<div class="tooltip-con">
+							<a href="#none" class="tooltip-close">닫기</a>
+							<ul class="point-info">
+								<li>1,500P = 1,000원</li>
+								<li>최대 750,000P 이하 사용 가능</li>
+								<li>최소 1,500P 이상 사용 가능</li>
+								<li>사용 1,500P 단위로 사용 가능</li>
+								<li>총 금액 합산 750,000원 까지 사용 가능</li>
+								<li>현대카드 고객센터 : 1577-6000</li>
+							</ul>
+						</div>
+					</div>
+<pre class="brush: xml;">
+현대카드 M포인트 
+&lt;div class="tooltip-area"&gt;
+	&lt;a href="#none" class="ico-tooltip"&gt;현대카드 M포인트 안내툴팁&lt;/a&gt;
+	&lt;div class="tooltip-con"&gt;
+		&lt;a href="#none" class="tooltip-close"&gt;닫기&lt;/a&gt;
+		&lt;ul class="point-info"&gt;
+			&lt;li&gt;1,500P = 1,000원&lt;/li&gt;
+			&lt;li&gt;최대 750,000P 이하 사용 가능&lt;/li&gt;
+			&lt;li&gt;최소 1,500P 이상 사용 가능&lt;/li&gt;
+			&lt;li&gt;사용 1,500P 단위로 사용 가능&lt;/li&gt;
+			&lt;li&gt;총 금액 합산 750,000원 까지 사용 가능&lt;/li&gt;
+			&lt;li&gt;현대카드 고객센터 : 1577-6000&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+				</div>
+			</div>
+		</section>
+	</article>
+	<a href="#top" class="btn-top">TOP</a>
+</div>
+<div id="wrap"></div>
+
+<!-- 레이어팝업 -->
+<div id="layerPop" class="pop-wrap pop-layer">
+	<div class="pop-header">
+		<strong class="h-type1">타이틀</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+		<p>내용이 들어갑니다.</p>
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<!-- //레이어팝업 -->
+
+<!-- 레이어팝업 -->
+<div id="layerPopLarge" class="pop-wrap pop-layer large">
+	<div class="pop-header">
+		<strong class="h-type1">타이틀</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		내용이 들어갑니다.
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<!-- //레이어팝업 -->
+
+
+<!-- 레이어팝업 -->
+<div id="layerPopMedium" class="pop-wrap pop-layer medium">
+	<div class="pop-header">
+		<strong class="h-type1">타이틀</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		내용이 들어갑니다.
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<!-- //레이어팝업 -->
+
+
+<!-- 레이어팝업 -->
+<div id="layerPopSmall" class="pop-wrap pop-layer small">
+	<div class="pop-header">
+		<strong class="h-type1">타이틀</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		내용이 들어갑니다.
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<!-- //레이어팝업 -->
+
+
+
+
+
+<script type="text/javascript" src="../../public/js/common.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//레이어팝업 호출
+		$('[data-model]').click(function(ev){
+			ev.preventDefault();
+			var model = $(this).attr('data-model');
+			modalCon(model,false,true);
+		});
+	});
+</script>
+</body>
+</html>

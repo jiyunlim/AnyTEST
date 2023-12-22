@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>서비스 불가능 지역 설정</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 600*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">서비스 불가능 지역 설정</h1>
+	</div>
+	<div class="pop-content">
+		<p class="f-12">주소 검색을 통하여 서비스가 불가능한 지역을 설정할 수 있습니다.</p>
+		<!-- tab -->
+		<ul class="tab-area depth2 mt-10 js-tab-toggle">
+			<li><a href="#tab_1" class="on">도로명주소 검색</a></li>
+			<li><a href="#tab_2">지번주소 검색</a></li>
+		</ul>
+		<!-- //tab -->
+
+		<div id="tab_1" class="tab-con">
+			<h2 class="hidden">도로명주소 검색</h2>
+			<p class="f-12">
+				찾으시려는 지역을 선택하시고 도로명을 입력 후, 조회 버튼을 누르세요.<br>
+				<a href="http://www.juso.go.kr/openIndexPage.do" class="text-primary" target="_blank" title="새창">도로명주소 확인하기</a>
+			</p>
+			<div class="pop-search mt-10">
+				<select class="c-select" title="광역시/도 선택" style="width:110px;">
+					<option value="" selected="selected">광역시/도</option>
+				</select>
+				<select class="c-select" title="시/군/구 선택" style="width:110px;">
+					<option value="" selected="selected">시/군/구</option>
+				</select>
+
+				<input type="text" class="c-input" title="주소 입력" placeholder="예 : ‘봉은사로’ 입력" style="width:180px;">
+				<a href="#none" class="btn-base">조회</a>
+			</div>
+
+			<table class="table-col mt-10">
+			<caption>주소검색 결과</caption>
+			<colgroup>
+				<col>
+				<col style="width:30%">
+				<col style="width:30%">
+				<col style="width:30%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">선택</th>
+					<th scope="col">광역시도</th>
+					<th scope="col">시/군/구</th>
+					<th scope="col">도로명</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk1_1" name="chk1">
+							<label for="chk1_1">선택</label>
+						</span>
+					</td>
+					<td>서울시</td>
+					<td>마포구</td>
+					<td>성암로</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk1_2" name="chk1">
+							<label for="chk1_2">선택</label>
+						</span>
+					</td>
+					<td>서울시</td>
+					<td>마포구</td>
+					<td>성암로</td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- paginate -->
+			<div class="paginate-area">
+				<a href="#none" class="pg-first">처음 리스트</a>
+				<a href="#none" class="pg-prev">이전 리스트</a>
+				<ul class="paginate">
+					<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+				</ul>
+				<a href="#none" class="pg-next">다음 리스트</a>
+				<a href="#none" class="pg-last">마지막 리스트</a>
+			</div>
+			<!-- //paginate -->
+
+			<div class="align-center mt-20">
+				<a href="#none" class="btn-base btn-gray"><span class="ico-arrow-down-w">아래</span></a>
+				<a href="#none" class="btn-base btn-gray"><span class="ico-arrow-up-w">위</span></a>
+			</div>
+
+			<h3 class="h-type2 mt-20">설치 불가능 지역</h3>
+			<table class="table-col">
+			<caption>설치 불가능 지역</caption>
+			<colgroup>
+				<col>
+				<col style="width:30%">
+				<col style="width:30%">
+				<col style="width:30%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">선택</th>
+					<th scope="col">광역시도</th>
+					<th scope="col">시/군/구</th>
+					<th scope="col">도로명</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk2_1" name="chk2">
+							<label for="chk2_1">선택</label>
+						</span>
+					</td>
+					<td>서울시</td>
+					<td>마포구</td>
+					<td>성암로</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk2_2" name="chk2">
+							<label for="chk2_2">선택</label>
+						</span>
+					</td>
+					<td>서울시</td>
+					<td>마포구</td>
+					<td>성암로</td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- paginate -->
+			<div class="paginate-area">
+				<a href="#none" class="pg-first">처음 리스트</a>
+				<a href="#none" class="pg-prev">이전 리스트</a>
+				<ul class="paginate">
+					<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+				</ul>
+				<a href="#none" class="pg-next">다음 리스트</a>
+				<a href="#none" class="pg-last">마지막 리스트</a>
+			</div>
+			<!-- //paginate -->
+		</div>
+
+		<div id="tab_2" class="tab-con">
+			<h2 class="hidden">지번주소 검색</h2>
+			<p class="f-12">
+				찾으시려는 주소지의 동/읍/면/리 이름을 입력 후, 조회 버튼을 누르세요.
+			</p>
+			<div class="pop-search mt-10">
+				<input type="text" class="c-input" title="주소 입력" placeholder="예 : ‘서울 강남구 삼성동’의 경우 ‘삼성’ 입력" style="width:423px;">
+				<a href="#none" class="btn-base">조회</a>
+				<p class="mt-6">
+					<select class="c-select" title="주소선택 선택">
+						<option value="" selected="selected">검색 후 주소를 선택해 주세요.</option>
+					</select>
+				</p>
+				<p class="mt-6">
+					<select class="c-select" title="주소선택 선택" style="width:80px;">
+						<option value="" selected="selected">건물명 </option>
+						<option value="">번지수</option>
+					</select>
+					<input type="text" class="c-input" title="주소 입력" style="width:70%;">
+					<a href="#none" class="btn-base">조회</a>
+				</p>
+			</div>
+			<table class="table-col mt-10">
+			<caption>주소검색 결과</caption>
+			<colgroup>
+				<col>
+				<col style="width:30%">
+				<col style="width:30%">
+				<col style="width:30%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">선택</th>
+					<th scope="col">광역시도</th>
+					<th scope="col">시/군/구</th>
+					<th scope="col">도로명</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk3_1" name="chk3">
+							<label for="chk3_1">선택</label>
+						</span>
+					</td>
+					<td>서울시</td>
+					<td>마포구</td>
+					<td>성암로</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk3_2" name="chk3">
+							<label for="chk3_2">선택</label>
+						</span>
+					</td>
+					<td>서울시</td>
+					<td>마포구</td>
+					<td>성암로</td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- paginate -->
+			<div class="paginate-area">
+				<a href="#none" class="pg-first">처음 리스트</a>
+				<a href="#none" class="pg-prev">이전 리스트</a>
+				<ul class="paginate">
+					<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+				</ul>
+				<a href="#none" class="pg-next">다음 리스트</a>
+				<a href="#none" class="pg-last">마지막 리스트</a>
+			</div>
+			<!-- //paginate -->
+
+			<div class="align-center mt-20">
+				<a href="#none" class="btn-base btn-gray"><span class="ico-arrow-down-w">아래</span></a>
+				<a href="#none" class="btn-base btn-gray"><span class="ico-arrow-up-w">위</span></a>
+			</div>
+
+			<h3 class="h-type2 mt-20">설치 불가능 지역</h3>
+			<table class="table-col">
+			<caption>설치 불가능 지역</caption>
+			<colgroup>
+				<col>
+				<col style="width:30%">
+				<col style="width:30%">
+				<col style="width:30%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">선택</th>
+					<th scope="col">광역시도</th>
+					<th scope="col">시/군/구</th>
+					<th scope="col">도로명</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk4_1" name="chk4">
+							<label for="chk4_1">선택</label>
+						</span>
+					</td>
+					<td>서울시</td>
+					<td>마포구</td>
+					<td>성암로</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk4_2" name="chk4">
+							<label for="chk4_2">선택</label>
+						</span>
+					</td>
+					<td>서울시</td>
+					<td>마포구</td>
+					<td>성암로</td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- paginate -->
+			<div class="paginate-area">
+				<a href="#none" class="pg-first">처음 리스트</a>
+				<a href="#none" class="pg-prev">이전 리스트</a>
+				<ul class="paginate">
+					<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+				</ul>
+				<a href="#none" class="pg-next">다음 리스트</a>
+				<a href="#none" class="pg-last">마지막 리스트</a>
+			</div>
+			<!-- //paginate -->
+		</div>
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-blue">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

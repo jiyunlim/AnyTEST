@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">사용자통계</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>통계</li>
+					<li><strong>사용자통계</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none">페이지 통계</a></li>
+				<li><a href="#none">방문자 통계</a></li>
+				<li><a href="#none" class="on">시간대 별 통계</a></li>
+				<li><a href="#none">방문고객 행동패턴 통계</a></li>
+				<li><a href="#none">방문고객 구매전환 통계</a></li>
+				<li><a href="#none">유입통계</a></li>
+			</ul>
+			<!-- //tab -->
+
+			<ul class="tab-area depth2 mt-40">
+				<li><a href="#tab1_1" class="on">시간대 별 UV</a></li>
+				<li><a href="#tab1_2">시간대 별 주문자수</a></li>
+			</ul>
+			
+			<h2 class="hidden">시간대 별 통계</h2>
+			<h3 class="h-type2">시간대 별 UV 조회</h3>
+			<table class="table-row">
+			<caption>시간대 별 UV 조회</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">검색기간</th>
+					<td>
+						<div class="form-group calendar">
+							<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+							<a href="#none" class="btn-calendar">달력</a>
+							<span class="txt-unit">━</span>
+							<input type="text" class="c-input" title="종료일자">
+							<a href="#none" class="btn-calendar">달력</a>
+						</div>
+					</td>
+					<th scope="row">채널</th>
+					<td>
+						<select class="c-select" title="채널 선택">
+							<option value="" selected="selected">전체</option>
+							<option value="">온라인</option>
+							<option value="">모바일</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- btn -->
+			<div class="btn-area">
+				<a href="#none" class="btn-base">검색</a>
+				<a href="#none" class="btn-base">초기화</a>
+			</div>
+			<!-- //btn -->
+
+			<h3 class="h-type2">시간대 별 UV 조회 결과 <span class="txt-count">(<em>90,865</em>건)</span></h3>
+			<!-- data table -->
+			<div class="table-data-wrap">
+				<!-- top button -->
+				<div class="btn-area table-top">
+					<div class="l-btn">
+						<span class="icon-max">MAX</span>
+						<span class="icon-min">MIN</span>
+					</div>
+					<button type="button" class="btn-excel">엑셀다운로드</button>
+				</div>
+				<!-- //top button -->
+
+				<div class="table-scroll">
+					<!-- list -->
+					<table class="table-col" style="width:2000px;">
+					<caption>시간대 별 UV 조회 리스트</caption>
+					<colgroup>
+						<col>
+						<col style="width:115px">
+						<col style="width:115px">
+						<col style="width:115px">
+						<col style="width:115px">
+						<col style="width:115px">
+						<col style="width:115px">
+						<col style="width:115px">
+						<col style="width:115px">
+						<col style="width:115px">
+						<col style="width:115px">
+						<col style="width:115px">
+						<col style="width:115px">
+						<col style="width:115px">
+						<col style="width:115px">
+						<col style="width:115px">
+						<col style="width:115px">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">구분</th>
+							<th scope="col">채널</th>
+							<th scope="col">00:00~01:00</th>
+							<th scope="col">01:00~02:00</th>
+							<th scope="col">02:00~03:00</th>
+							<th scope="col">03:00~04:00</th>
+							<th scope="col">04:00~05:00</th>
+							<th scope="col">05:00~06:00</th>
+							<th scope="col">07:00~08:00</th>
+							<th scope="col">09:00~10:00</th>
+							<th scope="col">11:00~12:00</th>
+							<th scope="col">13:00~14:00</th>
+							<th scope="col">15:00~16:00</th>
+							<th scope="col">17:00~18:00</th>
+							<th scope="col">19:00~20:00</th>
+							<th scope="col">21:00~22:00</th>
+							<th scope="col">23:00~00:00</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="2">2018-08-05<br>일요일</td>
+							<td>온라인</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-red">28</strong></td>
+							<td>48</td>
+							<td><strong class="txt-sky">100</strong></td>
+						</tr>
+						<tr>
+							<td>모바일</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-red">28</strong></td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-sky">100</strong></td>
+						</tr>
+						<tr>
+							<td rowspan="2">2018-08-06<br>월요일</td>
+							<td>온라인</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-red">28</strong></td>
+							<td>48</td>
+							<td><strong class="txt-sky">100</strong></td>
+						</tr>
+						<tr>
+							<td>모바일</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-red">28</strong></td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-sky">100</strong></td>
+						</tr>
+						<tr>
+							<td rowspan="2">2018-08-07<br>화요일</td>
+							<td>온라인</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-red">28</strong></td>
+							<td>48</td>
+							<td><strong class="txt-sky">100</strong></td>
+						</tr>
+						<tr>
+							<td>모바일</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-red">28</strong></td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-sky">100</strong></td>
+						</tr>
+						<tr>
+							<td rowspan="2">2018-08-08<br>수요일</td>
+							<td>온라인</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-red">28</strong></td>
+							<td>48</td>
+							<td><strong class="txt-sky">100</strong></td>
+						</tr>
+						<tr>
+							<td>모바일</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-red">28</strong></td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-sky">100</strong></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th rowspan="3" class="bg-yellow" scope="row">평균</th>
+							<td>온라인</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-red">28</strong></td>
+							<td>48</td>
+							<td><strong class="txt-sky">100</strong></td>
+						</tr>
+						<tr>
+							<td>모바일</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-red">28</strong></td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-sky">100</strong></td>
+						</tr>
+						<tr>
+							<td colspan="16" class="bg-yellow">
+								<strong>
+									<span class="txt-unit">해당기간 온라인 평균 : <em>79.3</em></span>
+									<span class="txt-unit ml-15">해당기간 모바일 평균 : <em>147.6</em></span>
+								</strong>
+							</td>
+						</tr>
+						<tr>
+							<th rowspan="3" class="bg-yellow" scope="row">합계</th>
+							<td>온라인</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-red">28</strong></td>
+							<td>48</td>
+							<td><strong class="txt-sky">100</strong></td>
+						</tr>
+						<tr>
+							<td>모바일</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-red">28</strong></td>
+							<td>48</td>
+							<td>48</td>
+							<td><strong class="txt-sky">100</strong></td>
+						</tr>
+						<tr>
+							<td colspan="16" class="bg-yellow">
+								<strong>
+									<span class="txt-unit">해당기간 온라인 합계 : <em>3,890</em></span>
+									<span class="txt-unit ml-15">해당기간 모바일 합계 : <em>7,234</em></span>
+								</strong>
+							</td>
+						</tr>
+					</tfoot>
+					</table>
+					<!-- //list -->
+				</div>
+
+				<!-- paginate -->
+				<div class="paginate-area">
+					<a href="#none" class="pg-first">처음 리스트</a>
+					<a href="#none" class="pg-prev">이전 리스트</a>
+					<ul class="paginate">
+						<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+						<li><a href="#none">2</a></li>
+						<li><a href="#none">3</a></li>
+						<li><a href="#none">4</a></li>
+						<li><a href="#none">5</a></li>
+						<li><a href="#none">6</a></li>
+						<li><a href="#none">7</a></li>
+						<li><a href="#none">8</a></li>
+						<li><a href="#none">9</a></li>
+						<li><a href="#none">10</a></li>
+					</ul>
+					<a href="#none" class="pg-next">다음 리스트</a>
+					<a href="#none" class="pg-last">마지막 리스트</a>
+				</div>
+				<!-- //paginate -->
+				
+				<!-- bottom button -->
+				<div class="btn-area table-bottom">
+					<button type="button" class="btn-base btn-line-gray">검색 결과만 보기</button>
+					<button type="button" class="btn-base btn-line-gray">조회항목 설정</button>
+					<button type="button" class="btn-excel">엑셀다운로드</button>
+				</div>
+				<!-- //bottom button -->
+			</div>
+			<!-- //data table -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

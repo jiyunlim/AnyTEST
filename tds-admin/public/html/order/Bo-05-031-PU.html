@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>예판 재고 엑셀 업로드</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 860*680 -->
+<div class="pop-wrap"> 
+	<div class="pop-header">
+		<h1 class="h-type1">예판 재고 엑셀 업로드</h1>
+		<a href="#none" class="btn-excel"><span>엑셀양식 다운받기</span></a>
+	</div>
+	<div class="pop-content">
+		<div>
+			<div class="c-input-file">
+				<input type="text" readonly="readonly" class="file-name"  title="엑셀업로드 파일명"  style="width:200px">
+				<label for="upload01" class="file-label">찾기</label>
+				<input type="file" id="upload01" class="file-upload">
+			</div>
+			<a href="#none" class="btn-base btn-gray">업로드</a>
+		</div>
+
+		<table class="table-col mt-20">
+		<caption>예판 재고 엑셀 업로드</caption>
+		<colgroup>
+			<col style="width:10%">
+			<col style="width:10%">
+			<col style="width:25%">
+			<col>
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">순번</th>
+				<th scope="col">매장코드</th>
+				<th scope="col">매장명</th>
+				<th scope="col">메세지</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- 리스트 없을 때 -->
+			<tr>
+				<td colspan="4">결과 없음</td> 
+			</tr>
+			<!--//리스트 없을 때 -->
+			<tr>
+				<td>1</td>
+				<td>WERWWERFSJDKFJ</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+		</tbody>
+		</table>
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">저장</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script> 
+</body>
+</html>

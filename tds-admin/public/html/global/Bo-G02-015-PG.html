@@ -1,0 +1,166 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">CS 상담원 관리</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>Global </li>
+					<li><strong>CS 상담원 관리</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<h2 class="h-type2">상담사 정보</h2>
+			<table class="table-row">
+			<caption>상담사 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">조직</th>
+					<td colspan="3">
+						고객 Communication팀 , 그린 피플
+						<select class="c-select" title="그룹 선택" style="width:24%;">
+							<option value="" selected="selected">그룹 선택</option>
+						</select>
+						<select class="c-select" title="실 선택" style="width:24%;">
+							<option value="" selected="selected">실 선택</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">상담사 명</th>
+					<td>
+						<input type="text" class="c-input" title="상담사 명 입력">
+					</td>
+					<th scope="row">지위</th>
+					<td>
+						<select class="c-select" title="지위 선택">
+							<option value="" selected="selected">선택</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">상담사 ID<br>(Swing 계정)</th>
+					<td>
+						<input type="text" class="c-input" title="상담사 ID 입력">
+					</td>
+					<th scope="row">로그인 ID<br>(Tworld 계정)</th>
+					<td>
+						<input type="text" class="c-input" title="로그인 ID 입력">
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h2 class="h-type2">업무/기타 정보</h2>
+			<table class="table-row">
+			<caption>업무/기타 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">고객케어 판매점</th>
+					<td>
+						<select class="c-select" title="판매점 선택">
+							<option value="" selected="selected">TWSN </option>
+						</select>
+					</td>
+					<th scope="row">고객케어 판매자</th>
+					<td>
+						<select class="c-select" title="판매자 선택">
+							<option value="" selected="selected">선택</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">전화상담 업무</th>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="tel_chk" name="chk">
+							<label for="tel_chk">선택</label>
+						</span>
+					</td>
+					<th scope="row">재직 상태</th>
+					<td>
+						<select class="c-select" title="재직 상태 선택">
+							<option value="" selected="selected">재직</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<div class="btn-area center">
+				<a href="#none" class="btn-base btn-blue">저장</a>
+				<a href="#none" class="btn-base btn-line-blue">목록</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

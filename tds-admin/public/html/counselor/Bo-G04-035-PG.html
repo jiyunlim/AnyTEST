@@ -1,0 +1,1204 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">상담사 주문</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li><strong>상담사 주문</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<div class="h-area2">
+				<h2 class="h-type2">셀프동의 주문서 작성</h2>
+				<div class="btn-area">
+					<a href="#layerPopBillDetail" data-model="layerPopBillDetail" class="btn-base">요금상세정보</a>
+					<a href="#layerPopOrderSave" data-model="layerPopOrderSave" class="btn-base">주문서 저장</a>
+				</div>
+			</div>
+
+			<table class="table-row">
+			<caption>상담사 관리</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">상담접수번호</th>
+					<td>
+						<input type="text" class="c-input" title="상담접수번호 입력" style="width:80%;">
+						<a href="#none" class="btn-base btn-gray">적용</a>
+					</td>
+					<th scope="row">대리점 (중분류)</th>
+					<td>
+						<input type="text" class="c-input" title="대리점 (중분류) 입력" style="width:80%;">
+						<a href="#none" class="btn-base btn-gray">적용</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">캠페인 종류</th>
+					<td colspan="3">
+						<input type="text" class="c-input" title=" 입력" style="width:80%;">
+						<a href="#none" class="btn-srch">검색</a>
+						<a href="#none" class="btn-base btn-gray ml-10">취소</a>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h3 class="h-type3">가입내용</h3>
+			<!-- 가입내용 - 순액형 요금제 -->
+			<table class="table-row">
+				<caption>가입내용</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">가입 유형</th>
+						<td>
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="joinType4_1" name="joinType4">
+									<label for="joinType4_1">번호이동</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="joinType4_2" name="joinType4">
+									<label for="joinType4_2">기기변경</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="joinType4_3" name="joinType4">
+									<label for="joinType4_3">신규가입</label>
+								</span>
+							</div>
+						</td>
+						<th scope="row">지원금 선택</th>
+						<td>
+							<select class="c-select" title="지원금 선택" disabled>
+								<option value="">지원금할인</option>
+								<option value="">요금할인 12개월</option>
+								<option value="">요금할인 24개월</option>
+								<option value="">무약정플랜</option>
+								<option value="" selected="selected">무약정 (언택트 요금제)</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><strong class="txt-sky">휴대폰</strong></th>
+						<td><a href="#none" class="txt-type2">iPhone 11(IPHONE_11_64GGR)</a></td>
+						<th scope="row" rowspan="2">요금제</th>
+						<td rowspan="2">
+							<ul class="bill-area1">
+								<li class="bill-subject">
+									<a href="#none" class="bill-tit">5G 순액형 67</a>
+									<span class="bill-btn">
+										<a href="#none" class="btn-base btn-gray">변경</a>
+									</span>
+								</li>
+								<li>
+									<span class="bill-tit">└ 약정할인 - 무약정</span>
+								</li>
+								<li>
+									<span class="bill-tit">└ 복지할인 - 해당사항 없음</span>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">색상/용량</th>
+						<td>미드나이트 그린/64G</td>
+					</tr>
+					<tr>
+						<th scope="row">출고가</th>
+						<td class="r-data"><strong class="txt-type2">1,375,000원</strong></td>
+						<th scope="row">월정액</th>
+						<td class="r-data"><strong class="txt-type2">월 65,890원</strong></td>
+					</tr>
+					<tr>
+						<th scope="row">단말 분할방식</th>
+						<td>
+							<div class="align-block">
+								<select class="c-select" title="단말 분할방식 선택" style="width:180px;">
+									<option value="" selected="selected">12개월 분할상환</option>
+									<option value="">24개월 분할상환</option>
+									<option value="">30개월 분할상환</option>
+									<option value="">일시불 결제</option>
+								</select>
+								<span class="r-txt lh-26">(수수료 5.9%)</span>
+							</div>
+						</td>
+						<th scope="row">약정할인</th>
+						<td class="r-data txt-red">0원</td>
+					</tr>
+					<tr>
+						<th scope="row">공시지원금</th>
+						<td class="r-data txt-red">0원</td>
+						<th scope="row">복지할인</th>
+						<td class="r-data txt-red">0원</td>
+					</tr>
+					<tr>
+						<th scope="row">추가지원금</th>
+						<td class="r-data txt-red">0원</td>
+						<th scope="row">지원금 요금할인</th>
+						<td class="r-data txt-red">0원</td>
+					</tr>
+					<tr>
+						<th scope="row">단말대금<br>(수수료5.9%포함)</th>
+						<td>
+							<div class="align-block">
+								월납부액 &gt;
+								<div class="r-txt">
+									<strong class="txt-type2">
+										124,292원
+										<em class="f-11">(128,762원)</em>
+									</strong>
+								</div>
+							</div>
+							<div class="align-block mt-10">
+								납부총액 &gt; 
+								<div class="r-txt">
+									1,375,000원
+									<em class="f-11">(1,461,096원)</em>
+								</div>
+							</div>
+						</td>
+						<th scope="row">통신료 (할인적용)</th>
+						<td class="r-data"><strong class="txt-type2">월 65,890원</strong></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="4">
+							<strong class="txt-black2">월 납부금액 (분할 상환 수수료 5.9%포함)</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+							<span class="txt-type1"><strong>월71,656원</strong> (71,842원)</span>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+			<!-- 가입내용- 단말분할납부 -->
+			<table class="table-row">
+			<caption>가입내용</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">가입 유형<span class="txt-essential">*</span></th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="joinType1_1" name="joinType1">
+								<label for="joinType1_1">번호이동</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="joinType1_2" name="joinType1">
+								<label for="joinType1_2">기기변경</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="joinType1_3" name="joinType1">
+								<label for="joinType1_3">신규가입</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">지원금 선택<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="지원금 선택">
+							<option value="" selected="selected">지원금할인</option>
+							<option value="">요금할인 12개월</option>
+							<option value="">요금할인 24개월</option>
+							<option value="">무약정플랜</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><strong class="txt-sky">휴대폰<span class="txt-essential">*</span></strong></th>
+					<td><a href="#none" class="txt-type2">Xiaomi Redmi Note5</a></td>
+					<th scope="row" rowspan="2">요금제</th>
+					<td rowspan="2">
+						<ul class="bill-area1">
+							<li class="bill-subject">
+								<a href="#none" class="bill-tit">band 데이터 퍼펙트 S</a>
+								<span class="bill-btn">
+									<a href="#none" class="btn-base btn-gray">변경</a>
+								</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 온가족할인 30% - 무약정</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 복지할인 - 해당사항 없음</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 옵션 : VIP 멤버십 </span>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">색상/용량<span class="txt-essential">*</span></th>
+					<td>검정/64G (재고 : 9)</td>
+				</tr>
+				<tr>
+					<th scope="row">출고가<span class="txt-essential">*</span></th>
+					<td class="r-data"><strong class="txt-type2">299,200원</strong></td>
+					<th scope="row">월정액</th>
+					<td class="r-data"><strong class="txt-type2">월 65,890원</strong></td>
+				</tr>
+				<tr>
+					<th scope="row">단말 분할방식<span class="txt-essential">*</span></th>
+					<td>
+						<div class="align-block">
+							<select class="c-select" title="단말 분할방식 선택" style="width:180px;">
+								<option value="" selected="selected">12개월 분할상환</option>
+								<option value="">24개월 분할상환</option>
+								<option value="">30개월 분할상환</option>
+								<option value="">일시불 결제</option>
+							</select>
+							<span class="r-txt lh-26">(수수료 5.9%)</span>
+						</div>
+					</td>
+					<th scope="row">약정할인</th>
+					<td class="r-data txt-red">0원</td>
+				</tr>
+				<tr>
+					<th scope="row">공시지원금</th>
+					<td class="r-data txt-red">-200,000원</td>
+					<th scope="row">복지할인</th>
+					<td class="r-data txt-red">0원</td>
+				</tr>
+				<tr>
+					<th scope="row">추가지원금</th>
+					<td class="r-data txt-red">-30,000원</td>
+					<th scope="row">지원금 요금할인</th>
+					<td class="r-data txt-red">-0원</td>
+				</tr>
+				<tr>
+					<th scope="row">단말대금<br>(수수료5.9%포함)</th>
+					<td>
+						<div class="align-block">
+							월납부액 &gt;
+							<div class="r-txt">
+								<strong class="txt-type2">
+									5,766원
+									<em class="f-11">(5,952원)</em>
+								</strong>
+							</div>
+						</div>
+						<div class="align-block mt-10">
+							납부총액 &gt; 
+							<div class="r-txt">
+								69,200
+								<em class="f-11">(71,431원)</em>
+							</div>
+						</div>
+					</td>
+					<th scope="row">통신료 (할인적용)</th>
+					<td class="r-data"><strong class="txt-type2">월 65,890원</strong></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="4">
+						<strong class="txt-black2">월 납부금액 (분할 상환 수수료 5.9%포함)</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+						<span class="txt-type1"><strong>월71,656원</strong> (71,842원)</span>
+					</td>
+				</tr>
+			</tfoot>
+			</table>
+			<ul class="txt-info">
+				<li class="txt-red">신규가입은 일시불 결제만 가능</li>
+				<li class="txt-red">바로픽업 배송은 분할 상환만 가능</li>
+			</ul>
+
+			<!-- 가입내용- 일시불납부 -->
+			<table class="table-row">
+			<caption>가입내용</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">가입 유형</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="joinType2_1" name="joinType2">
+								<label for="joinType2_1">번호이동</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="joinType2_2" name="joinType2">
+								<label for="joinType2_2">기기변경</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="joinType2_3" name="joinType2">
+								<label for="joinType2_3">신규가입</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">지원금 선택</th>
+					<td>
+						<select class="c-select" title="지원금 선택">
+							<option value="" selected="selected">지원금할인</option>
+							<option value="">요금할인 12개월</option>
+							<option value="">요금할인 24개월</option>
+							<option value="">무약정플랜</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">휴대폰</th>
+					<td><a href="#none" class="txt-type2">Xiaomi Redmi Note5</a></td>
+					<th scope="row" rowspan="2">요금제</th>
+					<td rowspan="2">
+						<ul class="bill-area1">
+							<li class="bill-subject">
+								<a href="#none" class="bill-tit">band 데이터 퍼펙트 S</a>
+								<span class="bill-btn">
+									<a href="#none" class="btn-base btn-gray">변경</a>
+								</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 약정할인 - 무약정</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 복지할인 - 해당사항 없음</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 옵션 : VIP 멤버십 </span>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">색상/용량</th>
+					<td>검정/64G (재고 : 9)</td>
+				</tr>
+				<tr>
+					<th scope="row">출고가</th>
+					<td class="r-data"><strong class="txt-type2">299,200원</strong></td>
+					<th scope="row">월정액</th>
+					<td class="r-data"><strong class="txt-type2">월 65,890원</strong></td>
+				</tr>
+				<tr>
+					<th scope="row">단말 분할방식</th>
+					<td>
+						<div class="align-block">
+							<select class="c-select" title="단말 분할방식 선택" style="width:180px;">
+								<option value="" selected="selected">12개월 분할상환</option>
+								<option value="">24개월 분할상환</option>
+								<option value="">30개월 분할상환</option>
+								<option value="">일시불 결제</option>
+							</select>
+						</div>
+					</td>
+					<th scope="row">약정할인</th>
+					<td class="r-data txt-red">0원</td>
+				</tr>
+				<tr>
+					<th scope="row">공시지원금</th>
+					<td class="r-data txt-red">0원</td>
+					<th scope="row">복지할인</th>
+					<td class="r-data txt-red">0원</td>
+				</tr>
+				<tr>
+					<th scope="row">추가지원금</th>
+					<td class="r-data txt-red">0원</td>
+					<th scope="row">지원금 요금할인</th>
+					<td class="r-data txt-red">-0원</td>
+				</tr>
+				<tr>
+					<th scope="row">단말대금</th>
+					<td class="r-data"><strong class="txt-type2">299,200원</strong></td>
+					<th scope="row">통신료 (할인적용)</th>
+					<td class="r-data"><strong class="txt-type2">월 65,890원</strong></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="4">
+						<span class="txt-black2">월 납부금액</span>
+						<strong class="txt-type1">월49,390원</strong>
+					</td>
+				</tr>
+			</tfoot>
+			</table>
+			<ul class="txt-info">
+				<li class="txt-red">신규가입은 일시불 결제만 가능</li>
+				<li class="txt-red">바로픽업 배송은 분할 상환만 가능</li>
+			</ul>
+
+			<!-- 가입내용- 단말 T렌탈 -->
+			<table class="table-row">
+			<caption>가입내용</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">가입 유형</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="joinType3_1" name="joinType3">
+								<label for="joinType3_1">번호이동</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="joinType3_2" name="joinType3">
+								<label for="joinType3_2">기기변경</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="joinType3_3" name="joinType3">
+								<label for="joinType3_3">신규가입</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">지원금 선택</th>
+					<td>
+						<select class="c-select" title="지원금 선택">
+							<option value="" selected="selected">지원금할인</option>
+							<option value="">요금할인 12개월</option>
+							<option value="">요금할인 24개월</option>
+							<option value="">무약정플랜</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">휴대폰</th>
+					<td><a href="#none" class="txt-type2">iPhone 8_256GB</a></td>
+					<th scope="row" rowspan="2">요금제</th>
+					<td rowspan="2">
+						<ul class="bill-area1">
+							<li class="bill-subject">
+								<a href="#none" class="bill-tit">band 데이터 퍼펙트 S</a>
+								<span class="bill-btn">
+									<a href="#none" class="btn-base btn-gray">변경</a>
+								</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 약정할인 - 무약정</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 복지할인 - 해당사항 없음</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 옵션 : VIP 멤버십 </span>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">색상/용량</th>
+					<td>검정/64G (재고 : 9)</td>
+				</tr>
+				<tr>
+					<th scope="row">출고가</th>
+					<td class="r-data"><strong class="txt-type2">299,200원</strong></td>
+					<th scope="row">월정액</th>
+					<td class="r-data"><strong class="txt-type2">월 65,890원</strong></td>
+				</tr>
+				<tr>
+					<th scope="row">단말 분할방식</th>
+					<td>
+						<div class="align-block">
+							<select class="c-select" title="단말 분할방식 선택" style="width:180px;">
+								<option value="" selected="selected">12개월 분할상환</option>
+								<option value="">24개월 분할상환</option>
+								<option value="">30개월 분할상환</option>
+								<option value="">일시불 결제</option>
+							</select>
+						</div>
+					</td>
+					<th scope="row">약정할인</th>
+					<td class="r-data txt-red">0원</td>
+				</tr>
+				<tr>
+					<th scope="row">월 T렌탈 이용료<br>(vat 포함)</th>
+					<td class="r-data txt-red"><strong class="txt-type2">40,6000원</strong></td>
+					<th scope="row">복지할인</th>
+					<td class="r-data txt-red">0원</td>
+				</tr>
+				<tr>
+					<th scope="row">T렌탈 납부총액</th>
+					<td class="r-data">974,400원<br>(24개월 분할 납부)</td>
+					<th scope="row">지원금 요금할인</th>
+					<td class="r-data txt-red">-0원</td>
+				</tr>
+				<tr>
+					<th scope="row" colspan="2">24개월 분할상환 대비 월 10,000원 더 절약할 수 있습니다.</th>
+					<th scope="row">통신료 (할인적용)</th>
+					<td class="r-data"><strong class="txt-type2">월 65,890원</strong></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="4">
+						<span class="txt-black2">월 납부금액</span>
+						<strong class="txt-type1">월49,390원</strong>
+					</td>
+				</tr>
+			</tfoot>
+			</table>
+			<ul class="txt-info">
+				<li class="txt-red">신규가입은 일시불 결제만 가능</li>
+				<li class="txt-red">바로픽업 배송은 분할 상환만 가능</li>
+			</ul>
+
+			<!-- 휴대폰배송 – 순액형 요금제 -->
+			<h3 class="h-type3">휴대폰 배송 선택</h3>
+			<table class="table-row">
+			<caption>휴대폰 배송 선택</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">배송방법<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="배송방법 선택" style="width:120px;">
+							<option value="" selected="selected">택배수령</option>
+							<option value="">찾아가는 개통</option>
+							<option value="">오늘배송 (서울만 가능)</option>
+						</select>
+						<p class="txt-info">오후 4시까지 주문완료 시 익일 배송 예정</p>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			
+			<!-- T기프트 선택하기 -->
+			<div class="h-area3">
+				<h3 class="h-type3">T기프트 선택하기<span class="txt-essential">*</span></h3>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">URL복사</a>
+					<a href="#layerPopTgiftSelect" data-model="layerPopTgiftSelect" class="btn-base">T기프트 선택</a>
+				</div>
+			</div>
+			<table class="table-col">
+			<caption>T기프트 선택하기</caption>
+			<colgroup>
+				<col style="width:12%">
+				<col>
+				<col style="width:30%">
+				<col style="width:12%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" colspan="2">T 기프트 상품명</th>
+					<th scope="col">옵션명</th>
+					<th scope="col">삭제</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="4">선택 버튼을 눌러 T기프트를 선택 해 주세요.</td>
+				</tr>
+				<tr>
+					<td><img src="../../../public/img/A0M0_001_5.jpg" alt="상품이미지"></td>
+					<td class="l-data">기프트 미제공</td>
+					<td>-</td>
+					<td><a href="#none" class="btn-delete">삭제</a></td>
+				</tr>
+				<tr>
+					<td><img src="../../../public/img/A0M0_001_5.jpg" alt="상품이미지"></td>
+					<td class="l-data">기프트 미제공</td>
+					<td>
+						Be Positive_GOLD
+						<p><a href="#none">[변경]</a></p>
+					</td>
+					<td><a href="#none" class="btn-delete">삭제</a></td>
+				</tr>
+				<tr>
+					<td><img src="../../../public/img/A0M0_001_5.jpg" alt="상품이미지"></td>
+					<td class="l-data">기프트 미제공</td>
+					<td>
+						<select class="c-select" title="옵션명 선택">
+							<option value="" selected="selected">Lip2_RED</option>
+						</select>
+						<p><a href="#none">[선택]</a></p>
+					</td>
+					<td><a href="#none" class="btn-delete">삭제</a></td>
+				</tr>
+			</tbody>
+			</table>
+			<div class="box-type1 align-center mt-20">
+				<span class="c-chk">
+					<input type="checkbox" id="agreeType1_1" name="agreeType1">
+					<label for="agreeType1_1">본인은 지원금에 상응하는 요금할인 또는 단말기 지원금 선택 시 혜택에 대해 충분한 설명을 들었으며, <span class="txt-sky">단말기 지원금을 선택하겠습니다.</span></label>
+				</span>
+			</div>
+			
+			<h3 class="h-type3">포인트 조회 하기</h3>
+			<table class="table-row">
+			<caption>포인트 조회 하기</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">고객 휴대폰 번호</th>
+					<td>
+						<select class="c-select" title="휴대폰번호 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="휴대폰번호 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="휴대폰번호 끝자리 입력" style="width:60px;">
+						<a href="#none" class="btn-base btn-gray">조회하기</a>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li><strong>무약정 플랜</strong> 가입일 기준으로 적립된 포인트 범위 내에서 적용 가능합니다.</li>
+				<li><strong>지켜줘서 고마워 적립 포인트</strong> 가입일 기준으로 적립된 포인트 범위 내에서 적용 가능합니다</li>
+			</ul>
+
+			<h3 class="h-type3">추가 할인 적용</h3>
+			<table class="table-col">
+			<caption>추가 할인 적용</caption>
+			<colgroup>
+				<col style="width:30%">
+				<col style="width:25%">
+				<col style="width:25%">
+				<col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">추가 할인 항목</th>
+					<th scope="col">보유포인트</th>
+					<th scope="col">할인금액</th>
+					<th scope="col">할인 선택</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">무약정 플랜 적립포인트</th>
+					<td class="r-data">0원</td>
+					<td class="r-data">
+						<input type="text" class="c-input" title="할인금액 입력" style="width:80%;">
+						<span class="txt-unit">원</span>
+					</td>
+					<td class="c-data">
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="saleChk1" name="saleChk1">
+							<label for="saleChk1">선택</label>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">지켜줘서 고마워 적립포인트</th>
+					<td class="r-data">0원</td>
+					<td class="r-data">
+						<input type="text" class="c-input" title="할인금액 입력" style="width:80%;">
+						<span class="txt-unit">원</span>
+					</td>
+					<td class="c-data">
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="saleChk2" name="saleChk2">
+							<label for="saleChk2">선택</label>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" rowspan="3">제휴포인트 <a href="#layerPopPoint" data-model="layerPopPoint" class="ico-tooltip">안내툴팁</a></th>
+					<td><a href="#none">[할인받기]</a></td>
+					<td class="r-data">-3,000원</td>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="saleChk3" name="saleChk3">
+							<label for="saleChk3">선택</label>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>현대카드</td>
+					<td class="r-data">-1,000원</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OK캐쉬백</td>
+					<td class="r-data">-2,000원</td>
+					<td></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<th scope="row" colspan="2">총 추가 할인 금액</th>
+					<td class="r-data"><strong class="txt-red">0</strong>원</td>
+					<td><a href="#none" class="btn-base btn-gray">적용</a></td>
+				</tr>
+			</tfoot>
+			</table>
+			<ul class="txt-info">
+				<li>무약정플랜 적립 포인트 / 지켜줘서 고마워 적립 포인트 최대 할인 적용 포인트는 50,000점 입니다.</li>
+				<li>단말 분할 상환 개통을 위해 단말 대금은 최소 1,000원 이상이어야 합니다. 적용 시 단말 대금이 1,000원 이상이 되도록 적용해 주시기 바랍니다. (문의 :1599-0111)</li>
+				<li>포인트는 단말 개통 시점에 차감됩니다.</li>
+				<li>무약정플랜 적립 포인트 / 지켜줘서 고마워 적립 포인트는 해당 포인트 가입자만 할인 가능합니다.</li>
+			</ul>
+
+			<div class="btn-area center">
+				<a href="#layerPopSelfSend" data-model="layerPopSelfSend" class="btn-base btn-blue">셀프 동의 주문서 전송</a>
+				<a href="#none" class="btn-base btn-line-blue">취소</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 레이어팝업 : 요금 상세정보 -->
+<div id="layerPopBillDetail" class="pop-wrap pop-layer small">
+	<div class="pop-header">
+		<strong class="h-type1">요금 상세정보</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		<h3 class="h-type2">요금 상세정보</h3>
+		
+		<div class="box-type1">
+			<div class="bill-area2">
+				<p class="bill-type">
+					<strong>월 납부금액</strong>
+					(A+B)
+				</p>
+				<p class="bill-price">
+					<strong>95,140원</strong>
+					(수수료 포함 : 98,691원)
+				</p>
+			</div>
+		</div>
+
+		<table class="table-col bill mt-10">
+		<caption>단말기 금액</caption>
+		<colgroup>
+			<col style="width:70%">
+			<col style="width:30%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col" colspan="2">A. 단말기 금액 (IPHONE_데모DECK)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>① 출고가</td>
+				<td class="r-data">0원</td>
+			</tr>
+			<tr>
+				<td>② 공시 지원금</td>
+				<td class="r-data txt-red">-0원</td>
+			</tr>
+			<tr>
+				<td>③ 추가지원금</td>
+				<td class="r-data txt-red">-0원</td>
+			</tr>
+			<tr>
+				<td>④ 한 번 더 할인</td>
+				<td class="r-data txt-red">-0원</td>
+			</tr>
+			<tr>
+				<td class="txt-black2"><span class="txt-unit ml-15">└ 무약정 플랜 포인트</span></td>
+				<td class="r-data txt-red">-0원</td>
+			</tr>
+			<tr>
+				<td>할부원금 (①-②-③-④)</td>
+				<td class="r-data">0원</td>
+			</tr>
+			<tr>
+				<td>분할 상환 수수료 (5.5%)</td>
+				<td class="r-data">0원</td>
+			</tr>
+			<tr>
+				<td>단말대금 (수수료포함)</td>
+				<td class="r-data">0원</td>
+			</tr>
+			<tr>
+				<td><strong class="txt-red">월 할부 금액 (12개월)</strong></td>
+				<td class="r-data txt-red"><strong class="txt-red">0원</strong></td>
+			</tr>
+		</tbody>
+		</table>
+
+		<table class="table-col bill mt-10">
+		<caption>통신 요금</caption>
+		<colgroup>
+			<col style="width:70%">
+			<col style="width:30%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col" colspan="2">B. 통신 요금 ( band 데이터 퍼펙트 S)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>① 월 정액 (vat 포함)</td>
+				<td class="r-data">75,900원</td>
+			</tr>
+			<tr>
+				<td>② 요금 할인 합계</td>
+				<td class="r-data txt-red">- 18,480원</td>
+			</tr>
+			<tr>
+				<td class="txt-black2"><span class="txt-unit ml-15">└ 약정할인</span></td>
+				<td class="r-data txt-black2">-0원</td>
+			</tr>
+			<tr>
+				<td class="txt-black2"><span class="txt-unit ml-15">└ 복지할인</span></td>
+				<td class="r-data txt-black2">-0원</td>
+			</tr>
+			<tr>
+				<td><strong class="txt-red">월 통신 요금</strong></td>
+				<td class="r-data"><strong class="txt-red">38,445원</strong></td>
+			</tr>
+		</tbody>
+		</table>
+		
+	</div>
+</div>
+<!-- //레이어팝업 : 요금 상세정보 -->
+
+<!-- 레이어팝업 : 제휴포인트 -->
+<div id="layerPopPoint" class="pop-wrap pop-layer small">
+	<div class="pop-header">
+		<strong class="h-type1">포인트 할인 안내</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		<p class="f-12">
+			포인트할인이란?<br />
+			고객님께서 보유하고 계신 각종 제휴사의 포인트 및 마일리지를 사용하여 SK텔레콤 휴대폰 구매 시 단말대금을 할인 받을 수 있는 서비스 입니다.
+		</p>
+
+		<ul class="txt-info">
+			<li>
+				적용 가능 포인트
+				<ul>
+					<li>- OK캐쉬백 포인트, GS&amp;POINT</li>
+					<li>- 베네피아 복지포인트</li>
+					<li>- 이지웰 복지포인트</li>
+					<li>- 문화상품권</li>
+					<li>- 각종 금융포인트 : 우리카드, KB국민카드, 삼성카드, 현대카드, 신한카드, 하나카드, 하나멤버스</li>
+					<li>- T모아금액권</li>
+					<li>- T다이렉트샵 이용권</li>
+				</ul>
+			</li>
+			<li>제휴 포인트/마일리지 사용은 각 제휴사의 포인트정책에 따라 사용 가능합니다.</li>
+			<li>포인트할인 적용 완료 후 개통취소로 인한 포인트/마일리지 사용취소는 개통취소와 함께 자동 취소처리 됩니다.</li>
+			<li>포인트할인 적용 완료로 사용된 포인트/마일리지 취소처리는 제휴사에 따라 최대 3~5일 소요될 수 있습니다.</li>
+		</ul>
+	</div>
+</div>
+<!-- //레이어팝업 : 제휴포인트 -->
+
+<!-- 레이어팝업 : 주문서 저장 -->
+<div id="layerPopOrderSave" class="pop-wrap pop-layer small">
+	<div class="pop-header">
+		<strong class="h-type1">주문서 저장</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		<table class="table-row">
+		<caption>주문서 저장</caption>
+		<colgroup>
+			<col style="width:24%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">이름</th>
+				<td><input type="text" class="c-input" title="이름 입력"></td>
+			</tr>
+		</tbody>
+		</table>
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-blue">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<!-- //레이어팝업 : 주문서 저장 -->
+
+<!-- 레이어팝업 : T 기프트 선택하기 -->
+<div id="layerPopTgiftSelect" class="pop-wrap pop-layer">
+	<div class="pop-header">
+		<strong class="h-type1">T 기프트 선택하기</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		<h3 class="h-type2">다이렉트샵이 드리는 특별한 혜택 – T 기프트</h3>
+		
+		<!-- tab -->
+		<ul class="tab-area depth2 ">
+			<li><a href="#none" class="on">전체</a></li>
+			<li><a href="#none">케이스/필름</a></li>
+			<li><a href="#none">Life Style</a></li>
+			<li><a href="#none">배터리/케이블</a></li>
+			<li><a href="#none">주변기기</a></li>
+			<li><a href="#none">음향기기</a></li>
+		</ul>
+		<!-- //tab -->
+
+		<h4 class="hidden">전체</h4>
+		<table class="table-col mt-40">
+		<caption>T 기프트 선택 리스트</caption>
+		<colgroup>
+			<col style="width:16%;">
+			<col>
+			<col style="width:25%">
+			<col style="width:10%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col" colspan="2"> T 기프트 상품명</th>
+				<th scope="col">옵션명</th>
+				<th scope="col">선택</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img src="../../../public/img/img_no.gif" alt="이미지"></td>
+				<td class="l-data"><a href="#none" class="txt-link">기프트 미제공</a></td>
+				<td>-</td>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="giftSelect1" name="giftSelect">
+						<label for="giftSelect1">선택</label>
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="../../../public/img/img_no.gif" alt="이미지"></td>
+				<td class="l-data"><a href="#none" class="txt-link">핑거볼(블루투스셀카셔터)</a></td>
+				<td>해당없음</td>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="giftSelect2" name="giftSelect">
+						<label for="giftSelect2">선택</label>
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="../../../public/img/img_no.gif" alt="이미지"></td>
+				<td class="l-data"><a href="#none" class="txt-link">기프트 미제공</a></td>
+				<td>
+					<select class="c-select" title="옵션명 선택">
+						<option value="" selected="selected">블루</option>
+					</select>
+				</td>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="giftSelect3" name="giftSelect">
+						<label for="giftSelect3">선택</label>
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="../../../public/img/img_no.gif" alt="이미지"></td>
+				<td class="l-data"><a href="#none" class="txt-link">[캔스톤]블루투스넥밴드2050</a></td>
+				<td>IBA100_PINK</td>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="giftSelect4" name="giftSelect">
+						<label for="giftSelect4">선택</label>
+					</span>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+		<ul class="txt-info">
+			<li>각각의 단말기에 알맞은 T기프트를 제공하고 있어, 단말기에 따라 선택 가능한 T기프트 상품 목록은 다릅니다.</li>
+			<li>T기프트 선택 후 옵션 및 타상품 변경 불가하오니, 신중히 선택해 주시기 바랍니다.</li>
+		</ul>
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-blue">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<!-- //레이어팝업 : T 기프트 선택하기 -->
+
+<!-- 레이어팝업 : 셀프 동의서 전송 (온라인재고) -->
+<div id="layerPopSelfSend" class="pop-wrap pop-layer medium">
+	<div class="pop-header">
+		<strong class="h-type1">셀프 동의서 전송 (온라인재고)</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		<h3 class="h-type2">주문 고객 정보</h3>
+		<table class="table-row">
+		<caption>주문 고객 정보</caption>
+		<colgroup>
+			<col style="width:24%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">고객명</th>
+				<td><input type="text" class="c-input" title="고객명 입력" style="width:120px;"></td>
+			</tr>
+			<tr>
+				<th scope="row">고객 핸드폰 번호</th>
+				<td>
+					<select class="c-select" title="휴대폰번호 첫자리 선택" style="width:60px;">
+						<option value="" selected="selected">010</option>
+					</select>
+					<span class="txt-unit">-</span>
+					<input type="text" class="c-input" title="휴대폰번호 중간자리 입력" style="width:60px;">
+					<span class="txt-unit">-</span>
+					<input type="text" class="c-input" title="휴대폰번호 끝자리 입력" style="width:60px;">
+				</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<h3 class="h-type2">기기변경 휴대폰 정보</h3>
+		<table class="table-row">
+		<caption>기기변경 휴대폰 정보</caption>
+		<colgroup>
+			<col style="width:24%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">고객명</th>
+				<td><input type="text" class="c-input" title="고객명 입력" style="width:120px;"></td>
+			</tr>
+			<tr>
+				<th scope="row">고객 핸드폰 번호</th>
+				<td>
+					<select class="c-select" title="휴대폰번호 첫자리 선택" style="width:60px;">
+						<option value="" selected="selected">010</option>
+					</select>
+					<span class="txt-unit">-</span>
+					<input type="text" class="c-input" title="휴대폰번호 중간자리 입력" style="width:60px;">
+					<span class="txt-unit">-</span>
+					<input type="text" class="c-input" title="휴대폰번호 끝자리 입력" style="width:60px;">
+				</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<h3 class="h-type2">주문내역 확인 URL</h3>
+		<p>
+			<select class="c-select" title="기기 선택" style="width:80px;">
+				<option value="" selected="selected">Mobile</option>
+			</select>
+			<input type="text" class="c-input" title="주문내역 확인 URL 입력" style="width:69%;">
+			<a href="#none" class="btn-base btn-gray">URL 생성</a>
+		</p>
+		<ul class="txt-info">
+			<li>의도하지 않게 ‘URL 생성’ 버튼 클릭으로 차감된 재고를 원복 시키려면, &quot;주문진행목록&quot;에서 &quot;주문취소&quot; 버튼을 클릭하세요.</li>
+		</ul>
+
+		<h3 class="h-type2">MMS</h3>
+		<textarea rows="1" cols="1" class="c-textarea" title="MMS 입력" style="height:180px;">
+[SK텔레콤 T direct shop 상담센터]
+안녕하세요. T다이렉트샵 상담매니저 XXX 입니다.
+주문하신 휴대폰 신청 준비가 완료되었습니다.
+아래 URL로 접속하셔서 주문내역 확인 후 주문정보 작성을 부탁드리며,
+주문하신 가입 조건은 문자를 받으신 후 60분까지만 유지되므로 빠른 확인 부탁드립니다.
+
+궁금한 사항은 언제든지 T world 상담센터로 문의 주시기 바랍니다.
+오늘도 행복한 하루 보내세요.
+☎ SKT 휴대폰에서 114  / 1525(무료)
+☎ 1599-0111 (유료) 전담상담매니저 XXX
+		</textarea>
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">MMS 보내기(주문고객정보로 전송)</a>
+			<a href="#none" class="btn-base btn-line-blue">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<!-- //레이어팝업 : 셀프 동의서 전송 (온라인재고) -->
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	//레이어팝업 호출
+		$('[data-model]').click(function(ev){
+			ev.preventDefault();
+			var model = $(this).attr('data-model');
+			modalCon(model,false,true);
+		});
+	});
+</script>
+</body>
+</html> 

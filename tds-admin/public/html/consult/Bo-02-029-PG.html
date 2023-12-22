@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN GUIDE</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../../public/js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		
+        <div id="content">
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">Admin 공지사항 보기</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>메뉴</li>
+					<li><strong>메뉴</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+				</div>
+			</div>
+			<!-- //page title -->
+            <div class="h-area2">
+				<h2 class="h-type2">게시글 기본 정보</h2>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">수정</a>
+				</div>
+			</div>
+			<table class="table-row">
+				<caption>게시글 기본 정보 상세</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">제목</th>
+						<td colspan="3">[필독] iPhone 11 출고가 변동 공지</td>
+					</tr>
+                    <tr>
+                        <th scope="row">공지대상</th>
+						<td>전체</td>
+                        <th scope="row">말머리</th>
+						<td>공통</td>
+                    </tr>
+					<tr>
+						<th scope="row">팝업공지</th>
+						<td colspan="3">Y / 2019-10-10 ~ 2019-11-10</td>
+					</tr>
+					<tr>
+						<th scope="row">등록일/등록자</th>
+						<td>2019-11-18 13:51 / 홍길동</td>
+						<th scope="row">수정일/수정자</th>
+						<td>2019-11-18 13:51 / 홍길동</td>
+					</tr>
+				</tbody>
+			</table>    
+            
+            <div class="h-area2">
+				<h2 class="h-type2">게시글 내용</h2>
+			</div>
+			<table class="table-row">
+				<caption>게시글 내용 상세</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">첨부파일<br>
+							<button type="button" class="btn-base mt-6">전체 다운로드</button>
+							<!-- 비 활성화 시 disabled 클래스 추가 -->
+							<button type="button" class="btn-base mt-6 disabled">전체 다운로드</button></th>
+						<td>
+							<p class="mt-6">
+								<a href="#none" class="text-primary">20191120_iPhone 11 출고가 변경_필독요망.xlsx</a>
+							</p>
+							<p class="mt-6">
+								<a href="#none" class="text-primary mt-6">SKT_Apple 아이폰 11 변경건.jpg</a>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">내용</th>
+						<td>
+							<br>
+                            Admin 공지사항 작성된 내용<br><br>
+                            Admin 공지사항 작성된 내용<br><br>
+                            Admin 공지사항 작성된 내용<br><br>
+                            Admin 공지사항 작성된 내용<br><br>
+                            Admin 공지사항 작성된 내용<br><br>
+                            Admin 공지사항 작성된 내용<br><br>
+                            Admin 공지사항 작성된 내용<br><br>
+                            Admin 공지사항 작성된 내용<br><br>
+                            Admin 공지사항 작성된 내용<br><br>
+                        </td>
+					</tr>
+				</tbody>
+			</table>        
+			<div class="btn-area center">
+				<a href="#none" class="btn-base btn-line-blue">목록</a>
+			</div>
+        </div>
+		<!-- //content -->
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

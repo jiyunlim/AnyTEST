@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN GUIDE</title>
+	<link rel="stylesheet" type="text/css" href="../../public/css/tdirect_admin.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/@tdirect_guide.css">
+	<!--[if lt IE 9]>
+	<script src="../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../public/js/jquery.shCore.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+<body>
+<div id="guide-wrap">
+	<header id="header">
+		<h1><strong>T다이렉트샵</strong><em>ADMIN GUIDE</em></h1>
+		<nav>
+			<div class="inner">
+				<a href="coding_list.html">파일리스트</a>
+				<a href="admin_title.html" class="on">페이지가이드</a>
+			</div>
+		</nav>
+	</header>
+	<article>
+		<nav>
+			<a href="../html/layout/admin_layout.html" target="_blank">레이아웃</a>
+			<a href="admin_title.html" class="on">타이틀</a>
+			<a href="admin_btn.html">버튼</a>
+			<a href="admin_form.html">폼요소</a>
+			<a href="admin_table.html">테이블</a>
+			<a href="admin_etc.html">탭/페이징</a>
+			<a href="admin_popup.html">팝업</a>
+			<a href="admin_script.html">스크립트</a>
+			<a href="admin_loading.html">로딩중</a>
+		</nav>
+
+		<section class="guide-content">
+			<h2 class="tit-con">타이틀 가이드</h2>
+				
+			<div class="box-wrap">
+				<h3>타이틀</h3>
+				<h4>1뎁스 : [ h-area1 ] > [ h-type1 ]</h4>
+				<div class="guide-box">
+					<!-- page title -->
+					<div class="h-area1">
+						<h1 class="h-type1">개통관리</h1>
+						<span class="h-menu">
+							<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+							<a href="#none" class="ico-refresh">새로고침</a>
+						</span>
+
+						<div class="side-menu">
+							<ul class="location-area">
+							<li class="home">홈</li>
+							<li>주문관리</li>
+							<li><strong>개통관리</strong></li>
+							</ul>
+
+							<select class="c-select" title="즐겨찾는 메뉴 선택">
+								<option value="" selected="selected">즐겨찾는 메뉴</option>
+								<option value="">메뉴1</option>
+								<option value="">메뉴2</option>
+								<option value="">메뉴3</option>
+							</select>
+						</div>
+					</div>
+					<!-- //page title -->
+				</div>
+				<div class="guide-box">
+<pre class="brush: xml;">
+&lt;div class="h-area1"&gt;
+	&lt;h1 class="h-type1"&gt;개통관리&lt;/h1&gt;
+	&lt;span class="h-menu"&gt;
+		&lt;a href="#none" class="ico-favorite"&gt;메뉴즐겨찾기&lt;/a&gt;
+		&lt;a href="#none" class="ico-refresh"&gt;새로고침&lt;/a&gt;
+	&lt;/span&gt;
+	&lt;div class="side-menu"&gt;
+		&lt;ul class="location-area"&gt;
+			&lt;li class="home"&gt;홈&lt;/li&gt;
+			&lt;li&gt;주문관리&lt;/li&gt;
+			&lt;li&gt;&lt;strong&gt;개통관리&lt;/strong&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;select class="c-select" title="즐겨찾는 메뉴 선택"&gt;
+			&lt;option value="" selected="selected"&gt;즐겨찾는 메뉴&lt;/option&gt;
+			&lt;option value=""&gt;메뉴1&lt;/option&gt;
+			&lt;option value=""&gt;메뉴2&lt;/option&gt;
+			&lt;option value=""&gt;메뉴3&lt;/option&gt;
+		&lt;/select&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+				</div>
+				
+				<h4>2뎁스 : [ h-type2 ]</h4>
+				<div class="guide-box">
+					<h2 class="h-type2">휴대폰 개통 내역 조회</h2>
+				</div>
+				<div class="guide-box">
+<pre class="brush: xml;">
+&lt;h2 class="h-type2"&gt;휴대폰 개통 내역 조회&lt;/h2&gt;
+</pre>
+				</div>
+
+				<h4>2뎁스 + 버튼 : [ h-area2 ] > [ h-type2 ] ~ [ btn-area ]</h4>
+				<div class="guide-box">
+					<div class="h-area2">
+						<h2 class="h-type2">모상품 그룹 배너 등록</h2>
+						<div class="btn-area">
+							<a href="#none" class="btn-base">등록</a>
+							<a href="#none" class="btn-base btn-gray">삭제</a>
+							<a href="#none" class="btn-base btn-gray">수정</a>
+						</div>
+					</div>
+				</div>
+				<div class="guide-box">
+<pre class="brush: xml;">
+&lt;div class="h-area2"&gt;
+	&lt;h2 class="h-type2"&gt;모상품 그룹 배너 등록&lt;/h2&gt;
+	&lt;div class="btn-area"&gt;
+		&lt;a href="#none" class="btn-base"&gt;등록&lt;/a&gt;
+		&lt;a href="#none" class="btn-base btn-gray"&gt;삭제&lt;/a&gt;
+		&lt;a href="#none" class="btn-base btn-gray"&gt;수정&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+				</div>
+
+				<h4>2뎁스 + 텍스트 : [ h-area2 ] > [ h-type2 ] ~ [ r-txt ]</h4>
+				<div class="guide-box">
+					<div class="h-area2">
+						<h3 class="h-type2">모상품 배너</h3>
+						<div class="r-txt">
+							<span class="txt-red">JPG, GIF, PNG 형식으로 2MB 이하만 등록하실 수 있습니다.</span>
+						</div>
+					</div>
+				</div>
+				<div class="guide-box">
+<pre class="brush: xml;">
+&lt;div class="h-area2"&gt;
+	&lt;h3 class="h-type2"&gt;모상품 배너&lt;/h3&gt;
+	&lt;div class="r-txt"&gt;
+		&lt;span class="txt-red"&gt;JPG, GIF, PNG 형식으로 2MB 이하만 등록하실 수 있습니다.&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+				</div>
+
+				<h4>탭 하단 타이틀 뎁스</h4>
+				<div class="guide-box">
+					<!-- tab -->
+					<ul class="tab-area">
+						<li><a href="#none" class="on">가입신청현황 관리</a></li>
+						<li><a href="#none">운송장 조회</a></li>
+					</ul>
+					<!-- //tab -->
+
+					<h2 class="hidden">가입신청현황 관리</h2>
+					<h3 class="h-type2">가입 신청 내역 조회</h3>
+					<table class="table-row">
+					<caption>가입 신청 내역 조회</caption>
+					<colgroup>
+						<col style="width:14%">
+						<col>
+						<col style="width:14%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr class="show-row">
+							<th scope="row">상품검색</th>
+							<td>
+								<select class="c-select" title="상품검색 선택" style="width:50%;">
+									<option value="" selected="selected">전체</option>
+									<option value="">무선</option>
+									<option value="">유선</option>
+									<option value="">와이브로</option>
+								</select>
+							</td>
+							<th scope="row">주문자/ 작업번호</th>
+							<td>
+								<input type="text" class="c-input" title="주문자 입력" style="width:40%;">
+								<input type="text" class="c-input" title="작업번호 입력" style="width:20%;">
+							</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+				<div class="guide-box">
+<pre class="brush: xml;">
+&lt;!-- tab --&gt;
+&lt;ul class="tab-area"&gt;
+	&lt;li&gt;&lt;a href="#none" class="on"&gt;가입신청현황 관리&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#none"&gt;운송장 조회&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- //tab --&gt;
+
+&lt;h2 class="hidden"&gt;가입신청현황 관리&lt;/h2&gt;&lt;!-- 접근성 작업을 위한 상단 탭에 해당하는 hidden 타이틀 작성 --&gt;
+&lt;h3 class="h-type2"&gt;가입 신청 내역 조회&lt;/h3&gt;&lt;!-- hidden 타이틀 보다 하위 heading 태그 사용 --&gt;
+&lt;table class="table-row"&gt;
+.
+.
+&lt;/table&gt;
+</pre>
+				</div>
+
+
+			</div>
+		</section>
+
+	</article>
+	<a href="#top" class="btn-top">TOP</a>
+</div>
+
+<script type="text/javascript" src="../../public/js/common.js"></script>
+</body>
+</html>

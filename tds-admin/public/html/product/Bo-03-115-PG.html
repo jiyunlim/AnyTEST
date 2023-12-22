@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content"> 
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">추가 할인 관리</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>상품관리</li>
+					<li>상품가격 옵션관리</li>
+					<li><strong>추가 할인 관리</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+			
+			<h2 class="h-type2">기본 정보</h2>
+			<table class="table-row">
+			<caption>기본 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:36%"> 
+				<col style="width:14%">
+				<col style="width:36%">  
+			</colgroup> 
+			<tbody>
+				<tr>
+					<th scope="row">추가 할인 명</th>
+					<td>
+						<select class="c-select" title="추가 할인 명 선택" style="width:200px;">
+							<option value="" selected="selected">선택</option>
+							<option value="">제휴포인트</option>
+							<option value="">쓰던폰 반납</option>
+							<option value="">라이트 할부</option>
+							<option value="">무약정플랜(할인방법)</option>
+							<option value="">지켜줘서 고마워 포인트</option>
+							<option value="">지켜줘서 고마워 포인트 (상담사용)</option>
+							<option value="">무약정 플랜 (상담사용/할인방법)</option>
+							<option value="">무약정플랜 포인트</option>
+							<option value="">무약정플랜 포인트(상담사 사용)</option>
+							<option value="">쿠폰</option>
+							<option value="">쿠폰(상담사용)</option>
+						</select>
+					</td>
+					<th scope="row">사용 여부</th>
+					<td>
+						<select class="c-select" title="사용 여부 선택" style="width:100px;">
+							<option value="" selected="selected">Y</option>
+							<option value="">N</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">URL</th>
+					<td colspan="3">
+						<input type="text" class="c-input" title="URL 입력">
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h2 class="h-type2">가입 유형/대상 설정</h2>
+			<table class="table-row">
+				<caption>가입 유형/대상 설정</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:12%">
+					<col style="width:14%">
+					<col style="width:12%">
+					<col style="width:31%">
+				</colgroup>
+				<tbody>
+				<tr>
+					<th scope="row">신규 여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="color1" name="colors" checked="checked">
+								<label for="color1">신규</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="color2" name="colors">
+								<label for="color2">중고</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">선/후 할인</th>
+					<td>
+						<select class="c-select" title="선/후 할인 선택">
+							<option value="" selected="selected">선 할인</option>
+							<option value="">후 할인</option>
+						</select>
+					</td>
+					<th scope="row">가입유형</th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="type1" name="types" checked="checked">
+								<label for="type1">신규가입</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="type2" name="types" checked="checked">
+								<label for="type2">번호이동</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="type3" name="types" checked="checked">
+								<label for="type3">기기변경</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">고객유형</th>
+					<td colspan="5">
+						<div class="align-block">
+							<div class="l-txt">
+								<span class="c-chk">
+									<input type="checkbox" id="customer1" name="customers" checked="checked">
+									<label for="customer1">개인</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="customer2" name="customers" checked="checked">
+									<label for="customer2">외국인</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="customer3" name="customers" checked="checked">
+									<label for="customer3">법인</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="customer4" name="customers" checked="checked">
+									<label for="customer4">미성년자</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="customer5" name="customers" checked="checked">
+									<label for="customer5">65세 이상</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="customer6" name="customers" checked="checked">
+									<label for="customer6">비회원</label>
+								</span>
+							</div>
+							<div class="r-btn">
+								<span class="c-chk">
+									<input type="checkbox" id="customerAll" name="customerAll" checked="checked">
+									<label for="customerAll">전체선택</label>
+								</span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">약정 프로그램</th>
+					<td colspan="5">
+						<div class="align-block">
+							<div class="l-txt">
+								<span class="c-chk">
+									<input type="checkbox" id="program1" name="programs" checked="checked">
+									<label for="program1">T지원금 약정</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="program2" name="programs" checked="checked">
+									<label for="program2">요금약정 12개월</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="program3" name="programs" checked="checked">
+									<label for="program3">요금약정 24개월</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="program4" name="programs" checked="checked">
+									<label for="program4">선택요금약정 12개월</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="program5" name="programs" checked="checked">
+									<label for="program5">선택요금약정 24개월</label>
+								</span>
+							</div>
+							<div class="r-btn">
+								<span class="c-chk">
+									<input type="checkbox" id="programAll" name="programAll" checked="checked">
+									<label for="programAll">전체선택</label>
+								</span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">할부선택</th>
+					<td colspan="5">
+						<div class="align-block">
+							<div class="l-txt">
+								<span class="c-chk">
+									<input type="checkbox" id="installment1" name="installments" checked="checked">
+									<label for="installment1">일시불</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="installment2" name="installments" checked="checked">
+									<label for="installment2">6개월</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="installment3" name="installments" checked="checked">
+									<label for="installment3">12개월</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="installment4" name="installments" checked="checked">
+									<label for="installment4">18개월</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="installment5" name="installments" checked="checked">
+									<label for="installment5">24개월</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="installment6" name="installments" checked="checked">
+									<label for="installment6">30개월</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="installment7" name="installments" checked="checked">
+									<label for="installment7">36개월</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="installment8" name="installments" checked="checked">
+									<label for="installment8">T렌탈</label>
+								</span>
+							</div>
+							<div class="r-btn">
+								<span class="c-chk">
+									<input type="checkbox" id="installmentAll" name="installments" checked="checked">
+									<label for="installmentAll">전체선택</label>
+								</span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+
+			<h2 class="h-type2">단말/요금 설정</h2>
+			<table class="table-row">
+				<caption>단말/요금 설정</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+				<tr>
+					<th scope="row">대상 단말 선택 <br> (33 선택)</th>
+					<td>
+						<div class="align-block">
+							<div class="l-txt">
+								<a href="#none" class="btn-text">Galaxy S9</a>
+								<a href="#none" class="btn-text">Galaxy S9</a>
+								<a href="#none" class="btn-text">Galaxy S9</a>
+								<a href="#none" class="btn-text">Galaxy S9</a>
+								<a href="#none" class="btn-text">Galaxy S9</a>
+								<a href="#none" class="btn-text">Galaxy S9</a>
+								<a href="#none" class="btn-text">Galaxy S9</a>
+								<a href="#none" class="btn-text">SONY XPERIA XZ1</a>
+								<a href="#none" class="btn-text">SONY XPERIA XZ1</a>
+								<a href="#none" class="btn-text">SONY XPERIA XZ1</a>
+								<a href="#none" class="btn-text">SONY XPERIA XZ1</a>
+							</div>
+							<div class="r-btn">
+								<button type="button" class="btn-base btn-gray">단말 선택</button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">대상 요금제 선택 <br> (180 선택)</th>
+					<td>
+						<div class="align-block">
+							<div class="l-txt">
+								<a href="#none" class="btn-text">TB끼리 온가족프리</a>
+								<a href="#none" class="btn-text">TB끼리 온가족프리</a>
+								<a href="#none" class="btn-text">TB끼리 온가족프리</a>
+								<a href="#none" class="btn-text">TB끼리 온가족프리</a>
+								<a href="#none" class="btn-text">TB끼리 온가족프리</a>
+								<a href="#none" class="btn-text">TB끼리 온가족프리</a>
+							</div>
+							<div class="r-btn">
+								<button type="button" class="btn-base btn-gray">요금제 선택</button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">중복 불가 서비스 <br> (50 선택)</th>
+					<td>
+						<div class="align-block">
+							<div class="l-txt">
+								<a href="#none" class="btn-text">T 렌탈 보험 A 고급</a>
+								<a href="#none" class="btn-text">T 렌탈 보험 A 고급</a>
+								<a href="#none" class="btn-text">T 렌탈 보험 A 고급</a>
+								<a href="#none" class="btn-text">T 렌탈 보험 A 고급</a>
+								<a href="#none" class="btn-text">T 렌탈 보험 A 고급</a>
+								<a href="#none" class="btn-text">T 렌탈 보험 A 고급</a>
+								<a href="#none" class="btn-text">T 렌탈 보험 A 고급</a>
+								<a href="#none" class="btn-text">T 렌탈 보험 A 고급</a>
+								<a href="#none" class="btn-text">T 렌탈 보험 A 고급</a>
+								<a href="#none" class="btn-text">T 렌탈 보험 A 고급</a>
+								<a href="#none" class="btn-text">T 렌탈 보험 A 고급</a>
+								<a href="#none" class="btn-text">T 렌탈 보험 A 고급</a>
+							</div>
+							<div class="r-btn">
+								<button type="button" class="btn-base btn-gray">서비스 선택</button>
+							</div>
+						</div>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+
+			<h2 class="h-type2">설명</h2>
+			<table class="table-row">
+				<caption>설명</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+				<tr>
+					<th scope="row">설명</th>
+					<td>
+						<textarea rows="3" cols="30" class="c-textarea" title="설명 입력" placeholder="간단하게 등록한 설명이 표시 됩니다."></textarea>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+
+			<!-- btn -->
+			<div class="btn-area center">
+				<button type="button" class="btn-base btn-blue">저장</button>
+				<button type="button" class="btn-base btn-line-blue">목록</button>
+			</div>
+			<!-- //btn -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

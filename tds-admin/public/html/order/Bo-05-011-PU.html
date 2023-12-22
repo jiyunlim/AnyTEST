@@ -1,0 +1,2050 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>주문상세 정보</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 860*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">주문상세</h1>
+		<a href="#none" class="btn-print"><span>주문정보 인쇄</span></a>
+	</div>
+	<div class="pop-content">
+		<!-- tab -->
+		<div class="js-tab-fixed">
+			<ul class="tab-area depth2 ">
+				<li><a href="#tab_con1" class="on">고객 CARE 정보</a></li>
+				<li><a href="#tab_con2">주문/가입정보</a></li>
+				<li><a href="#tab_con3">배송정보</a></li>
+				<li><a href="#tab_con4">결제/취소/반품교환</a></li>
+				<li><a href="#tab_con5">주문 메모</a></li>
+			</ul>
+		</div>
+		<!-- //tab -->
+
+		<!-- tab con1 -->
+		<h2 class="hidden">고객 CARE 정보</h2>
+		<div id="tab_con1">
+			<h3 class="h-type2">고객 Care 정보</h3>
+			<table class="table-row">
+			<caption>고객 Care 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">상담접수번호</th>
+					<td>XXXXX</td>
+					<th scope="row">캠페인명</th>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<th scope="row">예약판매<br>가입번호</th>
+					<td></td>
+					<th scope="row">예약판매<br>이벤트</th>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<th scope="row">판매 채널</th>
+					<td>TWD - 11번가</td>
+					<th scope="row">상품구분</th>
+					<td>휴대폰</td>
+					<th scope="row">가입유형</th>
+					<td>번호이동</td>
+				</tr>
+				<tr>
+					<th scope="row">주문 번호</th>
+					<td>YYMMDDXXXX</td>
+					<th scope="row">주문 상태</th>
+					<td>주문접수</td>
+					<th scope="row">주문일자</th>
+					<td>YYYYY-MM-DD HH:MM:SS</td>
+				</tr>
+				<tr>
+					<th scope="row">T 기프트 배송구분</th>
+					<td>합포장</td>
+					<th scope="row">T기프트 진행 상태</th>
+					<td></td>
+					<th scope="row">배송일자</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">상담그룹</th>
+					<td>장안고객 Care센터</td>
+					<th scope="row">대리점<br>(중분류)</th>
+					<td>1601_TWD센터(CLM리텐션SKN)</td>
+					<th scope="row">상담원(ID)</th>
+					<td>나도해 (SCXXXXXXX)</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h3 class="h-type2">고객 회원정보</h3>
+			<table class="table-row">
+			<caption>고객 회원정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">고객번호</th>
+					<td>99999999999</td>
+					<th scope="row">회원명</th>
+					<td>홍길동</td>
+					<th scope="row">회원ID</th>
+					<td>-</td>
+				</tr>
+				<tr>
+					<th scope="row">고객구분</th>
+					<td>개인</td>
+					<th scope="row">회원등급</th>
+					<td>비회원</td>
+					<th scope="row">복지할인대상</th>
+					<td>해당 사항 없음</td>
+				</tr>
+				<tr>
+					<th scope="row">복지할인대상</th>
+					<td colspan="2">
+						<div class="align-block">
+							010-1234-5678  
+							<div class="r-btn">
+								<a href="#none" class="btn-base btn-gray">변경</a>
+							</div>
+						</div>
+					</td>
+					<th scope="row">SMS 수신 여부</th>
+					<td colspan="2">
+						<div class="align-block">
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="sms1" name="sms">
+									<label for="sms1">Y</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="sms2" name="sms">
+									<label for="sms2">N</label>
+								</span>
+							</div>
+							<div class="r-btn">
+								<a href="#none" class="btn-base btn-gray">변경</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">이메일</th>
+					<td colspan="2">
+						<div class="align-block">
+							abcd@twd.co.kr
+							<div class="r-btn">
+								<a href="#none" class="btn-base btn-gray">변경</a>
+							</div>
+						</div>
+					</td>
+					<th scope="row">이메일 수신 여부</th>
+					<td colspan="2">
+						<div class="align-block">
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="email1" name="email">
+									<label for="email1">Y</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="email2" name="email">
+									<label for="email2">N</label>
+								</span>
+							</div>
+							<div class="r-btn">
+								<a href="#none" class="btn-base btn-gray">재발송</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">주소</th>
+					<td colspan="5">
+						<div class="align-block">
+							( xxx-xx  ) 서울특별시 강남구 테헤란로 431 
+							<div class="r-btn">
+								<a href="#none" class="btn-base btn-gray">변경</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h3 class="h-type2">구매 동의 상태 이력</h3>
+			<table class="table-col">
+			<caption>구매 동의 상태 이력</caption>
+			<colgroup>
+				<col>
+				<col style="width:15%">
+				<col style="width:15%">
+				<col style="width:22%">
+				<col style="width:14%">
+				<col style="width:22%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">시리얼 넘버</th>
+					<th scope="col">동의 방법</th>
+					<th scope="col">이력 등록 일시</th>
+					<th scope="col">구매 동의 상태</th>
+					<th scope="col">mms 발송번호</th>
+					<th scope="col">MMS 발송 스크립트<br>(버전)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>MMS 동의</td>
+					<td>YYYY-MM-DD HH:MM:SS</td>
+					<td class="l-data">미동의 (1차 발송)</td>
+					<td>010-XXXX-XXXX</td>
+					<td>1_개인(국내제조사) (14)</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>MMS 동의</td>
+					<td>YYYY-MM-DD HH:MM:SS</td>
+					<td class="l-data">미동의 (모바일 MMS 열람)</td>
+					<td>010-XXXX-XXXX</td>
+					<td>1_개인(국내제조사) (14)</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>MMS 동의</td>
+					<td>YYYY-MM-DD HH:MM:SS</td>
+					<td class="l-data">동의 (MMS 동의)</td>
+					<td>010-XXXX-XXXX</td>
+					<td>1_개인(국내제조사) (14)</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		<!-- //tab con1 -->
+
+		<!-- tab con2 -->
+		<h2 class="hidden">주문/가입정보</h2>
+		<div id="tab_con2">
+			<h3 class="h-type2">모바일 구매 정보</h3>
+			<table class="table-row">
+			<caption>모바일 구매 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">브랜드</th>
+					<td>삼성</td>
+					<th scope="row">출고가</th>
+					<td class="r-data">1,360,700 </td>
+					<th scope="row">단말 일련번호</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">상품명</th>
+					<td>iPhone X</td>
+					<th scope="row">공시지원금</th>
+					<td class="r-data txt-red"> -1,000 </td>
+					<th scope="row">USIM</th>
+					<td>신규유심</td>
+				</tr>
+				<tr>
+					<th scope="row">모델명</th>
+					<td>IPHONE_X_256GB</td>
+					<th scope="row">추가지원금</th>
+					<td class="r-data txt-red"> -1,000 </td>
+					<th scope="row">USIM 가격</th>
+					<td class="r-data">9,900 </td>
+				</tr>
+				<tr>
+					<th scope="row">용량</th>
+					<td>256GB</td>
+					<th scope="row">추가할인</th>
+					<td class="r-data txt-red"> -1,000</td>
+					<th scope="row">USIM 모델코드 (앞5자리)</th>
+					<td>xxxxxxx</td>
+				</tr>
+				<tr>
+					<th scope="row">색상</th>
+					<td>Blue</td>
+					<th scope="row">할부원금</th>
+					<td class="r-data">1,360,700 </td>
+					<th scope="row">USIM 일련번호 (뒤9자리)</th>
+					<td>xxxxxxx</td>
+				</tr>
+				<tr>
+					<th scope="row">단말 할부기간</th>
+					<td>24개월</td>
+					<th scope="row">최종결제금액 / 월납부금액</th>
+					<td class="r-data">0</td>
+					<th scope="row">유심비<br>납부방법</th>
+					<td></td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h3 class="h-type2">T 기프트</h3>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">변경</a>
+				</div>
+			</div>
+			<table class="table-col">
+			<caption>T 기프트 목록</caption>
+			<colgroup>
+				<col style="width:16%">
+				<col>
+				<col style="width:16%">
+				<col style="width:16%">
+				<col style="width:16%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">상품코드</th>
+					<th scope="col">상품명</th>
+					<th scope="col">옵션명</th>
+					<th scope="col">배송구분</th>
+					<th scope="col">배송방법</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>개별배송</td>
+					<td>택배(무료)</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h3 class="h-type2">라이트 할부 신청</h3>
+			<table class="table-row">
+			<caption>라이트 할부 신청</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col>
+				<col style="width:10%">
+				<col>
+				<col style="width:10%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">할부금액</th>
+					<td></td>
+					<th scope="row">할부개월 / 유형</th>
+					<td>24개월 / 라이트</td>
+					<th scope="row">처리상태</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">카드명</th>
+					<td></td>
+					<th scope="row">카드번호</th>
+					<td></td>
+					<th scope="row">카드주명</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">유효기간(월/년)</th>
+					<td></td>
+					<th scope="row">카드주<br>생년월일</th>
+					<td></td>
+					<th scope="row">카드주<br>관계</th>
+					<td></td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h3 class="h-type2">쓰던폰 반납 신청 내역</h3>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">배송조회</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>쓰던폰 반납 신청 내역</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">뉴보상 진행상태<br>(에코폰 보유)</th>
+					<td>접수</td>
+					<th scope="row">뉴보상진행상태<br>(다이렉트)</th>
+					<td>접수완료</td>
+					<th scope="row">단말기 코드</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">단말기 펫네임</th>
+					<td colspan="3">아이폰 6Plus_64GG / 골드</td>
+					<th scope="row">일련번호</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">등급</th>
+					<td>A</td>
+					<th scope="row">고객 보상금액</th>
+					<td class="r-data">195,000</td>
+					<th scope="row">보상방법</th>
+					<td>현금으로 받기</td>
+				</tr>
+				<tr>
+					<th scope="row">추가 체크사항</th>
+					<td colspan="2"></td>
+					<th scope="row">최근 수정일시</th>
+					<td colspan="2">YYYY-MM-DD HH:MM:SS</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h3 class="h-type2">개통/가입정보</h3>
+			<table class="table-row">
+				<caption>개통/가입정보</caption>
+				<colgroup>
+					<col style="width: 12%">
+					<col>
+					<col style="width: 12%">
+					<col>
+					<col style="width: 12%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">Swing 예약번호</th>
+						<td></td>
+						<th scope="row">TR gate 예약번호</th>
+						<td></td>
+						<th scope="row">이벤트 차수</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th scope="row">T-gate 명의자</th>
+						<td></td>
+						<th scope="row">T-gate 작성일시</th>
+						<td>YYYY-MM-DD HH:MM:SS</td>
+						<th scope="row">인증구분</th>
+						<td>휴대폰인증</td>
+					</tr>
+					<tr>
+						<th scope="row">가입 유형</th>
+						<td>기기변경</td>
+						<th scope="row">약정 구분</th>
+						<td>무약정 (언택트 요금제용)</td>
+						<th scope="row"></th>
+						<td></td>
+					</tr>
+					<tr>
+						<th scope="row">개통상태</th>
+						<td></td>
+						<th scope="row">접수자</th>
+						<td></td>
+						<th scope="row">접수일자</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th scope="row">개통번호</th>
+						<td></td>
+						<th scope="row">개통관리번호<br>(서비스관리번호)</th>
+						<td>
+							<input type="text" class="c-input dev-number" maxlength="10" title="개통관리번호 입력" style="width: 50%;">
+							<a href="#none" class="btn-base btn-gray">저장</a>
+						</td>
+						<th scope="row">개통일</th>
+						<td>
+							<input type="text" class="c-input" title="개통일" style="width: 75%" readonly>
+							<a href="#none" class="btn-calendar">달력</a>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">개통보류 사유</th>
+						<td colspan="5"></td>
+					</tr>
+					<tr>
+						<th scope="row">요금제</th>
+						<td colspan="4">5G 순액형 67</td>
+						<td class="r-data">89,000</td>
+					</tr>
+					<tr>
+						<th scope="row">약정할인</th>
+						<td colspan="4">요금할인</td>
+						<td class="r-data txt-red"></td>
+					</tr>
+					<tr>
+						<th scope="row">복지할인</th>
+						<td colspan="4">해당사항 없음</td>
+						<td class="r-data txt-red">0</td>
+					</tr>
+					<tr>
+						<th scope="row">지원금 할인</th>
+						<td colspan="4">미약정</td>
+						<td class="r-data txt-red"></td>
+					</tr>
+					<tr>
+						<th scope="row">부가서비스</th>
+						<td colspan="4"></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+			<table class="table-row">
+				<caption>가입정보</caption>
+				<colgroup>
+					<col style="width: 17%">
+					<col>
+					<col>
+					<col style="width: 17%">
+					<col>
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="row">지인(추천인)코드</th>
+						<td colspan="2"></td>
+						<th class="row">외부유입 경로</th>
+						<td colspan="2"></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h3 class="h-type2">결합 상품 신청</h3>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">신청 예약</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>결합 상품 신청</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">상품선택</th>
+					<td></td>
+					<th scope="row">연락가능번호</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">추가상품</th>
+					<td></td>
+					<th scope="row">통화 가능시간</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">설치 주소</th>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<th scope="row">메모</th>
+					<td colspan="3"></td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		<!-- //tab con2 -->
+
+		<!-- tab con3 -->
+		<h2 class="hidden">배송정보</h2>
+		<div id="tab_con3">
+			<div class="h-area2">
+				<h3 class="h-type2">배송정보</h3>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">수정</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>배송정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">받는 사람</th>
+					<td><input type="text" class="c-input" title="받는 사람 입력" value="홍길동" disabled="disabled"></td>
+					<th scope="row">연락가능번호 1</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;" disabled="disabled">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;" disabled="disabled">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;" disabled="disabled">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">배송 방법</th>
+					<td>택배 (무료)</td>
+					<th scope="row">연락가능번호 2</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;" disabled="disabled">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;" disabled="disabled">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;" disabled="disabled">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">운송장번호</th>
+					<td>
+						<input type="text" class="c-input" title="운송장번호 입력" style="width:80%;">
+						<a href="#none" class="btn-base btn-gray">저장</a>
+					</td>
+					<th scope="row">배송일</th>
+					<td>
+						<div class="align-block">
+							YYYY-MM-DD
+							<div class="r-btn">
+								<a href="#none" class="btn-base btn-gray">배송추적</a>
+								<a href="#none" class="btn-base btn-gray">SMS 발송</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">배송오류 사유</th>
+					<td colspan="3">-</td>
+				</tr>
+				<tr>
+					<th scope="row">배송지</th>
+					<td colspan="3">
+						<div class="form-group block">
+							<input type="text" class="c-input" title="우편번호 검색 입력" style="width:80px;" disabled="disabled">
+							<a href="#none" class="btn-base">우편번호검색</a>
+							<p class="input-address">
+								<input type="text" class="c-input" title="주소 입력" style="width:50%;" disabled="disabled">
+								<input type="text" class="c-input" title="상세주소 입력" style="width:40%;" disabled="disabled">
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">배송요구사항</th>
+					<td colspan="3"><input type="text" class="c-input" title="배송요구사항 입력" disabled="disabled"></td>
+				</tr>
+			</tbody>
+			</table>
+
+			<!-- 배송정보( 찾아가는 개통 서비스) -->
+			<div class="h-area2">
+				<h3 class="h-type2">배송정보</h3>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">수정</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>배송정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">받는 사람</th>
+					<td><input type="text" class="c-input" title="받는 사람 입력" value="홍길동" disabled="disabled"></td>
+					<th scope="row">연락가능번호 1</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;" disabled="disabled">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;" disabled="disabled">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;" disabled="disabled">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">배송 방법</th>
+					<td>택배 (무료)</td>
+					<th scope="row">연락가능번호 2</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">센터명</th>
+					<td></td>
+					<th scope="row">기사요청일</th>
+					<td>
+						<input type="text" class="c-input" title="기사요청일 입력" style="width:100px;">
+						<a href="#none" class="btn-calendar">달력</a>
+						<select class="c-select" title="기사요청일 시간 선택" style="width:120px;">
+							<option value="" selected="selected">오후1시~오후2시</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">담당자이름</th>
+					<td></td>
+					<th scope="row">방문예정일</th>
+					<td>
+						<div class="align-block">
+							2018-07-30
+							<div class="r-btn">
+								<a href="#none" class="btn-base btn-gray">최종확인</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">담당자<br>전화번호</th>
+					<td></td>
+					<th scope="row">처리상태</th>
+					<td>신청서 작성완료</td>
+				</tr>
+				<tr>
+					<th scope="row">배송지</th>
+					<td colspan="3">
+						<div class="form-group block">
+							<input type="text" class="c-input" title="우편번호 검색 입력" style="width:80px;" disabled="disabled">
+							<a href="#none" class="btn-base">우편번호검색</a>
+							<p class="input-address">
+								<input type="text" class="c-input" title="주소 입력" style="width:50%;" disabled="disabled">
+								<input type="text" class="c-input" title="상세주소 입력" style="width:40%;" disabled="disabled">
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">배송요구사항</th>
+					<td colspan="3"><input type="text" class="c-input" title="배송요구사항 입력" disabled="disabled"></td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- //배송정보( 찾아가는 개통 서비스) -->
+
+			<!-- 배송정보( 바로픽업) -->
+			<div class="h-area2">
+				<h3 class="h-type2">배송정보</h3>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">수정</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>배송정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">받는 사람</th>
+					<td><input type="text" class="c-input" title="받는 사람 입력" value="홍길동" disabled="disabled"></td>
+					<th scope="row">연락가능번호 1</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;" disabled="disabled">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;" disabled="disabled">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;" disabled="disabled">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">배송 방법</th>
+					<td>바로픽업 (매장방문수령)</td>
+					<th scope="row">연락가능번호 2</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;" disabled="disabled">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;" disabled="disabled">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;" disabled="disabled">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">대리점명</th>
+					<td></td>
+					<th scope="row">대표자</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">매장주소</th>
+					<td colspan="3"></td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- //배송정보( 바로픽업) -->
+
+			<div class="h-area2">
+				<h3 class="h-type2">T기프트 배송정보</h3>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">수정</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>T기프트 배송정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">받는 사람</th>
+					<td><input type="text" class="c-input" title="받는 사람 입력" value="홍길동" disabled="disabled"></td>
+					<th scope="row">연락가능번호 1</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;" disabled="disabled">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;" disabled="disabled">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;" disabled="disabled">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">배송 방법</th>
+					<td>택배 (무료)</td>
+					<th scope="row">연락가능번호 2</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;" disabled="disabled">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;" disabled="disabled">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;" disabled="disabled">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">운송장번호</th>
+					<td>
+						<input type="text" class="c-input" title="운송장번호 입력" style="width:80%;">
+						<a href="#none" class="btn-base btn-gray">저장</a>
+					</td>
+					<th scope="row">배송일</th>
+					<td>
+						<div class="align-block">
+							YYYY-MM-DD
+							<div class="r-btn">
+								<a href="#none" class="btn-base btn-gray">배송추적</a>
+								<a href="#none" class="btn-base btn-gray">SMS 발송</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">배송오류 사유</th>
+					<td>-</td>
+					<th scope="row">T기프트<br>배송구분</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="deliveryType1" name="deliveryType" checked="checked">
+								<label for="deliveryType1">개별배송</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="deliveryType2" name="deliveryType">
+								<label for="deliveryType2">합배송</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">배송지</th>
+					<td colspan="3">
+						<div class="form-group block">
+							<input type="text" class="c-input" title="우편번호 검색 입력" style="width:80px;" disabled="disabled">
+							<a href="#none" class="btn-base">우편번호검색</a>
+							<p class="input-address">
+								<input type="text" class="c-input" title="주소 입력" style="width:50%;" disabled="disabled">
+								<input type="text" class="c-input" title="상세주소 입력" style="width:40%;" disabled="disabled">
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">배송요구사항</th>
+					<td colspan="3"><input type="text" class="c-input" title="배송요구사항 입력" disabled="disabled"></td>
+				</tr>
+			</tbody>
+			</table>
+
+			<!-- T 기프트 배송 정보 (MMS) -->
+			<div class="h-area2">
+				<h3 class="h-type2">T기프트 배송정보</h3>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">수정</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>T기프트 배송정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">받는 사람</th>
+					<td><input type="text" class="c-input" title="받는 사람 입력" value="홍길동"></td>
+					<th scope="row">연락가능번호 1</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;" disabled="disabled">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;" disabled="disabled">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;" disabled="disabled">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">배송 방법</th>
+					<td>
+						<div class="align-block">
+							MMS 발송
+							<div class="r-btn">
+								<a href="#none" class="btn-base btn-gray">재발송</a>
+							</div>
+						</div>
+					</td>
+					<th scope="row">연락가능번호 2</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;" disabled="disabled">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;" disabled="disabled">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;" disabled="disabled">
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<table class="table-col mt-20">
+			<caption>쿠폰발송내역</caption>
+			<colgroup>
+				<col style="width:25%">
+				<col style="width:25%">
+				<col style="width:25%">
+				<col style="width:25%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">쿠폰번호</th>
+					<th scope="col">발급상태</th>
+					<th scope="col">쿠폰사용여부</th>
+					<th scope="col">쿠폰 발송일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>XXXXXXXXXX</td>
+					<td>발급완료</td>
+					<td>-</td>
+					<td>YYYY-MM-DD HH:MM:SS</td>
+				</tr>
+				<tr>
+					<td>XXXXXXXXXX</td>
+					<td>발급완료</td>
+					<td>-</td>
+					<td>YYYY-MM-DD HH:MM:SS</td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- //T 기프트 배송 정보 (MMS) -->
+		</div>
+		<!-- //tab con3 -->
+
+		<!-- tab con4 -->
+		<h2 class="hidden">결제/취소/반품/교환</h2>
+		<div id="tab_con4">
+			<h3 class="h-type2">결제수단정보</h3>
+			<table class="table-col">
+			<caption>결제수단정보 내역</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:10%">
+				<col style="width:12%">
+				<col>
+				<col style="width:10%">
+				<col style="width:22%">
+				<col style="width:10%">
+				<col style="width:10%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">결제수단</th>
+					<th scope="col">카드사</th>
+					<th scope="col">할부개월수</th>
+					<th scope="col">카드번호</th>
+					<th scope="col">승인번호</th>
+					<th scope="col">승인일시</th>
+					<th scope="col">청구상태</th>
+					<th scope="col">결제금액</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>카드</td>
+					<td>삼성카드</td>
+					<td>일시불</td>
+					<td>1111-****-****-****</td>
+					<td>xxxxxxxx</td>
+					<td>YYYY-MM-DD HH:MM:SS</td>
+					<td>승인</td>
+					<td class="r-data txt-red bg-red">1,283,700</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<!-- 결제수단정보 : 무통장입금 -->
+			<table class="table-col">
+			<caption>결제수단정보 무통장입금 내역</caption>
+			<colgroup>
+				<col style="width:11%">
+				<col style="width:10%">
+				<col style="width:11%">
+				<col style="width:10%">
+				<col>
+				<col style="width:13%">
+				<col style="width:13%">
+				<col style="width:8%">
+				<col style="width:11%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">결제수단</th>
+					<th scope="col">입금은행</th>
+					<th scope="col">계좌번호</th>
+					<th scope="col">입금상태</th>
+					<th scope="col">에스크로상태</th>
+					<th scope="col">입금예정기한</th>
+					<th scope="col">입금일자</th>
+					<th scope="col">입금자</th>
+					<th scope="col">결제금액</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>무통장입금</td>
+					<td>우체국</td>
+					<td>xxxxxxxx</td>
+					<td>입금완료</td>
+					<td>구매승인대기</td>
+					<td>YYYY-MM-DD</td>
+					<td>YYYY-MM-DD</td>
+					<td>홍길동</td>
+					<td class="r-data txt-red bg-red">1,283,700</td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- //결제수단정보 : 무통장입금 -->
+
+			<!-- 결제수단정보 : 실시간계좌이체 -->
+			<table class="table-col">
+			<caption>결제수단정보 실시간계좌이체 내역</caption>
+			<colgroup>
+				<col style="width:16%">
+				<col style="width:16%">
+				<col style="width:16%">
+				<col>
+				<col style="width:16%">
+				<col style="width:11%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">결제수단</th>
+					<th scope="col">입금은행</th>
+					<th scope="col">계좌번호</th>
+					<th scope="col">이체승인일시</th>
+					<th scope="col">승인번호</th>
+					<th scope="col">결제금액</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>실시간계좌이체</td>
+					<td>우체국</td>
+					<td>xxxxxxxx</td>
+					<td>YYYY-MM-DD  HH:MM:SS</td>
+					<td></td>
+					<td class="r-data txt-red bg-red">1,283,700</td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- //결제수단정보 : 실시간계좌이체 -->
+
+			<h3 class="h-type2">추가 할인 상세 내역</h3>
+			<table class="table-row">
+			<caption></caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">OCB 포인트 </th>
+					<td class="r-data">0</td>
+					<th scope="row">현역 Plan<br>포인트</th>
+					<td class="r-data">0</td>
+					<th scope="row"></th>
+					<td class="r-data"></td>
+				</tr>
+				<tr>
+					<th scope="row">11번가 포인트</th>
+					<td class="r-data">0</td>
+					<th scope="row">포인트 결제 </th>
+					<td class="r-data">0</td>
+					<th scope="row">무약정플랜적립포인트 </th>
+					<td class="r-data">0</td>
+				</tr>
+				<tr>
+					<th scope="row">라이트할부<br>신청</th>
+					<td>Y</td>
+					<th scope="row">쓰던폰 반납<br>신청</th>
+					<td>Y</td>
+					<th scope="row">기타할인/VIP<br>혜택 이용료</th>
+					<td class="r-data">0</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<!-- 토글 컨텐츠 -->
+			<div class="toggle-wrap">
+				<div class="h-area2">
+					<h3 class="h-type2">세금계산서 신청정보</h3>
+					<div class="btn-area">
+						<a href="#toggleMenu1" class="btn-base js-toggle">신청</a>
+					</div>
+				</div>
+				<div id="toggleMenu1" class="toggle-con">
+					<table class="table-row">
+					<caption>세금계산서 신청정보</caption>
+					<colgroup>
+						<col style="width:14%">
+						<col>
+						<col style="width:14%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">사업자번호</th>
+							<td>
+								<input type="text" class="c-input" title="사업자번호 첫자리 입력"  style="width:60px;">
+								<span class="txt-unit">-</span>
+								<input type="text" class="c-input" title="사업자번호 중간자리 입력"  style="width:60px;">
+								<span class="txt-unit">-</span>
+								<input type="text" class="c-input" title="사업자번호 끝자리 입력"  style="width:60px;">
+							</td>
+							<th scope="row">상호명</th>
+							<td><input type="text" class="c-input" title="상호명 입력"></td>
+						</tr>
+						<tr>
+							<th scope="row">대표자명</th>
+							<td><input type="text" class="c-input" title="대표자명 입력"></td>
+							<th scope="row">업태</th>
+							<td><input type="text" class="c-input" title="업태 입력"></td>
+						</tr>
+						<tr>
+							<th scope="row">회사 대표번호</th>
+							<td>
+								<select class="c-select" title="회사대표번호 앞자리 번호 선택" style="width:60px;">
+									<option value="" selected="selected">선택</option>
+									<option value="">010</option>
+								</select>
+								<span class="txt-unit">-</span>
+								<input type="text" class="c-input" title="회사대표번호 중간자리 입력"  style="width:60px;">
+								<span class="txt-unit">-</span>
+								<input type="text" class="c-input" title="회사대표번호 끝자리 입력"  style="width:60px;">
+							</td>
+							<th scope="row">종목</th>
+							<td><input type="text" class="c-input" title="종목 입력"></td>
+						</tr>
+						<tr>
+							<th scope="row">사업장 소재지</th>
+							<td colspan="3">
+								<div class="form-group block">
+									<input type="text" class="c-input" title="우편번호 검색 입력" style="width:80px;">
+									<a href="#none" class="btn-base">우편번호검색</a>
+									<p class="input-address">
+										<input type="text" class="c-input" title="주소 입력" style="width:50%;">
+										<input type="text" class="c-input" title="상세주소 입력" style="width:40%;">
+									</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">담당자</th>
+							<td><input type="text" class="c-input" title="담당자 입력"></td>
+							<th scope="row">담당자연락처</th>
+							<td>
+								<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+									<option value="" selected="selected">010</option>
+								</select>
+								<span class="txt-unit">-</span>
+								<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+								<span class="txt-unit">-</span>
+								<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">이메일</th>
+							<td colspan="3">
+								<input type="text" class="c-input" title="이메일 아이디 입력" style="width:120px;">
+								<span class="txt-unit">@</span>
+								<input type="text" class="c-input" title="이메일 도메인 입력" style="width:120px;">
+								<span class="txt-unit txt-red">* 등록된 이메일 주소로 세금계산서가 발송됩니다.</span>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">남길 메세지</th>
+							<td colspan="3">
+								<textarea class="c-textarea" cols="1" rows="1" title="남길 메세지 입력"></textarea>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+
+				<div class="h-area2">
+					<h3 class="h-type2">주문 취소 정보</h3>
+					<div class="btn-area">
+						<a href="#toggleMenu2" class="btn-base js-toggle">신청</a>
+					</div>
+				</div>
+				<div id="toggleMenu2" class="toggle-con">
+					<table class="table-row">
+					<caption>주문 취소 정보</caption>
+					<colgroup>
+						<col style="width:12%">
+						<col>
+						<col style="width:12%">
+						<col>
+						<col style="width:12%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">취소사유</th>
+							<td>
+								<select class="c-select" title="취소사유 선택">
+									<option value="">선택</option>
+									<option value="" selected="selected">고객변심</option>
+									<option value="">-</option>
+								</select>
+							</td>
+							<th scope="row">접수자</th>
+							<td colspan="3">홍길동</td>
+						</tr>
+						<tr>
+							<th scope="row">접수일</th>
+							<td><em>YYYY-MM-DD</em></td>
+							<th scope="row">결제금액</th>
+							<td class="r-data">19,800</td>
+							<th scope="row">T멤버십 승인정보</th>
+							<td>-</td>
+						</tr>
+						<tr>
+							<th scope="row">취소 코드</th>
+							<td>YYMMDD123456</td>
+							<th scope="row">환불 금액</th>
+							<td class="r-data">19,800</td>
+							<th scope="row">T멤버십<br>사용금액</th>
+							<td class="r-data">0</td>
+						</tr>
+						<tr>
+							<th scope="row">주문 상태</th>
+							<td>주문취소</td>
+							<th scope="row">환불진행상태</th>
+							<td>승인취소</td>
+							<th scope="row">T멤버십<br>환불금액</th>
+							<td class="r-data">0</td>
+						</tr>
+						<tr>
+							<th scope="row">결제방법</th>
+							<td>카드</td>
+							<th scope="row">거래은행</th>
+							<td>
+								<select class="c-select" title="거래은행 선택">
+									<option value="" selected="selected">선택</option>
+									<option value="">-</option>
+								</select>
+							</td>
+							<th scope="row">예금주</th>
+							<td>
+								<input type="text" class="c-input" title="예금주 입력">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">결제취소<br>(환불일)</th>
+							<td>YYYY-MM-DD</td>
+							<th scope="row">환불계좌</th>
+							<td colspan="3">
+								<input type="text" class="c-input" title="환불계좌 입력">
+							</td>
+							
+						</tr>
+						<tr>
+							<th scope="row">남긴 메세지</th>
+							<td colspan="5" class="r-data">
+								<textarea class="c-textarea" rows="5" title="남긴 메세지 입력"></textarea>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+
+				<div class="h-area2">
+					<h3 class="h-type2">반품 신청 정보</h3>
+					<div class="btn-area">
+						<a href="#toggleMenu3" class="btn-base js-toggle">신청</a>
+					</div>
+				</div>
+				<div id="toggleMenu3" class="toggle-con">
+					<table class="table-row">
+					<caption>반품 신청 정보</caption>
+					<colgroup>
+						<col style="width:10%">
+						<col>
+						<col style="width:10%">
+						<col style="width:22%">
+						<col style="width:10%">
+						<col style="width:22%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">구성품</th>
+							<td>
+								<select class="c-select" title="구성품 선택">
+									<option value="" selected="selected">선택</option> 
+								</select>
+							</td>
+							<th scope="row">반품 사유</th>
+							<td>
+								<select class="c-select" title="반품사유 선택">
+									<option value="" selected="selected">선택</option> 
+								</select>
+							</td>
+							<th scope="row">접수자</th>
+							<td>홍길동(abcd)</td>
+						</tr>
+						<tr>
+							<th scope="row">접수일</th>
+							<td>YYYY-MM-DD</td>
+							<th scope="row">결제 금액</th>
+							<td class="r-data">19,800</td>
+							<th scope="row">T 멤버십 승인정보</th>
+							<td class="r-data">-</td>
+						</tr>
+						<tr>
+							<th scope="row">반품 코드</th>
+							<td>YYMMDD123456</td>
+							<th scope="row">환불 금액</th>
+							<td class="r-data">19,800</td>
+							<th scope="row">T 멤버십 사용금액</th>
+							<td class="r-data">0</td>
+						</tr>
+						<tr>
+							<th scope="row">주문 상태</th>
+							<td>
+								<div class="align-block">
+									반품 신청
+									<div class="r-btn">
+										<a href="#none" class="btn-base btn-gray">반품반려</a>
+									</div>
+								</div>
+							</td>
+							<th scope="row">환불진행상태</th>
+							<td>승인취소</td>
+							<th scope="row">T 멤버십 환불금액</th>
+							<td class="r-data">0</td>
+						</tr>
+						<tr>
+							<th scope="row">결제 방법</th>
+							<td>카드</td>
+							<th scope="row">거래 은행</th>
+							<td>
+								<select class="c-select" title="거래 은행 선택">
+									<option value="" selected="selected">선택</option>
+								</select>
+							</td>
+							<th scope="row">예금주</th>
+							<td><input type="text" class="c-input" title="예금주 입력"></td>
+						</tr>
+						<tr>
+							<th scope="row">결제취소(환불일)</th>
+							<td>YYYY-MM-DD</td>
+							<th scope="row">환불 계좌</th>
+							<td colspan="3"><input type="text" class="c-input" title="환불 계좌 입력"></td>
+						</tr>
+						<tr>
+							<th scope="row">반품 배송 선택</th>
+							<td>
+								<div class="form-group">
+									<span class="c-rdo">
+										<input type="radio" id="returnType1" name="returnType">
+										<label for="returnType1">선발송</label>
+									</span>
+									<span class="c-rdo">
+										<input type="radio" id="returnType2" name="returnType">
+										<label for="returnType2">회수요청</label>
+									</span>
+								</div>
+							</td>
+							<th scope="row">택배사</th>
+							<td>
+								<select class="c-select" title="택배사 선택">
+									<option value="" selected="selected">선택</option>
+								</select>
+							</td>
+							<th scope="row">운송장<br>번호</th>
+							<td><input type="text" class="c-input" title="운송장 번호 입력"></td>
+						</tr>
+						<tr>
+							<th scope="row">비고</th>
+							<td colspan="5"><input type="text" class="c-input" title="비고 입력"></td>
+						</tr>
+						<tr>
+							<th>불량증1</th>
+							<td>
+								<div class="c-input-file">
+									<input type="text" class="file-name" title="불량증1 파일명">
+									<label for="upload01" class="file-label">찾기</label>
+									<input type="file" id="upload01" class="file-upload">
+								</div>
+							</td>
+							<td colspan="4">
+								<div class="align-file">
+									<span class="txt-unit">가나다라마바사아자차.jpg</span>
+									<div class="r-btn">
+										<a href="#none" class="btn-base btn-gray">삭제</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>불량증2</th>
+							<td>
+								<div class="c-input-file">
+									<input type="text" class="file-name" title="불량증 파일명">
+									<label for="upload02" class="file-label">찾기</label>
+									<input type="file" id="upload02" class="file-upload">
+								</div>
+							</td>
+							<td colspan="4">
+								<div class="align-file">
+									<span class="txt-unit">가나다라마바사아자차.jpg</span>
+									<div class="r-btn">
+										<a href="#none" class="btn-base btn-gray">삭제</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>불량증3</th>
+							<td>
+								<div class="c-input-file">
+									<input type="text" class="file-name" title="불량증 파일명">
+									<label for="upload03" class="file-label">찾기</label>
+									<input type="file" id="upload03" class="file-upload">
+								</div>
+							</td>
+							<td colspan="4">
+								<div class="align-file">
+									<span class="txt-unit">가나다라마바사아자차.jpg</span>
+									<div class="r-btn">
+										<a href="#none" class="btn-base btn-gray">삭제</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">고객명</th>
+							<td>
+								<input type="text" class="c-input" title="고객명 입력">
+							</td>
+							<th scope="row">연락처</th>
+							<td colspan="3">
+								<select class="c-select" title="연락처 앞자리 번호 선택" style="width:60px;">
+									<option value="" selected="selected">선택</option>
+									<option value="">010</option>
+								</select>
+								<span class="txt-unit">-</span>
+								<input type="text" class="c-input" title="연락처 중간자리 입력"  style="width:60px;">
+								<span class="txt-unit">-</span>
+								<input type="text" class="c-input" title="연락처 끝자리 입력"  style="width:60px;">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">주소</th>
+							<td colspan="5">
+								<div class="form-group block">
+									<input type="text" class="c-input" title="우편번호 검색 입력" style="width:80px;">
+									<a href="#none" class="btn-base btn-gray">우편번호검색</a>
+									<p class="input-address">
+										<input type="text" class="c-input" title="주소 입력" style="width:50%;">
+										<input type="text" class="c-input" title="상세주소 입력" style="width:40%;">
+									</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">남길<br>메세지</th>
+							<td colspan="5" class="r-data">
+								<textarea class="c-textarea" cols="1" rows="5" title="남길 메세지 입력"></textarea>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+
+				<div class="h-area2">
+					<h3 class="h-type2">교환 신청 정보</h3>
+					<div class="btn-area">
+						<a href="#toggleMenu4" class="btn-base js-toggle">신청</a>
+					</div>
+				</div>
+				<div id="toggleMenu4" class="toggle-con">
+					<table class="table-row">
+					<caption>교환 신청 정보</caption>
+					<colgroup>
+						<col style="width:10%">
+						<col>
+						<col style="width:10%">
+						<col style="width:22%">
+						<col style="width:10%">
+						<col style="width:22%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">구성품</th>
+							<td>
+								<select class="c-select" title="구성품 선택">
+									<option value="" selected="selected">선택</option> 
+								</select>
+							</td>
+							<th scope="row">교환 사유</th>
+							<td>
+								<select class="c-select" title="교환사유 선택">
+									<option value="" selected="selected">선택</option> 
+								</select>
+							</td>
+							<th scope="row">접수자</th>
+							<td>홍길동(abcd)</td>
+						</tr>
+						<tr>
+							<th scope="row">접수일</th>
+							<td>YYYY-MM-DD</td>
+							<th scope="row">교환 코드 </th>
+							<td>YYMMDD123456</td>
+							<th scope="row">주문 상태</th>
+							<td>교환 신청</td>
+						</tr>
+						<tr>
+							<th scope="row">교환 배송 선택</th>
+							<td>
+								<div class="form-group">
+									<span class="c-rdo">
+										<input type="radio" id="changeType1" name="changeType">
+										<label for="changeType1">선발송</label>
+									</span>
+									<span class="c-rdo">
+										<input type="radio" id="changeType2" name="changeType">
+										<label for="changeType2">회수요청</label>
+									</span>
+								</div>
+							</td>
+							<th scope="row">택배사</th>
+							<td>
+								<select class="c-select" title="택배사 선택">
+									<option value="" selected="selected">선택</option>
+								</select>
+							</td>
+							<th scope="row">운송장<br>번호</th>
+							<td><input type="text" class="c-input" title="운송장 번호 입력"></td>
+						</tr>
+						<tr>
+							<th scope="row">교환 단말 모델명</th>
+							<td colspan="2"><input type="text" class="c-input" title="교환 단말 모델명 입력"></td>
+							<th scope="row">교환 단말 일련번호</th>
+							<td colspan="2"><input type="text" class="c-input" title="교환 단말 일련번호 입력"></td>
+						</tr>
+						<tr>
+							<th scope="row">교환 유심 모델명</th>
+							<td colspan="2"><input type="text" class="c-input" title="교환 유심 모델명 입력"></td>
+							<th scope="row">교환 유심 일련번호</th>
+							<td colspan="2"><input type="text" class="c-input" title="교환 유심 일련번호 입력"></td>
+						</tr>
+						<tr>
+							<th scope="row">비고</th>
+							<td colspan="5"><input type="text" class="c-input" title="비고 입력"></td>
+						</tr>
+						<tr>
+							<th>불량증1</th>
+							<td>
+								<div class="c-input-file">
+									<input type="text" class="file-name" title="불량증1 파일명">
+									<label for="upload04" class="file-label">찾기</label>
+									<input type="file" id="upload04" class="file-upload">
+								</div>
+							</td>
+							<td colspan="4">
+								<div class="align-file">
+									<span class="txt-unit">가나다라마바사아자차.jpg</span>
+									<div class="r-btn">
+										<a href="#none" class="btn-base btn-gray">삭제</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>불량증2</th>
+							<td>
+								<div class="c-input-file">
+									<input type="text" class="file-name" title="불량증 파일명">
+									<label for="upload05" class="file-label">찾기</label>
+									<input type="file" id="upload05" class="file-upload">
+								</div>
+							</td>
+							<td colspan="4">
+								<div class="align-file">
+									<span class="txt-unit">가나다라마바사아자차.jpg</span>
+									<div class="r-btn">
+										<a href="#none" class="btn-base btn-gray">삭제</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>불량증3</th>
+							<td>
+								<div class="c-input-file">
+									<input type="text" class="file-name" title="불량증 파일명">
+									<label for="upload06" class="file-label">찾기</label>
+									<input type="file" id="upload06" class="file-upload">
+								</div>
+							</td>
+							<td colspan="4">
+								<div class="align-file">
+									<span class="txt-unit">가나다라마바사아자차.jpg</span>
+									<div class="r-btn">
+										<a href="#none" class="btn-base btn-gray">삭제</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">고객명</th>
+							<td colspan="2">
+								<input type="text" class="c-input" title="고객명 입력">
+							</td>
+							<th scope="row">연락처</th>
+							<td colspan="2">
+								<select class="c-select" title="연락처 앞자리 번호 선택" style="width:60px;">
+									<option value="" selected="selected">선택</option>
+									<option value="">010</option>
+								</select>
+								<span class="txt-unit">-</span>
+								<input type="text" class="c-input" title="연락처 중간자리 입력"  style="width:60px;">
+								<span class="txt-unit">-</span>
+								<input type="text" class="c-input" title="연락처 끝자리 입력"  style="width:60px;">
+							</td>
+						</tr>
+						<!-- <tr>
+							<th scope="row">불량단말 회수 주소</th>
+							<td colspan="5">
+								<div class="form-group block">
+									<input type="text" class="c-input" title="우편번호 검색 입력" style="width:80px;">
+									<a href="#none" class="btn-base btn-gray">우편번호검색</a>
+									<p class="input-address">
+										<input type="text" class="c-input" title="주소 입력" style="width:50%;">
+										<input type="text" class="c-input" title="상세주소 입력" style="width:40%;">
+									</p>
+								</div>
+							</td>
+						</tr> 고객 선발송 시 해당 영역 비노출 -->
+						<tr>
+							<th scope="row">교품단말 회수 주소</th>
+							<td colspan="5">
+								<div class="form-group block">
+									<input type="text" class="c-input" title="우편번호 검색 입력" style="width:80px;">
+									<a href="#none" class="btn-base btn-gray">우편번호검색</a>
+									<p class="input-address">
+										<input type="text" class="c-input" title="주소 입력" style="width:50%;">
+										<input type="text" class="c-input" title="상세주소 입력" style="width:40%;">
+									</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">남길<br>메세지</th>
+							<td colspan="5" class="r-data">
+								<textarea class="c-textarea" cols="1" rows="5" title="남길 메세지 입력"></textarea>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+
+				<div class="h-area2">
+					<h3 class="h-type2">T기프트 교환 신청 정보</h3>
+					<div class="btn-area">
+						<a href="#toggleMenu5" class="btn-base js-toggle">신청</a>
+					</div>
+				</div>
+				<div id="toggleMenu5" class="toggle-con">
+					<table class="table-row">
+					<caption>T기프트 교환 신청 정보</caption>
+					<colgroup>
+						<col style="width:10%">
+						<col>
+						<col style="width:10%">
+						<col style="width:22%">
+						<col style="width:10%">
+						<col style="width:22%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">구성품</th>
+							<td>
+								<select class="c-select" title="구성품 선택">
+									<option value="" selected="selected">선택</option> 
+								</select>
+							</td>
+							<th scope="row">교환 사유</th>
+							<td>
+								<select class="c-select" title="교환사유 선택">
+									<option value="" selected="selected">선택</option> 
+								</select>
+							</td>
+							<th scope="row">접수자</th>
+							<td>홍길동(abcd)</td>
+						</tr>
+						<tr>
+							<th scope="row">접수일</th>
+							<td>YYYY-MM-DD</td>
+							<th scope="row">교환 코드 </th>
+							<td>YYMMDD123456</td>
+							<th scope="row">주문 상태</th>
+							<td>교환 신청</td>
+						</tr>
+						<tr>
+							<th scope="row">교환 배송 선택</th>
+							<td>
+								<div class="form-group">
+									<span class="c-rdo">
+										<input type="radio" id="changeType1_1" name="changeType1">
+										<label for="changeType1_1">선발송</label>
+									</span>
+									<span class="c-rdo">
+										<input type="radio" id="changeType2_1" name="changeType1">
+										<label for="changeType2_1">회수요청</label>
+									</span>
+								</div>
+							</td>
+							<th scope="row">택배사</th>
+							<td>
+								<select class="c-select" title="택배사 선택">
+									<option value="" selected="selected">선택</option>
+								</select>
+							</td>
+							<th scope="row">운송장<br>번호</th>
+							<td><input type="text" class="c-input" title="운송장 번호 입력"></td>
+						</tr>
+						<tr>
+							<th scope="row">비고</th>
+							<td colspan="5"><input type="text" class="c-input" title="비고 입력"></td>
+						</tr>
+						<tr>
+							<th>불량증1</th>
+							<td>
+								<div class="c-input-file">
+									<input type="text" class="file-name" title="불량증1 파일명">
+									<label for="upload07" class="file-label">찾기</label>
+									<input type="file" id="upload07" class="file-upload">
+								</div>
+							</td>
+							<td colspan="4">
+								<div class="align-file">
+									<span class="txt-unit">가나다라마바사아자차.jpg</span>
+									<div class="r-btn">
+										<a href="#none" class="btn-base btn-gray">삭제</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>불량증2</th>
+							<td>
+								<div class="c-input-file">
+									<input type="text" class="file-name" title="불량증 파일명">
+									<label for="upload08" class="file-label">찾기</label>
+									<input type="file" id="upload08" class="file-upload">
+								</div>
+							</td>
+							<td colspan="4">
+								<div class="align-file">
+									<span class="txt-unit">가나다라마바사아자차.jpg</span>
+									<div class="r-btn">
+										<a href="#none" class="btn-base btn-gray">삭제</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>불량증3</th>
+							<td>
+								<div class="c-input-file">
+									<input type="text" class="file-name" title="불량증 파일명">
+									<label for="upload09" class="file-label">찾기</label>
+									<input type="file" id="upload09" class="file-upload">
+								</div>
+							</td>
+							<td colspan="4">
+								<div class="align-file">
+									<span class="txt-unit">가나다라마바사아자차.jpg</span>
+									<div class="r-btn">
+										<a href="#none" class="btn-base btn-gray">삭제</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">고객명</th>
+							<td colspan="2">
+								<input type="text" class="c-input" title="고객명 입력">
+							</td>
+							<th scope="row">연락처</th>
+							<td colspan="2">
+								<select class="c-select" title="연락처 앞자리 번호 선택" style="width:60px;">
+									<option value="" selected="selected">선택</option>
+									<option value="">010</option>
+								</select>
+								<span class="txt-unit">-</span>
+								<input type="text" class="c-input" title="연락처 중간자리 입력"  style="width:60px;">
+								<span class="txt-unit">-</span>
+								<input type="text" class="c-input" title="연락처 끝자리 입력"  style="width:60px;">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">불량단말 회수 주소</th>
+							<td colspan="5">
+								<div class="form-group block">
+									<input type="text" class="c-input" title="우편번호 검색 입력" style="width:80px;">
+									<a href="#none" class="btn-base btn-gray">우편번호검색</a>
+									<p class="input-address">
+										<input type="text" class="c-input" title="주소 입력" style="width:50%;">
+										<input type="text" class="c-input" title="상세주소 입력" style="width:40%;">
+									</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">교품단말 회수 주소</th>
+							<td colspan="5">
+								<div class="form-group block">
+									<input type="text" class="c-input" title="우편번호 검색 입력" style="width:80px;">
+									<a href="#none" class="btn-base btn-gray">우편번호검색</a>
+									<p class="input-address">
+										<input type="text" class="c-input" title="주소 입력" style="width:50%;">
+										<input type="text" class="c-input" title="상세주소 입력" style="width:40%;">
+									</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">남길<br>메세지</th>
+							<td colspan="5" class="r-data">
+								<textarea class="c-textarea" cols="1" rows="5" title="남길 메세지 입력"></textarea>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+
+					<h3 class="h-type2">T기프트 주문정보</h3>
+					<table class="table-col">
+					<caption>T기프트 주문정보</caption>
+					<colgroup>
+						<col style="width:16%">
+						<col>
+						<col style="width:16%">
+						<col style="width:16%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">상품코드</th>
+							<th scope="col">상품명</th>
+							<th scope="col">옵션명</th>
+							<th scope="col">일련번호</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>-</td>
+							<td class="l-data">-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- //tab con4 -->
+
+		<!-- tab con5 -->
+		<h2 class="hidden">주문 메모</h2>
+		<div id="tab_con5">
+			<div class="h-area2">
+				<h3 class="h-type2">주문 메모</h3>
+				<div class="btn-area">
+					<a href="#table-add-row" class="btn-base js-tr-add">추가</a>
+					<a href="#none" class="btn-base btn-gray js-tr-delete">삭제</a>
+				</div>
+			</div>
+			<table id="table-add-row" class="table-col js-table-toggle">
+			<caption>주문 메모</caption>
+			<colgroup>
+				<col>
+				<col span="4">
+				<col style="width:10%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">순번</th>
+					<th scope="col">구분</th>
+					<th scope="col">작성자</th>
+					<th scope="col">소속</th>
+					<th scope="col">날짜</th>
+					<th scope="col">
+						전체 
+						<a href="#none" class="btn-unfold">전체보기</a>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>물품교환/반품</td>
+					<td>홍길동 (abcde) /</td>
+					<td>장안고객 Care센터</td>
+					<td><em>YYYY-MM-DD HH:MM:SS</em></td>
+					<td><a href="#none" class="btn-base btn-gray btn-view">보기</a></td>
+				</tr>
+				<tr class="hide-con">
+					<td colspan="6">
+						상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 
+					</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>물품교환/반품</td>
+					<td>홍길동 (abcde) /</td>
+					<td>장안고객 Care센터</td>
+					<td><em>YYYY-MM-DD HH:MM:SS</em></td>
+					<td><a href="#none" class="btn-base btn-gray btn-view">보기</a></td>
+				</tr>
+				<tr class="hide-con">
+					<td colspan="6">
+						상담2 작성 내용2 상담 작성 내용상담2 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 
+					</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		<!-- //tab con5 -->
+
+		<div class="h-area2">
+			<h3 class="h-type2">주문관리 로그</h3> 
+		</div>
+		<div>주문관리 로그 내용 영역</div>
+		<div class="h-area2">
+			<h3 class="h-type2">주문정보 변경내역 로그</h3> 
+		</div>
+		<div>주문정보 변경내역 로그 영역</div>
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		/* tr 행추가 삭제 */
+		$('.js-tr-add').click(function(){
+			var row = "<tr class='add-row'>";
+				row += "<td>신규</td>";
+				row += "<td></td>";
+				row += "<td></td>";
+				row += "<td></td>";
+				row += "<td></td>";
+				row += "<td></td>";
+				row += "</tr>";
+				row += "</tr>";
+				row += "<tr class='add-row'>";
+				row += "<td colspan='6'><textarea style='width:100%;height:100px;' class='c-textarea' title='내용입력'></textarea><div class='btn-area'><a href='#none' class='btn-base'>저장</a></div></td>";
+				row += "</tr>";
+			$($(this).attr('href')).find('tbody:last').append(row);
+		});
+		$('.js-tr-delete').click(function() {
+			$('.table-col > tbody tr.add-row:last').remove();
+			$('.table-col > tbody tr.add-row:last').before().remove();
+		});
+	});
+</script>
+</body>
+</html>

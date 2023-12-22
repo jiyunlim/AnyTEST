@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>이메일 보내기</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 600*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">이메일 보내기</h1>
+	</div>	
+	<div class="pop-content">
+		<table class="table-row">
+		<caption>이메일 보내기</caption>
+		<colgroup>
+			<col style="width:16%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">보내는주소</th>
+				<td>
+					<input type="text" class="c-input" title="보내는 주소" value="bbsmaster@sktelecom.com" style="width:180px;">
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">받는 주소</th>
+				<td>
+					<input type="text" class="c-input" title="이메일 아이디 입력" style="width:120px;">
+					<span class="txt-unit">@</span>
+					<input type="text" class="c-input" title="이메일 도메인 입력" style="width:120px;">
+					<select class="c-select"  title="이메일 도메인 선택"  style="width:120px;">
+						<option value="" selected="selected">직접입력</option>
+						<option value="">-</option>
+					</select>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<h2 class="h-type2">이메일 발송 내용 선택</h2>
+		<table class="table-row">
+			<tr>
+				<td>
+					<span class="c-rdo">
+						<input type="radio" id="sendmail1" name="sendmail">
+						<label for="sendmail1">[T world 다이렉트] 고객님의 주문이 접수되었습니다.</label>
+					</span> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-rdo">
+						<input type="radio" id="sendmail2" name="sendmail">
+						<label for="sendmail2">[T world 다이렉트] T world Shop의 배송 확인 안내 메일입니다</label>
+					</span> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-rdo">
+						<input type="radio" id="sendmail3" name="sendmail">
+						<label for="sendmail3">[T world 다이렉트] 고객님께서 교환 신청하신 내용에 대한 접수 확인 메일입니다.</label>
+					</span> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-rdo">
+						<input type="radio" id="sendmail4" name="sendmail">
+						<label for="sendmail4">[T world 다이렉트] 고객님의 주문이 취소 되었습니다.</label>
+					</span> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-rdo">
+						<input type="radio" id="sendmail5" name="sendmail">
+						<label for="sendmail5">[T world 다이렉트] 고객님께서 반품 신청하신 내용에 대한 접수 확인 메일입니다.</label>
+					</span> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-rdo">
+						<input type="radio" id="sendmail6" name="sendmail">
+						<label for="sendmail6">[T world 다이렉트] 고객님께서 신청하신 교환처리가 완료되었습니다.</label>
+					</span> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-rdo">
+						<input type="radio" id="sendmail7" name="sendmail">
+						<label for="sendmail7">[T world 다이렉트] 고객님께서 주문하신 상품이 발송되었습니다.</label>
+					</span> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-rdo">
+						<input type="radio" id="sendmail8" name="sendmail">
+						<label for="sendmail8">[T world 다이렉트] 고객님께서 신청하신 반품처리가 완료되었습니다.</label>
+					</span> 
+				</td>
+			</tr>
+		</table>
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>단말 상세보기</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 860*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">단말 상세보기</h1>
+	</div>
+	<div class="pop-content">
+		<div class="device-detail-area">
+			<div class="device-thumb-list">
+				<p class="img-main"><img src="../../../public/img/A0M0_001_1.jpg" alt="앞면"></p>
+				<ul class="img-list">
+					<li><a href="#none" class="on"><img src="../../../public/img/A0M0_001_1.jpg" alt="앞면"></a></li>
+					<li><a href="#none"><img src="../../../public/img/A0M0_001_2.jpg" alt="옆면"></a></li>
+					<li><a href="#none"><img src="../../../public/img/A0M0_001_3.jpg" alt="뒷면"></a></li>
+					<li><a href="#none"><img src="../../../public/img/A0M0_001_4.jpg" alt="측면"></a></li>
+				</ul>
+			</div>
+			<div class="device-info">
+				<h2 class="device-subject">Galaxy Note 9</h2>
+				<p class="device-model">SM-N960N_128G</p>
+				<div class="device-option">
+					<dl class="device-color">
+						<dt>색상선택</dt>
+						<dd>
+							<ul class="color-list">
+								<li class="on"><a href="#none" class="box-color" style="background:#000000;">미드나잇블랙</a></li>
+								<li><a href="#none" class="box-color" style="background:#4A6089;">오션 블루</a></li>
+								<li><a href="#none" class="box-color" style="background:#C3856E;">메탈릭코퍼</a></li>
+								<li><a href="#none" class="box-color" style="background:#C8A4BE;">라벤더퍼플</a></li>
+							</ul>
+						</dd>
+					</dl>
+					<dl class="device-apacity">
+						<dt>용량선택</dt>
+						<dd>
+							<select class="c-select" title="용량선택" style="width:140px;">
+								<option value="" selected="selected">128G</option>
+							</select>
+						</dd>
+					</dl>
+				</div>
+				<table class="table-row mt-10">
+					<caption>휴대폰 상세보기</caption>
+					<colgroup>
+						<col style="width:24%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">색상</th>
+							<td>미드나잇블랙</td>
+						</tr>
+						<tr>
+							<th scope="row">CPU</th>
+							<td>10nm64-bit Octa-Core</td>
+						</tr>
+						<tr>
+							<th scope="row">디스플레이</th>
+							<td>Quad HD+ Super AMOLED</td>
+						</tr>
+						<tr>
+							<th scope="row">카메라</th>
+							<td>플래쉬 있음</td>
+						</tr>
+						<tr>
+							<th scope="row">배터리</th>
+							<td>4000mAh</td>
+						</tr>
+						<tr>
+							<th scope="row">메모리</th>
+							<td>6GB/128GB</td>
+						</tr>
+						<tr>
+							<th scope="row">사이즈</th>
+							<td>76.4 * 161.9 * 8.8mm</td>
+						</tr>
+						<tr>
+							<th scope="row">무게</th>
+							<td>201</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
+		<!-- tab -->
+		<ul class="tab-area depth2">
+			<li><a href="#none">상품정보</a></li>
+			<li><a href="#none">MMS보내기</a></li>
+			<li><a href="#none" class="on">이메일 보내기</a></li>
+		</ul>
+		<!-- //tab -->
+		
+		<h3 class="hidden">이메일 보내기</h3>
+		<div class="tab-con box">
+			<h4 class="h-type2">이메일 보내기</h4>
+			<div class="edit-area">
+				에디터 편집기
+			</div>
+
+			<table class="table-row mt-20">
+			<caption>이메일 보내기</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">받는 사람</th>
+					<td>
+						<input type="text" class="c-input" title="이메일 아이디 입력" style="width:120px;">
+						<span class="txt-unit">@</span>
+						<input type="text" class="c-input" title="이메일 도메인 입력" style="width:120px;">
+						<select class="c-select"  title="이메일 도메인 선택"  style="width:120px;">
+							<option value="" selected="selected">직접입력</option>
+							<option value="">-</option>
+						</select>
+						<a href="#none" class="btn-base btn-gray">보내기</a>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script type="text/javascript">
+$(function(){
+	rollingList.imgWrap();
+});
+var rollingList = {
+	imgWrap : function(){
+		var rollingLink = $(".device-thumb-list ul li a");
+		rollingLink.on("click focus", function(){
+			var imgFind = $(this).find("img"); 
+			var imgUrl = imgFind.attr("src");
+			var imgAlt = imgFind.attr("alt");
+			rollingLink.removeClass("on");
+			$(this).addClass("on");   
+			$(".device-thumb-list p img").attr({"src":imgUrl, "alt":imgAlt});
+			return false; 
+		});
+	}
+}
+</script>
+</body>
+</html>

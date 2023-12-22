@@ -1,0 +1,2605 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN GUIDE</title>
+	<link rel="stylesheet" type="text/css" href="../../public/css/@tdirect_guide.css">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<div id="guide-wrap">
+	<header id="header">
+		<h1><strong>T다이렉트샵</strong><em>ADMIN GUIDE</em></h1>
+		<nav>
+			<div class="inner">
+				<a href="coding_list.html" class="on">파일리스트</a>
+				<a href="admin_title.html">페이지가이드</a>
+			</div>
+		</nav>
+	</header>
+	<article>
+		<nav>
+			<a href="#content08">공통</a>
+			<a href="#content00">Global</a>
+			<a href="#content01">상담/공지 관리</a>
+			<a href="#content02">상품 관리</a>
+			<a href="#content03">전시 관리</a>
+			<a href="#content04">주문 관리</a>
+			<a href="#content07">상담사 주문</a>
+			<a href="#content05">시스템 관리</a>
+			<a href="#content06">통계</a>
+			<a href="#content09">로그인</a>
+		</nav>
+		<!-- <ul class="txt-guide">
+			<li>완료표시 : <span class="finish">빨간색표시</span></li>
+			<li>수정표시 : <span class="modify">파란색표시</span> [최신수정일 날짜로 표시]</li>
+			<li>수정주석표시 : &lt;!-- 2018-00-00 수정내역 --&gt; [해당날짜로 주석 표시]</li>
+		</ul> -->
+
+		<div class="txt-guide-alert">
+			<p>##코딩페이지 참고사항##</p>
+			<ul>
+				<li>
+					[주문관리 1,2차 작업완료 - 화면설계서 목록]
+					<p class="finish">
+						(TWD)SB 주문관리_admin_v0.1_20180719_모바일주문_TG_유선_바로픽업.pptx<br />
+						(TWD)SB 주문관리_admin_v0.4_20180719_ 그 외 메뉴.pptx
+					</p>
+				</li>
+			</ul>
+		</div>
+
+		<section class="guide-content" id="content08">
+			<h2 class="tit-guide">공통</h2>
+			<table class="tbl-list-guide">
+				<caption>공통</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>1Depth</th>
+						<th>2Depth</th>
+						<th>3Depth</th>
+						<th>4Depth</th>
+						<th>파일명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>우편번호 조회</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/common/Bo-00-001-PU.html" onclick="window.open('../html/common/Bo-00-001-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank">Bo-00-001-PU.html</a></td>
+					</tr>
+					<tr>
+						<td>파일 업로드</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/common/Bo-00-002-PU.html" onclick="window.open('../html/common/Bo-00-002-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=400,height=260');return false;" target="_blank">Bo-00-002-PU.html</a></td>
+					</tr>
+					<tr>
+						<td>조회항목 설정</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/common/Bo-00-003-PU.html" onclick="window.open('../html/common/Bo-00-003-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=800,height=650');return false;" target="_blank">Bo-00-003-PU.html</a></td>
+					</tr>
+					<tr>
+						<td>에러페이지 - jumbo</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/common/error-jumbo.html">error-jumbo.html</a></td>
+					</tr>
+					<tr>
+						<td>에러페이지</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/common/error.html">error.html</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section class="guide-content" id="content00">
+			<h2 class="tit-guide">Global</h2>
+			<table class="tbl-list-guide">
+				<caption>Global</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>1Depth</th>
+						<th>2Depth</th>
+						<th>3Depth</th>
+						<th>4Depth</th>
+						<th>파일명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="5" class="detail">
+							<strong>[Global - 화면설계서 목록]</strong>
+							<p class="finish">
+								(TWD) SB Global_admin_v0.5_20180921.pptx
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>가입정보</td>
+						<td>가입정보수정</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/global/Bo-G01-001-PG.html" target="_blank">Bo-G01-001-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) 비밀번호 변경</td>
+						<td></td>
+						<td><a href="../html/global/Bo-G01-003-PU.html" onclick="window.open('../html/global/Bo-G01-003-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=400,height=360');return false;" target="_blank">Bo-G01-003-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) 휴대폰번호 변경</td>
+						<td></td>
+						<td><a href="../html/global/Bo-G01-004-PU.html" onclick="window.open('../html/global/Bo-G01-004-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=320');return false;" target="_blank">Bo-G01-004-PU.html</a></td>
+					</tr>
+					<tr>
+						<td>권한관리</td>
+						<td>권한 설정 관리</td>
+						<td>[탭]사용자 설정</td>
+						<td>목록</td>
+						<td><a href="../html/global/Bo-G02-001-PG.html" target="_blank">Bo-G02-001-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>상세</td>
+						<td><a href="../html/global/Bo-G02-010-PG.html" target="_blank">Bo-G02-010-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)반려</td>
+						<td><a href="../html/global/Bo-G02-003-PU.html" onclick="window.open('../html/global/Bo-G02-003-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=400,height=310');return false;" target="_blank">Bo-G02-003-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)승인</td>
+						<td><a href="../html/global/Bo-G02-004-PU.html" onclick="window.open('../html/global/Bo-G02-004-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=400,height=260');return false;" target="_blank">Bo-G02-004-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)승인 이력</td>
+						<td><a href="../html/global/Bo-G02-012-PU.html" onclick="window.open('../html/global/Bo-G02-012-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=400,height=300');return false;" target="_blank">Bo-G02-012-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>[탭]관리자 유형 관리</td>
+						<td>목록</td>
+						<td><a href="../html/global/Bo-G02-011-PG.html" target="_blank">Bo-G02-011-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)상세 권한 설정</td>
+						<td><a href="../html/global/Bo-G02-008-PU.html" onclick="window.open('../html/global/Bo-G02-008-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=600');return false;" target="_blank">Bo-G02-008-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>[탭]소속/조직 관리</td>
+						<td>목록</td>
+						<td><a href="../html/global/Bo-G02-004-PG.html" target="_blank">Bo-G02-004-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>상세</td>
+						<td><a href="../html/global/Bo-G02-005-PG.html" target="_blank">Bo-G02-005-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>CS 상담원 관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/global/Bo-G02-014-PG.html" target="_blank">Bo-G02-014-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/global/Bo-G02-015-PG.html" target="_blank">Bo-G02-015-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)조직 추가</td>
+						<td></td>
+						<td><a href="../html/global/Bo-G02-013-PU.html" onclick="window.open('../html/global/Bo-G02-013-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=340');return false;" target="_blank">Bo-G02-013-PU.html</a></td>
+					</tr>
+					
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)조직 변경</td>
+						<td></td><td><a href="../html/global/Bo-G02-014-PU.html" onclick="window.open('../html/global/Bo-G02-014-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=400,height=230');return false;" target="_blank">Bo-G02-014-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>바로픽업 조직관리</td>
+						<td>등록/수정</td>
+						<td></td>
+						<td><a href="../html/global/Bo-G02-016-PG.html" target="_blank">Bo-G02-016-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>시스템 설정</td>
+						<td>프로그램 관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/global/Bo-G03-001-PG.html" target="_blank">Bo-G03-001-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)하위메뉴 신규등록</td>
+						<td></td>
+						<td><a href="../html/global/Bo-G03-001-PU.html"  onclick="window.open('../html/global/Bo-G03-001-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=490');return false;" target="_blank">Bo-G03-001-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>공통코드관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/global/Bo-G03-002-PG.html" target="_blank">Bo-G03-002-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/global/Bo-G03-003-PG.html" target="_blank">Bo-G03-003-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>환경변수관리</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/global/Bo-G03-005-PG.html" target="_blank">Bo-G03-005-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>차단관리</td>
+						<td>온라인 개별 차단관리</td>
+						<td>목록</td>
+						<td><a href="../html/global/Bo-G03-006-PG.html" target="_blank">Bo-G03-006-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td><a href="../html/global/Bo-G03-007-PG.html" target="_blank">Bo-G03-007-PG.html</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section class="guide-content" id="content01">
+			<h2 class="tit-guide">상담/공지 관리</h2>
+			<table class="tbl-list-guide">
+				<caption>상담/공지 관리</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>1Depth</th>
+						<th>2Depth</th>
+						<th>3Depth</th>
+						<th>4Depth</th>
+						<th>파일명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="5" class="detail">
+							<strong>[상담/공지 관리 - 화면설계서 목록]</strong>
+							<p class="finish">
+								(TWD)SB 상담_공지관리_admin_v0.3_20180810.pptx
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>구매후기</td>
+						<td>모바일</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-001-PG.html" target="_blank">Bo-02-001-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록/보기</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-002-PG.html" target="_blank">Bo-02-002-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>액세서리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-004-PG.html" target="_blank">Bo-02-004-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록/보기</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-005-PG.html" target="_blank">Bo-02-005-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>ICT 상품</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-007-PG.html" target="_blank">Bo-02-007-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록/보기</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-008-PG.html" target="_blank">Bo-02-008-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) 수정 내역 </td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-009-PU.html" onclick="window.open('../html/consult/Bo-02-009-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=400,height=350');return false;" target="_blank">Bo-02-009-PU.html</a></td>
+					</tr>
+					<tr>
+						<td>상품문의</td>
+						<td>모바일</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-011-PG.html" target="_blank">Bo-02-011-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록/보기</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-012-PG.html" target="_blank">Bo-02-012-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>액세서리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-013-PG.html" target="_blank">Bo-02-013-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록/보기</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-014-PG.html" target="_blank">Bo-02-014-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>ICT 상품</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-015-PG.html" target="_blank">Bo-02-015-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록/보기</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-016-PG.html" target="_blank">Bo-02-016-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)연락처</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-018-PU.html" onclick="window.open('../html/consult/Bo-02-018-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=400,height=350');return false;" target="_blank">Bo-02-018-PU.html</a></td>
+					</tr>
+					<tr>
+						<td>온라인 상담/문의</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-019-PG.html" target="_blank">Bo-02-019-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록/보기</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-020-PG.html" target="_blank">Bo-02-020-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>온라인 제휴 신청 조회</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-023-PG.html" target="_blank">Bo-02-023-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록/보기</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-024-PG.html" target="_blank">Bo-02-024-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>공지사항</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-025-PG.html" target="_blank">Bo-02-025-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록/보기</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-026-PG.html" target="_blank">Bo-02-026-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>admin 공지사항</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-028-PG.html" target="_blank">Bo-02-028-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>보기</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-029-PG.html" target="_blank">Bo-02-029-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-030-PG.html" target="_blank">Bo-02-030-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>팝업</td>
+						<td></td>
+						<td><a href="../html/consult/Bo-02-031-PU.html" onclick="window.open('../html/consult/Bo-02-031-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=600');return false;" target="_blank">Bo-02-031-PU.html</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section class="guide-content" id="content02">
+			<h2 class="tit-guide">상품 관리</h2>
+			<table class="tbl-list-guide">
+				<caption>상품 관리</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>1Depth</th>
+						<th>2Depth</th>
+						<th>3Depth</th>
+						<th>4Depth</th>
+						<th>파일명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="5" class="detail">
+							<strong>[상품관리 - 화면설계서 목록]</strong>
+							<p class="finish">
+								(TWD) SB_상품관리_admin_v0.7_20180810.pptx
+							</p>
+						</td>
+					</tr>
+					<!-- 모바일 상품등록 관리 -->
+					<tr>
+						<td>모바일 상품등록 관리</td>
+						<td>모상품그룹관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-001-PG.html" target="_blank">Bo-03-001-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-002-PG.html" target="_blank">Bo-03-002-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) 대표 모상품 모델 검색</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-004-PU.html" onclick="window.open('../html/product/Bo-03-004-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank">Bo-03-004-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) 모상품 검색</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-005-PU.html" onclick="window.open('../html/product/Bo-03-005-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank">Bo-03-005-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) 체크 포인트 등록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-006-PU.html" onclick="window.open('../html/product/Bo-03-006-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=420');return false;" target="_blank">Bo-03-006-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) 체크 포인트 추가</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-007-PU.html" onclick="window.open('../html/product/Bo-03-007-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=460');return false;" target="_blank">Bo-03-007-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) 판매정책 수정</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-094-PU.html" onclick="window.open('../html/product/Bo-03-094-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-03-094-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) 요금제 검색</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-095-PU.html" onclick="window.open('../html/product/Bo-03-095-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-03-095-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) 부가서비스 검색</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-096-PU.html" onclick="window.open('../html/product/Bo-03-096-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-03-096-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>모상품 관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-009-PG.html" target="_blank">Bo-03-009-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-010-PG.html" target="_blank">Bo-03-010-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) 휴대폰 찾기</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-012-PU.html" onclick="window.open('../html/product/Bo-03-012-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank">Bo-03-012-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) 자상품 찾기</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-013-PU.html" onclick="window.open('../html/product/Bo-03-013-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-03-013-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>판매정책관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-135-PG.html" target="_blank">Bo-03-135-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-136-PG.html" target="_blank">Bo-03-136-PG.html</a></td>
+					</tr>
+
+					<!-- ICT상품등록관리 -->
+					<tr>
+						<td>ICT상품등록관리</td>
+						<td>스마트홈 단말기</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-072-PG.html" target="_blank">Bo-03-072-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-073-PG.html" target="_blank">Bo-03-073-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 체크포인트 등록</td>
+						<td><a href="../html/product/Bo-03-075-PU.html" onclick="window.open('../html/product/Bo-03-075-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=420');return false;" target="_blank">Bo-03-075-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>스마트홈 패키지</td>
+						<td></td>
+						<td>(팝업) 패키지 구성 선택</td>
+						<td><a href="../html/product/Bo-03-079-PU.html" onclick="window.open('../html/product/Bo-03-079-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=900,height=520');return false;" target="_blank">Bo-03-079-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>인공지능스피커</td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-082-PG.html" target="_blank">Bo-03-082-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 제조사 선택</td>
+						<td><a href="../html/product/Bo-03-084-PU.html" onclick="window.open('../html/product/Bo-03-084-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=530');return false;" target="_blank">Bo-03-084-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) MMS 발행쿠폰 선택</td>
+						<td><a href="../html/product/Bo-03-085-PU.html" onclick="window.open('../html/product/Bo-03-085-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=530');return false;" target="_blank">Bo-03-085-PU.html</a></td>
+					</tr>
+
+					<!-- 액세서리상품등록관리 -->
+					<tr>
+						<td>액세서리상품등록관리</td>
+						<td>목록</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-087-PG.html" target="_blank">Bo-03-087-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-088-PG.html" target="_blank">Bo-03-088-PG.html</a></td>
+					</tr>
+
+					<!-- 인터넷/IPTV 상품등록 관리 -->
+					<tr>
+						<td>인터넷/IPTV 상품등록 관리</td>
+						<td>인터넷상품</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-117-PG.html" target="_blank">Bo-03-117-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-118-PG.html" target="_blank">Bo-03-118-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>결합상품</td>
+						<td></td>
+						<td>(팝업) 서비스불가능지역설정</td>
+						<td><a href="../html/product/Bo-03-067-PU.html" onclick="window.open('../html/product/Bo-03-067-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank">Bo-03-067-PU.html</a></td>
+					</tr>
+
+					<!-- 기프트 관리 -->
+					<tr>
+						<td>기프트 관리</td>
+						<td>기프트 관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-093-PG.html" target="_blank">Bo-03-093-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-094-PG.html" target="_blank">Bo-03-094-PG.html</a></td>
+					</tr>
+
+					<!-- 쿠폰관리 -->
+					<tr>
+						<td>쿠폰관리</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-129-PG.html" target="_blank">Bo-03-129-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-130-PG.html" target="_blank">Bo-03-130-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 사용쿠폰보기</td>
+						<td><a href="../html/product/Bo-03-068-PU.html" onclick="window.open('../html/product/Bo-03-068-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=900,height=680');return false;" target="_blank">Bo-03-068-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 적용 카테고리 선택</td>
+						<td><a href="../html/product/Bo-03-069-PU.html" onclick="window.open('../html/product/Bo-03-069-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=400,height=470');return false;" target="_blank">Bo-03-069-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 특정상품 선택</td>
+						<td><a href="../html/product/Bo-03-070-PU.html" onclick="window.open('../html/product/Bo-03-070-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=610');return false;" target="_blank">Bo-03-070-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 요금제 선택</td>
+						<td><a href="../html/product/Bo-03-071-PU.html" onclick="window.open('../html/product/Bo-03-071-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=400,height=470');return false;" target="_blank">Bo-03-071-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 생성된 쿠폰 보기</td>
+						<td><a href="../html/product/Bo-03-072-PU.html" onclick="window.open('../html/product/Bo-03-072-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=450');return false;" target="_blank">Bo-03-072-PU.html</a></td>
+					</tr>
+
+					<!-- 캠페인관리 -->
+					<tr>
+						<td>캠페인관리</td>
+						<td>목록</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-132-PG.html" target="_blank">Bo-03-132-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-133-PG.html" target="_blank">Bo-03-133-PG.html</a></td>
+					</tr>
+
+					<!-- 부가서비스 관리 -->
+					<tr>
+						<td>상품가격 옵션관리</td>
+						<td>요금제 등록 관리</td>
+						<td>요금제 관리</td>
+						<td>목록</td>
+						<td><a href="../html/product/Bo-03-098-PG.html" target="_blank">Bo-03-098-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td><a href="../html/product/Bo-03-099-PG.html" target="_blank">Bo-03-099-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>공통 팝업</td>
+						<td>(팝업) 요금제 등록</td>
+						<td><a href="../html/product/Bo-03-101-PU.html" onclick="window.open('../html/product/Bo-03-101-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank">Bo-03-101-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>부가서비스 관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-103-PG.html" target="_blank">Bo-03-103-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>보기/등록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-104-PG.html" target="_blank">Bo-03-104-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>공통 팝업</td>
+						<td>(팝업) 부가서비스 검색</td>
+						<td><a href="../html/product/Bo-03-105-PU.html" onclick="window.open('../html/product/Bo-03-105-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=430');return false;" target="_blank">Bo-03-105-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>공통 팝업</td>
+						<td>(팝업) 대상 요금제 선택 팝업</td>
+						<td><a href="../html/product/Bo-03-109-PU.html" onclick="window.open('../html/product/Bo-03-109-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=900,height=700');return false;" target="_blank">Bo-03-109-PU.html</a></td>
+					</tr>
+					
+					
+					<!-- USIM 관리 -->
+					<tr>
+						<td></td>
+						<td>USIM 관리</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-110-PG.html" target="_blank">Bo-03-110-PG.html</a></td>
+					</tr>
+					<!-- 요금약정할인 -->
+					<tr>
+						<td></td>
+						<td>요금약정할인</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-111-PG.html" target="_blank">Bo-03-111-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-112-PG.html" target="_blank">Bo-03-112-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>보기/수정</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-113-PG.html" target="_blank">Bo-03-113-PG.html</a></td>
+					</tr>
+					<!-- 추가 할인 관리 -->
+					<tr>
+						<td></td>
+						<td>추가 할인 관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-114-PG.html" target="_blank">Bo-03-114-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록 (and 보기/수정)</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-115-PG.html" target="_blank">Bo-03-115-PG.html</a></td>
+					</tr>
+					<!-- T렌탈정책 관리 -->
+					<tr>
+						<td></td>
+						<td>T렌탈정책 관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-121-PG.html" target="_blank">Bo-03-121-PG.html</a></td>
+					</tr>
+					<!-- 꼬리 단말기 관리 -->
+					<tr>
+						<td>꼬리 단말기 관리</td>
+						<td>목록</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-033-PG.html" target="_blank">Bo-03-033-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-034-PG.html" target="_blank">Bo-03-034-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) 원 단말기 모델명 검색 </td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-035-PU.html" onclick="window.open('../html/product/Bo-03-035-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank">Bo-03-035-PU.html</a></td>
+					</tr>
+					<!-- 디바이스 기본정보 -->
+					<tr>
+						<td>디바이스 기본정보</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-047-PG.html" target="_blank">Bo-03-047-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td>기본정보</td>
+						<td><a href="../html/product/Bo-03-048-PG.html" target="_blank">Bo-03-048-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td>기본 이미지</td>
+						<td><a href="../html/product/Bo-03-051-PG.html" target="_blank">Bo-03-051-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td>기본 이미지 2Depth</td>
+						<td><a href="../html/product/Bo-03-052-PG.html" target="_blank">Bo-03-052-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td>추가 이미지</td>
+						<td><a href="../html/product/Bo-03-055-PG.html" target="_blank">Bo-03-055-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td>광고 이미지</td>
+						<td><a href="../html/product/Bo-03-056-PG.html" target="_blank">Bo-03-056-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td>스펙</td>
+						<td><a href="../html/product/Bo-03-058-PG.html" target="_blank">Bo-03-058-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td>전문가 리뷰</td>
+						<td><a href="../html/product/Bo-03-059-PG.html" target="_blank">Bo-03-059-PG.html</a></td>
+					</tr>
+					<!-- 카드관리 -->
+					<tr>
+						<td>카드관리</td>
+						<td>KB나라사랑카드 약관동의 대상 관리</td>
+						<td></td>
+						<td>(팝업) 대상자 엑셀 업로드</td>
+						<td><a href="../html/product/Bo-03-025-PU.html" onclick="window.open('../html/product/Bo-03-025-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=300');return false;" target="_blank">Bo-03-025-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>라이트 할부 관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-026-PG.html" target="_blank">Bo-03-026-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/product/Bo-03-027-PG.html" target="_blank">Bo-03-027-PG.html</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section class="guide-content" id="content03">
+			<h2 class="tit-guide">전시 관리</h2>
+			<table class="tbl-list-guide">
+				<caption>전시 관리</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>1Depth</th>
+						<th>2Depth</th>
+						<th>3Depth</th>
+						<th>4Depth</th>
+						<th>파일명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="5" class="detail">
+							<strong>[전시관 작업완료 - 화면설계서 목록]</strong>
+							<p class="finish">
+								(TWD) SB_전시관리_admin_v0.5_20180809.pptx
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>통합전시관리</td>
+						<td>전시컴포넌트 관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/display/Bo-04-023-PG.html" target="_blank">Bo-04-023-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>상세</td>
+						<td></td>
+						<td><a href="../html/display/Bo-04-024-PG.html" target="_blank">Bo-04-024-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) HTML 등록/수정</td>
+						<td><a href="../html/display/Bo-04-056-PU.html"
+						onclick="window.open('../html/display/Bo-04-056-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=700,height=570');return false;" target="_blank">Bo-04-056-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>전시 운영 관리</td>
+						<td>다이렉트샵 메인, 액세서리(서브메인)</td>
+						<td>(탭)메뉴정보</td>
+						<td><a href="../html/display/Bo-04-002-PG.html" target="_blank">Bo-04-002-PG.html</a></td>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(탭)전시관리</td>
+						<td><a href="../html/display/Bo-04-003-PG.html" target="_blank">Bo-04-003-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(탭)전시관리 - 상세</td>
+						<td><a href="../html/display/Bo-04-004-PG.html" target="_blank">Bo-04-004-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>Shop in Shop 관리</td>
+						<td>단말기관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/display/Bo-04-026-PG.html" target="_blank">Bo-04-026-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 단말기 등록(모상품그룹등록)</td>
+						<td><a href="../html/display/Bo-04-027-PU.html"
+						onclick="window.open('../html/display/Bo-04-027-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=650,height=700');return false;" target="_blank">Bo-04-027-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>단말기관리 상세</td>
+						<td></td>
+						<td><a href="../html/display/Bo-04-028-PG.html" target="_blank">Bo-04-028-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 요금제 설정</td>
+						<td><a href="../html/display/Bo-04-029-PU.html"
+						onclick="window.open('../html/display/Bo-04-029-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=500');return false;" target="_blank">Bo-04-029-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 요금제 그룹 추가</td>
+						<td><a href="../html/display/Bo-04-030-PU.html"
+						onclick="window.open('../html/display/Bo-04-030-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=640');return false;" target="_blank">Bo-04-030-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>요금제관리</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/display/Bo-04-031-PG.html" target="_blank">Bo-04-031-PG.html</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section class="guide-content" id="content04">
+			<h2 class="tit-guide">주문 관리</h2>
+			<table class="tbl-list-guide">
+				<caption>주문 관리</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>1Depth</th>
+						<th>2Depth</th>
+						<th>3Depth</th>
+						<th>4Depth</th>
+						<th>파일명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="5" class="detail">
+							<strong>[주문관리 1,2차 작업완료 - 화면설계서 목록]</strong>
+							<p class="finish">
+								(TWD)SB 주문관리_admin_v0.1_20180719_모바일주문_TG_유선_바로픽업.pptx<br />
+								(TWD)SB 주문관리_admin_v0.4_20180719_ 그 외 메뉴.pptx
+							</p>
+						</td>
+					</tr>
+					
+					<!-- TG 가입신청관리 -->
+					<tr>
+						<td>TG 가입신청관리</td>
+						<td>가입신청현황관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-003-PG.html" target="_blank">Bo-05-003-PG_TG_가입신청관리_가입신청현황관리_목록.html</a></td>
+					</tr>
+					<!-- <tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 쇼핑몰 찾기</td>
+						<td><a href="../html/order/Bo-05-004-PU.html" target="_blank"></a></td>
+					</tr> -->
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 단말기 모델 찾기</td>
+						<td><a href="../html/order/Bo-05-005-PU.html" onclick="window.open('../html/order/Bo-05-005-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=780');return false;" target="_blank">Bo-05-005-PU_TG_가입신청관리_가입신청현황관리_단말기모델찾기.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 요금제 찾기</td>
+						<td><a href="../html/order/Bo-05-069-PU.html" onclick="window.open('../html/order/Bo-05-069-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=640');return false;" target="_blank">Bo-05-069-PU_TG_가입신청관리_가입신청현황관리_요금제찾기.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>주문상세-가입기본정보</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-006-PU.html" onclick="window.open('../html/order/Bo-05-006-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-05-006-PU_TG 가입신청관리_가입신청현황관리_주문상세-가입기본정보.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>주문상세-무선가입신청서</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-007-PU.html" onclick="window.open('../html/order/Bo-05-007-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-05-007-PU_TG 가입신청관리_가입신청현황관리_주문상세-무선가입신청서.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>주문상세-적격심사</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-008-PU_TG가입신청관리_가입신청현황관리_주문상세-적격심사.html" target="_blank"></a></td>
+					</tr>
+
+					<!-- 모바일주문조회 -->
+					<tr>
+						<td>모바일주문조회</td>
+						<td>운송장 조회</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-009-PG.html" target="_blank">Bo-05-009-PG_모바일주문조회_운송장조회_목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>모바일</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-010-PG.html" target="_blank">Bo-05-010-PG_모바일주문조회_모바일_목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>주문상세</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-011-PU.html" onclick="window.open('../html/order/Bo-05-011-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-05-011-PU_모바일주문조회_모바일_주문상세.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) T기프트 선택하기</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-070-PU.html" onclick="window.open('../html/order/Bo-05-070-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-05-070-PU_모바일주문조회_모바일_T기프트 선택하기.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) 개통 신청 정보</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-071-PU.html" onclick="window.open('../html/order/Bo-05-071-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=400,height=400');return false;" target="_blank">Bo-05-071-PU_모바일주문조회_모바일_개통신청정보.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) 결합 상품 신청서</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-072-PU.html" onclick="window.open('../html/order/Bo-05-072-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=600');return false;" target="_blank">Bo-05-072-PU_모바일주문조회_모바일_결합상품신청서.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) SMS 발송</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-073-PU.html" onclick="window.open('../html/order/Bo-05-073-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=400');return false;" target="_blank">Bo-05-073-PU_모바일주문조회_모바일_SMS발송.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업) 포인트 결제 상세 조회</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-074-PU.html" onclick="window.open('../html/order/Bo-05-074-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=630');return false;" target="_blank">Bo-05-074-PU_모바일주문조회_모바일_포인트결제상세조회.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>자급제/중고폰</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-012-PG.html" target="_blank">Bo-05-012-PG_자급제/중고폰주문조회.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>액세서리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-014-PG.html" target="_blank">Bo-05-014-PG_액세서리_목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)주문상세</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-015-PU.html" onclick="window.open('../html/order/Bo-05-015-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;"  target="_blank">Bo-05-015-PU_액세서리_주문상세.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>스마트홈</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-016-PG.html" target="_blank">Bo-05-016-PG_스마트홈_목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)주문상세</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-017-PU.html" onclick="window.open('../html/order/Bo-05-017-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-05-017-PU_스마트홈_주문상세.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>공통</td>
+						<td>(팝업)주소변경</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-037-PU.html" onclick="window.open('../html/order/Bo-05-037-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=400');return false;" target="_blank">Bo-05-037-PU_공통_주소변경.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)이메일변경</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-038-PU.html" onclick="window.open('../html/order/Bo-05-038-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=300');return false;" target="_blank">Bo-05-038-PU_공통_이메일변경.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)전화번호변경</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-039-PU.html" onclick="window.open('../html/order/Bo-05-039-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=300');return false;" target="_blank">Bo-05-039-PU_공통_전화번호변경.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)MMS 메시지 보내기</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-040-PU.html" onclick="window.open('../html/order/Bo-05-040-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-05-040-PU_공통_MMS메시지보내기.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)이메일보내기</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-041-PU.html" onclick="window.open('../html/order/Bo-05-041-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank">Bo-05-041-PU_공통_이메일보내기.html</a></td>
+					</tr>
+
+					<!-- 바로픽업 -->
+					<tr>
+						<td>바로픽업</td>
+						<td>주문목록조회</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-018-PG.html" target="_blank">Bo-05-018-PG_주문목록조회_목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)상세</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-019-PU.html" onclick="window.open('../html/order/Bo-05-019-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-05-019-PU_주문목록조회_상세.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>승인목록조회</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-020-PG.html" target="_blank">Bo-05-020-PG_승인목록조회_목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>매장관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-021-PG.html" target="_blank">Bo-05-021-PG_매장관리_목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)매장정보 엑셀 업로드</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-022-PU.html" onclick="window.open('../html/order/Bo-05-022-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=400,height=300');return false;" target="_blank">Bo-05-022-PU_매장관리_매장정보엑셀업로드.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)매장정보 상세</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-023-PU.html" onclick="window.open('../html/order/Bo-05-023-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-05-023-PU_매장관리_매장정보상세.html</a></td>
+					</tr>
+					
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)바로 픽업 관리자 정보 추가</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-024-PU.html" onclick="window.open('../html/order/Bo-05-024-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=400');return false;" target="_blank">Bo-05-024-PU_매장관리_바로픽업관리자정보추가.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)인근지하철 추가</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-025-PU.html" onclick="window.open('../html/order/Bo-05-025-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=300');return false;" target="_blank">Bo-05-025-PU_매장관리_인근지하철추가.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)방문불가 시간 지정</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-026-PU.html" onclick="window.open('../html/order/Bo-05-026-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank">Bo-05-026-PU_매장관리_방문불가시간지정.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)매장 신규 등록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-080-PU.html" onclick="window.open('../html/order/Bo-05-080-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=950,height=760');return false;" target="_blank">Bo-05-080-PU_매장관리_매장신규등록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>재고조회</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-027-PG.html" target="_blank">Bo-05-027-PG_재고조회_목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>지하철노선관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-028-PG.html" target="_blank">Bo-05-028-PG_지하철노선관리_목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)인근매장정보</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-029-PU.html" onclick="window.open('../html/order/Bo-05-029-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-05-029-PU_지하철노선관리_인근매장정보.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>예판재고관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-030-PG.html" target="_blank">Bo-05-030-PG_예판재고관리_목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)예판 재고 엑셀 업로드</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-031-PU.html" onclick="window.open('../html/order/Bo-05-031-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-05-031-PU_예판재고관리_예판재고엑셀업로드.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)사전구매예약 단말목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-032-PU.html" onclick="window.open('../html/order/Bo-05-032-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-05-032-PU_예판재고관리_사전구매예약단말목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>키워드검색관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-033-PG.html" target="_blank">Bo-05-033-PG_키워드검색관리_목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)신규키워드등록_지하철 </td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-034-PU.html" onclick="window.open('../html/order/Bo-05-034-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-05-034-PU_키워드검색관리_신규키워드등록지하철.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>(팝업)신규키워드등록_주소 </td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-035-PU.html" onclick="window.open('../html/order/Bo-05-035-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-05-035-PU_키워드검색관리_신규키워드등록주소.html</a></td>
+					</tr>
+					
+					<!-- 오픈마켓상담 접수 조회 -->
+					<tr>
+						<td>오픈마켓상담 접수조회</td>
+						<td>목록</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-036-PG.html" target="_blank">Bo-05-036-PG_오픈마켓상담접수조회_목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>상세</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-037-PG.html" target="_blank">Bo-05-037-PG_오픈마켓상담접수조회_상세화면.html</a></td>
+					</tr>
+					
+					<!-- 재고 연동 요청관리 -->
+					<tr>
+						<td>재고 연동 요청관리</td>
+						<td>모바일</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-038-PG.html" target="_blank">Bo-05-038-PG_재고연동요청관리_모바일목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>액세서리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-040-PG.html" target="_blank">Bo-05-040-PG_재고연동요청관리_액세서리목록.html</a></td> 
+					</tr>
+					<tr>
+						<td></td>
+						<td>중고휴대폰</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-042-PG.html" target="_blank">Bo-05-042-PG_재고연동요청관리_중고휴대폰목록.html</a></td>
+					</tr>
+					<tr>
+						<td>입금관리</td>
+						<td>목록</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-044-PG.html" target="_blank">Bo-05-044-PG_입금관리_목록.html</a></td>
+					</tr>
+					<tr>
+						<td>반품관리</td>
+						<td>모바일</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-046-PG.html" target="_blank">Bo-05-046-PG_반품관리_모바일목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>액세서리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-075-PG.html" target="_blank">Bo-05-075-PG_반품관리_액세서리목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>ICT</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-077-PG.html" target="_blank">Bo-05-077-PG_반품관리_ICT목록.html</a></td>
+					</tr>
+					
+					<!-- 환불관리 -->
+					<tr>
+						<td>환불관리</td>
+						<td>목록</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-049-PG.html" target="_blank">Bo-05-049-PG_환불관리_목록.html</a></td>
+					</tr>
+					
+					<!-- 교환지시 -->
+					<tr>
+						<td>교환지시</td>
+						<td>모바일</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-051-PG.html" target="_blank">Bo-05-051-PG_교환지시_모바일목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>액세서리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-079-PG.html" target="_blank">Bo-05-079-PG_교환지시_액세서리목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>ICT</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-081-PG.html" target="_blank">Bo-05-081-PG_교환지시_ICT목록.html</a></td>
+					</tr>
+					
+					<!-- 발송지시 -->
+					<tr>
+						<td>발송지시</td>
+						<td>택배</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-053-PG.html" target="_blank">Bo-05-053-PG_발송지시_택배목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>SLC</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-055-PG.html" target="_blank">Bo-05-055-PG_발송지시_SLC목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>퀵</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-057-PG.html" target="_blank">Bo-05-057-PG_발송지시_퀵목록.html</a></td>
+					</tr>
+					
+					<!-- T.Key 스티커 출력 -->
+					<tr>
+						<td>T.Key 스티커 출력</td>
+						<td>목록</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-059-PG.html" target="_blank">Bo-05-059-PG_T.Key 스티커 출력_목록.html</a></td>
+					</tr>
+					
+					<!-- 품절상품 예약/발송 관리 -->
+					<tr>
+						<td>품절상품 예약/발송 관리</td>
+						<td>예약조회/발송관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-061-PG.html" target="_blank">Bo-05-061-PG_품절상품예약발송관리_목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>예약조회/발송관리</td>
+						<td>상세</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-062-PG.html" target="_blank">Bo-05-062-PG_발송템플릿관리_상세.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>예약조회/발송관리</td>
+						<td></td>
+						<td>(팝업)SMS/MMS 발송</td>
+						<td><a href="../html/order/Bo-05-063-PU.html" onclick="window.open('../html/order/Bo-05-063-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=460');return false;" target="_blank">Bo-05-063-PU_SMS/MMS 발송.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>발송 템플릿 관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-064-PG.html" target="_blank">Bo-05-064-PG_발송템플릿관리_목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>발송 템플릿 관리</td>
+						<td></td>
+						<td>(팝업) SMS/MMS 템플릿 추가</td>
+						<td><a href="../html/order/Bo-05-065-PU.html" onclick="window.open('../html/order/Bo-05-065-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=500');return false;" target="_blank">Bo-05-065-PU_SMS/MMS템플릿추가.html</a></td>
+					</tr>
+					
+					<!-- 라이트할부/쓰던폰반납 -->
+					<tr>
+						<td>라이트할부/쓰던폰반납</td>
+						<td>목록</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-066-PG.html" target="_blank">Bo-05-066-PG_라이트할부/쓰던폰반납_목록.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>(팝업)상세화면</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-067-PU.html" target="_blank">Bo-05-067-PU_라이트할부/쓰던폰반납_상세.html</a></td>
+					</tr>
+
+					<!-- T기프트 (MMS 발송) 신청목록 조회 -->
+					<tr>
+						<td>T기프트 (MMS 발송) 신청목록 조회</td>
+						<td>목록</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/order/Bo-05-068-PG.html" target="_blank">Bo-05-068-PG_T기프트(MMS발송)신청목록조회_목록.html</a></td>
+					</tr>
+
+				</tbody>
+			</table>
+		</section>
+
+		<section class="guide-content" id="content07">
+			<h2 class="tit-guide">상담사 주문</h2>
+			<table class="tbl-list-guide">
+				<caption>상담사 주문</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>1Depth</th>
+						<th>2Depth</th>
+						<th>3Depth</th>
+						<th>4Depth</th>
+						<th>파일명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="5" class="detail">
+							<strong>[상담사 주문 - 화면설계서 목록]</strong>
+							<p class="finish">
+								(TWD)SB 상담사주문_admin_v1.5_20180814.pptx
+							</p>
+
+							<strong>[상담사 주문 - 수정버전]</strong>
+							<p class="finish">
+								(TWD)SB 상담사주문_admin_v2.0_20181015.pptx
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>상담 상품</td>
+						<td>휴대폰</td>
+						<td>기기목록</td>
+						<td></td>
+						<td><a href="../html/counselor/Bo-G04-001-PG.html" target="_blank">Bo-G04-001-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>공기계/중고폰 개통 신청</td>
+						<td></td>
+						<td><a href="../html/counselor/Bo-G04-002-PG.html" target="_blank">Bo-G04-002-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 모델명찾기</td>
+						<td><a href="../html/counselor/Bo-G04-003-PU.html" onclick="window.open('../html/counselor/Bo-G04-003-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=680,height=680');return false;" target="_blank">Bo-G04-003-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>공기계/중고폰 개통 신청완료</td>
+						<td></td>
+						<td><a href="../html/counselor/Bo-G04-004-PG.html" target="_blank">Bo-G04-004-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>태블릿</td>
+						<td>기기목록</td>
+						<td></td>
+						<td><a href="../html/counselor/Bo-G04-005-PG.html" target="_blank">Bo-G04-005-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>스마트워치</td>
+						<td>기기목록</td>
+						<td></td>
+						<td><a href="../html/counselor/Bo-G04-006-PG.html" target="_blank">Bo-G04-006-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)가입동의 (T-아웃도어(단독))</td>
+						<td><a href="../html/counselor/Bo-G04-006-PG.html" target="_blank">Bo-G04-006-PG.html[페이지하단에 숨김처리]</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>휴대용와이파이</td>
+						<td>기기목록</td>
+						<td></td>
+						<td><a href="../html/counselor/Bo-G04-008-PG.html" target="_blank">Bo-G04-008-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>키즈폰</td>
+						<td>기기목록</td>
+						<td></td>
+						<td><a href="../html/counselor/Bo-G04-009-PG.html" target="_blank">Bo-G04-009-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>(공통팝업)</td>
+						<td>기기목록</td>
+						<td>(팝업)요금제 선택</td>
+						<td><a href="../html/counselor/Bo-G04-001-PG.html" target="_blank">Bo-G04-001-PG.html[변경 버튼클릭]</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)단말상세보기- 상품정보</td>
+						<td><a href="../html/counselor/Bo-G04-011-PU.html" onclick="window.open('../html/counselor/Bo-G04-011-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-G04-011-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)단말상세보기- MMS 보내기</td>
+						<td><a href="../html/counselor/Bo-G04-012-PU.html" onclick="window.open('../html/counselor/Bo-G04-012-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-G04-012-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)단말상세보기-이메일보내기</td>
+						<td><a href="../html/counselor/Bo-G04-013-PU.html" onclick="window.open('../html/counselor/Bo-G04-013-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-G04-013-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)비교하기</td>
+						<td><a href="../html/counselor/Bo-G04-014-PU.html" onclick="window.open('../html/counselor/Bo-G04-014-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-G04-014-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)바로픽업 가능 매장조회</td>
+						<td><a href="../html/counselor/Bo-G04-015-PU.html" onclick="window.open('../html/counselor/Bo-G04-015-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank">Bo-G04-015-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)바로픽업 매장 방문일자 선택</td>
+						<td><a href="../html/counselor/Bo-G04-016-PU.html" onclick="window.open('../html/counselor/Bo-G04-016-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=630');return false;" target="_blank">Bo-G04-016-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>(공통)</td>
+						<td>상담사 주문</td>
+						<td></td>
+						<td><a href="../html/counselor/Bo-G04-017-PG.html" target="_blank">Bo-G04-017-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>(공통)</td>
+						<td>상담사 주문</td>
+						<td>약관 현행화 테스트</td>
+						<td><a href="../html/counselor/agree_test.html" target="_blank">agree_test.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>(공통팝업)</td>
+						<td>상담사 주문</td>
+						<td>(팝업)주문서 저장</td>
+						<td><a href="../html/counselor/Bo-G04-017-PG.html" target="_blank">Bo-G04-017-PG.html[주문서저장 버튼클릭]</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)요금상세정보</td>
+						<td><a href="../html/counselor/Bo-G04-017-PG.html" target="_blank">Bo-G04-017-PG.html[요금상세정보 버튼클릭]</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)캠페인 찾기 팝업</td>
+						<td><a href="../html/counselor/Bo-G04-020-PU.html" onclick="window.open('../html/counselor/Bo-G04-020-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=500');return false;" target="_blank">Bo-G04-020-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)포인트할인 이용약관</td>
+						<td><a href="../html/counselor/Bo-G04-021-PU.html" onclick="window.open('../html/counselor/Bo-G04-021-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank">Bo-G04-021-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)포인트할인 포인트조회</td>
+						<td><a href="../html/counselor/Bo-G04-022-PU.html" onclick="window.open('../html/counselor/Bo-G04-022-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank">Bo-G04-022-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)이지웰포인트 조회</td>
+						<td>작업해당사항없음</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)컬쳐랜드 캐쉬조회</td>
+						<td>작업해당사항없음</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)티모아 금액권 등록</td>
+						<td><a href="../html/counselor/Bo-G04-025-PU.html" onclick="window.open('../html/counselor/Bo-G04-025-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=500');return false;" target="_blank">Bo-G04-025-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)티월드 다이렉트 이용권 등록</td>
+						<td><a href="../html/counselor/Bo-G04-026-PU.html" onclick="window.open('../html/counselor/Bo-G04-026-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=520');return false;" target="_blank">Bo-G04-026-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)라이트할부란?</td>
+						<td><a href="../html/counselor/Bo-G04-027-PU.html" onclick="window.open('../html/counselor/Bo-G04-027-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank">Bo-G04-027-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)라이트할부 이용약관 동의</td>
+						<td><!-- <a href="../html/counselor/Bo-G04-028-PU.html" onclick="window.open('../html/counselor/Bo-G04-028-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=460');return false;" target="_blank">Bo-G04-028-PU.html</a> -->삭제 : 할부 신청 페이지와 통합</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)라이트할부 신청</td>
+						<td><a href="../html/counselor/Bo-G04-029-PU.html" onclick="window.open('../html/counselor/Bo-G04-029-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=620');return false;" target="_blank">Bo-G04-029-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)쓰던폰 반납 신청</td>
+						<td><a href="../html/counselor/Bo-G04-030-PU.html" onclick="window.open('../html/counselor/Bo-G04-030-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank">Bo-G04-030-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)쓰던폰 반납 신청 결과 조회</td>
+						<td><a href="../html/counselor/Bo-G04-031-PU.html" onclick="window.open('../html/counselor/Bo-G04-031-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank">Bo-G04-031-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)부가서비스 선택</td>
+						<td><a href="../html/counselor/Bo-G04-032-PU.html" onclick="window.open('../html/counselor/Bo-G04-032-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-G04-032-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)보험 선택</td>
+						<td><a href="../html/counselor/Bo-G04-041-PU.html" onclick="window.open('../html/counselor/Bo-G04-041-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=601');return false;" target="_blank">Bo-G04-041-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)티기프트 선택</td>
+						<td><a href="../html/counselor/Bo-G04-017-PG.html" target="_blank">Bo-G04-017-PG.html[티기프트 선택 버튼클릭]</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)갤럭시 클럽할인신청</td>
+						<td><a href="../html/counselor/Bo-G04-042-PU.html" onclick="window.open('../html/counselor/Bo-G04-042-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-G04-042-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)IMEI 확인방법</td>
+						<td><a href="../html/counselor/Bo-G04-043-PU.html" onclick="window.open('../html/counselor/Bo-G04-043-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank">Bo-G04-043-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>(공통)</td>
+						<td>상담사 주문완료</td>
+						<td></td>
+						<td><a href="../html/counselor/Bo-G04-034-PG.html" target="_blank">Bo-G04-034-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>(공통)</td>
+						<td>셀프동의주문</td>
+						<td></td>
+						<td><a href="../html/counselor/Bo-G04-035-PG.html" target="_blank">Bo-G04-035-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)셀프동의서 발송</td>
+						<td><a href="../html/counselor/Bo-G04-035-PG.html" target="_blank">Bo-G04-035-PG.html[셀프 동의 주문서 전송 버튼클릭]</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>상담사 주문조회</td>
+						<td>주문목록</td>
+						<td></td>
+						<td><a href="../html/counselor/Bo-G04-037-PG.html" target="_blank">Bo-G04-037-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 구매동의 상태내역 (녹취동의)</td>
+						<td><a href="../html/counselor/Bo-G04-037-PG.html" target="_blank">Bo-G04-037-PG.html[미동의(녹취동의) 텍스트클릭]</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 구매동의 상태내역 (MMS동의)</td>
+						<td><a href="../html/counselor/Bo-G04-037-PG.html" target="_blank">Bo-G04-037-PG.html[미동의(MMS 전송) 텍스트클릭]</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 포인트 결제</td>
+						<td><a href="../html/order/Bo-05-074-PU.html" onclick="window.open('../html/order/Bo-05-074-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=630');return false;" target="_blank">Bo-05-074-PU_모바일주문조회_모바일_포인트결제상세조회.html</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section class="guide-content" id="content05">
+			<h2 class="tit-guide">시스템 관리</h2>
+			<table class="tbl-list-guide">
+				<caption>시스템 관리</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>1Depth</th>
+						<th>2Depth</th>
+						<th>3Depth</th>
+						<th>4Depth</th>
+						<th>파일명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="5" class="detail">
+							<strong>[시스템 관리 - 화면설계서 목록]</strong>
+							<p class="finish">
+								(TWD) SB_시스템관리_admin_v0.4_20180928.pptx
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>전산휴무일관리</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-001-PG.html" target="_blank">Bo-06-001-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>SLC 관리</td>
+						<td>[탭]SLC 설정</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-038-PG.html" target="_blank">Bo-06-038-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>[탭]서비스 지역 설정</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-039-PG.html" target="_blank">Bo-06-039-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>단골고객관리</td>
+						<td>[탭]단골고객조회</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-003-PG.html" target="_blank">Bo-06-003-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>[탭]이벤트관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-006-PG.html" target="_blank">Bo-06-006-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-007-PG.html" target="_blank">Bo-06-007-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 템플릿 보기</td>
+						<td><a href="../html/system/Bo-06-001-PU.html" onclick="window.open('../html/system/Bo-06-001-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-06-001-PU.html [윈도우팝업]</a>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>[탭]템플릿관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-009-PG.html" target="_blank">Bo-06-009-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-010-PG.html" target="_blank">Bo-06-010-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)오류확인</td>		
+						<td><a href="../html/system/Bo-06-010-PG.html" target="_blank">Bo-06-010-PG.html [오류확인 버튼클릭]</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)테스트 발송</td>
+						<td><a href="../html/system/Bo-06-010-PG.html" target="_blank">Bo-06-010-PG.html [테스트 발송 버튼클릭]</a>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)미리보기</td>
+						<td><a href="../html/system/Bo-06-010-PG.html" target="_blank">Bo-06-010-PG.html [미리보기 버튼클릭]</a>
+					</tr>
+					<tr>
+						<td></td>
+						<td>[탭]전송이력조회</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-012-PG.html" target="_blank">Bo-06-012-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>매장이벤트전체관리</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-013-PG.html" target="_blank">Bo-06-013-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-014-PG.html" target="_blank">Bo-06-014-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>Telink 타사 SMS관리</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-016-PG.html" target="_blank">Bo-06-016-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>Telink 타사 SMS관리</td>
+						<td></td>
+						<td></td>
+						<td>(팝업) 전송결과코드 툴팁</td>
+						<td><a href="../html/system/Bo-06-016-PG.html" target="_blank">Bo-06-016-PG.html [전송결과코드 "?" 툴팁 버튼 클릭]</a></td>
+					</tr>
+
+					<tr>
+						<td>MNP 사전동의 SMS관리</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-017-PG.html" target="_blank">Bo-06-017-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>카카오톡 발송관리</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-018-PG.html" target="_blank">Bo-06-018-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>제휴포인트 취소처리</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-019-PG.html" target="_blank">Bo-06-019-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>비용관리</td>
+						<td>[탭]비용등록관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-020-PG.html" target="_blank">Bo-06-020-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-021-PG.html" target="_blank">Bo-06-021-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>[탭]비용통계관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-023-PG.html" target="_blank">Bo-06-023-PG.html</a></td>
+					</tr>
+
+					<tr>
+						<td>OCB포인트조회</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-024-PG.html" target="_blank">Bo-06-024-PG.html</a></td>
+					</tr>
+
+					<tr>
+						<td>공시지원금 알리미</td>
+						<td>[탭]현황조회</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-025-PG.html" target="_blank">Bo-06-025-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>상세목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-040-PG.html" target="_blank">Bo-06-040-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)템플릿보기</td>
+						<td><a href="../html/system/Bo-06-001-PU.html" onclick="window.open('../html/system/Bo-06-001-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-06-001-PU.html [윈도우 팝업]</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)MMS일괄발송</td>
+						<td><a href="../html/system/Bo-06-040-PG.html" target="_blank">Bo-06-040-PG.html ["MMS 일괄 발송" 버튼 클릭]</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)캠페인일괄발송</td>
+						<td><a href="../html/system/Bo-06-040-PG.html" target="_blank">Bo-06-040-PG.html ["캠페인 일괄 발송" 버튼 클릭]</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)공시지원금알리미 정보보기</td>
+						<td><a href="../html/system/Bo-06-040-PG.html" target="_blank">Bo-06-040-PG.html ["공시지원금 정보 보기" 버튼 클릭]</a></
+					</tr>
+					<tr>
+						<td></td>
+						<td>[탭]현황조회-신규알리미 전용</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-026-PG.html" target="_blank">Bo-06-026-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>상세목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-027-PG.html" target="_blank">Bo-06-027-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)템플릿보기</td>
+						<td><a href="../html/system/Bo-06-001-PU.html" onclick="window.open('../html/system/Bo-06-001-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-06-001-PU.html [윈도우 팝업]</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>[탭]발송목록</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-028-PG.html" target="_blank">Bo-06-028-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>Open API</td>
+						<td>[탭]Open API</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-030-PG.html" target="_blank">Bo-06-030-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-031-PG.html" target="_blank">Bo-06-031-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>[탭]Open API 통계</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-033-PG.html" target="_blank">Bo-06-033-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>[탭]Open API 모니터링</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-034-PG.html" target="_blank">Bo-06-034-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>[탭]BP사관리</td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-035-PG.html" target="_blank">Bo-06-035-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-036-PG.html" target="_blank">Bo-06-036-PG.html</a></td>
+					</tr>
+
+					<tr>
+						<td>약관관리</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-041-PG.html" target="_blank">Bo-06-041-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>등록</td>
+						<td></td>
+						<td><a href="../html/system/Bo-06-042-PG.html" target="_blank">Bo-06-042-PG.html</a></td>
+					</tr>
+
+				</tbody>
+			</table>
+		</section>
+
+		<section class="guide-content" id="content06">
+			<h2 class="tit-guide">통계</h2>
+			<table class="tbl-list-guide">
+				<caption>통계</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>1Depth</th>
+						<th>2Depth</th>
+						<th>3Depth</th>
+						<th>4Depth</th>
+						<th>파일명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="5" class="detail">
+							<strong>[통계 - 화면설계서 목록]</strong>
+							<p class="finish">
+								(TWD) SB_통계_admin_V0.4_20181005.pptx
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>게시판처리현황</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-001-PG.html" target="_blank">Bo-07-001-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>사용자통계</td>
+						<td>페이지통계</td>
+						<td>페이지통계(전체)</td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-002-PG.html" target="_blank">Bo-07-002-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>페이지통계(URL별)</td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-003-PG.html" target="_blank">Bo-07-003-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>방문자 통계</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-004-PG.html" target="_blank">Bo-07-004-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>시간대 별 통계</td>
+						<td>시간대 별 UV</td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-005-PG.html" target="_blank">Bo-07-005-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>방문고객 행동패턴 통계</td>
+						<td>방문(미주문)고객 행동패턴</td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-007-PG.html" target="_blank">Bo-07-007-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>방문고객 행동패턴 통계</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-009-PG.html" target="_blank">Bo-07-007-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>유입통계</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-010-PG.html" target="_blank">Bo-07-010-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>실적통계</td>
+						<td>판매현황</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-011-PG.html" target="_blank">Bo-07-011-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>재고현황</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-012-PG.html" target="_blank">Bo-07-012-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>단말 별 판매현황</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-013-PG.html" target="_blank">Bo-07-013-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>(팝업)월말 예상 판매량 보기</td>
+						<td><a href="../html/statistics/Bo-07-001-PU.html" onclick="window.open('../html/statistics/Bo-07-001-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">Bo-07-001-PU.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>채널별 판매현황</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-014-PG.html" target="_blank">Bo-07-014-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>액세서리 판매현황</td>
+						<td>액세서리 상품 별 현황</td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-015-PG.html" target="_blank">Bo-07-015-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>T기프트 판매현황</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-017-PG.html" target="_blank">Bo-07-017-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>상담센터 실적통계</td>
+						<td>조직 별 판매실적</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-018-PG.html" target="_blank">Bo-07-018-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>단말 별 판매실적</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-019-PG.html" target="_blank">Bo-07-019-PG.html</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Raw Date 조회</td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-020-PG.html" target="_blank">Bo-07-020-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>캠페인통계</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-021-PG.html" target="_blank">Bo-07-021-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>바로픽업 통계</td>
+						<td></td>
+						<td>목록</td>
+						<td></td>
+						<td><a href="../html/statistics/Bo-07-022-PG.html" target="_blank">Bo-07-022-PG.html</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section class="guide-content" id="content09">
+			<h2 class="tit-guide">로그인</h2>
+			<table class="tbl-list-guide">
+				<caption>로그인</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>1Depth</th>
+						<th>2Depth</th>
+						<th>3Depth</th>
+						<th>4Depth</th>
+						<th>파일명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="5" class="detail">
+							<strong>[상담사 주문 - 화면설계서 목록]</strong>
+							<p class="finish">
+								(TWD)SB 회원가입_로그인_admin_v0.3_20180713.pptx
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>로그인</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/login/Bo-L01-001-PG.html" target="_blank">Bo-L01-001-PG.html</a></td>
+					</tr>
+					<tr>
+						<td>사용자 신청</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="../html/login/Bo-L02-001-PG.html" target="_blank">Bo-L02-001-PG.html</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		
+		
+	</article>
+	<a href="#top" class="btn-top">TOP</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container" class="login-page">
+		<!-- content -->
+		<div id="content">
+			<!-- page title -->
+			<div class="h-area1 login">
+				<h1 class="h-type1">로그인</h1>
+			</div>
+			<!-- //page title -->
+
+			<!--login-wrap-->
+			<div class="login-wrap">
+				<h2>T다이렉트샵 관리자</h2>
+				<div class="login-container">
+					<div class="login-box">
+						<input type="text" class="c-input" title="아이디 입력" placeholder="아이디 입력">
+						<input type="password" class="c-input mt-10" title="비밀번호 입력" placeholder="비밀번호 입력">
+					</div>
+					<a href="#layerPop" data-model="layerPop" class="btn-base btn-blue login-btn">계정확인</a>
+				</div>
+				<div class="form-group">
+					<span class="c-chk">
+						<input type="checkbox" id="id_save" name="id_save">
+						<label for="id_save">아이디 저장</label>
+					</span>
+				</div>
+				<div class="btn-area">
+					<a href="#none" class="btn-base btn-gray">아이디 / 비밀번호 찾기</a>
+					<a href="#none" class="btn-base btn-gray">사용자 신청</a>
+				</div>
+				<p class="f-12">TWD Admin은 승인된 계정에 한해서 로그인이 가능합니다. <br>(계정확인 → SMS 인증 후, 로그인 가능)</p>
+			</div>
+			<!--//login-wrap-->
+
+			<div class="box-type1">
+				<ul class="txt-info">
+					<li>바로픽업 로그인 화면으로 이동되지 않거나, 보안 프로그램 설치 문제가 발생할 경우 접속 중인 Swing 프로그램을 모두 종료 후 재 접속 해주시기 바랍니다.</li>
+					<li>다이렉트 고객센터 문의 : <strong>1599-0111</strong></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 레이어팝업 : 휴대폰인증 -->
+<div id="layerPop" class="pop-wrap pop-layer small">
+	<div class="pop-header">
+		<strong class="h-type1">휴대폰 인증</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		<p>휴대폰 인증 성공 후, 접속이 가능합니다.</p>
+		
+		<div class="phone-check">
+			<p class="check">
+				<select class="c-select" title="휴대폰번호 첫자리 선택" style="width:80px;">
+					<option value="" selected="selected">010</option>
+				</select>
+				<span class="txt-unit">-</span>
+				<input type="text" class="c-input" title="휴대폰번호 중간자리 입력" style="width:80px;">
+				<span class="txt-unit">-</span>
+				<input type="text" class="c-input" title="휴대폰번호 끝자리 입력" style="width:80px;">
+				<a href="#none" class="btn-base">인증번호 발송</a>
+			</p>
+			<div class="check">
+				<div class="c-input-wrap">
+					<input type="text" class="c-input" title="인증번호 입력" style="width:268px;">
+					<span class="ico-clock">00:00</span>
+				</div>
+				<a href="#none" class="btn-base">인증하기</a>
+			</div>
+		</div>
+		
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">로그인</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<!-- //레이어팝업 : 휴대폰인증 -->
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//레이어팝업 호출
+		$('[data-model]').click(function(ev){
+			ev.preventDefault();
+			var model = $(this).attr('data-model');
+			modalCon(model,false,true);
+		});
+	});
+</script>
+</body>
+</html>
+
+
+
+
+

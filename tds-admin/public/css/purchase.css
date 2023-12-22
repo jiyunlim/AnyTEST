@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/*
+ * TWD 구매프로세스 개선
+ */
+ /* 주문서 작성 */
+.arrive-area-txt{display:inline-block; font-size:10px; letter-spacing:-0.15px; color:#666;}
+
+ /* 주문서 작성 : 셀프동의주문서 (오늘보상) */
+.self-order-today{display:flex; position:relative;}
+.self-order-today .input-search-wrap{width:317px; margin-right:3px;}
+.self-order-today .auto-complete{padding: 4px 2px 4px 8px;}
+.self-order-today .c-input{color:#000}
+.self-order-today .self-right-link{position:absolute; right:0; bottom:8px;}
+.self-order-today .ly-auto-complete .auto-complete .keyword .item{color:#000;}
+.table-row tbody .row-in-col td{padding:13px 0 10px;}
+.table-row tbody .row-in-col th{padding:18px 0 17px;}
+.table-row tbody .row-in-col th .txt-info{margin-top:12px;}
+.order-before-line::before{content:"|"; padding-right:6px; color:#e4e4e4;}
+.self-price-wrap{padding:9px 0 10px;}
+.self-txt-info{position:relative; font-size:13px; color:#000; padding-right:58px;}
+.self-txt-info strong{font-size:15px;}
+.self-txt-info .total-price{font-size:18px; color:#df3636;}
+.ico-price.standard-price{background-color:#757575;}
+.ico-price.reward-price{background-color:#df3636;}
+.ico-price{display:inline-block; position:absolute; right:20px; top:0; width:18px; height:18px; font-style:normal; border-radius:50%;}
+.ico-price.standard-price::before,
+.ico-price.standard-price::after,
+.ico-price.reward-price::before,
+.ico-price.reward-price::after{content:""; position:absolute; background-size:18px auto; background-color:#fff;}
+.ico-price.standard-price::before{left:9px; top:5px; width:1px; height:7px;}
+.ico-price.standard-price::after{left:6px; top:8px; width:7px; height:1px;}
+.ico-price.reward-price::before{left:6px; top:7px; width:7px; height:1px;}
+.ico-price.reward-price::after{left:6px; top:10px; width:7px; height:1px;}
+
+/* 상담사 주문 > 온라인(기기변경) 주문서 작성 : 클럽기변 중고폰 반납 신청서 약관 */
+.d-ib{display:inline-block !important;}
+.d-flex{display:flex; justify-content:space-between; align-items:center;}
+.mb-0{margin-bottom:0 !important;}
+.club-eq-con td{text-align:left !important; border:0 !important}
+.club-eq-con .table-term{border-bottom:1px solid #e1e1e1}
+
+/* 등급산정기준 */
+.reward-bg th,.reward-bg td{background:#f7f9fd !important}
+.reword-price{font-weight:700; font-size:15px !important;}
+.grade-info-type{margin:8px 0 8px !important; padding:0 !important;}
+.grade-info-type li{font-size:12px !important; color:#666 !important; margin-bottom:4px;}
+.grade-box-type{padding:15px auto 15px !important}
+.grade-box-type .grade-info-type{margin:0 !important; padding-left:0 !important;}

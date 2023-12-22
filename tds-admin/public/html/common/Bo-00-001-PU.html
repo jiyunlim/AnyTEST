@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>우편번호 조회</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 600*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">우편번호 조회</h1>
+	</div>
+	<div class="pop-content">
+		<!-- tab -->
+		<ul class="tab-area depth2 mt-20 js-tab-toggle">
+			<li><a href="#tab_1" class="on">도로명 주소 검색</a></li>
+			<li><a href="#tab_2">동/읍/면/리 검색</a></li>
+			<li><a href="#tab_3">사서함 검색</a></li>
+		</ul>
+		<!-- //tab -->
+		
+		<div id="tab_1" class="tab-con">
+			<h2 class="hidden">도로명 주소 검색</h2>
+			<p class="f-12">찾으시려는 지역을 선택하시고 도로명을 입력 후 조회 버튼을 누르세요.<br>예 : 서울 강남구 선택, “봉은사로” 입력</p>
+			
+			<div class="pop-search mt-20">
+				<select class="c-select" title="광역시/도 선택" style="width:100px;">
+					<option value="" selected="selected">광역시/도</option>
+				</select>
+				<select class="c-select" title="시/군/구 선택" style="width:100px;">
+					<option value="" selected="selected">시/군/구</option>
+				</select>
+				<input type="text" class="c-input" title="주소 입력" placeholder="예: ‘봉은사로’ 입력" style="width:40%;">
+				<a href="#none" class="btn-base">검색</a>
+			</div>
+
+			<h3 class="h-type2">건물 본, 부번호를 입력 해 주세요.</h3>
+			<p class="f-12">찾으시려는 지역을 선택하시고 도로명을 입력 후, 조회 버튼을 누르세요.</p>
+			<div class="pop-search mt-10">
+				<span class="txt-unit">건물번호 조회</span>
+				<input type="text" class="c-input" title="건물번호 앞자리 입력" style="width:154px;">
+				<span class="txt-unit">-</span>
+				<input type="text" class="c-input" title="건물번호 뒷자리 입력" style="width:154px;">
+				<a href="#none" class="btn-base">검색</a>
+			</div>
+			<table class="table-col mt-10">
+			<caption>건물번호 조회 결과</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:20%">
+				<col style="width:20%">
+				<col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">선택</th>
+					<th scope="col">건물번호*부번호</th>
+					<th scope="col">우편번호</th>
+					<th scope="col">건물명</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="buildingNum1" name="buildingNum">
+							<label for="buildingNum1">선택</label>
+						</span>
+					</td>
+					<td>5</td>
+					<td>060-83</td>
+					<td class="l-data">성재빌딩</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="buildingNum2" name="buildingNum">
+							<label for="buildingNum2">선택</label>
+						</span>
+					</td>
+					<td>5</td>
+					<td>060-83</td>
+					<td class="l-data">성재빌딩</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="buildingNum3" name="buildingNum">
+							<label for="buildingNum3">선택</label>
+						</span>
+					</td>
+					<td>5</td>
+					<td>060-83</td>
+					<td class="l-data">성재빌딩</td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- paginate -->
+			<div class="paginate-area">
+				<a href="#none" class="pg-first">처음 리스트</a>
+				<a href="#none" class="pg-prev">이전 리스트</a>
+				<ul class="paginate">
+					<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+				</ul>
+				<a href="#none" class="pg-next">다음 리스트</a>
+				<a href="#none" class="pg-last">마지막 리스트</a>
+			</div>
+			<!-- //paginate -->
+
+			<h3 class="h-type2">상세주소를 입력해 주세요.</h3>
+			<p class="f-12">번지, 호수 등의 나머지 주소를 입력해 주세요.</p>
+			<table class="table-row mt-10">
+			<caption>상세주소 입력</caption>
+			<colgroup>
+				<col style="width:24%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">상세주소</th>
+					<td>
+						<div class="form-group block">
+							<p class="input-address">
+								<input type="text" class="c-input mt-0" readonly="readonly" title="주소 입력">
+								<input type="text" class="c-input" readonly="readonly" title="주소 입력">
+								<input type="text" class="c-input" title="상세주소 입력" placeholder="나머지 상세 주소를 입력해 주세요.">
+							</p>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+
+		<div id="tab_2" class="tab-con">
+			<h2 class="hidden">동/읍/면/리 검색</h2>
+			<p class="f-12">찾으시는 주소지의 동/읍/면/리 이름을 입력 후, 조회 버튼을 누르세요.<br>예:  서울 강남구 삼성동의 경우 “삼성” 입력</p>
+			
+			<div class="pop-search mt-20">
+				<input type="text" class="c-input" title="주소 입력" placeholder="예: ‘봉은사로’ 입력" style="width:82%;">
+				<a href="#none" class="btn-base">검색</a>
+			</div>
+
+			<h3 class="h-type2">목록에서 찾으시는 주소를 선택해 주세요.</h3>
+			<table class="table-col">
+			<caption>동/읍/면/리 조회 결과</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:20%">
+				<col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">선택</th>
+					<th scope="col">우편번호</th>
+					<th scope="col">건물명</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="addressChk1" name="addressChk">
+							<label for="addressChk1">선택</label>
+						</span>
+					</td>
+					<td>346-03</td>
+					<td class="l-data">대전광역시 동구 삼성동 95-3 (중고힐타이어)</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="addressChk2" name="addressChk">
+							<label for="addressChk2">선택</label>
+						</span>
+					</td>
+					<td>346-03</td>
+					<td class="l-data">대전광역시 동구 삼성동 95-3 (중고힐타이어)</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="addressChk3" name="addressChk">
+							<label for="addressChk3">선택</label>
+						</span>
+					</td>
+					<td>346-03</td>
+					<td class="l-data">대전광역시 동구 삼성동 95-3 (중고힐타이어)</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="addressChk4" name="addressChk">
+							<label for="addressChk4">선택</label>
+						</span>
+					</td>
+					<td>346-03</td>
+					<td class="l-data">대전광역시 동구 삼성동 95-3 (중고힐타이어)</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="addressChk5" name="addressChk">
+							<label for="addressChk5">선택</label>
+						</span>
+					</td>
+					<td>346-03</td>
+					<td class="l-data">대전광역시 동구 삼성동 95-3 (중고힐타이어)</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="addressChk6" name="addressChk">
+							<label for="addressChk6">선택</label>
+						</span>
+					</td>
+					<td>346-03</td>
+					<td class="l-data">대전광역시 동구 삼성동 95-3 (중고힐타이어)</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="addressChk7" name="addressChk">
+							<label for="addressChk7">선택</label>
+						</span>
+					</td>
+					<td>346-03</td>
+					<td class="l-data">대전광역시 동구 삼성동 95-3 (중고힐타이어)</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="addressChk8" name="addressChk">
+							<label for="addressChk8">선택</label>
+						</span>
+					</td>
+					<td>346-03</td>
+					<td class="l-data">대전광역시 동구 삼성동 95-3 (중고힐타이어)</td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- paginate -->
+			<div class="paginate-area">
+				<a href="#none" class="pg-first">처음 리스트</a>
+				<a href="#none" class="pg-prev">이전 리스트</a>
+				<ul class="paginate">
+					<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+				</ul>
+				<a href="#none" class="pg-next">다음 리스트</a>
+				<a href="#none" class="pg-last">마지막 리스트</a>
+			</div>
+			<!-- //paginate -->
+
+			<h3 class="h-type2">상세주소를 입력해 주세요.</h3>
+			<p class="f-12">번지, 호수 등의 나머지 주소를 입력해 주세요.</p>
+			<table class="table-row mt-10">
+			<caption>상세주소 입력</caption>
+			<colgroup>
+				<col style="width:24%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">상세주소</th>
+					<td>
+						<div class="form-group block">
+							<p class="input-address">
+								<input type="text" class="c-input mt-0" readonly="readonly" title="주소 입력">
+								<input type="text" class="c-input" title="상세주소 입력" placeholder="나머지 상세 주소를 입력해 주세요.">
+							</p>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+
+		<div id="tab_3" class="tab-con">
+			<h2 class="hidden">사서함 검색</h2>
+			<p class="f-12">찾으시는 광역시/도 지역과 시/군/구 선택하시고 사서함을 입력 후,조회 버튼을 누르세요.<br>예: 서울 영등포구 선택, '여의도우체국'의 경우 '여의도' 입력</p>
+			
+			<div class="pop-search mt-20">
+				<select class="c-select" title="광역시/도 선택" style="width:100px;">
+					<option value="" selected="selected">광역시/도</option>
+				</select>
+				<select class="c-select" title="시/군/구 선택" style="width:100px;">
+					<option value="" selected="selected">시/군/구</option>
+				</select>
+				<input type="text" class="c-input" title="주소 입력" placeholder="예: ‘여의도’ 입력" style="width:40%;">
+				<a href="#none" class="btn-base">검색</a>
+			</div>
+
+			<h3 class="h-type2">목록에서 찾으시는 주소를 선택해 주세요.</h3>
+			<table class="table-col">
+			<caption>사서함 조회 결과</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:20%">
+				<col style="width:20%">
+				<col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">선택</th>
+					<th scope="col">우편번호</th>
+					<th scope="col">호</th>
+					<th scope="col">사서함</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="postBox1" name="postBox">
+							<label for="postBox1">선택</label>
+						</span>
+					</td>
+					<td>073-28</td>
+					<td>1</td>
+					<td class="l-data">여의도우체국사서함</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="postBox2" name="postBox">
+							<label for="postBox2">선택</label>
+						</span>
+					</td>
+					<td>073-28</td>
+					<td>1</td>
+					<td class="l-data">여의도우체국사서함</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="postBox3" name="postBox">
+							<label for="postBox3">선택</label>
+						</span>
+					</td>
+					<td>073-28</td>
+					<td>1</td>
+					<td class="l-data">여의도우체국사서함</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="postBox4" name="postBox">
+							<label for="postBox4">선택</label>
+						</span>
+					</td>
+					<td>073-28</td>
+					<td>1</td>
+					<td class="l-data">여의도우체국사서함</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="postBox5" name="postBox">
+							<label for="postBox5">선택</label>
+						</span>
+					</td>
+					<td>073-28</td>
+					<td>1</td>
+					<td class="l-data">여의도우체국사서함</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="postBox6" name="postBox">
+							<label for="postBox6">선택</label>
+						</span>
+					</td>
+					<td>073-28</td>
+					<td>1</td>
+					<td class="l-data">여의도우체국사서함</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="postBox7" name="postBox">
+							<label for="postBox7">선택</label>
+						</span>
+					</td>
+					<td>073-28</td>
+					<td>1</td>
+					<td class="l-data">여의도우체국사서함</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-rdo txt-no">
+							<input type="radio" id="postBox8" name="postBox">
+							<label for="postBox8">선택</label>
+						</span>
+					</td>
+					<td>073-28</td>
+					<td>1</td>
+					<td class="l-data">여의도우체국사서함</td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- paginate -->
+			<div class="paginate-area">
+				<a href="#none" class="pg-first">처음 리스트</a>
+				<a href="#none" class="pg-prev">이전 리스트</a>
+				<ul class="paginate">
+					<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+				</ul>
+				<a href="#none" class="pg-next">다음 리스트</a>
+				<a href="#none" class="pg-last">마지막 리스트</a>
+			</div>
+			<!-- //paginate -->
+
+			<h3 class="h-type2">상세주소를 입력해 주세요.</h3>
+			<p class="f-12">번지, 호수 등의 나머지 주소를 입력해 주세요.</p>
+			<table class="table-row mt-10">
+			<caption>상세주소 입력</caption>
+			<colgroup>
+				<col style="width:24%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">상세주소</th>
+					<td>
+						<div class="form-group block">
+							<p class="input-address">
+								<input type="text" class="c-input mt-0" title="주소 입력">
+								<input type="text" class="c-input" title="상세주소 입력" placeholder="나머지 상세 주소를 입력해 주세요.">
+							</p>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-blue">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

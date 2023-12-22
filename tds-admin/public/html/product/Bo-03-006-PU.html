@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>체크 포인트 등록</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 860*400 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">체크 포인트 등록</h1>
+	</div>
+	<div class="pop-content">
+		<table class="table-row">
+		<caption>체크 포인트 등록</caption>
+		<colgroup>
+			<col style="width:12%">
+			<col style="width:14%">
+			<col style="width:12%">
+			<col>
+			<col style="width:12%">
+			<col style="width:14%">
+			<col style="width:12%">
+			<col style="width:14%">
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row"> 게시물 유형*</th>
+				<td>
+					<div class="form-group">
+						<span class="c-rdo">
+							<input type="radio" id="boardType1" name="boardType">
+							<label for="boardType1">Text</label>
+						</span>
+						<span class="c-rdo">
+							<input type="radio" id="boardType2" name="boardType">
+							<label for="boardType2">Editor</label>
+						</span>
+					</div>
+				</td>
+				<th scope="row"> 체크 포인트 구분*</th>
+				<td>특정</td>
+				<th scope="row">적용 영역* </th>
+				<td>
+					<select class="c-select" title="적용 영역 선택">
+						<option value="" selected="selected">전체</option>
+						<option value="">휴대폰</option>
+						<option value="">태블릿</option>
+						<option value="">웨어러블</option>
+						<option value="">모바일 라우터</option>
+						<option value="">키즈폰</option>
+						<option value="">펫 전용</option>
+						<option value="">중고</option>
+						<option value="">외산</option>
+						<option value="">스마트홈&amp;라이프</option>
+						<option value="">액세서리</option>
+						<option value="">T기프트</option>
+					</select>
+				</td>
+				<th scope="row">게시 여부</th>
+				<td>
+					<div class="form-group">
+						<span class="c-rdo">
+							<input type="radio" id="openType1" name="openType">
+							<label for="openType1">Y</label>
+						</span>
+						<span class="c-rdo">
+							<input type="radio" id="openType2" name="openType">
+							<label for="openType2">N</label>
+						</span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">제목*</th>
+				<td colspan="7">
+					<input type="text" class="c-input" title="제목 입력" style="width:88%;">
+					<a href="#none" class="btn-base btn-gray">내용복사</a>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row" colspan="8">체크포인트 내용 입력</th>
+			</tr>
+			<tr>
+				<td colspan="8">
+					<textarea rows="1" cols="1" class="c-textarea" title="체크포인트 내용 입력"></textarea>
+					<div class="edit-area">
+						Html 입력 내용
+					</div>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">저장</a>
+			<a href="#none" class="btn-base btn-line-blue btn-layer-close">닫기</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>모상품 검색</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 600*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">모상품 검색</h1>
+	</div>
+	<div class="pop-content">
+		<h2 class="h-type2">모상품 조회</h2>
+		<table class="table-row">
+		<caption>모상품 조회</caption>
+		<colgroup>
+			<col style="width:24%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">등록일</th>
+				<td>
+					<div class="form-group calendar">
+						<select class="c-select" title="기간 선택">
+							<option value="" selected="selected">기간선택</option>
+							<option value="">오늘</option>
+							<option value="">1주일</option>
+							<option value="">1개월</option>
+							<option value="">이달</option>
+							<option value="">금년</option>
+						</select>
+						<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+						<a href="#none" class="btn-calendar">달력</a>
+						<span class="txt-unit">━</span>
+						<input type="text" class="c-input" title="종료일자">
+						<a href="#none" class="btn-calendar">달력</a>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">모상품 ID/<br>모델번호</th>
+				<td>
+					<input type="text" class="c-input" title="모델명 제조사 입력" placeholder="모델명, 제조사를 입력하세요" style="width:86%;">
+					<a href="#none" class="btn-base btn-gray">검색</a>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<div class="h-area2">
+			<h2 class="h-type2">대표 모상품 모델 조회결과 <span class="txt-count">(<em>90,865</em>건)</span></h2>
+			<div class="btn-area">
+				<a href="#none" class="btn-base">초기화</a>
+			</div>
+		</div>
+		<table class="table-col">
+		<caption>대표 모상품 모델 조회결과</caption>
+		<colgroup>
+			<col style="width:10%">
+			<col style="width:45%">
+			<col style="width:45%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">선택</th>
+				<th scope="col">제조사</th>
+				<th scope="col">모델명</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="modelSelect1" name="modelSelect">
+						<label for="modelSelect1">선택</label>
+					</span>
+				</td>
+				<td>LG전자㈜</td>
+				<td>LG-SH130</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="modelSelect2" name="modelSelect">
+						<label for="modelSelect2">선택</label>
+					</span>
+				</td>
+				<td>LG전자㈜</td>
+				<td>LG-SH130</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="modelSelect3" name="modelSelect">
+						<label for="modelSelect3">선택</label>
+					</span>
+				</td>
+				<td>LG전자㈜</td>
+				<td>LG-SH130</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="modelSelect4" name="modelSelect">
+						<label for="modelSelect4">선택</label>
+					</span>
+				</td>
+				<td>LG전자㈜</td>
+				<td>LG-SH130</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="modelSelect5" name="modelSelect">
+						<label for="modelSelect5">선택</label>
+					</span>
+				</td>
+				<td>LG전자㈜</td>
+				<td>LG-SH130</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="modelSelect6" name="modelSelect">
+						<label for="modelSelect6">선택</label>
+					</span>
+				</td>
+				<td>LG전자㈜</td>
+				<td>LG-SH130</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="modelSelect7" name="modelSelect">
+						<label for="modelSelect7">선택</label>
+					</span>
+				</td>
+				<td>LG전자㈜</td>
+				<td>LG-SH130</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="modelSelect8" name="modelSelect">
+						<label for="modelSelect8">선택</label>
+					</span>
+				</td>
+				<td>LG전자㈜</td>
+				<td>LG-SH130</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="modelSelect9" name="modelSelect">
+						<label for="modelSelect9">선택</label>
+					</span>
+				</td>
+				<td>LG전자㈜</td>
+				<td>LG-SH130</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="modelSelect10" name="modelSelect">
+						<label for="modelSelect10">선택</label>
+					</span>
+				</td>
+				<td>LG전자㈜</td>
+				<td>LG-SH130</td>
+			</tr>
+		</tbody>
+		</table>
+		<!-- paginate -->
+		<div class="paginate-area">
+			<a href="#none" class="pg-first">처음 리스트</a>
+			<a href="#none" class="pg-prev">이전 리스트</a>
+			<ul class="paginate">
+				<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+				<li><a href="#none">2</a></li>
+				<li><a href="#none">3</a></li>
+				<li><a href="#none">4</a></li>
+				<li><a href="#none">5</a></li>
+				<li><a href="#none">6</a></li>
+				<li><a href="#none">7</a></li>
+				<li><a href="#none">8</a></li>
+				<li><a href="#none">9</a></li>
+				<li><a href="#none">10</a></li>
+			</ul>
+			<a href="#none" class="pg-next">다음 리스트</a>
+			<a href="#none" class="pg-last">마지막 리스트</a>
+		</div>
+		<!-- //paginate -->
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue btn-layer-close">닫기</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

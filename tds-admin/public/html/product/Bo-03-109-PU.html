@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>대상 요금제 선택</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 900*700 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">대상 요금제 선택</h1>
+	</div>
+	<div class="pop-content">
+		<!-- tab -->
+		<ul class="tab-area depth2">
+			<li><a href="#none" class="on">요금제</a></li>
+			<li><a href="#none">LTE 필요한 요금제</a></li>
+			<li><span class="tab-modify"><a href="#none" class="btn-base btn-line-blue">구성하기</a></span></li>
+			<li><span class="tab-modify"><a href="#none" class="btn-base btn-line-blue">구성하기</a></span></li>
+			<li><span class="tab-modify"><input type="text" class="c-input" title="구성하기 입력"></span></li>
+		</ul>
+		<!-- //tab -->
+
+		<div class="mt-40">
+			<span class="c-chk">
+				<input type="checkbox" id="allChk" name="allChk">
+				<label for="allChk">전체선택</label>
+			</span>
+			<span class="txt-unit">선택 요금제 : 00개 선택</span>
+		</div>
+
+		<table class="table-col">
+		<caption>요금제 리스트1</caption>
+		<colgroup>
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="billGroup1_1" name="billGroup1">
+							<label for="billGroup1_1">T플랜</label>
+						</span>
+					</div>
+				</th>
+				<th scope="col">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="billGroup1_2" name="billGroup1">
+							<label for="billGroup1_2">band 데이터</label>
+						</span>
+					</div>
+				</th>
+				<th scope="col">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="billGroup1_3" name="billGroup1">
+							<label for="billGroup1_3">전국민 무한</label>
+						</span>
+					</div>
+				</th>
+				<th scope="col">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="billGroup1_4" name="billGroup1">
+							<label for="billGroup1_4">T 시그니처</label>
+						</span>
+					</div>
+				</th>
+				<th scope="col">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="billGroup1_5" name="billGroup1">
+							<label for="billGroup1_5">T끼리</label>
+						</span>
+					</div>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="tplan1" name="tplan">
+							<label for="tplan1">스몰</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="tplan2" name="tplan">
+							<label for="tplan2">미디엄</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="tplan3" name="tplan">
+							<label for="tplan3">라지</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="tplan4" name="tplan">
+							<label for="tplan4">패밀리</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="tplan5" name="tplan">
+							<label for="tplan5">Data 인피니티</label>
+						</span>
+					</div>
+				</td>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="bandData1" name="bandData">
+							<label for="bandData1">band 데이터 세이브</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="bandData2" name="bandData">
+							<label for="bandData2">band 데이터 1.2G</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="bandData3" name="bandData">
+							<label for="bandData3">T다이렉트Plus (band데이터2.2G)</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="bandData4" name="bandData">
+							<label for="bandData4">band 데이터 3.5G</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="bandData5" name="bandData">
+							<label for="bandData5">band 데이터 6.5G</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="bandData6" name="bandData">
+							<label for="bandData6">band 데이터 퍼펙트</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="bandData7" name="bandData">
+							<label for="bandData7">band 데이터 퍼펙트S</label>
+						</span>
+					</div>
+				</td>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="peopleInfinite1" name="peopleInfinite">
+							<label for="peopleInfinite1">전국민 무한 69</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="peopleInfinite2" name="peopleInfinite">
+							<label for="peopleInfinite2">전국민 무한 75</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="peopleInfinite3" name="peopleInfinite">
+							<label for="peopleInfinite3">전국민 무한 85</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="peopleInfinite4" name="peopleInfinite">
+							<label for="peopleInfinite4">전국민 무한 100</label>
+						</span>
+					</div>
+				</td>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="tSignature1" name="tSignature">
+							<label for="tSignature1">T시그니처 Master</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="tSignature2" name="tSignature">
+							<label for="tSignature2">T시그니처 Classic</label>
+						</span>
+					</div>
+				</td>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="tMate1" name="tMate">
+							<label for="tMate1">T끼리 35 요금제</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="tMate2" name="tMate">
+							<label for="tMate2">T끼리 45 요금제</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="tMate3" name="tMate">
+							<label for="tMate3">T끼리 55 요금제</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="tMate4" name="tMate">
+							<label for="tMate4">T끼리 65 요금제</label>
+						</span>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<table class="table-col">
+		<caption>>요금제 리스트2</caption>
+		<colgroup>
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="billGroup2_1" name="billGroup2">
+							<label for="billGroup2_1">band 팅</label>
+						</span>
+					</div>
+				</th>
+				<th scope="col">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="billGroup2_2" name="billGroup2">
+							<label for="billGroup2_2">T끼리 팅</label>
+						</span>
+					</div>
+				</th>
+				<th scope="col">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="billGroup2_3" name="billGroup2">
+							<label for="billGroup2_3">LTE 팅</label>
+						</span>
+					</div>
+				</th>
+				<th scope="col">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="billGroup2_4" name="billGroup2">
+							<label for="billGroup2_4">band 데이터 어르신</label>
+						</span>
+					</div>
+				</th>
+				<th scope="col">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="billGroup2_5" name="billGroup2">
+							<label for="billGroup2_5">골든에이지</label>
+						</span>
+					</div>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="bandTing1" name="bandTing">
+							<label for="bandTing1">쿠키즈 스마트</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="bandTing2" name="bandTing">
+							<label for="bandTing2">주말엔 팅 세이브</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="bandTing3" name="bandTing">
+							<label for="bandTing3">band 팅 세이브</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="bandTing4" name="bandTing">
+							<label for="bandTing4">band 팅 2.0G</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="bandTing5" name="bandTing">
+							<label for="bandTing5">주말엔 팅 3.0G</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="bandTing6" name="bandTing">
+							<label for="bandTing6">band 팅 3.0G</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="bandTing7" name="bandTing">
+							<label for="bandTing7">주말엔 팅 5.0G</label>
+						</span>
+					</div>
+				</td>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="tTing1" name="tTing">
+							<label for="tTing1">T끼리팅35</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="tTing2" name="tTing">
+							<label for="tTing2">T끼리팅45</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="tTing3" name="tTing">
+							<label for="tTing3">T끼리팅55</label>
+						</span>
+					</div>
+				</td>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="lteTing1" name="lteTing">
+							<label for="lteTing1">LTE팅24</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="lteTing2" name="lteTing">
+							<label for="lteTing2">LTE팅34</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="lteTing3" name="lteTing">
+							<label for="lteTing3">LTE팅42</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="lteTing4" name="lteTing">
+							<label for="lteTing4">LTE팅52</label>
+						</span>
+					</div>
+				</td>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="bandOld1" name="bandOld">
+							<label for="bandOld1">T끼리 어르신</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="bandOld2" name="bandOld">
+							<label for="bandOld2">band 어르신 세이브</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="bandOld3" name="bandOld">
+							<label for="bandOld3">band 어르신 1.2G</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="bandOld4" name="bandOld">
+							<label for="bandOld4">band 어르신 2.2G</label>
+						</span>
+					</div>
+				</td>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="goldenAge1" name="goldenAge">
+							<label for="goldenAge1">골든에이지15</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="goldenAge2" name="goldenAge">
+							<label for="goldenAge2">골든에이지34</label>
+						</span>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+		
+		<table class="table-col">
+		<caption>요금제 리스트3</caption>
+		<colgroup>
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="billGroup3_1" name="billGroup3">
+							<label for="billGroup3_1">일반형</label>
+						</span>
+					</div>
+				</th>
+				<th scope="col">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="billGroup3_2" name="billGroup3">
+							<label for="billGroup3_2">올인원 요금제</label>
+						</span>
+					</div>
+				</th>
+				<th scope="col">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="billGroup3_3" name="billGroup3">
+							<label for="billGroup3_3">올인원 팅</label>
+						</span>
+					</div>
+				</th>
+				<th scope="col">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="billGroup3_4" name="billGroup3">
+							<label for="billGroup3_4">무료음성</label>
+						</span>
+					</div>
+				</th>
+				<th scope="col">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="billGroup3_5" name="billGroup3">
+							<label for="billGroup3_5">팅스마트</label>
+						</span>
+					</div>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="normalType1" name="normalType">
+							<label for="normalType1">뉴실버요금제</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="normalType2" name="normalType">
+							<label for="normalType2">표준요금제</label>
+						</span>
+					</div>
+				</td>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="allinOne1" name="allinOne">
+							<label for="allinOne1">올인원 34</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="allinOne2" name="allinOne">
+							<label for="allinOne2">올인원 44</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="allinOne3" name="allinOne">
+							<label for="allinOne3">올인원 54</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="allinOne4" name="allinOne">
+							<label for="allinOne4">올인원 64</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="allinOne5" name="allinOne">
+							<label for="allinOne5">올인원 79</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="allinOne6" name="allinOne">
+							<label for="allinOne6">올인원 94</label>
+						</span>
+					</div>
+					
+				</td>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="allinOneTing1" name="allinOneTing">
+							<label for="allinOneTing1">올인원팅34</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="allinOneTing2" name="allinOneTing">
+							<label for="allinOneTing2">올인원팅44</label>
+						</span>
+					</div>
+				</td>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="freeVoice1" name="freeVoice">
+							<label for="freeVoice1">무료음성 19</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="freeVoice2" name="freeVoice">
+							<label for="freeVoice2">무료음성 28</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="freeVoice3" name="freeVoice">
+							<label for="freeVoice3">무료음성 34</label>
+						</span>
+					</div>
+				</td>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="tingSmart1" name="tingSmart">
+							<label for="tingSmart1">팅주니어표준+요금</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="tingSmart2" name="tingSmart">
+							<label for="tingSmart2">팅PLUS14요금</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="tingSmart3" name="tingSmart">
+							<label for="tingSmart3">팅PLUS19요금</label>
+						</span>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<table class="table-col">
+		<caption>요금제 4리스트</caption>
+		<colgroup>
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col" colspan="5">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="billGroup4" name="billGroup4">
+							<label for="billGroup4">뉴T끼리</label>
+						</span>
+					</div>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="newTmate1" name="newTmate">
+							<label for="newTmate1">뉴 T끼리 맞춤형(100분+250MB)</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="newTmate2" name="newTmate">
+							<label for="newTmate2">뉴 T끼리 맞춤형(100분+700MB)</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="newTmate3" name="newTmate">
+							<label for="newTmate3">뉴 T끼리 맞춤형(100분+1.5GB)</label>
+						</span>
+					</div>
+				</td>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="newTmate4" name="newTmate">
+							<label for="newTmate4">뉴 T끼리 맞춤형(150분+250MB)</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="newTmate5" name="newTmate">
+							<label for="newTmate5">뉴 T끼리 맞춤형(200분+250MB)</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="newTmate6" name="newTmate">
+							<label for="newTmate6">뉴 T끼리 맞춤형(150분+700MB)</label>
+						</span>
+					</div>
+				</td>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="newTmate7" name="newTmate">
+							<label for="newTmate7">뉴 T끼리 맞춤형(100분+3GB)</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="newTmate8" name="newTmate">
+							<label for="newTmate8">뉴 T끼리 맞춤형(150분+1.5GB)</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="newTmate9" name="newTmate">
+							<label for="newTmate9">뉴 T끼리 맞춤형(150분+3GB)</label>
+						</span>
+					</div>
+				</td>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="newTmate10" name="newTmate">
+							<label for="newTmate10">뉴 T끼리 맞춤형(200분+700MB)</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="newTmate11" name="newTmate">
+							<label for="newTmate11">뉴 T끼리 맞춤형(100분+6GB)</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="newTmate12" name="newTmate">
+							<label for="newTmate12">뉴 T끼리 맞춤형(200분+1.5GB)</label>
+						</span>
+					</div>
+				</td>
+				<td class="l-data v-top">
+					<div class="form-group all-block">
+						<span class="c-chk">
+							<input type="checkbox" id="newTmate13" name="newTmate">
+							<label for="newTmate13">뉴 T끼리 맞춤형(150분+6GB)</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="newTmate14" name="newTmate">
+							<label for="newTmate14">뉴 T끼리 맞춤형(200분+3GB)</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="newTmate15" name="newTmate">
+							<label for="newTmate15">뉴 T끼리 맞춤형(200분+6GB)</label>
+						</span>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

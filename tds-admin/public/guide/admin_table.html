@@ -1,0 +1,1646 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN GUIDE</title>
+	<link rel="stylesheet" type="text/css" href="../../public/css/tdirect_admin.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/@tdirect_guide.css">
+	<!--[if lt IE 9]>
+	<script src="../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../public/js/jquery.shCore.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+<body>
+<div id="guide-wrap">
+	<header id="header">
+		<h1><strong>T다이렉트샵</strong><em>ADMIN GUIDE</em></h1>
+		<nav>
+			<div class="inner">
+				<a href="coding_list.html">파일리스트</a>
+				<a href="admin_title.html" class="on">페이지가이드</a>
+			</div>
+		</nav>
+	</header>
+	<article>
+		<nav>
+			<a href="../html/layout/admin_layout.html" target="_blank">레이아웃</a>
+			<a href="admin_title.html">타이틀</a>
+			<a href="admin_btn.html">버튼</a>
+			<a href="admin_form.html">폼요소</a>
+			<a href="admin_table.html" class="on">테이블</a>
+			<a href="admin_etc.html">탭/페이징</a>
+			<a href="admin_popup.html">팝업</a>
+			<a href="admin_script.html">스크립트</a>
+			<a href="admin_loading.html">로딩중</a>
+		</nav>
+
+		<section class="guide-content">
+			<h2 class="tit-con">테이블 가이드</h2>
+			<div class="box-wrap">
+				<h3>테이블 스타일</h3>
+				
+				<h4>th 세로형 : [ table-row ]</h4>
+				<div class="guide-list-wrap">
+					<table class="table-row">
+					<caption>휴대폰 개통 내역 조회</caption>
+					<colgroup>
+						<col style="width:14%">
+						<col>
+						<col style="width:14%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">항목항목</th>
+							<td>결과값</td>
+							<th scope="row">항목항목</th>
+							<td>결과값</td>
+						</tr>
+						<tr>
+							<th scope="row">항목항목</th>
+							<td class="r-data">결과값</td>
+							<th scope="row">항목항목</th>
+							<td class="r-data">결과값</td>
+						</tr>
+						<tr>
+							<th scope="row">항목항목</th>
+							<td>결과값</td>
+							<th scope="row">항목항목</th>
+							<td>결과값</td>
+						</tr>
+						<tr>
+							<th scope="row">항목항목</th>
+							<td>결과값</td>
+							<th scope="row">항목항목</th>
+							<td>결과값</td>
+						</tr>
+						<tr>
+							<th scope="row">항목항목</th>
+							<td>결과값</td>
+							<th scope="row">항목항목</th>
+							<td>결과값</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+				<div class="guide-list-wrap">
+					<table class="table-row">
+					<caption>휴대폰 개통 내역 조회</caption>
+					<colgroup>
+						<col style="width:14%">
+						<col style="width:12%">
+						<col>
+						<col style="width:14%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">이름</th>
+							<td colspan="2">결과값</td>
+							<th scope="row">주민등록번호</th>
+							<td>결과값</td>
+						</tr>
+						<tr>
+							<th scope="rowgroup" rowspan="3">배송지 주소</th>
+							<th scope="row" class="th-sub">수령인</th>
+							<td colspan="3">홍길동</td>
+						</tr>
+						<tr>
+							<th scope="row" class="th-sub">전화번호</th>
+							<td colspan="3">010-1234-5678</td>
+						</tr>
+						<tr>
+							<th scope="row" class="th-sub">주소</th>
+							<td colspan="3"></td>
+						</tr>
+						<tr>
+							<th scope="rowgroup" rowspan="5">자동이체 신청</th>
+							<td colspan="4">본인</td>
+						</tr>
+						<tr>
+							<td colspan="4">은행 카드</td>
+						</tr>
+						<tr>
+							<th scope="row" class="th-sub">카드 주</th>
+							<td>홍길동</td>
+							<th scope="row" class="th-sub">카드명</th>
+							<td>롯데카드</td>
+						</tr>
+						<tr>
+							<th scope="row" class="th-sub">카드번호</th>
+							<td>홍길동</td>
+							<th scope="row" class="th-sub">유효기간</th>
+							<td>롯데카드</td>
+						</tr>
+						<tr>
+							<th scope="row" class="th-sub">주민번호앞 7자리</th>
+							<td>YYMMDD2</td>
+							<th scope="row" class="th-sub">관계</th>
+							<td>본인</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+				<div class="guide-list-wrap">
+					<table class="table-row">
+					<caption>휴대폰 개통 내역 조회</caption>
+					<colgroup>
+						<col style="width:10%">
+						<col>
+						<col style="width:10%">
+						<col>
+						<col style="width:10%">
+						<col>
+						<col style="width:10%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">항목항목항목항목</th>
+							<td>결과값</td>
+							<th scope="row">항목항목</th>
+							<td>결과값</td>
+							<th scope="row">항목</th>
+							<td>결과값</td>
+							<th scope="row">항목</th>
+							<td>결과값</td>
+						</tr>
+						<tr>
+							<th scope="row">항목항목항목항목</th>
+							<td>결과값</td>
+							<th scope="row">항목항목</th>
+							<td>결과값</td>
+							<th scope="row">항목</th>
+							<td>결과값</td>
+							<th scope="row">항목</th>
+							<td>결과값</td>
+						</tr>
+						<tr>
+							<th scope="row">항목항목항목항목</th>
+							<td>결과값</td>
+							<th scope="row">항목항목</th>
+							<td>결과값</td>
+							<th scope="row">항목</th>
+							<td>결과값</td>
+							<th scope="row">항목</th>
+							<td>결과값</td>
+						</tr>
+						<tr>
+							<th scope="row">항목항목항목항목</th>
+							<td>결과값</td>
+							<th scope="row">항목항목</th>
+							<td>결과값</td>
+							<th scope="row">항목</th>
+							<td>결과값</td>
+							<th scope="row">항목</th>
+							<td>결과값</td>
+						</tr>
+						<tr>
+							<th scope="row">항목항목항목항목</th>
+							<td>결과값</td>
+							<th scope="row">항목항목</th>
+							<td>결과값</td>
+							<th scope="row">항목</th>
+							<td>결과값</td>
+							<th scope="row">항목</th>
+							<td>결과값</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+
+				<h4>th 가로형 : [ table-col ]</h4>
+				<div class="guide-list-wrap">
+					<table class="table-col">
+					<caption></caption>
+					<colgroup>
+						<col style="width:25%">
+						<col style="width:25%">
+						<col style="width:25%">
+						<col style="width:25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="l-data">좌측</th>
+							<th scope="col" class="r-data">우측항목</th>
+							<th scope="col">
+								항목3
+								<button type="button" class="btn-sort-up">▲<span class="hidden">오름차순으로 정렬</span></button>
+								<button type="button" class="btn-sort-dw">▼<span class="hidden">내림차순으로 정렬</span></button>
+							</th>
+							<th scope="col">항목4<br>항목4</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">tbody에 th</th>
+							<td><a href="#none" class="text-primary">링크 강조컬러</a></td>
+							<td>데이터3</td>
+							<td>데이터4</td>
+						</tr>
+						<tr>
+							<td class="r-data"><a href="#none" class="txt-link">우측데이터 링크</a></td>
+							<td class="r-data">우측데이터</td>
+							<td class="r-data">우측데이터</td>
+							<td class="r-data">우측데이터</td>
+						</tr>
+						<tr>
+							<td class="l-data"><a href="#none" class="txt-link">좌측데이터 링크</a></td>
+							<td class="l-data">좌측데이터</td>
+							<td class="l-data">좌측데이터</td>
+							<td class="l-data">좌측데이터</td>
+						</tr>
+						<tr>
+							<td>데이터1</td>
+							<td>
+								데이터2 
+								<a href="#none" class="btn-base btn-gray">저장</a>
+								<a href="#none" class="btn-base btn-line-gray">취소</a>
+							</td>
+							<td>데이터3</td>
+							<td>데이터4</td>
+						</tr>
+						<tr>
+							<td><a href="#none" class="txt-link">데이터1 링크</a></td>
+							<td>데이터2 링크</td>
+							<td>데이터3</td>
+							<td>데이터4</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="row" colspan="2">최종 결제 금액</th>
+							<td>데이터1</td>
+							<td class="r-data txt-red bg-red">데이터1</td>
+						</tr>
+					</tfoot>
+					</table>
+					<p class="txt-nodata">쓰던폰반납 신청내역 없음</p>
+				</div>
+			</div>
+
+			<div class="box-wrap">
+				<h3>데이타테이블 상,하 옵션버튼 및 조회 결과 가이드</h3>
+				
+				<h4>상품관리</h4>
+				<div class="guide-list-wrap">
+					
+					<div class="h-area2">
+						<h2 class="h-type2">모상품그룹 조회 결과 <span class="txt-count">(<em>90,865</em>건)</span></h2>
+						<div class="btn-area">
+							<a href="#none" class="btn-base btn-blue">등록</a>
+						</div>
+					</div>
+					<!-- data table -->
+					<div class="table-data-wrap">
+						<!-- top button -->
+						<div class="btn-area table-top">
+							<div class="l-btn">
+								<button type="button" class="btn-base btn-gray ico-schedule">공시작업 설정</button>
+								<button type="button" class="btn-base btn-gray">사용</button>
+								<button type="button" class="btn-base btn-gray">사용안함</button>
+								<button type="button" class="btn-base btn-gray">노출순서 저장</button>
+								<button type="button" class="btn-base btn-gray">삭제</button>
+							</div>
+							<button type="button" class="btn-excel">엑셀다운로드</button>
+						</div>
+						<!-- //top button -->
+
+						<!-- list -->
+						<table class="table-col">
+						<caption></caption>
+						<colgroup>
+							<col>
+							<col style="width:23%">
+							<col style="width:23%">
+							<col style="width:23%">
+							<col style="width:23%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="chk1" name="chk">
+										<label for="chk1">선택</label>
+									</span>
+								</th>
+								<th scope="col">항목1</th>
+								<th scope="col">항목2</th>
+								<th scope="col">항목3</th>
+								<th scope="col">항목4<br>항목4</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="chk2" name="chk">
+										<label for="chk2">선택</label>
+									</span>
+								</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="chk2" name="chk">
+										<label for="chk2">선택</label>
+									</span>
+								</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="chk2" name="chk">
+										<label for="chk2">선택</label>
+									</span>
+								</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="chk2" name="chk">
+										<label for="chk2">선택</label>
+									</span>
+								</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+							</tr>
+						</tbody>
+						</table>
+						<!-- //list -->
+
+						<!-- paginate -->
+						<div class="paginate-area">
+							<a href="#none" class="pg-first">처음 리스트</a>
+							<a href="#none" class="pg-prev">이전 리스트</a>
+							<ul class="paginate">
+								<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+								<li><a href="#none">2</a></li>
+								<li><a href="#none">3</a></li>
+								<li><a href="#none">4</a></li>
+								<li><a href="#none">5</a></li>
+								<li><a href="#none">6</a></li>
+								<li><a href="#none">7</a></li>
+								<li><a href="#none">8</a></li>
+								<li><a href="#none">9</a></li>
+								<li><a href="#none">10</a></li>
+							</ul>
+							<a href="#none" class="pg-next">다음 리스트</a>
+							<a href="#none" class="pg-last">마지막 리스트</a>
+						</div>
+						<!-- //paginate -->
+						
+						<!-- bottom button -->
+						<div class="btn-area table-bottom">
+							<div class="l-btn">
+								<button type="button" class="btn-base btn-gray ico-schedule">공시작업 설정</button>
+								<button type="button" class="btn-base btn-gray ico-o">사용</button>
+								<button type="button" class="btn-base btn-gray ico-x">사용안함</button>
+								<button type="button" class="btn-base btn-gray">노출순서 저장</button>
+								<button type="button" class="btn-base btn-gray">삭제</button>
+							</div>
+							<button type="button" class="btn-base btn-line-gray">검색 결과만 보기</button>
+							<button type="button" class="btn-base btn-line-gray">조회항목 설정</button>
+							<button type="button" class="btn-excel">엑셀다운로드</button>
+						</div>
+						<!-- //bottom button -->
+					</div>
+					<!-- //data table -->
+					<!-- btn -->
+					<div class="btn-area">
+						<a href="#none" class="btn-base btn-blue">등록</a>
+					</div>
+					<!-- //btn -->
+				</div>
+
+				<h4>주문관리</h4>
+				<div class="guide-list-wrap">
+					
+					<div class="h-area2">
+						<h2 class="h-type2">휴대폰 개통 내역 조회 결과 <span class="txt-count">(<em>90,865</em>건)</span></h2>
+						<div class="btn-area">
+							<a href="#none" class="btn-base btn-line-blue">PG Admin 접속</a>
+						</div>
+					</div>
+					<!-- data table -->
+					<div class="table-data-wrap">
+						<!-- search result -->
+						<div class="search-result-area">
+							<ul class="search-result">
+								<li>반품완료 : 00건</li>
+								<li>반품신청접수 : 00건</li>
+								<li>반품신청접수완료 : 00건</li>
+								<li>반품입고 : 00건</li>
+								<li>반품승인 : 00건</li>
+								<li>반품취소 : 00건</li>
+							</ul>
+						</div>
+						<!-- //search result -->
+						
+						<!-- top button -->
+						<div class="btn-area table-top">
+							<div class="l-btn">
+								<button type="button" class="btn-base btn-gray">반품신청접수</button>
+								<button type="button" class="btn-base btn-gray">반품신청접수완료</button>
+								<button type="button" class="btn-base btn-gray">반품입고</button>
+								<button type="button" class="btn-base btn-gray">반품승인</button>
+								<button type="button" class="btn-base btn-gray">반품완료</button>
+								<button type="button" class="btn-base btn-gray">반품취소</button>
+								<button type="button" class="btn-base btn-gray">TWD쿠폰  취소</button>
+							</div>
+							<button type="button" class="btn-excel">엑셀다운로드</button>
+						</div>
+						<!-- //top button -->
+
+						<!-- list -->
+						<table class="table-col">
+						<caption></caption>
+						<colgroup>
+							<col>
+							<col style="width:23%">
+							<col style="width:23%">
+							<col style="width:23%">
+							<col style="width:23%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="chk3" name="chk">
+										<label for="chk3">선택</label>
+									</span>
+								</th>
+								<th scope="col">항목1</th>
+								<th scope="col">항목2</th>
+								<th scope="col">항목3</th>
+								<th scope="col">항목4<br>항목4</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="chk4" name="chk">
+										<label for="chk4">선택</label>
+									</span>
+								</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+							</tr>
+						</tbody>
+						</table>
+						<!-- //list -->
+
+						<!-- paginate -->
+						<div class="paginate-area">
+							<a href="#none" class="pg-first">처음 리스트</a>
+							<a href="#none" class="pg-prev">이전 리스트</a>
+							<ul class="paginate">
+								<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+								<li><a href="#none">2</a></li>
+								<li><a href="#none">3</a></li>
+								<li><a href="#none">4</a></li>
+								<li><a href="#none">5</a></li>
+								<li><a href="#none">6</a></li>
+								<li><a href="#none">7</a></li>
+								<li><a href="#none">8</a></li>
+								<li><a href="#none">9</a></li>
+								<li><a href="#none">10</a></li>
+							</ul>
+							<a href="#none" class="pg-next">다음 리스트</a>
+							<a href="#none" class="pg-last">마지막 리스트</a>
+						</div>
+						<!-- //paginate -->
+						
+						<!-- bottom button -->
+						<div class="btn-area table-bottom">
+							<div class="l-btn">
+								<button type="button" class="btn-base btn-gray">반품신청접수</button>
+								<button type="button" class="btn-base btn-gray">반품신청접수완료</button>
+								<button type="button" class="btn-base btn-gray">반품입고</button>
+								<button type="button" class="btn-base btn-gray">반품승인</button>
+								<button type="button" class="btn-base btn-gray">반품완료</button>
+								<button type="button" class="btn-base btn-gray">반품취소</button>
+								<button type="button" class="btn-base btn-gray">TWD쿠폰  취소</button>
+							</div>
+							<button type="button" class="btn-base btn-line-gray">검색 결과만 보기</button>
+							<button type="button" class="btn-base btn-line-gray">조회항목 설정</button>
+							<button type="button" class="btn-excel">엑셀다운로드</button>
+						</div>
+						<!-- //bottom button -->
+					</div>
+					<!-- //data table -->
+
+					<h2 class="h-type2">휴대폰 개통 내역 조회 결과 <span class="txt-count">(<em>90,865</em>건)</span></h2>
+					<!-- data table -->
+					<div class="table-data-wrap">
+						<!-- search result -->
+						<div class="search-result-area">
+							<ul class="search-result">
+								<li>라이트 할부 신청:  00건 (완료 : 00건 / 보류 00건 / 취소 00건 / 14일 경과 00건)</li>
+								<li class="l-clear">쓰던폰 반납 신청:  00건 (완료 : 00건 / 보류 00건 / 취소 00건 / 14일 경과 00건)</li>
+							</ul>
+						</div>
+						<!-- //search result -->
+
+						<!-- list -->
+						<table class="table-col">
+						<caption></caption>
+						<colgroup>
+							<col style="width:25%">
+							<col style="width:25%">
+							<col style="width:25%">
+							<col style="width:25%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">항목1</th>
+								<th scope="col">항목2</th>
+								<th scope="col">항목3</th>
+								<th scope="col">항목4<br>항목4</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+							</tr>
+							<tr>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+							</tr>
+							<tr>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+							</tr>
+							<tr>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+							</tr>
+						</tbody>
+						</table>
+						<!-- //list -->
+
+						<!-- paginate -->
+						<div class="paginate-area">
+							<a href="#none" class="pg-first">처음 리스트</a>
+							<a href="#none" class="pg-prev">이전 리스트</a>
+							<ul class="paginate">
+							<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+							<li><a href="#none">2</a></li>
+							<li><a href="#none">3</a></li>
+							<li><a href="#none">4</a></li>
+							<li><a href="#none">5</a></li>
+							<li><a href="#none">6</a></li>
+							<li><a href="#none">7</a></li>
+							<li><a href="#none">8</a></li>
+							<li><a href="#none">9</a></li>
+							<li><a href="#none">10</a></li>
+							</ul>
+							<a href="#none" class="pg-next">다음 리스트</a>
+							<a href="#none" class="pg-last">마지막 리스트</a>
+						</div>
+						<!-- //paginate -->
+					</div>
+					<!-- //data table -->
+
+				</div>
+			</div>
+
+
+			<div class="box-wrap">
+				<h3>테이블 th, td 요소가이드</h3>
+				
+				<h4>입력형</h4>
+				<div class="guide-list-wrap">
+					<table class="table-row">
+					<caption>휴대폰 개통 내역 조회</caption>
+					<colgroup>
+						<col style="width:14%">
+						<col>
+						<col style="width:14%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">주문일자</th>
+							<td>
+								<div class="form-group calendar">
+									<select class="c-select" title="기간선택">
+										<option value="" selected="selected">기간선택</option>
+										<option value="">오늘</option>
+										<option value="">1주일</option>
+										<option value="">1개월</option>
+										<option value="">이달</option>
+										<option value="">금년</option>
+									</select>
+									<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+									<a href="#none" class="btn-calendar">달력</a>
+									<span class="txt-unit">━</span>
+									<input type="text" class="c-input" title="종료일자">
+									<a href="#none" class="btn-calendar">달력</a>
+								</div>
+							</td>
+							<th scope="row">배송방법</th>
+							<td>
+								<div class="form-group">
+									<span class="c-chk">
+										<input type="checkbox" id="delivery1" name="delivery">
+										<label for="delivery1">택배</label>
+									</span>
+									<span class="c-chk">
+										<input type="checkbox" id="delivery2" name="delivery">
+										<label for="delivery2">SCL</label>
+									</span>
+									<span class="c-chk">
+										<input type="checkbox" id="delivery3" name="delivery">
+										<label for="delivery3">바로픽업</label>
+									</span>
+									<span class="c-chk">
+										<input type="checkbox" id="delivery4" name="delivery">
+										<label for="delivery4">퀵</label>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">전화번호</th>
+							<td>
+								<select class="c-select" title="전화번호 첫자리 선택" style="width:60px;">
+									<option value="" selected="selected">053</option>
+								</select>
+								<span class="txt-unit">-</span>
+								<input type="text" class="c-input" title="전화번호 중간자리 입력" style="width:60px;">
+								<span class="txt-unit">-</span>
+								<input type="text" class="c-input" title="전화번호 끝자리 입력" style="width:60px;">
+							</td>
+							<th scope="row">휴대폰 번호</th>
+							<td>
+								<select class="c-select" style="width:60px;" title="휴대폰 번호 첫자리 선택">
+									<option value="" selected="selected">010</option>
+									<option value="">05033</option>
+								</select>
+								<span class="txt-unit">-</span>
+								<input type="text" class="c-input" title="휴대폰 번호 중간자리 입력" style="width:60px;">
+								<span class="txt-unit">-</span>
+								<input type="text" class="c-input" title="휴대폰 번호 끝자리 입력" style="width:60px;">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">E-mail 청구서</th>
+							<td colspan="3">
+								<input type="text" class="c-input" title="이메일 아이디 입력" style="width:120px;">
+								<span class="txt-unit">@</span>
+								<input type="text" class="c-input" title="이메일 도메인 입력" style="width:120px;">
+								<select class="c-select"  title="이메일 도메인 선택"  style="width:120px;">
+									<option value="" selected="selected">직접입력</option>
+									<option value="">-</option>
+								</select> 
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">주소</th>
+							<td colspan="3">
+								<div class="form-group block">
+									<input type="text" class="c-input" title="우편번호 검색 입력" style="width:80px;">
+									<a href="#none" class="btn-base btn-gray">우편번호검색</a>
+									<p class="input-address">
+										<input type="text" class="c-input" title="주소 입력" style="width:50%;">
+										<input type="text" class="c-input" title="상세주소 입력" style="width:40%;">
+									</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">주소</th>
+							<td colspan="3">
+								<div class="form-group block">
+									<input type="text" class="c-input" title="우편번호 검색 입력" style="width:80px;">
+									<a href="#none" class="btn-base btn-gray">우편번호검색</a>
+									<p class="input-address">
+										<input type="text" class="c-input" title="주소 입력">
+										<input type="text" class="c-input" title="상세주소 입력">
+									</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">할인금액</th>
+							<td colspan="3">
+								<div class="btn-area right">
+									<a href="#none" class="btn-base btn-gray">패키지 구성 추가</a>
+								</div>
+								<table class="table-col">
+								<caption></caption>
+								<colgroup>
+									<col style="width:25%">
+									<col style="width:25%">
+									<col style="width:25%">
+									<col style="width:25%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="row">항목1</th>
+										<th scope="row">항목2</th>
+										<th scope="row">항목3</th>
+										<th scope="row">항목4</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<input type="text" class="c-input" style="width:90%;">
+											<span class="txt-unit">원</span>
+										</td>
+										<td>
+											<input type="text" class="c-input" style="width:90%;">
+											<span class="txt-unit">원</span>
+										</td>
+										<td>
+											<input type="text" class="c-input" style="width:90%;">
+											<span class="txt-unit">원</span>
+										</td>
+										<td>
+											<input type="text" class="c-input" style="width:90%;">
+											<span class="txt-unit">원</span>
+										</td>
+									</tr>
+								</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">검색</th>
+							<td colspan="3">
+								<input type="text" class="c-input" title=" 입력" style="width:80%;">
+								<a href="#none" class="btn-srch">검색</a>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+
+				<h4>보기형</h4>
+				<div class="guide-list-wrap">
+					<table id="srch-list" class="table-row">
+					<caption>휴대폰 개통 내역 조회</caption>
+					<colgroup>
+						<col style="width:14%">
+						<col>
+						<col style="width:14%">
+						<col style="width:36%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">휴대폰 번호</th>
+							<td>
+								<div class="align-block">
+									010-1234-5678
+									<div class="r-btn">
+										<a href="#none" class="btn-base btn-gray">변경</a>
+										<a href="#none" class="btn-base btn-line-gray">취소</a>
+									</div>
+								</div>
+							</td>
+							<th scope="row">SMS 수신여부</th>
+							<td>
+								<div class="align-block">
+									<div class="form-group">
+										<span class="c-rdo">
+											<input type="radio" id="sms1" name="sms" checked="checked">
+											<label for="sms1">전시</label>
+										</span>
+										<span class="c-rdo">
+											<input type="radio" id="sms2" name="sms">
+											<label for="sms2">관리</label>
+										</span>
+									</div>
+									<div class="r-btn"><a href="#none" class="btn-base btn-gray">재발송</a></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">휴대폰 번호</th>
+							<td>
+								<div class="align-block">
+									010-1234-5678
+									<div class="r-txt">우측 텍스트</div>
+								</div>
+							</td>
+							<th scope="row"></th>
+							<td></td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+
+				<h4>기타</h4>
+				<div class="guide-list-wrap">
+					<table class="table-col">
+					<caption></caption>
+					<colgroup>
+						<col>
+						<col style="width:22%">
+						<col style="width:22%">
+						<col style="width:22%">
+						<col style="width:22%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">이미지 구분</th>
+							<th scope="col">디폴트</th>
+							<th scope="col">썸네일</th>
+							<th scope="col">디폴트</th>
+							<th scope="col">썸네일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">
+								리스트 이미지<br>
+								(디폴트 Web: 000 x 000<br>
+								디폴트 Mobile: 000 x 000<br>
+								Web 썸네일: 000 x 000<br>
+								Mobile 썸네일: 000 x 000)
+							</th>
+							<td class="l-data">
+								<div class="img-preview-area">
+									<div class="c-input-file">
+										<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:265px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+										<label for="upload01" class="file-label">찾기</label>
+										<input type="file" id="upload01" class="file-upload">
+									</div>
+									<dl class="img-input">
+										<dt>이미지 Alt값</dt>
+										<dd>
+											<input type="text" class="c-input" title="이미지 Alt값 입력" placeholder="30자 내로 입력하세요">
+											<p class="txt-info">※ 이미지는 2MB이하, JPG,PNG 형식으로 1장만 등록이 가능합니다.</p>
+										</dd>
+										<dt>링크 URL</dt>
+										<dd><input type="text" class="c-input" title="이미지 Alt값 입력" placeholder="http://"></dd>
+									</dl>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+								</div>
+							</td>
+							<td class="l-data">
+								<div class="img-preview-area">
+									<div class="c-input-file">
+										<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:130px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+										<label for="upload01" class="file-label">찾기</label>
+										<input type="file" id="upload01" class="file-upload">
+									</div>
+									<dl class="img-input">
+										<dt>이미지 Alt값</dt>
+										<dd><input type="text" class="c-input" title="이미지 Alt값 입력" placeholder="30자 내로 입력하세요"></dd>
+										<dt>링크 URL</dt>
+										<dd><input type="text" class="c-input" title="이미지 Alt값 입력" placeholder="http://"></dd>
+									</dl>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+								</div>
+							</td>
+							<td class="l-data">
+								<div class="img-preview-area">
+									<div class="c-input-file">
+										<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:130px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+										<label for="upload01" class="file-label">찾기</label>
+										<input type="file" id="upload01" class="file-upload">
+									</div>
+									<dl class="img-input">
+										<dt>이미지 Alt값</dt>
+										<dd><input type="text" class="c-input" title="이미지 Alt값 입력" placeholder="30자 내로 입력하세요"></dd>
+										<dt>링크 URL</dt>
+										<dd><input type="text" class="c-input" title="이미지 Alt값 입력" placeholder="http://"></dd>
+									</dl>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+								</div>
+							</td>
+							<td class="l-data">
+								<div class="img-preview-area">
+									<div class="c-input-file">
+										<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:130px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+										<label for="upload01" class="file-label">찾기</label>
+										<input type="file" id="upload01" class="file-upload">
+									</div>
+									<dl class="img-input">
+										<dt>이미지 Alt값</dt>
+										<dd><input type="text" class="c-input" title="이미지 Alt값 입력" placeholder="30자 내로 입력하세요"></dd>
+										<dt>링크 URL</dt>
+										<dd><input type="text" class="c-input" title="이미지 Alt값 입력" placeholder="http://"></dd>
+									</dl>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								리스트 이미지<br>
+								(디폴트 Web: 000 x 000<br>
+								디폴트 Mobile: 000 x 000<br>
+								Web 썸네일: 000 x 000<br>
+								Mobile 썸네일: 000 x 000)
+							</th>
+							<td colspan="4" class="l-data">
+								<div class="img-preview-area">
+									<div class="c-input-file">
+										<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:130px;">
+										<label for="upload01" class="file-label">찾기</label>
+										<input type="file" id="upload01" class="file-upload">
+									</div>
+									<dl class="img-input">
+										<dt>Alt값</dt>
+										<dd><input type="text" class="c-input" title="Alt값 입력"></dd>
+									</dl>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지" width="30" height="60">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지" width="60" height="30">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지" width="150" height="90">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+									<span class="img-preview">
+										<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+										<a href="#none" class="img-close">이미지삭제</a>
+									</span>
+									<span class="img-preview-sort">
+										<span class="img-preview">
+											<img src="../img/img_no.gif" alt="타임세일설정 이미지">
+											<a href="#none" class="img-close">이미지삭제</a>
+										</span>
+										<span class="img-sort">
+											순서 
+											<select class="c-select" title="순서 선택" style="width:30px;">
+												<option value="" selected="selected">1</option>
+											</select>
+										</span>
+									</span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+				<div class="guide-box">
+<pre class="brush: xml;">
+&lt;div class="img-preview-area"&gt;
+	&lt;div class="c-input-file"&gt;
+		&lt;input type="text" readonly="readonly" title="파일명" class="file-name" style="width:130px;"&gt;&lt;!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 --&gt;
+		&lt;label for="upload01" class="file-label"&gt;찾기&lt;/label&gt;
+		&lt;input type="file" id="upload01" class="file-upload"&gt;
+	&lt;/div&gt;
+	&lt;dl class="img-input"&gt;
+		&lt;dt&gt;이미지 Alt값&lt;/dt&gt;
+		&lt;dd&gt;&lt;input type="text" class="c-input" title="이미지 Alt값 입력" placeholder="30자 내로 입력하세요"&gt;&lt;/dd&gt;
+		&lt;dt&gt;링크 URL&lt;/dt&gt;
+		&lt;dd&gt;&lt;input type="text" class="c-input" title="이미지 Alt값 입력" placeholder="http://"&gt;&lt;/dd&gt;
+	&lt;/dl&gt;
+	&lt;span class="img-preview"&gt;
+		&lt;img src="../img/img_no.gif" alt="타임세일설정 이미지"&gt;
+		&lt;a href="#none" class="img-close"&gt;이미지삭제&lt;/a&gt;
+	&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+				</div>
+
+				<div class="guide-list-wrap">
+					<table class="table-row">
+					<caption></caption>
+					<colgroup>
+						<col style="width:14%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">대상 단말 선택<br>(33 선택)</th>
+							<td>
+								<div class="align-block">
+									<div class="l-txt">
+										<a href="#none" class="btn-text">Galaxy S9</a>
+										<a href="#none" class="btn-text">SONY XPERIA XZ1</a>
+										<a href="#none" class="btn-text">Galaxy S9</a>
+										<a href="#none" class="btn-text">SONY XPERIA XZ1</a>
+										<a href="#none" class="btn-text">Galaxy S9</a>
+										<a href="#none" class="btn-text">SONY XPERIA XZ1</a>
+										<a href="#none" class="btn-text">Galaxy S9</a>
+										<a href="#none" class="btn-text">SONY XPERIA XZ1</a>
+										<a href="#none" class="btn-text">Galaxy S9</a>
+										<a href="#none" class="btn-text">SONY XPERIA XZ1</a>
+										<a href="#none" class="btn-text">Galaxy S9</a>
+										<a href="#none" class="btn-text">SONY XPERIA XZ1</a>
+										<a href="#none" class="btn-text">Galaxy S9</a>
+										<a href="#none" class="btn-text">SONY XPERIA XZ1</a>
+										<a href="#none" class="btn-text">Galaxy S9</a>
+										<a href="#none" class="btn-text">SONY XPERIA XZ1</a>
+										<a href="#none" class="btn-text">Galaxy S9</a>
+										<a href="#none" class="btn-text">SONY XPERIA XZ1</a>
+										<a href="#none" class="btn-text">Galaxy S9</a>
+										<a href="#none" class="btn-text">SONY XPERIA XZ1</a>
+										<a href="#none" class="btn-text">Galaxy S9</a>
+										<a href="#none" class="btn-text">SONY XPERIA XZ1</a>
+										<a href="#none" class="btn-text">Galaxy S9</a>
+										<a href="#none" class="btn-text">SONY XPERIA XZ1</a>
+									</div>
+									
+									<div class="r-btn">
+										<a href="#none" class="btn-base btn-gray">단말선택</a>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="box-wrap">
+				<h3>테이블 스크롤 가이드</h3>
+				
+				<h4>가로 스크롤</h4>
+				<div class="guide-list-wrap">
+					<div class="table-scroll">
+						<table class="table-col" style="width:2000px;"><!-- 테이블 태그에 인라인으로 가로값 설정 -->
+						<caption></caption>
+						<colgroup>
+							<col style="width:50px">
+							<col style="width:auto">
+							<col style="width:150px">
+							<col style="width:150px">
+							<col style="width:150px">
+							<col style="width:150px">
+							<col style="width:150px">
+							<col style="width:150px">
+							<col style="width:150px">
+							<col style="width:150px">
+						</colgroup><!-- 테이블 각 셀에 가로값 픽셀로 정의 가능 -->
+						<thead>
+							<tr>
+								<th scope="col">
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="scchk1" name="scchk">
+										<label for="scchk1">선택</label>
+									</span>
+								</th>
+								<th scope="col">항목1</th>
+								<th scope="col">항목2</th>
+								<th scope="col">항목3</th>
+								<th scope="col">항목4<br>항목4</th>
+								<th scope="col">항목5</th>
+								<th scope="col">항목6</th>
+								<th scope="col">항목7</th>
+								<th scope="col">항목8</th>
+								<th scope="col">항목9</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="scchk2" name="scchk">
+										<label for="scchk2">선택</label>
+									</span>
+								</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="scchk3" name="scchk">
+										<label for="scchk3">선택</label>
+									</span>
+								</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="scchk4" name="scchk">
+										<label for="scchk4">선택</label>
+									</span>
+								</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="scchk5" name="scchk">
+										<label for="scchk5">선택</label>
+									</span>
+								</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="guide-box">
+<pre class="brush: xml;">
+&lt;div class="table-scroll"&gt;
+	&lt;table class="table-col" style="width:2000px;"&gt;&lt;!-- 테이블 태그에 인라인으로 가로값 설정 --&gt;
+	&lt;caption&gt;&lt;/caption&gt;
+	&lt;colgroup&gt;
+		&lt;col style="width:50px"&gt;
+		&lt;col style="width:auto"&gt;
+		&lt;col style="width:150px"&gt;
+		&lt;col style="width:150px"&gt;
+		&lt;col style="width:150px"&gt;
+		&lt;col style="width:150px"&gt;
+		&lt;col style="width:150px"&gt;
+		&lt;col style="width:150px"&gt;
+		&lt;col style="width:150px"&gt;
+		&lt;col style="width:150px"&gt;
+	&lt;/colgroup&gt;&lt;!-- 테이블 각 셀에 가로값 픽셀로 정의 가능 --&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th scope="col"&gt;
+				&lt;span class="c-chk txt-no"&gt;
+					&lt;input type="checkbox" id="scchk1" name="scchk"&gt;
+					&lt;label for="scchk1"&gt;선택&lt;/label&gt;
+				&lt;/span&gt;
+			&lt;/th&gt;
+			&lt;th scope="col"&gt;항목1&lt;/th&gt;
+			&lt;th scope="col"&gt;항목2&lt;/th&gt;
+			&lt;th scope="col"&gt;항목3&lt;/th&gt;
+			&lt;th scope="col"&gt;항목4&lt;br&gt;항목4&lt;/th&gt;
+			&lt;th scope="col"&gt;항목5&lt;/th&gt;
+			&lt;th scope="col"&gt;항목6&lt;/th&gt;
+			&lt;th scope="col"&gt;항목7&lt;/th&gt;
+			&lt;th scope="col"&gt;항목8&lt;/th&gt;
+			&lt;th scope="col"&gt;항목9&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+	.
+	.
+	.
+	&lt;/tbody&gt;
+	&lt;/table&gt;
+&lt;/div&gt;
+</pre>
+				</div>
+
+				<h4>세로 스크롤</h4>
+				<div class="guide-list-wrap">
+					<div class="table-scroll-vertical" style="height:435px;"><!-- div 태그에 인라인으로 세로값 설정 -->
+						<table class="table-col">
+						<caption></caption>
+						<colgroup>
+							<col style="width:6%">
+							<col style="width:auto">
+							<col style="width:9%">
+							<col style="width:9%">
+							<col style="width:9%">
+							<col style="width:9%">
+							<col style="width:9%">
+							<col style="width:9%">
+							<col style="width:9%">
+							<col style="width:9%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">항목0</th>
+								<th scope="col">항목1</th>
+								<th scope="col">항목2</th>
+								<th scope="col">항목3</th>
+								<th scope="col">항목4<br>항목4</th>
+								<th scope="col">항목5</th>
+								<th scope="col">항목6</th>
+								<th scope="col">항목7</th>
+								<th scope="col">항목8</th>
+								<th scope="col">항목9</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+							<tr>
+								<td>데이터제목</td>
+								<td>데이터1</td>
+								<td>데이터2</td>
+								<td>데이터3</td>
+								<td>데이터4</td>
+								<td>데이터5</td>
+								<td>데이터6</td>
+								<td>데이터7</td>
+								<td>데이터8</td>
+								<td>데이터9</td>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="guide-box">
+<pre class="brush: xml;">
+&lt;div class="table-scroll-vertical" style="height:435px;"&gt;&lt;!-- div 태그에 인라인으로 세로값 설정 --&gt;
+	&lt;table class="table-col"&gt;
+	&lt;caption&gt;&lt;/caption&gt;
+	&lt;colgroup&gt;
+		&lt;col style="width:6%"&gt;
+		&lt;col style="width:auto"&gt;
+		&lt;col style="width:9%"&gt;
+		&lt;col style="width:9%"&gt;
+		&lt;col style="width:9%"&gt;
+		&lt;col style="width:9%"&gt;
+		&lt;col style="width:9%"&gt;
+		&lt;col style="width:9%"&gt;
+		&lt;col style="width:9%"&gt;
+		&lt;col style="width:9%"&gt;
+	&lt;/colgroup&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th scope="col"&gt;항목0&lt;/th&gt;
+			&lt;th scope="col"&gt;항목1&lt;/th&gt;
+			&lt;th scope="col"&gt;항목2&lt;/th&gt;
+			&lt;th scope="col"&gt;항목3&lt;/th&gt;
+			&lt;th scope="col"&gt;항목4&lt;br&gt;항목4&lt;/th&gt;
+			&lt;th scope="col"&gt;항목5&lt;/th&gt;
+			&lt;th scope="col"&gt;항목6&lt;/th&gt;
+			&lt;th scope="col"&gt;항목7&lt;/th&gt;
+			&lt;th scope="col"&gt;항목8&lt;/th&gt;
+			&lt;th scope="col"&gt;항목9&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+	.
+	.
+	&lt;/tbody&gt;
+	&lt;/table&gt;
+&lt;/div&gt;
+</pre>
+				</div>
+			</div>
+		</section>
+	</article>
+	<a href="#top" class="btn-top">TOP</a>
+</div>
+
+<script type="text/javascript" src="../../public/js/common.js"></script>
+</body>
+</html>

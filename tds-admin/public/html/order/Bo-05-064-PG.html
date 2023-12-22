@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">품절상품 예약/ 발송 관리</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>주문관리</li>
+					<li><strong>품절상품 예약/ 발송 관리</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none">예약 조회/발송 관리</a></li>
+				<li><a href="#none" class="on">발송 템플릿 관리</a></li>
+			</ul>
+			<!-- //tab -->
+			<h2 class="hidden">발송 템플릿 관리</h2>
+			<h3 class="h-type2">발송 템플릿 목록 (00건)</h3>
+			
+			<div class="table-data-wrap">
+				<!-- top button -->
+				<div class="btn-area table-top">
+					<div class="l-btn">
+						<a href="#none" class="btn-base btn-gray">삭제</a>
+					</div>
+					<select class="c-select" title="정렬 선택" style="width:120px;">
+						<option value="" selected="selected">등록순(전체)</option>
+						<option value="">등록순</option>
+						<option value="">MMS</option>
+						<option value="">SMS</option>
+					</select>
+					<a href="#none" class="btn-base">템플릿 추가</a>
+				</div>
+				<!-- //top button -->
+
+				<!-- list -->
+				<table class="table-col js-table-toggle">
+				<caption>발송 템플릿 목록</caption>
+				<colgroup>
+					<col style="width:5%">
+					<col style="width:6%">
+					<col style="width:20%">
+					<col style="width:8%">
+					<col style="width:12%">
+					<col>
+					<col style="width:8%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="checkAll" name="checkAll">
+								<label for="checkAll">선택</label>
+							</span>
+						</th>
+						<th scope="col">No</th>
+						<th scope="col">템플릿명</th>
+						<th scope="col">타입</th>
+						<th scope="col">등록일</th>
+						<th scope="col" colspan="2">본문내용</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="selectList1" name="selectList">
+								<label for="selectList1">선택</label>
+							</span>
+						</td>
+						<td>1</td>
+						<td>단말 입고 알림_기본형</td>
+						<td>MMS</td>
+						<td><em>YYYY-MM-DD</em></td>
+						<td class="l-data"> 
+							[TWD] 입고 알림 안내 문자 
+						</td>
+						<td><a href="#none" class="btn-base btn-gray btn-view">보기</a></td>
+					</tr> 
+					<tr class="hide-con">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td colspan="2" class="l-data">
+							[Web발신]
+							고객님, 신청하신 {MODEL_NO}{COLOR_NM}{PHONE_CAPACITY}이 입고 되었습니다. 입고된 상품을 지금 확인하시기 바랍니다. 
+							<div class="btn-area">
+								<a href="#none" class="btn-base btn-gray">수정</a>
+								<a href="#none" class="btn-base btn-line-gray">삭제</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="selectList2" name="selectList">
+								<label for="selectList2">선택</label>
+							</span>
+						</td>
+						<td>2</td>
+						<td>단말 입고 알림_기본형</td>
+						<td>MMS</td>
+						<td><em>YYYY-MM-DD</em></td>
+						<td class="l-data"> 
+							[TWD] 입고 알림 안내 문자 
+						</td>
+						<td><a href="#none" class="btn-base btn-gray btn-view">보기</a></td>
+					</tr> 
+					<tr class="hide-con">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td colspan="2" class="l-data">
+							[Web발신]
+							고객님, 신청하신 {MODEL_NO}{COLOR_NM}{PHONE_CAPACITY}이 입고 되었습니다. 입고된 상품을 지금 확인하시기 바랍니다. 
+							<div class="btn-area">
+								<a href="#none" class="btn-base btn-gray">수정</a>
+								<a href="#none" class="btn-base btn-line-gray">삭제</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="selectList3" name="selectList">
+								<label for="selectList3">선택</label>
+							</span>
+						</td>
+						<td>3</td>
+						<td>단말 입고 알림_기본형</td>
+						<td>MMS</td>
+						<td><em>YYYY-MM-DD</em></td>
+						<td class="l-data"> 
+							[TWD] 입고 알림 안내 문자 
+						</td>
+						<td><a href="#none" class="btn-base btn-gray btn-view">보기</a></td>
+					</tr> 
+					<tr class="hide-con">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td colspan="2" class="l-data">
+							[Web발신]
+							고객님, 신청하신 {MODEL_NO}{COLOR_NM}{PHONE_CAPACITY}이 입고 되었습니다. 입고된 상품을 지금 확인하시기 바랍니다. 
+							<div class="btn-area">
+								<a href="#none" class="btn-base btn-gray">수정</a>
+								<a href="#none" class="btn-base btn-line-gray">삭제</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+				<!-- //list -->
+
+				<!-- bottom button -->
+				<div class="btn-area table-bottom no-border">
+					<div class="l-btn">
+					<a href="#none" class="btn-base btn-gray">삭제</a>
+					</div>
+				</div>
+				<!-- //bottom button -->
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

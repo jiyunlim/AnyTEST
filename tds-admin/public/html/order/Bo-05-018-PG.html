@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content"> 
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">모바일 주문 조회</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>주문관리</li>
+					<li><strong>모바일주문조회</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none" class="on">주문목록조회</a></li>
+				<li><a href="#none">승인목록조회</a></li>
+				<li><a href="#none">매장관리</a></li>
+				<li><a href="#none">재고조회</a></li>
+				<li><a href="#none">지하철노선관리</a></li>
+				<li><a href="#none">예판재고관리</a></li>
+				<li><a href="#none">키워드검색관리</a></li>
+			</ul>
+			<!-- //tab -->
+			<h2 class="hidden">주문목록조회</h2>
+			<h3 class="h-type2">모바일 접수 신청 내역 조회</h3>
+			<table id="table-srch" class="table-row js-table">
+			<caption>모바일 접수 신청 내역 조회</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col style="width:30%"> 
+			</colgroup> 
+			<tbody>
+				<tr class="show-row">
+					<th class="row">
+						<select class="c-select" title="날짜 조회 선택">
+							<option value="" selected="selected">주문일</option>
+							<option value="">취소일</option>
+						</select>
+					</th>
+					<td>
+						<div class="form-group calendar">
+							<select class="c-select" title="기간선택">
+								<option value="" selected="selected">기간선택</option>
+								<option value="">오늘</option>
+								<option value="">1주일</option>
+								<option value="">1개월</option>
+								<option value="">이달</option>
+								<option value="">금년</option>
+							</select>
+							<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+							<a href="#none" class="btn-calendar">달력</a>
+							<span class="txt-unit">━</span>
+							<input type="text" class="c-input" title="종료일자">
+							<a href="#none" class="btn-calendar">달력</a>
+						</div>
+					</td>
+					<th class="row">
+						<select class="c-select" title="검색 조건 선택" >
+							<option value="" selected="selected">신청번호</option>
+						</select>
+					</th>
+					<td>
+						<input type="text" class="c-input" title="검색 조건 선택 입력">
+					</td>
+				</tr>
+				<tr class="show-row">
+					<th scope="row">주문상태</th>
+					<td>
+						<div class="align-block">
+							<div class="select-layer-area">
+								<a href="#none" class="c-select-layer js-select-layer" title="팝업">선택하세요</a>
+								<!-- 레이어팝업  -->
+								<div class="pop-layer">
+									<div class="pop-header">
+										<a href="#none" class="layer-close">닫기</a>
+										<a href="#none" class="btn-chk">전체선택</a>
+										<a href="#none" class="btn-unchk">전체해제</a>
+									</div>
+									<div class="pop-content">
+										<ul class="chk-list">
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="state1" name="state">
+													<label for="state1">주문상태1</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="state2" name="state">
+													<label for="state2">주문상태2</label>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- //레이어팝업  -->
+							</div>
+						</div>
+					</td>
+					<th scope="row">
+						<select class="c-select" title="검색조건 선택" >
+							<option value="" selected="selected">주문자</option> 
+						</select>
+					</th>
+					<td>
+						<input type="text" class="c-input" title="검색 조건 선택 입력"> 
+					</td>
+				</tr>
+				<tr class="show-row">
+					<th scope="row">
+						<select class="c-select" title="가입유형 선택" >
+							<option value="" selected="selected">가입유형</option> 
+						</select>
+					</th>
+					<td>
+							<select class="c-select" title="가입유형 선택" style="width:100px;">
+								<option value="" selected="selected">휴대폰</option> 
+							</select>
+							<div class="form-group">
+								<span class="c-chk">
+									<input type="checkbox" id="goods1" name="goods">
+									<label for="goods1">신규가입</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="goods2" name="goods">
+									<label for="goods2">번호이동</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="goods3" name="goods">
+									<label for="goods3">기기변경</label>
+								</span> 
+							</div>
+					</td>
+					<th scope="row">연락처 번호</th>
+					<td>
+						<select class="c-select" title="연락처 앞자리 번호 선택" style="width:60px;">
+							<option value="" selected="selected">선택</option>
+							<option value="">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력"  style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력"  style="width:60px;">
+					</td>
+				</tr>
+				
+				<tr>
+					<th scope="row">TG상태</th>
+					<td>
+						<select class="c-select"  title="TG작성여부선택" style="width:45%">
+							<option value="" selected="selected">TG작성여부</option>
+							<option value="">작성완료</option>
+							<option value="">미작성</option>
+						</select>
+						<div class="select-layer-area" style="width:45%;">
+							<a href="#none" class="c-select-layer js-select-layer" title="팝업">T-gate 상태 선택</a>
+							<!-- 레이어팝업  -->
+							<div class="pop-layer">
+								<div class="pop-header">
+									<a href="#none" class="layer-close">닫기</a>
+									<a href="#none" class="btn-chk">전체선택</a>
+									<a href="#none" class="btn-unchk">전체해제</a>
+								</div>
+								<div class="pop-content">
+									<ul class="chk-list">
+										<li>
+											<span class="c-chk">
+												<input type="checkbox" id="tgState1" name="tgState">
+												<label for="tgState1">상태1</label>
+											</span>
+										</li>
+										<li>
+											<span class="c-chk">
+												<input type="checkbox" id="tgState2" name="tgState">
+												<label for="tgState2">상태2</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //레이어팝업  -->
+						</div>
+					</td>
+					<th scope="row">
+						<select class="c-select" title="단말 검색 선택">
+							<option value="" selected="selected">단말모델명</option>
+							<option value="">단말색상</option>
+							<option value="">단말일련번호</option>
+						</select>
+					</th>
+					<td>
+						<input type="text" class="c-input" title="단말 검색 입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">T.Key상태</th>
+					<td>
+						<div class="select-layer-area">
+							<a href="#none" class="c-select-layer js-select-layer" title="팝업">T.Key상태 선택</a>
+							<!-- 레이어팝업  -->
+							<div class="pop-layer">
+								<div class="pop-header">
+									<a href="#none" class="layer-close">닫기</a>
+									<a href="#none" class="btn-chk">전체선택</a>
+									<a href="#none" class="btn-unchk">전체해제</a>
+								</div>
+								<div class="pop-content">
+									<ul class="chk-list">
+										<li>
+											<span class="c-chk">
+												<input type="checkbox" id="tkState1" name="tkState">
+												<label for="tkState1">상태1</label>
+											</span>
+										</li>
+										<li>
+											<span class="c-chk">
+												<input type="checkbox" id="tkState2" name="tkState">
+												<label for="tkState2">상태2</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //레이어팝업  -->
+						</div>
+					</td>
+					<th scope="row">유심일련번호</th>
+					<td>
+						<input type="text" class="c-input" title="유심일련번호 입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">요금제</th>
+					<td>
+						<div class="form-group">
+							<input type="text" class="c-input" title="요금제 선택명"  style="width:180px">
+							<a href="#none" class="btn-base btn-gray">찾기</a>
+						</div>
+					</td>
+					<th scope="row">결제방법</th>
+					<td>
+						<select class="c-select" title="결제방법 선택">
+							<option value="" selected="selected">결제방법 선택</option>
+							<option value="">카드</option>
+							<option value="">실시간계좌이체</option>
+							<option value="">무통장입금</option>
+							<option value="">할부결제</option>
+							<option value="">무결제</option>
+							<option value="">ARS 결제</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">할인선택</th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="discount1" name="discount">
+								<label for="discount1">무약정 Plan</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="discount2" name="discount">
+								<label for="discount2">포인트</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="discount3" name="discount">
+								<label for="discount3">OCB</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="discount4" name="discount">
+								<label for="discount4">현역 Plan</label>
+							</span>
+							<p>
+								<span class="c-chk">
+									<input type="checkbox" id="discount5" name="discount">
+									<label for="discount5">쿠폰사용</label>
+								</span>
+							</p>
+						</div>
+					</td>
+					<th scope="row">단말 할부기간</th>
+					<td>
+						<select class="c-select" title="단말 할부기간 선택">
+							<option value="" selected="selected">단말 할부 기간</option>
+							<option value="">일시불</option>
+							<option value="">12개월</option>
+							<option value="">24개월</option>
+							<option value="">30개월</option>
+							<option value="">T렌탈</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">상담그룹/상담사</th>
+					<td>
+						<select class="c-select" title="상담그룹 선택" style="width:60%"> 
+							<option value="" selected="selected">상담그룹 선택</option>
+							<option value="">고객Care(장안Care센터)</option>
+							<option value="">고객방치(장안Care센터)</option>
+							<option value="">고객보호원상담(장안고객Care센터)</option>
+							<option value="">캠페인(장안고객Care센터)</option>
+							<option value="">고객Care(대전고객Care센터)</option>
+							<option value="">고객보호상담(대전고객Care센터)</option>
+						</select>
+						<input type="text" class="c-input" title="상담사 입력" placeholder="상담사ID/이름" style="width:120px">
+					</td>
+					<th scope="row">약정 구분</th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="items1" name="items">
+								<label for="items1">단말지원</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="items2" name="items">
+								<label for="items2">요금할인</label>
+							</span>
+							<p>
+								<span class="c-chk">
+									<input type="checkbox" id="items3" name="items">
+									<label for="items3">무약정플랜</label>
+								</span>
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">사전예약</th>
+					<td>
+						<select class="c-select" title="사전예약 선택" style="width:60%">
+							<option value="" selected="selected">TWD 예약판매</option>
+							<option value="">TR 게이트 예약판매</option>
+						</select>
+						<span class="c-chk">
+							<input type="checkbox" id="twagree" name="twagree">
+							<label for="twagree">TW 예약번호 미수신</label>
+						</span>
+					</td>
+					<th scope="row">판매처 선택</th>
+					<td>
+						<select class="c-select" title="판매처 선택">
+							<option value="" selected="selected">TWD</option>
+							<option value="">고객Care센터</option>
+							<option value="">11번가 휴대폰샵</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">단말 배송방법</th>
+					<td>바로픽업(매장방문)</td>
+					<th scope="row">판매자</th>
+					<td>
+						<select class="c-select" title="판매자 선택">
+							<option value="" selected="selected">선택</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">T-Gift 선택</th>
+					<td>
+						<div class="form-group">
+							<input type="text" class="c-input" title="T-Gift 선택명" style="width:180px">
+							<a href="#none" class="btn-base btn-gray">찾기</a>
+						</div>
+					</td>
+					<th scope="row">SLC 상태</th>
+					<td>
+						<select class="c-select" title="SLC상태 선택">
+							<option value="" selected="selected">SLC상태 선택</option>
+							<option value="">신청서작성중</option>
+							<option value="">신청서작성완료</option>
+							<option value="">SLC할당중</option>
+							<option value="">SLC할당완료</option>
+							<option value="">개통완료</option>
+							<option value="">개통실패</option>
+							<option value="">SLC할당요청실패</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">T-Gift 주문상태</th>
+					<td>
+						<div class="select-layer-area">
+							<a href="#none" class="c-select-layer js-select-layer" title="팝업">T-gift 주문 상태</a>
+							<!-- 레이어팝업  -->
+							<div class="pop-layer">
+								<div class="pop-header">
+									<a href="#none" class="layer-close">닫기</a>
+									<a href="#none" class="btn-chk">전체선택</a>
+									<a href="#none" class="btn-unchk">전체해제</a>
+								</div>
+								<div class="pop-content">
+									<ul class="chk-list">
+										<li>
+											<span class="c-chk">
+												<input type="checkbox" id="tgOrder1" name="tgOrder">
+												<label for="tgOrder1">상태1</label>
+											</span>
+										</li>
+										<li>
+											<span class="c-chk">
+												<input type="checkbox" id="tgOrder2" name="tgOrder">
+												<label for="tgOrder2">상태2</label>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //레이어팝업  -->
+						</div>
+					</td>
+					<th scope="row">SLC 최종확인</th>
+					<td>
+						<select class="c-select" title="SLC 최종확인 선택">
+							<option value="" selected="selected">SLC 최종확인 선택</option>
+							<option value="">고객요청</option>
+							<option value="">PS&amp;M확인 중</option>
+							<option value="">PS&amp;M확인완료</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">T-Gift 배송구분</th>
+					<td>
+						<span class="c-chk">
+							<input type="checkbox" id="delivery1" name="delivery">
+							<label for="delivery1">합배송</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="delivery2" name="delivery">
+							<label for="delivery2">개별배송</label>
+						</span>
+					</td>
+					<th scope="row">할인신청</th>
+					<td>
+						<span class="c-chk">
+							<input type="checkbox" id="discount6" name="discount">
+							<label for="discount6">쓰던폰 반납</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="discount7" name="discount">
+							<label for="discount7">라이트할부 신청</label>
+						</span>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- btn -->
+			<div class="btn-area">
+				<div class="l-btn">
+					<a href="#table-srch" class="btn-srch-more js-more">상세검색 더보기</a>
+				</div>
+				<a href="#none" class="btn-base">검색</a>
+				<a href="#none" class="btn-base">초기화</a>
+			</div>
+			<!-- //btn -->
+
+			<h3 class="h-type2">검색 조회 결과  <span class="txt-count">(<em>00,000</em>건)</span></h3>
+			<!-- data table -->
+			<div class="table-data-wrap"> 
+				<!-- top button -->
+				<div class="btn-area table-top"> 
+					<div class="l-btn">
+						<button type="button" class="btn-base btn-gray">신청서전송</button>
+						<button type="button" class="btn-base btn-gray">신청서이관요청</button>
+						<button type="button" class="btn-base btn-gray">주문취소요청</button>
+						<button type="button" class="btn-base btn-gray">방문일시변경요청</button>
+					</div>
+					<button type="button" class="btn-excel">엑셀다운로드</button>
+				</div>
+				<!-- //top button -->
+
+				<!-- list -->
+				<table class="table-col">
+					<caption></caption>
+					<colgroup>
+						<col style="width:25%">
+						<col style="width:25%">
+						<col style="width:25%">
+						<col style="width:25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">항목1</th>
+							<th scope="col">항목2</th>
+							<th scope="col">항목3</th>
+							<th scope="col">항목4<br />항목4</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>데이터1</td>
+							<td>데이터2</td>
+							<td>데이터3</td>
+							<td>데이터4</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- //list -->
+
+				<!-- paginate -->
+				<div class="paginate-area">
+					<a href="#none" class="pg-first">처음 리스트</a>
+					<a href="#none" class="pg-prev">이전 리스트</a>
+					<ul class="paginate">
+					<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+					<li><a href="#none">4</a></li>
+					<li><a href="#none">5</a></li>
+					<li><a href="#none">6</a></li>
+					<li><a href="#none">7</a></li>
+					<li><a href="#none">8</a></li>
+					<li><a href="#none">9</a></li>
+					<li><a href="#none">10</a></li>
+					</ul>
+					<a href="#none" class="pg-next">다음 리스트</a>
+					<a href="#none" class="pg-last">마지막 리스트</a>
+				</div>
+				<!-- //paginate -->
+
+				<!-- bottom button -->
+				<div class="btn-area table-bottom">
+					<div class="l-btn">
+						<button type="button" class="btn-base btn-gray">신청서전송</button>
+						<button type="button" class="btn-base btn-gray">신청서이관요청</button>
+						<button type="button" class="btn-base btn-gray">주문취소요청</button>
+						<button type="button" class="btn-base btn-gray">방문일시변경요청</button>
+					</div>
+					<button type="button" class="btn-base btn-line-gray">검색 결과만 보기</button>
+					<button type="button" class="btn-base btn-line-gray">조회항목 설정</button>
+					<button type="button" class="btn-excel">엑셀다운로드</button>
+				</div>
+				<!-- //bottom button -->
+			</div>
+			<!-- //data table -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

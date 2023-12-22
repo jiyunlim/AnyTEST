@@ -1,0 +1,397 @@
+<%
+//-----------HANDLER Context Get-------------//
+record=context.get("record")
+con=context.get("con")
+//-----------파람 쿼리-------------//
+paramquery=java.lang.StringBuffer.new()
+paramquery.append(" SELECT  MAIL_SND_ITM_NM, MAIL_SND_ITM_CTT  FROM tshop_batch_param  WHERE seq_no = ?   and ascii(substr(MAIL_SND_ITM_NM, length(MAIL_SND_ITM_NM), 1)) not between 48 and 57 ")
+//--------------데이터 처리------------------//
+ parmStmt=con.prepareStatement(paramquery.toString())
+ parmStmt.setString("1",context.get("seq"))
+ param=parmStmt.execute()
+ while(param.next())
+  keyNM=param.getString("MAIL_SND_ITM_NM")
+  value=param.getString("MAIL_SND_ITM_CTT")
+  keyNM=keyNM.trim()
+  value=value
+  context.put(keyNM,value)
+ end while
+ parmStmt.close()
+ param.close()
+//--------------상품구분 정보------------------//
+//-- N--> 02, 03(중고폰..)    P--> 01, 05(일반,자급단말)    A--> 04 (ACCESSORY)--//
+  pGbn=context.get("PROD_GBN")
+  pGbnFg="N"
+  if(pGbn.equals("01") )
+   pGbnFg="P"
+  end if
+  if(pGbn.equals("05") )
+   pGbnFg="P"
+  end if
+  if(pGbn.equals("04") )
+   pGbnFg="A"
+  end if
+//--------------상품구분 정보 ------------------//
+//--------------ACC 파라미터 쿼리 ------------------//
+ paramAccQuery=java.lang.StringBuffer.new()
+ paramAccQuery.append(" select  ")
+ paramAccQuery.append(" sernum, ")
+ paramAccQuery.append(" min(decode(rowcnt, 1, MAIL_SND_ITM_CTT)) ACCESSORY_LIST_IMG, ")
+ paramAccQuery.append(" min(decode(rowcnt, 2, MAIL_SND_ITM_CTT)) ACCESSORY_MODEL_NM, ")
+ paramAccQuery.append(" min(decode(rowcnt, 3, MAIL_SND_ITM_CTT)) ACCESSORY_NM, ")
+ paramAccQuery.append(" min(decode(rowcnt, 4, MAIL_SND_ITM_CTT)) ACCESSORY_COLOR_NM, ")
+ paramAccQuery.append(" min(decode(rowcnt, 5, MAIL_SND_ITM_CTT)) ACCESSORY_ORDER_CNT, ")
+ paramAccQuery.append(" min(decode(rowcnt, 6, MAIL_SND_ITM_CTT)) ACCESSORY_ORDER_AMT ")
+ paramAccQuery.append(" from  ")
+ paramAccQuery.append(" ( ")
+ paramAccQuery.append(" select ")
+ paramAccQuery.append(" substr(MAIL_SND_ITM_NM, length(MAIL_SND_ITM_NM), 1) sernum, ")
+ paramAccQuery.append(" row_number() over  ")
+ paramAccQuery.append("           (partition by substr(MAIL_SND_ITM_NM, length(MAIL_SND_ITM_NM), 1)  ")
+ paramAccQuery.append("            order by decode( ")
+ paramAccQuery.append("                             decode( substr(MAIL_SND_ITM_NM, length(MAIL_SND_ITM_NM)-1, 1 ) ")
+ paramAccQuery.append("                            , '_', substr(MAIL_SND_ITM_NM, 1, length(MAIL_SND_ITM_NM)-2) ")
+ paramAccQuery.append("                            , substr(MAIL_SND_ITM_NM, 1, length(MAIL_SND_ITM_NM)-3))  ")
+ paramAccQuery.append("                , 'ACCESSORY_LIST_IMG', 1 ")
+ paramAccQuery.append("                , 'ACCESSORY_MODEL_NM',  2 ")
+ paramAccQuery.append("                , 'ACCESSORY_NM', 3 ")
+ paramAccQuery.append("                , 'ACCESSORY_COLOR_NM', 4 ")
+ paramAccQuery.append("                , 'ACCESSORY_ORDER_CNT', 5 ")
+ paramAccQuery.append("                , 'ACCESSORY_ORDER_AMT', 6 ")
+ paramAccQuery.append("                , 7) ")
+ paramAccQuery.append("           ) rowcnt ")
+ paramAccQuery.append(" ,MAIL_SND_ITM_NM ")
+ paramAccQuery.append(" ,MAIL_SND_ITM_CTT  ")
+ paramAccQuery.append(" from tshop_batch_param  ")
+ paramAccQuery.append(" where seq_no = ? ")
+ paramAccQuery.append(" and  (ascii(substr(MAIL_SND_ITM_NM, length(MAIL_SND_ITM_NM), 1)) between 48 and 57)     ")
+ paramAccQuery.append(" and MAIL_SND_ITM_NM != 'ACCESSORY_CNT'   ")
+ paramAccQuery.append(" and MAIL_SND_ITM_NM not like 'USED%' ")
+ paramAccQuery.append(" )  ")
+ paramAccQuery.append(" group by sernum ")
+ paramAccQuery.append(" order by sernum  ")
+ pAccCnt = "0"
+ if(pGbnFg.equals("A"))
+  pAccCnt = context.get("ACCESSORY_CNT")
+ end if
+ if (pAccCnt.equals(""))
+  pAccCnt = "0"
+ end if
+ if (pAccCnt.equals("0"))
+ else
+  parmAccStmt=con.prepareStatement(paramAccQuery.toString())
+  parmAccStmt.setString("1",context.get("seq"))
+  paramAccRs=parmAccStmt.execute()
+ end if
+//--------------ACC 파라미터 쿼리 ------------------//
+//--------------배송구분 정보 ------------------//
+//-- N--> 03 방문수령 (03은 발생하지 않음))   D--> 01 택배(무료), 02 오늘도착, 04 택배   H--> 05 찾아가는 개통 서비스(무료) --//
+  dlTypeCd=context.get("DL_TYPE_CD")
+  dlTypeCdFg = "N"
+  if(dlTypeCd.equals("01") )
+   dlTypeCdFg="D"
+  end if
+  if(dlTypeCd.equals("02") )
+   dlTypeCdFg="D"
+  end if
+  if(dlTypeCd.equals("04") )
+   dlTypeCdFg="D"
+  end if
+  if(dlTypeCd.equals("05") )
+   dlTypeCdFg="H"
+  end if
+//--------------배송구분 정보 ------------------//
+%>
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<title>교환완료</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table border="0" cellpadding="0" cellspacing="0"  style="width:100%;background-color:#f1f2f2;" align="center">
+<tr>
+<td align="center">
+	<!-- 아웃룩용 max-width 핵 -->
+	<!--[if (gte mso 9)|(IE)]>
+	<table border="0" cellpadding="0" cellspacing="0">
+	<tr>
+	<td width="700">
+	<![endif]-->
+	<div style="max-width:700px;margin:0 auto">
+		<table border="0" cellpadding="0" cellspacing="0" align="center" style="width:700px;font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,Sans-serif;-webkit-text-size-adjust:100%;text-align:left;background-color:#fff;">
+
+		<!-- Header -->
+		<tr><td colspan="3" height="6" style="background-color:#f34132;font-size:0;line-height:0;"></td></tr>
+		<tr>
+			<td colspan="3" style="padding-top:24px;padding-right:40px;padding-bottom:23px;padding-left:24px;border-bottom:1px solid #cfcfcf;">
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" align="left">
+				<tbody>
+				<tr>
+				<td width="50%" style="font-size:0;line-height:normal">
+					<a href="http://shop.tworld.co.kr/" target="_blank"><img src="http://cdnw.shop.tworld.co.kr/public/img/email/logo.png" width="160" height="28" border="0" alt="T direct shop" style="vertical-align:top;"></a>
+				</td>
+				<td width="50%" align="right" style="text-align:right;font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:normal;font-size:13px;color:#888;">
+					<a href="http://shop.tworld.co.kr/" target="_blank" style="color:#888;text-decoration:none;">홈</a>
+					<span style="margin-right:5px;margin-left:5px;color:#e1e1e1;">|</span>
+					<a href="http://shop.tworld.co.kr/my/submain/" target="_blank" style="color:#888;text-decoration:none;">나의 쇼핑</a>
+					<span style="margin-right:5px;margin-left:5px;color:#e1e1e1;">|</span>
+					<a href="https://www.tworld.co.kr/normal.do?serviceId=S_CMIS0054&viewId=V_CENT0664" target="_blank" style="color:#888;text-decoration:none;">고객센터</a>
+				</td>
+				</tr>
+				</tbody>
+				</table>
+			</td>
+		</tr>
+		<!-- //Header -->
+
+		<tr><td colspan="3" height="38" style="font-size:0;line-height:0;"></td></tr>
+		<tr>
+			<td width="40"></td>
+			<td align="left" style="text-align:left">
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr><td style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:normal;font-size:28px;color:#000;">
+						고객님께서 신청하신 교환 처리가 완료되었습니다.
+					</td></tr>
+					<tr><td height="33" style="font-size:0;line-height:0;"></td></tr>
+					<tr><td style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:normal;font-size:17px;color:#000;">
+						<%=(context.get("CUST_NAM"))%> 고객님
+					</td></tr>
+					<tr><td height="9" style="font-size:0;line-height:0;"></td></tr>
+					<tr><td style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:19px;font-size:14px;color:#757575;">
+						요청하신 교환이 정상적으로 완료되었습니다. <br>
+						자세한 내용은 <span style="color:#000;text-decoration:underline">나의 쇼핑</span>에서 확인하시거나, <span style="color:#000;text-decoration:underline">고객센터</span>를 이용해 주시기 바랍니다.
+					</td></tr>
+
+					<tr><td height="40" style="font-size:0;line-height:0;"></td></tr>
+				</tbody>
+				</table>
+<!-- 주문상품정보 PROD_GBN:01 OR PROD_GBN:05 OR PROD_GBN:04 일 경우 START -->
+<!-- 교환처리 완료(휴대폰/태블릿) -->
+<% if(pGbnFg.equals("N"))
+else %>
+
+<!-- 주문상품정보 - 자급단말 PROD_GBN:05 START -->
+<% if(pGbn.equals("05"))%>
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" align="left">
+                    <tbody>
+                        <tr>
+                            <td colspan="2" height="12" style="font-size:0;line-height:0;"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:22px; font-weight:bold; color:#000; font-size:15px;">주문정보</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" height="12" style="font-size:0;line-height:0;"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" height="20" style="font-size:0;line-height:0; border-top:1px solid #000;"></td>
+                        </tr>
+                        <tr>
+                            <td width="180" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#757575; font-size:14px;">주문번호</td>
+                            <td width="440" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#000; font-size:14px;"><%=(context.get("ORDER_ID"))%></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" height="10" style="font-size:0;line-height:0;"></td>
+                        </tr>
+                        <tr>
+                            <td width="180" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#757575; font-size:14px;">제품명</td>
+                            <td width="440" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#000; font-size:14px;"><%=(context.get("PRODUCT_NM"))%>&nbsp;&nbsp;<span style="display:inline-block;width:1px;height:14px;background-color:#e1e1e1;vertical-align:middle;margin-bottom:2px;"></span>&nbsp;&nbsp;<%=(context.get("PHONE_CAPACITY"))%></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" height="10" style="font-size:0;line-height:0;"></td>
+                        </tr>
+                        <tr>
+                            <td width="180" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#757575; font-size:14px;">월 납부금액</td>
+                            <td width="440" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#000; font-size:14px;"><%=(context.get("CHARGE_MONTH"))%>원</td>
+                        </tr>
+                        <tr>
+                            <td height="40" style="font-size:0;line-height:0;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+<% end if %>
+<!-- 주문상품정보 - 자급단말 PROD_GBN:05 END -->
+<!-- 주문상품정보 - 일반 PROD_GBN:01 START -->
+<% if(pGbn.equals("01"))%>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left">
+                    <tbody>
+                        <tr>
+                            <td colspan="2" height="12" style="font-size:0;line-height:0;"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:22px; font-weight:bold; color:#000; font-size:15px;">주문정보</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" height="12" style="font-size:0;line-height:0;"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" height="20" style="font-size:0;line-height:0; border-top:1px solid #000;"></td>
+                        </tr>
+                        <tr>
+                            <td width="180" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#757575; font-size:14px;">주문번호</td>
+                            <td width="440" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#000; font-size:14px;"><%=(context.get("ORDER_ID"))%></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" height="10" style="font-size:0;line-height:0;"></td>
+                        </tr>
+                        <tr>
+                            <td width="180" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#757575; font-size:14px;">월 납부금액</td>
+                            <td width="440" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#000; font-size:14px;"><%=(context.get("CHARGE_MONTH"))%>원</td>
+                        </tr>
+                        <tr>
+                            <td height="40" style="font-size:0;line-height:0;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+<% end if %>
+<!-- //주문상품정보 - 일반 PROD_GBN:01 END -->
+<% if(pGbn.equals("04"))%>
+<!-- 수정개편_140708 : 액세서리 주문상품 정보 수정 04 (ACCESSORY) -->
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left">
+                    <tbody>
+                        <tr>
+                            <td colspan="2" height="12" style="font-size:0;line-height:0;"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:22px; font-weight:bold; color:#000; font-size:15px;">주문정보</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" height="12" style="font-size:0;line-height:0;"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" height="20" style="font-size:0;line-height:0; border-top:1px solid #000;"></td>
+                        </tr>
+                        <tr>
+                            <td width="180" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#757575; font-size:14px;">주문번호</td>
+                            <td width="440" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#000; font-size:14px;"><%=(context.get("ORDER_ID"))%></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" height="10" style="font-size:0;line-height:0;"></td>
+                        </tr>
+<!-- 액세서리 ACCESSORY_CNT:1 일 경우 START -->
+<% while (paramAccRs.next()) %>
+                        <tr>
+                            <td width="180" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#757575; font-size:14px;">제품명</td>
+                            <td width="440" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#000; font-size:14px;">
+                            <%=(paramAccRs.getString("ACCESSORY_NM")) %>&nbsp;
+                            (<%=(paramAccRs.getString("ACCESSORY_COLOR_NM"))%>)&nbsp;
+                            <%=(paramAccRs.getString("ACCESSORY_ORDER_CNT"))%>개&nbsp;&nbsp;
+                            <span style="display:inline-block;width:1px;height:14px;background-color:#e1e1e1;vertical-align:middle;margin-bottom:2px;"></span>&nbsp;&nbsp;<%=(paramAccRs.getString("ACCESSORY_ORDER_AMT"))%>원</td>
+                        </tr>
+<% end while %>
+<% parmAccStmt.close() %>
+<% paramAccRs.close() %>
+<!-- 액세서리 ACCESSORY_CNT:1 일 경우 END -->
+                        <tr>
+                            <td colspan="2" height="10" style="font-size:0;line-height:0;"></td>
+                        </tr>
+                        <tr>
+                            <td width="180" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#757575; font-size:14px;">상품금액 합계</td>
+                            <td width="440" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#000; font-size:14px;"><%=(context.get("ACCESSORY_TOTAL_ORDER_AMT"))%>원</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" height="10" style="font-size:0;line-height:0;"></td>
+                        </tr>
+                        <tr>
+                            <td width="180" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#757575; font-size:14px;">할인금액 합계</td>
+                            <td width="440" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#000; font-size:14px;">
+	                            - <%=(context.get("ACCESSORY_TOTAL_DC_AMT"))%>원<br>
+	                            <span style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#757575;"> (쿠폰할인 - <%=(context.get("CPN_DC_AMT"))%>원, OK캐쉬백할인 - <%=(context.get("OCB_POINT"))%>P)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" height="10" style="font-size:0;line-height:0;"></td>
+                        </tr>
+                        <tr>
+                            <td width="180" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#757575; font-size:14px;">결제금액</td>
+                            <td width="440" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:20px; color:#000; font-size:14px;"><%=(context.get("DE_AMT_REAL"))%>원</td>
+                        </tr>
+                        <tr>
+                            <td height="40" style="font-size:0;line-height:0;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+<% end if %>
+<!-- DL_TYPE_CD: 01 - 택배(무료), 02 - 오늘도착, 04 - 택배, 05 - 찾아가는 개통 서비스(무료), 03:방문수령 (03은 발생하지 않음)  -->
+<!-- dlTypeCdFg: D - 01, 02, 04, H - 05,  N-03  -->
+<!-- DL_TYPE_CD: 05 일때만 SLC_REQ_DT 존재  -->
+<% if(dlTypeCdFg.equals("N"))
+else %>
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" align="left">
+				<tbody>
+					<tr>
+						<td colspan="2" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif; font-size:15px;padding-bottom:10px;border-bottom:1px solid #000;font-weight:bold;">배송정보</td>
+					</tr>
+					<tr><td colspan="2" height="20"></td></tr>
+					<tr>
+						<td width="180" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif; font-size:14px;color:#757575;padding-bottom:10px;">배송방법</td>
+						<td width="440" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif; font-size:14px;color:#000;padding-bottom:10px;">택배</td>
+					</tr>
+					<tr>
+						<td width="180" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif; font-size:14px;color:#757575;padding-bottom:10px;">받으시는 분</td>
+						<td width="440" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif; font-size:14px;color:#000;padding-bottom:10px;"><%=(context.get("DL_CUST_NM"))%></td>
+					</tr>
+					<tr>
+						<td width="180" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif; font-size:14px;color:#757575;padding-bottom:10px;">배송주소</td>
+						<td width="440" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif; font-size:14px;color:#000;padding-bottom:10px;"><%=(context.get("DL_ADD_INFO"))%></td>
+					</tr>
+					<tr>
+						<td width="180" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif; font-size:14px;color:#757575;padding-bottom:10px;">연락가능번호</td>
+						<td width="440" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif; font-size:14px;color:#000;padding-bottom:10px;"><%=(context.get("DL_PHONE"))%> </td>
+					</tr>
+					<tr>
+						<td width="180" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif; font-size:14px;color:#757575;padding-bottom:10px;">교환 사유</td>
+						<td width="440" valign="top" style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif; font-size:14px;color:#000;padding-bottom:10px;"><%=(context.get("DL_REASON"))%></td>
+					</tr>
+				</tbody>
+				</table>
+<% end if %>
+			</td>
+			<td width="40"></td>
+		</tr>
+		<tr><td colspan="3" height="43" style="font-size:0;line-height:0;"></td></tr>
+<% end if %>
+<!-- //교환처리 완료(휴대폰/태블릿) -->
+<!-- 주문상품정보 PROD_GBN:01 OR PROD_GBN:05 일 경우 END -->
+
+		<!-- footer -->
+		<tr><td colspan="3" height="32" style="font-size:0;line-height:0;background-color:#fafafa;"></td></tr>
+		<tr>
+			<td width="40" style="background-color:#fafafa;"></td>
+			<td style="font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:1.5;font-size:13px;color:#757575;background-color:#fafafa;">
+				더 이상 수신을 원하지 않으시면, <a href="https://cdnw.shop.tworld.co.kr/public/doc/email/emailurl.html?link=refusal&user_id=%3C%=(context.get(%22USER_ID%22))%%3E" target="_blank" style="font-size:13px;color:#3e9ae6;text-decoration:underline;">수신거부</a>를 클릭하여 E-mail 수신을 거부하여 주시기 바랍니다. <br>
+				T world 미가입자는 고객센터(SKT 핸드폰에서 114 또는1525)를 통해 수신거부하실 수 있습니다. <br>
+				If you do not wish to receive this e-mail anymore, please <a href="https://cdnw.shop.tworld.co.kr/public/doc/email/emailurl.html?link=refusal&user_id=%3C%=(context.get(%22USER_ID%22))%%3E" target="_blank" style="font-size:13px;color:#3e9ae6;text-decoration:underline;">click here</a>.
+				</span>
+			</td>
+			<td width="40" style="background-color:#fafafa;"></td>
+		</tr>
+		<tr><td colspan="3" height="25" style="font-size:0;line-height:0;background-color:#fafafa;"></td></tr>
+		<tr>
+			<td width="40" style="background-color:#fafafa;"></td>
+			<td style="background-color:#fafafa;font-family:'Apple SD Gothic Neo','나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,sans-serif;line-height:17px;font-size:11px;color:#757575;">
+				서울특별시 중구 을지로 65 |  대표이사/사장 : 박정호 | 사업자등록번호 104-81-37225<br>
+				고객상담 : 1599-0111(유료/타사고객), 1525(무료/SK텔레콤 휴대폰)<br>
+				COPYRIGHT © SK TELECOM CO., LTD. All RIGHTS RESERVED.
+			</td>
+			<td width="40" style="background-color:#fafafa;"></td>
+		</tr>
+		<tr><td colspan="3" height="32" style="font-size:0;line-height:0;background-color:#fafafa;"></td></tr>
+		<!-- //footer -->
+		</table>
+	</div>
+	<!--[if mso]>
+	</td>
+	</tr>
+	</table>
+	<![endif]-->
+</td>
+</tr>
+</table>
+
+</html>

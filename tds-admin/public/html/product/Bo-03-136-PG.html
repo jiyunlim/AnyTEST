@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">모바일상품등록관리</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>상품 관리</li>
+					<li>모바일상품등록관리</li>
+					<li><strong>판매정책관리</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none">모상품그룹관리</a></li>
+				<li><a href="#none">모상품관리</a></li>
+				<li><a href="#none" class="on">판매정책관리</a></li>
+			</ul>
+			<!-- //tab -->
+
+			<h2 class="hidden">판매정책관리</h2>
+			<h3 class="h-type2">판매정책 기본정보</h3>
+			<table class="table-row">
+			<caption>판매정책 기본정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">정책명*</th>
+					<td colspan="3"><input type="text" class="c-input" title="정책명 입력"></td>
+				</tr>
+				<tr>
+					<th scope="row">신규/중고</th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="newType1" name="newType">
+								<label for="newType1">신규</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="newType2" name="newType">
+								<label for="newType2">중고</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">적용채널</th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="channelType1" name="channelType">
+								<label for="channelType1">TWD</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="channelType2" name="channelType">
+								<label for="channelType2">고객Care센터</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">가입유형</th>
+					<td colspan="3">
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="joinType1" name="joinType">
+								<label for="joinType1">010신규</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="joinType2" name="joinType">
+								<label for="joinType2">번호이동</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="joinType3" name="joinType">
+								<label for="joinType3">일반기변</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="joinType4" name="joinType">
+								<label for="joinType4">기기변경</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="joinType5" name="joinType">
+								<label for="joinType5">착한기변</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">요금제</th>
+					<td colspan="3">
+						<input type="text" class="c-input" title="요금제 입력" style="width:200px;">
+						<a href="Bo-03-009-PU.html" onclick="window.open('Bo-03-009-PU.html','요금제검색 팝업','width=860,height=680');return false;" target="_blank" title="팝업" class="btn-base btn-gray">검색</a>
+						<div id="morecon1" class="hidden-con">
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+						</div>
+						<div class="btn-area">
+							<a href="#morecon1" class="btn-more js-more">더보기</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">약정유형</th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="contractType1" name="contractType">
+								<label for="contractType1">무약정</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="contractType2" name="contractType">
+								<label for="contractType2">T기본약정</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="contractType3" name="contractType">
+								<label for="contractType3">T약정할부지원</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">약정기간</th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="contractDate1" name="contractDate">
+								<label for="contractDate1">무약정</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="contractDate2" name="contractDate">
+								<label for="contractDate2">12개월</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="contractDate3" name="contractDate">
+								<label for="contractDate3">18개월</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="contractDate4" name="contractDate">
+								<label for="contractDate4">24개월</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">요금 약정</th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="billType1" name="billType">
+								<label for="billType1">0개월</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="billType2" name="billType">
+								<label for="billType2">12개월</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="billType3" name="billType">
+								<label for="billType3">24개월</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">단말할부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="devicePlan1" name="devicePlan">
+								<label for="devicePlan1">일시불</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="devicePlan2" name="devicePlan">
+								<label for="devicePlan2">6개월</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="devicePlan3" name="devicePlan">
+								<label for="devicePlan3">12개월</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="devicePlan4" name="devicePlan">
+								<label for="devicePlan4">18개월</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="devicePlan5" name="devicePlan">
+								<label for="devicePlan5">24개월</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="devicePlan6" name="devicePlan">
+								<label for="devicePlan6">30개월</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h3 class="h-type2">판매정책 상세정보</h3>
+			<table class="table-row">
+			<caption>판매정책 상세정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">출고가 </th>
+					<td>
+						<input type="text" class="c-input" title="출고가 입력" style="width:40%;">
+						<span class="txt-unit">원</span>
+					</td>
+					<th scope="row">약정 위약금2</th>
+					<td>
+						<input type="text" class="c-input" title="약정 위약금2 입력" style="width:40%;">
+						<span class="txt-unit">원</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">T약정할부지원금</th>
+					<td>
+						<input type="text" class="c-input" title="T약정할부지원금 입력" style="width:40%;">
+						<span class="txt-unit">원</span>
+					</td>
+					<th scope="row">T약정보조금</th>
+					<td>
+						<input type="text" class="c-input" title="T약정보조금 입력" style="width:40%;">
+						<span class="txt-unit">원</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">할부원금</th>
+					<td>
+						<input type="text" class="c-input" title="할부원금 입력" style="width:40%;">
+						<span class="txt-unit">원</span>
+					</td>
+					<th scope="row">판매금액</th>
+					<td>
+						<input type="text" class="c-input" title="판매금액 입력" style="width:40%;">
+						<span class="txt-unit">원</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">할인금액</th>
+					<td colspan="3">
+						<span class="txt-unit">기본할인</span>
+						<input type="text" class="c-input" title="기본할인 입력" style="width:72px;">
+						<span class="txt-unit">원</span>
+						
+						<span class="txt-unit ml-10">요금제 할인</span>
+						<input type="text" class="c-input" title="요금제 할인 입력" style="width:72px;">
+						<span class="txt-unit">원</span>
+						
+						<span class="txt-unit ml-10">등급할인</span>
+						<input type="text" class="c-input" title="등급할인 입력" style="width:72px;">
+						<span class="txt-unit">원</span>
+						
+						<span class="txt-unit ml-10">착한기변할인</span>
+						<input type="text" class="c-input" title="착한기변할인 입력" style="width:72px;">
+						<span class="txt-unit">원</span>
+						
+						<span class="txt-unit ml-10">기타할인</span>
+						<input type="text" class="c-input" title="기타할인 입력" style="width:72px;">
+						<span class="txt-unit">원</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">B/M R/B</th>
+					<td>
+						<input type="text" class="c-input" title="B/M R/B 입력" style="width:40%;">
+						<span class="txt-unit">원</span>
+					</td>
+					<th scope="row">SKT 공시가격</th>
+					<td>
+						<input type="text" class="c-input" title="SKT 공시가격 입력" style="width:40%;">
+						<span class="txt-unit">원</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">부가서비스</th>
+					<td colspan="3">
+						<input type="text" class="c-input" title="부가서비스 입력" style="width:200px;">
+						<a href="Bo-03-010-PU.html" onclick="window.open('Bo-03-010-PU.html','부가서비스검색 팝업','width=860,height=680');return false;" target="_blank" title="팝업" class="btn-base btn-gray">검색</a>
+						<div id="morecon2" class="hidden-con">
+							<a href="#none" class="btn-text">부가서비스 A</a>
+							<a href="#none" class="btn-text">부가서비스 B</a>
+							<a href="#none" class="btn-text">부가서비스 C</a>
+							<a href="#none" class="btn-text">부가서비스 D</a>
+							<a href="#none" class="btn-text">부가서비스 E</a>
+							<a href="#none" class="btn-text">부가서비스 A</a>
+							<a href="#none" class="btn-text">부가서비스 B</a>
+							<a href="#none" class="btn-text">부가서비스 C</a>
+							<a href="#none" class="btn-text">부가서비스 D</a>
+							<a href="#none" class="btn-text">부가서비스 E</a>
+							<a href="#none" class="btn-text">부가서비스 A</a>
+							<a href="#none" class="btn-text">부가서비스 B</a>
+							<a href="#none" class="btn-text">부가서비스 C</a>
+							<a href="#none" class="btn-text">부가서비스 D</a>
+							<a href="#none" class="btn-text">부가서비스 E</a>
+							<a href="#none" class="btn-text">부가서비스 A</a>
+							<a href="#none" class="btn-text">부가서비스 B</a>
+							<a href="#none" class="btn-text">부가서비스 C</a>
+							<a href="#none" class="btn-text">부가서비스 D</a>
+							<a href="#none" class="btn-text">부가서비스 E</a>
+							<a href="#none" class="btn-text">부가서비스 A</a>
+							<a href="#none" class="btn-text">부가서비스 B</a>
+							<a href="#none" class="btn-text">부가서비스 C</a>
+							<a href="#none" class="btn-text">부가서비스 D</a>
+							<a href="#none" class="btn-text">부가서비스 E</a>
+							<a href="#none" class="btn-text">부가서비스 A</a>
+							<a href="#none" class="btn-text">부가서비스 B</a>
+							<a href="#none" class="btn-text">부가서비스 C</a>
+							<a href="#none" class="btn-text">부가서비스 D</a>
+							<a href="#none" class="btn-text">부가서비스 E</a>
+						</div>
+						<div class="btn-area">
+							<a href="#morecon2" class="btn-more js-more">더보기</a>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<!-- btn -->
+			<div class="btn-area center">
+				<a href="#none" class="btn-base btn-blue">저장</a>
+				<a href="#none" class="btn-base btn-line-blue">목록</a>
+			</div>
+			<!-- //btn -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

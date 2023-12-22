@@ -1,0 +1,954 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">모바일상품등록관리</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>상품 관리</li>
+					<li>모바일상품등록관리</li>
+					<li><strong>모상품그룹관리</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none" class="on">모상품그룹관리</a></li>
+				<li><a href="#none">모상품관리</a></li>
+				<li><a href="#none">판매정책관리</a></li>
+			</ul>
+			<!-- //tab -->
+
+			<h2 class="hidden">모상품그룹관리</h2>
+			<h3 class="h-type2">모상품그룹 기본정보</h3>
+			<table class="table-row">
+			<caption>모상품그룹 기본정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:30%;">
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">모상품그룹명(ID)*</th>
+					<td><input type="text" class="c-input" title="모상품그룹명(ID) 입력"></td>
+					<th scope="row">상품태그</th>
+					<td>
+						<select class="c-select" title="상품태그 선택">
+							<option value="" selected="selected">선택 없음</option>
+							<option value="">SALE</option>
+							<option value="">한정</option>
+							<option value="">EVENT</option>
+							<option value="">최대지원금</option>
+							<option value="">다이렉트 전용</option>
+						</select>
+					</td>
+					<th scope="row">Hot/New</th>
+					<td>
+						<select class="c-select" title="Hot/New 선택">
+							<option value="" selected="selected">선택 없음</option>
+							<option value="">HOT</option>
+							<option value="">NEW</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">대표 모상품 모델명*</th>
+					<td>
+						<input type="text" class="c-input" title="대표 모상품 모델명 입력" placeholder="검색해주세요." style="width:200px;">
+						<a href="Bo-03-004-PU.html" onclick="window.open('Bo-03-004-PU.html','대표 모상품 모델명 팝업','width=600,height=680');return false;" target="_blank" title="팝업" class="btn-base btn-gray">검색</a>
+					</td>
+					<th scope="row">사용여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="useTypeY" name="useType">
+								<label for="useTypeY">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="useTypeN" name="useType">
+								<label for="useTypeN">N</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">유심필수구매 여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="usimTypeY" name="usimType">
+								<label for="usimTypeY">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="usimTypeN" name="usimType">
+								<label for="usimTypeN">N</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">상품 구분</th>
+					<td>
+						<select class="c-select" title="상품 구분 선택">
+							<option value="" selected="selected">상품구분 선택</option>
+							<option value="">휴대폰</option>
+							<option value="">태블릿</option>
+							<option value="">스마트워치</option>
+							<option value="">휴대용</option>
+							<option value="">와이파이</option>
+						</select>
+					</td>
+					<th scope="row">번들구매</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="bundleTypeY" name="bundleType">
+								<label for="bundleTypeY">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="bundleTypeN" name="bundleType">
+								<label for="bundleTypeN">N</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">고객케어 미성년자 단말 예외처리 여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="careTypeY" name="careType">
+								<label for="careTypeY">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="careTypeN" name="careType">
+								<label for="careTypeN">N</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">검색 태그*</th>
+					<td><input type="text" class="c-input" title="검색 태그 입력" placeholder="# 태그명 형식으로 입력하세요"></td>
+					<th scope="row">바로픽업여부</th>
+					<td colspan="3">
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="pickupTypeY" name="pickupType">
+								<label for="pickupTypeY">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="pickupTypeN" name="pickupType">
+								<label for="pickupTypeN">N</label>
+							</span>
+						</div>
+						<div id="" class="form-group ml-15">
+							<span class="c-chk">
+								<input id="TWSP" type="checkbox">
+								<label for="TWSP">TWSP</label>
+							</span> 
+							<span class="c-chk">
+								<input id="TWSN" type="checkbox">
+								<label for="TWSN">TWSN</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">전시 기간</th>
+					<td>
+						<div class="form-group calendar">
+							<p>
+								<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+								<a href="#none" class="btn-calendar">달력</a>
+								<select class="c-select" title="시 선택" style="width:40px;">
+									<option value="" selected="selected">00</option>
+								</select>
+								<span class="txt_unit">:</span>
+								<select class="c-select" title="분 선택" style="width:40px;">
+									<option value="" selected="selected">00</option>
+								</select>
+								<span class="txt-unit">━</span>
+							</p>
+							<p class="mt-6">
+								<input type="text" class="c-input" title="종료일자" value="YYYY-MM-DD">
+								<a href="#none" class="btn-calendar">달력</a>
+								<select class="c-select" title="시 선택" style="width:40px;">
+									<option value="" selected="selected">00</option>
+								</select>
+								<span class="txt_unit">:</span>
+								<select class="c-select" title="분 선택" style="width:40px;">
+									<option value="" selected="selected">00</option>
+								</select>
+							</p>
+						</div>
+					</td>
+					<th scope="row">신규가입 할부여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="newjoinTypeY" name="newjoinType">
+								<label for="newjoinTypeY">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="newjoinTypeN" name="newjoinType">
+								<label for="newjoinTypeN">N</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">구매후기 게시여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="reviewTypeY" name="reviewType">
+								<label for="reviewTypeY">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="reviewTypeN" name="reviewType">
+								<label for="reviewTypeN">N</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">이벤트 URL</th>
+					<td><input type="text" class="c-input" title="이벤트 URL 입력"></td>
+					<th scope="row">홈&amp;라이프 전시대상 여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="homelifeTypeY" name="homelifeType">
+								<label for="homelifeTypeY">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="homelifeTypeN" name="homelifeType">
+								<label for="homelifeTypeN">N</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">T렌탈여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="rentalTypeY" name="rentalType">
+								<label for="rentalTypeY">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="rentalTypeN" name="rentalType">
+								<label for="rentalTypeN">N</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">2G 단말 지원금 대상 단말 여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="2gTypeY" name="2gType">
+								<label for="2gTypeY">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="2gTypeN" name="2gType">
+								<label for="2gTypeN">N</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row"></th>
+					<td></td>
+					<th scope="row"></th>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">멀티 태그</th>
+					<td colspan="5">
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="multiTag1" name="multiTag">
+								<label for="multiTag1">사전예약</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="multiTag2" name="multiTag">
+								<label for="multiTag2">한정판매</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="multiTag3" name="multiTag">
+								<label for="multiTag3">SKT 전용</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="multiTag4" name="multiTag">
+								<label for="multiTag4">출시예정</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="multiTag5" name="multiTag">
+								<label for="multiTag5">공시금 확대</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="multiTag6" name="multiTag">
+								<label for="multiTag6">출고가 인하</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="multiTag7" name="multiTag">
+								<label for="multiTag7">사은품 증정</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">예약판매기간</th>
+					<td colspan="5">
+						<div class="form-group calendar">
+							<select class="c-select" title="예약판매 선택" style="width:130px;">
+								<option value="" selected="selected">선택 없음</option>
+								<option value="">TWD예약판매</option>
+								<option value="">TR 게이트 예약판매</option>
+							</select>
+							<select class="c-select" title="기간 선택">
+								<option value="" selected="selected">기간선택</option>
+								<option value="">오늘</option>
+								<option value="">1주일</option>
+								<option value="">1개월</option>
+								<option value="">이달</option>
+								<option value="">금년</option>
+							</select>
+							<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+							<a href="#none" class="btn-calendar">달력</a>
+							<span class="txt-unit">━</span>
+							<input type="text" class="c-input" title="종료일자">
+							<a href="#none" class="btn-calendar">달력</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">타임세일설정</th>
+					<td colspan="5">
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="timeSaleY" name="timeSale" checked="checked">
+								<label for="timeSaleY">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="timeSaleN" name="timeSale">
+								<label for="timeSaleN">N</label>
+							</span>
+						</div>
+						<div class="mt-10">
+							<span class="txt_unit">타임세일 할인금액</span>
+							<input type="text" class="c-input" title="타임세일 할인금액 입력" style="width:100px;">
+							<span class="txt_unit">원</span>
+							<span class="txt_unit">기간</span>
+							<div class="form-group calendar">
+								<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+								<a href="#none" class="btn-calendar">달력</a>
+								<select class="c-select" title="시 선택" style="width:40px;">
+									<option value="" selected="selected">00</option>
+								</select>
+								<span class="txt_unit">:</span>
+								<select class="c-select" title="분 선택" style="width:40px;">
+									<option value="" selected="selected">00</option>
+								</select>
+								<span class="txt-unit">━</span>
+								<input type="text" class="c-input" title="종료일자">
+								<a href="#none" class="btn-calendar">달력</a>
+								<select class="c-select" title="시 선택" style="width:40px;">
+									<option value="" selected="selected">00</option>
+								</select>
+								<span class="txt_unit">:</span>
+								<select class="c-select" title="분 선택" style="width:40px;">
+									<option value="" selected="selected">00</option>
+								</select>
+							</div>
+							<div class="img-preview-area mt-10">
+								<div class="c-input-file">
+									<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:350px;">
+									<label for="upload01" class="file-label">찾기</label>
+									<input type="file" id="upload01" class="file-upload">
+								</div>
+								<dl class="img-input">
+									<dt>이미지 Alt값</dt>
+									<dd><input type="text" class="c-input" title="이미지 Alt값 입력" placeholder="30자 내로 입력하세요"></dd>
+								</dl>
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="타임세일설정 이미지">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">기프트그룹<br>노출조건</th>
+					<td colspan="5">
+						<input type="text" class="c-input" title="기프트그룹 노출조건 입력" placeholder="검색해주세요." style="width:200px;">
+						<a href="#none" class="btn-base btn-gray">검색</a>
+						<div id="morecon1" class="hidden-con">
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+							<a href="#none" class="btn-text">[LG] PH3 Candle 스피커</a>
+							<a href="#none" class="btn-text">[러판] 여행용 수면 안마 목베개</a>
+						</div>
+						<div class="btn-area">
+							<a href="#morecon1" class="btn-more js-more">더보기</a>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h3 class="h-type2">판매정책 설정</h3>
+				<div class="btn-area">
+					<span class="txt-red">* 현재 적용중인 정책 – Master A </span>
+					<a href="Bo-03-008-PU.html" onclick="window.open('Bo-03-008-PU.html','정책 수정 팝업','width=860,height=680');return false;" target="_blank" title="팝업" class="btn-base btn-gray">정책 수정</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>판매정책 설정</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="col" colspan="4" class="l-data">기본정책</th>
+				</tr>
+				<tr>
+					<th scope="row">신규/중고</th>
+					<td>신규, 중고</td>
+					<th scope="row">적용채널</th>
+					<td>TWD, 고객Care센터</td>
+				</tr>
+				<tr>
+					<th scope="row">가입유형</th>
+					<td>010신규 , 번호이동, 일반기변, 기기변경, 착한기변</td>
+					<th scope="row">요금제</th>
+					<td>band 데이터 1.2G, band 데이터 2.2G, band 데이터 3.5G , band 데이터 6.5G……….</td>
+				</tr>
+				<tr>
+					<th scope="row">약정유형</th>
+					<td>무약정,  T기본약정, T약정할부지원</td>
+					<th scope="row">약정기간</th>
+					<td>무약정 12개월, 18개월, 24개월</td>
+				</tr>
+				<tr>
+					<th scope="row">요금 약정</th>
+					<td>0개월, 12개월, 24개월</td>
+					<th scope="row">단말할부</th>
+					<td>일시불, 6개월, 12개월, 18개월, 24개월, 30개월</td>
+				</tr>
+				<tr>
+					<th scope="col" colspan="4" class="l-data">상세정책</th>
+				</tr>
+				<tr>
+					<th scope="row">출고가</th>
+					<td class="r-data"><strong>892,000</strong></td>
+					<th scope="row">약정 위약금2</th>
+					<td class="r-data">550.000</td>
+				</tr>
+				<tr>
+					<th scope="row">T약정할부지원금</th>
+					<td class="r-data">178,000</td>
+					<th scope="row">T약정보조금</th>
+					<td class="r-data">120,000</td>
+				</tr>
+				<tr>
+					<th scope="row">할부원금</th>
+					<td class="r-data">23,240</td>
+					<th scope="row">판매금액</th>
+					<td class="r-data">782,000</td>
+				</tr>
+				<tr>
+					<th scope="row">할인금액</th>
+					<td colspan="3">기본할인 12,200  요금제 할인 23,000  등급할인  17,200  착한기변할인 38,200  기타 할인  10,000 </td>
+				</tr>
+				<tr>
+					<th scope="row">B/M R/B</th>
+					<td class="r-data">32,000</td>
+					<th scope="row">SKT 공시가격</th>
+					<td class="r-data">785,000</td>
+				</tr>
+				<tr>
+					<th scope="row">부가서비스</th>
+					<td colspan="3">1X기본 정액제(2,000), 1X기본 정액제(3,500), 1X 멀티 정액제(3,500), 1X 멀티 정액제(6,500)</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h3 class="h-type2">모상품 목록</h3>
+				<div class="btn-area">
+					<a href="Bo-03-005-PU.html" onclick="window.open('Bo-03-005-PU.html','모상품 검색 팝업','width=600,height=680');return false;" target="_blank" title="팝업" class="btn-base">추가</a>
+					<a href="#none" class="btn-base btn-gray">삭제</a>
+					<a href="#none" class="btn-base btn-gray">수정</a>
+				</div>
+			</div>
+			<table class="table-col">
+			<caption>모상품 목록</caption>
+			<colgroup>
+				<col style="width:5%">
+				<col style="width:5%">
+				<col style="width:10%">
+				<col>
+				<col style="width:10%">
+				<col style="width:10%">
+				<col style="width:10%">
+				<col style="width:10%">
+				<col style="width:10%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" rowspan="2">
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk1" name="chk">
+							<label for="chk1">선택</label>
+						</span>
+					</th>
+					<th scope="col" rowspan="2">번호</th>
+					<th scope="col" rowspan="2">모상품 ID</th>
+					<th scope="col" rowspan="2">모상품명</th>
+					<th scope="colgroup" colspan="2">재고</th>
+					<th scope="col" rowspan="2">노출순서</th>
+					<th scope="col" rowspan="2">등록일</th>
+					<th scope="col" rowspan="2">수정일</th>
+				</tr>
+				<tr>
+					<th scope="col">재고수량</th>
+					<th scope="col">안전재고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk2" name="chk">
+							<label for="chk2">선택</label>
+						</span>
+					</td>
+					<td>1</td>
+					<td>AOCD</td>
+					<td class="l-data">갤럭시 온7 프라임(2018)</td>
+					<td>321</td>
+					<td>100</td>
+					<td>
+						<select class="c-select" title="노출순서 선택">
+							<option value="" selected="selected">1</option>
+						</select>
+					</td>
+					<td>2018-02-07</td>
+					<td>2018-02-07</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h3 class="h-type2">모상품 배너</h3>
+				<div class="r-txt">
+					<span class="txt-red">JPG, GIF, PNG 형식으로 2MB 이하만 등록하실 수 있습니다.</span>
+				</div>
+			</div>
+			<table class="table-col">
+			<caption>모상품 배너 등록</caption>
+			<colgroup>
+				<col style="width:50%">
+				<col style="width:50%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">Web (400 x 280)</th>
+					<th scope="col">Mobile (100 x 80)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:350px;">
+								<label for="upload02" class="file-label">찾기</label>
+								<input type="file" id="upload02" class="file-upload">
+							</div>
+							<dl class="img-input">
+								<dt>이미지 Alt값</dt>
+								<dd><input type="text" class="c-input" title="이미지 Alt값 입력" placeholder="30자 내로 입력하세요"></dd>
+								<dt>링크 URL</dt>
+								<dd><input type="text" class="c-input" title="링크 URL 입력" placeholder="http://"></dd>
+							</dl>
+							<span class="img-preview">
+								<img src="../../../public/img/img_no.gif" alt="타임세일설정 이미지">
+								<a href="#none" class="img-close">이미지삭제</a>
+							</span>
+						</div>
+					</td>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:350px;">
+								<label for="upload03" class="file-label">찾기</label>
+								<input type="file" id="upload03" class="file-upload">
+							</div>
+							<dl class="img-input">
+								<dt>이미지 Alt값</dt>
+								<dd><input type="text" class="c-input" title="이미지 Alt값 입력" placeholder="30자 내로 입력하세요"></dd>
+								<dt>링크 URL</dt>
+								<dd><input type="text" class="c-input" title="링크 URL 입력" placeholder="http://"></dd>
+							</dl>
+							<span class="img-preview">
+								<img src="../../../public/img/img_no.gif" alt="타임세일설정 이미지">
+								<a href="#none" class="img-close">이미지삭제</a>
+							</span>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h3 class="h-type2">구글 마케팅</h3>
+			<table class="table-row">
+			<caption>구글 마케팅</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">타이틀</th>
+					<td><input type="text" class="c-input" title="타이틀 입력" placeholder="50자 내로 입력하세요."></td>
+				</tr>
+				<tr>
+					<th scope="row">키워드</th>
+					<td><textarea rows="1" cols="1" class="c-textarea" title="키워드 입력" placeholder="200자 내로 입력하세요."></textarea></td>
+				</tr>
+				<tr>
+					<th scope="row">상세</th>
+					<td><textarea rows="1" cols="1" class="c-textarea" title="상세 입력" placeholder="500자 내로 입력하세요."></textarea></td>
+				</tr>
+				<tr>
+					<th scope="row">URL</th>
+					<td><input type="text" class="c-input" title="URL 입력" placeholder="http://"></td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h3 class="h-type2">체크포인트</h3>
+				<div class="btn-area">
+					<a href="Bo-03-007-PU.html" onclick="window.open('Bo-03-007-PU.html','체크 포인트 추가 팝업','width=600,height=460');return false;" target="_blank" title="팝업" class="btn-base">추가</a>
+					<a href="Bo-03-006-PU.html" onclick="window.open('Bo-03-006-PU.html','체크 포인트 등록 팝업','width=860,height=420');return false;" target="_blank" title="팝업" class="btn-base">등록</a>
+					<a href="#none" class="btn-base btn-gray">삭제</a>
+					<a href="#none" class="btn-base btn-gray">수정</a>
+				</div>
+			</div>
+			<table class="table-col">
+			<caption>체크포인트</caption>
+			<colgroup>
+				<col style="width:5%">
+				<col style="width:5%">
+				<col style="width:9%">
+				<col style="width:9%">
+				<col style="width:9%">
+				<col style="width:13%">
+				<col>
+				<col style="width:9%">
+				<col style="width:9%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk1_1" name="chk1">
+							<label for="chk1_1">선택</label>
+						</span>
+					</th>
+					<th scope="col">번호</th>
+					<th scope="col">게시여부</th>
+					<th scope="col">노출순서</th>
+					<th scope="col">상품 구분</th>
+					<th scope="col">체크 포인트 구분</th>
+					<th scope="col">체크 포인트 제목</th>
+					<th scope="col">등록일</th>
+					<th scope="col">수정일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk2_1" name="chk2">
+							<label for="chk2_1">선택</label>
+						</span>
+					</td>
+					<td>1</td>
+					<td>Y</td>
+					<td>
+						<select class="c-select" title="노출순서 선택">
+							<option value="" selected="selected">1</option>
+						</select>
+					</td>
+					<td>휴대폰</td>
+					<td>특정</td>
+					<td class="l-data"><a href="#none" class="text-primary">로밍 이용안내</a></td>
+					<td>2018-08-08</td>
+					<td>2018-08-08</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk2_2" name="chk2">
+							<label for="chk2_2">선택</label>
+						</span>
+					</td>
+					<td>1</td>
+					<td>Y</td>
+					<td>
+						<select class="c-select" title="노출순서 선택">
+							<option value="" selected="selected">1</option>
+						</select>
+					</td>
+					<td>휴대폰</td>
+					<td>특정</td>
+					<td class="l-data"><a href="#none" class="text-primary">로밍 이용안내</a></td>
+					<td>2018-08-08</td>
+					<td>2018-08-08</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk2_3" name="chk2">
+							<label for="chk2_3">선택</label>
+						</span>
+					</td>
+					<td>1</td>
+					<td>Y</td>
+					<td>
+						<select class="c-select" title="노출순서 선택">
+							<option value="" selected="selected">1</option>
+						</select>
+					</td>
+					<td>휴대폰</td>
+					<td>특정</td>
+					<td class="l-data"><a href="#none" class="text-primary">로밍 이용안내</a></td>
+					<td>2018-08-08</td>
+					<td>2018-08-08</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk2_4" name="chk2">
+							<label for="chk2_4">선택</label>
+						</span>
+					</td>
+					<td>1</td>
+					<td>Y</td>
+					<td>
+						<select class="c-select" title="노출순서 선택">
+							<option value="" selected="selected">1</option>
+						</select>
+					</td>
+					<td>휴대폰</td>
+					<td>특정</td>
+					<td class="l-data"><a href="#none" class="text-primary">로밍 이용안내</a></td>
+					<td>2018-08-08</td>
+					<td>2018-08-08</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk2_5" name="chk2">
+							<label for="chk2_5">선택</label>
+						</span>
+					</td>
+					<td>1</td>
+					<td>Y</td>
+					<td>
+						<select class="c-select" title="노출순서 선택">
+							<option value="" selected="selected">1</option>
+						</select>
+					</td>
+					<td>휴대폰</td>
+					<td>특정</td>
+					<td class="l-data"><a href="#none" class="text-primary">로밍 이용안내</a></td>
+					<td>2018-08-08</td>
+					<td>2018-08-08</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h3 class="h-type2">재고정보</h3>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">저장</a>
+				</div>
+			</div>
+			<table class="table-col">
+			<caption>재고정보</caption>
+			<colgroup>
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">판매진행<br>여부</th>
+					<th scope="col">모상품I D</th>
+					<th scope="col">모상품<br>모델명</th>
+					<th scope="col">기본색상</th>
+					<th scope="col">색상</th>
+					<th scope="col">용량</th>
+					<th scope="col">HEX</th>
+					<th scope="col">TWD온라인<br>재고수량</th>
+					<th scope="col">TWD 온라인<br>안전재고</th>
+					<th scope="col">TWD 상담<br>재고(ACE)</th>
+					<th scope="col">TWD상담<br>안전재고</th>
+					<th scope="col">고객케어<br>재고수량</th>
+					<th scope="col">고객케어<br>안전재고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="l-data">
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="sellType1_1" name="sellType1">
+								<label for="sellType1_1">판매 진행</label>
+							</span><br />
+							<span class="c-rdo">
+								<input type="radio" id="sellType1_2" name="sellType1">
+								<label for="sellType1_2">판매 안함</label>
+							</span>
+						</div>
+					</td>
+					<td>AOGJ</td>
+					<td>LM-G670N_128GB</td>
+					<td><span class="box-color" style="background:#ff0000;">뉴 모로칸 블루</span></td>
+					<td>뉴 모로칸 블루</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="l-data">
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="sellType2_1" name="sellType2">
+								<label for="sellType2_1">판매 진행</label>
+							</span><br />
+							<span class="c-rdo">
+								<input type="radio" id="sellType2_2" name="sellType2">
+								<label for="sellType2_2">판매 안함</label>
+							</span>
+						</div>
+					</td>
+					<td>AOGJ</td>
+					<td>LM-G670N_128GB</td>
+					<td><span class="box-color" style="background:#ff0000;">뉴 모로칸 블루</span></td>
+					<td>뉴 모로칸 블루</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+			</table>
+
+			<!-- btn -->
+			<div class="btn-area center">
+				<a href="#none" class="btn-base btn-blue">저장</a>
+				<a href="#none" class="btn-base btn-line-blue">목록</a>
+			</div>
+			<!-- //btn -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

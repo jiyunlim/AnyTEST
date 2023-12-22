@@ -1,0 +1,64 @@
+<!-- s : 2019-04-24 OP010-268 요금제 부가옵션 선택기능 admin 연동 -->
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>요금제 옵션 등록/수정</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 600*400 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">요금제 옵션 등록/수정</h1>
+	</div>	
+	<div class="pop-content">
+		<table class="table-row">
+		<caption>요금제 옵션 등록/수정</caption>
+		<colgroup>
+			<col style="width:20%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">요금제 옵션 코드</th>
+				<td>
+					<input type="text" class="c-input" title="" style="width:120px">
+				</td> 
+			</tr>
+			<tr>
+				<th scope="row">요금제 옵션명</th>
+				<td> 
+					<input type="text" class="c-input" title="" style="width:120px">
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">혜택 태그</th>
+				<td>
+					<input type="text" class="c-input" title=""  style="width:120px">
+					<a href="#none" class="btn-base btn-gray">추가</a>
+                    <div class="mt-6">
+                        <span class="benefit-tag">POOQ 무제한 이용권 <button type="button" class="benefit-tag-btn">X</button></span>
+                        <span class="benefit-tag">24시간 이용 가능 <button type="button" class="benefit-tag-btn">X</button></span>
+                    </div>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">저장</a>
+			<a href="#none" class="btn-base btn-line-gray">닫기</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script> 
+</body>
+</html>
+<!-- e : 2019-04-24 OP010-268 요금제 부가옵션 선택기능 admin 연동 -->

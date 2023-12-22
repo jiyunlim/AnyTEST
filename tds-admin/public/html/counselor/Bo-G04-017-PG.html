@@ -1,0 +1,4711 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">상담사 주문</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li><strong>상담사 주문</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<div class="h-area2">
+				<h2 class="h-type2">주문서 작성</h2>
+				<div class="btn-area">
+					<a href="#layerPopBillDetail" data-model="layerPopBillDetail" class="btn-base">요금상세정보</a>
+					<a href="#layerPopOrderSave" data-model="layerPopOrderSave" class="btn-base">주문서 저장</a>
+				</div>
+			</div>
+
+			<table class="table-row">
+			<caption>상담사 관리</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">상담접수번호</th>
+					<td>
+						<input type="text" class="c-input" title="상담접수번호 입력" style="width:80%;">
+						<a href="#none" class="btn-base btn-gray">적용</a>
+					</td>
+					<th scope="row">대리점 (중분류)</th>
+					<td>
+						<input type="text" class="c-input" title="대리점 (중분류) 입력" style="width:80%;">
+						<a href="#none" class="btn-base btn-gray">적용</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">캠페인 종류</th>
+					<td colspan="3">
+						<input type="text" class="c-input" title=" 입력" style="width:80%;">
+						<a href="#none" class="btn-srch">검색</a>
+						<a href="#none" class="btn-base btn-gray ml-10">취소</a>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h3 class="h-type3">가입내용</h3>
+			<!-- 가입내용 - 순액형 요금제 -->
+			<table class="table-row">
+				<caption>가입내용</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">가입 유형</th>
+						<td>
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="joinType4_1" name="joinType4">
+									<label for="joinType4_1">번호이동</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="joinType4_2" name="joinType4">
+									<label for="joinType4_2">기기변경</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="joinType4_3" name="joinType4">
+									<label for="joinType4_3">신규가입</label>
+								</span>
+							</div>
+						</td>
+						<th scope="row">지원금 선택</th>
+						<td>
+							<select class="c-select" title="지원금 선택" disabled>
+								<option value="">지원금할인</option>
+								<option value="">요금할인 12개월</option>
+								<option value="">요금할인 24개월</option>
+								<option value="">무약정플랜</option>
+								<option value="" selected="selected">무약정 (언택트 요금제)</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row"><strong class="txt-sky">휴대폰</strong></th>
+						<td><a href="#none" class="txt-type2">iPhone 11(IPHONE_11_64GGR)</a></td>
+						<th scope="row" rowspan="2">요금제</th>
+						<td rowspan="2">
+							<ul class="bill-area1">
+								<li class="bill-subject">
+									<a href="#none" class="bill-tit">5G 순액형 67</a>
+									<span class="bill-btn">
+										<a href="#none" class="btn-base btn-gray">변경</a>
+									</span>
+								</li>
+								<li>
+									<span class="bill-tit">└ 약정할인 - 무약정</span>
+								</li>
+								<li>
+									<span class="bill-tit">└ 복지할인 - 해당사항 없음</span>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">색상/용량</th>
+						<td>미드나이트 그린/64G</td>
+					</tr>
+					<tr>
+						<th scope="row">출고가</th>
+						<td class="r-data"><strong class="txt-type2">1,375,000원</strong></td>
+						<th scope="row">월정액</th>
+						<td class="r-data"><strong class="txt-type2">월 65,890원</strong></td>
+					</tr>
+					<tr>
+						<th scope="row">단말 분할방식</th>
+						<td>
+							<div class="align-block">
+								<select class="c-select" title="단말 분할방식 선택" style="width:180px;">
+									<option value="" selected="selected">12개월 분할상환</option>
+									<option value="">24개월 분할상환</option>
+									<option value="">30개월 분할상환</option>
+									<option value="">일시불 결제</option>
+								</select>
+								<span class="r-txt lh-26">(수수료 5.9%)</span>
+							</div>
+						</td>
+						<th scope="row">약정할인</th>
+						<td class="r-data txt-red">0원</td>
+					</tr>
+					<tr>
+						<th scope="row">공시지원금</th>
+						<td class="r-data txt-red">0원</td>
+						<th scope="row">복지할인</th>
+						<td class="r-data txt-red">0원</td>
+					</tr>
+					<tr>
+						<th scope="row">추가지원금</th>
+						<td class="r-data txt-red">0원</td>
+						<th scope="row">지원금 요금할인</th>
+						<td class="r-data txt-red">0원</td>
+					</tr>
+					<tr>
+						<th scope="row">단말대금<br>(수수료5.9%포함)</th>
+						<td>
+							<div class="align-block">
+								월납부액 &gt;
+								<div class="r-txt">
+									<strong class="txt-type2">
+										124,292원
+										<em class="f-11">(128,762원)</em>
+									</strong>
+								</div>
+							</div>
+							<div class="align-block mt-10">
+								납부총액 &gt; 
+								<div class="r-txt">
+									1,375,000원
+									<em class="f-11">(1,461,096원)</em>
+								</div>
+							</div>
+						</td>
+						<th scope="row">통신료 (할인적용)</th>
+						<td class="r-data"><strong class="txt-type2">월 65,890원</strong></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="4">
+							<strong class="txt-black2">월 납부금액 (분할 상환 수수료 5.9%포함)</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+							<span class="txt-type1"><strong>월71,656원</strong> (71,842원)</span>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+			<!-- 가입내용- 단말분할납부 -->
+			<table class="table-row">
+			<caption>가입내용</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">가입 유형</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="joinType1_1" name="joinType1">
+								<label for="joinType1_1">번호이동</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="joinType1_2" name="joinType1">
+								<label for="joinType1_2">기기변경</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="joinType1_3" name="joinType1">
+								<label for="joinType1_3">신규가입</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">지원금 선택</th>
+					<td>
+						<select class="c-select" title="지원금 선택">
+							<option value="" selected="selected">지원금할인</option>
+							<option value="">요금할인 12개월</option>
+							<option value="">요금할인 24개월</option>
+							<option value="">무약정플랜</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><strong class="txt-sky">휴대폰</strong></th>
+					<td><a href="#none" class="txt-type2">Xiaomi Redmi Note5</a></td>
+					<th scope="row" rowspan="2">요금제</th>
+					<td rowspan="2">
+						<ul class="bill-area1">
+							<li class="bill-subject">
+								<a href="#none" class="bill-tit">band 데이터 퍼펙트 S</a>
+								<span class="bill-btn">
+									<a href="#none" class="btn-base btn-gray">변경</a>
+								</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 온가족할인 30% - 무약정</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 복지할인 - 해당사항 없음</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 옵션 : VIP 멤버십 </span>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">색상/용량</th>
+					<td>검정/64G (재고 : 9)</td>
+				</tr>
+				<tr>
+					<th scope="row">출고가</th>
+					<td class="r-data"><strong class="txt-type2">299,200원</strong></td>
+					<th scope="row">월정액</th>
+					<td class="r-data"><strong class="txt-type2">월 65,890원</strong></td>
+				</tr>
+				<tr>
+					<th scope="row">단말 분할방식</th>
+					<td>
+						<div class="align-block">
+							<select class="c-select" title="단말 분할방식 선택" style="width:180px;">
+								<option value="" selected="selected">12개월 분할상환</option>
+								<option value="">24개월 분할상환</option>
+								<option value="">30개월 분할상환</option>
+								<option value="">일시불 결제</option>
+							</select>
+							<span class="r-txt lh-26">(수수료 5.9%)</span>
+						</div>
+					</td>
+					<th scope="row">약정할인</th>
+					<td class="r-data txt-red">0원</td>
+				</tr>
+				<tr>
+					<th scope="row">공시지원금</th>
+					<td class="r-data txt-red">-200,000원</td>
+					<th scope="row">복지할인</th>
+					<td class="r-data txt-red">0원</td>
+				</tr>
+				<tr>
+					<th scope="row">추가지원금</th>
+					<td class="r-data txt-red">-30,000원</td>
+					<th scope="row">지원금 요금할인</th>
+					<td class="r-data txt-red">-0원</td>
+				</tr>
+				<tr>
+					<th scope="row">단말대금<br>(수수료5.9%포함)</th>
+					<td>
+						<div class="align-block">
+							월납부액 &gt;
+							<div class="r-txt">
+								<strong class="txt-type2">
+									5,766원
+									<em class="f-11">(5,952원)</em>
+								</strong>
+							</div>
+						</div>
+						<div class="align-block mt-10">
+							납부총액 &gt; 
+							<div class="r-txt">
+								69,200
+								<em class="f-11">(71,431원)</em>
+							</div>
+						</div>
+					</td>
+					<th scope="row">통신료 (할인적용)</th>
+					<td class="r-data"><strong class="txt-type2">월 65,890원</strong></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="4">
+						<strong class="txt-black2">월 납부금액 (분할 상환 수수료 5.9%포함)</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+						<span class="txt-type1"><strong>월71,656원</strong> (71,842원)</span>
+					</td>
+				</tr>
+			</tfoot>
+			</table>
+			<ul class="txt-info">
+				<li class="txt-red">신규가입은 일시불 결제만 가능</li>
+				<li class="txt-red">바로픽업 배송은 분할 상환만 가능</li>
+			</ul>
+
+			<!-- 가입내용- 일시불납부 -->
+			<table class="table-row">
+			<caption>가입내용</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">가입 유형</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="joinType2_1" name="joinType2">
+								<label for="joinType2_1">번호이동</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="joinType2_2" name="joinType2">
+								<label for="joinType2_2">기기변경</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="joinType2_3" name="joinType2">
+								<label for="joinType2_3">신규가입</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">지원금 선택</th>
+					<td>
+						<select class="c-select" title="지원금 선택">
+							<option value="" selected="selected">지원금할인</option>
+							<option value="">요금할인 12개월</option>
+							<option value="">요금할인 24개월</option>
+							<option value="">무약정플랜</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><strong class="txt-sky">휴대폰</strong></th>
+					<td><a href="#none" class="txt-type2">Xiaomi Redmi Note5</a></td>
+					<th scope="row" rowspan="2">요금제</th>
+					<td rowspan="2">
+						<ul class="bill-area1">
+							<li class="bill-subject">
+								<a href="#none" class="bill-tit">band 데이터 퍼펙트 S</a>
+								<span class="bill-btn">
+									<a href="#none" class="btn-base btn-gray">변경</a>
+								</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 약정할인 - 무약정</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 복지할인 - 해당사항 없음</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 옵션 : VIP 멤버십 </span>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">색상/용량</th>
+					<td>검정/64G (재고 : 9)</td>
+				</tr>
+				<tr>
+					<th scope="row">출고가</th>
+					<td class="r-data"><strong class="txt-type2">299,200원</strong></td>
+					<th scope="row">월정액</th>
+					<td class="r-data"><strong class="txt-type2">월 65,890원</strong></td>
+				</tr>
+				<tr>
+					<th scope="row">단말 분할방식</th>
+					<td>
+						<div class="align-block">
+							<select class="c-select" title="단말 분할방식 선택" style="width:180px;">
+								<option value="" selected="selected">12개월 분할상환</option>
+								<option value="">24개월 분할상환</option>
+								<option value="">30개월 분할상환</option>
+								<option value="">일시불 결제</option>
+							</select>
+						</div>
+					</td>
+					<th scope="row">약정할인</th>
+					<td class="r-data txt-red">0원</td>
+				</tr>
+				<tr>
+					<th scope="row">공시지원금</th>
+					<td class="r-data txt-red">-200,000원</td>
+					<th scope="row">복지할인</th>
+					<td class="r-data txt-red">0원</td>
+				</tr>
+				<tr>
+					<th scope="row">추가지원금</th>
+					<td class="r-data txt-red">-30,000원</td>
+					<th scope="row">지원금 요금할인</th>
+					<td class="r-data txt-red">-0원</td>
+				</tr>
+				<tr>
+					<th scope="row">단말대금</th>
+					<td class="r-data">
+						<strong class="txt-type2">69,200원</strong>
+					</td>
+					<th scope="row">통신료 (할인적용)</th>
+					<td class="r-data"><strong class="txt-type2">월 65,890원</strong></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="4">
+						<strong class="txt-black2">월 납부금액</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+						<span class="txt-type1"><strong>월71,656원</strong></span>
+					</td>
+				</tr>
+			</tfoot>
+			</table>
+			<ul class="txt-info">
+				<li class="txt-red">신규가입은 일시불 결제만 가능</li>
+				<li class="txt-red">바로픽업 배송은 분할 상환만 가능</li>
+			</ul>
+
+			<!-- 가입내용- T렌탈 이용시 -->
+			<table class="table-row">
+			<caption>가입내용</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">가입 유형</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="joinType3_1" name="joinType3">
+								<label for="joinType3_1">번호이동</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="joinType3_2" name="joinType3">
+								<label for="joinType3_2">기기변경</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="joinType3_3" name="joinType3" checked="checked">
+								<label for="joinType3_3">신규가입</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">지원금 선택</th>
+					<td>
+						<select class="c-select" title="지원금 선택">
+							<option value="" selected="selected">요금할인 24개월</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><strong class="txt-sky">휴대폰</strong></th>
+					<td><a href="#none" class="txt-type2">Xiaomi Redmi Note5</a></td>
+					<th scope="row" rowspan="2">요금제</th>
+					<td rowspan="2">
+						<ul class="bill-area1">
+							<li class="bill-subject">
+								<a href="#none" class="bill-tit">band 데이터 퍼펙트 S</a>
+								<span class="bill-btn">
+									<a href="#none" class="btn-base btn-gray">변경</a>
+								</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 약정할인 - 무약정</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 복지할인 - 해당사항 없음</span>
+							</li>
+							<li>
+								<span class="bill-tit">└ 옵션 : VIP 멤버십 </span>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">색상/용량</th>
+					<td>검정/64G (재고 : 9)</td>
+				</tr>
+				<tr>
+					<th scope="row">출고가</th>
+					<td class="r-data"><strong class="txt-type2">299,200원</strong></td>
+					<th scope="row">월정액</th>
+					<td class="r-data"><strong class="txt-type2">월 65,890원</strong></td>
+				</tr>
+				<tr>
+					<th scope="row">단말 분할방식</th>
+					<td>
+						<div class="align-block">
+							<select class="c-select" title="단말 분할방식 선택" style="width:180px;">
+								<option value="" selected="selected">12개월 분할상환</option>
+								<option value="">24개월 분할상환</option>
+								<option value="">30개월 분할상환</option>
+								<option value="">일시불 결제</option>
+							</select>
+						</div>
+					</td>
+					<th scope="row">약정할인</th>
+					<td class="r-data txt-red">0원</td>
+				</tr>
+				<tr>
+					<th scope="row">월 T렌탈 이용료<br>(vat 포함)</th>
+					<td class="r-data"><strong class="txt-type2">40,6000원</strong></td>
+					<th scope="row">복지할인</th>
+					<td class="r-data txt-red">0원</td>
+				</tr>
+				<tr>
+					<th scope="row">T렌탈 납부총액</th>
+					<td class="r-data">974,400원<br>(24개월 분할 납부)</td>
+					<th scope="row">지원금 요금할인</th>
+					<td class="r-data txt-red">-0원</td>
+				</tr>
+				<tr>
+					<th scope="row" colspan="2">24개월 분할상환 대비 월 10,000원 더 절약할 수 있습니다.</th>
+					<th scope="row">통신료 (할인적용)</th>
+					<td class="r-data"><strong class="txt-type2">월 65,890원</strong></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="4">
+						<strong class="txt-black2">월 납부금액</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+						<span class="txt-type1"><strong>월71,656원</strong></span>
+					</td>
+				</tr>
+			</tfoot>
+			</table>
+			<ul class="txt-info">
+				<li class="txt-red">신규가입은 일시불 결제만 가능</li>
+				<li class="txt-red">바로픽업 배송은 분할 상환만 가능</li>
+			</ul>
+
+			<!-- T기프트 선택하기 -->
+			<div class="h-area3">
+				<h3 class="h-type3">T기프트 선택하기<span class="txt-essential">*</span></h3>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">URL복사</a>
+					<a href="#layerPopTgiftSelect" data-model="layerPopTgiftSelect" class="btn-base">T기프트 선택</a>
+				</div>
+			</div>
+			<table class="table-col">
+			<caption>T기프트 선택하기</caption>
+			<colgroup>
+				<col style="width:12%">
+				<col>
+				<col style="width:30%">
+				<col style="width:12%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col" colspan="2">T 기프트 상품명</th>
+					<th scope="col">옵션명</th>
+					<th scope="col">삭제</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="4">선택 버튼을 눌러 T기프트를 선택 해 주세요.</td>
+				</tr>
+				<tr>
+					<td><img src="../../../public/img/A0M0_001_5.jpg" alt="상품이미지"></td>
+					<td class="l-data">기프트 미제공</td>
+					<td>-</td>
+					<td><a href="#none" class="btn-delete">삭제</a></td>
+				</tr>
+				<tr>
+					<td><img src="../../../public/img/A0M0_001_5.jpg" alt="상품이미지"></td>
+					<td class="l-data">기프트 미제공</td>
+					<td>
+						Be Positive_GOLD
+						<p><a href="#none">[변경]</a></p>
+					</td>
+					<td><a href="#none" class="btn-delete">삭제</a></td>
+				</tr>
+				<tr>
+					<td><img src="../../../public/img/A0M0_001_5.jpg" alt="상품이미지"></td>
+					<td class="l-data">기프트 미제공</td>
+					<td>
+						<select class="c-select" title="옵션명 선택">
+							<option value="" selected="selected">Lip2_RED</option>
+						</select>
+						<p><a href="#none">[선택]</a></p>
+					</td>
+					<td><a href="#none" class="btn-delete">삭제</a></td>
+				</tr>
+			</tbody>
+			</table>
+			<div class="box-type1 align-center mt-20">
+				<span class="c-chk">
+					<input type="checkbox" id="agreeType1_1" name="agreeType1">
+					<label for="agreeType1_1">본인은 지원금에 상응하는 요금할인 또는 단말기 지원금 선택 시 혜택에 대해 충분한 설명을 들었으며, <span class="txt-sky">단말기 지원금을 선택하겠습니다.</span></label>
+				</span>
+			</div>
+
+			<!-- 본인인증 -->
+			<h3 class="h-type3">본인 인증</h3>
+			<div class="box-type1">
+				<ul class="txt-info">
+					<li>개정 '주민등록법'에 의해 타인의 주민등록번호를 도용하는 경우 3년 이하의 징역 또는 1천만원 이하의 벌금이 부과될 수 있습니다. <span class="txt-red">관련법률 : 주민등록법 제37조(벌칙) 제9조(시행일 2006.09.24)</span></li>
+					<li><span class="txt-red">전자상거래법 제5조 2항</span>에 의거 본 가입 신청서상에서 고객님의 공인인증서는 고객님의 본인인증 서명, 서명 날인 또는 기명날인으로 본 가입신청서에 전자서명 된 이후에는 특별한 사정이 없는 한 그 내용이 변경되지 않은 것으로 다루어집니다. 고객님의 신청내용은 오프라인 대리점 방문 신청과 동일한 효력을 가집니다.</li>
+					<li>SK텔레콤은 전기통신사업법 시행령 제65조의 2에 따라 주민등록번호를 수집,이용할 수 있는 기관으로 지정되어 있습니다. 고객님께서 입력하신 주민등록번호는 본인 확인 목적으로만 활용되며, 안전하게 보관됩니다.</li>
+					<li>고객님은 SK텔레콤이 보증하는 온라인 판매 인증 채널을 통해 이동통신 서비스에 가입됩니다.</li>
+				</ul>
+			</div>
+			<ul class="agree-list">
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">- 제3자 명의대여 위험 및 신규계약서 교부에 대한 안내 (필수)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="ispAgreeY1" name="ispAgree1">
+								<label for="ispAgreeY1">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="ispAgreeN1" name="ispAgree1">
+								<label for="ispAgreeN1">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						대출업자 등 제 3자에게 본인 명의의 휴대폰을 개통해 주거나 개통에 필요한 신청서류를 제공하는 경우 휴대폰 대출 사기 등에 악용되어 심각한 경제적 피해를 입을 수 있습니다.
+						아울러 온라인으로 작성한 신규계약서의 내용은 본인의 이메일로 교부 받게 됩니다. 위 사항들을 확인합니다.
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">개인신용정보 조회 동의서 (필수)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="ispAgreeY2" name="ispAgree2">
+								<label for="ispAgreeY2">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="ispAgreeN2" name="ispAgree2">
+								<label for="ispAgreeN2">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						대출업자 등 제 3자에게 본인 명의의 휴대폰을 개통해 주거나 개통에 필요한 신청서류를 제공하는 경우 휴대폰 대출 사기 등에 악용되어 심각한 경제적 피해를 입을 수 있습니다. 아울러 온라인으로 작성한 신규계약서의 내용은 본인의 이메일로 교부 받게 됩니다. 위 사항들을 확인합니다.
+					</div>
+				</li>
+			</ul>
+			<!-- tab -->
+			<ul class="tab-area depth3 js-tab-toggle">
+				<li><a href="#tab1_1" class="on">개인(일반)</a></li>
+				<li><a href="#tab1_2">개인(만 19세 미만)</a></li>
+				<li><a href="#tab1_3">법인</a></li>
+				<li><a href="#tab1_4">외국인(Foreigner)</a></li>
+			</ul>
+			<!-- //tab -->
+			
+			<div id="tab1_1" class="tab-con">
+				<h4 class="hidden">개인(일반)</h4>
+
+				<!-- 본인인증 – 기기변경 (인증방법) -->
+				<table class="table-row">
+				<caption>본인인증-개인(일반)</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">인증방법<span class="txt-essential">*</span></th>
+						<td colspan="3">
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="certifyType1_1" name="certifyType1">
+									<label for="certifyType1_1">휴대폰인증</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="certifyType1_2" name="certifyType1">
+									<label for="certifyType1_2">i-Pin 인증</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="certifyType1_3" name="certifyType1">
+									<label for="certifyType1_3">고객 CARE 인증</label>
+								</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">이름<span class="txt-essential">*</span></th>
+						<td><input type="text" class="c-input" title="이름 입력"></td>
+						<th scope="row">주민등록번호</th>
+						<td>
+							<input type="text" class="c-input" title="주민등록앞번호 입력" style="width:100px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="주민등록뒷번호 시작번호 입력" style="width:26px;">
+							<span class="txt-unit">●●●●●●</span>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">휴대폰 인증<span class="txt-essential">*</span></th>
+						<td colspan="3">
+							<select class="c-select" title="휴대폰번호 첫자리 선택" style="width:60px;">
+								<option value="" selected="selected">010</option>
+							</select>
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="휴대폰번호 중간자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="휴대폰번호 끝자리 입력" style="width:60px;">
+							<a href="#none" class="btn-base btn-gray">인증번호 전송</a>
+							<a href="#none" class="btn-base btn-gray">재전송</a>
+							<p class="mt-6">
+								<input type="text" class="c-input" title="인증번호 입력" style="width:180px;">
+								<span class="ico-clock">00:00</span>
+								<a href="#none" class="btn-base btn-gray">인증번호 확인</a>
+								<a href="#none" class="btn-base btn-gray">인증 완료</a>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">휴대폰 인증<span class="txt-essential">*</span></th>
+						<td colspan="3">
+							<select class="c-select" title="휴대폰번호 첫자리 선택" style="width:60px;">
+								<option value="" selected="selected">010</option>
+							</select>
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="휴대폰번호 중간자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="휴대폰번호 끝자리 입력" style="width:60px;">
+							<a href="#none" class="btn-base btn-gray">회선확인</a>
+							<a href="#none" class="btn-base btn-gray">회선확인 완료</a>
+							<a href="#none" class="btn-base btn-gray">재확인</a>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+				<ul class="txt-info">
+					<li>인증번호를 빈칸에 기입하신 후 [인증번호 확인] 버튼을 누르시면 다음으로 진행됩니다.</li>
+					<li>인증문자가 도착하지 않았거나 입력시간 초과 시 ‘재전송’ 버튼을 눌러주세요.</li>
+				</ul>
+
+				<!-- 본인인증-신규가입 / 번호이동 (인증방법) -->
+				<!-- 신용카드 인증 -->
+				<table class="table-row">
+				<caption>본인인증-개인(일반)</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">인증방법<span class="txt-essential">*</span></th>
+						<td colspan="3">
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="certifyType9_1" name="certifyType9" checked="checked">
+									<label for="certifyType9_1">신용카드 인증</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="certifyType9_2" name="certifyType9">
+									<label for="certifyType9_2">고객 CARE 인증</label>
+								</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">이름<span class="txt-essential">*</span></th>
+						<td><input type="text" class="c-input" title="이름 입력"></td>
+						<th scope="row">주민등록번호<span class="txt-essential">*</span></th>
+						<td>
+							<input type="text" class="c-input" title="주민등록앞번호 입력" style="width:100px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="주민등록뒷번호 입력" style="width:100px;">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">신용카드 번호<span class="txt-essential">*</span></th>
+						<td><input type="text"" class="c-input" title="카드번호16자리 입력" maxlength="16"></td>
+						<th scope="row">휴대폰 번호<span class="txt-essential">*</span></th>
+						<td>
+							<select class="c-select" title="휴대폰번호 첫자리 선택" style="width:60px;">
+								<option value="" selected="selected">010</option>
+							</select>
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="휴대폰번호 중간자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="휴대폰번호 끝자리 입력" style="width:60px;">
+						</td>
+					</tr>
+				</tbody>
+				</table>
+				<ul class="txt-info">
+					<li>카드사에 등록된 휴대폰 번호를 입력해 주세요.</li>
+				</ul>
+				<h5 class="h-type3">신용카드 본인인증 약관동의 (필수)</h5>
+				<div class="box-type1">
+					<div class="agree-type">
+						<span class="c-chk">
+							<input type="checkbox" id="agree_all_card">
+							<label for="agree_all_card"><strong class="txt-black2">신용카드 본인인증 전체 약관동의</strong></label>
+						</span>
+					</div>
+				</div>
+				<ul class="agree-list">
+					<li>
+						<div class="agree-tit-area-card">
+							<a href="#none" class="agree-tit-card">개인정보 이용 및 활용 동의 (필수)</a>
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="agree_card0_yes" name="agreeCard0" value="Y">
+									<label for="agree_card0_yes">동의</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="agree_card0_no" name="agreeCard0" value="N">
+									<label for="agree_card0_no">동의안함</label>
+								</span>
+							</div>
+						</div>
+						<div class="agree-con">약관내용<div>
+					</li>
+					<li>
+						<div class="agree-tit-area-card">
+							<a href="#none" class="agree-tit-card">고유식별정보 처리동의 (필수)</a>
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="agree_card1_yes" name="agreeCard1" value="Y">
+									<label for="agree_card1_yes">동의</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="agree_card1_no" name="agreeCard1" value="N">
+									<label for="agree_card1_no">동의안함</label>
+								</span>
+							</div>
+						</div>
+						<div class="agree-con">약관내용<div>
+					</li>
+					<li>
+						<div class="agree-tit-area-card">
+							<a href="#none" class="agree-tit-card">본인확인 서비스 이용약관 동의 (필수)</a>
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="agree_card2_yes" name="agreeCard2" value="Y">
+									<label for="agree_card2_yes">동의</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="agree_card2_no" name="agreeCard2" value="N">
+									<label for="agree_card2_no">동의안함</label>
+								</span>
+							</div>
+						</div>
+						<div class="agree-con">약관내용<div>
+					</li>
+					<li>
+						<div class="agree-tit-area-card">
+							<a href="#none" class="agree-tit-card">카드사 서비스 이용약관 동의 (필수)</a>
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="agree_card3_yes" name="agreeCard3" value="Y">
+									<label for="agree_card3_yes">동의</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="agree_card3_no" name="agreeCard3" value="N">
+									<label for="agree_card3_no">동의안함</label>
+								</span>
+							</div>
+						</div>
+						<div class="agree-con">약관내용<div>
+					</li>
+				</ul>
+
+				<table class="table-row">
+					<caption>ARS 인증</caption>
+					<colgroup>
+						<col style="width:14%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">ARS 인증 제한시간<span class="txt-essential">*</span></th>
+							<td>
+								<!-- [D] 읽기전용 3분 타이머 from-group.timer클래스 필수-->
+								<div class="form-group timer">
+									<input type="text" class="c-input" title="ARS 인증번호 입력" style="width:100px;" value="02:59" readonly>
+								</div>
+								<p class="txt-info">ARS 인증 발신번호 0000-0000</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- 고객 CARE 인증 -->
+				<table class="table-row">
+				<caption>본인인증-개인(일반)</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">인증방법<span class="txt-essential">*</span></th>
+						<td colspan="3">
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="certifyType5_1" name="certifyType5">
+									<label for="certifyType5_1">신용카드 인증</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="certifyType5_2" name="certifyType5" checked="checked">
+									<label for="certifyType5_2">고객 CARE 인증</label>
+								</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">이름<span class="txt-essential">*</span></th>
+						<td><input type="text" class="c-input" title="이름 입력"></td>
+						<th scope="row">주민등록번호<span class="txt-essential">*</span></th>
+						<td>
+							<input type="text" class="c-input" title="주민등록앞번호 입력" style="width:100px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="주민등록뒷번호 입력" style="width:100px;">
+						</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+			<div id="tab1_2" class="tab-con">
+				<!-- 본인인증 – 기기변경 (인증방법) -->
+				<h4 class="hidden">개인(만 19세 미만)</h4>
+				<table class="table-row">
+				<caption>본인인증-개인(만 19세 미만)</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">인증방법<span class="txt-essential">*</span></th>
+						<td colspan="3">
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="certifyType2_1" name="certifyType2">
+									<label for="certifyType2_1">휴대폰인증</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="certifyType2_2" name="certifyType2">
+									<label for="certifyType2_2">i-Pin 인증</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="certifyType2_3" name="certifyType2">
+									<label for="certifyType2_3">고객 CARE 인증</label>
+								</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">이름<span class="txt-essential">*</span></th>
+						<td><input type="text" class="c-input" title="이름 입력"></td>
+						<th scope="row">가입자<br>주민등록번호<span class="txt-essential">*</span></th>
+						<td>
+							<input type="text" class="c-input" title="주민등록번호 앞자리 입력" style="width:100px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="주민등록번호 뒷자리 시작번호 입력" style="width:26px;">
+							<span class="txt-unit">●●●●●●</span>
+						</td>
+					</tr>
+					<!-- s: 2019-06-05 수정 -->
+					<tr>
+						<th scope="row">기기변경<br>휴대폰 번호<span class="txt-essential">*</span></th>
+						<td colspan="3">
+							<select class="c-select" title="휴대폰번호 첫자리 선택" style="width:60px;">
+								<option value="" selected="selected">010</option>
+							</select>
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="휴대폰번호 중간자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="휴대폰번호 끝자리 입력" style="width:60px;">
+						</td>
+					</tr>
+					<!-- e: 2019-06-05 수정 -->
+					<tr>
+						<th scope="row">법정대리인<span class="txt-essential">*</span></th>
+						<td><input type="text" class="c-input" title="법정대리인 입력"></td>
+						<th scope="row">법정 대리인<br>주민등록번호<span class="txt-essential">*</span></th>
+						<td>
+							<input type="text" class="c-input" title="주민등록번호 앞자리 입력" style="width:100px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="주민등록번호 뒷자리 시작번호 입력" style="width:26px;">
+							<span class="txt-unit">●●●●●●</span>
+						</td>
+					</tr>
+					<tr>
+						<!-- s: 2019-06-05 수정 -->
+						<th scope="row">법정대리인<br>휴대폰 인증<span class="txt-essential">*</span></th>
+						<!-- e: 2019-06-05 수정 -->
+						<td colspan="3">
+							<select class="c-select" title="휴대폰번호 첫자리 선택" style="width:60px;">
+								<option value="" selected="selected">010</option>
+							</select>
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="휴대폰번호 중간자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="휴대폰번호 끝자리 입력" style="width:60px;">
+							<!-- s: 2019-06-05 수정 -->
+							<a href="#none" class="btn-base">인증번호 전송</a>
+							<p class="mt-6">
+								<input type="text" class="c-input" title="인증번호 입력" style="width:180px;">
+								<span class="ico-clock">00:00</span>
+								<a href="#none" class="btn-base btn-gray">인증번호 확인</a>
+							</p>
+							<!-- e: 2019-06-05 수정 -->
+						</td>
+					</tr>
+				</tbody>
+				</table>
+
+				<!-- 본인인증-신규가입 / 번호이동 (인증방법) -->
+				<!-- 신용카드 인증 -->
+				<table class="table-row">
+				<caption>본인인증-개인(만 19세 미만)</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">인증방법<span class="txt-essential">*</span></th>
+						<td colspan="3">
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="certifyType6_1" name="certifyType6" checked>
+									<label for="certifyType6_1">신용카드 인증</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="certifyType6_2" name="certifyType6">
+									<label for="certifyType6_2">고객 CARE 인증</label>
+								</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">이름<span class="txt-essential">*</span></th>
+						<td><input type="text" class="c-input" title="이름 입력"></td>
+						<th scope="row">가입자<br>주민등록번호<span class="txt-essential">*</span></th>
+						<td>
+							<input type="text" class="c-input" title="주민등록앞번호 입력" style="width:100px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="주민등록뒷번호 입력" style="width:100px;">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">법정대리인<span class="txt-essential">*</span></th>
+						<td><input type="text" class="c-input" title="법정대리인 입력"></td>
+						<th scope="row">법정 대리인<br>주민등록번호<span class="txt-essential">*</span></th>
+						<td>
+							<input type="text" class="c-input" title="주민등록앞번호 입력" style="width:100px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="주민등록뒷번호 입력" style="width:100px;">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">법정대리인<br>신용카드 정보<span class="txt-essential">*</span></th>
+						<td><input type="text" class="c-input" title="법정대리인 신용카드 정보 입력" maxlength="16"></td>
+						<th scope="row">법정대리인<br>휴대폰 번호<span class="txt-essential">*</span></th>
+						<td>
+							<select class="c-select" title="휴대폰번호 첫자리 선택" style="width:60px;">
+								<option value="" selected="selected">010</option>
+							</select>
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="휴대폰번호 중간자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="휴대폰번호 끝자리 입력" style="width:60px;">
+						</td>
+					</tr>
+				</tbody>
+				</table>
+				<ul class="txt-info">
+					<li>카드사에 등록된 휴대폰 번호를 입력해 주세요.</li>
+				</ul>
+				<h5 class="h-type3">신용카드 본인인증 약관동의 (필수)</h5>
+				<div class="box-type1">
+					<div class="agree-type">
+						<span class="c-chk">
+							<input type="checkbox" id="agree_all_card_teen">
+							<label for="agree_all_card_teen"><strong class="txt-black2">신용카드 본인인증 전체 약관동의</strong></label>
+						</span>
+					</div>
+				</div>
+				<ul class="agree-list">
+					<li>
+						<div class="agree-tit-area-card">
+							<a href="#none" class="agree-tit-card">개인정보 이용 및 활용 동의 (필수)</a>
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="agree_card0_teen_yes" name="agreeCard0_teen" value="Y">
+									<label for="agree_card0_yes">동의</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="agree_card0_teen_no" name="agreeCard0_teen" value="N">
+									<label for="agree_card0_no">동의안함</label>
+								</span>
+							</div>
+						</div>
+						<div class="agree-con">약관내용<div>
+					</li>
+					<li>
+						<div class="agree-tit-area-card">
+							<a href="#none" class="agree-tit-card">고유식별정보 처리동의 (필수)</a>
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="agree_card1_teen_yes" name="agreeCard1_teen" value="Y">
+									<label for="agree_card1_yes">동의</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="agree_card1_teen_no" name="agreeCard1_teen" value="N">
+									<label for="agree_card1_no">동의안함</label>
+								</span>
+							</div>
+						</div>
+						<div class="agree-con">약관내용<div>
+					</li>
+					<li>
+						<div class="agree-tit-area-card">
+							<a href="#none" class="agree-tit-card">본인확인 서비스 이용약관 동의 (필수)</a>
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="agree_card2_teen_yes" name="agreeCard2_teen" value="Y">
+									<label for="agree_card2_yes">동의</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="agree_card2_teen_no" name="agreeCard2_teen" value="N">
+									<label for="agree_card2_no">동의안함</label>
+								</span>
+							</div>
+						</div>
+						<div class="agree-con">약관내용<div>
+					</li>
+					<li>
+						<div class="agree-tit-area-card">
+							<a href="#none" class="agree-tit-card">카드사 서비스 이용약관 동의 (필수)</a>
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="agree_card3_teen_yes" name="agreeCard3_teen" value="Y">
+									<label for="agree_card3_yes">동의</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="agree_card3_teen_no" name="agreeCard3_teen" value="N">
+									<label for="agree_card3_no">동의안함</label>
+								</span>
+							</div>
+						</div>
+						<div class="agree-con">약관내용<div>
+					</li>
+				</ul>
+
+				<table class="table-row">
+					<caption>ARS 인증</caption>
+					<colgroup>
+						<col style="width:14%">
+						<col>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">ARS 인증 제한시간<span class="txt-essential">*</span></th>
+							<td>
+								<!-- [D] 읽기전용 3분 타이머 from-group.timer클래스 필수-->
+								<div class="form-group timer">
+									<input type="text" class="c-input" title="ARS 인증번호 입력" style="width:100px;" value="02:59" readonly>
+								</div>
+								<p class="txt-info">ARS 인증 발신번호 0000-0000</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="tab1_3" class="tab-con">
+				<h4 class="hidden">법인</h4>
+
+				<!-- 본인인증 – 기기변경 (인증방법) -->
+				<table class="table-row">
+				<caption>본인인증-법인</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">인증방법<span class="txt-essential">*</span></th>
+						<td colspan="3">
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="certifyType3_1" name="certifyType3">
+									<label for="certifyType3_1">법인번호 인증</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="certifyType3_2" name="certifyType3">
+									<label for="certifyType3_2">고객 CARE 인증</label>
+								</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">법인명<span class="txt-essential">*</span></th>
+						<td colspan="3"><input type="text" class="c-input" title="법인명 입력"></td>
+					</tr>
+					<tr>
+						<th scope="row">법인등록번호<span class="txt-essential">*</span></th>
+						<td>
+							<input type="text" class="c-input" title="법인등록번호 앞자리 입력" style="width:40%;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="법인등록번호 뒷자리 입력" style="width:40%;">
+						</td>
+						<th scope="row">사업자등록번호<span class="txt-essential">*</span></th>
+						<td>
+							<input type="text" class="c-input" title="사업자등록번호 앞자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="사업자등록번호 중간자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="사업자등록번호 뒷자리 입력" style="width:100px;">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">휴대폰 인증<span class="txt-essential">*</span></th>
+						<td colspan="3">
+							<select class="c-select" title="휴대폰번호 첫자리 선택" style="width:60px;">
+								<option value="" selected="selected">010</option>
+							</select>
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="휴대폰번호 중간자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="휴대폰번호 끝자리 입력" style="width:60px;">
+							<a href="#none" class="btn-base btn-gray">회선확인</a>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+
+				<!-- 본인인증-신규가입 / 번호이동 (인증방법) -->
+				<table class="table-row">
+				<caption>본인인증-법인</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">인증방법<span class="txt-essential">*</span></th>
+						<td colspan="3">
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="certifyType7_1" name="certifyType7">
+									<label for="certifyType7_1">법인번호 인증</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="certifyType7_2" name="certifyType7">
+									<label for="certifyType7_2">고객 CARE 인증</label>
+								</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">법인명<span class="txt-essential">*</span></th>
+						<td colspan="3"><input type="text" class="c-input" title="법인명 입력"></td>
+					</tr>
+					<tr>
+						<th scope="row">법인등록번호<span class="txt-essential">*</span></th>
+						<td>
+							<input type="text" class="c-input" title="법인등록번호 앞자리 입력" style="width:40%;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="법인등록번호 뒷자리 입력" style="width:40%;">
+						</td>
+						<th scope="row">사업자등록번호<span class="txt-essential">*</span></th>
+						<td>
+							<input type="text" class="c-input" title="사업자등록번호 앞자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="사업자등록번호 중간자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="사업자등록번호 뒷자리 입력" style="width:100px;">
+						</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+			<div id="tab1_4" class="tab-con">
+				<h4 class="hidden">외국인(Foreigner)</h4>
+				
+				<!-- 본인인증 – 기기변경 (인증방법) -->
+				<table class="table-row">
+				<caption>본인인증-외국인(Foreigner)</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">인증방법<span class="txt-essential">*</span></th>
+						<td colspan="3">
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="certifyType4_1" name="certifyType4">
+									<label for="certifyType4_1">외국인 등록번호</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="certifyType4_2" name="certifyType4">
+									<label for="certifyType4_2">고객 CARE 인증</label>
+								</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Name (이름)<span class="txt-essential">*</span></th>
+						<td><input type="text" class="c-input" title="Name (이름) 입력"></td>
+						<th scope="row">Alien Registration Number<br>(외국인등록번호)</th>
+						<td>
+							<input type="text" class="c-input" title="외국인등록번호 앞자리 입력" style="width:40%;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="외국인등록번호 뒷자리 입력" style="width:40%;">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Date of issue<br>(발급일)<span class="txt-essential">*</span></th>
+						<td>
+							<select class="c-select" title="일 선택" style="width:70px;">
+								<option value="" selected="selected">일 선택</option>
+								<option value="">01</option>
+							</select>
+							<select class="c-select" title="월 선택" style="width:70px;">
+								<option value="" selected="selected">월 선택</option>
+								<option value="">01</option>
+							</select>
+							<select class="c-select" title="년 선택" style="width:80px;">
+								<option value="" selected="selected">년 선택</option>
+								<option value="">2018</option>
+							</select>
+						</td>
+						<th scope="row">Nationality<br>(국적)</th>
+						<td>
+							<select class="c-select" title="국적 선택">
+								<option value="" selected="selected">Select Country</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">휴대폰 인증<span class="txt-essential">*</span></th>
+						<td colspan="3">
+							<select class="c-select" title="휴대폰번호 첫자리 선택" style="width:60px;">
+								<option value="" selected="selected">010</option>
+							</select>
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="휴대폰번호 중간자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="휴대폰번호 끝자리 입력" style="width:60px;">
+							<a href="#none" class="btn-base btn-gray">회선확인</a>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+
+				<!-- 본인인증-신규가입 / 번호이동 (인증방법) -->
+				<table class="table-row">
+				<caption>본인인증-외국인(Foreigner)</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">인증방법<span class="txt-essential">*</span></th>
+						<td colspan="3">
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="certifyType8_1" name="certifyType8">
+									<label for="certifyType8_1">외국인 등록번호</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="certifyType8_2" name="certifyType8">
+									<label for="certifyType8_2">고객 CARE 인증</label>
+								</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Name (이름)<span class="txt-essential">*</span></th>
+						<td><input type="text" class="c-input" title="Name (이름) 입력"></td>
+						<th scope="row">Alien Registration Number<br>(외국인등록번호)<span class="txt-essential">*</span></th>
+						<td>
+							<input type="text" class="c-input" title="외국인등록번호 앞자리 입력" style="width:40%;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="외국인등록번호 뒷자리 입력" style="width:40%;">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Date of issue<br>(발급일)<span class="txt-essential">*</span></th>
+						<td>
+							<select class="c-select" title="일 선택" style="width:70px;">
+								<option value="" selected="selected">일 선택</option>
+								<option value="">01</option>
+							</select>
+							<select class="c-select" title="월 선택" style="width:70px;">
+								<option value="" selected="selected">월 선택</option>
+								<option value="">01</option>
+							</select>
+							<select class="c-select" title="년 선택" style="width:80px;">
+								<option value="" selected="selected">년 선택</option>
+								<option value="">2018</option>
+							</select>
+						</td>
+						<th scope="row">Nationality<br>(국적)<span class="txt-essential">*</span></th>
+						<td>
+							<select class="c-select" title="국적 선택">
+								<option value="" selected="selected">Select Country</option>
+							</select>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+			<div class="btn-area align-center">
+				<a href="#none" class="btn-base">본인인증</a>
+				<a href="#none" class="btn-base">본인 인증완료</a>
+				<a href="#none" class="btn-base btn-gray">본인 인증 재설정</a>
+			</div>
+			<!-- 신용카드 인증 버튼 -->
+			<div class="btn-area align-center">
+				<a href="#none" class="btn-base">ARS 인증요청</a>
+				<a href="#none" class="btn-base">인증완료</a>
+				<a href="#none" class="btn-base btn-gray">본인 인증완료</a>
+				<a href="#none" class="btn-base">본인 인증 재설정</a>
+			</div>
+
+			<!-- 번호이동 인증 -->
+			<h3 class="h-type3">번호이동 인증</h3>
+			<table class="table-row">
+			<caption>번호이동 인증</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row" rowspan="2">번호이동<br>휴대폰 번호</th>
+					<td>
+						<select class="c-select" title="통신사 선택" style="width:80px;">
+							<option value="" selected="selected">KT</option>
+						</select>
+						<select class="c-select" title="휴대폰번호 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="휴대폰번호 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="휴대폰번호 끝자리 입력" style="width:60px;">
+						<a href="#none" class="btn-base btn-gray">인증번호 전송</a>
+						<a href="#none" class="btn-base btn-gray">재전송</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" class="c-input" title="인증번호 입력" style="width:180px;">
+						<span class="ico-clock">00:00</span>
+						<a href="#none" class="btn-base btn-gray">인증번호 확인</a>
+						<a href="#none" class="btn-base btn-gray">인증 완료</a>
+						<ul class="txt-info">
+							<li>인증문자가 도착하지 않았거나 3분 내에 입력을 못하신 경우 ‘재전송’ 버튼을 눌러주세요.</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">기존 단말<br>납부 정보 인증</th>
+					<td>
+						<select class="c-select" title="인증수단 선택" style="width:20%;">
+							<option value="" selected="selected">인증수단 선택</option>
+							<option value="">단말기 일련번호</option>
+							<option value="">은행 계좌번호</option>
+							<option value="">신용카드 번호</option>
+							<option value="">자동납부 계좌번호</option>
+						</select>
+						<input type="text" class="c-input" placeholder="마지막 4자리 숫자" title="단말기 일련번호 입력" style="width:20%;">
+						<p class="txt-info">현재 사용하시는 단말기의 배터리를 분리하고 본체 뒷면에 있는 일련번호 중 마지막 4자리를 입력해 주세요. 애플(아이폰) 일련번호로 확인이 되지 않으니 계좌번호나 신용카드 번호로 선택해 주세요.</p>
+						<p class="txt-info">기존 통신사에 납부하셨던 계좌번호 중 마지막 4자리를 입력해 주세요.</p>
+						<p class="txt-info">기존 통신사에 납부하셨던 신용카드 번호 중 마지막 4자리를 입력해 주세요.</p>
+						<p class="txt-info">기존 통신사에 납부하셨던 자동납부 계좌번호 중 마지막 4자리를 입력해 주세요.</p>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<div class="btn-area align-center">
+				<a href="#none" class="btn-base">번호이동 인증</a>
+				<a href="#none" class="btn-base">번호이동 인증완료</a>
+				<a href="#none" class="btn-base btn-gray">번호이동 인증 재설정</a>
+			</div>
+
+			<!--  -->
+			<h3 class="h-type3">한 번 더 할인</h3>
+			<table class="table-col">
+			<caption>한 번 더 할인</caption>
+			<colgroup>
+				<col style="width:30%">
+				<col style="width:25%">
+				<col style="width:25%">
+				<col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">추가 할인 항목</th>
+					<th scope="col">보유포인트</th>
+					<th scope="col">할인금액</th>
+					<th scope="col">할인 선택</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">무약정 플랜 적립포인트</th>
+					<td class="r-data">0원</td>
+					<td class="r-data">
+						<input type="text" class="c-input" title="할인금액 입력" style="width:80%;">
+						<span class="txt-unit">원</span>
+					</td>
+					<td class="c-data">
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="saleChk1" name="saleChk1">
+							<label for="saleChk1">선택</label>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">지켜줘서 고마워 적립포인트</th>
+					<td class="r-data">0원</td>
+					<td class="r-data">
+						<input type="text" class="c-input" title="할인금액 입력" style="width:80%;">
+						<span class="txt-unit">원</span>
+					</td>
+					<td class="c-data">
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="saleChk2" name="saleChk2">
+							<label for="saleChk2">선택</label>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" rowspan="3">
+						제휴포인트 
+						<a href="#layerPopPoint" data-model="layerPopPoint" class="ico-tooltip">안내툴팁</a>
+					</th>
+					<td><a href="#none" class="txt-link">[할인받기]</a></td>
+					<td class="r-data">-3,000원</td>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="saleChk3" name="saleChk3">
+							<label for="saleChk3">선택</label>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>현대카드</td>
+					<td class="r-data">-1,000원</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OK캐쉬백</td>
+					<td class="r-data">-2,000원</td>
+					<td></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<th scope="row" colspan="2">총 추가 할인 금액</th>
+					<td class="r-data"><strong class="txt-red">0</strong>원</td>
+					<td><a href="#none" class="btn-base btn-gray">적용</a><a href="#none" class="btn-base btn-gray disabled">적용</a></td>
+				</tr>
+			</tfoot>
+			</table>
+			<ul class="txt-info">
+				<li>무약정플랜 적립 포인트 / 지켜줘서 고마워 적립 포인트 최대 할인 적용 포인트는 50,000점 입니다.</li>
+				<li>단말 분할 상환 개통을 위해 단말 대금은 최소 1,000원 이상이어야 합니다. 적용 시 단말 대금이 1,000원 이상이 되도록 적용해 주시기 바랍니다. (문의 :1599-0111)</li>
+				<li>포인트는 단말 개통 시점에 차감됩니다.</li>
+				<li>무약정플랜 적립 포인트 / 지켜줘서 고마워 적립 포인트는 해당 포인트 가입자만 할인 가능합니다.</li>
+			</ul>
+			<!-- 해지위약금 약정승계 불가능 -->
+			<div class="box-type1 mt-10">
+				<p class="align-center">
+					※ 고객님의 위약금 예상 금액은 <strong class="txt-red">123,456</strong>원 입니다.<br>
+					※ 현재 이용 중인 회선의 약정 기간이 남아 경우에 따라 위약금이 발생할 수 있습니다.<br>
+					위약금 승계 여부에 대한 확인은 고객센터로 문의 해주시기 바랍니다.
+				</p>
+			</div>
+			<!-- 해지위약금 약정승계 가능 -->
+			<div class="box-type1 mt-10">
+				<p class="align-center">
+					※ 고객님의 위약금 예상 금액은 <strong class="txt-red">123,456</strong>원 입니다.<br>
+					※ 약정 기간이 남아 있어 위약금이 발생하였으나, 개통 시점에 자동으로 약정이 승계됩니다.
+				</p>
+			</div>
+
+			<!-- 갤럭시 클럽 할인 -->
+			<div class="h-area3">
+				<h3 class="h-type3">갤럭시 클럽 할인</h3>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">할인 받기</a>
+				</div>
+			</div>
+			<div class="box-type1 align-center">
+				<p>고객님은 <strong>T갤럭시 클럽 N 가입자</strong>입니다.</p>
+				<p><strong class="txt-red">-396,000</strong>원의 단말기 할부금액을 면제 받을 수 있습니다.</p>
+			</div>
+			<ul class="txt-info">
+				<li>SK텔레콤에서 신규 단말기를 구매하여 기기변경 시 고객의 잔여 단말기 할부금 부담을 줄여드리는 보험연계 서비스 입니다.<br><span class="txt-red">(표시된 금액은 오늘 개통 기준 할인 금액으로 실제 금액은 개통일에 따라 변동됩니다.)</span></li>
+				<li>쓰던 폰 반납과 T 갤럭시 클럽 할인은 중복 신청이 불가능합니다.</li>
+			</ul>
+
+			<!-- 갤럭시 클럽 할인 신청 결과 -->
+			<div class="h-area3">
+				<h3 class="h-type3">갤럭시 클럽 할인</h3>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">할인 취소</a>
+				</div>
+			</div>
+			<table class="table-col">
+			<caption>갤럭시 클럽 할인 신청 결과1</caption>
+			<colgroup>
+				<col style="width:33.3%">
+				<col>
+				<col style="width:33.3%">
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="col" class="txt-black1">T 갤럭시 클럽</th>
+					<th scope="col" class="txt-black1">서비스 가입일 수</th>
+					<th scope="col" class="txt-black1">할인신청</th>
+				</tr>
+				<tr>
+					<td>T갤럭시 클럽N</td>
+					<td>365일</td>
+					<td>신청</td>
+				</tr>
+				<tr>
+					<th scope="col" class="txt-black1">휴대폰명</th>
+					<th scope="col" class="txt-black1">IMEI</th>
+					<th scope="col" class="txt-black1">단말기 할부금 면제금액</th>
+				</tr>
+				<tr>
+					<td>SM-G930S_32(갤럭시S7)</td>
+					<td>XXXXXXXXXXXX</td>
+					<td><strong class="txt-red">396,000</strong>원</td>
+				</tr>
+				<tr>
+					<td colspan="3" class="l-data">
+						<dl class="txt-info">
+							<dt>[ 단말기 반납처 ]</dt>
+							<dd>주소 : 대전광역시 중구 대종로 570, 10층 행복한 에코폰</dd>
+							<dd>연락처 : 행복한 에코폰 고객센터 1800-0014 오전 9시 ~ 오후 6시 (점심시간 12:00~13:00), 토/일/공휴일 휴무</dd>
+						</dl>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>SK텔레콤에서 신규 단말기를 구매하여 기기변경 시 고객의 잔여 단말기 할부금 부담을 줄여드리는 보험연계 서비스 입니다.<br><span class="txt-red">(표시된 금액은 오늘 개통 기준 할인 금액으로 실제 금액은 개통일에 따라 변동됩니다.)</span></li>
+				<li>쓰던 폰 반납과 T 갤럭시 클럽 할인은 중복 신청이 불가능합니다.</li>
+			</ul>
+
+			<!-- 주문자정보 – 신규가입 -->
+			<!-- 일반 -->
+			<h3 class="h-type3">주문자 정보</h3>
+			<table class="table-row">
+			<caption>주문자 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">주문자명<span class="txt-essential">*</span></th>
+					<td><input type="text" class="c-input" title="주문자명 입력"></td>
+					<th scope="row">주문내역 전송<span class="txt-essential">*</span></th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="orderSend1_1" name="orderSend1">
+								<label for="orderSend1_1">휴대폰 번호</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="orderSend1_2" name="orderSend1">
+								<label for="orderSend1_2">이메일</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">연락 가능번호<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">이메일</th>
+					<td> 
+						<input type="text" class="c-input" title="이메일 아이디 입력" style="width:100px;">
+						<span class="txt-unit">@</span>
+						<input type="text" class="c-input" title="이메일 도메인 입력" style="width:100px;">
+						<select class="c-select" title="이메일 도메인 선택" style="width:100px;">
+							<option value="" selected="selected">직접입력</option>
+							<option value="">-</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>주문 · 신청 내역이 주문자 정보 (이메일 및 휴대폰 번호)로 발송됩니다.</li>
+			</ul>
+
+			<h3 class="h-type3">서비스 가입 정보</h3>
+			<table class="table-row">
+			<caption>서비스 가입 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">이름</th>
+					<td colspan="3"><input type="text" class="c-input" readonly="readonly" title="이름 입력" style="width:120px;"></td>
+				</tr>
+				<tr>
+					<th scope="row">희망번호</th>
+					<td>
+						<p>
+							<span class="txt-unit">1순위</span>
+							<span class="txt-unit ml-15">010 - ●●●● - </span>
+							<input type="text" class="c-input" title="희망번호 끝자리 입력" style="width:60px;">
+						</p>
+						<p class="mt-6">
+							<span class="txt-unit">2순위</span>
+							<span class="txt-unit ml-15">010 - ●●●● - </span>
+							<input type="text" class="c-input" title="희망번호 끝자리 입력" style="width:60px;">
+						</p>
+					</td>
+					<th scope="row">유심정보</th>
+					<td>
+						<div class="form-group all-block">
+							<span class="c-rdo">
+								<input type="radio" id="usimInfo1_1" name="usimInfo1">
+								<label for="usimInfo1_1">신규 USIM 구매 <em class="txt-red">(해당단말지원)</em></label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="usimInfo1_2" name="usimInfo1">
+								<label for="usimInfo1_2">기존 USIM 사용 <em class="txt-red">(호환가능 USIM : 나노유심)</em></label>
+							</span>
+						</div>
+						<p class="mt-6">
+							<input type="text" class="c-input" disabled="disabled" title="USIM 카드 일련번호 입력" placeholder="USIM 카드 일련번호" style="width:84%;">
+							<a href="#none" class="btn-base btn-gray">확인</a>
+						</p>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>희망번호가 없을 경우 임의 번호로 개통됩니다.</li>
+				<li>위 신규 취득한 번호는 번호재사용 및 맞 번호변경이 제한됩니다.</li>
+				<li>신규 USIM 구매 시 USIM 비용은 익월에 합산 청구됩니다.</li>
+				<li class="txt-red"><a href="#layerPopUsim" data-model="layerPopUsim" class="txt-red">USIM 카드 일련번호란?</a></li>
+			</ul>
+			<!-- //일반 -->
+
+			<!-- 미성년자 -->
+			<h3 class="h-type3">주문자 정보</h3>
+			<table class="table-row">
+			<caption>주문자 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">이름<span class="txt-essential">*</span></th>
+					<td><input type="text" class="c-input" title="이름 입력" style="width:120px;"></td>
+					<th scope="row">주문내역 전송<span class="txt-essential">*</span></th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="orderSend2_1" name="orderSend2">
+								<label for="orderSend2_1">휴대폰 번호</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="orderSend2_2" name="orderSend2">
+								<label for="orderSend2_2">이메일</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">연락 가능번호<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">이메일</th>
+					<td> 
+						<input type="text" class="c-input" title="이메일 아이디 입력" style="width:100px;">
+						<span class="txt-unit">@</span>
+						<input type="text" class="c-input" title="이메일 도메인 입력" style="width:100px;">
+						<select class="c-select" title="이메일 도메인 선택" style="width:100px;">
+							<option value="" selected="selected">직접입력</option>
+							<option value="">-</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>주문 · 신청 내역이 주문자 정보 (이메일 및 휴대폰 번호)로 발송됩니다.</li>
+			</ul>
+
+			<h3 class="h-type3">서비스 가입 정보</h3>
+			<table class="table-row">
+			<caption>서비스 가입 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:14%">
+				<col style="width:22%;">
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">이름<span class="txt-essential">*</span></th>
+					<td colspan="4">
+						<input type="text" class="c-input" readonly="readonly" title="이름 입력" style="width:120px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">법정대리인명<span class="txt-essential">*</span></th>
+					<td colspan="4">
+						<input type="text" class="c-input" readonly="readonly" title="법정대리인명 입력" style="width:120px;">
+						<select class="c-select" title="법정대리인 선택" style="width:100px;">
+							<option value="" selected="selected">본인</option>
+							<option value="">부모</option>
+							<option value="">배우자</option>
+							<option value="">형제/자매</option>
+							<option value="">자녀</option>
+							<option value="">친척</option>
+							<option value="">친구/연인</option>
+							<option value="">외국인</option>
+							<option value="">해당법인직원</option>
+							<option value="">후견인</option>
+							<option value="">법인등기이사</option>
+							<option value="">기타</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">법정대리인<br>연락처 1<span class="txt-essential">*</span></th>
+					<td colspan="2">
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">법정대리인<br>연락처 2</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">가입<br>휴대폰 번호<span class="txt-essential">*</span></th>
+					<td colspan="2"></td>
+					<th scope="row">유심정보<span class="txt-essential">*</span></th>
+					<td>
+						<div class="form-group all-block">
+							<span class="c-rdo">
+								<input type="radio" id="usimInfo2_1" name="usimInfo2">
+								<label for="usimInfo2_1">신규 USIM 구매 <em class="txt-red">(해당단말지원)</em></label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="usimInfo2_2" name="usimInfo2">
+								<label for="usimInfo2_2">기존 USIM 사용 <em class="txt-red">(호환가능 USIM : 나노유심)</em></label>
+							</span>
+						</div>
+						<p class="mt-6">
+							<input type="text" class="c-input" disabled="disabled" title="USIM 카드 일련번호 입력" placeholder="USIM 카드 일련번호" style="width:84%;">
+							<a href="#none" class="btn-base btn-gray">확인</a>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">희망번호<span class="txt-essential">*</span></th>
+					<td colspan="4">
+						<p>
+							<span class="txt-unit">1순위</span>
+							<span class="txt-unit ml-15">010 - ●●●● - </span>
+							<input type="text" class="c-input" title="희망번호 끝자리 입력" style="width:60px;">
+						</p>
+						<p class="mt-6">
+							<span class="txt-unit">2순위</span>
+							<span class="txt-unit ml-15">010 - ●●●● - </span>
+							<input type="text" class="c-input" title="희망번호 끝자리 입력" style="width:60px;">
+						</p>
+					</td>
+				</tr>
+
+				<tr>
+					<th scope="row">첨부서류</th>
+					<th scope="row" class="th-sub">(필수)<br>가족관계증명서</th>
+					<td colspan="3">
+						<div class="c-input-file">
+							<input type="text" readonly="readonly" class="file-name" title="파일명" style="width:220px;">
+							<label for="upload1_2" class="file-label">찾기</label>
+							<input type="file" id="upload1_2" class="file-upload">
+						</div>
+						<a href="#none" class="btn-base btn-gray">저장</a>
+						<p class="mt-6">
+							<span class="txt-unit">가나다라마바사아자차.jpg</span> <a href="#none" class="btn-base btn-gray">삭제</a>
+						</p>
+						<p class="mt-6">
+							<span class="txt-unit">가나다1.jpg</span> <a href="#none" class="btn-base btn-gray">삭제</a>
+						</p>
+						<ul class="txt-info">
+							<li>개정된 주민등록법에 따라 서류에 포함된 주민등록번호 뒷자리는 마스킹하여 제출하셔야 합니다.</li>
+							<li>단, 가족관계 증명서의 경우 미성년자 및 법정대리인을 제외한 나머지 가족은 이름/주민등록번호 모두 마스킹 처리하여 첨부하여 주십시오.</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>희망번호가 없을 경우 임의 번호로 개통됩니다.</li>
+				<li>위 신규 취득한 번호는 번호재사용 및 맞 번호변경이 제한됩니다.</li>
+				<li>신규 USIM 구매 시 USIM 비용은 익월에 합산 청구됩니다.</li>
+				<li class="txt-red"><a href="#layerPopUsim" data-model="layerPopUsim" class="txt-red">USIM 카드 일련번호란?</a></li>
+			</ul>
+			<!-- //미성년자 -->
+
+			<!-- 외국인 -->
+			<h3 class="h-type3">주문자 정보</h3>
+			<table class="table-row">
+			<caption>주문자 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">Name (이름)<span class="txt-essential">*</span></th>
+					<td><input type="text" class="c-input" title="이름 입력" style="width:120px;"></td>
+					<th scope="row">주문내역 전송<span class="txt-essential">*</span></th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="orderSend3_1" name="orderSend3">
+								<label for="orderSend3_1">휴대폰 번호</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="orderSend3_2" name="orderSend3">
+								<label for="orderSend3_2">이메일</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">연락 가능번호<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">이메일</th>
+					<td> 
+						<input type="text" class="c-input" title="이메일 아이디 입력" style="width:100px;">
+						<span class="txt-unit">@</span>
+						<input type="text" class="c-input" title="이메일 도메인 입력" style="width:100px;">
+						<select class="c-select" title="이메일 도메인 선택" style="width:100px;">
+							<option value="" selected="selected">직접입력</option>
+							<option value="">-</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>주문 · 신청 내역이 주문자 정보 (이메일 및 휴대폰 번호)로 발송됩니다.</li>
+			</ul>
+
+			<h3 class="h-type3">서비스 가입 정보</h3>
+			<table class="table-row">
+			<caption>서비스 가입 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:14%">
+				<col style="width:22%;">
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">Name (이름)</th>
+					<td colspan="4">
+						<input type="text" class="c-input" readonly="readonly" title="이름 입력" style="width:120px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">Resident permit<br>code (체류코드)<span class="txt-essential">*</span></th>
+					<td colspan="2">
+						<select class="c-select" title="체류코드 선택">
+							<option value="" selected="selected">외교(A-1)</option>
+							<option value="">공무(A-2)</option>
+							<option value="">협정(A-3)</option>
+							<option value="">일시취재(C-1)</option>
+							<option value="">문화예술(D-1)</option>
+							<option value="">유학(D-2)</option>
+							<option value="">일반연수(D-4)</option>
+							<option value="">취재(D-5)</option>
+							<option value="">종교(D-6)</option>
+							<option value="">주재(D-7)</option>
+							<option value="">기업투자(D-8)</option>
+							<option value="">무역경영(D-9)</option>
+							<option value="">교수(E-1)</option>
+							<option value="">회화지도(E-2)</option>
+							<option value="">연구(E-3)</option>
+							<option value="">기술지도(E-4)</option>
+							<option value="">전문직업(E-5)</option>
+							<option value="">예술흥행(E-6)</option>
+							<option value="">특정활동(E-7)</option>
+							<option value="">비전문취업(E-9)</option>
+							<option value="">선원취업(E-10)</option>
+							<option value="">방문동거(F-1)</option>
+							<option value="">거주(F-2)</option>
+							<option value="">동반(F-3)</option>
+							<option value="">재외동포(F-4)</option>
+							<option value="">영주(F-5)</option>
+							<option value="">결혼이민(F-6)</option>
+							<option value="">기타(G-1)</option>
+							<option value="">관광취업(H-1)</option>
+							<option value="">방문취업(H-2)</option>
+						</select>
+					</td>
+					<th scope="row">Expiration date of<br>stay(체류만료일자)<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="년 선택" style="width:80px;">
+							<option value="" selected="selected">2018</option>
+						</select>
+						<select class="c-select" title="월 선택" style="width:80px;">
+							<option value="" selected="selected">01</option>
+						</select>
+						<select class="c-select" title="일 선택" style="width:80px;">
+							<option value="" selected="selected">01</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">희망번호<span class="txt-essential">*</span></th>
+					<td colspan="2">
+						<p>
+							<span class="txt-unit">1순위</span>
+							<span class="txt-unit ml-15">010 - ●●●● - </span>
+							<input type="text" class="c-input" title="희망번호 끝자리 입력" style="width:60px;">
+						</p>
+						<p class="mt-6">
+							<span class="txt-unit">2순위</span>
+							<span class="txt-unit ml-15">010 - ●●●● - </span>
+							<input type="text" class="c-input" title="희망번호 끝자리 입력" style="width:60px;">
+						</p>
+					</td>
+					<th scope="row">유심정보<span class="txt-essential">*</span></th>
+					<td>
+						<div class="form-group all-block">
+							<span class="c-rdo">
+								<input type="radio" id="usimInfo3_1" name="usimInfo3">
+								<label for="usimInfo3_1">신규 USIM 구매 <em class="txt-red">(해당단말지원)</em></label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="usimInfo3_2" name="usimInfo3">
+								<label for="usimInfo3_2">기존 USIM 사용 <em class="txt-red">(호환가능 USIM : 나노유심)</em></label>
+							</span>
+						</div>
+						<p class="mt-6">
+							<input type="text" class="c-input" disabled="disabled" title="USIM 카드 일련번호 입력" placeholder="USIM 카드 일련번호" style="width:84%;">
+							<a href="#none" class="btn-base btn-gray">확인</a>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">첨부서류</th>
+					<th scope="row" class="th-sub">(필수)<br>외국인 등록증</th>
+					<td colspan="3">
+						<div class="c-input-file">
+							<input type="text" readonly="readonly" class="file-name" title="파일명" style="width:220px;">
+							<label for="upload2_1" class="file-label">찾기</label>
+							<input type="file" id="upload2_1" class="file-upload">
+						</div>
+						<a href="#none" class="btn-base btn-gray">저장</a>
+						<p class="mt-6">
+							<span class="txt-unit">가나다라마바사아자차.jpg</span> <a href="#none" class="btn-base btn-gray">삭제</a>
+						</p>
+						<p class="mt-6">
+							<span class="txt-unit">가나다1.jpg</span> <a href="#none" class="btn-base btn-gray">삭제</a>
+						</p>
+						<ul class="txt-info">
+							<li>개정된 주민등록법에 따라 서류에 포함된 외국인번호 뒷자리는 마스킹하여 제출하셔야 합니다.</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>희망번호가 없을 경우 임의 번호로 개통됩니다.</li>
+				<li>위 신규 취득한 번호는 번호재사용 및 맞 번호변경이 제한됩니다.</li>
+				<li>신규 USIM 구매 시 USIM 비용은 익월에 합산 청구됩니다.</li>
+				<li class="txt-red"><a href="#layerPopUsim" data-model="layerPopUsim" class="txt-red">USIM 카드 일련번호란?</a></li>
+			</ul>
+			<!-- //외국인 -->
+
+			<!-- 법인 -->
+			<h3 class="h-type3">주문자 정보</h3>
+			<table class="table-row">
+			<caption>주문자 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">Name (이름)<span class="txt-essential">*</span></th>
+					<td><input type="text" class="c-input" title="이름 입력" style="width:120px;"></td>
+					<th scope="row">주문내역 전송<span class="txt-essential">*</span></th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="orderSend4_1" name="orderSend4">
+								<label for="orderSend4_1">휴대폰 번호</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="orderSend4_2" name="orderSend4">
+								<label for="orderSend4_2">이메일</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">연락 가능번호<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">이메일</th>
+					<td> 
+						<input type="text" class="c-input" title="이메일 아이디 입력" style="width:100px;">
+						<span class="txt-unit">@</span>
+						<input type="text" class="c-input" title="이메일 도메인 입력" style="width:100px;">
+						<select class="c-select" title="이메일 도메인 선택" style="width:100px;">
+							<option value="" selected="selected">직접입력</option>
+							<option value="">-</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>주문 · 신청 내역이 주문자 정보 (이메일 및 휴대폰 번호)로 발송됩니다.</li>
+			</ul>
+
+			<h3 class="h-type3">서비스 가입 정보</h3>
+			<table class="table-row">
+			<caption>서비스 가입 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:14%">
+				<col style="width:22%;">
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">이름<span class="txt-essential">*</span></th>
+					<td colspan="4">
+						<input type="text" class="c-input" readonly="readonly" title="이름 입력" placeholder="사업자명" style="width:120px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">법인등록번호<span class="txt-essential">*</span></th>
+					<td colspan="2">
+						<input type="text" class="c-input" title="법인등록번호 입력">
+					</td>
+					<th scope="row">사업자등록번호<span class="txt-essential">*</span></th>
+					<td>
+						<input type="text" class="c-input" title="사업자등록번호 입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">희망번호<span class="txt-essential">*</span></th>
+					<td colspan="2">
+						<p>
+							<span class="txt-unit">1순위</span>
+							<span class="txt-unit ml-15">010 - ●●●● - </span>
+							<input type="text" class="c-input" title="희망번호 끝자리 입력" style="width:60px;">
+						</p>
+						<p class="mt-6">
+							<span class="txt-unit">2순위</span>
+							<span class="txt-unit ml-15">010 - ●●●● - </span>
+							<input type="text" class="c-input" title="희망번호 끝자리 입력" style="width:60px;">
+						</p>
+					</td>
+					<th scope="row">유심정보<span class="txt-essential">*</span></th>
+					<td>
+						<div class="form-group all-block">
+							<span class="c-rdo">
+								<input type="radio" id="usimInfo4_1" name="usimInfo4">
+								<label for="usimInfo4_1">신규 USIM 구매 <em class="txt-red">(해당단말지원)</em></label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="usimInfo4_2" name="usimInfo4">
+								<label for="usimInfo4_2">기존 USIM 사용 <em class="txt-red">(호환가능 USIM : 나노유심)</em></label>
+							</span>
+						</div>
+						<p class="mt-6">
+							<input type="text" class="c-input" disabled="disabled" title="USIM 카드 일련번호 입력" placeholder="USIM 카드 일련번호" style="width:84%;">
+							<a href="#none" class="btn-base btn-gray">확인</a>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">첨부서류</th>
+					<th scope="row" class="th-sub">(필수)<br>법인등록증 or<br>사업자 등록증</th>
+					<td colspan="3">
+						<div class="c-input-file">
+							<input type="text" readonly="readonly" class="file-name" title="파일명" style="width:220px;">
+							<label for="upload3_1" class="file-label">찾기</label>
+							<input type="file" id="upload3_1" class="file-upload">
+						</div>
+						<a href="#none" class="btn-base btn-gray">저장</a>
+						<p class="mt-6">
+							<span class="txt-unit">법인등록증.jpg</span> <a href="#none" class="btn-base btn-gray">삭제</a>
+						</p>
+						<p class="mt-6">
+							<span class="txt-unit">가나다1.jpg</span> <a href="#none" class="btn-base btn-gray">삭제</a>
+						</p>
+						<ul class="txt-info">
+							<li>개정된 주민등록법에 따라 서류에 포함된 주민등록번호 뒷자리는 마스킹하여 제출하셔야 합니다.</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>희망번호가 없을 경우 임의 번호로 개통됩니다.</li>
+				<li>위 신규 취득한 번호는 번호재사용 및 맞 번호변경이 제한됩니다.</li>
+				<li>신규 USIM 구매 시 USIM 비용은 익월에 합산 청구됩니다.</li>
+				<li class="txt-red"><a href="#layerPopUsim" data-model="layerPopUsim" class="txt-red">USIM 카드 일련번호란?</a></li>
+			</ul>
+			<!-- //법인 -->
+			<!-- //주문자정보 – 신규가입 -->
+
+			<!-- 주문자정보 – 번호이동/기기변경 -->
+			<!-- 일반 -->
+			<h3 class="h-type3">주문자 정보</h3>
+			<table class="table-row">
+			<caption>주문자 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">주문자명<span class="txt-essential">*</span></th>
+					<td><input type="text" class="c-input" title="주문자명 입력"></td>
+					<th scope="row">주문내역 전송<span class="txt-essential">*</span></th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="orderSend5_1" name="orderSend5">
+								<label for="orderSend5_1">휴대폰 번호</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="orderSend5_2" name="orderSend5">
+								<label for="orderSend5_2">이메일</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">연락 가능번호<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">이메일<span class="txt-essential">*</span></th>
+					<td> 
+						<input type="text" class="c-input" title="이메일 아이디 입력" style="width:100px;">
+						<span class="txt-unit">@</span>
+						<input type="text" class="c-input" title="이메일 도메인 입력" style="width:100px;">
+						<select class="c-select" title="이메일 도메인 선택" style="width:100px;">
+							<option value="" selected="selected">직접입력</option>
+							<option value="">-</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>주문 · 신청 내역이 주문자 정보 (이메일 및 휴대폰 번호)로 발송됩니다.</li>
+			</ul>
+
+			<h3 class="h-type3">서비스 가입 정보</h3>
+			<table class="table-row">
+			<caption>서비스 가입 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">이름<span class="txt-essential">*</span></th>
+					<td colspan="3"><input type="text" class="c-input" readonly="readonly" title="이름 입력" style="width:120px;"></td>
+				</tr>
+				<tr>
+					<th scope="row">가입<br>휴대폰 번호<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" disabled="disabled" title="휴대폰번호 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" readonly="readonly" title="휴대폰번호 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" readonly="readonly" title="휴대폰번호 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">유심정보<span class="txt-essential">*</span></th>
+					<td>
+						<div class="form-group all-block">
+							<span class="c-rdo">
+								<input type="radio" id="usimInfo5_1" name="usimInfo5">
+								<label for="usimInfo5_1">신규 USIM 구매 <em class="txt-red">(해당단말지원)</em></label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="usimInfo5_2" name="usimInfo5">
+								<label for="usimInfo5_2">기존 USIM 사용 <em class="txt-red">(호환가능 USIM : 나노유심)</em></label>
+							</span>
+						</div>
+						<p class="mt-6">
+							<input type="text" class="c-input" disabled="disabled" title="USIM 카드 일련번호 입력" placeholder="USIM 카드 일련번호" style="width:84%;">
+							<a href="#none" class="btn-base btn-gray">확인</a>
+						</p>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>신규 USIM 구매 시 USIM 비용은 익월에 합산 청구됩니다.</li>
+				<li class="txt-red"><a href="#layerPopUsim" data-model="layerPopUsim" class="txt-red">USIM 카드 일련번호란?</a></li>
+			</ul>
+			<!-- //개인 -->
+
+			<!-- 미성년자 -->
+			<h3 class="h-type3">주문자 정보</h3>
+			<table class="table-row">
+			<caption>주문자 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">이름<span class="txt-essential">*</span></th>
+					<td><input type="text" class="c-input" title="이름 입력" style="width:120px;"></td>
+					<th scope="row">주문내역 전송<span class="txt-essential">*</span></th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="orderSend6_1" name="orderSend6">
+								<label for="orderSend6_1">휴대폰 번호</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="orderSend6_2" name="orderSend6">
+								<label for="orderSend6_2">이메일</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">연락 가능번호<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">이메일</th>
+					<td> 
+						<input type="text" class="c-input" title="이메일 아이디 입력" style="width:100px;">
+						<span class="txt-unit">@</span>
+						<input type="text" class="c-input" title="이메일 도메인 입력" style="width:100px;">
+						<select class="c-select" title="이메일 도메인 선택" style="width:100px;">
+							<option value="" selected="selected">직접입력</option>
+							<option value="">-</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>주문 · 신청 내역이 주문자 정보 (이메일 및 휴대폰 번호)로 발송됩니다.</li>
+			</ul>
+
+			<h3 class="h-type3">서비스 가입 정보</h3>
+			<table class="table-row">
+			<caption>서비스 가입 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:14%">
+				<col style="width:22%;">
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">이름<span class="txt-essential">*</span></th>
+					<td colspan="2">
+						<input type="text" class="c-input" readonly="readonly" title="이름 입력" style="width:120px;">
+					</td>
+					<th scope="row">법정대리인명<span class="txt-essential">*</span></th>
+					<td>
+						<input type="text" class="c-input" readonly="readonly" title="법정대리인명 입력" style="width:120px;">
+						<select class="c-select" title="법정대리인 선택" style="width:100px;">
+							<option value="" selected="selected">본인</option>
+							<option value="">부모</option>
+							<option value="">배우자</option>
+							<option value="">형제/자매</option>
+							<option value="">자녀</option>
+							<option value="">친척</option>
+							<option value="">친구/연인</option>
+							<option value="">외국인</option>
+							<option value="">해당법인직원</option>
+							<option value="">후견인</option>
+							<option value="">법인등기이사</option>
+							<option value="">기타</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">법정대리인<br>연락처 1<span class="txt-essential">*</span></th>
+					<td colspan="2">
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">법정대리인<br>연락처 2</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">가입<br>휴대폰 번호<span class="txt-essential">*</span></th>
+					<td colspan="2">
+						<select class="c-select" disabled="disabled" title="휴대폰번호 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" readonly="readonly" title="휴대폰번호 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" readonly="readonly" title="휴대폰번호 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">유심정보<span class="txt-essential">*</span></th>
+					<td>
+						<div class="form-group all-block">
+							<span class="c-rdo">
+								<input type="radio" id="usimInfo6_1" name="usimInfo6">
+								<label for="usimInfo6_1">신규 USIM 구매 <em class="txt-red">(해당단말지원)</em></label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="usimInfo6_2" name="usimInfo6">
+								<label for="usimInfo6_2">기존 USIM 사용 <em class="txt-red">(호환가능 USIM : 나노유심)</em></label>
+							</span>
+						</div>
+						<p class="mt-6">
+							<input type="text" class="c-input" disabled="disabled" title="USIM 카드 일련번호 입력" placeholder="USIM 카드 일련번호" style="width:84%;">
+							<a href="#none" class="btn-base btn-gray">확인</a>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">첨부서류</th>
+					<th scope="row" class="th-sub">가족관계증명서</th>
+					<td colspan="3">
+						<div class="c-input-file">
+							<input type="text" readonly="readonly" class="file-name" title="파일명" style="width:220px;">
+							<label for="upload4_2" class="file-label">찾기</label>
+							<input type="file" id="upload4_2" class="file-upload">
+						</div>
+						<a href="#none" class="btn-base btn-gray">저장</a>
+						<p class="mt-6">
+							<span class="txt-unit">가나다라마바사아자차.jpg</span> <a href="#none" class="btn-base btn-gray">삭제</a>
+						</p>
+						<p class="mt-6">
+							<span class="txt-unit">가나다1.jpg</span> <a href="#none" class="btn-base btn-gray">삭제</a>
+						</p>
+						<ul class="txt-info">
+							<li>개정된 주민등록법에 따라 서류에 포함된 주민등록번호 뒷자리는 마스킹하여 제출하셔야 합니다.</li>
+							<li>단, 가족관계 증명서의 경우 미성년자 및 법정대리인을 제외한 나머지 가족은 이름/주민등록번호 모두 마스킹 처리하여 첨부하여 주십시오.</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>희망번호가 없을 경우 임의 번호로 개통됩니다.</li>
+				<li>위 신규 취득한 번호는 번호재사용 및 맞 번호변경이 제한됩니다.</li>
+				<li>신규 USIM 구매 시 USIM 비용은 익월에 합산 청구됩니다.</li>
+				<li class="txt-red"><a href="#layerPopUsim" data-model="layerPopUsim" class="txt-red">USIM 카드 일련번호란?</a></li>
+			</ul>
+			<!-- //미성년자 -->
+
+			<!-- 외국인 -->
+			<h3 class="h-type3">주문자 정보</h3>
+			<table class="table-row">
+			<caption>주문자 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">주문자명<span class="txt-essential">*</span></th>
+					<td><input type="text" class="c-input" title="주문자명 입력" style="width:120px;"></td>
+					<th scope="row">주문내역 전송<span class="txt-essential">*</span></th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="orderSend7_1" name="orderSend7">
+								<label for="orderSend7_1">휴대폰 번호</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="orderSend7_2" name="orderSend7">
+								<label for="orderSend7_2">이메일</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">연락 가능번호<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">이메일</th>
+					<td> 
+						<input type="text" class="c-input" title="이메일 아이디 입력" style="width:100px;">
+						<span class="txt-unit">@</span>
+						<input type="text" class="c-input" title="이메일 도메인 입력" style="width:100px;">
+						<select class="c-select" title="이메일 도메인 선택" style="width:100px;">
+							<option value="" selected="selected">직접입력</option>
+							<option value="">-</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>주문 · 신청 내역이 주문자 정보 (이메일 및 휴대폰 번호)로 발송됩니다.</li>
+			</ul>
+
+			<h3 class="h-type3">서비스 가입 정보</h3>
+			<table class="table-row">
+			<caption>서비스 가입 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:14%">
+				<col style="width:22%;">
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">이름<span class="txt-essential">*</span></th>
+					<td colspan="4">
+						<input type="text" class="c-input" readonly="readonly" title="이름 입력" style="width:120px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">Resident permit<br>code (체류코드)<span class="txt-essential">*</span></th>
+					<td colspan="2">
+						<select class="c-select" title="체류코드 선택">
+							<option value="" selected="selected">외교(A-1)</option>
+							<option value="">공무(A-2)</option>
+							<option value="">협정(A-3)</option>
+							<option value="">일시취재(C-1)</option>
+							<option value="">문화예술(D-1)</option>
+							<option value="">유학(D-2)</option>
+							<option value="">일반연수(D-4)</option>
+							<option value="">취재(D-5)</option>
+							<option value="">종교(D-6)</option>
+							<option value="">주재(D-7)</option>
+							<option value="">기업투자(D-8)</option>
+							<option value="">무역경영(D-9)</option>
+							<option value="">교수(E-1)</option>
+							<option value="">회화지도(E-2)</option>
+							<option value="">연구(E-3)</option>
+							<option value="">기술지도(E-4)</option>
+							<option value="">전문직업(E-5)</option>
+							<option value="">예술흥행(E-6)</option>
+							<option value="">특정활동(E-7)</option>
+							<option value="">비전문취업(E-9)</option>
+							<option value="">선원취업(E-10)</option>
+							<option value="">방문동거(F-1)</option>
+							<option value="">거주(F-2)</option>
+							<option value="">동반(F-3)</option>
+							<option value="">재외동포(F-4)</option>
+							<option value="">영주(F-5)</option>
+							<option value="">결혼이민(F-6)</option>
+							<option value="">기타(G-1)</option>
+							<option value="">관광취업(H-1)</option>
+							<option value="">방문취업(H-2)</option>
+						</select>
+					</td>
+					<th scope="row">Expiration date of<br>stay(체류만료일자)<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="년 선택" style="width:80px;">
+							<option value="" selected="selected">2018</option>
+						</select>
+						<select class="c-select" title="월 선택" style="width:80px;">
+							<option value="" selected="selected">01</option>
+						</select>
+						<select class="c-select" title="일 선택" style="width:80px;">
+							<option value="" selected="selected">01</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">가입<br>휴대폰 번호<span class="txt-essential">*</span></th>
+					<td colspan="2">
+						<select class="c-select" disabled="disabled" title="휴대폰번호 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" readonly="readonly" title="휴대폰번호 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" readonly="readonly" title="휴대폰번호 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">유심정보</th>
+					<td>
+						<div class="form-group all-block">
+							<span class="c-rdo">
+								<input type="radio" id="usimInfo7_1" name="usimInfo7">
+								<label for="usimInfo7_1">신규 USIM 구매 <em class="txt-red">(해당단말지원)</em></label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="usimInfo7_2" name="usimInfo7">
+								<label for="usimInfo7_2">기존 USIM 사용 <em class="txt-red">(호환가능 USIM : 나노유심)</em></label>
+							</span>
+						</div>
+						<p class="mt-6">
+							<input type="text" class="c-input" disabled="disabled" title="USIM 카드 일련번호 입력" placeholder="USIM 카드 일련번호" style="width:84%;">
+							<a href="#none" class="btn-base btn-gray">확인</a>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">첨부서류</th>
+					<th scope="row" class="th-sub">(필수)<br>외국인 등록증</th>
+					<td colspan="3">
+						<div class="c-input-file">
+							<input type="text" readonly="readonly" class="file-name" title="파일명" style="width:220px;">
+							<label for="upload2_2" class="file-label">찾기</label>
+							<input type="file" id="upload2_2" class="file-upload">
+						</div>
+						<a href="#none" class="btn-base btn-gray">저장</a>
+						<p class="mt-6">
+							<span class="txt-unit">가나다라마바사아자차.jpg</span> <a href="#none" class="btn-base btn-gray">삭제</a>
+						</p>
+						<p class="mt-6">
+							<span class="txt-unit">가나다1.jpg</span> <a href="#none" class="btn-base btn-gray">삭제</a>
+						</p>
+						<ul class="txt-info">
+							<li>개정된 주민등록법에 따라 서류에 포함된 외국인번호 뒷자리는 마스킹하여 제출하셔야 합니다.</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>희망번호가 없을 경우 임의 번호로 개통됩니다.</li>
+				<li>위 신규 취득한 번호는 번호재사용 및 맞 번호변경이 제한됩니다.</li>
+				<li>신규 USIM 구매 시 USIM 비용은 익월에 합산 청구됩니다.</li>
+				<li class="txt-red"><a href="#layerPopUsim" data-model="layerPopUsim" class="txt-red">USIM 카드 일련번호란?</a></li>
+			</ul>
+
+			<!-- //외국인 -->
+
+			<!-- 법인 -->
+			<h3 class="h-type3">주문자 정보</h3>
+			<table class="table-row">
+			<caption>주문자 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">주문자명<span class="txt-essential">*</span></th>
+					<td><input type="text" class="c-input" title="주문자명 입력" style="width:120px;"></td>
+					<th scope="row">주문내역 전송<span class="txt-essential">*</span></th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="orderSend8_1" name="orderSend8">
+								<label for="orderSend8_1">휴대폰 번호</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="orderSend8_2" name="orderSend8">
+								<label for="orderSend8_2">이메일</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">연락 가능번호<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">이메일</th>
+					<td> 
+						<input type="text" class="c-input" title="이메일 아이디 입력" style="width:100px;">
+						<span class="txt-unit">@</span>
+						<input type="text" class="c-input" title="이메일 도메인 입력" style="width:100px;">
+						<select class="c-select" title="이메일 도메인 선택" style="width:100px;">
+							<option value="" selected="selected">직접입력</option>
+							<option value="">-</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>주문 · 신청 내역이 주문자 정보 (이메일 및 휴대폰 번호)로 발송됩니다.</li>
+			</ul>
+
+			<h3 class="h-type3">서비스 가입 정보</h3>
+			<table class="table-row">
+			<caption>서비스 가입 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:14%">
+				<col style="width:22%;">
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">이름<span class="txt-essential">*</span></th>
+					<td colspan="4">
+						<input type="text" class="c-input" readonly="readonly" title="이름 입력" placeholder="사업자명" style="width:120px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">법인등록번호<span class="txt-essential">*</span></th>
+					<td colspan="2">
+						<input type="text" class="c-input" title="법인등록번호 입력">
+					</td>
+					<th scope="row">사업자등록번호<span class="txt-essential">*</span></th>
+					<td>
+						<input type="text" class="c-input" title="사업자등록번호 입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">가입<br>휴대폰 번호<span class="txt-essential">*</span></th>
+					<td colspan="2">
+						<select class="c-select" disabled="disabled" title="휴대폰번호 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" readonly="readonly" title="휴대폰번호 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" readonly="readonly" title="휴대폰번호 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">유심정보<span class="txt-essential">*</span></th>
+					<td>
+						<div class="form-group all-block">
+							<span class="c-rdo">
+								<input type="radio" id="usimInfo8_1" name="usimInfo8">
+								<label for="usimInfo8_1">신규 USIM 구매 <em class="txt-red">(해당단말지원)</em></label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="usimInfo8_2" name="usimInfo8">
+								<label for="usimInfo8_2">기존 USIM 사용 <em class="txt-red">(호환가능 USIM : 나노유심)</em></label>
+							</span>
+						</div>
+						<p class="mt-6">
+							<input type="text" class="c-input" disabled="disabled" title="USIM 카드 일련번호 입력" placeholder="USIM 카드 일련번호" style="width:84%;">
+							<a href="#none" class="btn-base btn-gray">확인</a>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">첨부서류</th>
+					<th scope="row" class="th-sub">(필수)<br>법인등록증 or<br>사업자 등록증</th>
+					<td colspan="3">
+						<div class="c-input-file">
+							<input type="text" readonly="readonly" class="file-name" title="파일명" style="width:220px;">
+							<label for="upload6_1" class="file-label">찾기</label>
+							<input type="file" id="upload6_1" class="file-upload">
+						</div>
+						<a href="#none" class="btn-base btn-gray">저장</a>
+						<p class="mt-6">
+							<span class="txt-unit">가나다라마바사아자차.jpg</span> <a href="#none" class="btn-base btn-gray">삭제</a>
+						</p>
+						<p class="mt-6">
+							<span class="txt-unit">가나다1.jpg</span> <a href="#none" class="btn-base btn-gray">삭제</a>
+						</p>
+						<ul class="txt-info">
+							<li>개정된 주민등록법에 따라 서류에 포함된 주민등록번호 뒷자리는 마스킹하여 제출하셔야 합니다.</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- //법인 -->
+			<!-- //주문자정보 – 번호이동/기기변경 -->
+			<ul class="txt-info">
+				<li>희망번호가 없을 경우 임의 번호로 개통됩니다.</li>
+				<li>위 신규 취득한 번호는 번호재사용 및 맞 번호변경이 제한됩니다.</li>
+				<li>신규 USIM 구매 시 USIM 비용은 익월에 합산 청구됩니다.</li>
+				<li class="txt-red"><a href="#layerPopUsim" data-model="layerPopUsim" class="txt-red">USIM 카드 일련번호란?</a></li>
+			</ul>
+			
+
+			<!-- 청구정보- 신규가입 / 번호이동 -->
+			<h3 class="h-type3">청구 정보</h3>
+			<table class="table-row">
+			<caption>청구 정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row" rowspan="2">요금안내<br>수신방법<span class="txt-essential">*</span></th>
+					<td colspan="2">
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="receiveType2" name="receiveType">
+								<label for="receiveType2">문자 요금안내서</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="receiveType3" name="receiveType">
+								<label for="receiveType3">이메일 요금안내서</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="receiveType4" name="receiveType">
+								<label for="receiveType4">T world 확인(온라인/앱)</label>
+							</span>
+							<!-- 2022.02.03
+								<span class="c-rdo">
+								<input type="radio" id="receiveType5" name="receiveType">
+								<label for="receiveType5">요금안내서 미신청</label>
+							</span> -->
+							<span class="c-rdo">
+								<input type="radio" id="receiveType1" name="receiveType">
+								<label for="receiveType1">Bill Letter(앱)</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="receiveType6" name="receiveType">
+								<label for="receiveType6">기타(우편)</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<span class="c-chk">
+							<input type="checkbox" id="receiveLine" name="receiveLine">
+							<label for="receiveLine">다회선 통합청구</label>
+						</span>
+						<select class="c-select ml-10" title="휴대폰번호 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="휴대폰번호 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="휴대폰번호 끝자리 입력" style="width:60px;">
+						<a href="#none" class="btn-base btn-gray">인증</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">청구지 주소<span class="txt-essential">*</span></th>
+					<td colspan="2">
+						<div class="form-group block">
+							<input type="text" class="c-input" readonly="readonly" title="우편번호 검색 입력" style="width:80px;">
+							<a href="#none" class="btn-base btn-gray">우편번호검색</a>
+							<p class="input-address">
+								<input type="text" class="c-input" readonly="readonly" title="주소 입력" style="width:50%;">
+								<input type="text" class="c-input" title="상세주소 입력" placeholder="상세주소를 입력하세요." style="width:40%;">
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" rowspan="5">납부방법<span class="txt-essential">*</span></th>
+					<td colspan="2">
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="paymentType1" name="paymentType" checked="checked">
+								<label for="paymentType1">체크/신용카드 납부</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="paymentType2" name="paymentType">
+								<label for="paymentType2">계좌이체</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" class="th-sub">카드정보</th>
+					<td>
+						<select class="c-select" title="카드 선택" style="width:120px;">
+							<option value="" selected="selected">카드 선택</option>
+						</select>
+						<input type="text" class="c-input" title="카드번호16자리 입력" placeholder="카드번호16자리" style="width:180px;">
+						<a href="#none" class="btn-base btn-gray">카드 유효성 검사</a>
+						<a href="#none" class="btn-base btn-gray">카드 유효성 검사 완료</a>
+						<a href="#none" class="btn-base btn-line-gray">재설정</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" class="th-sub">유효기간</th>
+					<td>
+						<input type="text" class="c-input" title="유효기간 월 입력" placeholder="월" style="width:80px;">
+						<span class="txt-unit">/</span>
+						<input type="text" class="c-input" title="유효기간 년도 입력" placeholder="년도" style="width:80px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" class="th-sub">예금주</th>
+					<td>
+						<input type="text" class="c-input" title="예금주 입력" style="width:100px;">
+						<select class="c-select" title="예금주 선택" style="width:100px;">
+							<option value="" selected="selected">본인</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" class="th-sub">카드 주 주민번호<br>앞 7자리</th>
+					<td>
+						<input type="text" class="c-input" title="주민등록앞번호 입력" style="width:100px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="주민등록뒷번호 시작번호 입력" style="width:26px;">
+						<span class="txt-unit">●●●●●●</span>
+					</td>
+				</tr>
+				<!-- 납부방법 : 계좌이체 -->
+				<!-- <tr>
+					<th scope="row" class="th-sub">은행정보</th>
+					<td>
+						<select class="c-select" title="은행정보 선택" style="width:120px;">
+							<option value="" selected="selected">은행정보 선택</option>
+						</select>
+						<input type="text" class="c-input" title="은행계좌번호 입력" placeholder="은행계좌번호" style="width:180px;">
+						<a href="#none" class="btn-base btn-gray">계좌번호 유효성 검사</a>
+						<a href="#none" class="btn-base btn-gray">계좌번호 유효성 검사 완료</a>
+						<a href="#none" class="btn-base btn-line-gray">재설정</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" class="th-sub">예금주</th>
+					<td>
+						<input type="text" class="c-input" title="예금주 입력" style="width:100px;">
+						<select class="c-select" title="예금주 선택" style="width:100px;">
+							<option value="" selected="selected">본인</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" class="th-sub">예금 주 주민번호<br>앞 7자리</th>
+					<td>
+						<input type="text" class="c-input" title="주민등록앞번호 입력" style="width:100px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="주민등록뒷번호 시작번호 입력" style="width:26px;">
+						<span class="txt-unit">●●●●●●</span>
+					</td>
+				</tr> -->
+				<!-- //납부방법 : 계좌이체 -->
+			</tbody>
+			</table>
+			<div class="box-type1">
+				<span class="c-chk">
+					<input type="checkbox" id="agreeType2_1" name="agreeType2">
+					<label for="agreeType2_1">본인(예금주 또는 카드주)은 이동전화 서비스 제공을 위한 법정생년월일의 수집, 예금주(카드주)의 이동전화번호 수집/문자안내, 납부하여야 할 요금에 대해 별도의 통지 없이 위의 본인의 지정계좌번호(카드번호)에서 지정된 출금(결제)일에 인출(결제)되는 것에 동의합니다.</label>
+				</span>
+			</div>
+			<ul class="txt-info">
+				<li>우편 요금 안내서 신청 시 요금 내역을 신속하게 알려 드리기 위해 문자 요금 안내서 또는 Bill Letter를 추가적으로 전송해드립니다.</li>
+				<li class="txt-red">통합번호와 요금안내서 수신/납부 방법이 동일하게 적용되며, 하나의 요금안내서로 전송됩니다.</li>
+				<li class="txt-red">우편 요금안내서 신청 시 요금 내역을 신속하게 알려 드리기 위해 문자 요금 안내서 또는 Bill Letter를 추가적으로 전송해 드립니다.</li>
+			</ul>
+
+			<!-- 휴대폰배송 – 순액형 요금제 -->
+			<h3 class="h-type3">휴대폰 배송 선택</h3>
+			<table class="table-row">
+			<caption>휴대폰 배송 선택</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">배송방법<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="배송방법 선택" style="width:120px;">
+							<option value="" selected="selected">택배수령</option>
+							<option value="">찾아가는 개통</option>
+							<option value="">오늘배송 (서울만 가능)</option>
+						</select>
+						<p class="txt-info">오후 4시까지 주문완료 시 익일 배송 예정</p>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<!-- 휴대폰배송 – 택배 -->
+			<h3 class="h-type3">휴대폰 배송 선택</h3>
+			<table class="table-row">
+			<caption>휴대폰 배송 선택</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">배송방법<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="배송방법 선택" style="width:120px;">
+							<option value="" selected="selected">택배수령</option>
+							<option value="">찾아가는 개통</option>
+							<option value="">바로픽업</option>
+							<option value="">오늘배송 (서울만 가능)</option>
+						</select>
+						<p class="txt-info">오후 4시까지 주문완료 시 익일 배송 예정</p>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			
+			<div class="h-area3">
+				<h3 class="h-type3">휴대폰 배송정보</h3>
+				<div class="r-form">
+					<span class="c-chk">
+						<input type="checkbox" id="sameInfo1_1" name="sameInfo1">
+						<label for="sameInfo1_1">주문자와 동일합니다.</label>
+					</span>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>휴대폰 배송정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">받는 사람<span class="txt-essential">*</span></th>
+					<td colspan="3"><input type="text" class="c-input" title="받는 사람 입력" style="width:150px;"></td>
+				</tr>
+				<tr>
+					<th scope="row">연락가능번호 1<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">연락가능번호 2</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">받으실 주소<span class="txt-essential">*</span></th>
+					<td colspan="3">
+						<div class="form-group block">
+							<input type="text" class="c-input" title="우편번호 검색 입력" readonly="readonly" style="width:80px;">
+							<a href="#none" class="btn-base btn-gray">우편번호검색</a>
+							<p class="input-address">
+								<input type="text" class="c-input" title="주소 입력" readonly="readonly">
+								<input type="text" class="c-input" title="상세주소 입력" placeholder="상세주소를 입력하세요.">
+							</p>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area3">
+				<h3 class="h-type3">지인(추천인)코드</h3>
+			</div>
+			<table class="table-row">
+			<caption>주 생활지역</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">지인(추천인)코드</th>
+					<td>
+						<input type="text" class="c-input" title="지인(추천인)코드 입력" style="width: 200px">
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			
+			<!-- [D] s: 5G 휴대폰 구매 case  -->
+			<div class="h-area3">
+				<h3 class="h-type3">주 생활지역</h3>
+			</div>
+			<table class="table-row">
+			<caption>주 생활지역</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">주 생활지역<span class="txt-essential">*</span></th>
+					<td colspan="3">
+						<div class="form-group block">
+							<input type="text" class="c-input" title="우편번호 검색 입력" readonly="readonly" style="width:80px;">
+							<a href="#none" class="btn-base btn-gray">우편번호검색</a>
+							<p class="input-address">
+								<input type="text" class="c-input" title="주소 입력" readonly="readonly">
+							</p>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<p class="f-12 mt-6">*5G 가용지역 확인 동의를 위한 정보</p>
+			<!-- [D] e: 5G 휴대폰 구매 case -->
+
+			<!-- 휴대폰배송 – 오늘도착 -->
+			<h3 class="h-type3">휴대폰 배송 선택</h3>
+			<table class="table-row">
+			<caption>휴대폰 배송 선택</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">배송방법<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="배송방법 선택" style="width:120px;">
+							<option value="">택배수령</option>
+							<option value="">찾아가는 개통</option>
+							<option value="">바로픽업</option>
+							<option value="" selected="selected">오늘배송 (서울만 가능)</option>
+						</select>
+						<p class="txt-info">주문 후 3시간 이내 배송 예정, 서울만 가능</p>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area3">
+				<h3 class="h-type3">휴대폰 배송정보</h3>
+				<div class="r-form">
+					<span class="c-chk">
+						<input type="checkbox" id="sameInfo2_1" name="sameInfo2">
+						<label for="sameInfo2_1">주문자와 동일합니다.</label>
+					</span>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>휴대폰 배송정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">받는 사람<span class="txt-essential">*</span></th>
+					<td colspan="3"><input type="text" class="c-input" title="받는 사람 입력" style="width:150px;"></td>
+				</tr>
+				<tr>
+					<th scope="row">연락가능번호 1<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">연락가능번호 2</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">받으실 주소<span class="txt-essential">*</span></th>
+					<td colspan="3">
+						<div class="form-group block">
+							<input type="text" class="c-input" title="우편번호 검색 입력" readonly="readonly" style="width:80px;">
+							<a href="#none" class="btn-base btn-gray">우편번호검색</a>
+							<p class="input-address">
+								<input type="text" class="c-input" title="주소 입력" readonly="readonly">
+								<input type="text" class="c-input" title="상세주소 입력" placeholder="상세주소를 입력하세요.">
+							</p>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			
+			<!-- 휴대폰배송 – 찾아가는 서비스 -->
+			<h3 class="h-type3">휴대폰 배송 선택</h3>
+			<table class="table-row">
+			<caption>휴대폰 배송 선택</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">배송방법<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="배송방법 선택" style="width:120px;">
+							<option value="">택배수령</option>
+							<option value="" selected="selected">찾아가는 개통</option>
+							<option value="">바로픽업</option>
+							<option value="">오늘배송 (서울만 가능)</option>
+						</select>
+						<a href="#layerPopFindService" data-model="layerPopFindService" class="ico-tooltip">안내툴팁</a>
+						<p class="txt-info">오후 4시까지 주문완료 시 익일 배송 예정</p>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<ul class="txt-info">
+				<li>일부 지역에 한하여 서비스가 제공되지 않을 수 있으니 방문요청 주소를 꼭 확인해 주세요.</li>
+				<li>요청하신 방문 시간을 최대한 준수하나 교통상황이나 일정에 따라 일부 변경될 수 있으며 사전에 연락 드리겠습니다.</li>
+			</ul>
+
+			<div class="h-area3">
+				<h3 class="h-type3">휴대폰 배송정보</h3>
+				<div class="r-form">
+					<span class="c-chk">
+						<input type="checkbox" id="sameInfo3_1" name="sameInfo3">
+						<label for="sameInfo3_1">주문자와 동일합니다.</label>
+					</span>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>휴대폰 배송정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">받는 사람<span class="txt-essential">*</span></th>
+					<td colspan="3"><input type="text" class="c-input" title="받는 사람 입력" style="width:150px;"></td>
+				</tr>
+				<tr>
+					<th scope="row">연락가능번호 1<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">연락가능번호 2</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">받으실 주소<span class="txt-essential">*</span></th>
+					<td colspan="3">
+						<div class="form-group block">
+							<input type="text" class="c-input" title="우편번호 검색 입력" readonly="readonly" style="width:80px;">
+							<a href="#none" class="btn-base btn-gray">우편번호검색</a>
+							<p class="input-address">
+								<input type="text" class="c-input" title="주소 입력" readonly="readonly">
+								<input type="text" class="c-input" title="상세주소 입력" placeholder="상세주소를 입력하세요.">
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">방문일자<span class="txt-essential">*</span></th>
+					<td colspan="3">
+						<select class="c-select" title="날짜 선택" style="width:150px;">
+							<option value="" selected="selected">날짜</option>
+						</select>
+						<select class="c-select" title="시간 선택" style="width:150px;">
+							<option value="" selected="selected">시간</option>
+						</select>
+						<a href="#none" class="btn-base btn-gray">확인</a>
+						<p class="txt-info">요청하신 방문 시간을 최대한 준수하나 교통상황이나 일정에 따라 일부 변경될 수 있으며 사전에 연락 드리겠습니다.</p>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<!-- 휴대폰배송 – 바로픽업 -->
+			<h3 class="h-type3">휴대폰 배송 선택</h3>
+			<table class="table-row">
+			<caption>휴대폰 배송 선택</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">배송방법<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="배송방법 선택" style="width:120px;">
+							<option value="">택배수령</option>
+							<option value="">찾아가는 개통</option>
+							<option value="" selected="selected">바로픽업</option>
+							<option value="">오늘배송 (서울만 가능)</option>
+						</select>
+						<a href="#none" class="btn-base btn-gray">매장 조회</a>
+						<p class="txt-info">1시간 이후 방문 가능</p>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area3">
+				<h3 class="h-type3">휴대폰 배송정보</h3>
+				<div class="r-form">
+					<span class="c-chk">
+						<input type="checkbox" id="sameInfo4_1" name="sameInfo4">
+						<label for="sameInfo4_1">주문자와 동일합니다.</label>
+					</span>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>휴대폰 배송정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">받는 사람<span class="txt-essential">*</span></th>
+					<td colspan="3"><input type="text" class="c-input" title="받는 사람 입력" style="width:150px;"></td>
+				</tr>
+				<tr>
+					<th scope="row">연락가능번호 1<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">연락가능번호 2</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">매장 주소<span class="txt-essential">*</span></th>
+					<td colspan="3">
+						<p class="txt-red">매장 조회 버튼을 클릭하여 방문 매장을 선택 해 주세요.</p>
+						(06120) 서울 강남구 역삼동 봉은사로 109
+						<a href="#none" class="btn-base btn-gray">매장 자세히 보기</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">방문일자<span class="txt-essential">*</span></th>
+					<td colspan="3">
+						<select class="c-select" title="날짜 선택" style="width:150px;">
+							<option value="" selected="selected">날짜</option>
+						</select>
+						<select class="c-select" title="시간 선택" style="width:150px;">
+							<option value="" selected="selected">시간</option>
+						</select>
+						<a href="#none" class="btn-base btn-gray">확인</a>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<!-- T기프트 배송 – 실물배송 (택배/퀵) -->
+			<div class="h-area3">
+				<h3 class="h-type3">T 기프트 배송정보</h3>
+				<div class="r-form">
+					<span class="c-chk">
+						<input type="checkbox" id="samePhoneInfo1_1" name="samePhoneInfo1">
+						<label for="samePhoneInfo1_1">휴대폰 배송정보와 동일합니다.</label>
+					</span>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>T 기프트 배송정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">배송방법<span class="txt-essential">*</span></th>
+					<td colspan="3">
+						<div class="align-block">
+							택배 배송 오늘 도착
+							<div class="r-txt ">
+								<p class="txt-info mt-0">T 기프트는 단말 전송 시점에 배송 됩니다. (토/일 공휴일 제외)</p>
+								<!-- <p class="txt-info mt-0">T 기프트는 단말 배송 시 함께 배송됩니다. 단, 부피가 큰 T 기프트는 택배로 배송될 수 있습니다.</p> 오늘 도착 문구 -->
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">받는 사람<span class="txt-essential">*</span></th>
+					<td colspan="3">
+						<input type="text" class="c-input" title="받는 사람 입력" style="width:150px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">연락가능번호 1<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">연락가능번호 2</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">받으실 주소<span class="txt-essential">*</span></th>
+					<td colspan="3">
+						<div class="form-group block">
+							<input type="text" class="c-input" title="우편번호 검색 입력" readonly="readonly" style="width:80px;">
+							<a href="#none" class="btn-base btn-gray">우편번호검색</a>
+							<p class="input-address">
+								<input type="text" class="c-input" title="주소 입력" readonly="readonly">
+								<input type="text" class="c-input" title="상세주소 입력" placeholder="상세주소를 입력하세요.">
+							</p>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<!-- T기프트 배송 – 실물배송 (택배/퀵) -->
+			<div class="h-area3">
+				<h3 class="h-type3">T 기프트 배송정보</h3>
+				<div class="r-form">
+					<span class="c-chk">
+						<input type="checkbox" id="samePhoneInfo2_1" name="samePhoneInfo2">
+						<label for="samePhoneInfo2_1">휴대폰 배송정보와 동일합니다.</label>
+					</span>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>T 기프트 배송정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">배송방법<span class="txt-essential">*</span></th>
+					<td colspan="3">
+						<div class="align-block">
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="delivery1" name="delivery">
+									<label for="delivery1">택배 배송</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="delivery2" name="delivery">
+									<label for="delivery2">직접 수령</label>
+								</span>
+							</div>
+							<div class="r-txt">
+								<p class="txt-info">T 기프트는 단말 개통 후 2~3일 이내 택배로 일괄 배송됩니다.</p>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">받는 사람<span class="txt-essential">*</span></th>
+					<td colspan="3"><input type="text" class="c-input" title="받는 사람 입력" style="width:150px;"></td>
+				</tr>
+				<tr>
+					<th scope="row">연락가능번호 1<span class="txt-essential">*</span></th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+					<th scope="row">연락가능번호 2</th>
+					<td>
+						<select class="c-select" title="연락처 첫자리 선택" style="width:60px;">
+							<option value="" selected="selected">010</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 중간자리 입력" style="width:60px;">
+						<span class="txt-unit">-</span>
+						<input type="text" class="c-input" title="연락처 끝자리 입력" style="width:60px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">받으실 주소<span class="txt-essential">*</span></th>
+					<td colspan="3">
+						<div class="form-group block">
+							<input type="text" class="c-input" title="우편번호 검색 입력" readonly="readonly" style="width:80px;">
+							<a href="#none" class="btn-base btn-gray">우편번호검색</a>
+							<p class="input-address">
+								<input type="text" class="c-input" title="주소 입력" readonly="readonly">
+								<input type="text" class="c-input" title="상세주소 입력" placeholder="상세주소를 입력하세요.">
+							</p>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<!-- T기프트 배송 – MMS배송 -->
+			<div class="h-area3">
+				<h3 class="h-type3">T 기프트 배송정보</h3>
+			</div>
+
+			<div class="box-type1 align-center">
+				선택 하신 T기프트는 서비스 개통 후 신청자 휴대폰 번호로 MMS 발송 됩니다.
+			</div>
+
+			<h3 class="h-type3">약관동의</h3>
+			<div class="box-type1">
+				<div class="agree-type">
+					<span class="c-chk">
+						<input type="checkbox" id="allAgree" name="allAgree">
+						<label for="allAgree"><strong class="txt-black2">모든 이용약관을 읽었으며, 이에 일괄 동의 합니다.</strong></label>
+					</span>
+					<p>
+						전체 동의 선택 시, 필수약관과 선택약관이 모두 동의로 선택됩니다.<br>
+						단, 전체 동의를 선택하더라도 각 약관의 동의 내용을 모두 확인 후 개별적으로 동의 여부를 선택하실 수 있습니다.
+					</p>
+				</div>
+			</div>
+			<ul class="agree-list">
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">개인정보 수집 및 이용동의 (필수)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="agreeY1" name="agree1">
+								<label for="agreeY1">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="agreeN1" name="agree1">
+								<label for="agreeN1">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						<div class="c-term">
+							<h2>1. 개인정보 수집 및 이용 동의(필수 동의)</h2>
+
+							<h3>(SK텔레콤㈜귀중)</h3>
+
+							<p>
+								본인은 프리미엄클럽 서비스를 제공받기 위해 다음의 내용을 확인하고, 귀사가 본인의 개인정보를 다음과 같이 수집ㆍ이용ㆍ제공 및 취급 위탁하는 것에 동의 합니다.
+							</p>
+
+							<p>1)개인정보의 수집 항목 및 이용목적(필수 동의)</p>
+							<table class="table-term">
+							<caption>개인정보의 수집 항목 및 이용목적(필수 동의)</caption>
+							<colgroup>
+								<col style="width: 25%;">
+								<col>
+								<col style="width: 25%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">이용목적</th>
+									<th scope="col">수집항목</th>
+									<th scope="col">이용목적</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										ㆍ프리미엄클럽 서비스 제공을 위한 본인식별ㆍ인증<br>
+										ㆍ상담ㆍ불만 처리 및 서비스 관련 정보 제공<br>
+										ㆍ서비스 가입자 정보 전산 처리 및 유지관리<br>
+										ㆍ서비스 관련 요금정산ㆍ청구 등
+									</td>
+									<td>
+										서비스관리번호,서비스번호,이름,생년월일,서비스 가입 정보(이동전화 최초 개통일/ 서비스 가입일/ 할부 Setting 금액/ 할부금액/ 공시지원금/ 서비스해지일 등), 신청 단말기 정보(제조사/모델/일련번호), 기기변경 정보(모델/일련번호/변경사유),서비스료 납부 정보
+									</td>
+									<td>
+										아래의 경우를 제외하고 서비스 해지시 까지<br>
+										ㆍ법령에 따로 정한 경우<br>
+										ㆍ요금관련 분쟁해결을 위해 해지 후 6개월까지<br>
+										(단,이동전화 서비스 계약이 해지 된 고객이 요금 정산이 미완료된 경우에는 해결완료일로부터 6개월까지,요금 관련 분쟁이 계속될 경우에는 해결 시 까지)
+									</td>
+								</tr>
+							</tbody>
+							</table>
+
+							<p>2)개인정보 취급위탁 안내(필수 동의)</p>
+							<table class="table-term">
+							<caption>개인정보 취급위탁 안내(필수 동의)</caption>
+							<colgroup>
+								<col style="width: 30%;">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">위탁업체</th>
+									<th scope="col">업무 목적</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>SK주식회사(C&C)</td>
+									<td>서비스 가입자 정보 전산 처리 및 유지/관리</td>
+								</tr>
+							</tbody>
+							</table>
+
+							<p>• ※고객님께서는 개인정보 수집 이용동의 거부권이 있으시며, 미동의 시 서비스 가입 및 이용에 제약이 있고 미동의 하신 경우 정보가 제공 되지 않습니다.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">상품 구매 약관 필수 동의 (필수)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="agreeY2" name="agree2">
+								<label for="agreeY2">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="agreeN2" name="agree2">
+								<label for="agreeN2">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">구매 시 유의사항 (필수)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="agreeY3" name="agree3">
+								<label for="agreeY3">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="agreeN3" name="agree3">
+								<label for="agreeN3">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+			</ul>
+
+			<h3 class="h-type3">개인정보ㆍ개인위치정보 수집ㆍ이용 ㆍ 제공 ㆍ 처리위탁 및 마케팅 정보 수신 동의서</h3>
+			<p class="f-12">본인은 귀사의 이동전화 서비스 및 부가서비스, 마케팅정보 제공 서비스 등을 제공받기 위해 다음의 내용을 확인하고, 귀사가 본인의 개인정보ㆍ위치정보ㆍ신용정보를 다음과 같이 수집ㆍ이용ㆍ제공 및 처리위탁하는 것에 동의합니다.</p>
+			<ul class="agree-list">
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">개인정보 제3자 제공 동의 (필수동의)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="infoAgreeY1" name="infoAgree1">
+								<label for="infoAgreeY1">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="infoAgreeN1" name="infoAgree1">
+								<label for="infoAgreeN1">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">고객 혜택 제공을 위한 정보 이용 관련 동의 (선택동의)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="infoAgreeY2" name="infoAgree2">
+								<label for="infoAgreeY2">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="infoAgreeN2" name="infoAgree2">
+								<label for="infoAgreeN2">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">고객 혜택 정보 및 광고 수신 동의 (선택동의)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="infoAgreeY3" name="infoAgree3">
+								<label for="infoAgreeY3">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="infoAgreeN3" name="infoAgree3">
+								<label for="infoAgreeN3">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">SK브로드밴드 연계 개인맞춤형 혜택/정보 제공 위한 제3자 제공 및 정보/광고 수신동의 (선택동의)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="infoAgreeY4" name="infoAgree4">
+								<label for="infoAgreeY4">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="infoAgreeN4" name="infoAgree">
+								<label for="infoAgreeN4">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">SK브로드밴드 연계 고객 혜택 제공을 위한 개인정보 처리위탁 동의 (선택동의)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="infoAgreeY5" name="infoAgree5">
+								<label for="infoAgreeY5">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="infoAgreeN5" name="infoAgree">
+								<label for="infoAgreeN5">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">T안심보상폰/클럽T조기변/프리클럽반납 가입자 정보 제3자 제공 동의 (선택동의)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="infoAgreeY6" name="infoAgree6">
+								<label for="infoAgreeY6">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="infoAgreeN6" name="infoAgree6">
+								<label for="infoAgreeN6">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">이동전화서비스 이용안내 및 유의사항</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="infoAgreeY7" name="infoAgree7">
+								<label for="infoAgreeY7">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="infoAgreeN7" name="infoAgree7">
+								<label for="infoAgreeN7">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">약관의 주요내용 설명서</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="infoAgreeY8" name="infoAgree8">
+								<label for="infoAgreeY8">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="infoAgreeN8" name="infoAgree8">
+								<label for="infoAgreeN8">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+			</ul>
+
+			<h3 class="h-type3">단말 매매계약서</h3>
+			<ul class="agree-list">
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">단말 매매정보</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="deviceAgreeY1" name="deviceAgree1">
+								<label for="deviceAgreeY1">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="deviceAgreeN1" name="deviceAgree1">
+								<label for="deviceAgreeN1">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">상품 구매 약관 필수 동의 (필수)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="deviceAgreeY2" name="deviceAgree2">
+								<label for="deviceAgreeY2">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="deviceAgreeN2" name="deviceAgree2">
+								<label for="deviceAgreeN2">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">구매 시 유의사항 (필수)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="deviceAgreeY3" name="deviceAgree3">
+								<label for="deviceAgreeY3">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="deviceAgreeN3" name="deviceAgree3">
+								<label for="deviceAgreeN3">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+			</ul>
+			<div class="box-type1 mt-10">
+				<span class="c-chk">
+					<input type="checkbox" id="agreeType3_1" name="agreeType3">
+					<label for="agreeType3_1">본인은 본 계약서에 기재된 매매조건 및 고객안내사항과 매매약관이 정하는 바와 같이 매매를 신청하고, 단말기매매대금채권 양도에 대하여 이의없이 승낙합니다.</label>
+				</span>
+			</div>
+
+			<h3 class="h-type3">분할 상환 계약서</h3>
+			<ul class="agree-list">
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">분할 상환 정보</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="divideAgreeY1" name="divideAgree1">
+								<label for="divideAgreeY1">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="divideAgreeN1" name="divideAgree1">
+								<label for="divideAgreeN1">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">분할 상환 약관</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="divideAgreeY2" name="divideAgree2">
+								<label for="divideAgreeY2">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="divideAgreeN2" name="divideAgree2">
+								<label for="divideAgreeN2">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+			</ul>
+			<div class="box-type1 mt-10">
+				<span class="c-chk">
+					<input type="checkbox" id="agreeType4_1" name="agreeType4">
+					<label for="agreeType4_1">본인은 단말매매계약에 따라 단말기 매매대금 채권을 양수한 SK텔레콤에 대하여 본 계약서에 기재된 분할상환조건 및 분할상환약관이 정하는 바와 같이 단말기매매대금의 분할상환을 신청합니다.</label>
+				</span>
+			</div>			
+			<h3 class="h-type3">다이렉트 플랜 (필수)</h3>
+			<ul class="agree-list">
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">다이렉트 플랜 혜택 제공에 관한 계약 (필수)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="directAgreeY1" name="directAgree1">
+								<label for="directAgreeY1">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="directAgreeN1" name="directAgree1">
+								<label for="directAgreeN1">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">다이렉트 플랜 제휴 혜택 제공을 위한 제3자 제공 동의 (필수)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="directAgreeY2" name="directAgree2">
+								<label for="directAgreeY2">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="directAgreeN2" name="directAgree2">
+								<label for="directAgreeN2">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+			</ul>			
+			
+			<h3 class="h-type3">kakao X 다이렉트 플랜 (필수)</h3>
+			<ul class="agree-list">
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">다이렉트 플랜 혜택 제공에 관한 계약 (필수)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="kakaodirectAgreeY1" name="kakaodirectAgree1">
+								<label for="kakaodirectAgreeY1">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="kakaodirectAgreeN1" name="kakaodirectAgree1">
+								<label for="kakaodirectAgreeN1">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">다이렉트 플랜 제휴 혜택 제공을 위한 제3자 제공 동의 (필수)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="kakaodirectAgreeY2" name="kakaodirectAgree2">
+								<label for="kakaodirectAgreeY2">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="kakaodirectAgreeN2" name="kakaodirectAgree2">
+								<label for="kakaodirectAgreeN2">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">개인정보 제3자 제공 동의 (필수)</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="kakaodirectAgreeY3" name="kakaodirectAgree3">
+								<label for="kakaodirectAgreeY3">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="kakaodirectAgreeN3" name="kakaodirectAgree3">
+								<label for="kakaodirectAgreeN3">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>			
+			
+			</ul>						
+			<ul class="agree-list mt-20">
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">개인(신용)정보 조회.수집.이용.제공 동의서</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="privateAgreeY1" name="privateAgree1">
+								<label for="privateAgreeY1">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="privateAgreeN1" name="privateAgree1">
+								<label for="privateAgreeN1">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+				<li>
+					<div class="agree-tit-area">
+						<a href="#none" class="agree-tit">이동전화서비스 추가 안내사항</a>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="privateAgreeY2" name="privateAgree2">
+								<label for="privateAgreeY2">동의</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="privateAgreeN2" name="privateAgree2">
+								<label for="privateAgreeN2">동의안함</label>
+							</span>
+						</div>
+					</div>
+					<div class="agree-con">
+						약관 내용
+					</div>
+				</li>
+			</ul>
+
+			<div class="box-type1 align-center mt-40">
+				<span class="c-chk">
+					<input type="checkbox" id="appAgreeType" name="appAgreeType">
+					<label for="appAgreeType">본인은 위 신청 사항에 대하여 모두 확인 하였고, 이에 동의합니다.<br>앞서 본인 인증한 내용으로 동의에 대한 서명을 대체하겠습니다.</label>
+				</span>
+			</div>
+
+			<h3 class="h-type3">단말 결제 방법</h3>
+			<table class="table-row">
+			<caption>단말 결제 방법</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">단말기 납부방법</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="devicePayment1" name="devicePayment">
+								<label for="devicePayment1">ARS 결제</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="devicePayment2" name="devicePayment">
+								<label for="devicePayment2">가상 계좌(에스크로)</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">단말기 결제 금액</th>
+					<td><strong class="txt-red">957,000원</strong></td>
+				</tr>
+			</tbody>
+			</table>
+			<div class="box-type1 pd10">
+				<ul class="txt-info">
+					<li>전 카드사 이용 가능</li>
+					<li>
+						삼성카드 결제 시 카드사 포인트 추가 할인 혜택
+						<ul>
+							<li> -포인트 결제 요청 시 보유 포인트만큼 결제대금에서 차감</li>
+							<li>-삼성카드 무이자 할부 혜택 (3/6/9/12개월)</li>
+							<li>※ 삼성카드 미소지 고객: '<a href="#none" class="text-primary">삼성카드 빠른 발급 서비스</a>'를 통해 1시간 내 가상카드정보 발급, 카드 결제 이용 가능</li>
+						</ul>
+					</li>
+					<li>무통장 입금: 주문 후 24시간 내 미입금 시 주문 자동 취소. 주문자명과 입금자명이 동일해야 정상 입금 확인</li>
+				</ul>
+			</div>
+
+			<div class="btn-area center">
+				<a href="#layerPopTermination" data-model="layerPopTermination" class="btn-base btn-blue">작성완료</a>
+				<a href="#none" class="btn-base btn-line-blue">취소</a>
+			</div>
+			<div class="btn-area center">
+				<a href="#none" class="btn-base btn-blue">결제하기</a>
+				<a href="#none" class="btn-base btn-line-blue">취소</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 레이어팝업 : 요금 상세정보 -->
+<div id="layerPopBillDetail" class="pop-wrap pop-layer small">
+	<div class="pop-header">
+		<strong class="h-type1">요금 상세정보</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		<h3 class="h-type2">요금 상세정보</h3>
+		
+		<div class="box-type1">
+			<div class="bill-area2">
+				<p class="bill-type">
+					<strong>월 납부금액</strong>
+					(A+B)
+				</p>
+				<p class="bill-price">
+					<strong>95,140원</strong>
+					(수수료 포함 : 98,691원)
+				</p>
+			</div>
+		</div>
+
+		<table class="table-col bill mt-10">
+		<caption>단말기 금액</caption>
+		<colgroup>
+			<col style="width:70%">
+			<col style="width:30%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col" colspan="2">A. 단말기 금액 (IPHONE_데모DECK)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>① 출고가</td>
+				<td class="r-data">0원</td>
+			</tr>
+			<tr>
+				<td>② 공시 지원금</td>
+				<td class="r-data txt-red">-0원</td>
+			</tr>
+			<tr>
+				<td>③ 추가지원금</td>
+				<td class="r-data txt-red">-0원</td>
+			</tr>
+			<tr>
+				<td>④ 한 번 더 할인</td>
+				<td class="r-data txt-red">-0원</td>
+			</tr>
+			<tr>
+				<td class="txt-black2"><span class="txt-unit ml-15">└ 무약정 플랜 포인트</span></td>
+				<td class="r-data txt-red">-0원</td>
+			</tr>
+			<tr>
+				<td>할부원금 (①-②-③-④)</td>
+				<td class="r-data">0원</td>
+			</tr>
+			<tr>
+				<td>분할 상환 수수료 (5.5%)</td>
+				<td class="r-data">0원</td>
+			</tr>
+			<tr>
+				<td>단말대금 (수수료포함)</td>
+				<td class="r-data">0원</td>
+			</tr>
+			<tr>
+				<td><strong class="txt-red">월 할부 금액 (12개월)</strong></td>
+				<td class="r-data txt-red"><strong class="txt-red">0원</strong></td>
+			</tr>
+		</tbody>
+		</table>
+
+		<table class="table-col bill mt-10">
+		<caption>통신 요금</caption>
+		<colgroup>
+			<col style="width:70%">
+			<col style="width:30%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col" colspan="2">B. 통신 요금 ( band 데이터 퍼펙트 S)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>① 월 정액 (vat 포함)</td>
+				<td class="r-data">75,900원</td>
+			</tr>
+			<tr>
+				<td>② 요금 할인 합계</td>
+				<td class="r-data txt-red">- 18,480원</td>
+			</tr>
+			<tr>
+				<td class="txt-black2"><span class="txt-unit ml-15">└ 약정할인</span></td>
+				<td class="r-data txt-black2">-0원</td>
+			</tr>
+			<tr>
+				<td class="txt-black2"><span class="txt-unit ml-15">└ 복지할인</span></td>
+				<td class="r-data txt-black2">-0원</td>
+			</tr>
+			<tr>
+				<td><strong class="txt-red">월 통신 요금</strong></td>
+				<td class="r-data"><strong class="txt-red">38,445원</strong></td>
+			</tr>
+		</tbody>
+		</table>
+		
+	</div>
+</div>
+<!-- //레이어팝업 : 요금 상세정보 -->
+
+<!-- 레이어팝업 : USIM 카드 일련번호 -->
+<div id="layerPopUsim" class="pop-wrap pop-layer small">
+	<div class="pop-header">
+		<strong class="h-type1">USIM 카드 일련번호</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		<div class="box-type1">
+			<dl class="txt-info">
+				<dt>USIM 카드 일련번호란?</dt>
+				<dd>USIM 카드 금속면 뒷면에 표기되어 있는 14자리(영문포함)의 번호입니다.</dd>
+			</dl>
+		</div>
+
+		<p class="align-center mt-20">
+			<img src="../../../public/img/img_usim.gif" alt="유심모델코드-일련번호">
+		</p>
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<!-- //레이어팝업 : USIM 카드 일련번호 -->
+
+<!-- 레이어팝업 : 제휴포인트 -->
+<div id="layerPopPoint" class="pop-wrap pop-layer small">
+	<div class="pop-header">
+		<strong class="h-type1">포인트 할인 안내</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		<h3 class="h-type2">포인트할인이란?</h3>
+		<p class="f-12">
+			고객님께서 보유하고 계신 각종 제휴사의 포인트 및 마일리지를 사용하여 SK텔레콤 휴대폰 구매 시 단말대금을 할인 받을 수 있는 서비스 입니다.
+		</p>
+
+		<ul class="txt-info">
+			<li>
+				적용 가능 포인트
+				<ul>
+					<li>- OK캐쉬백 포인트, GS&amp;POINT</li>
+					<li>- 베네피아 복지포인트</li>
+					<li>- 이지웰 복지포인트</li>
+					<li>- 문화상품권</li>
+					<li>- 각종 금융포인트 : 우리카드, KB국민카드, 삼성카드, 현대카드, 신한카드, 하나카드, 하나멤버스</li>
+					<li>- T모아금액권</li>
+					<li>- T다이렉트샵 이용권</li>
+				</ul>
+			</li>
+			<li>제휴 포인트/마일리지 사용은 각 제휴사의 포인트정책에 따라 사용 가능합니다.</li>
+			<li>포인트할인 적용 완료 후 개통취소로 인한 포인트/마일리지 사용취소는 개통취소와 함께 자동 취소처리 됩니다.</li>
+			<li>포인트할인 적용 완료로 사용된 포인트/마일리지 취소처리는 제휴사에 따라 최대 3~5일 소요될 수 있습니다.</li>
+		</ul>
+	</div>
+</div>
+<!-- //레이어팝업 : 제휴포인트 -->
+
+<!-- 레이어팝업 : 찾아가는 서비스 -->
+<div id="layerPopFindService" class="pop-wrap pop-layer small">
+	<div class="pop-header">
+		<strong class="h-type1">찾아가는 개통 서비스란?</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		다이렉트샵에서만 제공하는 서비스로 휴대폰 전문컨설턴트가 찾아가서 개통 및 주소록 이전까지 무료로 제공하는 서비스 입니다.
+		<ol class="txt-list mt-20">
+			<li><span class="num">1.</span>휴대폰 개통, 휴대폰 사용방법 안내, 유용한 앱 추천, 액세서리 상담</li>
+			<li><span class="num">2.</span>주소록, 사진 등 고객님의 단말기 콘텐츠를 옮겨드리는 서비스</li>
+		</ol>
+		<ul class="txt-info">
+			<li>단, 일부 지역에 한하여 서비스가 제공되지 않을 수 있으니 방문요청 주소를 꼭 확인해 주세요.</li>
+			<li>요청하신 방문 시간을 최대한 준수하나 교통상황이나 일정에 따라 일부 변경될 수 있으며 사전에 연락 드리겠습니다.</li>
+		</ul>
+	</div>
+</div>
+<!-- //레이어팝업 : 찾아가는 서비스 -->
+
+<!-- 레이어팝업 : 주문서 저장 -->
+<div id="layerPopOrderSave" class="pop-wrap pop-layer small">
+	<div class="pop-header">
+		<strong class="h-type1">주문서 저장</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		<table class="table-row">
+		<caption>주문서 저장</caption>
+		<colgroup>
+			<col style="width:24%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">이름</th>
+				<td><input type="text" class="c-input" title="이름 입력"></td>
+			</tr>
+		</tbody>
+		</table>
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-blue">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<!-- //레이어팝업 : 주문서 저장 -->
+
+<!-- 레이어팝업 : T 기프트 선택하기 -->
+<div id="layerPopTgiftSelect" class="pop-wrap pop-layer">
+	<div class="pop-header">
+		<strong class="h-type1">T 기프트 선택하기</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		<div class="pop-search">
+			<strong class="txt-unit">T기프트 검색</strong>
+			<input type="text" class="c-input" title="검색어 입력" style="width:70%;">
+			<a href="#none" class="btn-base">검색</a>
+			<a href="#none" class="btn-base btn-gray">초기화</a>
+		</div>
+		
+		<h3 class="h-type2">다이렉트샵이 드리는 특별한 혜택 – T 기프트</h3>
+		<table class="table-col mt-40">
+		<caption>T 기프트 선택 리스트</caption>
+		<colgroup>
+			<col style="width:16%;">
+			<col>
+			<col style="width:25%">
+			<col style="width:10%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col" colspan="2"> T 기프트 상품명</th>
+				<th scope="col">옵션명</th>
+				<th scope="col">선택</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><img src="../../../public/img/img_no.gif" alt="이미지"></td>
+				<td class="l-data"><a href="#none" class="txt-link">기프트 미제공</a></td>
+				<td>-</td>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="giftSelect1" name="giftSelect">
+						<label for="giftSelect1">선택</label>
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="../../../public/img/img_no.gif" alt="이미지"></td>
+				<td class="l-data"><a href="#none" class="txt-link">핑거볼(블루투스셀카셔터)</a></td>
+				<td>해당없음</td>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="giftSelect2" name="giftSelect">
+						<label for="giftSelect2">선택</label>
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="../../../public/img/img_no.gif" alt="이미지"></td>
+				<td class="l-data"><a href="#none" class="txt-link">기프트 미제공</a></td>
+				<td>
+					<select class="c-select" title="옵션명 선택">
+						<option value="" selected="selected">블루</option>
+					</select>
+				</td>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="giftSelect3" name="giftSelect">
+						<label for="giftSelect3">선택</label>
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="../../../public/img/img_no.gif" alt="이미지"></td>
+				<td class="l-data"><a href="#none" class="txt-link">[캔스톤]블루투스넥밴드2050</a></td>
+				<td>IBA100_PINK</td>
+				<td>
+					<span class="c-rdo txt-no">
+						<input type="radio" id="giftSelect4" name="giftSelect">
+						<label for="giftSelect4">선택</label>
+					</span>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+		<ul class="txt-info">
+			<li>각각의 단말기에 알맞은 T기프트를 제공하고 있어, 단말기에 따라 선택 가능한 T기프트 상품 목록은 다릅니다.</li>
+			<li>T기프트 선택 후 옵션 및 타상품 변경 불가하오니, 신중히 선택해 주시기 바랍니다.</li>
+		</ul>
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-blue">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<!-- //레이어팝업 : T 기프트 선택하기 -->
+
+<!-- 해지가 필요한 상품 팝업 -->
+<div id="layerPopTermination" class="pop-wrap pop-layer small">
+	<div class="pop-header">
+		<strong class="h-type1">해지가 필요한 상품 안내</strong>
+		<a href="#none" class="layer-close">닫기</a>
+	</div>
+	<div class="pop-content">
+		<p><em class="txt-sky">5G 언택트 67</em> 요금제는 다른 할인이 중복 적용되지 않습니다.</p><br>
+		<p>가입중인 할인 상품을 먼저 해지 하시거나, 다른 요금제로 변경하여 주문 부탁드립니다.</p>
+		<div class="box-type1 mt-10">
+			<dl class="txt-info">
+				<dt>현재 가입중인 할인 상품</dt>
+				<dd>- T 가족 결합</dd>
+				<dd>- 온가족 할인</dd>
+			</dl>
+		</div>
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">주문서 화면으로 이동</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<!-- //해지가 필요한 상품 팝업 -->
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	//레이어팝업 호출
+		$('[data-model]').click(function(ev){
+			ev.preventDefault();
+			var model = $(this).attr('data-model');
+			modalCon(model,false,true);
+		});
+	});
+</script>
+</body>
+</html> 

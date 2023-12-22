@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">모바일상품등록관리</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>상품 관리</li>
+					<li>모바일상품등록관리</li>
+					<li><strong>모상품관리</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none">모상품그룹관리</a></li>
+				<li><a href="#none" class="on">모상품관리</a></li>
+				<li><a href="#none">판매정책관리</a></li>
+			</ul>
+			<!-- //tab -->
+
+			<h2 class="hidden">모상품관리</h2>
+			<h3 class="h-type2">모상품 등록</h3>
+			<table class="table-row">
+			<caption>모상품 등록</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">대표 자상품 코드*</th>
+					<td>
+						<input type="text" class="c-input" title="대표 자상품 코드 입력" placeholder="검색해주세요." style="width:80%;">
+						<a href="Bo-03-013-PU.html" onclick="window.open('Bo-03-013-PU.html','자상품 찾기 팝업','width=860,height=680');return false;" target="_blank" title="팝업" class="btn-base btn-gray">검색</a>
+					</td>
+					<th scope="row">모상품 코드*</th>
+					<td><input type="text" class="c-input" readonly="readonly" title="모상품 코드 입력"></td>
+				</tr>
+				<tr>
+					<th scope="row">상품구분*</th>
+					<td>
+						<select class="c-select" title="상품구분 선택">
+							<option value="" selected="selected">상품구분 선택</option>
+							<option value="">휴대폰</option>
+							<option value="">태블릿</option>
+							<option value="">스마트워치</option>
+							<option value="">휴대용</option>
+							<option value="">와이파이</option>
+						</select>
+					</td>
+					<th scope="row">글로벌 모상품여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="globalType1" name="globalType">
+								<label for="globalType1">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="globalType2" name="globalType" checked="checked">
+								<label for="globalType2">N</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">휴대폰 선택*</th>
+					<td>
+						<input type="text" class="c-input" title="휴대폰 입력" style="width:80%;">
+						<a href="Bo-03-012-PU.html" onclick="window.open('Bo-03-012-PU.html','휴대폰 찾기 팝업','width=600,height=680');return false;" target="_blank" title="팝업" class="btn-base btn-gray">검색</a>
+					</td>
+					<th scope="row">스마트 세이프</th>
+					<td><input type="text" class="c-input" title="스마트 세이프 입력"></td>
+				</tr>
+				<tr>
+					<th scope="row">일괄 판매 여부 선택</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="sellType1" name="sellType" checked="checked">
+								<label for="sellType1">활성화</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="sellType2" name="sellType">
+								<label for="sellType2">비활성화</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">대표색상지정</th>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="colorSelect" name="colorSelect">
+							<label for="colorSelect">선택</label>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">출고가 입력*</th>
+					<td>
+						<span class="txt-unit">출고가</span>
+						<input type="text" class="c-input" title="출고가 입력" placeholder="숫자만 입력 가능" style="width:120px;">
+						<span class="txt-unit">원</span>
+					</td>
+					<th scope="row">출고가 입력 (예판용)</th>
+					<td>
+						<input type="text" class="c-input" title="출고가(예판용) 입력" placeholder="숫자만 입력 가능" style="width:120px;">
+						<span class="txt-unit">원</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">선보상금 금액 설정</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="moneySet1" name="moneySet">
+								<label for="moneySet1">활성화</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="moneySet2" name="moneySet" checked="checked">
+								<label for="moneySet2">비활성화</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">선보상금 금액</th>
+					<td>
+						<input type="text" class="c-input" title="선보상금 금액 입력" placeholder="숫자만 입력 가능" style="width:120px;">
+						<span class="txt-unit">원</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">프리미엄 클럽 여부 선택</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="clubType1" name="clubType">
+								<label for="clubType1">활성화</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="clubType2" name="clubType" checked="checked">
+								<label for="clubType2">비활성화</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">폰세이프 여부 선택</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="phoneSave1" name="phoneSave">
+								<label for="phoneSave1">활성화</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="phoneSave2" name="phoneSave" checked="checked">
+								<label for="phoneSave2">비활성화</label>
+							</span>
+						</div>
+						<span class="txt-unit">품절</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">상담신청 대상 여부</th>
+					<td colspan="3">
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="counselChk1" name="counselChk" checked="checked">
+								<label for="counselChk1">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="counselChk2" name="counselChk">
+								<label for="counselChk2">N</label>
+							</span>
+						</div>
+						<div class="form-group ml-15">
+							<span class="c-chk">
+								<input type="checkbox" id="counselType1" name="counselType">
+								<label for="counselType1">전화상담</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="counselType2" name="counselType">
+								<label for="counselType2">1:1채팅</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="counselType3" name="counselType">
+								<label for="counselType3">카카오톡 상담하기</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="counselType4" name="counselType">
+								<label for="counselType4">전화상담 배너</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">전시여부/기간</th>
+					<td colspan="3">
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="displayChk1" name="displayChk" checked="checked">
+								<label for="displayChk1">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="displayChk2" name="displayChk">
+								<label for="displayChk2">N</label>
+							</span>
+						</div>
+						<div class="form-group calendar">
+							<select class="c-select" title="기간 선택">
+								<option value="" selected="selected">기간선택</option>
+								<option value="">오늘</option>
+								<option value="">1주일</option>
+								<option value="">1개월</option>
+								<option value="">이달</option>
+								<option value="">금년</option>
+							</select>
+							<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+							<a href="#none" class="btn-calendar">달력</a>
+							<span class="txt-unit">━</span>
+							<input type="text" class="c-input" title="종료일자">
+							<a href="#none" class="btn-calendar">달력</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" rowspan="2">재고입력 (개)</th>
+					<td colspan="3">
+						<span class="txt-unit">TWD온라인재고</span>
+						<input type="text" class="c-input" title="TWD온라인재고 입력" style="width:80px;">
+						<span class="txt-unit ml-15">TWD안전재고</span>
+						<input type="text" class="c-input" title="TWD안전재고 입력" style="width:80px;">
+						<span class="txt-unit ml-15">TWD상담재고</span>
+						<input type="text" class="c-input" title="TWD상담재고 입력" style="width:80px;">
+						<span class="txt-unit ml-15">TWD상담안전재고</span>
+						<input type="text" class="c-input" title="TWD상담안전재고 입력" style="width:80px;">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<span class="txt-unit">고객Care재고</span>
+						<input type="text" class="c-input" title="고객Care재고 입력" style="width:80px;">
+						<span class="txt-unit ml-15">고객Care안전재고</span>
+						<input type="text" class="c-input" title="고객Care안전재고 입력" style="width:80px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">입고알림 설정</th>
+					<td colspan="3">
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="enterChk" name="enterChk">
+							<label for="enterChk">선택</label>
+						</span>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<!-- btn -->
+			<div class="btn-area center">
+				<a href="#none" class="btn-base btn-blue">저장</a>
+				<a href="#none" class="btn-base btn-line-blue">목록</a>
+			</div>
+			<!-- //btn -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

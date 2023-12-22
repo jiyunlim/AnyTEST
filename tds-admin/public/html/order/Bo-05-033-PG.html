@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content"> 
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">바로픽업</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>주문관리</li>
+					<li><strong>바로픽업</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none">주문목록조회</a></li>
+				<li><a href="#none">승인목록조회</a></li>
+				<li><a href="#none">매장관리</a></li>
+				<li><a href="#none">재고조회</a></li>
+				<li><a href="#none">지하철노선관리</a></li>
+				<li><a href="#none">예판재고관리</a></li>
+				<li><a href="#none" class="on">키워드검색관리</a></li>
+			</ul>
+			<!-- //tab -->
+			<h2 class="hidden">키워드검색관리</h2>
+			<h3 class="h-type2">키워드 검색</h3> 
+			<table id="srch-list" class="table-row">
+			<caption>키워드 검색</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:36%"> 
+				<col style="width:14%">
+				<col style="width:36%">
+			</colgroup> 
+			<tbody>
+				<tr>
+					<th class="row">검색방법</th>
+					<td colspan="3">
+						<div>
+							<div class="form-group block">
+								<span class="c-rdo">
+									<input type="radio" id="srchtype1" name="srchtype" checked="checked">
+									<label for="srchtype1">지하철역으로 찾기</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="srchtype2" name="srchtype">
+									<label for="srchtype2">주소로 찾기</label>
+								</span>
+								<div class="tab-radio-con  open">
+									<select class="c-select" title="권역 선택" style="width:120px;">
+										<option value="" selected="selected">권역</option>
+									</select>
+									<select class="c-select" title="호선 선택" style="width:120px;">
+										<option value="" selected="selected">호선</option>
+									</select>
+									<select class="c-select" title="지하철역 선택" style="width:120px;">
+										<option value="" selected="selected">지하철역</option>
+									</select>
+								</div>
+								<div class="tab-radio-con">
+									<select class="c-select" title="광역시/도 선택" style="width:120px;">
+										<option value="" selected="selected">광역시/도</option>
+									</select>
+									<select class="c-select" title="시/군/구 선택" style="width:120px;">
+										<option value="" selected="selected">시/군/구</option>
+									</select>
+									<select class="c-select" title="도로명 선택" style="width:120px;">
+										<option value="" selected="selected">도로명</option>
+									</select>
+									<span class="txt-unit">지번주소</span>
+									<input type="text" class="c-input" title="지번 입력" style="width:20%;">
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">키워드</th>
+					<td>
+						<input type="text" class="c-input" title="키워드 입력"  style="width:76%">
+						<button type="button" class="btn-base btn-base">등록</button>
+					</td>
+					<th scope="row">사용여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="uses1" name="uses">
+								<label for="uses1">사용</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="uses2" name="uses">
+								<label for="uses2">미사용</label>
+							</span>
+						</div>
+					</td>
+				</tr> 
+			</tbody>
+			</table>
+			<!-- btn -->
+			<div class="btn-area">
+				<a href="#none" class="btn-base">검색</a>
+				<a href="#none" class="btn-base">초기화</a>
+			</div>
+			<!-- //btn -->
+
+			<h3 class="h-type2">검색 조회 결과  <span class="txt-count">(<em>00,000</em>건)</span></h3>
+			<!-- data table -->
+			<div class="table-data-wrap"> 
+				<!-- top button -->
+				<div class="btn-area table-top">
+					<div class="l-btn">
+						<button type="button" class="btn-base btn-gray">사용안함</button>
+						<button type="button" class="btn-base btn-gray">선택 삭제</button> 
+					</div>
+					<button type="button" class="btn-excel">엑셀다운로드</button>
+				</div>
+				<!-- //top button -->
+
+				<!-- list -->
+				<table class="table-col">
+					<caption></caption>
+					<colgroup>
+						<col style="width:25%">
+						<col style="width:25%">
+						<col style="width:25%">
+						<col style="width:25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">항목1</th>
+							<th scope="col">항목2</th>
+							<th scope="col">항목3</th>
+							<th scope="col">항목4<br />항목4</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>데이터1</td>
+							<td>데이터2</td>
+							<td>데이터3</td>
+							<td>데이터4</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- //list -->
+
+				<!-- paginate -->
+				<div class="paginate-area">
+					<a href="#none" class="pg-first">처음 리스트</a>
+					<a href="#none" class="pg-prev">이전 리스트</a>
+					<ul class="paginate">
+					<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+					<li><a href="#none">4</a></li>
+					<li><a href="#none">5</a></li>
+					<li><a href="#none">6</a></li>
+					<li><a href="#none">7</a></li>
+					<li><a href="#none">8</a></li>
+					<li><a href="#none">9</a></li>
+					<li><a href="#none">10</a></li>
+					</ul>
+					<a href="#none" class="pg-next">다음 리스트</a>
+					<a href="#none" class="pg-last">마지막 리스트</a>
+				</div>
+				<!-- //paginate -->
+
+				<!-- bottom button -->
+				<div class="btn-area table-bottom">
+					<div class="l-btn">
+						<button type="button" class="btn-base btn-gray">사용 안함</button>
+						<button type="button" class="btn-base btn-gray">선택 삭제</button>
+					</div> 
+					<button type="button" class="btn-base btn-line-gray">검색 결과만 보기</button>
+					<button type="button" class="btn-base btn-line-gray">조회항목 설정</button>
+					<button type="button" class="btn-excel">엑셀다운로드</button>
+				</div>
+				<!-- //bottom button -->
+			</div>
+			<!-- //data table -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">Open API</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>시스템관리</li>
+					<li>공시지원금 알리미</li>
+					<li><strong>BP사 관리</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none">Open API 관리</a></li>
+				<li><a href="#none">Open API 통계</a></li>
+				<li><a href="#none">Open API 모니터링</a></li>
+				<li><a href="#none" class="on">BP사 관리</a></li>
+			</ul>
+			<!-- //tab -->
+
+			<h2 class="hidden">BP사 관리</h2>
+
+			<h3 class="h-type2">Open API 연동 BP사 등록</h3>
+			<table class="table-row">
+			<caption>Open API 연동 BP사 등록</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:36%">
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">채널 ID</th>
+					<td colspan="3">
+						<input type="text" class="c-input" title="채널 ID 입력" style="width:350px">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">BP사명</th>
+					<td colspan="3">
+						<input type="text" class="c-input" title="BP사명 입력" style="width:350px">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">서버정보</th>
+					<td colspan="3">
+						<input type="text" class="c-input" title="서버정보 입력" style="width:350px">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">연동키</th>
+					<td colspan="3">
+						<input type="text" class="c-input" title="연동키 입력" style="width:350px">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">사용여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="useType1" name="useType">
+								<label for="useType1">사용</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="useType2" name="useType">
+								<label for="useType2">미사용</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">언택트 요금제<br>주문 가능 여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="untactOrderble1" name="untactOrderble">
+								<label for="untactOrderble1">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="untactOrderble2" name="untactOrderble">
+								<label for="untactOrderble2">N</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">담당자</th>
+					<td>
+						<input type="text" class="c-input" title="담당자 입력">
+					</td>
+					<th scope="row">담당자 연락처</th>
+					<td>
+						<input type="text" class="c-input" title="담당자 연락처 입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">등록자</th>
+					<td>-</td>
+					<th scope="row">등록일시</th>
+					<td>-</td>
+				</tr>
+				<tr>
+					<th scope="row">수정자</th>
+					<td>-</td>
+					<th scope="row">수정일시</th>
+					<td>-</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="btn-area center">
+				<a href="#none" class="btn-base btn-blue">등록</a>
+				<a href="#none" class="btn-base btn-line-blue">목록</a>
+			</div>
+				
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

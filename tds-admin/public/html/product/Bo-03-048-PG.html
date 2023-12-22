@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">디바이스 기본정보</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>상품관리</li>
+					<li><strong>디바이스 기본정보</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none" class="on">기본정보</a></li>
+				<li><a href="#none">기본 이미지</a></li>
+				<li><a href="#none">추가 이미지</a></li>
+				<li><a href="#none">광고 이미지</a></li>
+				<li><a href="#none">스펙</a></li>
+				<li><a href="#none">전문가 리뷰</a></li>
+			</ul>
+			<!-- //tab -->
+			<h3 class="h-type2">기본정보</h3>
+
+			<table class="table-row">
+			<caption>디바이스 기본정보</caption>
+			<colgroup>
+				<col style="width:12%">
+				<col>
+				<col style="width:14%">
+				<col style="width:20%">
+				<col style="width:12%">
+				<col style="width:18%">
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">모델명</th>
+					<td>
+						<input type="text" readonly="readonly" class="c-input" title="모델명 입력" style="width:130px">
+						<button type="button" class="btn-base btn-gray">검색</button>
+					</td>
+					<th scope="row">개통 여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="whetherY" name="whether">
+								<label for="whetherY">개통상품</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="whetherN" name="whether">
+								<label for="whetherN">비개통상품</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">단독판매상품<br>설정여부</th>
+					<td>
+						<span class="c-chk">
+							<input type="checkbox" id="setting" name="setting">
+							<label for="setting">설정</label>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">닉네임(긴 것)</th>
+					<td>
+						<input type="text" class="c-input" title="닉네임(긴 것) 입력" placeholder="한글,영문 20자 내외">
+					</td>
+					<th scope="row">닉네임(짧은 것)</th>
+					<td>
+						<input type="text" class="c-input" title="닉네임(짧은 것)" placeholder="한글,영문 10자 내외">
+					</td>
+					<th scope="row">브랜드</th>
+					<td>
+						<select class="c-select" title="브랜드 선택">
+							<option value="" selected="selected">전체</option>
+							<option value="">삼성</option>
+							<option value="">엘지</option>
+							<option value="">스카이</option>
+							<option value="">모토로라</option>
+							<option value="">W</option>
+							<option value="">애플</option>
+							<option value="">기타</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">출시년월일</th>
+					<td>
+						<div class="form-group calendar">
+							<input type="text" class="c-input" title="출시년월일" value="YYYY-MM-DD">
+							<a href="#none" class="btn-calendar">달력</a>
+							&nbsp;&nbsp;
+							<span class="c-chk">
+								<input type="checkbox" id="outOfSeoson" name="outOfSeoson">
+								<label for="outOfSeoson">미출시</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">크기 <div class="sub">가로 X 세로 / 두께</div></th>
+					<td>
+						<input type="text" class="c-input" title="가로" style="width:40px">
+						<span class="txt-unit">X</span>
+						<input type="text" class="c-input" title="세로" style="width:40px">
+						<span class="txt-unit">/</span>
+						<input type="text" class="c-input" title="두께" style="width:40px"> mm
+					</td>
+					<th scope="row">무게</th>
+					<td>
+						<input type="text" class="c-input" title="무게" placeholder="숫자 입력" style="width:100px"> (g)
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">배터리정보</th>
+					<td>
+						<input type="text" class="c-input" title="배터리정보" placeholder="영문, 숫자로 입력">
+					</td>
+					<th scope="row">대기시간 <div class="sub">대용량 / 표준형</div></th>
+					<td>
+						<input type="text" class="c-input" title="대용량" style="width:40px">
+						<span class="txt-unit">시간</span>
+						<span class="txt-unit">/</span>
+						<input type="text" class="c-input" title="표준형" style="width:40px">
+						<span class="txt-unit">시간</span>
+					</td>
+					<th scope="row">CPU</th>
+					<td>
+						<input type="text" class="c-input" title="CPU" placeholder="영문, 숫자, 특수문자로 입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">메모리</th>
+					<td>
+						<input type="text" class="c-input" title="메모리" placeholder="영문, 숫자로 입력">
+					</td>
+					<th scope="row">Display <div class="sub">대용량 / 표준형</div></th>
+					<td>
+						<input type="text" class="c-input" title="Display" style="width:40px">
+						<span class="txt-unit">인치</span>
+						<input type="text" class="c-input" title="추가설명" style="width:80px">
+					</td>
+					<th scope="row">휴대폰타입</th>
+					<td>
+						<select class="c-select" title="휴대폰타입 선택">
+							<option value="" selected="selected">전체</option>
+							<option value="">풀터치형</option>
+							<option value="">스윙형</option>
+							<option value="">가로보기형</option>
+							<option value="">스위블형</option>
+							<option value="">슬라이드형</option>
+							<option value="">스트래치형</option>
+							<option value="">바형</option>
+							<option value="">폴더형</option>
+							<option value="">플립형</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">카메라(화소수)</th>
+					<td colspan="5">
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="whetherCameraY" name="whetherCamera">
+								<label for="whetherCameraY">유</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="whetherCameraN" name="whetherCamera">
+								<label for="whetherCameraN">무</label>
+							</span>
+						</div>
+						&nbsp;&nbsp;&nbsp;
+						<select class="c-select" title="화소수 선택" style="width:120px">
+							<option value="" selected="selected">화소수 선택</option>
+							<option value="">10만</option>
+						</select>
+						<select class="c-select" title="플래시 탑재여부 선택" style="width:200px">
+							<option value="" selected="selected">플래시 탑재여부 선택</option>
+							<option value="">플래시 있음</option>
+							<option value="">플래시 없음</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">부가기능</th>
+					<td colspan="5">
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="addOns1" name="addOns">
+								<label for="addOns1">TU 위성DMB</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="addOns2" name="addOns">
+								<label for="addOns2">지상파 DMB</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="addOns3" name="addOns">
+								<label for="addOns3">T INTERACTIVE</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="addOns4" name="addOns">
+								<label for="addOns4">T map 콤펙트형</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="addOns5" name="addOns">
+								<label for="addOns5">멜론</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="addOns6" name="addOns">
+								<label for="addOns6">GXG(게임)</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="addOns7" name="addOns">
+								<label for="addOns7">라이브벨</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="addOns8" name="addOns">
+								<label for="addOns8">T map 내비게이션</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="addOns9" name="addOns">
+								<label for="addOns9">E-mail</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="addOns10" name="addOns">
+								<label for="addOns10">T cash </label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="addOns11" name="addOns">
+								<label for="addOns11">VM뱅킹/M증권</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="addOns12" name="addOns">
+								<label for="addOns12">T store</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="addOns13" name="addOns">
+								<label for="addOns13">HDMI</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="addOns14" name="addOns">
+								<label for="addOns14">T bag plus</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">특수기능</th>
+					<td colspan="5">
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="specialFeature1" name="specialFeatures">
+								<label for="specialFeature1">블루투스</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="specialFeature2" name="specialFeatures">
+								<label for="specialFeature2">외장메모리</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="specialFeature3" name="specialFeatures">
+								<label for="specialFeature3">전자사전</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="specialFeature4" name="specialFeatures">
+								<label for="specialFeature4">영상통화</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="specialFeature5" name="specialFeatures">
+								<label for="specialFeature5">WCDMA</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="specialFeature6" name="specialFeatures">
+								<label for="specialFeature6">GSM</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="specialFeature7" name="specialFeatures">
+								<label for="specialFeature7">자동로밍</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">관련 키워드</th>
+					<td colspan="5">
+						<input type="text" class="c-input" title="관련 키워드 입력" style="width:50%">
+						<button type="button" class="btn-base btn-gray">키워드 복사</button>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">관련 태그</th>
+					<td colspan="5">
+						<input type="text" class="c-input" title="관련 태그 입력" style="width:15%">
+						<input type="text" class="c-input" title="관련 태그 입력" style="width:15%">
+						<input type="text" class="c-input" title="관련 태그 입력" style="width:15%">
+						<input type="text" class="c-input" title="관련 태그 입력" style="width:15%">
+						<input type="text" class="c-input" title="관련 태그 입력" style="width:15%">
+						<button type="button" class="btn-base btn-gray">등록 태그 선택</button>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">WCDMA 여부</th>
+					<td>
+						<select class="c-select" title="WCDMA 여부 선택">
+							<option value="" selected="selected">선택</option>
+							<option value="">LTE-A</option>
+							<option value="">LTE</option>
+							<option value="">CDMA</option>
+							<option value="">WCDMA</option>
+						</select>
+					</td>
+					<th scope="row">USIM 장착 여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="whetherUsimY" name="whetherUsim">
+								<label for="whetherUsimY">유</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="whetherUsimN" name="whetherUsim">
+								<label for="whetherUsimN">무</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">금융 USIM 여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="whetherFinancialUsimY" name="whetherFinancialUsim">
+								<label for="whetherFinancialUsimY">유</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="whetherFinancialUsimN" name="whetherFinancialUsim">
+								<label for="whetherFinancialUsimN">무</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">기기구분</th>
+					<td>
+						<select class="c-select" title="기기구분 선택">
+							<option value="" selected="selected">전체</option>
+							<option value="">휴대폰(스마트폰)</option>
+							<option value="">휴대폰(일반 폰)</option>
+							<option value="">태블릿PC</option>
+							<option value="">스마트워치</option>
+							<option value="">휴대용 와이파이</option>
+						</select>
+					</td>
+					<th scope="row">폰 이미지 사용 여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="whetherPhoneImageY" name="whetherPhoneImage">
+								<label for="whetherPhoneImageY">유</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="whetherPhoneImageN" name="whetherPhoneImage">
+								<label for="whetherPhoneImageN">무</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">운영체제</th>
+					<td>
+						<select class="c-select" title="운영체제 선택">
+							<option value="" selected="selected">전체</option>
+							<option value="">안드로이드</option>
+							<option value="">윈도우</option>
+							<option value="">iOS</option>
+							<option value="">기타</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">금융유심 종류</th>
+					<td>
+						<select class="c-select" title="금융유심 종류 선택">
+							<option value="" selected="selected">선택</option>
+							<option value="">나노유심</option>
+							<option value="">마이크로유심</option>
+							<option value="">일반금융유심</option>
+							<option value="">해당없음</option>
+						</select>
+					</td>
+					<th scope="row">단말기 사용법 <br> 저작툴 여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="whetherToolY" name="whetherTool">
+								<label for="whetherToolY">유</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="whetherToolN" name="whetherTool">
+								<label for="whetherToolN">무</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">T월드 노출여부</th>
+					<td>
+						<span class="c-chk">
+							<input type="checkbox" id="tworldExpose" name="tworldExpose">
+							<label for="tworldExpose">노출</label>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">모상품 상세 URL</th>
+					<td>
+						<input type="text" class="c-input" title="모상품 상세 URL 입력" value="http://">
+					</td>
+					<th scope="row">음성지원 여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="whetherVoiceY" name="whetherVoice">
+								<label for="whetherVoiceY">유</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="whetherVoiceN" name="whetherVoice">
+								<label for="whetherVoiceN">무</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">펜 사용 여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="whetherPenY" name="whetherPen">
+								<label for="whetherPenY">유</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="whetherPenN" name="whetherPen">
+								<label for="whetherPenN">무</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<!-- btn -->
+			<div class="btn-area center">
+				<button type="button" class="btn-base btn-blue">저장</button>
+				<button type="button" class="btn-base btn-line-blue">목록</button>
+			</div>
+			<!-- //btn -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

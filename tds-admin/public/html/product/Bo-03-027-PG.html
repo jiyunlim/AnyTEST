@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">라이트 할부 관리</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>상품관리</li>
+					<li>카드관리</li>
+					<li><strong>라이트 할부 관리</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<h2 class="h-type2">라이트 할부 관리</h2>
+			<table class="table-row">
+			<caption>라이트 할부 관리</caption>
+			<colgroup>
+				<col style="width:12%">
+				<col>
+				<col style="width:12%">
+				<col style="width:18%">
+				<col style="width:12%">
+				<col style="width:22%">
+			</colgroup>
+			<tbody>
+			<tr>
+				<th scope="row">카드명 *</th>
+				<td>
+					<input type="text" class="c-input" title="카드명 입력">
+				</td>
+				<th scope="row">최소금액</th>
+				<td>
+					<input type="text" class="c-input ar" title="최소금액 입력" style="width:100px"> 원
+				</td>
+				<th scope="row">카드사 브랜드 *</th>
+				<td>
+					<select class="c-select" title="카드사명 선택">
+						<option value="" selected="selected">카드사명</option>
+						<option value="">비씨카드</option>
+						<option value="">국민카드</option>
+						<option value="">외환카드</option>
+						<option value="">삼성카드</option>
+						<option value="">신한카드(LG)</option>
+						<option value="">현대카드</option>
+						<option value="">롯데카드</option>
+						<option value="">신한카드(구)</option>
+						<option value="">한미은행카드</option>
+						<option value="">수협카드</option>
+						<option value="">우리은행카드</option>
+						<option value="">축협카드</option>
+						<option value="">제주은행카드</option>
+						<option value="">광주은행카드</option>
+						<option value="">전북은행카드</option>
+						<option value="">조흥은행카드</option>
+						<option value="">주택카드</option>
+						<option value="">하나은행카드</option>
+						<option value="">해외카드</option>
+						<option value="">시티은행카드</option>
+						<option value="">NH카드</option>
+						<option value="">하나SK카드</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">사용여부</th>
+				<td>
+					<div class="form-group">
+						<span class="c-rdo">
+							<input type="radio" id="whetherY" name="whether" checked="checked">
+							<label for="whetherY">Y</label>
+						</span>
+						<span class="c-rdo">
+							<input type="radio" id="whetherN" name="whether">
+							<label for="whetherN">N</label>
+						</span>
+					</div>
+				</td>
+				<th scope="row">최대금액</th>
+				<td>
+					<input type="text" class="c-input ar" title="최대금액 입력" style="width:100px"> 원
+				</td>
+				<th scope="row">할인 카드종류 *</th>
+				<td>
+					<select class="c-select" title="할인 카드종류 선택">
+						<option value="" selected="selected">카드종류</option>
+						<option value="">SAVE카드</option>
+						<option value="">라이트카드</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">할부개월 *</th>
+				<td colspan="3">
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="installment1" name="installments">
+							<label for="installment1">12개월</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="installment2" name="installments">
+							<label for="installment2">24개월</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="installment3" name="installments">
+							<label for="installment3">30개월</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="installment4" name="installments">
+							<label for="installment4">36개월</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="installment5" name="installments">
+							<label for="installment5">48개월</label>
+						</span>
+					</div>
+				</td>
+				<th scope="row">카드 구분 *</th>
+				<td>
+					<div class="form-group">
+						<span class="c-rdo">
+							<input type="radio" id="cardType1" name="cardType" checked="checked">
+							<label for="cardType1">신용카드</label>
+						</span>
+						<span class="c-rdo">
+							<input type="radio" id="cardType2" name="cardType">
+							<label for="cardType2">체크카드</label>
+						</span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">사용기간 *</th>
+				<td colspan="3">
+					<div class="form-group calendar">
+						<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+						<a href="#none" class="btn-calendar">달력</a>
+						<select class="c-select" title="시 선택" style="width:40px">
+							<option value="" selected="selected">01</option>
+							<option value="">02</option>
+							<option value="">03</option>
+							<option value="">04</option>
+							<option value="">05</option>
+							<option value="">06</option>
+							<option value="">07</option>
+							<option value="">08</option>
+							<option value="">09</option>
+							<option value="">10</option>
+							<option value="">11</option>
+							<option value="">12</option>
+							<option value="">13</option>
+							<option value="">14</option>
+							<option value="">15</option>
+							<option value="">16</option>
+							<option value="">17</option>
+							<option value="">18</option>
+							<option value="">19</option>
+							<option value="">20</option>
+							<option value="">21</option>
+							<option value="">22</option>
+							<option value="">23</option>
+						</select>
+						<span class="txt-unit">:</span>
+						<select class="c-select" title="분 선택" style="width:40px">
+							<option value="" selected="selected">00</option>
+							<option value="">05</option>
+							<option value="">10</option>
+							<option value="">15</option>
+							<option value="">20</option>
+							<option value="">25</option>
+							<option value="">30</option>
+							<option value="">35</option>
+							<option value="">40</option>
+							<option value="">45</option>
+							<option value="">50</option>
+							<option value="">55</option>
+						</select>
+						<span class="txt-unit">━</span>
+						<input type="text" class="c-input" title="종료일자">
+						<a href="#none" class="btn-calendar">달력</a>
+						<select class="c-select" title="시 선택" style="width:40px">
+							<option value="" selected="selected">01</option>
+							<option value="">02</option>
+							<option value="">03</option>
+							<option value="">04</option>
+							<option value="">05</option>
+							<option value="">06</option>
+							<option value="">07</option>
+							<option value="">08</option>
+							<option value="">09</option>
+							<option value="">10</option>
+							<option value="">11</option>
+							<option value="">12</option>
+							<option value="">13</option>
+							<option value="">14</option>
+							<option value="">15</option>
+							<option value="">16</option>
+							<option value="">17</option>
+							<option value="">18</option>
+							<option value="">19</option>
+							<option value="">20</option>
+							<option value="">21</option>
+							<option value="">22</option>
+							<option value="">23</option>
+						</select>
+						<span class="txt-unit">:</span>
+						<select class="c-select" title="분 선택" style="width:40px">
+							<option value="" selected="selected">00</option>
+							<option value="">05</option>
+							<option value="">10</option>
+							<option value="">15</option>
+							<option value="">20</option>
+							<option value="">25</option>
+							<option value="">30</option>
+							<option value="">35</option>
+							<option value="">40</option>
+							<option value="">45</option>
+							<option value="">50</option>
+							<option value="">55</option>
+						</select>
+					</div>
+				</td>
+				<th scope="row">출시시기</th>
+				<td>
+					<div class="form-group calendar">
+						<input type="text" class="c-input" title="출시시기 선택" value="YYYY-MM-DD">
+						<a href="#none" class="btn-calendar">달력</a>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">적용가능단말</th>
+				<td colspan="5">
+					<div class="inner-table">
+						<div class="align-block">
+							<div class="l-txt">
+								<button type="button" class="btn-base">단말 검색</button>
+								<span class="c-chk">
+									<input type="checkbox" id="allDevice" name="allDevice">
+									<label for="allDevice">전체 단말 적용</label>
+								</span>
+							</div>
+							<div class="r-btn">
+								<button type="button" class="btn-base btn-gray">삭제</button>
+							</div>
+						</div>
+
+						<!-- table -->
+						<table class="table-col">
+							<caption>적용가능단말</caption>
+							<colgroup>
+								<col>
+								<col style="width:18%">
+								<col style="width:18%">
+								<col style="width:15%">
+								<col style="width:22%">
+								<col style="width:18%">
+							</colgroup>
+							<thead>
+							<tr>
+								<th scope="col">
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="chkAll" name="policyListAll">
+										<label for="chkAll">전체선택</label>
+									</span>
+								</th>
+								<th scope="col">브랜드</th>
+								<th scope="col">기기구분</th>
+								<th scope="col">단말기코드</th>
+								<th scope="col">모델명</th>
+								<th scope="col">사용여부</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td colspan="6">선택된 단말정보가 존재하지 않습니다.</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="chk1" name="policyList">
+										<label for="chk1">선택</label>
+									</span>
+								</td>
+								<td>삼성전자(주)</td>
+								<td>휴대폰(스마트폰)</td>
+								<td>AOOE</td>
+								<td>SM-G950N_64GR</td>
+								<td>
+									<div class="form-group">
+										<span class="c-rdo">
+											<input type="radio" id="whetherGroupY" name="whetherGroup" checked="checked">
+											<label for="whetherGroupY">Y</label>
+										</span>
+										<span class="c-rdo">
+											<input type="radio" id="whetherGroupN" name="whetherGroup">
+											<label for="whetherGroupN">N</label>
+										</span>
+									</div>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+						<!-- //table -->
+
+						<!-- paginate -->
+						<div class="paginate-area">
+							<a href="#none" class="pg-first">처음 리스트</a>
+							<a href="#none" class="pg-prev">이전 리스트</a>
+							<ul class="paginate">
+								<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+								<li><a href="#none">2</a></li>
+								<li><a href="#none">3</a></li>
+								<li><a href="#none">4</a></li>
+								<li><a href="#none">5</a></li>
+								<li><a href="#none">6</a></li>
+								<li><a href="#none">7</a></li>
+								<li><a href="#none">8</a></li>
+								<li><a href="#none">9</a></li>
+								<li><a href="#none">10</a></li>
+							</ul>
+							<a href="#none" class="pg-next">다음 리스트</a>
+							<a href="#none" class="pg-last">마지막 리스트</a>
+						</div>
+						<!-- //paginate -->
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th scope="col" colspan="6">라이트 할부 관리 카드관련 안내 정보 (WEB)</th>
+			</tr>
+			</tbody>
+			</table>
+
+			<table id="lite1" class="table-col mt-10 js-table open">
+			<caption>라이트 할부 관리 카드관련 안내 정보 (WEB)</caption>
+			<colgroup>
+				<col style="width:100%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">
+						<div class="fold-area">
+							라이트 할부 관리 카드관련 안내 정보 (WEB)
+							<div class="r-fold">
+								<a href="#lite1" class="btn-unfold js-more open">펼치기</a>
+							</div>
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<div class="edit-area">에디터 영역</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<table id="lite2" class="table-col mt-10 js-table">
+			<caption>라이트 할부 관리 카드관련 안내 정보 (Mobie)</caption>
+			<colgroup>
+				<col style="width:100%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">
+						<div class="fold-area">
+							라이트 할부 관리 카드관련 안내 정보 (Mobie)
+							<div class="r-fold">
+								<a href="#lite2" class="btn-unfold js-more">펼치기</a>
+							</div>
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<div class="edit-area">에디터 영역</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<!-- btn -->
+			<div class="btn-area center">
+				<a href="#none" class="btn-base btn-blue">저장</a>
+				<a href="#none" class="btn-base btn-line-blue">목록</a>
+			</div>
+			<!-- //btn -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

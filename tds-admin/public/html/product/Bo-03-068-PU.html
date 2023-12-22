@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>사용쿠폰보기</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 860*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">사용쿠폰보기</h1>
+	</div>
+	<div class="pop-content">
+		<h2 class="h-type2">사용쿠폰 조회</h2>
+		<table class="table-row">
+		<caption>사용쿠폰 조회</caption>
+		<colgroup>
+			<col style="width:10%">
+			<col style="width:20%;">
+			<col style="width:10%">
+			<col>
+			<col style="width:10%">
+			<col style="width:30%;">
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">사용기간</th>
+				<td colspan="3">
+					<div class="form-group calendar">
+						<select class="c-select" title="기간 선택">
+							<option value="" selected="selected">기간선택</option>
+							<option value="">오늘</option>
+							<option value="">1주일</option>
+							<option value="">1개월</option>
+							<option value="">이달</option>
+							<option value="">금년</option>
+						</select>
+						<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+						<a href="#none" class="btn-calendar">달력</a>
+						<span class="txt-unit">━</span>
+						<input type="text" class="c-input" title="종료일자">
+						<a href="#none" class="btn-calendar">달력</a>
+					</div>
+				</td>
+				<th scope="row">쿠폰명</th>
+				<td><input type="text" class="c-input" title="쿠폰명 입력" placeholder="쿠폰명 입력(한글,영문,숫자 가능)"></td>
+			</tr>
+			<tr>
+				<th scope="row">쿠폰 유형</th>
+				<td>
+					<select class="c-select" title="쿠폰 유형 선택">
+						<option value="" selected="selected">전체</option>
+					</select>
+				</td>
+				<th scope="row">발급 유형</th>
+				<td>
+					<select class="c-select" title="발급 유형 선택">
+						<option value="" selected="selected">전체</option>
+					</select>
+				</td>
+				<th scope="row">적용 상품</th>
+				<td>
+					<select class="c-select" title="적용 상품 선택">
+						<option value="" selected="selected">전체</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">할인방식</th>
+				<td>
+					<select class="c-select" title="할인방식 선택">
+						<option value="" selected="selected">전체</option>
+					</select>
+				</td>
+				<th scope="row">사용방식</th>
+				<td>
+					<select class="c-select" title="사용방식 선택">
+						<option value="" selected="selected">전체</option>
+					</select>
+				</td>
+				<th scope="row">사용여부</th>
+				<td>
+					<select class="c-select" title="사용여부 선택">
+						<option value="" selected="selected">전체</option>
+					</select>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+		<!-- btn -->
+		<div class="btn-area right">
+			<a href="#none" class="btn-base">검색</a>
+			<a href="#none" class="btn-base">초기화</a>
+		</div>
+		<!-- //btn -->
+
+		<h2 class="h-type2">사용쿠폰 조회결과 <span class="txt-count">(<em>90,865</em>건)</span></h2>
+		<!-- data table -->
+		<div class="table-data-wrap">
+			<!-- top button -->
+			<div class="btn-area table-top">
+				<button type="button" class="btn-excel">엑셀다운로드</button>
+			</div>
+			<!-- //top button -->
+		
+			<table class="table-col">
+			<caption>사용쿠폰 조회결과</caption>
+			<colgroup>
+				<col style="width:4%">
+				<col>
+				<col style="width:7%">
+				<col style="width:7%">
+				<col style="width:7%">
+				<col style="width:7%">
+				<col style="width:7%">
+				<col style="width:7%">
+				<col style="width:7%">
+				<col style="width:7%">
+				<col style="width:7%">
+				<col style="width:9%">
+				<col style="width:9%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">No</th>
+					<th scope="col">쿠폰명</th>
+					<th scope="col">쿠폰<br>일련번호</th>
+					<th scope="col">사용자</th>
+					<th scope="col">구매<br>상품</th>
+					<th scope="col">쿠폰<br>유형</th>
+					<th scope="col">발급<br>유형</th>
+					<th scope="col">적용<br>상품</th>
+					<th scope="col">할인<br>방식</th>
+					<th scope="col">할인<br>금액</th>
+					<th scope="col">사용<br>방식</th>
+					<th scope="col">유효기간<br>종료일</th>
+					<th scope="col">사용일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>3256</td>
+					<td>액세서리 3만원 이용권</td>
+					<td>BFB00F213</td>
+					<td>박찬호</td>
+					<td>Galaxy A5 2017</td>
+					<td>기본할인</td>
+					<td>자체발급</td>
+					<td>액세서리</td>
+					<td>선할인</td>
+					<td class="r-data">30,000</td>
+					<td>본인사용</td>
+					<td>2019-01-01</td>
+					<td>2019-02-02</td>
+				</tr>
+				<tr>
+					<td>3256</td>
+					<td>액세서리 3만원 이용권</td>
+					<td>BFB00F213</td>
+					<td>박찬호</td>
+					<td>Galaxy A5 2017</td>
+					<td>기본할인</td>
+					<td>자체발급</td>
+					<td>액세서리</td>
+					<td>선할인</td>
+					<td class="r-data">30,000</td>
+					<td>본인사용</td>
+					<td>2019-01-01</td>
+					<td>2019-02-02</td>
+				</tr>
+				<tr>
+					<td>3256</td>
+					<td>액세서리 3만원 이용권</td>
+					<td>BFB00F213</td>
+					<td>박찬호</td>
+					<td>Galaxy A5 2017</td>
+					<td>기본할인</td>
+					<td>자체발급</td>
+					<td>액세서리</td>
+					<td>선할인</td>
+					<td class="r-data">30,000</td>
+					<td>본인사용</td>
+					<td>2019-01-01</td>
+					<td>2019-02-02</td>
+				</tr>
+				<tr>
+					<td>3256</td>
+					<td>액세서리 3만원 이용권</td>
+					<td>BFB00F213</td>
+					<td>박찬호</td>
+					<td>Galaxy A5 2017</td>
+					<td>기본할인</td>
+					<td>자체발급</td>
+					<td>액세서리</td>
+					<td>선할인</td>
+					<td class="r-data">30,000</td>
+					<td>본인사용</td>
+					<td>2019-01-01</td>
+					<td>2019-02-02</td>
+				</tr>
+				<tr>
+					<td>3256</td>
+					<td>액세서리 3만원 이용권</td>
+					<td>BFB00F213</td>
+					<td>박찬호</td>
+					<td>Galaxy A5 2017</td>
+					<td>기본할인</td>
+					<td>자체발급</td>
+					<td>액세서리</td>
+					<td>선할인</td>
+					<td class="r-data">30,000</td>
+					<td>본인사용</td>
+					<td>2019-01-01</td>
+					<td>2019-02-02</td>
+				</tr>
+			</tbody>
+			</table>
+			
+			<!-- bottom button -->
+			<div class="btn-area table-bottom">
+				<button type="button" class="btn-excel">엑셀다운로드</button>
+			</div>
+			<!-- //bottom button -->
+		</div>
+		
+		<!-- paginate -->
+		<div class="paginate-area">
+			<a href="#none" class="pg-first">처음 리스트</a>
+			<a href="#none" class="pg-prev">이전 리스트</a>
+			<ul class="paginate">
+				<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+				<li><a href="#none">2</a></li>
+				<li><a href="#none">3</a></li>
+				<li><a href="#none">4</a></li>
+				<li><a href="#none">5</a></li>
+				<li><a href="#none">6</a></li>
+				<li><a href="#none">7</a></li>
+				<li><a href="#none">8</a></li>
+				<li><a href="#none">9</a></li>
+				<li><a href="#none">10</a></li>
+			</ul>
+			<a href="#none" class="pg-next">다음 리스트</a>
+			<a href="#none" class="pg-last">마지막 리스트</a>
+		</div>
+		<!-- //paginate -->
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">닫기</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

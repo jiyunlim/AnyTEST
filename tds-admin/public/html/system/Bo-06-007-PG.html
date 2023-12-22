@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+			
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">단골고객관리</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>시스템관리</li>
+					<li><strong>이벤트관리</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none">단골고객조회</a></li>
+				<li><a href="#none" class="on">이벤트관리</a></li>
+				<li><a href="#none">템플릿관리</a></li>
+				<li><a href="#none">전송이력조회</a></li>
+			</ul>
+			<!-- //tab -->
+
+			<h2 class="hidden">이벤트관리</h2>
+			<h3 class="h-type2">이벤트 등록</h3>
+			<table class="table-row">
+			<caption>이벤트 등록</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:18%">
+				<col style="width:12%">
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">이벤트명</th>
+					<td colspan="4">
+						<input type="text" class="c-input" title="이벤트명 입력" style="width:350px">
+						<span class="c-chk">
+							<input type="checkbox" id="chk1" name="chk">
+							<label for="chk1">발송제목 사용여부 <span class="txt-red">(MMS,E-mail만 가능, 고객명: CUST_NAM, 고객번호: SCV_NUM 사용가능, 예: {CUST_NAM}</span></label>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">대상고객유형</th>
+					<td colspan="2">
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="userType1" name="userType">
+								<label for="userType1">단골고객</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="userType2" name="userType">
+								<label for="userType2">가망고객</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="userType3" name="userType">
+								<label for="userType3">Excel 업로드</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">전송채널</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="sendChannelType1" name="sendChannelType">
+								<label for="sendChannelType1">SMS</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="sendChannelType2" name="sendChannelType">
+								<label for="sendChannelType2">MMS</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="sendChannelType3" name="sendChannelType">
+								<label for="sendChannelType3">E-mail</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">템플릿 유형</th>
+					<td colspan="4">
+						<select class="c-select" title="템플릿 유형 선택" style="width:350px">
+							<option value="" selected="selected">SLC 담당 컨설턴트 매칭</option>
+						</select>
+						<a  class="btn-base btn-gray" href="Bo-06-001-PU.html" onclick="window.open('Bo-06-001-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank">템플릿 보기</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">이벤트 내용</th>
+					<td colspan="4">
+						<textarea rows="1" cols="1" class="c-textarea" title="이벤트 내용 입력"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">Excel 업로드</th>
+					<td colspan="4">
+						<div class="c-input-file">
+							<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:350px;">
+							<label for="upload01" class="file-label">찾아보기</label>
+							<input type="file" id="upload01" class="file-upload">
+						</div>
+						<p class="txt-red">[Excel형식: 서비스번호(필수,중복미허용), 서비스관리번호, 이메일(전송채널이 이메일인 경우 필수), 고객명]</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">전송시작일시</th>
+					<td colspan="2">
+						<div class="form-group calendar">
+							<input type="text" class="c-input" title="전송시작일 입력" value="YYYY-MM-DD">
+							<a href="#none" class="btn-calendar">달력</a>
+							<select class="c-select" title="시 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt_unit">:</span>
+							<select class="c-select" title="분 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+						</div>
+					</td>
+					<th scope="row">사용여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="useType1" name="useType">
+								<label for="useType1">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="useType2" name="useType">
+								<label for="useType2">N</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="rowgroup" rowspan="4">파라미터</th>
+					<th scope="row" class="th-sub l-data">서비스번호</th>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<th scope="row" class="th-sub l-data">고객명</th>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<th scope="row" class="th-sub l-data">SLC 담당 이름</th>
+					<td colspan="3"></td>
+				</tr>
+				<tr>
+					<th scope="row" class="th-sub l-data">SLC 담당 전화번호</th>
+					<td colspan="3"></td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="btn-area center">
+				<a href="#none" class="btn-base btn-blue">등록</a>
+				<a href="#none" class="btn-base btn-line-blue">목록</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

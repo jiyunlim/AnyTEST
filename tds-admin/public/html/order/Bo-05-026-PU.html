@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>방문불가 시간 지정</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 600*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">방문불가 시간 지정</h1>
+	</div>	
+	<div class="pop-content">
+		<table class="table-row">
+		<caption>방문불가 시간 지정</caption>
+		<colgroup>
+			<col style="width:10%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">날짜</th>
+				<td>
+					<div class="form-group calendar">
+						<input type="text" class="c-input" title="날짜 선택" value="YYYY-MM-DD">
+						<a href="#none" class="btn-calendar">달력</a>
+						<a href="#none" class="btn-base btn-gray">검색</a>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<h2 class="h-type2">시간선택</h2>
+		<table class="table-col">
+		<caption>바로픽업 관리자 목록</caption>
+		<colgroup>
+			<col style="width:6%">
+			<col>
+			<col style="width:6%">
+			<col>
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col" colspan="4" class="l-data">
+					<span class="c-chk">
+						<input type="checkbox" id="checkall1" name="checkall">
+						<label for="checkall1">전체선택</label>
+					</span>
+				</th>
+			</tr>
+			<tr>
+				<th scope="col" style="display:none;">선택</th>
+				<th scope="col" style="display:none;">시간</th>
+				<th scope="col" style="display:none;">선택</th>
+				<th scope="col" style="display:none;">시간</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time1" name="time">
+						<label for="time1">선택</label>
+					</span>
+				</td>
+				<td><em>09:00</em>~ <em>09:30</em></td>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time2" name="time">
+						<label for="time2">선택</label>
+					</span>
+				</td>
+				<td><em>09:30</em>~ <em>10:00</em></td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time3" name="time">
+						<label for="time3">선택</label>
+					</span>
+				</td>
+				<td><em>10:00</em>~ <em>11:00</em></td>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time4" name="time">
+						<label for="time4">선택</label>
+					</span>
+				</td>
+				<td><em>11:00</em>~ <em>11:30</em></td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time5" name="time">
+						<label for="time5">선택</label>
+					</span>
+				</td>
+				<td><em>11:30</em>~ <em>12:00</em></td>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time6" name="time">
+						<label for="time6">선택</label>
+					</span>
+				</td>
+				<td><em>12:00</em>~ <em>12:30</em></td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time7" name="time">
+						<label for="time7">선택</label>
+					</span>
+				</td>
+				<td><em>12:30</em>~ <em>13:00</em></td>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time8" name="time">
+						<label for="time8">선택</label>
+					</span>
+				</td>
+				<td><em>13:00</em>~ <em>13:30</em></td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time9" name="time">
+						<label for="time9">선택</label>
+					</span>
+				</td>
+				<td><em>13:30</em>~ <em>14:00</em></td>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time10" name="time">
+						<label for="time10">선택</label>
+					</span>
+				</td>
+				<td><em>14:00</em>~ <em>14:30</em></td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time11" name="time">
+						<label for="time11">선택</label>
+					</span>
+				</td>
+				<td><em>14:30</em>~ <em>15:00</em></td>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time12" name="time">
+						<label for="time12">선택</label>
+					</span>
+				</td>
+				<td><em>15:00</em>~ <em>15:30</em></td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time13" name="time">
+						<label for="time13">선택</label>
+					</span>
+				</td>
+				<td><em>15:30</em>~ <em>16:00</em></td>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time14" name="time">
+						<label for="time14">선택</label>
+					</span>
+				</td>
+				<td><em>16:00</em>~ <em>16:30</em></td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time15" name="time">
+						<label for="time15">선택</label>
+					</span>
+				</td>
+				<td><em>16:30</em>~ <em>17:00</em></td>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time16" name="time">
+						<label for="time16">선택</label>
+					</span>
+				</td>
+				<td><em>17:00</em>~ <em>17:30</em></td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time17" name="time">
+						<label for="time17">선택</label>
+					</span>
+				</td>
+				<td><em>17:30</em>~ <em>18:00</em></td>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time18" name="time">
+						<label for="time18">선택</label>
+					</span>
+				</td>
+				<td><em>18:00</em>~ <em>18:30</em></td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time19" name="time">
+						<label for="time19">선택</label>
+					</span>
+				</td>
+				<td><em>18:30</em>~ <em>19:00</em></td>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time20" name="time">
+						<label for="time20">선택</label>
+					</span>
+				</td>
+				<td><em>19:00</em>~ <em>19:30</em></td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time21" name="time">
+						<label for="time21">선택</label>
+					</span>
+				</td>
+				<td><em>19:30</em>~ <em>20:00</em></td>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="time22" name="time">
+						<label for="time22">선택</label>
+					</span>
+				</td>
+				<td><em>20:00</em>~ <em>20:30</em></td>
+			</tr>
+		</tbody>
+		</table>
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

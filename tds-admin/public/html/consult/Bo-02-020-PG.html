@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">온라인 상담/문의</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>상담/공지 관리</li>
+					<li><strong>온라인 상담/문의</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			
+			<h2 class="h-type2">문의자 정보</h2>
+			<table class="table-row">
+				<caption>문의자 정보 상세</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">작성자</th>
+						<td>홍길동 (ID표시)</td>
+						<th scope="row">작성일</th>
+						<td>YYYY-MM-DD hh:mm:ss</td>
+					</tr>
+					<tr>
+						<th scope="row">연락처</th>
+						<td>010-1234-5678 or 02-1234-5678</td>
+						<th scope="row">이메일</th>
+						<td>hong1@email.com</td>
+					</tr>
+					<tr>
+						<th scope="row">수신 방법</th>
+						<td colspan="3">SMS, E-mail</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 class="h-type2">문의 내용</h2>
+			<table class="table-row">
+				<caption>문의 내용 상세</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">유형</th>
+						<td>휴대폰 구매</td>
+						<th scope="row">문의 기종</th>
+						<td>브랜드 / 기종</td>
+					</tr>
+					<tr>
+						<th scope="row">제목</th>
+						<td colspan="3">제목이 표시 됩니다.</td>
+					</tr>
+					<tr>
+						<th scope="row">내용</th>
+						<td colspan="3">내용이 표시 됩니다.</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h2 class="h-type2">답변 등록</h2>
+				<div class="btn-area">
+					<span class="f-12">(Swing 전송 : YYYY-MM-DD)</span>
+					<a href="#none" class="btn-base">저장</a>
+					<a href="#none" class="btn-base btn-gray">Swing 상담으로 전달하기</a>
+				</div>
+			</div>
+			<table class="table-row">
+				<caption>답변 등록</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<!-- s : 2019-04-24 OP010-361 admin_상담/공지관리_온라인 상담/문의 답변 완료시간 추가 요청-->
+					<tr>
+						<th scope="row">작성자 (아이디)</th>
+						<td colspan="3">로그인 계정 (ID)</td>
+					</tr>
+					<tr>
+						<th scope="row">답변 여부</th>
+						<td>
+							<select class="c-select" title="답변 여부 선택">
+								<option value="" selected="selected">답변완료</option>
+							</select>
+						</td>
+						<th scope="row">답변일</th>
+						<td>YYYY-MM-DD hh:mm:ss</td>
+					</tr>
+					<tr>
+						<th scope="row">제목</th>
+						<td colspan="3"><input type="text" class="c-input" title="제목 입력"></td>
+					</tr>
+					<tr>
+						<th scope="row">내용</th>
+						<td colspan="3"><textarea rows="1" cols="1" class="c-textarea" title="내용 입력"></textarea></td>
+					</tr>
+					<!--e : 2019-04-24 OP010-361 admin_상담/공지관리_온라인 상담/문의 답변 완료시간 추가 요청-->
+				</tbody>
+			</table>
+
+			<!-- btn -->
+			<div class="btn-area center">
+				<a href="#none" class="btn-base btn-line-blue">목록</a>
+			</div>
+			<!-- //btn -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

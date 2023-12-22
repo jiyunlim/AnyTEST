@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN GUIDE</title>
+	<link rel="stylesheet" type="text/css" href="../../public/css/tdirect_admin.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/@tdirect_guide.css">
+	<!--[if lt IE 9]>
+	<script src="../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">주문상세</h1>
+		<a href="#none" class="btn-print"><span>주문정보 인쇄</span></a>
+	</div>
+	<div class="pop-content">
+		<div class="js-tab-fixed">
+			<!-- tab -->
+			<ul class="tab-area depth2">
+				<li><a href="#tab_con1" class="on">고객 CARE 정보</a></li>
+				<li><a href="#tab_con2">주문/가입정보</a></li>
+				<li><a href="#tab_con3">배송정보</a></li>
+				<li><a href="#tab_con4">결제/취소/반품교환</a></li>
+				<li><a href="#tab_con5">주문 메모</a></li>
+			</ul>
+			<!-- //tab -->
+		</div>
+		
+		<!-- tab con1 -->
+		<h2 class="hidden">고객 CARE 정보</h2>
+		<div id="tab_con1">
+			<h3 class="h-type2">고객 Care 정보</h3>
+			<table class="table-row">
+			<caption>고객 Care 정보</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th class="row">주문번호</th>
+					<td></td>
+					<th class="row">주문상태</th>
+					<td></td>
+					<th class="row">주문일자</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="row">상담그룹</th>
+					<td>장안고객 Care센터</td>
+					<th class="row">상담원</th>
+					<td></td>
+					<th class="row">상담원 ID</th>
+					<td>SCXXXXXXX</td>
+				</tr>
+				<tr>
+					<th class="row">판매 채널</th>
+					<td>TWD - 11번가</td>
+					<th class="row">상품구분</th>
+					<td></td>
+					<th class="row">주문유형</th>
+					<td>액세서리주문</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h3 class="h-type2">고객 회원정보</h3>
+			<table class="table-row">
+			<caption>고객 회원정보</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th class="row">주문번호</th>
+					<td></td>
+					<th class="row">주문상태</th>
+					<td></td>
+					<th class="row">주문일자</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="row">상담그룹</th>
+					<td>장안고객 Care센터</td>
+					<th class="row">상담원</th>
+					<td></td>
+					<th class="row">상담원 ID</th>
+					<td>SCXXXXXXX</td>
+				</tr>
+				<tr>
+					<th class="row">판매 채널</th>
+					<td>TWD - 11번가</td>
+					<th class="row">상품구분</th>
+					<td></td>
+					<th class="row">주문유형</th>
+					<td>액세서리주문</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		<!-- //tab con1 -->
+		
+		<!-- tab con2 -->
+		<h2 class="hidden">주문/가입정보</h2>
+		<div id="tab_con2">
+			<h3 class="h-type2">주문정보</h3>
+			<table class="table-row">
+			<caption>주문정보 상세</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th class="row">주문번호</th>
+					<td></td>
+					<th class="row">주문상태</th>
+					<td></td>
+					<th class="row">주문일자</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="row">상담그룹</th>
+					<td>장안고객 Care센터</td>
+					<th class="row">상담원</th>
+					<td></td>
+					<th class="row">상담원 ID</th>
+					<td>SCXXXXXXX</td>
+				</tr>
+				<tr>
+					<th class="row">판매 채널</th>
+					<td>TWD - 11번가</td>
+					<th class="row">상품구분</th>
+					<td></td>
+					<th class="row">주문유형</th>
+					<td>액세서리주문</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h3 class="h-type2">상품상세정보</h3>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">일련번호 저장</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>상품상세정보 상세</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th class="row">주문번호</th>
+					<td></td>
+					<th class="row">주문상태</th>
+					<td></td>
+					<th class="row">주문일자</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="row">상담그룹</th>
+					<td>장안고객 Care센터</td>
+					<th class="row">상담원</th>
+					<td></td>
+					<th class="row">상담원 ID</th>
+					<td>SCXXXXXXX</td>
+				</tr>
+				<tr>
+					<th class="row">판매 채널</th>
+					<td>TWD - 11번가</td>
+					<th class="row">상품구분</th>
+					<td></td>
+					<th class="row">주문유형</th>
+					<td>액세서리주문</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		<!-- //tab con2 -->
+
+		<!-- tab con3 -->
+		<h2 class="hidden">배송정보</h2>
+		<div id="tab_con3">
+			<h3 class="h-type2">배송정보</h3>
+			<table class="table-row">
+			<caption>배송정보</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th class="row">주문번호</th>
+					<td></td>
+					<th class="row">주문상태</th>
+					<td></td>
+					<th class="row">주문일자</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="row">상담그룹</th>
+					<td>장안고객 Care센터</td>
+					<th class="row">상담원</th>
+					<td></td>
+					<th class="row">상담원 ID</th>
+					<td>SCXXXXXXX</td>
+				</tr>
+				<tr>
+					<th class="row">판매 채널</th>
+					<td>TWD - 11번가</td>
+					<th class="row">상품구분</th>
+					<td></td>
+					<th class="row">주문유형</th>
+					<td>액세서리주문</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		<!-- //tab con3 -->
+
+		<!-- tab con4 -->
+		<h2 class="hidden">결제/취소/반품교환</h2>
+		<div id="tab_con4">
+			<h3 class="h-type2">결제수단정보</h3>
+			<table class="table-row">
+			<caption>결제수단정보</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th class="row">주문번호</th>
+					<td></td>
+					<th class="row">주문상태</th>
+					<td></td>
+					<th class="row">주문일자</th>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="row">상담그룹</th>
+					<td>장안고객 Care센터</td>
+					<th class="row">상담원</th>
+					<td></td>
+					<th class="row">상담원 ID</th>
+					<td>SCXXXXXXX</td>
+				</tr>
+				<tr>
+					<th class="row">판매 채널</th>
+					<td>TWD - 11번가</td>
+					<th class="row">상품구분</th>
+					<td></td>
+					<th class="row">주문유형</th>
+					<td>액세서리주문</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h3 class="h-type2">할인 상세</h3>
+			<table class="table-row">
+			<caption>할인 상세</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th class="row">주문번호</th>
+					<td></td>
+					<th class="row">주문상태</th>
+					<td></td>
+					<th class="row">주문일자</th>
+					<td></td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h3 class="h-type2">사용 쿠폰 정보</h3>
+			<table class="table-row">
+			<caption>사용 쿠폰 정보</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th class="row">주문번호</th>
+					<td></td>
+					<th class="row">주문상태</th>
+					<td></td>
+					<th class="row">주문일자</th>
+					<td></td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h3 class="h-type2">세금계산서 신청정보</h3>
+			<table class="table-row">
+			<caption>세금계산서 신청정보</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th class="row">주문번호</th>
+					<td></td>
+					<th class="row">주문상태</th>
+					<td></td>
+					<th class="row">주문일자</th>
+					<td></td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h3 class="h-type2">주문 취소 정보</h3>
+			<table class="table-row">
+			<caption>주문 취소 정보</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th class="row">주문번호</th>
+					<td></td>
+					<th class="row">주문상태</th>
+					<td></td>
+					<th class="row">주문일자</th>
+					<td></td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h3 class="h-type2">반품 정보</h3>
+			<table class="table-row">
+			<caption>주문 취소 정보</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th class="row">주문번호</th>
+					<td></td>
+					<th class="row">주문상태</th>
+					<td></td>
+					<th class="row">주문일자</th>
+					<td></td>
+				</tr>
+			</tbody>
+			</table>
+
+			<h3 class="h-type2">교환 신청 정보</h3>
+			<table class="table-row">
+			<caption>주문 취소 정보</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th class="row">주문번호</th>
+					<td></td>
+					<th class="row">주문상태</th>
+					<td></td>
+					<th class="row">주문일자</th>
+					<td></td>
+				</tr>
+			</tbody>
+			</table>
+
+			<!-- 토글 컨텐츠 -->
+			<div class="toggle-wrap">
+				<div class="h-area2">
+					<h3 class="h-type2">세금계산서 신청정보1</h3>
+					<div class="btn-area">
+						<a href="#toggleMenu1" class="btn-base js-toggle">신청</a>
+					</div>
+				</div>
+				<table id="toggleMenu1" class="table-row toggle-con">
+				<caption>세금계산서 신청정보1</caption>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:23%">
+					<col style="width:10%">
+					<col style="width:23%">
+					<col style="width:10%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="row">세금계산서1</th>
+						<td></td>
+						<th class="row">세금계산서1</th>
+						<td></td>
+						<th class="row">세금계산서1</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th class="row">세금계산서1</th>
+						<td></td>
+						<th class="row">세금계산서1</th>
+						<td></td>
+						<th class="row">세금계산서1</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th class="row">세금계산서1</th>
+						<td></td>
+						<th class="row">세금계산서1</th>
+						<td></td>
+						<th class="row">세금계산서1</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th class="row">세금계산서1</th>
+						<td></td>
+						<th class="row">세금계산서1</th>
+						<td></td>
+						<th class="row">세금계산서1</th>
+						<td></td>
+					</tr>
+				</tbody>
+				</table>
+
+				<div class="h-area2">
+					<h3 class="h-type2">세금계산서 신청정보2</h3>
+					<div class="btn-area">
+						<a href="#toggleMenu2" class="btn-base js-toggle">신청</a>
+					</div>
+				</div>
+				<table id="toggleMenu2" class="table-row toggle-con">
+				<caption>세금계산서 신청정보2</caption>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:23%">
+					<col style="width:10%">
+					<col style="width:23%">
+					<col style="width:10%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="row">세금계산서2</th>
+						<td></td>
+						<th class="row">세금계산서2</th>
+						<td></td>
+						<th class="row">세금계산서2</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th class="row">세금계산서2</th>
+						<td></td>
+						<th class="row">세금계산서2</th>
+						<td></td>
+						<th class="row">세금계산서2</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th class="row">세금계산서2</th>
+						<td></td>
+						<th class="row">세금계산서2</th>
+						<td></td>
+						<th class="row">세금계산서2</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th class="row">세금계산서2</th>
+						<td></td>
+						<th class="row">세금계산서2</th>
+						<td></td>
+						<th class="row">세금계산서2</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th class="row">세금계산서2</th>
+						<td></td>
+						<th class="row">세금계산서2</th>
+						<td></td>
+						<th class="row">세금계산서2</th>
+						<td></td>
+					</tr>
+				</tbody>
+				</table>
+
+				<!-- <div class="h-area2">
+					<h3 class="h-type2">세금계산서 신청정보2</h3>
+					<div class="btn-area">
+						<a href="#toggleMenu3" class="btn-unfold js-toggle">펼치기</a>
+					</div>
+				</div>
+				<table id="toggleMenu3" class="table-row toggle-con">
+				<caption>세금계산서 신청정보2</caption>
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:23%">
+					<col style="width:10%">
+					<col style="width:23%">
+					<col style="width:10%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th class="row">세금계산서2</th>
+						<td></td>
+						<th class="row">세금계산서2</th>
+						<td></td>
+						<th class="row">세금계산서2</th>
+						<td></td>
+					</tr>
+				</tbody>
+				</table> 추후 사용가능 -->
+			</div>
+			<!-- //토글 컨텐츠 -->
+
+			<h3 class="h-type2">구매 상품</h3>
+			<table class="table-row">
+			<caption>구매 상품</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col style="width:23%">
+				<col style="width:10%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th class="row">주문번호</th>
+					<td></td>
+					<th class="row">주문상태</th>
+					<td></td>
+					<th class="row">주문일자</th>
+					<td></td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		<!-- //tab con4 -->
+		
+		<!-- tab con5 -->
+		<h2 class="hidden">주문 메모</h2>
+		<div id="tab_con5">
+			<div class="h-area2">
+				<h3 class="h-type2">주문 메모</h3>
+				<div class="btn-area">
+					<a href="#table-add-row" class="btn-base js-tr-add">추가</a>
+					<a href="#none" class="btn-base btn-gray js-tr-delete">삭제</a>
+				</div>
+			</div>
+			<table id="table-add-row" class="table-col js-table-toggle">
+			<caption>주문 메모</caption>
+			<colgroup>
+				<col>
+				<col style="width:16%">
+				<col style="width:16%">
+				<col style="width:16%">
+				<col style="width:16%">
+				<col style="width:10%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">순번</th>
+					<th scope="col">구분</th>
+					<th scope="col">작성자</th>
+					<th scope="col">소속</th>
+					<th scope="col">날짜</th>
+					<th scope="col">전체 </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>물품교환/반품</td>
+					<td>홍길동 (abcde) /</td>
+					<td>장안고객 Care센터</td>
+					<td>YYYY-MM-DD HH:MM:SS</td>
+					<td><a href="#none" class="btn-view">[보기]</a></td>
+				</tr>
+				<tr class="hide-con">
+					<td colspan="6">
+						상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 
+					</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>물품교환/반품</td>
+					<td>홍길동 (abcde) /</td>
+					<td>장안고객 Care센터</td>
+					<td>YYYY-MM-DD HH:MM:SS</td>
+					<td><a href="#none" class="btn-view">[보기]</a></td>
+				</tr>
+				<tr class="hide-con">
+					<td colspan="6">
+						상담2 작성 내용2 상담 작성 내용상담2 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<br /><br /><br />
+
+			<table class="table-col js-table-toggle">
+			<caption>주문 메모</caption>
+			<colgroup>
+				<col>
+				<col style="width:16%">
+				<col style="width:16%">
+				<col style="width:16%">
+				<col style="width:16%">
+				<col style="width:10%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">순번</th>
+					<th scope="col">구분</th>
+					<th scope="col">작성자</th>
+					<th scope="col">소속</th>
+					<th scope="col">날짜</th>
+					<th scope="col">전체 </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>물품교환/반품</td>
+					<td>홍길동 (abcde) /</td>
+					<td>장안고객 Care센터</td>
+					<td>YYYY-MM-DD HH:MM:SS</td>
+					<td><a href="#none" class="btn-view">[보기]</a></td>
+				</tr>
+				<tr class="hide-con">
+					<td colspan="6">
+						상담2 작성 내용2 상담 작성 내용상담2 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 
+					</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>물품교환/반품</td>
+					<td>홍길동 (abcde) /</td>
+					<td>장안고객 Care센터</td>
+					<td>YYYY-MM-DD HH:MM:SS</td>
+					<td><a href="#none" class="btn-view">[보기]</a></td>
+				</tr>
+				<tr class="hide-con">
+					<td colspan="6">
+						상담2 작성 내용2 상담 작성 내용상담2 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 상담 작성 내용 상담 작성 내용상담 작성 내용 
+					</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		<!-- //tab con5 -->
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<script type="text/javascript" src="../../public/js/common.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.js-tr-add').click(function(){
+		var row = "<tr class='add-row'>";
+			row += "<td>신규</td>";
+			row += "<td></td>";
+			row += "<td></td>";
+			row += "<td></td>";
+			row += "<td></td>";
+			row += "<td></td>";
+			row += "</tr>";
+			row += "</tr>";
+			row += "<tr class='add-row'>";
+			row += "<td colspan='6'><textarea style='width:100%;height:100px;' class='c-textarea' title='내용입력'></textarea><div class='btn-area'><a href='#none' class='btn-base'>저장</a></div></td>";
+			row += "</tr>";
+		$($(this).attr('href')).find('tbody:last').append(row);
+	});
+	$('.js-tr-delete').click(function() {
+		$('.table-col > tbody tr.add-row:last').remove();
+		$('.table-col > tbody tr.add-row:last').before().remove();
+	});
+});
+</script>
+</body>
+</html>

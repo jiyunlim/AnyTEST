@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content"> 
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">요금약정할인</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>상품관리</li>
+					<li>상품가격 옵션관리</li>
+					<li><strong>요금약정할인</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<div class="h-area2">
+				<h2 class="h-type2">요금제 코드 및 할인 코드 선택</h2>
+				<div class="r-txt">
+					<span class="txt-red">요금약정할인코드는 공통코드 (SM205)에 등록된 값을 호출합니다. (선택약정 제외)</span>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>요금제 코드 및 할인 코드 선택</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:36%"> 
+				<col style="width:14%">
+				<col style="width:36%">  
+			</colgroup> 
+			<tbody>
+				<tr>
+					<th scope="row">요금제 코드</th>
+					<td>NA0000005958_패밀리</td>
+					<th scope="row">요금약정할인 코드</th>
+					<td>00</td>
+				</tr>
+
+			</tbody>
+			</table>
+
+			<h2 class="h-type2">할인/반환금액 설정</h2>
+			<table class="table-row">
+				<caption>할인/반환금액 설정</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col style="width:36%">
+					<col style="width:14%">
+					<col style="width:36%">
+				</colgroup>
+				<tbody>
+				<tr>
+					<th scope="row">요금약정할인상품 명</th>
+					<td>LTE 플러스 약정할인 고객센터</td>
+					<th scope="row">사용 여부</th>
+					<td>
+						<select class="c-select" title="사용 여부 선택" style="width:100px;">
+							<option value="" selected="selected">Y</option>
+							<option value="">N</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">TGATE 연동코드</th>
+					<td>01</td>
+					<th scope="row">요금약정할인 기간</th>
+					<td>00</td>
+				</tr>
+				<tr>
+					<th scope="row">요금약정할인 금액</th>
+					<td>
+						<input type="text" class="c-input" title="요금약정할인 금액 입력" value="5,000" style="width:100px;"> 원
+					</td>
+					<th scope="row">요금약정할인 반환 금액</th>
+					<td>
+						<input type="text" class="c-input" title="요금약정할인반환 금액 입력" value="3,000" style="width:100px;"> 원
+					</td>
+				</tr>
+				</tbody>
+			</table>
+
+			<!-- btn -->
+			<div class="btn-area center">
+				<button type="button" class="btn-base btn-blue">저장</button>
+				<button type="button" class="btn-base btn-line-blue">목록</button>
+			</div>
+			<!-- //btn -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,455 @@
+<%
+//-----------HANDLER Context Get-------------//
+record=context.get("record")
+con=context.get("con")
+//-----------파람 쿼리-------------//
+paramquery=java.lang.StringBuffer.new()
+paramquery.append(" SELECT  MAIL_SND_ITM_NM, MAIL_SND_ITM_CTT  FROM tshop_batch_param  WHERE seq_no = ? ")
+
+//--------------데이터 처리------------------//
+ parmStmt=con.prepareStatement(paramquery.toString())
+ parmStmt.setString("1",context.get("seq"))
+ param=parmStmt.execute()
+ while(param.next())
+  keyNM=param.getString("MAIL_SND_ITM_NM")
+  value=param.getString("MAIL_SND_ITM_CTT")
+  keyNM=keyNM.trim()
+  value=value
+  context.put(keyNM,value)
+ end while
+ parmStmt.close()
+ param.close()
+//--------------CPN_CNT 정보------------------//
+  pCpnCnt="0"
+  pCpnCnt=context.get("CPN_CNT")
+  pCpnCnt=pCpnCnt.trim()
+  if(pCpnCnt.equals(""))
+   pCpnCnt="0"
+  end if
+  pCpnCntFg = "N"
+  if(pCpnCnt.equals(""))
+  else
+   pCpnCntFg="Y"
+  end if
+//--------------CPN_CNT 정보 ------------------//
+
+//--------------USE_TYPE_1 정보------------------//
+  pUType1=context.get("USE_TYPE_1")
+//--------------USE_TYPE_1 정보 ------------------//
+
+//--------------DC_RATIO_YN_1 정보------------------//
+  pDcRate1=context.get("DC_RATIO_YN_1")
+//--------------DC_RATIO_YN_1 정보 ------------------//
+
+//--------------DC_RATIO_YN_2 정보------------------//
+  pDcRate2=context.get("DC_RATIO_YN_2")
+//--------------DC_RATIO_YN_2 정보 ------------------//
+
+%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">  
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>T world 다이렉트 - mailform</title><!-- //네이밍 -->
+</head> 
+<body>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tr>
+  <td style="background-color:#f0e8df; txt-align:center;">
+  
+   <br>  
+   <table border="0" cellpadding="0" cellspacing="0" width="796" style="margin:0 auto;">
+    <tr>
+     <td colspan="3" width="796" style="font-size:0; line-height:0"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/ml_tp_top.gif" border="0" usemap="#Map" alt="T다이렉트샵"><map name="Map"><area shape="rect" coords="601,74,737,92" href="http://shop.tworld.co.kr/email/common/emailurl.html?link=tworldshop" target="_blank" alt="shop.tworld.co.kr 바로가기"></map></td><!-- //네이밍 -->
+    </tr>
+    <tr>
+     <td colspan="3" width="796" style="font-size:0; line-height:0">
+<!-- 개편수정_140708 -->
+     <!-- 상단 쿠폰 안내 이미지  -->
+      <img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/txt_birthday_coupon.gif" alt="T다이렉트샵만의 할인 혜택! 할인쿠폰으로 T다이렉트샵의 다양한 상품을 저렴하게 구매해 보세요.">
+     <!-- //상단 쿠폰 안내 이미지  -->
+<!-- //개편수정_140708 -->
+     </td>
+    </tr>
+    <tr>
+     <td width="62" style="background-color:#f8f8f8;font-size:0; line-height:0"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/ml_tp_left.gif" alt=""></td>
+     <td width="668" style="text-align:left; font-size:12px; line-height:20px;color:#4c4c4c; background-color:#f8f8f8; vertical-align:top;">
+<!-- 개편수정_140708 -->
+      <p style="text-align:left; font-size:12px; line-height:20px;color:#4c4c4c; padding-top:5px;">
+       <strong>안녕하세요, <%=(context.get("CUST_NAM"))%> 고객님</strong>
+      </p>
+      <div style="text-align:left; font-size:12px; line-height:20px;color:#4c4c4c; padding-bottom:10px;">
+       T다이렉트샵에서 <strong>
+<!-- 적용 상품명 TARGET_PRODS의 값이 있으면 적용 START -->
+<%=(context.get("TARGET_PRODS"))%>
+<!-- 적용 상품명 TARGET_PRODS의 값이 있으면 적용 END --> 
+<!-- 적용 카테고리명  TARGET_CATES 값이 있으면 적용 START -->
+ <%=(context.get("TARGET_CATES"))%>
+<!-- 적용 카테고리명 TARGET_CATES 값이 있으면 적용 END -->      
+       </strong> 상품을 저렴하게 구매할 수 있도록 <strong>할인쿠폰</strong>을 선물로 드립니다.
+       <br><br>
+       <strong>T다이렉트샵</strong> (<a href="http://shop.tworld.co.kr/email/common/emailurl.html?link=tworldshop" target="_blank" title="새창열림" style="text-decoration:underline; color:#006ea6;">shop.tworld.co.kr</a>)<strong>만의 할인 혜택</strong>을 받으세요.
+      </div>
+<!-- //개편수정_140708 -->
+     </td>
+     <td width="66" style="font-size:0; line-height:0"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/ml_tp_right.gif" alt=""></td>
+    </tr>
+    <tr>
+     <td colspan="3" style="font-size:0; line-height:0"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/ml_tp_btm.gif" alt=""></td>
+    </tr>
+   </table>
+   <table border="0" cellpadding="0" cellspacing="0" width="796" style="margin:0 auto;">
+    <tr>
+     <td style="text-align:left;">
+      <table border="0" cellpadding="0" cellspacing="0" style="border-left:1px solid #e9e2d9;border-right:1px solid #c3bcb5;">
+       <tr>
+        <td width="760" style="font-size:12px; background-color:#fff; border-right:1px solid #c5c5c5;">
+         <table width="760" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+           <td width="760" style="font-size:0; line-height:0; vertical-align:top;">
+           <!-- 쿠폰 안내 이미지 -->
+            <img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/img_birthday_info.gif" alt="생일을 축하합니다. T다이렉트샵에서 휴대폰 할인쿠폰을 제공합니다. T다이렉트샵에서 고객님께 맞는 휴대폰, 요금제를 선택하고 T기프트도 무료로 받아가세요.">
+           <!-- //쿠폰 안내 이미지 -->
+           </td>
+          </tr> 
+         </table>
+        
+         <table width="700" border="0" cellpadding="0" cellspacing="0" style="margin-left:30px;">
+          <tr>
+           <td width="700">
+           <!-- 컨텐츠 -->
+            <table border="0" cellpadding="0" cellspacing="0" style="width: 700px">
+             <tr>
+              <td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/bg_cp_top.gif" alt=""></td>
+             </tr>
+<% if(pCpnCnt.equals("1")) %> 
+<!-- 개편수정_140708 : 쿠폰 1개 노출인 경우 추가 -->
+<!-- 쿠폰 갯수 CPN_CNT:1 일 경우 노출 START -->
+             <tr>
+              <td style="height:179px; border-left:1px solid #d9d9d9; border-right:1px solid #d9d9d9; background-color:#f5f5f5; vertical-align:top;">
+              <!-- 할인쿠폰 영역 -->
+               <table width="698" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                 <td style="width:219px; height:179px;"></td>
+                 <td style="width:260px; height:179px;">
+<!-- 일반쿠폰 USE_TYPE_1:2 일 경우 노출 START -->
+<% if(pUType1.equals("2")) %> 
+
+                  <table width="260" border="0" cellpadding="0" cellspacing="0">
+                   <tr><td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_bg_01.gif" alt=""></td></tr>
+                   <tr>
+                    <td style="height:16px; vertical-align:top;">
+                     <table width="260" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                       <td style="width:13px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_dname_01.gif" alt=""></td>
+                       <td style="width:200px; background-color:#f9f3f3; vertical-align:top;"><p style="width:200px; height:16px; margin:0; padding:0; font-family:dotum; color:#823131; font-size:11px; line-height:16px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;"><%=(context.get("CPN_NM_1"))%></p></td><!-- 단말기명 -->
+                       <td style="width:47px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_dname_02.gif" alt=""></td>
+                      </tr>
+                     </table>
+                    </td>
+                   </tr>
+                   <tr><td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_bg_02.gif" alt=""></td></tr>
+                   <tr>
+                    <td style="height:43px; vertical-align:top;">
+                     <table width="260" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                       <td style="width:61px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_sum_01.gif" alt=""></td>
+                       <td style="width:170px; background-color:#f9f3f3; vertical-align:top;"><p style="margin:0; padding:0; color:#e91337; font-family:Arial; font-size:30px; line-height:36px; text-align:right;"><%=(context.get("DC_AMT_1"))%></p></td><!-- 할인쿠폰 금액 -->
+<!-- 쿠폰할인율여부 DC_RATIO_YN_1:N 금액 START -->                       
+<% if(pDcRate1.equals("N")) %> 
+                       <td style="width:29px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_sum_02.gif" alt=""></td>
+<% end if %>
+<!-- 쿠폰할인율여부 DC_RATIO_YN_1:N 금액 END -->
+<!-- 쿠폰할인율여부 DC_RATIO_YN_1:T 율 START -->   
+<% if(pDcRate1.equals("Y")) %> 
+                       <td style="width:29px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_sum_03.gif" alt=""></td>
+<% end if %>
+<!-- 쿠폰할인율여부 DC_RATIO_YN_1:T 율 END -->                       
+                      </tr>
+                     </table>
+                    </td>
+                   </tr>
+                   <tr><td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_bg_03.gif" alt=""></td></tr>
+                   <tr>
+                    <td style="height:35px; vertical-align:top;">
+                     <table width="260" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                       <td style="width:72px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_cnum_01.gif" alt="쿠폰번호"></td>
+                       <td style="width:159px; background-color:#fffbfb; vertical-align:top;"><p style="margin:0; padding:0; color:#666; font-family:dotum; font-size:11px; line-height:16px;"><%=(context.get("COUPON_ISSUE_NO_1"))%></p></td><!-- 쿠폰번호 -->
+                       <td style="width:29px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_cnum_02.gif" alt=""></td>
+                      </tr>
+                      <tr>
+                       <td style="width:72px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_peri_01.gif" alt="기간"></td>
+                       <td style="width:159px; background-color:#fffbfb; vertical-align:top;"><p style="margin:0; padding:0; color:#666; font-family:dotum; font-size:11px; line-height:16px;"><%=(context.get("USE_START_DATE_1"))%>~<%=(context.get("USE_END_DATE_1"))%></p></td><!-- 기간 -->
+                       <td style="width:29px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_peri_02.gif" alt=""></td>
+                      </tr>
+                     </table>
+                    </td>
+                   </tr>
+                   <tr><td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_bg_04.gif" alt=""></td></tr>
+                  </table>
+<% end if %>
+<!-- 일반쿠폰 USE_TYPE_1:2 일 경우 노출 END -->
+<!-- 프로모션쿠폰 USE_TYPE_1:1 일 경우 노출 START -->
+<% if(pUType1.equals("1")) %> 
+                  <table width="260" border="0" cellpadding="0" cellspacing="0">
+                   <tr><td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_bg_01.gif" alt=""></td></tr>
+                   <tr>
+                    <td style="height:16px; vertical-align:top;">
+                     <table width="260" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                       <td style="width:13px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_dname_01.gif" alt=""></td>
+                       <td style="width:187px; background-color:#f9f3f3; vertical-align:top;"><p style="width:187px; height:16px; margin:0; padding:0; font-family:dotum; color:#823131; font-size:11px; line-height:16px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;"><%=(context.get("CPN_NM_1"))%></p></td><!-- 단말기명 -->
+                       <td style="width:60px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_dname_02.gif" alt=""></td>
+                      </tr>
+                     </table>
+                    </td>
+                   </tr>
+                   <tr><td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_bg_02.gif" alt=""></td></tr>
+                   <tr>
+                    <td style="height:43px; vertical-align:top;">
+                     <table width="260" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                       <td style="width:61px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_sum_01.gif" alt=""></td>
+                       <td style="width:170px; background-color:#f9f3f3; vertical-align:top;"><p style="margin:0; padding:0; color:#e91337; font-family:Arial; font-size:30px; line-height:36px; text-align:right;"><%=(context.get("DC_AMT_1"))%></p></td><!-- 할인쿠폰 금액 -->
+<!-- 쿠폰할인율여부 DC_RATIO_YN_1:N 금액 START -->                       
+<% if(pDcRate1.equals("N")) %> 
+                       <td style="width:29px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_sum_02.gif" alt=""></td>
+<% end if %>
+<!-- 쿠폰할인율여부 DC_RATIO_YN_1:N 금액 END -->
+<!-- 쿠폰할인율여부 DC_RATIO_YN_1:T 율 START -->   
+<% if(pDcRate1.equals("Y")) %> 
+                       <td style="width:29px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_sum_03.gif" alt=""></td>
+<% end if %>
+<!-- 쿠폰할인율여부 DC_RATIO_YN_1:T 율 END -->                       
+                      </tr>
+                     </table>
+                    </td>
+                   </tr>
+                   <tr><td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_bg_03.gif" alt=""></td></tr>
+                   <tr>
+                    <td style="height:35px; vertical-align:top;">
+                     <table width="260" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                       <td style="width:95px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_cnum_01.gif" alt="프로모션 코드"></td>
+                       <td style="width:136px; background-color:#fffbfb; vertical-align:top;"><p style="margin:0; padding:0; color:#666; font-family:dotum; font-size:11px; line-height:16px;"><%=(context.get("COUPON_ISSUE_NO_1"))%></p></td><!-- 프로모션 코드 -->
+                       <td style="width:29px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_cnum_02.gif" alt=""></td>
+                      </tr>
+                      <tr>
+                       <td style="width:95px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_peri_01.gif" alt="기간"></td>
+                       <td style="width:136px; background-color:#fffbfb; vertical-align:top;"><p style="margin:0; padding:0; color:#666; font-family:dotum; font-size:11px; line-height:16px;"><%=(context.get("USE_START_DATE_1"))%>~<%=(context.get("USE_END_DATE_1"))%></p></td><!-- 기간 -->
+                       <td style="width:29px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_peri_02.gif" alt=""></td>
+                      </tr>
+                     </table>
+                    </td>
+                   </tr>
+                   <tr><td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_bg_04.gif" alt=""></td></tr>
+                  </table>
+<% end if %>
+<!-- 프로모션쿠폰 USE_TYPE_1:1 일 경우 노출 END -->
+                 </td>
+                 <td style="width:219px; height:179px;"></td>
+                </tr>
+               </table>
+              <!-- //할인쿠폰 영역 -->
+              </td>
+             </tr>
+<!-- 쿠폰 갯수 CPN_CNT:1 일 경우 노출 END -->
+<% end if %>
+<% if(pCpnCnt.equals("2")) %> 
+<!-- 쿠폰 갯수 CPN_CNT:2 일 경우 노출 START -->             
+             <tr>
+              <td style="height:179px; border-left:1px solid #d9d9d9; border-right:1px solid #d9d9d9; background-color:#f5f5f5; vertical-align:top;">
+              <!-- 할인쿠폰 영역 -->
+               <table width="698" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                 <td style="width:44px; height:179px;"></td>
+                 <td style="width:260px; height:179px;">
+                 <!-- 일반쿠폰 -->
+                  <table width="260" border="0" cellpadding="0" cellspacing="0">
+                   <tr><td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_bg_01.gif" alt=""></td></tr>
+                   <tr>
+                    <td style="height:16px; vertical-align:top;">
+                     <table width="260" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                       <td style="width:13px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_dname_01.gif" alt=""></td>
+                       <td style="width:200px; background-color:#f9f3f3; vertical-align:top;"><p style="width:200px; height:16px; margin:0; padding:0; font-family:dotum; color:#823131; font-size:11px; line-height:16px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;"><%=(context.get("CPN_NM_1"))%></p></td><!-- 단말기명 -->
+                       <td style="width:47px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_dname_02.gif" alt=""></td>
+                      </tr>
+                     </table>
+                    </td>
+                   </tr>
+                   <tr><td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_bg_02.gif" alt=""></td></tr>
+                   <tr>
+                    <td style="height:43px; vertical-align:top;">
+                     <table width="260" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                       <td style="width:61px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_sum_01.gif" alt=""></td>
+                       <td style="width:170px; background-color:#f9f3f3; vertical-align:top;"><p style="margin:0; padding:0; color:#e91337; font-family:Arial; font-size:30px; line-height:36px; text-align:right;"><%=(context.get("DC_AMT_1"))%></p></td><!-- 할인쿠폰 금액 -->
+<!-- 쿠폰할인율여부 DC_RATIO_YN_1:N 금액 START -->                       
+<% if(pDcRate1.equals("N")) %> 
+                       <td style="width:29px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_sum_02.gif" alt=""></td>
+<% end if %>
+<!-- 쿠폰할인율여부 DC_RATIO_YN_1:N 금액 END -->
+<!-- 쿠폰할인율여부 DC_RATIO_YN_1:T 율 START -->   
+<% if(pDcRate1.equals("Y")) %> 
+                       <td style="width:29px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_sum_03.gif" alt=""></td>
+<% end if %>
+<!-- 쿠폰할인율여부 DC_RATIO_YN_1:T 율 END -->                       
+                      </tr>
+                     </table>
+                    </td>
+                   </tr>
+                   <tr><td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_bg_03.gif" alt=""></td></tr>
+                   <tr>
+                    <td style="height:35px; vertical-align:top;">
+                     <table width="260" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                       <td style="width:72px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_cnum_01.gif" alt="쿠폰번호"></td>
+                       <td style="width:159px; background-color:#fffbfb; vertical-align:top;"><p style="margin:0; padding:0; color:#666; font-family:dotum; font-size:11px; line-height:16px;"><%=(context.get("COUPON_ISSUE_NO_1"))%></p></td><!-- 쿠폰번호 -->
+                       <td style="width:29px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_cnum_02.gif" alt=""></td>
+                      </tr>
+                      <tr>
+                       <td style="width:72px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_peri_01.gif" alt="기간"></td>
+                       <td style="width:159px; background-color:#fffbfb; vertical-align:top;"><p style="margin:0; padding:0; color:#666; font-family:dotum; font-size:11px; line-height:16px;"><%=(context.get("USE_START_DATE_1"))%>~<%=(context.get("USE_END_DATE_1"))%></p></td><!-- 기간 -->
+                       <td style="width:29px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_peri_02.gif" alt=""></td>
+                      </tr>
+                     </table>
+                    </td>
+                   </tr>
+                   <tr><td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_bg_04.gif" alt=""></td></tr>
+                  </table>
+                 <!-- //일반쿠폰 -->
+                 </td>
+                 <td style="width:45px; height:179px;"></td>
+                 <td style="width:44px; height:179px; border-left:1px dotted #adadad;"></td>
+                 <td style="width:260px; height:179px;">
+                 <!-- 프로모션쿠폰 -->
+                 <table width="260" border="0" cellpadding="0" cellspacing="0">
+                   <tr><td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_bg_01.gif" alt=""></td></tr>
+                   <tr>
+                    <td style="height:16px; vertical-align:top;">
+                     <table width="260" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                       <td style="width:13px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_dname_01.gif" alt=""></td>
+                       <td style="width:187px; background-color:#f9f3f3; vertical-align:top;"><p style="width:187px; height:16px; margin:0; padding:0; font-family:dotum; color:#823131; font-size:11px; line-height:16px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;"><%=(context.get("CPN_NM_2"))%></p></td><!-- 단말기명 -->
+                       <td style="width:60px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_dname_02.gif" alt=""></td>
+                      </tr>
+                     </table>
+                    </td>
+                   </tr>
+                   <tr><td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_bg_02.gif" alt=""></td></tr>
+                   <tr>
+                    <td style="height:43px; vertical-align:top;">
+                     <table width="260" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                       <td style="width:61px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_sum_01.gif" alt=""></td>
+                       <td style="width:170px; background-color:#f9f3f3; vertical-align:top;"><p style="margin:0; padding:0; color:#e91337; font-family:Arial; font-size:30px; line-height:36px; text-align:right;"><%=(context.get("DC_AMT_2"))%></p></td><!-- 할인쿠폰 금액 -->
+<!-- 쿠폰할인율여부 DC_RATIO_YN_2:N 금액 START -->                       
+<% if(pDcRate2.equals("N")) %> 
+                       <td style="width:29px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_sum_02.gif" alt=""></td>
+<% end if %>
+<!-- 쿠폰할인율여부 DC_RATIO_YN_2:N 금액 END -->
+<!-- 쿠폰할인율여부 DC_RATIO_YN_2:T 율 START -->   
+<% if(pDcRate2.equals("Y")) %> 
+                       <td style="width:29px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_no_sum_03.gif" alt=""></td>
+<% end if %>
+<!-- 쿠폰할인율여부 DC_RATIO_YN_2:T 율 END -->
+                      </tr>
+                     </table>
+                    </td>
+                   </tr>
+                   <tr><td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_bg_03.gif" alt=""></td></tr>
+                   <tr>
+                    <td style="height:35px; vertical-align:top;">
+                     <table width="260" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                       <td style="width:95px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_cnum_01.gif" alt="프로모션 코드"></td>
+                       <td style="width:136px; background-color:#fffbfb; vertical-align:top;"><p style="margin:0; padding:0; color:#666; font-family:dotum; font-size:11px; line-height:16px;"><%=(context.get("COUPON_ISSUE_NO_2"))%></p></td><!-- 프로모션 코드 -->
+                       <td style="width:29px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_cnum_02.gif" alt=""></td>
+                      </tr>
+                      <tr>
+                       <td style="width:95px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_peri_01.gif" alt="기간"></td>
+                       <td style="width:136px; background-color:#fffbfb; vertical-align:top;"><p style="margin:0; padding:0; color:#666; font-family:dotum; font-size:11px; line-height:16px;"><%=(context.get("USE_START_DATE_2"))%>~<%=(context.get("USE_END_DATE_2"))%></p></td><!-- 기간 -->
+                       <td style="width:29px; font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_peri_02.gif" alt=""></td>
+                      </tr>
+                     </table>
+                    </td>
+                   </tr>
+                   <tr><td style="font-size:0; line-height:0;"><img src="https://cdnw.shop.tworld.co.kr/public/img/email/mailform/cp_pm_bg_04.gif" alt=""></td></tr>
+                  </table>
+                 <!-- //프로모션쿠폰 -->
+                 </td>
+                 <td style="width:44px; height:179px;"></td>
+                </tr>
+               </table>
+              <!-- //할인쿠폰 영역 -->
+              </td>
+             </tr>
+<!-- //개편수정_140708 : 쿠폰 2개 노출인 경우 추가 -->
+<!-- 쿠폰 갯수 CPN_CNT:2 일 경우 노출 END -->
+<% end if %>
+             <tr>
+              <td style="height:71px; border-left:1px solid #d9d9d9; border-right:1px solid #d9d9d9; background-color:#f5f5f5; vertical-align:top;">
+               <table width="698" border="0" cellpadding="0" cellspacing="0" style="border-top:1px dotted #adadad;">
+                <tr>
+                 <td colspan="2" style="height:15px; font-size:0; line-height:0;"></td>
+                </tr>
+                <tr>
+                 <td style="width:470px; vertical-align:top;">
+                  <p style="margin:0 0 0 19px; padding:0; font-family:dotum; font-size:11px; line-height:20px; color:#666;"><strong style="font-size:12px; color:#4c4c4c;">할인 쿠폰을 사용하여 상품구매시 <span style="color:#f55500">할인된 가격</span>으로 구매하세요.</strong><br>자세한 내용은 T다이렉트샵 마이페이지에서 확인이 가능합니다.</p>
+                 </td>
+                 <td style="width:226px; font-size:0; line-height:0; vertical-align:top;">
+<!-- 개편수정_140708 -->
+                  <a href="http://shop.tworld.co.kr/email/common/emailurl.html?link=tworldshop" target="_blank"><img src="http://shop.tworld.co.kr/tws/mailform/images/btn_go_tworlddirect.gif" alt="T다이렉트샵 바로가기" style="border:none;"></a>
+<!-- //개편수정_140708 -->
+                 </td>
+                </tr>
+               </table>
+              </td>
+             </tr>
+             <tr>
+              <td style="font-size:0; line-height:0;"><img src="http://shop.tworld.co.kr/tws/mailform/images/bg_cp_btm.gif" alt=""></td>
+             </tr>
+             <tr>
+              <td style="height:30px;"></td>
+             </tr>
+            </table>
+           <!-- //컨텐츠 -->
+           </td>
+          </tr> 
+         </table>
+         
+         <table width="700" border="0" cellpadding="0" cellspacing="0" style="margin-left:30px;border-top:1px #d2d3d3 dotted;">
+          <tr>
+           <td colspan="2" width="700" style="font-size:11px; font-family:dotum; color:#808080; line-height:16px;padding:20px 0;">
+본 메일은 <%=(context.get("CUST_NAM"))%> 고객님께서 <%=(context.get("RCV_AGREE_DTM"))%>, 광고 메일수신을 동의하셨기에 정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령 제23조의6 제2항 별표에 의거 (광고), (성인광고) 또는 @를 표시하지 않았습니다. 발신전용 메일이므로 회신을 통한 문의는 처리되지 않습니다. <br>
+메일수신을 원치 않는 고객님께서는 <a href='http://shop.tworld.co.kr/email/common/emailurl.html?link=refusal&user_id=<%=(context.get("USER_ID"))%>' style="font-size:11px; color:#006ea6; text-decoration:underline;">수신거부</a>를 클릭하여 주시기 바랍니다.<br> (단 Tworld 미가입자인 경우, Tworld 가입 후 회원정보변경을 통해 수신거부 가능합니다.) <br>
+If you do not wish to receive further mailings, <a href='http://shop.tworld.co.kr/email/common/emailurl.html?link=refusal&user_id=<%=(context.get("USER_ID"))%>' target="_blank" style="font-size:11px; color:#006ea6; text-decoration:underline;">click here. </a>
+           </td>
+          </tr> 
+          <tr>
+           <td width="230" style="font-size:0; line-height:0; vertical-align:top;"><img src="http://shop.tworld.co.kr/tws/mailform/images/ct_bt_logo.gif" alt="T다이렉트샵"></td><!-- //네이밍 -->
+           <td width="470" style="font-size:0; line-height:0; text-align:left; vertical-align:top;"><img src="http://shop.tworld.co.kr/tws/mailform/images/ct_bt_address.gif" alt="서울시 중구 을지로 2가 11, 대표이사/사장 : 박정호, 사업자등록번호 : 104-81-37225, 고객상담: 휴대폰, 국번없이 T 114 (무료)  또는 국번없이 1599-0111(유료) Copyright@ 2013  SK TELECOM  CO. LTD.  All rights reserved."><p style="padding:15px 0 0 0;margin:0"><img src="http://shop.tworld.co.kr/tws/mailform/images/ct_bt_copy.gif" alt=""></p></td>
+          </tr>
+         </table> 
+        
+        </td> 
+        <td width="2" style="border-right:1px solid #cfcfcf;font-size:0; line-height:0"><img src="http://shop.tworld.co.kr/tws/mailform/images/img_blank.gif" width="2" height="1" alt=""></td>
+        <td width="2" style="font-size:0; line-height:0"><img src="http://shop.tworld.co.kr/tws/mailform/images/img_blank.gif" width="2" height="1" alt=""></td>
+       </tr> 
+      </table>
+     </td>
+    </tr>
+    <tr>
+     <td style="font-size:0; line-height:0"><img src="http://shop.tworld.co.kr/tws/mailform/images/ml_bt_box.gif" alt=""></td>
+    </tr>   
+   </table> 
+   <br>
+  
+  </td>
+ </tr>
+</table>
+</body>
+</html>

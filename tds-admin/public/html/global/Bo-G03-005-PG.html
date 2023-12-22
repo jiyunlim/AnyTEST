@@ -1,0 +1,1091 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">환경변수관리</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>Global</li>
+					<li>시스템 설정</li>
+					<li><strong>환경변수관리</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+			<h2 class="h-type2">상담사 무약정 (언택트 요금제용) 주문 사용</h2>
+			<table class="table-row">
+				<caption>상담사 무약정 (언택트 요금제용) 주문 사용 여부</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">사용 여부</th>
+						<td>
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="untact_Y" name="untact">
+									<label for="untact_Y">Y</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="untact_N" name="untact">
+									<label for="untact_N">N</label>
+								</span>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 class="h-type2">라이트할부 설정</h2>
+			<table class="table-row">
+			<caption>라이트할부 설정</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">카드 정책일</th>
+					<td>
+						<input type="text" class="c-input" title="카드 정책일 입력" style="width:60px;"> 일
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h2 class="h-type2">쓰던 폰 반납 설정</h2>
+				<div class="btn-area">
+					<p class="txt-unit txt-red">※ 저장 버튼은 전체 적용됩니다.</p>
+					<a href="#none" class="btn-base">저장</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>쓰던 폰 반납 설정</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">쓰던 폰 반납일<br> (고객 고지용)</th>
+					<td>
+						<input type="text" class="c-input" title="쓰던 폰 반납일 입력" style="width:60px;"> 일
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">쓰던 폰 반납 정책일</th>
+					<td>
+						<input type="text" class="c-input" title="쓰던 폰 반납 정책일 입력" style="width:60px;"> 일
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">쓰던 폰 반납 설정</th>
+					<td>
+						<table class="table-row  mt-10">
+						<caption>쓰던 폰 반납 설정1</caption>
+						<colgroup>
+							<col style="width:14%">
+							<col>
+							<col style="width:14%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">제조사명</th>
+								<td>
+									<input type="text" class="c-input" title="제조사명 입력"> 
+								</td>
+								<th scope="row">모상품 그룹명</th>
+								<td>
+									<input type="text" class="c-input" title="모상품 그룹명 입력" style="width:120px;"> 
+									<a href="#none" class="btn-base">검색</a>
+									<a href="#none" class="btn-base btn-gray">선택삭제</a>
+								</td>
+							</tr>
+						</tbody>
+						</table>
+
+						<table class="table-row mt-10">
+						<caption>쓰던 폰 반납 설정2</caption>
+						<colgroup>
+							<col style="width:10%">
+							<col>
+							<col style="width:10%">
+							<col>
+							<col style="width:10%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">제조사</th>
+								<td>
+									<select class="c-select" title="제조사 선택">
+										<option value="" selected="selected">선택</option>
+									</select>
+								</td>
+								<th scope="row">모상품 그룹</th>
+								<td>
+									<select class="c-select" title="모상품 그룹 선택">
+										<option value="" selected="selected">선택</option>
+									</select>
+								</td>
+								<th scope="row">할인방법</th>
+								<td>
+									<select class="c-select" title="할인방법 선택">
+										<option value="" selected="selected">선택</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">제외기간</th>
+								<td colspan="5">
+									<div class="align-block">
+										<div class="form-group calendar">
+											<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+											<a href="#none" class="btn-calendar">달력</a>
+											<span class="txt-unit">━</span>
+											<input type="text" class="c-input" title="종료일자">
+											<a href="#none" class="btn-calendar">달력</a>
+										</div>
+										<div class="r-btn">
+											<a href="#none" class="btn-base">등록</a>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+						</table>
+
+						<table class="table-col mt-10">
+						<caption>공통코드 등록</caption>
+						<colgroup>
+							<col style="width:5%">
+							<col>
+							<col>
+							<col>
+							<col>
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="scchk0" name="scchk">
+										<label for="scchk0">전체 선택</label>
+									</span>
+								</th>
+								<th scope="col">제조사</th>
+								<th scope="col">모상품 그룹</th>
+								<th scope="col">할인방법</th>
+								<th scope="col">제외기간</th>
+								<th scope="col">비고</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="scchk1" name="scchk">
+										<label for="scchk1">선택</label>
+									</span>
+								</td>
+								<td>Apple</td>
+								<td>전체</td>
+								<td>할부원금으로 할인 받기 제외</td>
+								<td>2018-01-17 ~ 2018-12-31</td>
+								<td>
+									<a href="#none" class="btn-base btn-gray">수정</a>
+									<a href="#none" class="btn-base btn-gray">삭제</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="scchk2" name="scchk">
+										<label for="scchk2">선택</label>
+									</span>
+								</td>
+								<td>LG전자㈜</td>
+								<td>전체</td>
+								<td>할부원금으로 할인 받기 제외</td>
+								<td>2018-01-17 ~ 2018-12-31</td>
+								<td>
+									<a href="#none" class="btn-base btn-gray">수정</a>
+									<a href="#none" class="btn-base btn-gray">삭제</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="scchk3" name="scchk">
+										<label for="scchk3">선택</label>
+									</span>
+								</td>
+								<td>삼성전자㈜</td>
+								<td>전체</td>
+								<td>할부원금으로 할인 받기 제외</td>
+								<td>2018-01-17 ~ 2018-12-31</td>
+								<td>
+									<a href="#none" class="btn-base btn-gray">수정</a>
+									<a href="#none" class="btn-base btn-gray">삭제</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="scchk4" name="scchk">
+										<label for="scchk4">선택</label>
+									</span>
+								</td>
+								<td>블랙리스트_Sony</td>
+								<td>전체</td>
+								<td>할부원금으로 할인 받기 제외</td>
+								<td>2018-01-17 ~ 2018-12-31</td>
+								<td>
+									<a href="#none" class="btn-base btn-gray">수정</a>
+									<a href="#none" class="btn-base btn-gray">삭제</a>
+								</td>
+							</tr>
+						</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h2 class="h-type2">바로 픽업 환경변수</h2>
+				<div class="btn-area">
+					<p class="txt-unit txt-red">※ 저장 버튼은 전체 적용됩니다.</p>
+					<a href="#none" class="btn-base">저장</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>바로 픽업 환경변수</caption>
+			<colgroup>
+				<col style="width:16%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">안전재고</th>
+					<td>
+						<input type="text" class="c-input" title="안전재고 입력" style="width:60px;" value="0">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">방문예약 가능일자 노출기준</th>
+					<td>
+						D~D+ <input type="text" class="c-input" title="방문예약 가능일자 노출기준 입력" style="width:60px;" value="1"> 영업일만 반영
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">방문예약 가능시간 목록단위</th>
+					<td>
+						<select class="c-select" title="방문예약 가능시간 목록단위 선택" style="width:60px;">
+							<option value="" selected="selected">1</option>
+						</select> 시간
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">방문예약 최소확보시간</th>
+					<td>
+						<select class="c-select" title="방문예약 최소확보시간 선택" style="width:60px;">
+							<option value="" selected="selected">60</option>
+						</select> 분
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">방문예약 최소확보시간<br>미확보 시 자동연장시간</th>
+					<td>
+						<select class="c-select" title="미확보 시 자동연장시간 선택" style="width:60px;">
+							<option value="" selected="selected">60</option>
+						</select> 분
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">바로픽업 주문 <br>자동 취소 유효기간</th>
+					<td>
+							방문예약일자 + 
+						<select class="c-select" title="자동 취소 유효기간 선택" style="width:60px;">
+							<option value="" selected="selected">60</option>
+						</select> 일 후 바로픽업 주문 자동 취소됨
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">매장방문 가능 시간대</th>
+					<td>
+						<p>
+						평일 : From 
+						<select class="c-select" title="매장방문 가능 시간대 평일 선택" style="width:60px;">
+							<option value="" selected="selected">60</option>
+						</select> 시   To 
+						<select class="c-select" title="매장방문 가능 시간대 평일 선택" style="width:60px;">
+							<option value="" selected="selected">60</option>
+						</select> 분 전 1회 발송 시</p>
+						<p class="mt-6">토요일 : From 
+						<select class="c-select" title="매장방문 가능 시간대 토요일 선택" style="width:60px;">
+							<option value="" selected="selected">60</option>
+						</select> 시   To 
+						<select class="c-select" title="매장방문 가능 시간대 토요일 선택" style="width:60px;">
+							<option value="" selected="selected">60</option>
+						</select> 분 전 1회 발송 시</p>
+						<p class="mt-6">
+						공휴일 : From 
+						<select class="c-select" title="매장방문 가능 시간대 공휴일 선택" style="width:60px;">
+							<option value="" selected="selected">60</option>
+						</select> 시   To 
+						<select class="c-select" title="매장방문 가능 시간대 공휴일 선택" style="width:60px;">
+							<option value="" selected="selected">60</option>
+						</select> 분 전 1회 발송 시간</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">사전구매 예약단말 안전재고</th>
+					<td>
+						<input type="text" class="c-input" title="사전구매 예약단말 안전재고 입력" style="width:60px;" value="0">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">사전구매 예약단말 수령<br>가능일자 노출기준</th>
+					<td>
+						D ~ D+ <input type="text" class="c-input" title="사전구매 예약단말 수령 가능일자 노출기준 입력" style="width:60px;" value="0"> 영업일만 반영
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h2 class="h-type2">바로픽업 매장 필터/정렬조건</h2>
+				<div class="btn-area">
+					<p class="txt-unit txt-red">※ 저장 버튼은 전체 적용됩니다.</p>
+					<a href="#none" class="btn-base">저장</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>바로픽업 매장 필터/정렬조건</caption>
+			<colgroup>
+				<col style="width:16%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">인근 지하철역<br>입력가능 개수</th>
+					<td>
+						<select class="c-select" title="인근 지하철역 입력가능 개수 선택" style="width:60px;">
+							<option value="">1</option>
+							<option value="">2</option>
+							<option value="" selected="selected">3</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">지역</th>
+					<td>
+						<table class="table-row  mt-10">
+						<caption>지역</caption>
+						<colgroup>
+							<col style="width:14%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">지역선택</th>
+								<td>
+									<select class="c-select" title="광역시/도 선택" style="width:auto;">
+										<option value="" selected="selected">광역시/도 선택</option>
+									</select>
+									<select class="c-select" title="시/군/구 선택" style="width:auto;">
+										<option value="" selected="selected">시/군/구 선택</option>
+									</select>
+									<a href="#none" class="btn-base">검색</a>
+									<a href="#none" class="btn-base btn-gray">선택삭제</a>
+								</td>
+							</tr>
+						</tbody>
+						</table>
+
+						<table class="table-col mt-10">
+						<caption>지역</caption>
+						<colgroup>
+							<col style="width:5%">
+							<col>
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="areachk0" name="scchk">
+										<label for="areachk0">전체 선택</label>
+									</span>
+								</th>
+								<th scope="col">광역시/도</th>
+								<th scope="col">시/군/구</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="areachk1" name="scchk">
+										<label for="areachk1">선택</label>
+									</span>
+								</td>
+								<td>서울</td>
+								<td>마포구</td>
+							</tr>
+						</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">일자</th>
+					<td>
+						<div class="form-group calendar">
+							<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+							<a href="#none" class="btn-calendar">달력</a>
+							<span class="txt-unit">━</span>
+							<input type="text" class="c-input" title="종료일자">
+							<a href="#none" class="btn-calendar">달력</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">평점</th>
+					<td>
+						<input type="text" class="c-input" title="평점 정수 입력" style="width:30px;"> .
+						<input type="text" class="c-input" title="평점 소수점 입력" style="width:30px;">
+						<p class="txt-unit ml-10">
+							평점적용기간 
+							<select class="c-select" title="평점적용기간 선택" style="width:60px;">
+								<option value=""  selected="selected">전체</option>
+								<option value="">최근 1년</option>
+								<option value="">최근 3개월</option>
+							</select>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">고객 클레임</th>
+					<td>
+							<input type="text" class="c-input" title="고객 클레임 회수 입력" style="width:60px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">CE평가</th>
+					<td>
+						<select class="c-select" title="CE평가 선택" style="width:60px;">
+							<option value="" selected="selected">1</option>
+							<option value="">2</option>
+							<option value="">3</option>
+							<option value="">4</option>
+							<option value="">5</option>
+							<option value="">6</option>
+							<option value="">7</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">매장 정렬조건</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="stop_sort1" name="stop_sort">
+								<label for="stop_sort1">가나다순</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="stop_sort2" name="stop_sort" checked="checked">
+								<label for="stop_sort2">평균 평점 순</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="stop_sort3" name="stop_sort">
+								<label for="stop_sort3">당월 접수건 순</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="stop_sort4" name="stop_sort">
+								<label for="stop_sort4">당월 개통건 순</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="stop_sort5" name="stop_sort">
+								<label for="stop_sort5">누적 접수건 순</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="stop_sort6" name="stop_sort">
+								<label for="stop_sort6">누적 개통건 순</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">추천매장 우선노출여부</th>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="shopchk1" name="scchk">
+							<label for="shopchk1">노출</label>
+						</span>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h2 class="h-type2">공시지원금 알리미 설정</h2>
+				<div class="btn-area">
+					<p class="txt-unit txt-red">※ 저장 버튼은 전체 적용됩니다.</p>
+					<a href="#none" class="btn-base">저장</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>공시지원금 알리미 설정</caption>
+			<colgroup>
+				<col style="width:16%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">기본 알림기간</th>
+					<td>
+						<input type="text" class="c-input" title="기본 알림기간 입력" style="width:60px;"> 일간
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">공시알리미 발송시간</th>
+					<td>
+						<select class="c-select" title="공시알리미 발송시간 선택" style="width:60px;">
+							<option value="" >발송하지 않음</option>
+							<option value="">8</option>
+							<option value="">9</option>
+							<option value="" selected="selected">10</option>
+							<option value="">11</option>
+							<option value="">12</option>
+							<option value="">13</option>
+							<option value="">14</option>
+							<option value="">15</option>
+							<option value="">16</option>
+							<option value="">17</option>
+							<option value="">18</option>
+							<option value="">19</option>
+							<option value="">20</option>
+							<option value="">21</option>
+							<option value="">22</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">템플릿</th>
+					<td>
+						<select class="c-select" title="템플릿 선택" style="width:60px;">
+							<option value=""  selected="selected">공시알리미</option>
+						</select>
+						<a href="#none" class="btn-base btn-gray">템플릿보기</a>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h2 class="h-type2">재고부족 알리미 설정</h2>
+				<div class="btn-area">
+					<p class="txt-unit txt-red">※ 저장 버튼은 전체 적용됩니다.</p>
+					<a href="#none" class="btn-base">저장</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>재고부족 알리미 설정</caption>
+			<colgroup>
+				<col style="width:16%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">배치기간 설정</th>
+					<td>
+						<div class="form-group calendar">
+							<select class="c-select" title="시 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt_unit">:</span>
+							<select class="c-select" title="분 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt-unit">━</span>
+							<select class="c-select" title="시 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt_unit">:</span>
+							<select class="c-select" title="분 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">배치간격 설정</th>
+					<td>
+						<select class="c-select" title="분 선택" style="width:60px;">
+							<option value="" selected="selected">30</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">배치요일 설정</th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="layout_day1" name="layout_day" checked>
+								<label for="layout_day1">평일</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="layout_day2" name="layout_day">
+								<label for="layout_day2">토요일</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="layout_day3" name="layout_day">
+								<label for="layout_day3">일요일</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">실재고수량</th>
+					<td>
+						<input type="text" class="c-input" title="실재고수량 입력" style="width:60px;"> 개 미만으로 전환될 때 알림 문자 발송
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">수신자 설정</th>
+					<td>
+						<table class="table-row  mt-10">
+						<caption>수신자 설정</caption>
+						<colgroup>
+							<col style="width:14%">
+							<col style="width:26%">
+							<col style="width:14%">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">이름</th>
+								<td>
+										<input type="text" class="c-input" title="이름 입력">
+								</td>
+								<th scope="row">이동전화번호</th>
+								<td>
+									<input type="text" class="c-input" title="이동전화번호 입력" style="width:180px">
+									<a href="#none" class="btn-base">검색</a>
+									<a href="#none" class="btn-base btn-gray">선택삭제</a>
+								</td>
+							</tr>
+						</tbody>
+						</table>
+
+						<table class="table-col mt-10">
+						<caption>수신자</caption>
+						<colgroup>
+							<col style="width:5%">
+							<col>
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="recipientchk0" name="recipientchk">
+										<label for="recipientchk0">전체 선택</label>
+									</span>
+								</th>
+								<th scope="col">이름</th>
+								<th scope="col">이동전화번호</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="recipientchk1" name="recipientchk">
+										<label for="recipientchk1">선택</label>
+									</span>
+								</td>
+								<td>추신수</td>
+								<td>01098765432</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="recipientchk2" name="recipientchk">
+										<label for="recipientchk2">선택</label>
+									</span>
+								</td>
+								<td>박찬호</td>
+								<td>01087654321</td>
+							</tr>
+						</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">알림 문자 템플릿</th>
+					<td>
+						<select class="c-select" title="분 선택" style="width:auto;">
+							<option value="" selected="selected">재고부족알리미</option>
+						</select>
+						<a href="#none" class="btn-base btn-gray">템플릿보기</a>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h2 class="h-type2">안전재고관리</h2>
+				<div class="btn-area">
+					<p class="txt-unit txt-red">※ 저장 버튼은 전체 적용됩니다.</p>
+					<a href="#none" class="btn-base">저장</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>안전재고관리</caption>
+			<colgroup>
+				<col style="width:16%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">T 기프트</th>
+					<td>
+						<input type="text" class="c-input" title="재고 입력" style="width:60px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">액세서리</th>
+					<td>
+						<input type="text" class="c-input" title="재고 입력" style="width:60px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">스마트홈 & Life</th>
+					<td>
+						<input type="text" class="c-input" title="재고 입력" style="width:60px;">
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h2 class="h-type2">자동개통/필터링 설정</h2>
+				<div class="btn-area">
+					<p class="txt-unit txt-red">※ 저장 버튼은 전체 적용됩니다.</p>
+					<a href="#none" class="btn-base">저장</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>자동개통/필터링 설정</caption>
+			<colgroup>
+				<col style="width:16%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">사전적격 필터링 안내기간</th>
+					<td>
+						주문일 D+ <input type="text" class="c-input" title="일자 입력" style="width:60px;"> 일 후  자동 취소됨
+						<span class="c-chk ml-10">
+							<input type="checkbox" id="filterchk1" name="filterchk">
+							<label for="filterchk1">휴일 포함 여부</label>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">자동개통 가능시간(평일)</th>
+					<td>
+						<div class="form-group calendar">
+							<select class="c-select" title="시 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt_unit">:</span>
+							<select class="c-select" title="분 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt-unit">━</span>
+							<select class="c-select" title="시 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt_unit">:</span>
+							<select class="c-select" title="분 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+						</div>
+						<span class="c-chk ml-10">
+							<input type="checkbox" id="filterchk2" name="filterchk">
+							<label for="filterchk2">자동개통 가능여부</label>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">자동개통 가능시간(토요일)</th>
+					<td>
+						<div class="form-group calendar">
+							<select class="c-select" title="시 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt_unit">:</span>
+							<select class="c-select" title="분 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt-unit">━</span>
+							<select class="c-select" title="시 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt_unit">:</span>
+							<select class="c-select" title="분 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+						</div>
+						<span class="c-chk ml-10">
+							<input type="checkbox" id="filterchk3" name="filterchk">
+							<label for="filterchk3">자동개통 가능여부</label>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">자동개통 가능시간<br>(일요일/휴일)</th>
+					<td>
+						<div class="form-group calendar">
+							<select class="c-select" title="시 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt_unit">:</span>
+							<select class="c-select" title="분 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt-unit">━</span>
+							<select class="c-select" title="시 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt_unit">:</span>
+							<select class="c-select" title="분 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+						</div>
+						<span class="c-chk ml-10">
+							<input type="checkbox" id="filterchk4" name="filterchk">
+							<label for="filterchk4">자동개통 가능여부</label>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">필터링 적용시간(평일)</th>
+					<td>
+						<div class="form-group calendar">
+							<select class="c-select" title="시 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt_unit">:</span>
+							<select class="c-select" title="분 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt-unit">━</span>
+							<select class="c-select" title="시 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt_unit">:</span>
+							<select class="c-select" title="분 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+						</div>
+						<span class="c-chk ml-10">
+							<input type="checkbox" id="filterchk5" name="filterchk" checked>
+							<label for="filterchk5">필터링 적용여부</label>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">필터링 적용시간(토요일)</th>
+					<td>
+						<div class="form-group calendar">
+							<select class="c-select" title="시 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt_unit">:</span>
+							<select class="c-select" title="분 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt-unit">━</span>
+							<select class="c-select" title="시 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt_unit">:</span>
+							<select class="c-select" title="분 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+						</div>
+						<span class="c-chk ml-10">
+							<input type="checkbox" id="filterchk6" name="filterchk" checked>
+							<label for="filterchk6">필터링 적용여부</label>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">필터링 적용시간<br>(일요일/휴일)</th>
+					<td>
+						<div class="form-group calendar">
+							<select class="c-select" title="시 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt_unit">:</span>
+							<select class="c-select" title="분 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt-unit">━</span>
+							<select class="c-select" title="시 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+							<span class="txt_unit">:</span>
+							<select class="c-select" title="분 선택" style="width:40px;">
+								<option value="" selected="selected">00</option>
+							</select>
+						</div>
+						<span class="c-chk ml-10">
+							<input type="checkbox" id="filterchk7" name="filterchk" checked>
+							<label for="filterchk7">필터링 적용여부</label>
+						</span>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h2 class="h-type2">그 외 환경설정</h2>
+				<div class="btn-area">
+					<p class="txt-unit txt-red">※ 저장 버튼은 전체 적용됩니다.</p>
+					<a href="#none" class="btn-base">저장</a>
+				</div>
+			</div>
+			<table class="table-row">
+			<caption>그 외 환경설정</caption>
+			<colgroup>
+				<col style="width:16%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">신청서 USIM 노출설정</th>
+					<td>
+						<div class="form-group">
+							<span class="c-chk">
+								<input type="checkbox" id="usim1" name="usim">
+								<label for="usim1">일반 USIM 구매 (5,500원)</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="usim2" name="usim" checked>
+								<label for="usim2">신규 USIM 구매 (7,700원)</label>
+							</span>
+							<span class="c-chk">
+								<input type="checkbox" id="usim3" name="usim" checked>
+								<label for="usim3">기존 USIM 사용</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">추천인/코드 입력영역 <br>노출여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="codeY" name="codeYN" checked="checked">
+								<label for="codeY">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="codeN" name="codeYN">
+								<label for="codeN">N</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">퀵배송 주문가능 여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="orderY" name="orderYN" checked="checked">
+								<label for="orderY">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="orderN" name="orderYN">
+								<label for="orderN">N</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<!-- btn -->
+			<div class="btn-area center">
+				<a href="#none" class="btn-base btn-blue">저장</a>
+			</div>
+			<!-- //btn -->
+		</div>
+		<!-- //content -->
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>바로픽업 매장 방문일자 선택</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<style type="text/css">
+		.tab-con {display:none;}
+	</style>
+</head>
+<body>
+<!-- 팝업사이즈 860*630 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">바로픽업 매장 방문일자 선택</h1>
+	</div>
+	<div class="pop-content">
+		<h2 class="h-type2">매장정보</h2>
+
+		<!-- tab -->
+		<ul class="tab-area depth2 js-tab-toggle">
+			<li><a href="#tab_con1" class="on">기본정보</a></li>
+			<li><a href="#tab_con2">지도</a></li>
+			<li><a href="#tab_con3">구매후기</a></li>
+		</ul>
+		<!-- //tab -->
+		
+		<div id="tab_con1" class="tab-con">
+			<h3 class="hidden">기본정보</h3>
+			<table class="table-row">
+			<caption>바로픽업 매장 기본정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">매장명</th>
+					<td>
+						메이저직영샵 / 메이저직영Shop   |
+						<!--
+							score0
+							score0-5
+							score1
+							score1-5
+							score2
+							score2-5
+							score3
+							score3-5
+							score4
+							score4-5
+							score5
+						-->
+						<span class="c-score"><span class="score score3-5">별3.5개</span></span> [1]
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">매장 연락처</th>
+					<td>055-0000-0000</td>
+				</tr>
+				<tr>
+					<th scope="row">주소</th>
+					<td>
+						<p>
+							경남 김해시 번화1로84번길 12,108호(대청동,(주)상업건축물)<br>
+							(지번 : 대청리 62-5 k2빌딩 108호)
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">영업시간</th>
+					<td>평일 11:00-20:00 / 주말 11:00-20:00 / 휴일 11:00-20:00</td>
+				</tr>
+				<tr>
+					<th scope="row">찾아오는 길</th>
+					<td>
+						<p>1.구술약도 <br>
+						김해 대청동 소재 <br>
+						젤미마을 부영 7차 주공 6차 맞은편 2.대중교통 <br>
+						마을버스 운행중 <br>
+						055-325-0821</p>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+
+		<div id="tab_con2" class="tab-con">
+			<h3 class="hidden">지도</h3>
+			<div>지도 api</div>
+		</div>
+
+		<div id="tab_con3" class="tab-con">
+			<h3 class="hidden">구매후기</h3>
+			<table class="table-col js-table-toggle">
+			<caption>구매후기 리스트</caption>
+			<colgroup>
+				<col style="width:16%">
+				<col>
+				<col style="width:16%">
+				<col style="width:16%">
+				<col style="width:10%">
+			</colgroup>
+			<thead style="display:none;">
+				<tr>
+					<th scope="col">평점</th>
+					<th scope="col">제목</th>
+					<th scope="col">이름</th>
+					<th scope="col">날짜</th>
+					<th scope="col">보기</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><span class="c-score"><span class="score score5">별5개</span></span></td>
+					<td class="l-data">만족해요</td>
+					<td>홍길동 (abcde) /</td>
+					<td>2018-08-13</td>
+					<td><a href="#none" class="btn-base btn-gray btn-view">보기</a></td>
+				</tr>
+				<tr class="hide-con">
+					<td class="l-data" colspan="5">
+						<div class="review-area">
+							<strong class="review-tit">구매후기 내용</strong>
+							<div class="review-con">
+								예전에자주폰을  바꿨지만   다이렉트로구입해보기는처음택배로받을까하다 금요일저녁주문했기에 주말지나야받을거같아매장에서 받는걸로선택주문넣은 후 매장서 바로전화.  매장위치며 제품유무까지상세히말해주심약속시간맞춰가니  바로개통혹시나 액정필름이나 케이스는안주겠지했는데액정도붙여주시고 케이스주문까지~~~정말기분좋게개통하고 왔어요
+							</div>
+							<div class="reply-area">
+								<strong class="review-tit">답변상세 내용 | 운영자 | 2016.08.29</strong>
+								<div class="review-con">
+									안녕하세요, 고객님. SK텔레콤 공식 온라인 맞춤샵 Tworld direct 입니다.Tworld direct에서 구매하신 상품에 만족해주셔서 진심으로 감사드립니다.언제나 신속한 처리와 함께 고객 한 분, 한 분을 만족시켜 드릴 수 있는 맞춤형 서비스로 찾아 뵐 수 있도록 노력하겠습니다.저희 Tworld direct를 이용해주셔서 다시 한 번 감사의 말씀드리며, 다른 문의 사항이 있을 경우 저희 T world Direct 대표전화 1534-7979(SKT휴대폰 발신통화무료) 또는 1599-0224(유료) , 실시간 채팅상담을 통해 문의 주시면 도움 드리도록 하겠습니다.언제나 만족하는 서비스로 기억되는 Tworld direct가 되도록 최선을 다하겠습니다. 소중한 분들과 행복한 시간 보내시길 바라겠습니다. 감사합니다.
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td><span class="c-score"><span class="score score4">별4개</span></span></td>
+					<td class="l-data">만족해요</td>
+					<td>홍길동 (abcde) /</td>
+					<td>2018-08-13</td>
+					<td><a href="#none" class="btn-base btn-gray btn-view">보기</a></td>
+				</tr>
+				<tr class="hide-con">
+					<td class="l-data" colspan="5">
+						<div class="review-area">
+							<strong class="review-tit">구매후기 내용</strong>
+							<div class="review-con">
+								예전에자주폰을  바꿨지만   다이렉트로구입해보기는처음택배로받을까하다 금요일저녁주문했기에 주말지나야받을거같아매장에서 받는걸로선택주문넣은 후 매장서 바로전화.  매장위치며 제품유무까지상세히말해주심약속시간맞춰가니  바로개통혹시나 액정필름이나 케이스는안주겠지했는데액정도붙여주시고 케이스주문까지~~~정말기분좋게개통하고 왔어요
+							</div>
+							<div class="reply-area">
+								<strong class="review-tit">답변상세 내용 | 운영자 | 2016.08.29</strong>
+								<div class="review-con">
+									안녕하세요, 고객님. SK텔레콤 공식 온라인 맞춤샵 Tworld direct 입니다.Tworld direct에서 구매하신 상품에 만족해주셔서 진심으로 감사드립니다.언제나 신속한 처리와 함께 고객 한 분, 한 분을 만족시켜 드릴 수 있는 맞춤형 서비스로 찾아 뵐 수 있도록 노력하겠습니다.저희 Tworld direct를 이용해주셔서 다시 한 번 감사의 말씀드리며, 다른 문의 사항이 있을 경우 저희 T world Direct 대표전화 1534-7979(SKT휴대폰 발신통화무료) 또는 1599-0224(유료) , 실시간 채팅상담을 통해 문의 주시면 도움 드리도록 하겠습니다.언제나 만족하는 서비스로 기억되는 Tworld direct가 되도록 최선을 다하겠습니다. 소중한 분들과 행복한 시간 보내시길 바라겠습니다. 감사합니다.
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td><span class="c-score"><span class="score score4-5">별4.5개</span></span></td>
+					<td class="l-data">만족해요</td>
+					<td>홍길동 (abcde) /</td>
+					<td>2018-08-13</td>
+					<td><a href="#none" class="btn-base btn-gray btn-view">보기</a></td>
+				</tr>
+				<tr class="hide-con">
+					<td class="l-data" colspan="5">
+						<div class="review-area">
+							<strong class="review-tit">구매후기 내용</strong>
+							<div class="review-con">
+								예전에자주폰을  바꿨지만   다이렉트로구입해보기는처음택배로받을까하다 금요일저녁주문했기에 주말지나야받을거같아매장에서 받는걸로선택주문넣은 후 매장서 바로전화.  매장위치며 제품유무까지상세히말해주심약속시간맞춰가니  바로개통혹시나 액정필름이나 케이스는안주겠지했는데액정도붙여주시고 케이스주문까지~~~정말기분좋게개통하고 왔어요
+							</div>
+							<div class="reply-area">
+								<strong class="review-tit">답변상세 내용 | 운영자 | 2016.08.29</strong>
+								<div class="review-con">
+									안녕하세요, 고객님. SK텔레콤 공식 온라인 맞춤샵 Tworld direct 입니다.Tworld direct에서 구매하신 상품에 만족해주셔서 진심으로 감사드립니다.언제나 신속한 처리와 함께 고객 한 분, 한 분을 만족시켜 드릴 수 있는 맞춤형 서비스로 찾아 뵐 수 있도록 노력하겠습니다.저희 Tworld direct를 이용해주셔서 다시 한 번 감사의 말씀드리며, 다른 문의 사항이 있을 경우 저희 T world Direct 대표전화 1534-7979(SKT휴대폰 발신통화무료) 또는 1599-0224(유료) , 실시간 채팅상담을 통해 문의 주시면 도움 드리도록 하겠습니다.언제나 만족하는 서비스로 기억되는 Tworld direct가 되도록 최선을 다하겠습니다. 소중한 분들과 행복한 시간 보내시길 바라겠습니다. 감사합니다.
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- paginate -->
+			<div class="paginate-area">
+				<a href="#none" class="pg-first">처음 리스트</a>
+				<a href="#none" class="pg-prev">이전 리스트</a>
+				<ul class="paginate">
+					<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+				</ul>
+				<a href="#none" class="pg-next">다음 리스트</a>
+				<a href="#none" class="pg-last">마지막 리스트</a>
+			</div>
+			<!-- //paginate -->
+		</div>
+		
+		<h2 class="h-type2">방문예약</h2>
+		<table class="table-row">
+		<caption>방문예약</caption>
+		<colgroup>
+			<col style="width:14%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">방문일자</th>
+				<td>
+					<select class="c-select" title="날짜 선택" style="width:30%;">
+						<option value="" selected="selected">날짜</option>
+					</select>
+					<select class="c-select" title="시간 선택" style="width:30%;">
+						<option value="" selected="selected">시간</option>
+					</select>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-line-gray">이전</a>
+			<a href="#none" class="btn-base btn-blue">확인</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

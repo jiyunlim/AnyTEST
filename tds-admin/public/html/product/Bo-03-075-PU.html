@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>체크포인트</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 860*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">체크포인트</h1>
+	</div>
+	<div class="pop-content">
+		<table class="table-row">
+			<caption>체크포인트</caption>
+			<colgroup>
+				<col style="width:15%">
+				<col style="width:22%">
+				<col style="width:19%">
+				<col style="width:8%">
+				<col style="width:10%">
+				<col style="width:8%">
+				<col style="width:10%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">* 게시물유형</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="pop_rdo1" name="rdo" checked="checked">
+								<label for="pop_rdo1">Text </label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="pop_rdo2" name="rdo">
+								<label for="pop_rdo2">Editor</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">체크포인트 구분</th>
+					<td>특정</td>
+					<th scope="row">게시여부</th>
+					<td>
+						<select class="c-select" title="게시여부 선택">
+							<option value="" selected="selected">Y</option>
+							<option value="" >N</option>
+						</select>
+					</td>
+					<th scope="row">노출순서</th>
+					<td>
+						<select class="c-select" title="노출순서 선택">
+							<option value="" selected="selected">1</option>
+							<option value="" >2</option>
+							<option value="" >3</option>
+							<option value="" >4</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">제목</th>
+					<td colspan="7">
+						<input type="text" class="c-input" title="제목 입력" style="width:87%;">
+						<a href="#none" class="btn-base btn-gray">내용 복사</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" colspan="8">체크포인트 내용</th>
+				</tr>
+				<tr>
+					<td  colspan="8">
+						<div class="tab-radio-con open" style="padding-top:0;">
+							<textarea rows="1" cols="1" class="c-textarea" title="입력" ></textarea>
+						</div>
+						<div class="tab-radio-con edit-area">
+							Editor영역
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">저장</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

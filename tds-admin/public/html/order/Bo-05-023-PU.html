@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>매장정보 상세</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 860*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">매장 정보 상세</h1>
+	</div>
+	<div class="pop-content">
+		<h2 class="h-type2">기본정보</h2>
+		<table class="table-row">
+		<caption>기본정보</caption>
+		<colgroup>
+			<col style="width:12%">
+			<col style="width:12%">
+			<col>
+			<col style="width:12%">
+			<col>
+			<col style="width:12%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">본부</th>
+				<td colspan="2">수도권마케팅 본부</td>
+				<th scope="row">마케팅팀</th>
+				<td>강남마케팅팀</td>
+				<th scope="row">대리점명</th>
+				<td>강남스타대리점</td>
+			</tr>
+			<tr>
+				<th scope="row">매장명</th>
+				<td colspan="2">수도권마케팅 본부</td>
+				<th scope="row">매장연락처</th>
+				<td colspan="3">02-540-8010</td>
+			</tr>
+			<tr>
+				<th class="rowgroup" rowspan="2">주소</th>
+				<th scope="row">도로명주소</th>
+				<td colspan="5">
+					<div class="align-block">
+							서울 강남구 선릉로 640(삼성동)
+						<div class="r-btn"><a href="#none" class="btn-base btn-gray">주소변경</a></div>
+					</div>
+				</td> 
+			</tr>
+			<tr>
+				<th scope="row">지번주소</th>
+				<td colspan="5">서울 강남구 삼성동 34-7</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<h2 class="h-type2">추가정보</h2>
+		<table class="table-row">
+		<caption>추가정보</caption>
+		<colgroup>
+			<col style="width:10%">
+			<col>
+			<col style="width:10%">
+			<col>
+			<col style="width:10%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">평일<br>영업시간</th>
+				<td>
+					<select class="c-select" title="영업 시작 시간 선택" style="width:60px;">
+						<option value="" selected="selected">선택</option>
+						<option value="">12:30</option>
+					</select>
+					<span class="txt-unit">-</span>
+					<select class="c-select" title="영업 종료 시간 선택" style="width:60px;">
+						<option value="" selected="selected">선택</option>
+						<option value="">12:30</option>
+					</select>
+				</td>
+				<th scope="row">토요일<br>영업시간</th>
+				<td>
+					<select class="c-select" title="영업 시작 시간 선택" style="width:60px;">
+						<option value="" selected="selected">선택</option>
+						<option value="">12:30</option>
+					</select>
+					<span class="txt-unit">-</span>
+					<select class="c-select" title="영업 종료 시간 선택" style="width:60px;">
+						<option value="" selected="selected">선택</option>
+						<option value="">12:30</option>
+					</select>
+				</td>
+				<th scope="row">일/공휴일<br>영업시간</th>
+				<td>
+					<select class="c-select" title="영업 시작 시간 선택" style="width:60px;">
+						<option value="" selected="selected">선택</option>
+						<option value="">12:30</option>
+					</select>
+					<span class="txt-unit">-</span>
+					<select class="c-select" title="영업 종료 시간 선택" style="width:60px;">
+						<option value="" selected="selected">선택</option>
+						<option value="">12:30</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">찾아오시는 길</th>
+				<td colspan="5">에디터영역</td>
+			</tr>
+			<tr>
+				<th scope="row" rowspan="2" class="rowgroup" >판매자</th>
+			
+				<th scope="col" class="th-sub">판매자 ORG_ID</th>
+				<th scope="col" colspan="2" class="th-sub">판매자명</th>
+				<th scope="col" class="th-sub">판매자ID</th>
+				<th scope="col" class="th-sub">판매자 로그인ID</th> 
+			</tr>
+			<tr> 
+				<td>000000</td>
+				<td  colspan="2">거여대리점(본점)</td>
+				<td>-</td>
+				<td>-</td> 
+			</tr>
+			<tr>
+				<th scope="row">매장구분</th>
+				<td>
+					<div class="form-group">
+						<span class="c-chk">
+							<input type="checkbox" id="store1" name="store">
+							<label for="store1">TKEY</label>
+						</span>
+						<span class="c-chk">
+							<input type="checkbox" id="store2" name="store">
+							<label for="store2">TKEY+</label>
+						</span>
+					</div>
+				</td>
+				<th scope="row">우리매장<br>주소 복사</th>
+				<td colspan="3">
+					<a href="#none" class="btn-base btn-gray">단골고객 MMS용</a>
+					<a href="#none" class="btn-base btn-gray">네이버지도용</a>
+					<a href="#none" class="btn-base btn-gray">QR코드용</a>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">TPS 여부</th>
+				<td colspan="5">
+					<div class="form-group">
+						<span class="c-rdo">
+							<input type="radio" id="TPS1" name="TPS">
+							<label for="TPS1">Y</label>
+						</span>
+						<span class="c-rdo">
+							<input type="radio" id="TPS2" name="TPS">
+							<label for="TPS2">N</label>
+						</span>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<h2 class="h-type2">매장 이벤트 정보</h2>
+		<table class="table-row">
+		<caption>매장 이벤트 정보</caption>
+		<colgroup>
+			<col style="width:14%">
+			<col style="width:40%">
+			<col style="width:14%">
+			<col> 
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">매장소개</th>
+				<td colspan="3">에디터영역</td>
+			</tr>
+			<tr>
+				<th scope="row">매장명</th>
+				<td colspan="3">에디터영역</td>
+			</tr>
+			<tr>
+				<th scope="row">전시기간</th>
+				<td>
+					<div class="form-group calendar"> 
+						<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+						<a href="#none" class="btn-calendar">달력</a>
+						<span class="txt-unit">━</span>
+						<input type="text" class="c-input" title="종료일자">
+						<a href="#none" class="btn-calendar">달력</a>
+					</div>
+				</td>
+				<th scope="row">전시여부</th>
+				<td>
+					<div class="form-group">
+						<span class="c-rdo">
+							<input type="radio" id="exhibit1" name="exhibit">
+							<label for="exhibit1">Y</label>
+						</span>
+						<span class="c-rdo">
+							<input type="radio" id="exhibit2" name="exhibit">
+							<label for="exhibit2">N</label>
+						</span>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<h2 class="h-type2">관리자 관리 정보</h2> 
+		<table class="table-row">
+		<caption>관리자 관리 정보</caption>
+		<colgroup>
+			<col style="width:12%">
+			<col>
+			<col style="width:12%">
+			<col> 
+			<col style="width:12%">
+			<col style="width:8%"> 
+			<col style="width:12%">
+			<col> 
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">바로픽업 대상</th>
+				<td> 
+					<span class="c-chk">
+						<input type="checkbox" id="pickup1" name="pickup">
+						<label for="pickup1">가능</label>
+					</span>
+				</td>
+				<th scope="row">추천매장 여부</th>
+				<td>
+					<span class="c-chk">
+						<input type="checkbox" id="store3" name="store">
+						<label for="store3">매장추천</label>
+					</span> 
+				</td>
+				<th scope="row">평점</th>
+				<td>5</td>
+				<th scope="row">CE 평가 점수</th>
+				<td>
+					<select class="c-select" title="CE 평가 점수 선택" style="width:60px;">
+						<option value="" selected="selected">선택</option>
+						<option value="">1</option>
+						<option value="">2</option>
+						<option value="">3</option>
+						<option value="">4</option>
+						<option value="">5</option>
+						<option value="">6</option>
+						<option value="">7</option>
+					</select>
+				</td>
+			</tr> 
+			<tr>
+				<th scope="row">고객 클레임건수</th>
+				<td colspan="2"  class="r-data">-</td>
+				<th scope="row">매장 담당자<br>추가 갯수</th>
+				<td colspan="2" class="r-data">-</td>
+				<th scope="row">매장 담당자<br>삭제 갯수</th>
+				<td class="r-data">-</td>
+			</tr> 
+		</tbody>
+		</table>
+
+		<div class="h-area2">
+			<h2 class="h-type2">바로픽업 관리자 목록</h2>
+			<div class="btn-area">
+				<a href="#none" class="btn-base">추가</a>
+				<a href="#none" class="btn-base btn-gray">삭제</a>
+			</div>
+		</div>
+		<table class="table-col">
+		<caption>바로픽업 관리자 목록</caption>
+		<colgroup>
+			<col style="width:6%">
+			<col style="width:46%">
+			<col style="width:46%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">선택</th>
+				<th scope="col">이름</th>
+				<th scope="col">전화번호</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- 정보 없을 때 -->
+			<tr>
+				<td colspan="3">등록 정보 없음</td>
+			</tr>
+			<!--// 정보 없을 때 -->
+
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="picklist1" name="picklist">
+						<label for="picklist1">선택</label>
+					</span> 
+				</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<div class="h-area2">
+			<h2 class="h-type2">인근지하철 목록</h2>
+			<div class="btn-area">
+				<a href="#none" class="btn-base">추가</a>
+				<a href="#none" class="btn-base btn-gray">삭제</a>
+			</div>
+		</div>
+		<table class="table-col">
+		<caption>인근 지하철 목록</caption>
+		<colgroup>
+			<col style="width:6%">
+			<col style="width:30%">
+			<col style="width:30%">
+			<col style="width:30%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">선택</th>
+				<th scope="col">권역</th>
+				<th scope="col">호선</th>
+				<th scope="col">역명</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- 정보 없을 때 -->
+			<tr>
+				<td colspan="4">등록 정보 없음</td>
+			</tr>
+			<!--// 정보 없을 때 -->
+
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="subway1" name="subway">
+						<label for="subway1">선택</label>
+					</span> 
+				</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<div class="h-area2">
+			<h2 class="h-type2">방문 불가시간 목록</h2>
+			<div class="btn-area">
+				<a href="#none" class="btn-base">추가</a>
+				<a href="#none" class="btn-base btn-gray">삭제</a>
+			</div>
+		</div>
+		<table class="table-col">
+		<caption>방문 불가시간 목록</caption>
+		<thead>
+			<tr>
+				<th scope="col">선택</th>
+				<th scope="col">일자</th>
+				<th scope="col" colspan="2">09</th>
+				<th scope="col" colspan="2">10</th>
+				<th scope="col" colspan="2">11</th>
+				<th scope="col" colspan="2">12</th>
+				<th scope="col" colspan="2">13</th>
+				<th scope="col" colspan="2">14</th>
+				<th scope="col" colspan="2">15</th>
+				<th scope="col" colspan="2">16</th>
+				<th scope="col" colspan="2">17</th>
+				<th scope="col" colspan="2">18</th>
+				<th scope="col" colspan="2">19</th>
+				<th scope="col" colspan="2">20</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- 정보 없을 때 -->
+			<tr>
+				<td colspan="26">등록 정보 없음</td>
+			</tr>
+			<!--// 정보 없을 때 -->
+
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="visitime1" name="visitime">
+						<label for="visitime1">선택</label>
+					</span> 
+				</td>
+				<td>
+					<em>YYYY-MM-DD</em>
+				</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+		</tbody>
+		</table>
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">닫기</a> 
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script> 
+</body>
+</html>

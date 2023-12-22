@@ -1,0 +1,284 @@
+[
+    {
+        "group": "c00_0",
+        "terms": "c00_0_A1",
+        "id": "agreeTdirectNoties",
+        "tit": "제3자 명의대여 위험 및 신규계약서 교부에 대한 안내"
+    },
+    {
+        "group": "c00_0",
+        "terms": "c00_0_A2",
+        "id": "agreeTdirectNoties",
+        "tit": "개인신용정보 조회 및 이용 동의서"
+    },
+    {
+        "group": "c00_1",
+        "terms": "c00_1_A1",
+        "id": "agreeTworld",
+        "tit": "개인정보 수집 및 이용 동의"
+    },
+    {
+        "group": "c00_1",
+        "terms": "c00_1_A2",
+        "id": "agreeTworld",
+        "tit": "상품 구매약관"
+    },
+    {
+        "group": "c00_1",
+        "terms": "c00_1_A3",
+        "id": "agreeTworld",
+        "tit": "구매 시 유의사항"
+    },
+    {
+        "group": "cl0_1",
+        "terms": "cl0_1_A1",
+        "id": "agreeDefault",
+        "tit": "개인정보ㆍ개인위치정보 수집ㆍ이용 동의"
+    },
+    {
+        "group": "cl0_1",
+        "terms": "cl0_1_A2",
+        "id": "agreeDefault",
+        "tit": "개인정보 제3자 제공 동의"
+    },
+    {
+        "group": "cl0_1",
+        "terms": "cl0_1_A3",
+        "id": "agreeDefault",
+        "tit": "고객 혜택 제공을 위한 정보수집 및 이용동의"
+    },
+    {
+        "group": "cl0_1",
+        "terms": "cl0_1_A4",
+        "id": "agreeDefault",
+        "tit": "고객 혜택 정보 및 광고 수신 동의"
+    },
+    {
+        "group": "cl0_1",
+        "terms": "cl0_1_A7",
+        "id": "agreeDefault",
+        "tit": "T안심보상폰/클럽T조기기변/프리클럽반납 가입자 정보 제3자 제공 동의"
+    },
+    {
+        "group": "cl0_1",
+        "terms": "cl0_1_A9",
+        "id": "SKbroadband+11avenue",
+        "tit": "혜택 제공을 위한 제3자 제공(재제공)동의"
+    },
+    {
+        "group": "",
+        "terms": "",
+        "id": "thirdPartyAgreeAD",
+        "tit": "혜택 제공을 위한 제 3자 광고 수신 동의"
+    },
+    {
+        "group": "cl1_1",
+        "terms": "cl1_1_A1",
+        "id": "agreeEqpChg",
+        "tit": "이동전화서비스 이용안내 및 유의사항"
+    },
+    {
+        "group": "cl1_5",
+        "terms": "cl1_5_A1",
+        "id": "agreeNumMov",
+        "tit": "이동전화서비스 이용안내 및 유의사항"
+    },
+    {
+        "group": "cl1_5",
+        "terms": "cl1_5_A3",
+        "id": "agreeNumMov",
+        "tit": "번호변경 신청정보"
+    },
+    {
+        "group": "cl1_9",
+        "terms": "cl1_9_A1",
+        "id": "agreeNewNormal",
+        "tit": "이동전화서비스 이용안내 및 유의사항"
+    },
+    {
+        "group": "cl1_7",
+        "terms": "cl1_7_A1",
+        "id": "agreeNewIPhone",
+        "tit": "iPhone/iPad 이용 고객 동의서(유의사항)"
+    },
+    {
+        "group": "cl1_2",
+        "terms": "cl1_2_A1",
+        "id": "agreeEqpChgTeen",
+        "tit": "청소년 이용 안내"
+    },
+    {
+        "group": "cl1_2",
+        "terms": "cl1_2_A2",
+        "id": "agreeEqpChgTeen",
+        "tit": "법정대리인정보"
+    },
+    {
+        "group": "cl1_2",
+        "terms": "cl1_2_A3",
+        "id": "agreeEqpChgTeen",
+        "tit": "청소년 보호제도"
+    },
+    {
+        "group": "cl1_2",
+        "terms": "cl1_2_A4",
+        "id": "agreeEqpChgTeen",
+        "tit": "이동전화서비스 이용안내 및 유의사항"
+    },
+    {
+        "group": "cl1_4",
+        "terms": "cl1_4_A1",
+        "id": "agreeNumMovTeen",
+        "tit": "청소년 이용 안내"
+    },
+    {
+        "group": "cl9_01",
+        "terms": "cl9_01_A5",
+        "id": "",
+        "tit": "법정대리인정보"
+    },
+    {
+        "group": "cl1_4",
+        "terms": "cl1_4_A2",
+        "id": "agreeNumMovTeen",
+        "tit": "법정대리인정보"
+    },
+    {
+        "group": "cl1_4",
+        "terms": "cl1_4_A3",
+        "id": "agreeNumMovTeen",
+        "tit": "청소년 보호제도"
+    },
+    {
+        "group": "cl1_4",
+        "terms": "cl1_4_A4",
+        "id": "agreeNumMovTeen",
+        "tit": "이동전화서비스 이용안내 및 유의사항"
+    },
+    {
+        "group": "cl1_4",
+        "terms": "cl1_4_A6",
+        "id": "agreeNumMovTeen",
+        "tit": "번호변경 신청정보"
+    },
+    {
+        "group": "cl1_6",
+        "terms": "cl1_6_A1",
+        "id": "agreeNewTeen",
+        "tit": "청소년 이용 안내"
+    },
+    {
+        "group": "cl1_6",
+        "terms": "cl1_6_A2",
+        "id": "agreeNewTeen",
+        "tit": "법정대리인정보"
+    },
+    {
+        "group": "cl1_6",
+        "terms": "cl1_6_A3",
+        "id": "agreeNewTeen",
+        "tit": "청소년 보호제도"
+    },
+    {
+        "group": "cl1_6",
+        "terms": "cl1_6_A4",
+        "id": "agreeNewTeen",
+        "tit": "이동전화서비스 이용안내 및 유의사항"
+    },
+    {
+        "group": "cl1_15",
+        "terms": "cl1_15_A1",
+        "id": "agreeFreeAgrmtDc",
+        "tit": "요금할인제도 가입신청서"
+    },
+    {
+        "group": "cl1_12",
+        "terms": "cl1_12",
+        "id": "agreeInstallmentContract",
+        "tit": "단말매매 계약서"
+    },
+    {
+        "group": "cl1_12",
+        "terms": "cl1_12_B1",
+        "id": "agreeInstallmentContract",
+        "tit": "분할상환약관계약서"
+    },
+    {
+        "group": "cl1_12",
+        "terms": "cl1_12_B3",
+        "id": "agreeInstallmentContract",
+        "tit": "개인(신용)정보 조회.수집.이용.제공 동의서"
+    },
+    {
+        "group": "cl9_01",
+        "terms": "cl9_01_A1",
+        "id": "agreeRentalContract",
+        "tit": "T렌탈 단말정보 및 주요내용"
+    },
+    {
+        "group": "cl9_01",
+        "terms": "cl9_01_A2",
+        "id": "agreeRentalContract",
+        "tit": "T렌탈 개인(신용)정보 조회/수집/이용/제공 동의서"
+    },
+    {
+        "group": "cl1_14",
+        "terms": "cl1_14_A1",
+        "id": "agreeSelectAgrmtDc",
+        "tit": "선택약정할인제도 가입신청서"
+    },
+    {
+        "group": "c20_01",
+        "terms": "c20_01_A1",
+        "id": "agreeTsignatureApplform",
+        "tit": "보험 제휴 상품 안내"
+    },
+    {
+        "group": "c20_01",
+        "terms": "c20_01_A2",
+        "id": "agreeTsignatureApplform",
+        "tit": "개인정보·이용·제공 및 취급 위탁 동의"
+    },
+    {
+        "group": "cl0_02",
+        "terms": "cl0_02_A1",
+        "id": "agreePhoneSvcAddInfo",
+        "tit": "이동전화서비스 추가 안내사항"
+    },
+    {
+        "group": "cl0_03",
+        "terms": "cl0_03",
+        "id": "agree5gSvcUse",
+        "tit": "5G 가용지역 확인 동의"
+    },
+    {
+        "group": "d0_01",
+        "terms": "d0_A",
+        "id": "directPlan",
+        "tit": "다이렉트 플랜 혜택 제공에 관한 계약"
+    },
+    {
+        "group": "d0_01",
+        "terms": "d0_B",
+        "id": "directPlanAgree",
+        "tit": "다이렉트 플랜 제휴 혜택 제공을 위한 제3자 제공 동의" 
+    },
+    {
+        "group": "cl0_1",
+        "terms": "directPlan",
+        "id": "agreeDirectPlanContract",
+        "tit": "다이렉트 플랜 혜택 제공에 관한 계약"
+    },
+    {
+        "group": "cl0_1",
+        "terms": "directPlan",
+        "id": "agreeDirectPlanDefault",
+        "tit": "다이렉트 플랜 제휴 혜택 제공을 위한 제3자 제공 동의"
+    },
+    {
+        "group": "el0_1",
+        "terms": "el0_1_A2",
+        "id": "agreeDefault",
+        "tit": "개인정보 제3자 제공 동의"
+    }
+]

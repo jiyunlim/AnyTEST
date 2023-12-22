@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">상품문의</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>상담/공지 관리</li>
+					<li><strong>상품문의</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<h2 class="h-type2">문의 정보</h2>
+			<table class="table-row">
+				<caption>문의 정보 상세</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">작성자</th>
+						<td>
+							<div class="align-block">
+								홍길동 (ID표시)
+								<div class="r-btn">
+									<a href="#none" class="btn-base btn-gray">연락처</a>
+								</div>
+							</div>
+						</td>
+						<th scope="row">작성일</th>
+						<td>YYYY-MM-DD hh:mm:ss</td>
+					</tr>
+					<tr>
+						<th scope="row">알림 신청 방법</th>
+						<td>YYYY-MM-DD hh:mm:ss</td>
+						<th scope="row">문의상품</th>
+						<td>Galaxy A8 Star</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h2 class="h-type2">문의 내용</h2>
+				<div class="btn-area">
+					<a href="#none" class="btn-base">답변등록</a>
+				</div>
+			</div>
+			<table class="table-row">
+				<caption>문의 내용 상세</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">답변여부</th>
+						<td>답변 대기</td>
+					</tr>
+					<tr>
+						<th scope="row">구매후기<p class="mt-6"><a href="#none" class="btn-base btn-gray">복사</a></p></th>
+						<td>
+							구매후기 내용이 표시 됩니다.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h2 class="h-type2">상품 문의 답변등록</h2>
+				<div class="btn-area">
+					<span class="f-12">* 저장된 답변은 수정만 가능하며, 삭제 할 수 없습니다.</span>
+					<a href="#none" class="btn-base">답변저장</a>
+					<a href="#none" class="btn-base btn-gray">답변취소</a>
+				</div>
+			</div>
+			<table class="table-row">
+				<caption>상품 문의 답변등록</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">상담사</th>
+						<td>로그인이름 (아이디)</td>
+					</tr>
+					<tr>
+						<th scope="row">구매후기</th>
+						<td><textarea rows="1" cols="1" class="c-textarea" title="구매후기 입력"></textarea></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="h-area2">
+				<h2 class="h-type2">상품 문의 답변 내역 :  YYYY-MM-DD hh:mm:ss / 홍길동</h2>
+				<div class="btn-area">
+					<span class="f-12">* 저장된 답변은 수정만 가능하며, 삭제 할 수 없습니다.</span>
+					<a href="#none" class="btn-base btn-gray">수정내역</a>
+				</div>
+			</div>
+			<table class="table-row">
+				<caption>상품 문의 답변 내역</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">상담사</th>
+						<td>로그인이름 (아이디)</td>
+					</tr>
+					<tr>
+						<th scope="row">구매후기<p class="mt-6"><a href="#none" class="btn-base btn-gray">복사</a></p></th>
+						<td><textarea rows="1" cols="1" class="c-textarea" title="구매후기 입력"></textarea></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<!-- btn -->
+			<div class="btn-area center">
+				<a href="#none" class="btn-base btn-line-blue">목록</a>
+			</div>
+			<!-- //btn -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

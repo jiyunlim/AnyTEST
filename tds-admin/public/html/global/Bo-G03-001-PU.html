@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>조직 추가</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 860*490 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">하위메뉴 신규등록</h1>
+	</div>
+	<div class="pop-content">
+		<h2 class="h-type2">하위메뉴 신규등록</h2>
+		
+		<table class="table-row">
+		<caption>하위메뉴 신규등록</caption>
+		<colgroup>
+			<col style="width:14%">
+			<col>
+			<col style="width:14%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">메뉴명</th>
+				<td>
+					<input type="text" class="c-input" title="메뉴명 입력">
+				</td>
+				<th scope="row">상위메뉴</th>
+				<td>
+					000000001
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">시나리오</th>
+				<td>
+					<input type="text" class="c-input" title="시나리오 입력">
+				</td>
+				<th scope="row">시작노드</th>
+				<td>
+					<input type="text" class="c-input" title="시작노드 입력">
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">활성화여부</th>
+				<td>
+					<div class="form-group">
+						<span class="c-rdo">
+							<input type="radio" id="activationY" name="activationYN" checked="checked">
+							<label for="activationY">Y</label>
+						</span>
+						<span class="c-rdo">
+							<input type="radio" id="activationN" name="activationYN">
+							<label for="activationN">N</label>
+						</span>
+					</div>
+				</td>
+				<th scope="row">정렬순서</th>
+				<td>
+					<input type="text" class="c-input" title="정렬순서 입력">
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">상세설명</th>
+				<td colspan="3">
+					<textarea rows="1" cols="1" class="c-textarea" title="상세설명 입력"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">생성일</th>
+				<td>2008-09-29 13:19:09.0</td>
+				<th scope="row">변경일</th>
+				<td>2012-11-15 19:24:56.0</td>
+			</tr>
+			<tr>
+				<th scope="row">생성자</th>
+				<td>test</td>
+				<th scope="row">변경자</th>
+				<td>sysadmin</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<!-- btn -->
+		<div class="btn-area center">
+			<a href="#none" class="btn-base btn-blue">저장</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

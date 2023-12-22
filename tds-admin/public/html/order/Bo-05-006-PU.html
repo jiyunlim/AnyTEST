@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T-gate 가입신청 현황관리</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 860*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">무선 가입 신청서 : <span>기기변경</span></h1>
+		<a href="#none" class="btn-print"><span>주문정보 인쇄</span></a>
+	</div>
+	<div class="pop-content">
+		<div class="js-tab-fixed">
+			<!-- tab -->
+			<ul class="tab-area depth2 ">
+				<li><a href="#none" class="on">가입 기본 정보</a></li>
+				<li><a href="#none">무선 가입 신청서</a></li>
+				<li><a href="#none">적격심사</a></li>
+			</ul>
+			<!-- //tab -->
+		</div>
+		
+		<!-- tab con1 -->
+		<h2 class="hidden">가입 기본 정보</h2>
+		<h3 class="h-type2">판매자정보</h3>
+		<table class="table-row">
+		<caption>판매자정보</caption>
+		<colgroup>
+			<col style="width:10%">
+			<col>
+			<col style="width:10%">
+			<col>
+			<col style="width:10%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">본부명</th>
+				<td>특수마케팅본부</td>
+				<th scope="row">마케팅팀</th>
+				<td>TWD팀</td>
+				<th scope="row">대리점</th>
+				<td>TWSP</td>
+			</tr>
+			<tr>
+				<th scope="row">대리점인증번호</th>
+				<td>C25143</td>
+				<th scope="row">판매점</th>
+				<td>전배성</td>
+				<th scope="row">판매자 ID</th>
+				<td>NEWTWS</td>
+			</tr>
+			<tr>
+				<th scope="row">판매채널</th>
+				<td>온라인</td>
+				<th scope="row">상품구분</th>
+				<td>무선</td>
+				<th scope="row">가입유형</th>
+				<td>신규</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<h3 class="h-type2">주문자정보</h3>
+		<table class="table-row">
+		<caption>주문자정보</caption>
+		<colgroup>
+			<col style="width:14%">
+			<col style="width:23%">
+			<col style="width:10%">
+			<col style="width:14%">
+			<col style="width:10%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">이름</th>
+				<td colspan="2">홍길동</td>
+				<th scope="row">생년월일</th>
+				<td colspan="2">YYMMDD</td>
+			</tr>
+			<tr>
+				<th scope="row">이름</th>
+				<td>Alex</td>
+				<th scope="row">국적</th>
+				<td>Indonesa</td>
+				<th scope="row">외국인등록번호</th>
+				<td>XXXXXX-XXXXXX</td>
+			</tr>
+			<tr>
+				<th scope="row">신청서번호</th>
+				<td colspan="2">D0000000000</td>
+				<th scope="row">주문번호</th>
+				<td colspan="2">YYMMDD123456</td>
+			</tr>
+			<tr>
+				<th scope="row">최초신청일시</th>
+				<td colspan="2">YYYY-MM-DD HH:MM:SS</td>
+				<th scope="row">최초 수정일</th>
+				<td colspan="2">YYYY-MM-DD HH:MM:SS</td>
+			</tr>
+			<tr>
+				<th scope="row">물품배송/교환물품배송 상태변경일시</th>
+				<td colspan="2"></td>
+				<th scope="row">개통요청/교환물품개통요청 상태변경일시</th>
+				<td colspan="2"></td>
+			</tr>
+			<tr>
+				<th scope="row">무선 SWING 전송일시</th>
+				<td colspan="2"><span class="txt-red">미인증</span></td>
+				<th scope="row">무선 SWING 개통일자</th>
+				<td colspan="2"></td>
+			</tr>
+			<tr>
+				<th scope="row">인증구분</th>
+				<td colspan="2">카드인증</td>
+				<th scope="row">교환/반품</th>
+				<td colspan="2">
+					<select class="c-select" title="교환/반품 선택">
+						<option value="" selected="selected">선택</option>
+					</select>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<h3 class="h-type2">개통 진행상황</h3>
+		<table class="table-row">
+		<caption>판매자정보</caption>
+		<colgroup>
+			<col style="width:14%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">진행상황(무선)</th>
+				<td>
+					<select class="c-select" title="진행상황(무선) 선택" style="width:30%;">
+						<option value="" selected="selected">접수완료</option>
+					</select>
+					<a href="#none" class="btn-base btn-gray">변경이력조회</a>
+					<select class="c-select" title="개통보류 사유 선택" style="width:30%;">
+						<option value="" selected="selected">선택</option>
+					</select>
+					<a href="#none" class="btn-base btn-gray">개통보류 사유 전송</a>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<table id="order-state" class="table-col mt-20 ">
+		<caption>주문상태 선택</caption>
+		<colgroup>
+			<col style="width:33%">
+			<col style="width:33%">
+			<col>
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">변경자</th>
+				<th scope="col">변경상태</th>
+				<th scope="col">변경일</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>XXX [D15084420]</td>
+				<td>접수완료</td>
+				<td>YYYY-MM-DD HH:MM:SS</td>
+			</tr>
+			<tr>
+				<td>최초등록</td>
+				<td>신청접수</td>
+				<td>YYYY-MM-DD HH:MM:SS</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<h3 class="h-type2">배송 진행 상황</h3>
+		<table class="table-row">
+		<caption>배송 진행 상황</caption>
+		<colgroup>
+			<col style="width:10%">
+			<col>
+			<col style="width:10%">
+			<col>
+			<col style="width:10%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">배송회사</th>
+				<td>우체국</td>
+				<th scope="row">배송 진행상황</th>
+				<td><a href="#none" class="btn-base btn-gray">배송추적</a></td>
+				<th scope="row">송장번호</th>
+				<td>xxxxxxxxx <a href="#none" class="btn-base btn-gray">운송장조회</a></td>
+			</tr>
+		</tbody>
+		</table>
+
+		<h3 class="h-type2">메일발송</h3>
+		<table class="table-row">
+		<caption>메일발송</caption>
+		<colgroup>
+			<col style="width:14%">
+			<col>
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">계약서 메일</th>
+				<td>
+					<div class="align-box"></div>
+					<div class="align-block">
+						무선
+						<div class="r-btn">
+							발송완료
+							<a href="#none" class="btn-base btn-gray">재발송</a>
+						</div>
+					</div>
+				</td>
+				<td>
+					재발송 횟수 ( 1 )회 / 최종발송일 : 2018-07-06 16:00:51.0
+				</td>
+			</tr>
+		</tbody>
+		</table>
+		
+		<h3 class="h-type2">고객 구분 정보</h3>
+		<table class="table-row">
+		<caption>고객 구분 정보</caption>
+		<colgroup>
+			<col style="width:14%">
+			<col style="width:14%">
+			<col>
+			<col style="width:14%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">고객 구분정보</th>
+				<td colspan="2">개인</td>
+				<th scope="row">복지혜택</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th class="rowgroup" rowspan="5">첨부서류</th>
+				<td colspan="4"><strong>[ 필수 첨부 서류 ]</strong></td>
+			</tr>
+			<tr>
+				<th scope="row">법정 대리인<br>신분증 사본</th>
+				<td>
+					<div class="c-input-file">
+						<input type="text" readonly="readonly" class="file-name" title="파일명">
+						<label for="upload01" class="file-label">찾기</label>
+						<input type="file" id="upload01" class="file-upload">
+					</div>
+					<a href="#none" class="btn-base btn-gray">저장</a>
+				</td>
+				<td colspan="2">
+					<!-- <div class="align-file">
+						<span class="txt-unit">가나다라마바사아자차카타파하가나다라마바사아자차카타파하.jpg</span>
+						<div class="r-btn">
+							<a href="#none" class="btn-base btn-gray">삭제</a>
+							<a href="#none" class="btn-base btn-line-gray">보기</a>
+						</div>
+					</div> -->
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">가족관계증명서</th>
+				<td>
+					<div class="c-input-file">
+						<input type="text" readonly="readonly" class="file-name" title="파일명">
+						<label for="upload02" class="file-label">찾기</label>
+						<input type="file" id="upload02" class="file-upload">
+					</div>
+					<a href="#none" class="btn-base btn-gray">저장</a>
+				</td>
+				<td colspan="2">
+					<div class="align-file">
+						<span class="txt-unit">가나다라마바사아자차.jpg</span>
+						<div class="r-btn">
+							<a href="#none" class="btn-base btn-gray">삭제</a>
+							<a href="#none" class="btn-base btn-line-gray">보기</a>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4"><strong>[ 부가 첨부 서류 ]</strong> <a href="#none" class="btn-base btn-gray">추가</a></td>
+			</tr>
+			<tr>
+				<th scope="row">부가서류</th>
+				<td>
+					<div class="c-input-file">
+						<input type="text" readonly="readonly" class="file-name" title="파일명">
+						<label for="upload03" class="file-label">찾기</label>
+						<input type="file" id="upload03" class="file-upload">
+					</div>
+					<a href="#none" class="btn-base btn-gray">저장</a>
+				</td>
+				<td colspan="2">
+					<div class="align-file">
+						<span class="txt-unit">가나다라마바사아자차카타파하가나다라마바사아자차카타파하.jpg</span>
+						<div class="r-btn">
+							<a href="#none" class="btn-base btn-gray">삭제</a>
+							<a href="#none" class="btn-base btn-line-gray">보기</a>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">닫기</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+
+</body>
+</html>

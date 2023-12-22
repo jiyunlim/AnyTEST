@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN GUIDE</title>
+	<link rel="stylesheet" type="text/css" href="../../public/css/tdirect_admin.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/@tdirect_guide.css">
+	<!--[if lt IE 9]>
+	<script src="../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<div id="guide-wrap">
+	<header id="header">
+		<h1><strong>T다이렉트샵</strong><em>ADMIN GUIDE</em></h1>
+		<nav>
+			<div class="inner">
+				<a href="coding_list.html">파일리스트</a>
+				<a href="admin_title.html" class="on">페이지가이드</a>
+			</div>
+		</nav>
+	</header>
+	<article>
+		<nav>
+			<a href="../html/layout/admin_layout.html" target="_blank">레이아웃</a>
+			<a href="admin_title.html">타이틀</a>
+			<a href="admin_btn.html" class="on">버튼</a>
+			<a href="admin_form.html">폼요소</a>
+			<a href="admin_table.html">테이블</a>
+			<a href="admin_etc.html">탭/페이징</a>
+			<a href="admin_popup.html">팝업</a>
+			<a href="admin_script.html">스크립트</a>
+			<a href="admin_loading.html">로딩중</a>
+		</nav>
+
+		<section class="guide-content">
+			<h2 class="tit-con">버튼 가이드</h2>
+				
+			<div class="box-wrap">
+				<h3>버튼 스타일</h3>
+				
+				<h4>기본 : [ btn-base ]</h4>
+				<table class="tbl-guide">
+				<colgroup>
+					<col style="width:30%;">
+					<col style="width:15%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>클래스 정의</th>
+						<th>비고</th>
+						<th>디자인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>.btn-base</th>
+						<td>a 태그</td>
+						<td>
+							<a href="#none" class="btn-base">검색</a>
+							<a href="#none" class="btn-base">초기화</a>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-base</th>
+						<td>button 태그</td>
+						<td>
+							<button type="button" class="btn-base">검색</button>
+							<button type="button" class="btn-base">초기화</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-base.disabled</th>
+						<td>비활성화</td>
+						<td>
+							<a href="#none" class="btn-base disabled">검색</a>
+							<button type="button" class="btn-base disabled" disabled="disabled">초기화</button>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+
+				<h4>파란색 백그라운드 : [ btn-base ] + [ btn-blue ]</h4>
+				<table class="tbl-guide">
+				<colgroup>
+					<col style="width:30%;">
+					<col style="width:15%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>클래스 정의</th>
+						<th>비고</th>
+						<th>디자인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>.btn-base.btn-blue</th>
+						<td>a 태그</td>
+						<td>
+							<a href="#none" class="btn-base btn-blue">등록</a>
+							<a href="#none" class="btn-base btn-blue">저장</a>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-base.btn-blue</th>
+						<td>button 태그</td>
+						<td>
+							<button type="button" class="btn-base btn-blue">등록</button>
+							<button type="button" class="btn-base btn-blue">저장</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-base.btn-blue.disabled</th>
+						<td>비활성화</td>
+						<td>
+							<a href="#none" class="btn-base btn-blue disabled">등록</a>
+							<button type="button" class="btn-base btn-blue disabled" disabled="disabled">저장</button>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+
+				<h4>회색 백그라운드 : [ btn-base ] + [ btn-gray ]</h4>
+				<table class="tbl-guide">
+				<colgroup>
+					<col style="width:30%;">
+					<col style="width:15%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>클래스 정의</th>
+						<th>비고</th>
+						<th>디자인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>.btn-base.btn-gray</th>
+						<td>a 태그</td>
+						<td>
+							<a href="#none" class="btn-base btn-gray">T.Key 일련번호 요청</a>
+							<a href="#none" class="btn-base btn-gray">개통 반려로 변경</a>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-base.btn-gray</th>
+						<td>button 태그</td>
+						<td>
+							<button type="button" class="btn-base btn-gray">T.Key 일련번호 요청</button>
+							<button type="button" class="btn-base btn-gray">개통 반려로 변경</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-base.btn-gray.disabled</th>
+						<td>비활성화</td>
+						<td>
+							<a href="#none" class="btn-base btn-gray disabled">T.Key 일련번호 요청</a>
+							<button type="button" class="btn-base btn-gray disabled" disabled="disabled">개통 반려로 변경</button>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+
+
+				<h4>파란색 테두리 : [ btn-base ] + [ btn-line-blue ]</h4>
+				<table class="tbl-guide">
+				<colgroup>
+					<col style="width:30%;">
+					<col style="width:15%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>클래스 정의</th>
+						<th>비고</th>
+						<th>디자인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>.btn-base.btn-line-blue</th>
+						<td>a 태그</td>
+						<td>
+							<a href="#none" class="btn-base btn-line-blue">목록</a>
+							<a href="#none" class="btn-base btn-line-blue">PG Admin 접속</a>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-base.btn-line-blue</th>
+						<td>button 태그</td>
+						<td>
+							<button type="button" class="btn-base btn-line-blue">목록</button>
+							<button type="button" class="btn-base btn-line-blue">PG Admin 접속</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-base.btn-line-blue.disabled</th>
+						<td>비활성화</td>
+						<td>
+							<a href="#none" class="btn-base btn-line-blue disabled">목록</a>
+							<button type="button" class="btn-base btn-line-blue disabled" disabled="disabled">PG Admin 접속</button>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+
+				<h4>회색 테두리 : [ btn-base ] + [ btn-line-gray ]</h4>
+				<table class="tbl-guide">
+				<colgroup>
+					<col style="width:30%;">
+					<col style="width:15%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>클래스 정의</th>
+						<th>비고</th>
+						<th>디자인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>.btn-base.btn-line-gray</th>
+						<td>a 태그</td>
+						<td>
+							<a href="#none" class="btn-base btn-line-gray">검색 결과만 보기</a>
+							<a href="#none" class="btn-base btn-line-gray">조회항목 설정</a>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-base.btn-line-gray</th>
+						<td>button 태그</td>
+						<td>
+							<button type="button" class="btn-base btn-line-gray">검색 결과만 보기</button>
+							<button type="button" class="btn-base btn-line-gray">조회항목 설정</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-base.btn-line-gray.disabled</th>
+						<td>비활성화</td>
+						<td>
+							<a href="#none" class="btn-base btn-line-gray disabled">검색 결과만 보기</a>
+							<button type="button" class="btn-base btn-line-gray disabled" disabled="disabled">조회항목 설정</button>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+
+				<h4>아이콘 버튼 <!-- [ btn-base ] + [ btn-blue, btn-gray, btn-line-blue, btn-line-gray ] + [ ico- ] --></h4>
+				<table class="tbl-guide">
+				<colgroup>
+					<col style="width:30%;">
+					<col style="width:15%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>클래스 정의</th>
+						<th>비고</th>
+						<th>디자인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>.btn-base.btn-gray.ico-schedule</th>
+						<td>a 태그, button 태그</td>
+						<td>
+							<a href="#none" class="btn-base btn-gray ico-schedule">공시작업 설정</a>
+							<button type="button" class="btn-base btn-gray ico-schedule">공시작업 설정</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-base.btn-gray.ico-schedule.disabled</th>
+						<td>비활성화</td>
+						<td>
+							<a href="#none" class="btn-base btn-gray ico-schedule disabled">공시작업 설정</a>
+							<button type="button" class="btn-base btn-gray ico-schedule disabled"  disabled="disabled">공시작업 설정</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-excel</th>
+						<td>a 태그, button 태그</td>
+						<td>
+							<a href="#none" class="btn-excel">엑셀다운로드</a>
+							<button type="button" class="btn-excel">엑셀다운로드</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-excel.disabled</th>
+						<td>비활성화</td>
+						<td>
+							<a href="#none" class="btn-excel disabled">엑셀다운로드</a>
+							<button type="button" class="btn-excel disabled" disabled="disabled">엑셀다운로드</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-excel > span</th>
+						<td>a 태그, button 태그</td>
+						<td>
+							<a href="#none" class="btn-excel"><span>엑셀업로드</span></a>
+							<button type="button" class="btn-excel"><span>엑셀업로드</span></button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-excel.disabled</th>
+						<td>비활성화</td>
+						<td>
+							<a href="#none" class="btn-excel disabled"><span>엑셀업로드</span></a>
+							<button type="button" class="btn-excel disabled" disabled="disabled"><span>엑셀업로드</span></button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-file</th>
+						<td>a 태그, button 태그</td>
+						<td>
+							<a href="#none" class="btn-file">파일다운로드</a>
+							<button type="button" class="btn-file">파일다운로드</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-file.disabled</th>
+						<td>비활성화</td>
+						<td>
+							<a href="#none" class="btn-file disabled">파일다운로드</a>
+							<button type="button" class="btn-file disabled" disabled="disabled">파일다운로드</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-file > span</th>
+						<td>a 태그, button 태그</td>
+						<td>
+							<a href="#none" class="btn-file"><span>파일다운로드</span></a>
+							<button type="button" class="btn-file"><span>파일다운로드</span></button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-file.disabled</th>
+						<td>비활성화</td>
+						<td>
+							<a href="#none" class="btn-file disabled"><span>파일다운로드</span></a>
+							<button type="button" class="btn-file disabled" disabled="disabled"><span>파일다운로드</span></button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-print</th>
+						<td>a 태그, button 태그</td>
+						<td>
+							<a href="#none" class="btn-print">프린트</a>
+							<button type="button" class="btn-print">프린트</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-print.disabled</th>
+						<td>비활성화</td>
+						<td>
+							<a href="#none" class="btn-print disabled">프린트</a>
+							<button type="button" class="btn-print disabled" disabled="disabled">프린트</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-print > span</th>
+						<td>a 태그, button 태그</td>
+						<td>
+							<a href="#none" class="btn-print"><span>주문정보 인쇄</span></a>
+							<button type="button" class="btn-print"><span>주문정보 인쇄</span></button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-print.disabled > span</th>
+						<td>비활성화</td>
+						<td>
+							<a href="#none" class="btn-print disabled"><span>주문정보 인쇄</span></a>
+							<button type="button" class="btn-print disabled" disabled="disabled"><span>주문정보 인쇄</span></button>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+
+				<h4>더보기 버튼 : [ btn-more ] , [ btn-srch-more ]</h4>
+				<table class="tbl-guide">
+				<colgroup>
+					<col style="width:30%;">
+					<col style="width:15%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>클래스 정의</th>
+						<th>비고</th>
+						<th>디자인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>.btn-more</th>
+						<td>a 태그, button 태그</td>
+						<td>
+							<a href="#none" class="btn-more">더보기</a>
+							<button type="button" class="btn-more">더보기</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-more.disabled</th>
+						<td>비활성화</td>
+						<td>
+							<a href="#none" class="btn-more disabled">더보기</a>
+							<button type="button" class="btn-more disabled" disabled="disabled">더보기</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-more.open</th>
+						<td>a 태그, button 태그</td>
+						<td>
+							<a href="#none" class="btn-more open">더보기</a>
+							<button type="button" class="btn-more open">더보기</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-more.open</th>
+						<td>비활성화</td>
+						<td>
+							<a href="#none" class="btn-more open disabled">더보기</a>
+							<button type="button" class="btn-more open disabled" disabled="disabled">더보기</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-srch-more</th>
+						<td>a 태그, button 태그</td>
+						<td>
+							<a href="#none" class="btn-srch-more">검색 더보기</a>
+							<button type="button" class="btn-srch-more">검색 더보기</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-srch-more disabled</th>
+						<td>비활성화</td>
+						<td>
+							<a href="#none" class="btn-srch-more disabled">검색 더보기</a>
+							<button type="button" class="btn-srch-more disabled" disabled="disabled">검색 더보기</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-srch-more.open</th>
+						<td>a 태그, button 태그</td>
+						<td>
+							<a href="#none" class="btn-srch-more open">검색 더보기</a>
+							<button type="button" class="btn-srch-more open">검색 더보기</button>
+						</td>
+					</tr>
+					<tr>
+						<th>.btn-srch-more.open</th>
+						<td>비활성화</td>
+						<td>
+							<a href="#none" class="btn-srch-more open disabled">검색 더보기</a>
+							<button type="button" class="btn-srch-more open disabled" disabled>검색 더보기</button>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+
+				<h4>검색 버튼 : [ btn-srch ]</h4>
+				<table class="tbl-guide">
+				<colgroup>
+					<col style="width:30%;">
+					<col style="width:15%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>클래스 정의</th>
+						<th>비고</th>
+						<th>디자인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>.btn-srch</th>
+						<td>a 태그, button 태그</td>
+						<td>
+							<a href="#none" class="btn-srch">검색</a>
+							<button type="button" class="btn-srch">검색</button>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+		</section>
+
+	</article>
+	<a href="#top" class="btn-top">TOP</a>
+</div>
+
+<script type="text/javascript" src="../../public/js/common.js"></script>
+</body>
+</html>

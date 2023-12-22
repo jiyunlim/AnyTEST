@@ -1,0 +1,1174 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">자급제/중고폰</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>주문관리</li>
+					<li><strong>주문목록조회</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<h2 class="hidden">자급제/중고폰</h2>
+			<h3 class="h-type2">자급제/중고폰 접수 신청 내역 조회</h3>
+			<table id="table-srch" class="table-row js-table">
+				<caption>자급제/중고폰 접수 신청 내역 조회</caption>
+				<colgroup>
+					<col style="width:14%">
+					<col>
+					<col style="width:14%">
+					<col style="width:30%">
+				</colgroup>
+				<tbody>
+					<tr class="show-row">
+						<th class="row">
+							<select class="c-select" title="날짜 조회 선택" name="dateType">
+								<option value="order" selected="selected">주문일</option>
+								<option value="open">개통일</option>
+								<option value="cancel">취소일</option>
+							</select>
+						</th>
+						<td>
+							<div class="form-group calendar">
+								<select class="c-select" title="기간선택" name="selectDate">
+									<option value="1">오늘</option>
+									<option value="2">1주일</option>
+									<option value="3">1개월</option>
+									<option value="4">이달</option>
+									<option value="5">금년</option>
+								</select>
+								<input type="text" class="c-input fn-calendar hasDatepicker" title="시작일자" value="" name="startDate" id="fromDt" onkeyup="javascript:setDateFormat(this);">
+								<a href="javascript:void(0);" class="btn-calendar fn-calendar" id="dp1606279980286">달력</a>
+								<span class="txt-unit">━</span>
+								<input type="text" class="c-input fn-calendar hasDatepicker" title="종료일자" value="" name="endDate" id="toDt" onkeyup="javascript:setDateFormat(this);">
+								<a href="javascript:void(0);" class="btn-calendar fn-calendar" id="dp1606279980287">달력</a>
+							</div>
+						</td>
+						<th class="row">
+							<select class="c-select" title="검색 조건 선택" name="orderSearchKey">
+								<option value="01" selected="selected">주문번호</option>
+								<option value="02">서비스 번호</option>
+								<option value="03">서비스관리번호</option>
+							</select>
+						</th>
+						<td>
+							<input type="text" class="c-input dev-number" title="검색 조건 선택 입력" name="orderSearchValue">
+						</td>
+					</tr>
+					<tr class="show-row">
+						<th scope="row">주문상태</th>
+						<td>
+							<div class="select-layer-area">
+								<a href="javascript:void(0);" class="c-select-layer js-select-layer" title="주문상태 선택">주문상태 선택</a>
+								<!-- 레이어팝업 -->
+								<div class="pop-layer">
+									<div class="pop-header">
+										<a href="javascript:void(0);" class="layer-close">닫기</a>
+										<a href="javascript:void(0);" class="btn-chk">전체선택</a>
+										<a href="javascript:void(0);" class="btn-unchk">전체해제</a>
+									</div>
+									<div class="pop-content">
+										<ul class="chk-list">
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd1" name="deliveryStatCd" value="11">
+													<label for="deliveryStatCd1">주문접수</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd2" name="deliveryStatCd" value="12">
+													<label for="deliveryStatCd2">발송준비</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd3" name="deliveryStatCd" value="13">
+													<label for="deliveryStatCd3">발송완료</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd4" name="deliveryStatCd" value="14">
+													<label for="deliveryStatCd4">배송완료</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd5" name="deliveryStatCd" value="15">
+													<label for="deliveryStatCd5">발송지연</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd6" name="deliveryStatCd" value="16">
+													<label for="deliveryStatCd6">배송취소</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd7" name="deliveryStatCd" value="17">
+													<label for="deliveryStatCd7">접수완료</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd8" name="deliveryStatCd" value="18">
+													<label for="deliveryStatCd8">해피콜대기중</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd9" name="deliveryStatCd" value="19">
+													<label for="deliveryStatCd9">발송대기</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd10" name="deliveryStatCd" value="21">
+													<label for="deliveryStatCd10">주문취소</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd11" name="deliveryStatCd" value="22">
+													<label for="deliveryStatCd11">개통취소</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd12" name="deliveryStatCd" value="23">
+													<label for="deliveryStatCd12">주문취소접수</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd13" name="deliveryStatCd" value="31">
+													<label for="deliveryStatCd13">반품신청접수</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd14" name="deliveryStatCd" value="32">
+													<label for="deliveryStatCd14">반품입고</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd15" name="deliveryStatCd" value="33">
+													<label for="deliveryStatCd15">반품승인</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd16" name="deliveryStatCd" value="34">
+													<label for="deliveryStatCd16">반품회수완료</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd17" name="deliveryStatCd" value="35">
+													<label for="deliveryStatCd17">반품완료</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd18" name="deliveryStatCd" value="36">
+													<label for="deliveryStatCd18">반품취소</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd19" name="deliveryStatCd" value="37">
+													<label for="deliveryStatCd19">반품신청접수완료</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd20" name="deliveryStatCd" value="41">
+													<label for="deliveryStatCd20">반품반려</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd21" name="deliveryStatCd" value="51">
+													<label for="deliveryStatCd21">교환신청접수</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd22" name="deliveryStatCd" value="52">
+													<label for="deliveryStatCd22">교환승인</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd23" name="deliveryStatCd" value="53">
+													<label for="deliveryStatCd23">교환물품발송</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd24" name="deliveryStatCd" value="54">
+													<label for="deliveryStatCd24">교환회수완료</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd25" name="deliveryStatCd" value="55">
+													<label for="deliveryStatCd25">교환완료</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd26" name="deliveryStatCd" value="56">
+													<label for="deliveryStatCd26">교환취소</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd27" name="deliveryStatCd" value="57">
+													<label for="deliveryStatCd27">교환신청접수완료</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd28" name="deliveryStatCd" value="61">
+													<label for="deliveryStatCd28">교환반려</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd29" name="deliveryStatCd" value="62">
+													<label for="deliveryStatCd29">개통반려</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd30" name="deliveryStatCd" value="81">
+													<label for="deliveryStatCd30">정상 등록</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd31" name="deliveryStatCd" value="82">
+													<label for="deliveryStatCd31">정상 개통</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd32" name="deliveryStatCd" value="83">
+													<label for="deliveryStatCd32">상점코드에러</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd33" name="deliveryStatCd" value="84">
+													<label for="deliveryStatCd33">핸드폰에러</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd34" name="deliveryStatCd" value="85">
+													<label for="deliveryStatCd34">주문번호중복에러</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd35" name="deliveryStatCd" value="86">
+													<label for="deliveryStatCd35">주문번호 없음</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd36" name="deliveryStatCd" value="87">
+													<label for="deliveryStatCd36">이미 취소된 주문</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd37" name="deliveryStatCd" value="88">
+													<label for="deliveryStatCd37">이미 발급/배송 처리되어 취소 불가</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd38" name="deliveryStatCd" value="89">
+													<label for="deliveryStatCd38">정상취소</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd39" name="deliveryStatCd" value="91">
+													<label for="deliveryStatCd39">SLC 개통요청</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd40" name="deliveryStatCd" value="92">
+													<label for="deliveryStatCd40">SLC 배송요청</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd41" name="deliveryStatCd" value="93">
+													<label for="deliveryStatCd41">SLC 송장번호수신</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd42" name="deliveryStatCd" value="94">
+													<label for="deliveryStatCd42">배송사 파트너 배정</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd43" name="deliveryStatCd" value="95">
+													<label for="deliveryStatCd43">T매니저 배정</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="deliveryStatCd44" name="deliveryStatCd" value="96">
+													<label for="deliveryStatCd44">고객취소</label>
+												</span>
+											</li>
+											</ul>
+									</div>
+								</div>
+								<!-- //레이어팝업 -->
+							</div>
+						</td>
+						<th scope="row">주문구분</th>
+						<td>
+							<select class="c-select" title="주문구분 선택" name="orderGbn">
+								<option value="" selected="selected">전체</option>
+								<option value="twd">T다이렉트샵</option>
+								<option value="care">고객care센터</option>
+								<option value="11st">11번가 휴대폰샵</option>
+								<option value="kakao">카카오 기획전</option>
+								<option value="kakaoCB">시나리오 채팅</option>
+								</select>
+						</td>
+					</tr>
+					<tr class="show-row">
+						<th scope="row">가입유형</th>
+						<td>
+							<div class="form-group">
+								<span class="c-chk">
+									<input type="checkbox" id="entryCd1" name="entryCd" value="31" checked="checked">
+									<label for="entryCd1">기기변경</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="entryCd2" name="entryCd" value="20" checked="checked">
+									<label for="entryCd2">번호이동</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="entryCd3" name="entryCd" value="33" checked="checked">
+									<label for="entryCd3">일반기변</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="entryCd4" name="entryCd" value="11" checked="checked">
+									<label for="entryCd4">신규가입</label>
+								</span>
+								</div>
+						</td>
+						<th scope="row">단말기 일련번호<br> / 단말기 IMEI</th>
+						<td>
+							<input type="text" class="c-input dev-numberAlpabat" title="단말기 일련번호 입력" name="phoneSereal">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">
+							<select class="c-select" title="검색조건 선택" name="userSearchKey">
+								<option value="01" selected="selected">회원명</option>
+								<option value="02">회원ID</option>
+							</select>
+						</th>
+						<td>
+							<input type="text" class="c-input" title="검색 조건 선택 입력" name="userSearchValue">
+						</td>
+						<th scope="row">
+							<select class="c-select" title="주문자 연락처 선택" name="numberGbn">
+								<option value="01" selected="selected">주문자 연락처</option>
+								<option value="02">개통번호</option>
+							</select>
+						</th>
+						
+						<td>
+							<select class="c-select select-tel" name="tel1" title="주문자 연락처 첫자리 선택" style="width:60px;">
+								<option value="" selected="selected">&nbsp;</option>
+								<option value="010">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+								<option value="019">019</option>
+								<option value="0130">0130</option>
+								</select>
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input dev-number" name="tel2" title="주문자 연락처 중간자리 입력" style="width:60px;" maxlength="4">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input dev-number" name="tel3" title="주문자 연락처 끝자리 입력" style="width:60px;" maxlength="4">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">상담그룹/상담사</th>
+						<td>
+							<div class="select-layer-area" style="width : 73%;">
+								<a href="javascript:void(0);" class="c-select-layer js-select-layer select-grouporgid" title="상담그룹 선택">상담그룹 선택</a>
+								<!-- 레이어팝업 -->
+								<div class="pop-layer">
+									<div class="pop-header">
+										<a href="javascript:void(0);" class="layer-close">닫기</a>
+										<a href="javascript:void(0);" class="btn-chk">전체선택</a>
+										<a href="javascript:void(0)" ;="" class="btn-unchk">전체해제</a>
+									</div>
+									<div class="pop-content">
+										<ul class="chk-list">
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="groupOrgId0" name="groupOrgId" value="3343244234">
+													<label for="groupOrgId0">고객방치(장안고객Care센터)</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="groupOrgId1" name="groupOrgId" value="1000191072">
+													<label for="groupOrgId1">고객Care(장안고객Care센터)</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="groupOrgId2" name="groupOrgId" value="1000190225">
+													<label for="groupOrgId2">고객보호원상담(장안고객Care센터)</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="groupOrgId3" name="groupOrgId" value="1000166244">
+													<label for="groupOrgId3">캠페인(장안고객Care센터)</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="groupOrgId4" name="groupOrgId" value="1000196456">
+													<label for="groupOrgId4">고객Care(대전고객Care센터)</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="groupOrgId5" name="groupOrgId" value="1000196457">
+													<label for="groupOrgId5">고객보호원상담(대전고객Care센터)</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="groupOrgId6" name="groupOrgId" value="9000100011">
+													<label for="groupOrgId6">그린피플_그룹(그린피플)</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="groupOrgId7" name="groupOrgId" value="B000100000">
+													<label for="groupOrgId7">바로주문그룹(바로주문센터)</label>
+												</span>
+											</li>
+											</ul>
+									</div>
+								</div>
+								<!-- //레이어팝업 -->
+							</div>
+							<input type="text" class="c-input" title="상담사 입력" placeholder="상담사ID/이름" style="width:121px" name="csNameId">
+						</td>
+						<th scope="row">판매자</th>
+						<td>
+							<div class="select-layer-area">
+								<a href="javascript:void(0);" class="c-select-layer js-select-layer" title="판매자 선택">판매자 선택</a>
+								<!-- 레이어팝업 -->
+								<div class="pop-layer">
+									<div class="pop-header">
+										<a href="javascript:void(0);" class="layer-close">닫기</a>
+										<a href="javascript:void(0);" class="btn-chk">전체선택</a>
+										<a href="javascript:void(0)" ;="" class="btn-unchk">전체해제</a>
+									</div>
+									<div class="pop-content">
+										<ul class="chk-list">
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId1" name="sellerId" value="P001661054">
+													<label for="sellerId1">ACE블랜딩_택배</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId2" name="sellerId" value="P001661056">
+													<label for="sellerId2">TOP블랜딩_택배</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId3" name="sellerId" value="P002285061">
+													<label for="sellerId3">ACE중고</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId4" name="sellerId" value="P002285060">
+													<label for="sellerId4">TOP중고</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId5" name="sellerId" value="P001661055">
+													<label for="sellerId5">ACE웹_택배</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId6" name="sellerId" value="P001792054">
+													<label for="sellerId6">TOP웹_택배</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId7" name="sellerId" value="P001344054">
+													<label for="sellerId7">T다이렉트샵할부_택배</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId8" name="sellerId" value="P001404051">
+													<label for="sellerId8">T다이렉트샵일시불_택배</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId9" name="sellerId" value="P001358055">
+													<label for="sellerId9">T다이렉트샵중고</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId10" name="sellerId" value="P001612062">
+													<label for="sellerId10">T다이렉트샵케어</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId11" name="sellerId" value="P002314066">
+													<label for="sellerId11">T다이렉트샵중고_에코폰</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId12" name="sellerId" value="P001344055">
+													<label for="sellerId12">T다이렉트샵할부_SLC</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId13" name="sellerId" value="P001358056">
+													<label for="sellerId13">T다이렉트샵일시불_SLC</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId14" name="sellerId" value="P002568053">
+													<label for="sellerId14">11st일시불_택배</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId15" name="sellerId" value="P002568052">
+													<label for="sellerId15">11st할부_택배</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId16" name="sellerId" value="P002568057">
+													<label for="sellerId16">11st일시불_SLC</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId17" name="sellerId" value="P002568055">
+													<label for="sellerId17">11st할부_SLC</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId18" name="sellerId" value="P002568058">
+													<label for="sellerId18">11st유심단독</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId19" name="sellerId" value="P002568056">
+													<label for="sellerId19">11st유심자급제</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId20" name="sellerId" value="P002624056">
+													<label for="sellerId20">T다이렉트샵온라인_오늘도착</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId21" name="sellerId" value="P002624064">
+													<label for="sellerId21">T다이렉트샵라이브챗_오늘도착</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId22" name="sellerId" value="P002646063">
+													<label for="sellerId22">11st일시불_오늘도착</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId23" name="sellerId" value="P002646064">
+													<label for="sellerId23">11st할부_오늘도착</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId24" name="sellerId" value="P002676055">
+													<label for="sellerId24">T다이렉트샵_SLC셀프동의</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId25" name="sellerId" value="P002725058">
+													<label for="sellerId25">DSDS셀프개통</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId26" name="sellerId" value="P002803060">
+													<label for="sellerId26">언맨드_홍대매장</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId27" name="sellerId" value="P002812057">
+													<label for="sellerId27">바로도착</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId28" name="sellerId" value="P002812059">
+													<label for="sellerId28">바로도착 행복배송</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId29" name="sellerId" value="P002812061">
+													<label for="sellerId29">셀프바로도착</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId30" name="sellerId" value="P002812062">
+													<label for="sellerId30">셀프바로도착 행복배송</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="sellerId31" name="sellerId" value="P002818060">
+													<label for="sellerId31">T다이렉트샵_분실케어</label>
+												</span>
+											</li>
+											</ul>
+									</div>
+								</div>
+								<!-- //레이어팝업 -->
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">11번가 SELLER</th>
+						<td>
+							<select class="c-select" title="SELLER 선택" name="chnlSellerId">
+								<option value="" selected="selected">SELLER 선택</option>
+								<option value="twd">PS&amp;M</option>
+								<option value="tworlddirect">피에스앤마케팅 주식회사</option>
+								<option value="shomamno1">(주)쇼마젠시</option>
+								<option value="nland22">(주)노트북랜드이십일</option>
+								<option value="smartworld">SK네트웍스(주)</option>
+								<option value="einssystem">(주)아인시스템</option>
+								<option value="goodmobil2">주식회사 착한텔레콤</option>
+								<option value="inskorea11">(주)인스코리아</option>
+								<option value="activated">엘케이커머스</option>
+								<option value="etc">기타</option>
+							</select>
+						</td>
+						<th scope="row">합배송 여부</th>
+						<td>
+							<select class="c-select" title="합배송 선택" name="chnlUsimBdlDlvYn">
+								<option value="" selected="selected">합배송 선택</option>
+								<option value="Y">합배송</option>
+								<option value="N">개별배송</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">TG 상태</th>
+						<td>
+							<div class="select-layer-area">
+								<a href="javascript:void(0);" class="c-select-layer js-select-layer" title="T-gate 상태 선택">T-gate 상태 선택</a>
+								<!-- 레이어팝업 -->
+								<div class="pop-layer">
+									<div class="pop-header">
+										<a href="javascript:void(0);" class="layer-close">닫기</a>
+										<a href="javascript:void(0);" class="btn-chk">전체선택</a>
+										<a href="javascript:void(0)" ;="" class="btn-unchk">전체해제</a>
+									</div>
+									<div class="pop-content">
+										<ul class="chk-list">
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd1" name="applFormStCd" value="01">
+													<label for="applFormStCd1">신청접수</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd2" name="applFormStCd" value="02">
+													<label for="applFormStCd2">접수완료</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd3" name="applFormStCd" value="03">
+													<label for="applFormStCd3">개통대기</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd4" name="applFormStCd" value="04">
+													<label for="applFormStCd4">개통완료</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd5" name="applFormStCd" value="05">
+													<label for="applFormStCd5">배송준비</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd6" name="applFormStCd" value="06">
+													<label for="applFormStCd6">물품배송중</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd7" name="applFormStCd" value="07">
+													<label for="applFormStCd7">구매완료</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd8" name="applFormStCd" value="08">
+													<label for="applFormStCd8">배송보류</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd9" name="applFormStCd" value="09">
+													<label for="applFormStCd9">개통보류</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd10" name="applFormStCd" value="10">
+													<label for="applFormStCd10">신청취소</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd11" name="applFormStCd" value="11">
+													<label for="applFormStCd11">신청반려</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd12" name="applFormStCd" value="12">
+													<label for="applFormStCd12">예약접수</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd13" name="applFormStCd" value="13">
+													<label for="applFormStCd13">개통취소</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd14" name="applFormStCd" value="19">
+													<label for="applFormStCd14">유키반려</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd15" name="applFormStCd" value="20">
+													<label for="applFormStCd15">배송완료</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd16" name="applFormStCd" value="21">
+													<label for="applFormStCd16">해피콜대기중</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd17" name="applFormStCd" value="22">
+													<label for="applFormStCd17">개통요청_운영자</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd18" name="applFormStCd" value="23">
+													<label for="applFormStCd18">개통요청</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd19" name="applFormStCd" value="24">
+													<label for="applFormStCd19">반품</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd20" name="applFormStCd" value="25">
+													<label for="applFormStCd20">개통요청_고객</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd21" name="applFormStCd" value="26">
+													<label for="applFormStCd21">개통보류_고객</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd22" name="applFormStCd" value="27">
+													<label for="applFormStCd22">교환물품신청접수</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd23" name="applFormStCd" value="28">
+													<label for="applFormStCd23">교환물품발송</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd24" name="applFormStCd" value="29">
+													<label for="applFormStCd24">교환물품개통신청_고객</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd25" name="applFormStCd" value="30">
+													<label for="applFormStCd25">교환물품개통신청_운영자</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd26" name="applFormStCd" value="31">
+													<label for="applFormStCd26">개통요청_야간</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd27" name="applFormStCd" value="32">
+													<label for="applFormStCd27">지점_접수완료</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd28" name="applFormStCd" value="33">
+													<label for="applFormStCd28">지점_배송완료</label>
+												</span>
+											</li>
+											<li>
+												<span class="c-chk">
+													<input type="checkbox" id="applFormStCd29" name="applFormStCd" value="35">
+													<label for="applFormStCd29">유심기변요청</label>
+												</span>
+											</li>
+											</ul>
+									</div>
+								</div>
+								<!-- //레이어팝업 -->
+							</div>
+						</td>
+						<th scope="row">주문 유형</th>
+						<td>
+							<div class="form-group">
+								<span class="c-chk">
+									<input type="checkbox" id="orderType1" name="orderType" value="01" checked="checked">
+									<label for="orderType1">자급제</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="orderType2" name="orderType" value="02" checked="checked">
+									<label for="orderType2">중고폰</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="orderType3" name="orderType" value="03" checked="checked">
+									<label for="orderType3">USIM 단독</label>
+								</span>
+                            </div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- btn -->
+			<div class="btn-area">
+				<div class="l-btn">
+					<a href="#table-srch" class="btn-srch-more js-more">상세검색 더보기</a>
+				</div>
+				<a href="#none" class="btn-base">검색</a>
+				<a href="#none" class="btn-base">초기화</a>
+			</div>
+			<!-- //btn -->
+
+			<h3 class="h-type2">검색 조회 결과 <span class="txt-count">(<em>90,865</em>건)</span></h3>
+			<!-- data table -->
+			<div class="table-data-wrap">
+				<!-- top button -->
+				<div class="btn-area table-top"> 
+					<div class="l-btn">
+						<button type="button" class="btn-base btn-gray">택배사 발송 데이터 전송</button>
+						<button type="button" class="btn-base btn-gray">배송완료</button>
+					</div>
+					<button type="button" class="btn-excel">엑셀다운로드</button>
+				</div>
+				<!-- //top button -->
+
+				<!-- list -->
+				<div class="table-scroll">
+					<table class="table-col" style="width:3770px;">
+						<caption>데이터 리스트</caption>
+						<colgroup>
+							<col style="width:30px">
+							<col style="width:120px">
+							<col style="width:120px">
+							<col style="width:120px">
+							<col style="width:120px">
+							<col style="width:120px">
+							<col style="width:100px">
+							<col style="width:80px">
+							<col style="width:100px">
+							<col style="width:100px">
+							<col style="width:100px">
+							<col style="width:140px">
+							<col style="width:80px">
+							<col style="width:80px">
+							<col style="width:140px">
+							<col style="width:100px">
+							<col style="width:100px">
+							<col style="width:120px">
+							<col style="width:100px">
+							<col style="width:140px">
+							<col style="width:140px">
+							<col style="width:80px">
+							<col style="width:80px">
+							<col style="width:80px">
+							<col style="width:120px">
+							<col style="width:100px">
+							<col style="width:100px">
+							<col style="width:100px">
+							<col style="width:100px">
+							<col style="width:100px">
+							<col style="width:100px">
+							<col style="width:100px">
+							<col style="width:100px">
+							<col style="width:140px">
+							<col style="width:100px">
+							<col style="width:100px">
+							<col style="width:100px">
+							<col style="width:100px">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">
+									 <span class="c-chk txt-no">
+										 <input type="checkbox" id="chkAll" name="chkAll">
+										 <label for="chkAll">선택</label>
+									 </span>
+								</th>
+								<th scope="col">주문번호</th>
+								<th scope="col">주문구분</th>
+								<th scope="col">주문<br>캠페인명</th>
+								<th scope="col">주문일</th>
+								<th scope="col">결제일</th>
+								<th scope="col">회원명/ID</th>
+								<th scope="col">회원유무</th>
+								<th scope="col">주문상태</th>
+								<th scope="col">유입배너</th>
+								<th scope="col">이벤트차수</th>
+								<th scope="col">TG상태</th>
+								<th scope="col">모델명</th>
+								<th scope="col">색상</th>
+								<th scope="col">가입유형</th>
+								<th scope="col">요금제</th>
+								<th scope="col">할부원금</th>
+								<th scope="col">결제방법</th>
+								<th scope="col">취소일</th>
+								<th scope="col">개통일</th>
+								<th scope="col">배송방법</th>
+								<th scope="col">배송일</th>
+								<th scope="col">발송일</th>
+								<th scope="col">Tgift</th>
+								<th scope="col">Tgift<br>배송방법</th>
+								<th scope="col">Tgift<br>배송구분</th>
+								<th scope="col">Tgift<br>배송상태</th>
+								<th scope="col">Tgift<br>배송일</th>
+								<th scope="col">동의유무</th>
+								<th scope="col">IF상태</th>
+								<th scope="col">Tgift IF상태</th>
+								<th scope="col">바로보상<br>신청여부</th>
+								<th scope="col">바로보상<br>수거상태</th>
+								<th scope="col">클럽기변<br>신청상태</th>
+								<th scope="col">클럽기변<br>진행상태</th>
+								<th scope="col">오늘도착<br>창고</th>
+								<th scope="col">바로도착<br>권역</th>
+								<th scope="col">2G전환<br>대상여부</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<span class="c-chk txt-no">
+										<input type="checkbox" id="chk0" name="chk">
+										<label for="chk0">선택</label>
+									</span>
+								</td>
+								<td class="align-center">
+									<a href="#none">
+										<strong>000000000000</strong>
+									</a>
+								</td>
+								<td class="align-center">T다이렉트샵</td>
+								<td class="align-center">[20.10] [일반] TDS 5G 휴대폰 탐색 고객</td>
+								<td class="align-center">YYYY-MM-DD HH:MM:SS</td>
+								<td class="align-center">YYYY-MM-DD HH:MM:SS</td>
+								<td class="align-center">홍길동</td>
+								<td class="align-center">회원</td>
+								<td class="align-center">주문접수</td>
+								<td class="align-center"></td>
+								<td class="align-center"></td>
+								<td class="align-center">신청접수</td>
+								<td class="l-data">IPAD PRO 12.9_4TH_256GS</td>
+								<td class="l-data">실버</td>
+								<td class="align-center">번호이동</td>
+								<td class="l-data">T Tab 18</td>
+								<td class="r-data">1,496,800</td>
+								<td class="align-center">할부결제</td>
+								<td class="align-center"></td>
+								<td class="align-center"></td>
+								<td class="align-center">택배(무료)</td>
+								<td class="align-center"></td>
+								<td class="align-center"></td>
+								<td class="l-data">[도무스] 폴딩 포트 플러스 (0.6L)</td>
+								<td class="align-center">택배(무료)</td>
+								<td class="align-center">개별배송</td>
+								<td class="align-center">결제완료</td>
+								<td class="align-center"></td>
+								<td class="align-center"></td>
+								<td class="align-center">T.Key+ 연동전</td>
+								<td class="align-center">T.Key+ 연동전</td>
+								<td class="align-center"></td>
+								<td class="align-center"></td>
+								<td class="align-center"></td>
+								<td class="align-center"></td>
+								<td class="align-center">수도권</td>
+								<td class="align-center"></td>
+								<td class="align-center">비대상</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //list -->
+
+				<!-- paginate -->
+				<div class="paginate-area">
+					<a href="#none" class="pg-first">처음 리스트</a>
+					<a href="#none" class="pg-prev">이전 리스트</a>
+					<ul class="paginate">
+					<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+					<li><a href="#none">2</a></li>
+					<li><a href="#none">3</a></li>
+					<li><a href="#none">4</a></li>
+					<li><a href="#none">5</a></li>
+					<li><a href="#none">6</a></li>
+					<li><a href="#none">7</a></li>
+					<li><a href="#none">8</a></li>
+					<li><a href="#none">9</a></li>
+					<li><a href="#none">10</a></li>
+					</ul>
+					<a href="#none" class="pg-next">다음 리스트</a>
+					<a href="#none" class="pg-last">마지막 리스트</a>
+				</div>
+				<!-- //paginate -->
+			</div>
+			<!-- //data table -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

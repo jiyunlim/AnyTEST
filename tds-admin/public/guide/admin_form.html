@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN GUIDE</title>
+	<link rel="stylesheet" type="text/css" href="../../public/css/tdirect_admin.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/@tdirect_guide.css">
+	<!--[if lt IE 9]>
+	<script src="../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<div id="guide-wrap">
+	<header id="header">
+		<h1><strong>T다이렉트샵</strong><em>ADMIN GUIDE</em></h1>
+		<nav>
+			<div class="inner">
+				<a href="coding_list.html">파일리스트</a>
+				<a href="admin_title.html" class="on">페이지가이드</a>
+			</div>
+		</nav>
+	</header>
+	<article>
+		<nav>
+			<a href="../html/layout/admin_layout.html" target="_blank">레이아웃</a>
+			<a href="admin_title.html">타이틀</a>
+			<a href="admin_btn.html">버튼</a>
+			<a href="admin_form.html" class="on">폼요소</a>
+			<a href="admin_table.html">테이블</a>
+			<a href="admin_etc.html">탭/페이징</a>
+			<a href="admin_popup.html">팝업</a>
+			<a href="admin_script.html">스크립트</a>
+			<a href="admin_loading.html">로딩중</a>
+		</nav>
+
+		<div class="txt-guide-alert">
+			<p>##폼요소 가이드 참고사항##</p>
+			<ul>
+				<li>텍스트필드와 셀렉트박스 기본 가로값은 100%입니다. 가로값 수정시 페이지내에 인라인으로 작업해주세요!!!</li>
+			</ul>
+		</div>
+
+		<section class="guide-content">
+			<h2 class="tit-con">폼요소 가이드</h2>
+				
+			<div class="box-wrap">
+				<h3>폼요소 스타일</h3>
+				
+				<h4>텍스트필드 : [ c-input ]</h4>
+				<table class="tbl-guide">
+				<colgroup>
+					<col style="width:22%;">
+					<col style="width:36%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>클래스 정의</th>
+						<th>비고</th>
+						<th>디자인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>.c-input</th>
+						<td>가로값 100%</td>
+						<td><input type="text" class="c-input" title="입력"></td>
+					</tr>
+					<tr>
+						<th></th>
+						<td>
+							가로값 수정<br />
+							&lt;input type="text" class="c-input" title="XXXX 입력" <strong class="finish">style="width:50%;"</strong>&gt;
+						</td>
+						<td>
+							<input type="text" class="c-input" title="입력" style="width:50%;">
+							<input type="text" class="c-input" title="입력" style="width:150px;">
+						</td>
+					</tr>
+					<tr>
+						<th>.c-input</th>
+						<td>disabled="disabled"</td>
+						<td><input type="text" class="c-input" title="입력" disabled="disabled"></td>
+					</tr>
+				</tbody>
+				</table>
+
+				<h4>입력영역 : [ c-textarea ]</h4>
+				<table class="tbl-guide">
+				<colgroup>
+					<col style="width:22%;">
+					<col style="width:36%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>클래스 정의</th>
+						<th>비고</th>
+						<th>디자인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>.c-textarea</th>
+						<td>가로값 100%</td>
+						<td><textarea rows="1" cols="1" class="c-textarea" title="입력"></textarea></td>
+					</tr>
+					<tr>
+						<th>.c-textarea</th>
+						<td>disabled="disabled"</td>
+						<td><textarea rows="1" cols="1" class="c-textarea" title="입력" disabled="disabled"></textarea></td>
+					</tr>
+				</tbody>
+				</table>
+
+				<h4>셀렉트박스 : [ c-select ]</h4>
+				<table class="tbl-guide">
+				<colgroup>
+					<col style="width:22%;">
+					<col style="width:36%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>클래스 정의</th>
+						<th>비고</th>
+						<th>디자인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>.c-select</th>
+						<td>가로값 100%</td>
+						<td>
+							<select class="c-select" title="T렌탈 여부 선택">
+								<option value="" selected="selected">전체</option>
+								<option value="">사용</option>
+								<option value="">사용안함</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>.c-select</th>
+						<td>가로값 100%</td>
+						<td>
+							<select class="c-select" title="T렌탈 여부 선택" disabled="disabled">
+								<option value="" selected="selected">전체</option>
+								<option value="">사용</option>
+								<option value="">사용안함</option>
+							</select>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+
+				<h4>체크박스 : [ form-group ] > [ c-chk ]</h4>
+				<table class="tbl-guide">
+				<colgroup>
+					<col style="width:22%;">
+					<col style="width:36%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>클래스 정의</th>
+						<th>비고</th>
+						<th>디자인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>.form-group > .c-chk</th>
+						<td></td>
+						<td>
+							<div class="form-group">
+								<span class="c-chk">
+									<input type="checkbox" id="delivery1" name="delivery">
+									<label for="delivery1">택배</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="delivery2" name="delivery">
+									<label for="delivery2">SCL</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="delivery3" name="delivery">
+									<label for="delivery3">바로픽업</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="delivery4" name="delivery" disabled="disabled">
+									<label for="delivery4">선택안된 상태 비활성</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="delivery5" name="delivery" checked="checked" disabled="disabled">
+									<label for="delivery5">선택된 상태 비활성 checked disabled</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="delivery6" name="delivery" disabled="disabled" checked="checked">
+									<label for="delivery6">선택된 상태 비활성 disabled checked</label>
+								</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>.c-chk.txt-no</th>
+						<td>리스트에서 체크박스 단독으로 사용시</td>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk1" name="chk">
+								<label for="chk1">선택</label>
+							</span>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk2" name="chk" disabled="disabled">
+								<label for="chk2">선택</label>
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<th>.form-group.block > .c-chk</th>
+						<td>form-group display="block"으로 쓰고 싶을때</td>
+						<td>
+							<div class="form-group block">
+								<span class="c-chk">
+									<input type="checkbox" id="delivery1" name="delivery">
+									<label for="delivery1">택배</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="delivery2" name="delivery">
+									<label for="delivery2">SCL</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="delivery3" name="delivery">
+									<label for="delivery3">바로픽업</label>
+								</span>
+								<span class="c-chk">
+									<input type="checkbox" id="delivery4" name="delivery" disabled="disabled">
+									<label for="delivery4">퀵</label>
+								</span>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+
+				<h4>라디오 : [ form-group ] > [ c-rdo ]</h4>
+				<table class="tbl-guide">
+				<colgroup>
+					<col style="width:22%;">
+					<col style="width:36%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>클래스 정의</th>
+						<th>비고</th>
+						<th>디자인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>.form-group > .c-rdo</th>
+						<td></td>
+						<td>
+							<div class="form-group">
+								<span class="c-rdo">
+									<input type="radio" id="rdo1" name="rdo" checked="checked">
+									<label for="rdo1">라디오1</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="rdo2" name="rdo">
+									<label for="rdo2">라디오2</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="rdo3" name="rdo" disabled="disabled">
+									<label for="rdo3">선택안된 상태 비활성</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="rdo4" name="rdo" checked="checked" disabled="disabled">
+									<label for="rdo4">선택된 상태 비활성 checked disabled</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="rdo5" name="rdo" disabled="disabled" checked="checked">
+									<label for="rdo5">선택된 상태 비활성 disabled checked</label>
+								</span>
+
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th>.c-rdo.txt-no</th>
+						<td>리스트에서 체크박스 단독으로 사용시</td>
+						<td>
+							<span class="c-rdo txt-no">
+								<input type="radio" id="tgift" name="tgift">
+								<label for="tgift">선택</label>
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<th>.form-group.block > .c-rdo</th>
+						<td>form-group display="block"으로 쓰고 싶을때</td>
+						<td>
+							<div class="form-group block">
+								<span class="c-rdo">
+									<input type="radio" id="rdo1_1" name="rdo1_1">
+									<label for="rdo1_1">라디오1</label>
+								</span>
+								<span class="c-rdo">
+									<input type="radio" id="rdo1_2" name="rdo1_1">
+									<label for="rdo1_2">라디오2</label>
+								</span>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+
+				<h4>파일찾기 : [ c-input-file ]</h4>
+				<table class="tbl-guide">
+				<colgroup>
+					<col style="width:22%;">
+					<col style="width:36%;">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>클래스 정의</th>
+						<th>비고</th>
+						<th>디자인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>.form-group > .c-rdo</th>
+						<td></td>
+						<td>
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name">
+								<label for="upload01" class="file-label">찾기</label>
+								<input type="file" id="upload01" class="file-upload">
+							</div>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+		</section>
+	</article>
+	<a href="#top" class="btn-top">TOP</a>
+</div>
+
+<script type="text/javascript" src="../../public/js/common.js"></script>
+</body>
+</html>

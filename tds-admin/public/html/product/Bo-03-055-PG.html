@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">디바이스 기본정보</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>상품관리</li>
+					<li><strong>디바이스 기본정보</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none">기본정보</a></li>
+				<li><a href="#none">기본 이미지</a></li>
+				<li><a href="#none" class="on">추가 이미지</a></li>
+				<li><a href="#none">광고 이미지</a></li>
+				<li><a href="#none">스펙</a></li>
+				<li><a href="#none">전문가 리뷰</a></li>
+			</ul>
+			<!-- //tab -->
+
+			<div class="h-area2">
+				<h3 class="h-type2">추가 이미지 등록</h3>
+				<div class="r-txt">
+					<span class="txt-red">※ JPG, GIF, PNG 이미지만 올리실 수 있습니다.</span>
+				</div>
+			</div>
+
+			<table class="table-row">
+				<caption>추가 이미지 등록</caption>
+				<colgroup>
+					<col style="width:19.2%">
+					<col>
+				</colgroup>
+				<tbody>
+				<tr>
+					<th scope="row">모델명</th>
+					<td>SM-G965N_64GR</td>
+				</tr>
+				</tbody>
+			</table>
+
+			<br><br>
+
+			<table class="table-col">
+				<caption>추가 이미지 등록</caption>
+				<colgroup>
+					<col style="width:19.2%">
+					<col style="width:31%">
+					<col style="width:19.2%">
+					<col>
+				</colgroup>
+				<tbody>
+				<tr>
+					<th scope="row">
+						큰 이미지 1
+						<div class="sub">
+							SIZE : 352 x 452<br>
+							T world 에서 사용
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload1" class="file-label">검색</label>
+								<input type="file" id="upload1" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+					<th scope="row">
+						큰 이미지 2
+						<div class="sub">
+							SIZE : 352 x 452<br>
+							T world 에서 사용
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload2" class="file-label">검색</label>
+								<input type="file" id="upload2" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">
+						큰 이미지 3
+						<div class="sub">
+							SIZE : 352 x 452<br>
+							T world 에서 사용
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload3" class="file-label">검색</label>
+								<input type="file" id="upload3" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+					<th scope="row">
+						큰 이미지 4
+						<div class="sub">
+							SIZE : 352 x 452<br>
+							T world 에서 사용
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload4" class="file-label">검색</label>
+								<input type="file" id="upload4" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">
+						작은 이미지 1
+						<div class="sub">
+							SIZE : 70 x 70
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload5" class="file-label">검색</label>
+								<input type="file" id="upload5" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+					<th scope="row">
+						작은 이미지 2
+						<div class="sub">
+							SIZE : 70 x 70
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload6" class="file-label">검색</label>
+								<input type="file" id="upload6" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">
+						작은 이미지 3
+						<div class="sub">
+							SIZE : 70 x 70
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload7" class="file-label">검색</label>
+								<input type="file" id="upload7" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+					<th scope="row">
+						작은 이미지 4
+						<div class="sub">
+							SIZE : 70 x 70
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload8" class="file-label">검색</label>
+								<input type="file" id="upload8" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">
+						신규 큰 이미지 1
+						<div class="sub">
+							SIZE : 252 x 324
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload9" class="file-label">검색</label>
+								<input type="file" id="upload9" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+					<th scope="row">
+						신규 큰 이미지 2
+						<div class="sub">
+							SIZE : 252 x 324
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload10" class="file-label">검색</label>
+								<input type="file" id="upload10" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">
+						신규 큰 이미지 3
+						<div class="sub">
+							SIZE : 252 x 324
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload11" class="file-label">검색</label>
+								<input type="file" id="upload11" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+					<th scope="row">
+						신규 큰 이미지 4
+						<div class="sub">
+							SIZE : 252 x 324
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload12" class="file-label">검색</label>
+								<input type="file" id="upload12" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">
+						모바일 상세 1
+						<div class="sub">
+							SIZE : 356 x 564
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload13" class="file-label">검색</label>
+								<input type="file" id="upload13" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+					<th scope="row">
+						모바일 상세 2
+						<div class="sub">
+							SIZE : 356 x 564
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload14" class="file-label">검색</label>
+								<input type="file" id="upload14" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">
+						모바일 상세 3
+						<div class="sub">
+							SIZE : 356 x 564
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload15" class="file-label">검색</label>
+								<input type="file" id="upload15" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+					<th scope="row">
+						모바일 상세 4
+						<div class="sub">
+							SIZE : 356 x 564
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload16" class="file-label">검색</label>
+								<input type="file" id="upload16" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">
+						라스트 이미지
+						<div class="sub">
+							SIZE : 91 x 97<br>
+							T world 에서 사용
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload17" class="file-label">검색</label>
+								<input type="file" id="upload17" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+					<th scope="row">
+						가입 정보 메인 이미지
+						<div class="sub">
+							SIZE : 91 x 97<br>
+							T world 에서 사용
+						</div>
+					</th>
+					<td class="l-data">
+						<div class="img-preview-area">
+							<div class="c-input-file">
+								<input type="text" readonly="readonly" title="파일명" class="file-name" style="width:170px;"><!-- 테이블 가로값에 따라 인라인으로 가로값 수정가능 -->
+								<label for="upload18" class="file-label">검색</label>
+								<input type="file" id="upload18" class="file-upload">
+							</div>
+							<div class="img-preview-group">
+								<span class="img-preview">
+									<img src="../../../public/img/img_no.gif" alt="">
+									<a href="#none" class="img-close">이미지삭제</a>
+								</span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+
+			<!-- btn -->
+			<div class="btn-area center">
+				<button type="button" class="btn-base btn-blue">저장</button>
+			</div>
+			<!-- //btn -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

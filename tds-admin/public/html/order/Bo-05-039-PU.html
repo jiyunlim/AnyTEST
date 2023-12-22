@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>전화번호 변경</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 600*300 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">전화번호 변경</h1>
+	</div>	
+	<div class="pop-content">
+		<table class="table-row">
+		<caption>전화번호 변경</caption>
+		<colgroup>
+			<col style="width:20%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">휴대폰 번호</th>
+				<td>
+					<select class="c-select" title="휴대폰 번호 첫자리 선택" style="width:60px;">
+						<option value="" selected="selected">010</option>
+						<option value="">05033</option>
+					</select>
+					<span class="txt-unit">-</span>
+					<input type="text" class="c-input" title="휴대폰 번호 중간자리 입력" style="width:60px;">
+					<span class="txt-unit">-</span>
+					<input type="text" class="c-input" title="휴대폰 번호 끝자리 입력" style="width:60px;">
+				</td>
+			</tr> 
+		</tbody>
+		</table>
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

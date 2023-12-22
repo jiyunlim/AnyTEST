@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">가입정보수정</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>Global</li>
+					<li><strong>가입정보수정</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<h2 class="h-type2">가입정보 </h2>
+			<table class="table-row">
+			<caption>가입정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:40%;">
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">업무 구분</th>
+					<td colspan="3">일반 회원 or 바로 픽업</td>
+				</tr>
+				<tr>
+					<th scope="row">이름 / 소속 / 직위</th>
+					<td>홍길동 ( SKT / 매니저 )</td>
+					<th scope="row">프로젝트 업무</th>
+					<td>관리자 or 구성원</td>
+				</tr>
+				<tr>
+					<th scope="row">조직</th>
+					<td colspan="3">수도권마케팅본부 /  강남마케팅팀 / 가로수직영점Shop / 성산점</td>
+				</tr>
+				<tr>
+					<th scope="row">아이디 (ID)</th>
+					<td colspan="3">hong123</td>
+				</tr>
+				<tr>
+					<th scope="row">비밀번호</th>
+					<td colspan="3">
+						<div class="align-block">
+							비밀번호 변경일 : YYYY-MM-DD
+							<div class="r-btn">
+								<a  href="Bo-G01-003-PU.html" onclick="window.open('Bo-G01-003-PU.html','pop','width=400,height=350');return false;" target="_blank" title="비밀번호 변경 팝업" class="btn-base btn-gray">변경</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">휴대폰 번호</th>
+					<td colspan="3">
+						<div class="align-block">
+							010-1234-5678
+							<div class="r-btn">
+								<a  href="Bo-G01-004-PU.html" onclick="window.open('Bo-G01-004-PU.html','pop','width=400,height=300');return false;" target="_blank" title="비밀번호 변경 팝업"  class="btn-base btn-gray">변경</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">이메일</th>
+					<td colspan="3"><input type="text" class="c-input" title="이메일 입력" value="Hong123@sk.com"></td>
+				</tr>
+				<tr>
+					<th scope="row">담당업무</th>
+					<td colspan="3"><input type="text" class="c-input" title="담당업무 입력" value="프로젝트 PM"></td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- btn -->
+			<div class="btn-area center">
+				<a href="#none" class="btn-base btn-blue">저장</a>
+			</div>
+			<!-- //btn -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

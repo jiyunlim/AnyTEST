@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>라이트 할부 정보 입력</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 600*620 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">라이트 할부 정보 입력</h1>
+	</div>
+	<div class="pop-content">
+		<table class="table-row">
+		<caption>라이트 할부 정보 입력</caption>
+		<colgroup>
+			<col style="width:24%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">카드명 <a href="Bo-G04-027-PU.html" onclick="window.open('Bo-G04-027-PU.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" class="ico-tooltip" target="_blank" title="새창">안내팝업</a></th>
+				<td>
+					<select class="c-select" title="카드명 선택">
+						<option value="" selected="selected">우리은행카드 New SKT 우리카드</option>
+						<option value="">국민카드 T라이트할부 I KB 국민카드</option>
+						<option value="">하나은행카드 SKT 내맘대로 T Plus 카드</option>
+						<option value="">신한카드(LG) SKT Light Plan 신한카드 Big Plus</option>
+						<option value="">하나은행카드 SKT T-Zero 카드</option>
+						<option value="">현대카드 SKT-현대카드M Edition2 (라이트할부형)</option>
+						<option value="">우리은행카드 SKT 우리카드</option>
+						<option value="">국민카드 SKT 라이트할부 KB국민카드</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">할부 개월</th>
+				<td>
+					<select class="c-select" title="할부 개월 선택" style="width:80px;">
+						<option value="" selected="selected">24개월</option>
+						<option value="">36개월</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">할부 금액<span class="txt-essential">*</span></th>
+				<td>
+					<input type="text" class="c-input" title="할부 금액 입력" style="width:50%;">
+					<span class="txt-unit">원</span>
+					<a href="#none" class="btn-base btn-gray">적용</a>
+					<p class="txt-info">최소 결제 금액은 100,000원부터 2,000,000원 까지 가능합니다.</p>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">카드 번호<span class="txt-essential">*</span></th>
+				<td>
+					<input type="text" class="c-input" title="카드번호 첫째자리 입력" style="width:80px;">
+					<span class="txt-unit">-</span>
+					<input type="text" class="c-input" title="카드번호 둘째자리 입력" style="width:80px;">
+					<span class="txt-unit">-</span>
+					<input type="text" class="c-input" title="카드번호 셋째자리 입력" style="width:80px;">
+					<span class="txt-unit">-</span>
+					<input type="text" class="c-input" title="카드번호 넷째자리 입력" style="width:80px;">
+					<p class="txt-info">법인 카드일 경우, 이용하실 수 없습니다.</p>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">유효 기간<span class="txt-essential">*</span></th>
+				<td>
+					<select class="c-select" title="유효 기간 월 선택" style="width:80px;">
+						<option value="" selected="selected">MM월</option>
+					</select>
+					<select class="c-select" title="유효 기간 년 선택" style="width:80px;">
+						<option value="" selected="selected">YYYY년</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">이름<span class="txt-essential">*</span></th>
+				<td><input type="text" class="c-input" title="이름 입력" style="width:50%;"></td>
+			</tr>
+			<tr>
+				<th scope="row">카드주와의 관계</th>
+				<td>
+					<select class="c-select" disabled="disabled" title="카드주와의 관계 선택" style="width:80px;">
+						<option value="" selected="selected">본인</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">주민등록번호<br>앞 7자리<span class="txt-essential">*</span></th>
+				<td>
+					<input type="text" class="c-input" title="주민등록앞번호 입력" style="width:100px;">
+					<span class="txt-unit">-</span>
+					<input type="text" class="c-input" title="주민등록뒷번호 시작번호 입력" style="width:26px;">
+					<span class="txt-unit">●●●●●●</span>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+
+		<div class="box-type1 mt-10">
+			<p class="f-11 mt-6">
+				라이트할부 결제 금액이 통신사 할부원금보다 클 경우 차액은 익월에 통신요금에서 할인됩니다.<br>(단, 통신사 할부 처리를 위해 최소 1,000원의 할부원금이 설정됩니다.)
+			</p>
+			<div class="f-12 align-block top-line">
+				<strong class="txt-black1">라이트 할부</strong>
+				<strong class="r-txt txt-black1">-0원</strong>
+			</div>
+		</div>
+
+		<h2 class="h-type2">개인정보 수집 및 이용 동의</h2>
+		<div class="agree-box">
+			개인정보 수집 및 이용 동의
+		</div>
+		<div class="agree-type">
+			<span class="c-chk">
+				<input type="checkbox" id="pointAgree1" name="pointAgree">
+				<label for="pointAgree1">상기 이용약관에 동의합니다.</label>
+			</span>
+		</div>
+
+		<!-- btn -->
+		<div class="btn-area center">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

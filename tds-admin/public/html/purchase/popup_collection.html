@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN GUIDE</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<link rel="stylesheet" type="text/css" href="../../../public/css/@tdirect_guide.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.shCore.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+    <!-- 2022.08 판매기능고도화 사진/동영상 swiper cdn 추가 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js" integrity="sha512-VHsNaV1C4XbgKSc2O0rZDmkUOhMKPg/rIi8abX9qTaVDzVJnrDGHFnLnCnuPmZ3cNi1nQJm+fzJtBbZU9yRCww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" integrity="sha512-uCQmAoax6aJTxC03VlH0uCEtE0iLi83TW1Qh6VezEZ5Y17rTrIE+8irz4H4ehM7Fbfbm8rb30OkxVkuwhXxrRg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="guide-wrap">
+        <header id="header">
+            <h1><strong>T다이렉트샵</strong><em>ADMIN GUIDE</em></h1>
+        </header>
+        <!-- article -->
+        <article>
+            <!-- section -->
+            <section class="guide-content">
+                <h2 class="tit-con">팝업 가이드</h2>
+                <div class="box-wrap">
+                    <h3>팝업 : 레이어팝업 태그 위치는 &lt;div  id="wrap"&gt; &lt;&#47;div&gt; 밖으로 위치</h3>
+                    <h4>윈도우팝업</h4>
+                    <div class="guide-box">
+                        <a href="popup_club.html" onclick="window.open('popup_club.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=860,height=680');return false;" target="_blank" class="btn-base btn-gray">클럽기변</a>
+                        <a href="popup_imei.html" onclick="window.open('popup_imei.html','pop','toolbar=no,scrollbars=yes,resizable=yes,width=600,height=680');return false;" target="_blank" class="btn-base btn-gray">IMEI 확인방법</a>
+                    </div>
+                    <!-- 2019-10-24 쿠폰 레이어팝업 작업 추가 -->
+                    <h4>쿠폰</h4>
+                    <div class="guide-box">
+                        <a href="#layerPopCoupon01" data-model="layerPopCoupon01" class="btn-base">안내 : 쿠폰을 선택해주세요.</a>
+                        <a href="#layerPopCoupon02" data-model="layerPopCoupon02" class="btn-base">안내 : 적용 가능한 쿠폰이 없습니다.</a>
+                        <a href="#layerPopCoupon03" data-model="layerPopCoupon03" class="btn-base">안내 : 쿠폰 등록이 완료되었습니다.</a>
+                        <a href="#layerPopCoupon04" data-model="layerPopCoupon04" class="btn-base">안내 : 쿠폰 코드를 입력해주세요.</a>
+                        <a href="#layerPopCoupon05" data-model="layerPopCoupon05" class="btn-base">안내 : 등록 기한이 지났거나, 이미 사용된 쿠폰입니다.</a>
+                        <a href="#layerPopCoupon06" data-model="layerPopCoupon06" class="btn-base">안내 : 유효하지 않은 쿠폰 코드입니다.</a>
+                    </div>
+                    <!-- //2019-10-24 쿠폰 레이어팝업 작업 추가 -->
+                    <h4>오늘보상/클럽기변</h4>
+                    <div class="guide-box">
+                        <a href="#layerPopSearch" data-model="layerPopSearch" class="btn-base">알림: 단말기를 먼저 검색 해주세요 </a>
+                        <a href="#layerPopToday" data-model="layerPopToday" class="btn-base">오늘 보상 신청 안내</a>
+                        <a href="#layerPopCancel01" data-model="layerPopCancel01" class="btn-base">오늘 보상 신청 취소</a>
+                        <a href="#layerPopNoanswer" data-model="layerPopNoanswer" class="btn-base">알림 : 검색 결과가 없습니다.</a>
+                        <a href="#layerPopEnter" data-model="layerPopEnter" class="btn-base">알림 : 모델명 혹은 닉네임을 입력하세요.</a>
+                        <br> <br>
+                        <a href="#layerPopCancel02" data-model="layerPopCancel02" class="btn-base">클럽기변신청 취소</a>
+                    </div>
+                    <h4>TWD_CS1</h4>
+                    <div class="guide-box">
+                        <a href="#layerPopChoice01" data-model="layerPopChoice01" class="btn-base">알림 : 클럽기변 vs 오늘보상</a>
+                        <a href="#layerPopChoice02" data-model="layerPopChoice02" class="btn-base">알림 : 오늘보상 vs 클럽기변</a>
+                        <a href="#layerPopConfirm" data-model="layerPopConfirm" class="btn-base">알림 : 약관을 확인해 주세요</a>
+                        <a href="#layerPopArea" data-model="layerPopArea" class="btn-base">오늘배송 안내: 서비스지역아님</a>
+                        <a href="#layerPopStock" data-model="layerPopStock" class="btn-base">오늘배송 안내: 재고부족</a>
+                    </div>
+                    <!-- 2022.08 판매기능고도화2차 사진/동영상 팝업추가 -->
+                    <h4>판매기능고도화2차(구매후기 > 사진/동영상 후기 팝업) </h4>
+                    <div class="guide-box">
+                        <a href="#layerPopReview" data-model="layerPopReview" class="btn-base">보기 : 사진/동영상 원본 보기</a>
+                    </div>
+                </div> <!-- //box-wrap -->
+            </section>
+            <!-- //section -->
+        </article>
+        <!-- //article -->
+
+    </div>
+    <!-- //#guide-wrap -->
+
+    <!--  #wrap -->
+    <div id="wrap">
+    </div>
+    <!--  //#wrap -->
+
+    <!-- 2019-10-24 쿠폰 관련 팝업 추가 -->
+    <!-- 레이어팝업 -->
+    <div id="layerPopCoupon01" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">안내</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p>쿠폰을 선택해주세요.</p>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-blue">확인</a>
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+    <!-- 레이어팝업 -->
+    <div id="layerPopCoupon02" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">안내</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p>적용 가능한 쿠폰이 없습니다.</p>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-blue">확인</a>
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+    <!-- 레이어팝업 -->
+    <div id="layerPopCoupon03" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">안내</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p>쿠폰 등록이 완료되었습니다. <br>쿠폰 조회에서 쿠폰 선택 후 적용해주세요.</p>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-blue">확인</a>
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+    <!-- 레이어팝업 -->
+    <div id="layerPopCoupon04" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">안내</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p>쿠폰 코드를 입력해주세요.</p>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-blue">확인</a>
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+    <!-- 레이어팝업 -->
+    <div id="layerPopCoupon05" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">안내</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p>등록 기한이 지났거나, 이미 사용된 쿠폰입니다.</p>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-blue">확인</a>
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+    <!-- 레이어팝업 -->
+    <div id="layerPopCoupon06" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">안내</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p>유효하지 않은 쿠폰 코드입니다.<br>다시 확인해주세요.</p>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-blue">확인</a>
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+    <!-- //2019-10-24 쿠폰 관련 팝업 추가 -->
+
+    <!-- 레이어팝업 -->
+    <div id="layerPopSearch" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">알림</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p>단말기를 먼저 검색해주세요</p>        
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-blue">확인</a>
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+
+    <!-- 레이어팝업 -->
+    <div id="layerPopToday" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">오늘보상 신청 안내</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p class="h-type2">iPhone 6S|64G</p>        
+            <p class="mt-6">오늘보상을 신청하시겠습니까?</p>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-blue">확인</a>
+                <a href="#" class="btn-base btn-line-gray btn-layer-close">취소</a>
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+
+    <!-- 레이어팝업 -->
+    <div id="layerPopCancel01" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">오늘보상 신청 취소</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p class="h-type2">오늘보상 신청 취소</p>
+            <p>오늘보상 신청을 취소하시겠습니까?</p>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-blue">확인</a>
+                <a href="#" class="btn-base btn-line-gray btn-layer-close">취소</a>
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+
+    <!-- 레이어팝업 -->
+    <div id="layerPopNoanswer" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">알림</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p>검색 결과가 없습니다.</p>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-blue">확인</a>
+                <a href="#" class="btn-base btn-line-gray btn-layer-close">취소</a>
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+
+    <!-- 레이어팝업 -->
+    <div id="layerPopEnter" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">알림</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p>모델명 혹은 닉네임을 입력하세요</p>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-blue">확인</a>
+                <a href="#" class="btn-base btn-line-gray btn-layer-close">취소</a>
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+
+    <!-- 레이어팝업 -->
+    <div id="layerPopCancel02" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">클럽기변 신청 취소</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p>클럽 기변 신청을 취소하시겠습니까?
+            </p>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-line-gray btn-layer-close">취소</a>
+                <a href="#" class="btn-base btn-blue">확인</a>
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+
+
+    <!-------------------------------------------------------------------------------------------------------------------->
+
+    <!-- 레이어팝업 -->
+    <div id="layerPopChoice01" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">알림</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p>클럽기변과 오늘보상은 중복 신청이 불가합니다.</p> <br>
+            <p>오늘보상을 신청하고 클럽기변을 신청하시겠습니까?</p>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-blue btn-line-gray">오늘보상 유지</a>
+                <a href="#" class="btn-base btn-blue btn-layer-close">클럽기변 신청</a> 
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+
+    <!-- 레이어팝업 -->
+    <div id="layerPopChoice02" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">알림</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p>클럽기변과 오늘보상은 중복 신청이 불가합니다.</p> <br>
+            <p>클럽기변을 취소하고 오늘보상을 신청하시겠습니까?</p>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-blue btn-line-gray">클럽기변 유지</a>
+                <a href="#" class="btn-base btn-blue btn-layer-close">오늘보상 신청</a> 
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+
+
+    <!-- 레이어팝업 -->
+    <div id="layerPopConfirm" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">알림</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p>약관을 확인해주세요</p>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-blue">확인</a>
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+
+
+    <!-- 레이어팝업 -->
+    <div id="layerPopArea" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">오늘배송 안내</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p>해당지역은 오늘도착 서비스 대상 지역이 아닙니다.</p>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-blue">확인</a>
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+        
+
+    <!-- 레이어팝업 -->
+    <div id="layerPopStock" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">오늘배송 안내</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <p>해당 지역의 재고가 부족합니다. <br>배송 방법을 변경해주세요</p>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-blue btn-layer-close">오늘보상 신청</a> 
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+
+
+        <!-------------------------------------------------------------------------------------------------------------------->
+
+    <!-- 2022.08 판매기능고도화 2차 사진/동영상 원본보기 팝업 -->
+     <!-- 레이어팝업 -->
+     <div id="layerPopReview" class="pop-wrap pop-layer small">
+        <div class="pop-header">
+            <strong class="h-type1">사진 / 동영상 원본 보기</strong>
+            <a href="#" class="layer-close">닫기</a>
+        </div>
+        <div class="pop-content">
+            <div class="swiper-container popup-review-detail-view">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <!-- [D] 동영상 원본 보기 -->
+                        <div class="video-vw-thumb">
+                            <!-- [D] video-play-btn 클릭시 재생 -->
+                            <div class="video-play-btn"></div>
+                            <img src="/public/img/review-img-02.png" alt="동영상 원본">
+                        </div>
+                    <li class="swiper-slide">
+                        <!-- [D] 이미지 원본 보기 -->
+                        <div class="img-vw-thumb">
+                            <img src="/public/img/review-img-01.png" alt="이미지 원본">
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="img-vw-thumb">
+                            <img src="/public/img/A0M0_001_1.jpg" alt="이미지 원본">
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <!-- btn -->
+            <div class="btn-area">
+                <a href="#" class="btn-base btn-line-gray btn-layer-close">닫기</a>
+            </div>
+            <!-- //btn -->
+        </div>
+    </div>
+    <!-- //레이어팝업 -->
+    <!-- 2022.08 판매기능고도화 2차 사진/동영상 원본보기 팝업 -->
+
+
+
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        //레이어팝업 호출
+        $('[data-model]').click(function(ev){
+            ev.preventDefault();
+            var model = $(this).attr('data-model');
+            modalCon(model,false,true);
+        });
+    });
+
+    //_ 팝업 사진 / 동영상 상세보기 스와이퍼
+	var swiperReviewPopup = new Swiper(".swiper-container.popup-review-detail-view", {
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		loop: false,
+		observer: true,	
+		observeParents: true,	
+	});
+
+</script>
+
+
+
+</body>
+</html>

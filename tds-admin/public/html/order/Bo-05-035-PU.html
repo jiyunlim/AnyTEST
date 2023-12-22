@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 860*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">신규 키워드 등록</h1>
+	</div>
+	<div class="pop-content"> 
+		<h2 class="h-type2">키워드검색</h2>
+		<table id="srch-list" class="table-row">
+		<caption>키워드 검색</caption>
+		<colgroup>
+			<col style="width:14%">
+			<col>
+			<col style="width:14%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">키워드</th>
+				<td>
+					<input type="text" class="c-input" title="키워드 입력">
+				</td> 
+				<th scope="row">사용여부</th>
+				<td>
+					<div class="form-group">
+						<span class="c-rdo">
+							<input type="radio" id="uses1" name="uses">
+							<label for="uses1">사용</label>
+						</span>
+						<span class="c-rdo">
+							<input type="radio" id="uses2" name="uses" checked="checked">
+							<label for="uses2">미사용</label>
+						</span>
+					</div>
+				</td> 
+			</tr>
+			<tr>
+				<th scope="row">등록정보</th>
+				<td colspan="3">
+					<div>
+						<div class="form-group block">
+							<span class="c-rdo">
+								<input type="radio" id="srchtype1" name="srchtype">
+								<label for="srchtype1">지하철역</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="srchtype2" name="srchtype" checked="checked">
+								<label for="srchtype2">주소정보</label>
+							</span>
+							<div class="tab-radio-con">
+								<select class="c-select" title="권역 선택" style="width:120px;">
+									<option value="" selected="selected">권역</option>
+								</select>
+								<select class="c-select" title="호선 선택" style="width:120px;">
+									<option value="" selected="selected">호선</option>
+								</select>
+								<select class="c-select" title="지하철역 선택" style="width:120px;">
+									<option value="" selected="selected">지하철역</option>
+								</select>
+								<a href="#none" class="btn-base btn-gray">추가</a>
+							</div>
+							<div class="tab-radio-con open">
+								<div class="form-group block">
+									<select class="c-select" title="광역시 선택" style="width:120px;">
+										<option value="" selected="selected">광역시</option>
+									</select>
+									<select class="c-select" title="시/도/군 선택" style="width:120px;">
+										<option value="" selected="selected">시/도/군</option>
+									</select>
+									<select class="c-select" title="도로명 선택" style="width:120px;">
+										<option value="" selected="selected">도로명</option>
+									</select>
+									<a href="#none" class="btn-base btn-gray">추가</a>
+									<p class="input-address">
+										<span class="txt-unit">동 주소 : </span>
+										<input type="text" class="c-input" title="동 주소 입력" style="width:20%;">
+										<a href="#none" class="btn-base btn-gray" style="margin-top:6px;">추가</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</td>
+			</tr> 
+		</tbody>
+		</table> 
+
+		<h2 class="h-type2">키워드 추가</h2>
+		<table class="table-col">
+		<caption>사전 구매예약 단말 목록 재고 수정</caption>
+		<colgroup>
+			<col style="width:8%"> 
+			<col span="4">
+			<col style="width:8%">
+			<col style="width:8%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">순번</th>
+				<th scope="col">키워드</th>
+				<th scope="col">권역</th>
+				<th scope="col">호선</th>
+				<th scope="col">지하철역</th>
+				<th scope="col">사용</th>
+				<th scope="col">삭제</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- 리스트 없을 때 -->
+			<tr>
+				<td colspan="7">등록된 키워드 없음</td> 
+			</tr>
+			<!--//리스트 없을 때 -->
+			<tr>
+				<td>1</td>
+				<td>코엑스</td>
+				<td>수도권</td>
+				<td>9호선</td>
+				<td>삼성중앙역</td>
+				<td>Y</td>
+				<td>X</td> 
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>코엑스</td>
+				<td>수도권</td>
+				<td>2호선</td>
+				<td>봉은사역</td>
+				<td>Y</td>
+				<td>X</td> 
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>코엑스</td>
+				<td>수도권</td>
+				<td>9호선</td>
+				<td>삼성역</td>
+				<td>Y</td>
+				<td>X</td> 
+			</tr>
+		</tbody>
+		</table>
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">저장</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

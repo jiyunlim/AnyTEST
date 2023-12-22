@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 950*760 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">매장 신규 등록</h1>
+	</div>
+	<div class="pop-content">
+		<h2 class="h-type2">기본정보</h2>
+		<table class="table-row">
+			<caption>기본정보</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:16%">
+				<col style="width:20%">
+				<col style="width:16%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">조직선택</th>
+					<td colspan="4">
+						<div class="align-block">
+							<select class="c-select" title="본부 선택" style="width:120px;">
+								<option value="" selected="selected">부산마케팅본부</option>
+								<option value="">T다이렉트샵</option>
+							</select>
+							<select class="c-select" title="마케팅팀 선택" style="width:120px;">
+								<option value="" selected="selected">마케팅팀</option>
+							</select>
+							<select class="c-select" title="대리점명 선택" style="width:120px;">
+								<option value="" selected="selected">대리점명</option>
+							</select>
+							<input type="text" class="c-input number" placeholder="ex) 0000 " style="width:100px;" maxlength="4" disabled="">
+							<div class="r-btn">
+								<a href="#none" class="btn-base btn-gray">검색</a>
+							</div>
+							<div class="r-btn">
+								<a href="#none" class="btn-base btn-gray" style="display:none;">초기화</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">매장명</th>
+					<td colspan="2">
+						<input type="text" style="width:80%" class="c-input" disabled="disabled">
+					</td>
+					<th scope="row">매장연락처</th>
+					<td>
+						<input type="text" class="c-input number" style="width:50px;"> -
+						<input type="text" class="c-input number" style="width:50px;"> -
+						<input type="text" class="c-input number" style="width:50px;">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" rowspan="2">판매자</th>
+					<th scope="col" class="th-sub"> ORG_ID</th>
+					<th scope="col" class="th-sub">판매자명</th>
+					<th scope="col" class="th-sub">ID</th>
+					<th scope="col" class="th-sub">로그인ID</th>
+				</tr>
+				<tr>
+					<td><input type="text" class="c-input" style="text-align:center" disabled="disabled"></td>
+					<td><input type="text" class="c-input" style="text-align:center" disabled="disabled"></td>
+					<td><input type="text" class="c-input" style="text-align:center" disabled="disabled"></td>
+					<td style="text-align:center"><input type="text" class="c-input" style="text-align:center;width:70%" disabled="disabled"></td>
+				</tr>
+				<tr>
+					<th scope="row" rowspan="3">주소</th>
+					<th scope="row">우편번호</th>
+					<td colspan="3">
+						<input type="text" class="c-input" title="우편번호" style="width:100px;" disabled="disabled">
+					</td> 
+				</tr>
+				<tr>
+					<th scope="row">도로명</th>
+					<td colspan="3">
+						<input type="text" class="c-input" title="주소" style="width:55%;" disabled="disabled">
+						<input type="text" class="c-input" title="주소상세" style="width:200px;" disabled="disabled">
+					</td> 
+				</tr>
+				<tr>
+					<th scope="row">지번주소</th>
+					<td colspan="3">
+						<input type="text" class="c-input" title="주소" style="width:55%;" disabled="disabled">
+						<input type="text" class="c-input" title="주소상세" style="width:200px;" disabled="disabled">
+					</td> 
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 class="h-type2">필수 입력 정보</h2>
+		<table class="table-row">
+			<caption>필수 입력 정보</caption>
+			<colgroup>
+				<col style="width:12%">
+				<col>
+				<col style="width:12%">
+				<col>
+				<col style="width:12%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">평일<br>영업시간</th>
+					<td>
+						<select class="c-select" title="영업 시작 시간 선택" style="width:60px;">
+							<option value="0900">09:00</option>
+							<option value="0930">09:30</option>
+							<option value="1000">10:00</option>
+							<option value="1030">10:30</option>
+							<option value="1100">11:00</option>
+							<option value="1130">11:30</option>
+							<option value="1200">12:00</option>
+							<option value="1230">12:30</option>
+							<option value="1300">13:00</option>
+							<option value="1330">13:30</option>
+							<option value="1400">14:00</option>
+							<option value="1430">14:30</option>
+							<option value="1500">15:00</option>
+							<option value="1530">15:30</option>
+							<option value="1600">16:00</option>
+							<option value="1630">16:30</option>
+							<option value="1700">17:00</option>
+							<option value="1730">17:30</option>
+							<option value="1800">18:00</option>
+							<option value="1830">18:30</option>
+							<option value="1900">19:00</option>
+							<option value="1930">19:30</option>
+							<option value="2000">20:00</option>
+							<option value="2030">20:30</option>
+							<option value="2100">21:00</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<select class="c-select" title="영업 종료 시간 선택" style="width:60px;">
+							<option value="0900">09:00</option>
+						</select>
+					</td>
+					<th scope="row">토요일<br>영업시간</th>
+					<td>
+						<select class="c-select" title="영업 시작 시간 선택" style="width:60px;">
+							<option value="0900">09:00</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<select class="c-select" title="영업 종료 시간 선택" style="width:60px;">
+							<option value="0900">09:00</option>
+						</select>
+					</td>
+					<th scope="row">일/공휴일<br>영업시간</th>
+					<td>
+						<select class="c-select" title="영업 시작 시간 선택" style="width:60px;">
+							<option value="0900">09:00</option>
+						</select>
+						<span class="txt-unit">-</span>
+						<select class="c-select" title="영업 종료 시간 선택" style="width:60px;">
+							<option value="0900">09:00</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">찾아오시는 길</th>
+					<td colspan="5">
+						<textarea class="c-textarea" style="height:150px;resize:vertical"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">매장구분</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="storeType01" name="storeType" value="01"> 
+								<label for="storeType01">TKEY</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="storeType02" name="storeType" value="02">
+								<label for="storeType02">TKEY+</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">바로픽업<br>대상매장 구분</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="o2oy" name="o2oYn" value="Y"> 
+								<label for="o2oy">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="o2on" name="o2oYn" value="N">
+								<label for="o2on">N</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">TPS 여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="tps01" name="TPS"" value="Y"> 
+								<label for="tps01">Y</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="tps02" name="TPS"" value="N">
+								<label for="tps02">N</label>
+							</span>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">저장</a>
+			<a href="#none" class="btn-base btn-gray">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

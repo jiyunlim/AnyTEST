@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SMS/MMS 발송</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 600*460 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">SMS/MMS 발송</h1>
+	</div>	
+	<div class="pop-content">
+		<h2 class="h-type2">선택한 발송 대상: 000명</h2>
+		<div class="form-group">
+			<select class="c-select"  title="발송 방법 선택1" style="width:120px;">
+				<option value="" selected="selected">SMS</option>
+				<option value="">MMS</option>
+			</select>
+			<select class="c-select"  title="발송 방법 선택2" style="width:220px;">
+				<option value="" selected="selected">직접입력</option>
+				<option value="">내용1</option>
+				<option value="">내용2</option>
+			</select>
+		</div>
+		<table class="table-row mt-20">
+		<caption>SMS/MMS 발송</caption>
+		<colgroup>
+			<col style="width:16%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">제목(MMS)</th>
+				<td>
+					<input type="text" class="c-input" title="제목 입력" placeholder="MMS만 입력가능" style="width:250px">
+					<span>(0/30byte)</span>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">본문내용</th>
+				<td class="r-data">
+					<textarea  class="c-textarea" title="본문내용 입력"></textarea>
+					<p class="r-txt">(0/2,000byte)</p>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">Link URL</th>
+				<td>
+					<input type="text" class="c-input" title="링크 입력" style="width:250px">
+				</td>
+			</tr>
+		</tbody>
+		</table>
+ 
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">발송</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

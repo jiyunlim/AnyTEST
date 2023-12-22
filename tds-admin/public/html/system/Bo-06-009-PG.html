@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">단골고객관리</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>시스템관리</li>
+					<li><strong>템플릿관리</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none">단골고객조회</a></li>
+				<li><a href="#none">이벤트관리</a></li>
+				<li><a href="#none" class="on">템플릿관리</a></li>
+				<li><a href="#none">전송이력조회</a></li>
+			</ul>
+			<!-- //tab -->
+
+			<h2 class="hidden">템플릿관리</h2>
+			<h3 class="h-type2">템플릿 조회</h3>
+			<table class="table-row">
+			<caption>템플릿 조회</caption>
+			<colgroup>
+				<col style="width:10%">
+				<col>
+				<col style="width:10%">
+				<col style="width:14%">
+				<col style="width:10%">
+				<col style="width:14%">
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">등록기간</th>
+					<td>
+						<div class="form-group calendar">
+							<select class="c-select" title="기간 선택">
+								<option value="" selected="selected">기간선택</option>
+								<option value="">오늘</option>
+								<option value="">1주일</option>
+								<option value="">1개월</option>
+								<option value="">이달</option>
+								<option value="">금년</option>
+							</select>
+							<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+							<a href="#none" class="btn-calendar">달력</a>
+							<span class="txt-unit">━</span>
+							<input type="text" class="c-input" title="종료일자">
+							<a href="#none" class="btn-calendar">달력</a>
+						</div>
+					</td>
+					<th scope="row">발송채널</th>
+					<td>
+						<select class="c-select" title="발송채널 선택">
+							<option value="" selected="selected">전체</option>
+							<option value="">SMS</option>
+							<option value="">MMS</option>
+							<option value="">E-mail</option>
+						</select>
+					</td>
+					<th scope="row">적용유형</th>
+					<td>
+						<select class="c-select" title="적용유형 선택">
+							<option value="" selected="selected">전체</option>
+							<option value="">이벤트 유형</option>
+							<option value="">업무유형</option>
+							<option value="">품절예약</option>
+							<option value="">재고부족알리미</option>
+							<option value="">공시알리미</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">템플릿 코드</th>
+					<td colspan="5">
+						<input type="text" class="c-input" title="템플릿 코드 입력" placeholder="영대문자+숫자+( _ ) 입력">
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<div class="btn-area">
+				<a href="#none" class="btn-base">검색</a>
+				<a href="#none" class="btn-base">초기화</a>
+			</div>
+
+			<div class="h-area2">
+				<h3 class="h-type2">템플릿 조회결과 <span class="txt-count">(<em>3256</em>건)</span></h3>
+				<div class="btn-area">
+					<a href="#none" class="btn-base btn-blue">등록</a>
+				</div>
+			</div>
+
+			<div class="table-data-wrap">
+				<div class="btn-area table-top">
+					<button type="button" class="btn-excel">엑셀다운로드</button>
+				</div>
+				<table class="table-col">
+				<caption>템플릿 리스트</caption>
+				<colgroup>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col style="width:44px">
+					<col style="width:116px">
+					<col>
+					<col style="width:116px">
+					<col style="width:56px">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">No</th>
+						<th scope="col">채널</th>
+						<th scope="col">템플릿 코드</th>
+						<th scope="col">템플릿명</th>
+						<th scope="col">적용<br>유형</th>
+						<th scope="col">사용<br>여부</th>
+						<th scope="col">등록일시</th>
+						<th scope="col">등록자</th>
+						<th scope="col">수정일시</th>
+						<th scope="col">관리</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>343</td>
+						<td>MMS</td>
+						<td>MMS_IPHONEMAS_REFUND</td>
+						<td>홍미노트5 사전예약 배송지연 안내</td>
+						<td>재고부족알리미</td>
+						<td>Y</td>
+						<td>2019-01-01 09:00</td>
+						<td>admin1234</td>
+						<td>2019-01-01 09:00</td>
+						<td><a href="#none" class="btn-base btn-gray">수정</a></td>
+					</tr>
+					<tr>
+						<td>343</td>
+						<td>MMS</td>
+						<td>MMS_IPHONEMAS_REFUND</td>
+						<td>홍미노트5 사전예약 배송지연 안내</td>
+						<td>재고부족알리미</td>
+						<td>Y</td>
+						<td>2019-01-01 09:00</td>
+						<td>admin1234</td>
+						<td>2019-01-01 09:00</td>
+						<td><a href="#none" class="btn-base btn-gray">수정</a></td>
+					</tr>
+					<tr>
+						<td>343</td>
+						<td>MMS</td>
+						<td>MMS_IPHONEMAS_REFUND</td>
+						<td>홍미노트5 사전예약 배송지연 안내</td>
+						<td>재고부족알리미</td>
+						<td>Y</td>
+						<td>2019-01-01 09:00</td>
+						<td>admin1234</td>
+						<td>2019-01-01 09:00</td>
+						<td><a href="#none" class="btn-base btn-gray">수정</a></td>
+					</tr>
+				</tbody>
+				</table>
+
+				<!-- paginate -->
+				<div class="paginate-area">
+					<a href="#none" class="pg-first">처음 리스트</a>
+					<a href="#none" class="pg-prev">이전 리스트</a>
+					<ul class="paginate">
+						<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+						<li><a href="#none">2</a></li>
+						<li><a href="#none">3</a></li>
+						<li><a href="#none">4</a></li>
+						<li><a href="#none">5</a></li>
+						<li><a href="#none">6</a></li>
+						<li><a href="#none">7</a></li>
+						<li><a href="#none">8</a></li>
+						<li><a href="#none">9</a></li>
+						<li><a href="#none">10</a></li>
+					</ul>
+					<a href="#none" class="pg-next">다음 리스트</a>
+					<a href="#none" class="pg-last">마지막 리스트</a>
+				</div>
+				<!-- //paginate -->
+
+				<div class="btn-area table-bottom">
+					<button type="button" class="btn-base btn-line-gray">검색 결과만 보기</button>
+					<button type="button" class="btn-base btn-line-gray">조회항목 설정</button>
+					<button type="button" class="btn-excel">엑셀다운로드</button>
+				</div>
+      		</div>
+
+      		<div class="btn-area">
+				<a href="#none" class="btn-base btn-blue">등록</a>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

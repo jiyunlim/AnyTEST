@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- menu list -->
+			<ul class="menu-list">
+				<li><a href="#none" class="on">HOME</a></li>
+				<li><a href="#none">Menu 1</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+				<li><a href="#none">Menu 2</a><a href="#none" class="menu-close">메뉴삭제</a></li>
+			</ul>
+			<!-- //menu list -->
+			
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">단골고객관리</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>시스템관리</li>
+					<li><strong>템플릿관리</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none">단골고객조회</a></li>
+				<li><a href="#none">이벤트관리</a></li>
+				<li><a href="#none" class="on">템플릿관리</a></li>
+				<li><a href="#none">전송이력조회</a></li>
+			</ul>
+			<!-- //tab -->
+
+			<h2 class="hidden">템플릿관리</h2>
+			<h3 class="h-type2">템플릿 등록</h3>
+			<table class="table-row">
+			<caption>템플릿 등록</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:36%">
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">템플릿 코드*</th>
+					<td>
+						<input type="text" class="c-input" title="템플릿 코드 입력" style="width:148px">
+						<span class="txt-red">※ A~Z(대문자), 숫자, _ 만 가능</span>
+					</td>
+					<th scope="row">템플릿명*</th>
+					<td>
+						<input type="text" class="c-input" title="템플릿명 입력">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">전송채널</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="sendChannelType1" name="sendChannelType">
+								<label for="sendChannelType1">SMS 전송</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="sendChannelType2" name="sendChannelType">
+								<label for="sendChannelType2">MMS 전송</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="sendChannelType3" name="sendChannelType">
+								<label for="sendChannelType3">E-mail 전송</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">적용유형</th>
+					<td>
+						<select class="c-select" title="적용유형 선택">
+							<option value="" selected="selected">전체</option>
+							<option value="">이벤트 유형</option>
+							<option value="">업무유형</option>
+							<option value="">품절예약</option>
+							<option value="">재고부족알리미</option>
+							<option value="">공시알리미</option>
+						</select>
+						<p class="txt-red">(이벤트 유형: 이벤트 관리 사용, <br>업무유형: 배치 직접 개발, 품절예약: 품절예약 MMS)</p>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">발송제목</th>
+					<td colspan="3">
+						<input type="text" class="c-input" title="발송제목 입력" style="width:46%">
+						<span class="txt-red">※ (파라미터: CUST_NUM, SVC_NUM)</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">내용</th>
+					<td colspan="3">
+						<textarea rows="1" cols="1" class="c-textarea" title="내용 입력">가이드 문구...</textarea>
+						<div class="align-block mt-6">
+							<span class="txt-red">파라미터는 {}로 입력하세요. 고객번호: {SVC_NUM}, 고객명: {CUST_NAM}</span>
+							<div class="r-txt"><strong>0</strong>/1800 byte</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">사용여부</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="useType1" name="useType">
+								<label for="useType1">사용</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="useType2" name="useType">
+								<label for="useType2">미사용</label>
+							</span>
+						</div>
+					</td>
+					<th scope="row">동의확인</th>
+					<td>
+						<div class="form-group">
+							<span class="c-rdo">
+								<input type="radio" id="agreeType1" name="agreeType">
+								<label for="agreeType1">수신동의 확인</label>
+							</span>
+							<span class="c-rdo">
+								<input type="radio" id="agreeType2" name="agreeType">
+								<label for="agreeType2">수신동의 확인 안함</label>
+							</span>
+						</div>
+						<div class="mt-6">
+							<a href="#errorLP" data-model="errorLP" class="btn-base btn-gray">오류 확인</a>
+							<a href="#testsendLP" data-model="testsendLP" class="btn-base btn-gray">테스트 발송</a>
+							<a href="#previewLP" data-model="previewLP" class="btn-base btn-gray">미리 보기</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">서비스 코드</th>
+					<td colspan="3">
+						<input type="text" class="c-input" title="서비스 코드 입력" style="width:148px">
+						<span class="txt-red">※ IMAS용 서비스 구분 코드</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row" rowspan="3">파라미터</th>
+					<td colspan="3" class="txt-red">
+						<p >변수형 : 고객번호(SVC_NUM), 고객명(CUST_NAM), 메일주소(EMAIL), 아이디(USER_ID), 동의일(RVC_AGREE_DTM)</p>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						코드 : <input type="text" class="c-input" title="코드 입력" style="width:100px">
+						이름 : <input type="text" class="c-input" title="이름 입력" style="width:100px">
+						타입 : <select class="c-select" title="타입 선택" style="width:80px">
+									<option value="" selected="selected">변수형</option>
+								</select>
+						순번 : <input type="text" class="c-input" title="순번 입력" style="width:50px">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						코드 : <input type="text" class="c-input" title="코드 입력" style="width:100px">
+						이름 : <input type="text" class="c-input" title="이름 입력" style="width:100px">
+						타입 : <select class="c-select" title="타입 선택" style="width:80px">
+									<option value="" selected="selected">변수형</option>
+								</select>
+						순번 : <input type="text" class="c-input" title="순번 입력" style="width:50px">
+					</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<div class="btn-area center">
+				<a href="#none" class="btn-base btn-blue">등록</a>
+				<a href="#none" class="btn-base btn-line-blue">목록</a>
+			</div>
+		</div>
+
+		<!-- 레이어팝업 -->
+		<div id="errorLP" class="pop-wrap pop-layer medium">
+			<div class="pop-header">
+				<strong class="h-type1">MMS 오류 확인</strong>
+				<a href="#none" class="layer-close">닫기</a>
+			</div>
+			<div class="pop-content">
+				<p class="align-center">오류 내용 출력<br>OR <br>오류 내역이 없습니다.</p>
+			</div>
+		</div>
+
+		<div id="previewLP" class="pop-wrap pop-layer medium">
+			<div class="pop-header">
+				<strong class="h-type1">E-mail 미리 보기</strong>
+				<a href="#none" class="layer-close">닫기</a>
+			</div>
+			<div class="pop-content">
+				<p class="align-center">입력한 내용 출력<br>OR <br>미리보기 내역이 없습니다.</p>
+			</div>
+		</div>
+
+		<div id="testsendLP" class="pop-wrap pop-layer small">
+			<div class="pop-header">
+				<strong class="h-type1">MMS 테스트 발송</strong>
+				<a href="#none" class="layer-close">닫기</a>
+			</div>
+			<div class="pop-content">
+				<table class="table-row">
+				<caption>MMS 테스트 발송 리스트</caption>
+				<colgroup>
+					<col style="width:30%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">1</th>
+						<td>
+							<select class="c-select" title="전화번호 첫자리 선택" style="width:60px;">
+								<option value="" selected="selected">053</option>
+							</select>
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="전화번호 중간자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="전화번호 끝자리 입력" style="width:60px;">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">2</th>
+						<td>
+							<select class="c-select" title="전화번호 첫자리 선택" style="width:60px;">
+								<option value="" selected="selected">053</option>
+							</select>
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="전화번호 중간자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="전화번호 끝자리 입력" style="width:60px;">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">3</th>
+						<td>
+							<select class="c-select" title="전화번호 첫자리 선택" style="width:60px;">
+								<option value="" selected="selected">053</option>
+							</select>
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="전화번호 중간자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="전화번호 끝자리 입력" style="width:60px;">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">4</th>
+						<td>
+							<select class="c-select" title="전화번호 첫자리 선택" style="width:60px;">
+								<option value="" selected="selected">053</option>
+							</select>
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="전화번호 중간자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="전화번호 끝자리 입력" style="width:60px;">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">5</th>
+						<td>
+							<select class="c-select" title="전화번호 첫자리 선택" style="width:60px;">
+								<option value="" selected="selected">053</option>
+							</select>
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="전화번호 중간자리 입력" style="width:60px;">
+							<span class="txt-unit">-</span>
+							<input type="text" class="c-input" title="전화번호 끝자리 입력" style="width:60px;">
+						</td>
+					</tr>
+				</tbody>
+				</table>
+				<div class="btn-area">
+					<a href="#none" class="btn-base btn-blue">SMS발송</a>
+					<a href="#none" class="btn-base btn-line-gray">닫기</a>
+				</div>
+			</div>
+		</div>
+		<!-- //레이어팝업 -->
+
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//레이어팝업 호출
+		$('[data-model]').click(function(ev){
+			ev.preventDefault();
+			var model = $(this).attr('data-model');
+			modalCon(model,false,true);
+		});
+	});
+</script>
+</body>
+</html>

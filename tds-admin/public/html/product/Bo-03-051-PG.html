@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TWD ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">디바이스 기본정보</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>상품관리</li>
+					<li><strong>디바이스 기본정보</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+
+			<!-- tab -->
+			<ul class="tab-area">
+				<li><a href="#none">기본정보</a></li>
+				<li><a href="#none" class="on">기본 이미지</a></li>
+				<li><a href="#none">추가 이미지</a></li>
+				<li><a href="#none">광고 이미지</a></li>
+				<li><a href="#none">스펙</a></li>
+				<li><a href="#none">전문가 리뷰</a></li>
+			</ul>
+			<!-- //tab -->
+
+			<h3 class="h-type2">색상정보</h3>
+			<table class="table-row">
+				<caption>색상정보</caption>
+				<colgroup>
+					<col style="width:19.2%">
+					<col style="width:27%">
+					<col style="width:19%">
+					<col>
+				</colgroup>
+				<tbody>
+				<tr>
+					<th scope="row">모델명</th>
+					<td>SM-G965N_64GR</td>
+					<th scope="row">색상정보</th>
+					<td>
+						<input type="text" class="c-input" title="색상정보 입력" placeholder="색상명을 입력해주세요">
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<!-- btn -->
+			<div class="btn-area">
+				<a href="#none" class="btn-base">추가</a>
+			</div>
+			<!-- //btn -->
+
+			<br><br>
+			<table class="table-col">
+				<caption>색상정보</caption>
+				<colgroup>
+					<col style="width:9%">
+					<col>
+					<col style="width:16%">
+					<col style="width:16%">
+					<col style="width:16%">
+					<col style="width:16%">
+				</colgroup>
+				<thead>
+				<tr>
+					<th scope="col">공개여부</th>
+					<th scope="col">색상명</th>
+					<th scope="col">변경 색상명</th>
+					<th scope="col">HEX</th>
+					<th scope="col">TKEY 색상코드</th>
+					<th scope="col">O2O 재고조회</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk1" name="chkList" checked="checked">
+							<label for="chk1">선택</label>
+						</span>
+					</td>
+					<td>
+						<a href="#none" class="text-primary">뉴 오로라 블랙</a>
+					</td>
+					<td>
+						<input type="text" class="c-input" title="변경 색상명 입력">
+					</td>
+					<td>
+						<input type="text" class="c-input" title="HEX 입력">
+					</td>
+					<td>
+						<input type="text" class="c-input" title="TKEY 색상코드 입력">
+					</td>
+					<td>
+						<a href="#none" class="text-primary">O2O 재고조회</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="c-chk txt-no">
+							<input type="checkbox" id="chk2" name="chkList">
+							<label for="chk2">선택</label>
+						</span>
+					</td>
+					<td>
+						<a href="#none" class="text-primary">뉴 오로라 블랙</a>
+					</td>
+					<td>
+						<input type="text" class="c-input" title="변경 색상명 입력">
+					</td>
+					<td>
+						<input type="text" class="c-input" title="HEX 입력">
+					</td>
+					<td>
+						<input type="text" class="c-input" title="TKEY 색상코드 입력">
+					</td>
+					<td></td>
+				</tr>
+				</tbody>
+			</table>
+
+			<!-- btn -->
+			<div class="btn-area center">
+				<button type="button" class="btn-base btn-line-blue">삭제</button>
+				<button type="button" class="btn-base btn-blue">저장</button>
+			</div>
+			<!-- //btn -->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

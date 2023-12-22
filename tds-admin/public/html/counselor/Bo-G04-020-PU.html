@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>캠페인 조회</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 600*500 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">캠페인 조회</h1>
+	</div>
+	<div class="pop-content">
+		<h2 class="h-type2">캠페인 조회</h2>
+		<div class="pop-search">
+			<select class="c-select" title="검색 구분 선택" style="width:120px;">
+				<option value="" selected="selected">이동전화번호</option>
+				<option value="">서비스관리번호</option>
+			</select>
+			<input type="text" class="c-input" title="검색어 입력" style="width:60%;">
+			<a href="#none" class="btn-base">검색</a>
+		</div>
+
+		<table class="table-col mt-10">
+		<caption>캠페인 조회 리스트</caption>
+		<colgroup>
+			<col style="width:12%">
+			<col>
+			<col style="width:12%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">번호</th>
+				<th scope="col">캠페인 명</th>
+				<th scope="col">선택</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>캠페인 명</td>
+				<td><a href="#none" class="btn-base btn-gray">선택</a></td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>사전 구매예약 단말 목록</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 860*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">사전 구매예약 단말 목록 재고 수정</h1>
+	</div>
+	<div class="pop-content">
+		<table class="table-col">
+		<caption>사전 구매예약 단말 목록 재고 수정</caption>
+		<colgroup>
+			<col style="width:8%">
+			<col span="7">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="checkall1" name="checkall">
+						<label for="checkall1">전체선택</label>
+					</span>
+				</th>
+				<th scope="col">제조사</th>
+				<th scope="col">모상품그룹</th>
+				<th scope="col">모상품</th>
+				<th scope="col">모델명</th>
+				<th scope="col">용량</th>
+				<th scope="col">색상</th>
+				<th scope="col">원재고</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- 리스트 없을 때 -->
+			<tr>
+				<td colspan="8">결과 없음</td>
+			</tr>
+			<!--//리스트 없을 때 -->
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="goods1" name="goods">
+						<label for="goods1">선택</label>
+					</span>
+				</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>
+					<input type="text" class="c-input" title="원재고 입력">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="goods2" name="goods">
+						<label for="goods2">선택</label>
+					</span>
+				</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>
+					<input type="text" class="c-input" title="원재고 입력">
+				</td>
+			</tr>
+		</tbody>
+		</table>
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">저장</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div> 
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

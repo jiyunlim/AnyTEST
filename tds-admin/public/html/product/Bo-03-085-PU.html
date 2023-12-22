@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MMS쿠폰 선택</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 860*680 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">MMS쿠폰 선택</h1>
+	</div>
+	<div class="pop-content">
+		<div class="pop-search">
+			<select class="c-select" title="검색조건 선택" style="width:150px;">
+				<option value="" selected="selected">쿠폰명</option>
+			</select>
+			<input type="text" class="c-input" title="검색어 입력" placeholder="검색어를 입력하세요." style="width:70%;">
+			<a href="#none" class="btn-base">검색</a>
+		</div>
+
+		<table class="table-col mt-10">
+		<caption>MMS쿠폰 리스트</caption>
+		<colgroup>
+			<col style="width:10%">
+			<col style="width:14%">
+			<col>
+			<col style="width:14%">
+			<col style="width:14%">
+			<col style="width:16%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">선택</th>
+				<th scope="col">쿠폰코드</th>
+				<th scope="col">쿠폰명</th>
+				<th scope="col">할인방식</th>
+				<th scope="col">할인금액</th>
+				<th scope="col">종료일</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="mmsChk1" name="mmsChk">
+						<label for="mmsChk1">선택</label>
+					</span>
+				</td>
+				<td>SA123</td>
+				<td>액세서리 3만원 이용권</td>
+				<td>선할인</td>
+				<td>30,000</td>
+				<td>2018-05-31</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="mmsChk2" name="mmsChk">
+						<label for="mmsChk2">선택</label>
+					</span>
+				</td>
+				<td>SA123</td>
+				<td>액세서리 3만원 이용권</td>
+				<td>선할인</td>
+				<td>30,000</td>
+				<td>2018-05-31</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="mmsChk3" name="mmsChk">
+						<label for="mmsChk3">선택</label>
+					</span>
+				</td>
+				<td>SA123</td>
+				<td>액세서리 3만원 이용권</td>
+				<td>선할인</td>
+				<td>30,000</td>
+				<td>2018-05-31</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="mmsChk4" name="mmsChk">
+						<label for="mmsChk4">선택</label>
+					</span>
+				</td>
+				<td>SA123</td>
+				<td>액세서리 3만원 이용권</td>
+				<td>선할인</td>
+				<td>30,000</td>
+				<td>2018-05-31</td>
+			</tr>
+			<tr>
+				<td>
+					<span class="c-chk txt-no">
+						<input type="checkbox" id="mmsChk5" name="mmsChk">
+						<label for="mmsChk5">선택</label>
+					</span>
+				</td>
+				<td>SA123</td>
+				<td>액세서리 3만원 이용권</td>
+				<td>선할인</td>
+				<td>30,000</td>
+				<td>2018-05-31</td>
+			</tr>
+		</tbody>
+		</table>
+		<!-- paginate -->
+		<div class="paginate-area">
+			<a href="#none" class="pg-first">처음 리스트</a>
+			<a href="#none" class="pg-prev">이전 리스트</a>
+			<ul class="paginate">
+				<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+				<li><a href="#none">2</a></li>
+				<li><a href="#none">3</a></li>
+			</ul>
+			<a href="#none" class="pg-next">다음 리스트</a>
+			<a href="#none" class="pg-last">마지막 리스트</a>
+		</div>
+		<!-- //paginate -->
+
+		<!-- btn -->
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">확인</a>
+			<a href="#none" class="btn-base btn-line-blue">취소</a>
+		</div>
+		<!-- //btn -->
+	</div>
+</div>
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>

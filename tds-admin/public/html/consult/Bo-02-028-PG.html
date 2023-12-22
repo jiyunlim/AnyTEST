@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>T다이렉트샵 ADMIN GUIDE</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../../public/js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="../../../public/js/w3.js"></script>
+</head>
+<body>
+<div id="skipnav">
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="wrap">
+	<!-- header -->
+	<div id="header" w3-include-HTML="../include/header.html"></div>
+	<!-- //header -->
+	<div id="container">
+		<!-- lnb -->
+		<div id="lnb" w3-include-HTML="../include/lnb.html"></div>
+		<!-- //lnb -->
+		<!-- content -->
+		<div id="content">
+			<!-- page title -->
+			<div class="h-area1">
+				<h1 class="h-type1">Admin 공지사항</h1>
+				<span class="h-menu">
+					<a href="#none" class="ico-favorite">메뉴즐겨찾기</a>
+					<a href="#none" class="ico-refresh">새로고침</a>
+				</span>
+
+				<div class="side-menu">
+					<ul class="location-area">
+					<li class="home">홈</li>
+					<li>메뉴</li>
+					<li><strong>메뉴</strong></li>
+					</ul>
+
+					<select class="c-select" title="즐겨찾는 메뉴 선택">
+						<option value="" selected="selected">즐겨찾는 메뉴</option>
+						<option value="">메뉴1</option>
+						<option value="">메뉴2</option>
+						<option value="">메뉴3</option>
+					</select>
+
+				</div>
+			</div>
+			<!-- //page title -->
+		
+            <h3 class="h-type2">Admin 공지사항 조회</h3>
+            <table class="table-row">
+			<caption>Admin 공지사항 조회 상세</caption>
+			<colgroup>
+				<col style="width:14%">
+				<col style="width:42%;">
+				<col style="width:14%">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">
+						<select class="c-select" title="등록일/수정일 선택">
+							<option value="" selected="selected">등록일</option>
+							<option value="">수정일</option>
+						</select>
+					</th>
+					<td>
+						<div class="form-group calendar">
+							<select class="c-select" title="기간 선택">
+								<option value="">오늘</option>
+								<option value="">1주일</option>
+								<option value="" selected="selected">1개월</option>
+								<option value="">이달</option>
+								<option value="">금년</option>
+							</select>
+							<input type="text" class="c-input" title="시작일자" value="YYYY-MM-DD">
+							<a href="#none" class="btn-calendar">달력</a>
+							<span class="txt-unit">━</span>
+							<input type="text" class="c-input" title="종료일자">
+							<a href="#none" class="btn-calendar">달력</a>
+						</div>
+					</td>
+					<th scope="row">말머리</th>
+					<td>
+						<select class="c-select" title="말머리 선택">
+							<option value="" selected="selected">전체</option>
+							<option value="">공통</option>
+							<option value="">TM </option>
+							<option value="">라이브챗</option>
+							<option value="">온라인</option>
+							<option value="">바로픽업</option>
+							<option value="">바로주문</option>
+
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">공지사항 검색</th>
+					<td>
+						<select class="c-select" title="검색기준 선택" style="width:100px;">
+							<option value="" selected="selected">제목</option>
+							<option value="">내용</option>
+						</select>
+						<input type="text" class="c-input" title="검색어 입력" style="width:270px;">
+					</td>
+					<th scope="row">
+						<select class="c-select" title="등록자/수정자 선택">
+							<option value="" selected="selected">등록자</option>
+							<option value="">수정자</option>
+						</select>
+					</th>
+					<td><input type="text" class="c-input" title="구분자 입력"></td>
+				</tr>
+			</tbody>
+			</table>
+			<!-- btn -->
+            <div class="btn-area">
+				<a href="#none" class="btn-base">검색</a>
+				<a href="#none" class="btn-base">초기화</a>
+			</div>
+            <!-- //btn -->
+            
+            <div class="h-area2">
+				<h2 class="h-type2">Admin 공지사항 조회 결과 <span class="txt-count">(<em>90,865</em>건)</span></h2>
+			</div>            
+
+            <div class="table-data-wrap">
+				<!-- list -->
+				<table class="table-col">
+				<caption>데이타리스트</caption>
+				<colgroup>
+					<col style="width:3%">
+					<col style="width:7%">
+					<col style="width:7%">
+					<col style="width:7%">
+                    <col style="width:7%">
+					<col>
+					<col style="width:15%">
+					<col style="width:15%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk1" name="chk">
+								<label for="chk1">선택</label>
+							</span>
+						</th>
+						<th scope="col">번호</th>
+						<th scope="col">말머리</th>
+						<th scope="col">공지대상</th>
+						<th scope="col">팝업공지</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">등록일/등록자</th>
+                        <th scope="col">수정일/수정자</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<span class="c-chk txt-no">
+								<input type="checkbox" id="chk2" name="chk">
+								<label for="chk2">선택</label>
+							</span>
+						</td>
+						<td>1</td>
+						<td>공통</td>
+						<td>전체</td>
+						<td>Y</td>
+						<td><a href="#none" class="text-primary">[필독] iPhone 11 출고가 변동 공지</a></td>
+						<td>2019-11-18 13:51 <br>(홍길동)</td>
+						<td>2019-11-18 13:51 <br>(홍길동)</td>
+					</tr>
+				</tbody>
+				</table>
+				<!-- //list -->
+
+				<!-- paginate -->
+				<div class="paginate-area">
+					<a href="#none" class="pg-first">처음 리스트</a>
+					<a href="#none" class="pg-prev">이전 리스트</a>
+					<ul class="paginate">
+						<li><a href="#none" class="on" title="현재 페이지">1</a></li>
+						<li><a href="#none">2</a></li>
+						<li><a href="#none">3</a></li>
+						<li><a href="#none">4</a></li>
+						<li><a href="#none">5</a></li>
+						<li><a href="#none">6</a></li>
+						<li><a href="#none">7</a></li>
+						<li><a href="#none">8</a></li>
+						<li><a href="#none">9</a></li>
+						<li><a href="#none">10</a></li>
+					</ul>
+					<a href="#none" class="pg-next">다음 리스트</a>
+					<a href="#none" class="pg-last">마지막 리스트</a>
+				</div>
+				<!-- //paginate -->
+				
+				<!-- bottom button -->
+				<div class="btn-area table-bottom">
+					<div class="l-btn">
+						<button type="button" class="btn-base btn-gray">삭제</button>
+					</div>
+                    <a href="#none" class="btn-base btn-blue">등록</a>
+				</div>
+				<!-- //bottom button -->
+			</div>    
+
+        </div>
+		<!-- //content -->
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+<script>
+	w3.includeHTML();
+</script>
+
+</body>
+</html>

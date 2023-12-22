@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SMS/MMS 템플릿 추가</title>
+	<link rel="stylesheet" type="text/css" href="../../../public/css/tdirect_admin.css">
+	<!--[if lt IE 9]>
+	<script src="../../js/html5shiv.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../public/js/jquery.placeholder.js"></script>
+</head>
+<body>
+<!-- 팝업사이즈 600*500 -->
+<div class="pop-wrap">
+	<div class="pop-header">
+		<h1 class="h-type1">템플릿 추가</h1>
+	</div>	
+	<div class="pop-content">
+		<table class="table-row">
+		<caption>SMS/MMS 발송</caption>
+		<colgroup>
+			<col style="width:20%">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">템플릿 유형</th>
+				<td>
+					<select class="c-select"  title="템플릿 유형 선택" style="width:120px;">
+						<option value="" selected="selected">SMS</option>
+						<option value="">MMS</option>
+					</select> 
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">템플릿 제목</th>
+				<td>
+					<input type="text" class="c-input" title="제목 입력">
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">제목(MMS)</th>
+				<td>
+					<input type="text" class="c-input" title="제목 입력" placeholder="MMS만 입력가능" style="width:250px">
+					<span>(0/30byte)</span>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">본문내용</th>
+				<td class="r-data">
+					<textarea  class="c-textarea" title="내용 입력"></textarea>
+					<p class="r-txt">(0/2,000byte)</p>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+		<ul class="txt-info">
+			<li>
+				본문 내용에 모델명, 색상, 용량 자동 표시를 원하는 경우 아래 내용 삽입 <br>
+				<strong>모델명 {MODEL_NO}  색상 {COLOR_NM}  용량 {PHONE_CAPACITY}</strong><br>
+				(사용 예시)<br>
+				입고 일림 신청하신 {MODEL_NO}{COLOR_NM}{PHONE_CAPACITY}상품이 입고 되었습니다.
+			</li>
+		</ul>
+		<div class="btn-area">
+			<a href="#none" class="btn-base btn-blue">발송</a>
+			<a href="#none" class="btn-base btn-line-gray">취소</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../../../public/js/common.js"></script>
+</body>
+</html>
